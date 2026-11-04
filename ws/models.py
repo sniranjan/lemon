@@ -141,6 +141,7 @@ class VocabEntry(_Strict):
     sentences: list[str] = Field(default_factory=list)
     placeholder: bool = False   # pipeline-test word, replaced by an approved batch
     mass: bool = False          # takes "some", not "a" (milk, bread)
+    needs_color: bool = False   # only makes sense printed in color (color words)
 
 
 class Issue(_Strict):

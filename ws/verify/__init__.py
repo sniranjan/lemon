@@ -168,6 +168,27 @@ def check_sheet(sheet: Sheet, level: Level, plan: LevelPlan) -> list[Issue]:
     return issues
 
 
+# --- color words ---------------------------------------------------------------------------
+
+def color_word_pages(sheets: Iterable[Sheet]) -> list[int]:
+    """Pages showing a word that only makes sense in color (`needs_color` in the word bank)."""
+    bank = vocab_by_word()
+    return sorted({s.page_number for s in sheets
+                   if s.subject == "english" and any(bank[w].needs_color for w in _words_on(s) if w in bank)})
+
+
+def _ranges(pages: list[int]) -> str:
+    """[31, 32, 34, 35, 36] -> '31–32, 34–36'"""
+    out, start = [], None
+    for i, p in enumerate(pages):
+        if start is None:
+            start = p
+        if i + 1 == len(pages) or pages[i + 1] != p + 1:
+            out.append(f"{start}" if start == p else f"{start}–{p}")
+            start = None
+    return ", ".join(out)
+
+
 # --- group checks (one level, one variant) -----------------------------------------------
 
 def _word_sections(level: Level) -> list:
@@ -198,6 +219,10 @@ def check_group(level: Level, variant: int, sheets: list[Sheet], plan: LevelPlan
 
     if level.subject != "english" or not _word_sections(level):
         return issues
+
+    color_pages = color_word_pages(sheets)
+    if color_pages:
+        issues.append(_warn(tag, f"pages {_ranges(color_pages)} use color words; print them in color if you can"))
 
     # exposure rules, on the plan (always the whole level)
     word_pages = [p for s in _word_sections(level) for p in range(s.pages[0], s.pages[1] + 1)]

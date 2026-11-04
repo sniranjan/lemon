@@ -40,3 +40,43 @@ sock:    { source: original, licence: original }
 coat:    { source: original, licence: original }
 chair:   { source: original, licence: original }
 door:    { source: original, licence: original }
+cow:     { source: original, licence: original }
+cake:    { source: original, licence: original }
+train:   { source: original, licence: original }
+pig:     { source: original, licence: original }
+grandma: { source: original, licence: original }
+grandpa: { source: original, licence: original }
+bowl:    { source: original, licence: original }
+plane:   { source: original, licence: original }
+orange:  { source: original, licence: original }
+horse:   { source: original, licence: original }
+shirt:   { source: original, licence: original }
+kite:    { source: original, licence: original }
+frog:    { source: original, licence: original }
+leaf:    { source: original, licence: original }
+table:   { source: original, licence: original }
+sheep:   { source: original, licence: original }
+cheese:  { source: original, licence: original }
+bike:    { source: original, licence: original }
+eye:     { source: original, licence: original }
+mouth:   { source: original, licence: original }
+red:     { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+bee:     { source: original, licence: original }
+pants:   { source: original, licence: original }
+blue:    { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+cloud:   { source: original, licence: original }
+carrot:  { source: original, licence: original }
+bunny:   { source: original, licence: original }
+yellow:  { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+boots:   { source: original, licence: original }
+grapes:  { source: original, licence: original }
+green:   { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+mouse:   { source: original, licence: original }
+balloon: { source: original, licence: original }
+pink:    { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+snowman: { source: original, licence: original }
+juice:   { source: original, licence: original }
+dress:   { source: original, licence: original }
+blocks:  { source: original, licence: original }
+lion:    { source: original, licence: original }
+purple:  { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule

@@ -42,3 +42,45 @@
 - { word: coat,    picture: coat,    category: clothes,  level: 7A, sentences: ["I wear my warm coat."] }
 - { word: chair,   picture: chair,   category: home,     level: 7A, sentences: ["I sit on the chair."] }
 - { word: door,    picture: door,    category: home,     level: 7A, sentences: ["Please close the door."] }
+
+# Batch 2 (approved 2026-11-03): 7A pages 21-40. Color words need color printing.
+- { word: cow,     picture: cow,     category: animals,  level: 7A, sentences: ["The cow says moo."] }
+- { word: cake,    picture: cake,    category: food,     level: 7A, sentences: ["We have cake today."] }
+- { word: train,   picture: train,   category: vehicles, level: 7A, sentences: ["The train goes choo choo."] }
+- { word: pig,     picture: pig,     category: animals,  level: 7A, sentences: ["The pig is pink."] }
+- { word: grandma, picture: grandma, category: family,   level: 7A, sentences: ["Grandma gives me a hug."] }
+- { word: grandpa, picture: grandpa, category: family,   level: 7A, sentences: ["Grandpa reads with me."] }
+- { word: bowl,    picture: bowl,    category: home,     level: 7A, sentences: ["I eat soup in a bowl."] }
+- { word: plane,   picture: plane,   category: vehicles, level: 7A, sentences: ["The plane flies high."] }
+- { word: orange,  picture: orange,  category: food,     level: 7A, sentences: ["I peel the orange."] }
+- { word: horse,   picture: horse,   category: animals,  level: 7A, sentences: ["The horse can run fast."] }
+- { word: shirt,   picture: shirt,   category: clothes,  level: 7A, sentences: ["I put on my shirt."] }
+- { word: kite,    picture: kite,    category: toys,     level: 7A, sentences: ["The kite flies up high."] }
+- { word: frog,    picture: frog,    category: animals,  level: 7A, sentences: ["The frog can jump."] }
+- { word: leaf,    picture: leaf,    category: nature,   level: 7A, sentences: ["The leaf falls down."] }
+- { word: table,   picture: table,   category: home,     level: 7A, sentences: ["We eat at the table."] }
+- { word: sheep,   picture: sheep,   category: animals,  level: 7A, sentences: ["The sheep says baa."] }
+- { word: cheese,  picture: cheese,  category: food,     level: 7A, mass: true, sentences: ["I like cheese."] }
+- { word: bike,    picture: bike,    category: vehicles, level: 7A, sentences: ["I ride my bike."] }
+- { word: eye,     picture: eye,     category: body,     level: 7A, sentences: ["I wink one eye."] }
+- { word: mouth,   picture: mouth,   category: body,     level: 7A, sentences: ["I open my mouth."] }
+- { word: red,     picture: red,     category: colors,   level: 7A, needs_color: true, sentences: ["The fire truck is red."] }
+- { word: bee,     picture: bee,     category: animals,  level: 7A, sentences: ["The bee likes flowers."] }
+- { word: pants,   picture: pants,   category: clothes,  level: 7A, mass: true, sentences: ["I put on my pants."] }
+- { word: blue,    picture: blue,    category: colors,   level: 7A, needs_color: true, sentences: ["The sky is blue."] }
+- { word: cloud,   picture: cloud,   category: nature,   level: 7A, sentences: ["I see a fluffy cloud."] }
+- { word: carrot,  picture: carrot,  category: food,     level: 7A, sentences: ["The bunny eats a carrot."] }
+- { word: bunny,   picture: bunny,   category: animals,  level: 7A, sentences: ["The bunny hops."] }
+- { word: yellow,  picture: yellow,  category: colors,   level: 7A, needs_color: true, sentences: ["The sun is yellow."] }
+- { word: boots,   picture: boots,   category: clothes,  level: 7A, mass: true, sentences: ["I wear my rain boots."] }
+- { word: grapes,  picture: grapes,  category: food,     level: 7A, mass: true, sentences: ["I eat green grapes."] }
+- { word: green,   picture: green,   category: colors,   level: 7A, needs_color: true, sentences: ["The grass is green."] }
+- { word: mouse,   picture: mouse,   category: animals,  level: 7A, sentences: ["The mouse is small."] }
+- { word: balloon, picture: balloon, category: toys,     level: 7A, sentences: ["My balloon is red."] }
+- { word: pink,    picture: pink,    category: colors,   level: 7A, needs_color: true, sentences: ["I have pink socks."] }
+- { word: snowman, picture: snowman, category: nature,   level: 7A, sentences: ["We made a snowman."] }
+- { word: juice,   picture: juice,   category: food,     level: 7A, mass: true, sentences: ["I drink apple juice."] }
+- { word: dress,   picture: dress,   category: clothes,  level: 7A, sentences: ["Grandma has a blue dress."] }
+- { word: blocks,  picture: blocks,  category: toys,     level: 7A, mass: true, sentences: ["I build with blocks."] }
+- { word: lion,    picture: lion,    category: animals,  level: 7A, sentences: ["The lion says roar."] }
+- { word: purple,  picture: purple,  category: colors,   level: 7A, needs_color: true, sentences: ["Grapes can be purple."] }

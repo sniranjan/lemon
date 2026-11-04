@@ -20,7 +20,7 @@ from .generate import OUT_DIR, load_manifest, sheet_dir
 from .models import SUBJECT_PREFIX, Issue, Level, Sheet
 from .render import MIN_TIP_PX, THEMES, _CHECK_JS, _env
 from .syllabus import ROOT, load_level, sheet_id
-from .verify import banned_words
+from .verify import _ranges, banned_words, color_word_pages
 
 LETTER = (612, 792)
 
@@ -136,8 +136,10 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
 
         def booklet(group: list[Sheet], booklet_id: str, sections_info: list[dict]) -> None:
             first, last = group[0].page_number, group[-1].page_number
+            colors = color_word_pages(group)
             cover = doc("booklet/cover.html.j2", f"{booklet_id}-cover", booklet_id, sections=sections_info,
-                        first_page=first, last_page=last, pace=_pace(level))
+                        first_page=first, last_page=last, pace=_pace(level),
+                        color_pages=_ranges(colors) if colors else "")
             log = doc("booklet/progress_log.html.j2", f"{booklet_id}-log", booklet_id)
             report.booklets.append(_write_booklet(
                 [cover, *(sheet_pdf[s.id] for s in group), log], level_dir / f"{booklet_id}.pdf",

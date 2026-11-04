@@ -14,3 +14,4 @@ frames_by_category:
   family: ["Here is my {w}.", "I love my {w}.", "I hug my {w}.", "Look at my {w}."]
   body: ["This is my {w}.", "I touch my {w}.", "Look at my {w}.", "Here is my {w}."]
   nature: ["I see the {w}.", "Look at the {w}.", "I like the {w}.", "Here is the {w}."]
+  colors: ["I like {w}.", "I see {w}.", "This is {w}."]

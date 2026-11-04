@@ -180,3 +180,29 @@ def test_section_gaps_are_warned(made, booklet_out):
     assert not any("skips pages" in i.message for i in report.issues if i.sheet_id.endswith("-A"))
     report = booklet.build_booklets("pencil", "ZI")    # ZI-B has pages 21 only, C has 51: no gaps;
     assert not any("skips" in i.message for i in report.issues)
+
+
+def test_color_word_pages_are_listed():
+    from ws.models import Sheet
+    from ws.verify import _ranges, color_word_pages
+
+    def sheet(page, words):
+        return Sheet(id=f"EN-7A-A-{page:03d}", subject="english", level="7A", section="A", sheet_type="word_picture_pair",
+                     page_number=page, seed=1, title="t", parent_tip="t", items=[], new_words=words)
+
+    sheets = [sheet(30, ["eye", "mouth"]), sheet(31, ["red", "bee"]), sheet(32, ["pants", "blue"]), sheet(34, ["yellow"])]
+    assert color_word_pages(sheets) == [31, 32, 34]
+    assert _ranges([31, 32, 34, 35, 36, 40]) == "31–32, 34–36, 40"
+
+
+def test_longest_real_words_fit_both_card_types(out_dir):
+    """The widest words in the real bank, on pair cards and sentence cards."""
+    pytest.importorskip("playwright")
+    from ws.content import vocab
+    from ws.render import render_pngs
+
+    longest = max(len(w.word) for w in vocab())
+    pages = sorted({(i // 2) + 1 for i, w in enumerate(vocab()) if len(w.word) == longest})
+    made = gen.generate_pages(EN7A, pages) + gen.generate_pages(EN7A, pages, variant=2, sheet_type="word_picture_sentence")
+    for r in render_pngs([p for _, p in made]):
+        assert r.problems == [], (r.html.name, r.problems)

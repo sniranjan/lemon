@@ -3,7 +3,8 @@
 The main fill of a picture is the most common opaque color once the dark outline is set
 aside, measured on a real render. Its grayscale lightness (the same weights as CSS
 `grayscale()`: 0.2126 R + 0.7152 G + 0.0722 B) must be 50–75%, so pictures stay
-distinct when printed in black and white.
+distinct when printed in black and white. Pictures marked `kind: color_swatch` in
+LICENSES.yaml (the crayons for color words) use true hues and are exempt.
 """
 
 from __future__ import annotations
@@ -18,6 +19,7 @@ from .content import PICTURES_DIR, licenses
 
 FILL_LIGHTNESS = (50, 75)   # percent, inclusive
 OUTLINE_MAX = 30            # pixels darker than this are outline/eyes, not fill
+SWATCH_OUTLINE_MAX = 16     # color swatches: only the #222 outline (13%) is skipped
 
 _MEASURE_JS = """
 async ([src, outlineMax]) => {
@@ -82,15 +84,17 @@ def check_pictures(slugs: list[str] | None = None) -> list[PictureReport]:
             problems = check_svg_source(path)
             if slug not in lic:
                 problems.append("no LICENSES.yaml entry")
+            swatch = lic.get(slug, {}).get("kind") == "color_swatch"   # color words: the hue is the point
             # a data URL keeps the canvas readable (file:// images taint it)
             data_url = "data:image/svg+xml;base64," + base64.b64encode(path.read_bytes()).decode()
-            m = page.evaluate(_MEASURE_JS, [data_url, OUTLINE_MAX])
+            # true hues can be darker than the usual outline cutoff (purple is 27%): only skip the outline itself
+            m = page.evaluate(_MEASURE_JS, [data_url, SWATCH_OUTLINE_MAX if swatch else OUTLINE_MAX])
             if m is None:
-                problems.append("no fill color found")
+                problems.append(f"no fill color found (is the main fill darker than {OUTLINE_MAX}%? it reads as outline)")
                 reports.append(PictureReport(slug, None, None, problems))
                 continue
             lo, hi = FILL_LIGHTNESS
-            if not lo <= round(m["lightness"]) <= hi:
+            if not swatch and not lo <= round(m["lightness"]) <= hi:
                 problems.append(f"main fill {m['color']} is {m['lightness']:.0f}% in grayscale (needs {lo}–{hi}%)")
             reports.append(PictureReport(slug, m["color"], m["lightness"], problems))
         browser.close()

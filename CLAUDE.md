@@ -188,6 +188,8 @@ whether or not pages 1–50 exist yet.
   category: food
   level: 7A                 # level that introduces it
   sentences: ["I like the red apple.", "The apple is sweet."]
+  # optional: mass: true        → stories say "some" (milk, grapes, pants)
+  # optional: needs_color: true → color words; verify warns and booklet covers ask for color printing
 ```
 
 ### Sheet (in-memory / manifest)
@@ -208,6 +210,8 @@ title, parent_tip, items[], answer_key (if any), new_words[], review_words[]
   **50–75% lightness in grayscale**, measured as `0.2126 R + 0.7152 G + 0.0722 B` (the CSS
   `grayscale()` weights). Pastels are too light and vanish in black and white.
   `ws pictures sheet` measures every picture on a real render and flags any outside the range.
+- **Color words** (red, blue, ...) are pictured as crayons in true hues, marked
+  `kind: color_swatch` in `LICENSES.yaml`; they are exempt from the lightness rule.
 - Format: SVG, `viewBox="0 0 100 100"`, no `<style>`, no scripts, no embedded rasters.
 - Sources, in order of preference: (1) original SVGs drawn by Claude Code in the house
   style; (2) open-licence sets (e.g. OpenMoji CC BY-SA 4.0), recorded in `LICENSES.yaml`.
@@ -290,6 +294,9 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
   manifest are checked too once every page of the level exists. While the word bank doesn't
   cover all of 7A-A, verify warns (7A-B/C sheets will change as words are added).
 - A sheet type forced with `--sheet-type` is a warning, not an error.
+- **Color words**: sheets showing a `needs_color` word are listed in one warning per level
+  ("print these in color"); booklet covers name those pages. Everything else must still read
+  in black and white.
 - Banned words live in `content/banned.yaml` (matched case-insensitively, whole words) and are
   checked on every sheet's text and on booklet covers, logs and answer pages.
 

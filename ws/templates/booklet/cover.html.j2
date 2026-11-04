@@ -28,7 +28,11 @@
   <div class="name">Name <i></i></div>
   <div class="tip"><b>For grown-ups:</b> About {{ level.daily_pages }} pages a day, with you beside your child.
     Move on when your child finishes 3 sheets in a row {{ pace }} without prompting.
-    If it's still hard, repeat the pages with a fresh version; there's no rush.</div>
+    If it's still hard, repeat the pages with a fresh version; there's no rush.
+{% if color_pages %}
+    <br><b>Print in color if you can:</b> pages {{ color_pages }} teach color words.
+{% endif %}
+  </div>
   <div class="foot">{{ booklet_id }}</div>
 </div>
 {% endblock %}
