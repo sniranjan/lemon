@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import objects with context %}
+{% block style %}
+.grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
+.grid4 .card { min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 16px; }
+.numbox { width: 150px; height: 150px; border-radius: 24px; background: var(--tint); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 104px; font-weight: 700; line-height: 1; }
+{% endblock %}
+{% block body %}
+    <div class="grid4">
+{% for item in sheet.items %}
+      <div class="card"><div class="numbox">{{ item.n }}</div>{{ objects(item.n, item.picture, 44) }}</div>
+{% endfor %}
+    </div>
+{% endblock %}

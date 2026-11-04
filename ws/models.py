@@ -128,6 +128,9 @@ class PageSpec(_Strict):
     page: int
     sheet_type: str
     rules: dict[str, Any]
+    # 0.0 on the first page of the part (or section, if it has no parts), 1.0 on the last;
+    # lets a generator grow something across a part (e.g. line length).
+    progress: float = 0.0
 
 
 class VocabEntry(_Strict):

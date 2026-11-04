@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.story { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 24px; }
+.story .card.pic { flex: 0 0 auto; display: flex; justify-content: center; padding: 20px; }
+.story .card.pic img { width: 260px; height: 260px; }
+.story .card.lines { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; padding: 16px 40px; }
+.story .line { font-size: 48px; line-height: 1.2; }
+.story .line b { font-weight: 700; }
+{% endblock %}
+{% block body %}
+    <div class="story">
+{% for item in sheet.items if item.kind == "picture" %}
+      <div class="card pic"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""></div>
+{% endfor %}
+      <div class="card lines">
+{% for item in sheet.items if item.kind == "sentence" %}
+        <div class="line">{{ item.before }}<b>{{ item.word }}</b>{{ item.after }}</div>
+{% endfor %}
+      </div>
+    </div>
+{% endblock %}

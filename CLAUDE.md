@@ -260,6 +260,14 @@ test.** Nothing else in the code should change.
 | `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
 | `add_facts` | MA 3A-C…F, 2A | Vertical list of `a + b =` facts within the part's range; answer key generated |
 
+**Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
+five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the
+pictures in the item, not in one row.
+
+**Line paths**: the start is a dot; the end is a small picture on a white disc centered on
+the lane's end. Lane ends never touch the page edge. One direction per sheet (cycling
+through the part's `directions`).
+
 **"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
 page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.
 The main cards stay at 2 new words. Pages 1–3 have no strip, because no word is old enough yet.
@@ -291,8 +299,12 @@ Each check returns `Issue(sheet_id, severity, message)`. Any `error` → non-zer
   largest first number stay inside the **part's** range (e.g. 3A-C part 2 → `n + 1` with n ≤ 17).
 - `number_sequence` / `next_number`: gaps and answers are consistent with the sequence and
   inside the section's number limit.
-- `word_story`: `only_known_words` holds (every token is a known word or a whitelisted
-  function word like *the, a, is, I, my*).
+- `word_story`: `only_known_words` holds (every token is a known word or one of the
+  `allowed_words` in `content/stories/english.yaml`, e.g. *the, a, is, I, my*). Stories are
+  built from sentence frames with a slot (`"I see {a} {w}."`), so the planner can aim them
+  at the words seen least.
+- `word_picture_sentence`: the sentence is read *to* the child, so it is exempt from the
+  known-words check; it must contain the card's word and stay within `max_sentence_words` (default 6).
 - `letter_trace`: letters requested exist in the trace font.
 
 **Exposure checks (per section / level run)**

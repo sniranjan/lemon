@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
+.grid4 .card { min-height: 0; display: flex; align-items: center; justify-content: space-evenly; padding: 16px; }
+.grid4 svg { width: 190px; height: 190px; }
+.numeral { font-size: 104px; font-weight: 700; line-height: 1; }
+{% endblock %}
+{% block body %}
+    <div class="grid4">
+{% for item in sheet.items %}
+      <div class="card"><svg viewBox="0 0 100 100">{% for x, y in item.dots %}<circle cx="{{ x }}" cy="{{ y }}" r="8" fill="#1d1d1f"/>{% endfor %}</svg><div class="numeral">{{ item.n }}</div></div>
+{% endfor %}
+    </div>
+{% endblock %}

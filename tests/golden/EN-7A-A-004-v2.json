@@ -1,0 +1,46 @@
+{
+  "id": "EN-7A-A-004-v2",
+  "subject": "english",
+  "level": "7A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "word_picture_sentence",
+  "page_number": 4,
+  "variant": 2,
+  "seed": 14431088951549247165,
+  "title": "Say and listen",
+  "parent_tip": "Read the sentence slowly while you point. Pause before the picture word and let your child say it.",
+  "items": [
+    {
+      "kind": "card",
+      "word": "fish",
+      "picture": "fish",
+      "sentence": "The fish can swim."
+    },
+    {
+      "kind": "card",
+      "word": "rainbow",
+      "picture": "rainbow",
+      "sentence": "I see a big rainbow."
+    },
+    {
+      "kind": "strip",
+      "word": "apple",
+      "picture": "apple"
+    },
+    {
+      "kind": "strip",
+      "word": "ball",
+      "picture": "ball"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "fish",
+    "rainbow"
+  ],
+  "review_words": [
+    "apple",
+    "ball"
+  ]
+}

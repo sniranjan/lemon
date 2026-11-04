@@ -21,7 +21,6 @@ def test_syllabus_show_unknown_level():
 
 
 @pytest.mark.parametrize("args", [
-    ["generate", "--subject", "math", "--level", "6A", "--all"],
     ["render", "--subject", "english", "--level", "7A", "--pdf"],
     ["verify"],
     ["vocab", "stats", "--level", "7A"],

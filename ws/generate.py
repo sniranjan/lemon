@@ -9,7 +9,7 @@ from pathlib import Path
 from . import registry
 from .content import tips, vocab
 from .models import Level, Sheet
-from .plan import LevelPlan, plan_new_words
+from .plan import LevelPlan, plan_new_words, plan_review
 from .render import write_html
 from .syllabus import ROOT, page_seed, resolve_page, sheet_id
 
@@ -19,7 +19,7 @@ MANIFEST = OUT_DIR / "manifest.jsonl"
 
 def build_plan(level: Level, variant: int = 1) -> LevelPlan:
     if level.subject == "english":
-        return plan_new_words(level, vocab("english"), variant)
+        return plan_review(level, plan_new_words(level, vocab("english"), variant))
     return LevelPlan(subject=level.subject, level=level.level, variant=variant)
 
 
@@ -78,3 +78,37 @@ def load_manifest(subject: str | None = None, level: str | None = None) -> list[
     sheets = [s for s in latest.values()
               if (subject is None or s.subject == subject) and (level is None or s.level == level)]
     return sorted(sheets, key=lambda s: (s.subject, s.level, s.variant, s.page_number))
+
+
+def select_pages(level: Level, *, section: str | None = None, part: int | None = None,
+                 count: int | None = None, pages: list[int] | None = None, all_pages: bool = False,
+                 variant: int = 1) -> list[int]:
+    """Turn the CLI's page selection into page numbers.
+
+    `--count N` takes the next N pages of the section (or part) that the manifest doesn't
+    have yet for this variant, and errors clearly once the range is complete.
+    """
+    if all_pages:
+        return list(range(1, level.pages + 1))
+    if pages:
+        return pages
+    if not section:
+        raise ValueError("choose --section (with --count or --part), --pages or --all")
+    sec = level.section(section)
+    lo, hi = sec.pages
+    label = f"{level.level}-{section}"
+    if part is not None:
+        p = next((p for p in sec.parts if p.part == part), None)
+        if p is None:
+            raise ValueError(f"{label} has no part {part}")
+        lo, hi = p.pages
+        label += f" part {part}"
+    candidates = list(range(lo, hi + 1))
+    if count is None:
+        return candidates
+    done = {s.page_number for s in load_manifest(level.subject, level.level)
+            if s.section == section and s.variant == variant}
+    todo = [p for p in candidates if p not in done]
+    if not todo:
+        raise ValueError(f"{label} is complete: pages {lo}–{hi}")
+    return todo[:count]

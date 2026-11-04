@@ -42,7 +42,7 @@ def test_strip_spreads_words():
 def test_plan_stops_where_bank_runs_out():
     plan = plan_new_words(EN7A, _bank(7))
     assert sorted(plan.pages) == [1, 2, 3]
-    with pytest.raises(KeyError, match="no entry for page 4"):
+    with pytest.raises(KeyError, match="page 4 isn.t planned yet"):
         plan.for_page(4)
 
 

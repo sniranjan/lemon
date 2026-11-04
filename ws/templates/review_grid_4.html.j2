@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
+.grid4 .card { min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 16px; }
+.grid4 .card img { width: 210px; height: 210px; }
+.grid4 .card .word { font-size: 64px; font-weight: 700; line-height: 1.05; }
+{% endblock %}
+{% block body %}
+    <div class="grid4">
+{% for item in sheet.items %}
+      <div class="card"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><div class="word">{{ item.word }}</div></div>
+{% endfor %}
+    </div>
+{% endblock %}

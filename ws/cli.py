@@ -44,25 +44,20 @@ def generate(
     seed: Optional[int] = typer.Option(None, help="Override the per-page seed"),
     variant: int = typer.Option(1, help="Alternative version of the same pages"),
 ) -> None:
-    """Generate sheets."""
-    from .generate import generate_pages
+    """Generate sheets: by section (next --count unused pages, or a --part), --pages or --all."""
+    from .generate import generate_pages, select_pages
 
     lvl = _load(subject, level)
-    if count is not None or all_ or part is not None:
-        _not_yet("generate --count/--all/--part", 2)
-    if not pages:
-        typer.echo("give --pages (e.g. --pages 1-4)", err=True)
-        raise typer.Exit(1)
-    page_list = parse_pages(pages)
-    if section:
-        s = lvl.section(section)
-        outside = [p for p in page_list if not s.pages[0] <= p <= s.pages[1]]
-        if outside:
-            typer.echo(f"pages {outside} are outside {level}-{section} (pages {s.pages[0]}–{s.pages[1]})", err=True)
-            raise typer.Exit(1)
     try:
+        page_list = select_pages(lvl, section=section, part=part, count=count,
+                                 pages=parse_pages(pages) if pages else None, all_pages=all_, variant=variant)
+        if section:
+            s = lvl.section(section)
+            outside = [p for p in page_list if not s.pages[0] <= p <= s.pages[1]]
+            if outside:
+                raise ValueError(f"pages {outside} are outside {level}-{section} (pages {s.pages[0]}–{s.pages[1]})")
         made = generate_pages(lvl, page_list, variant, seed, sheet_type)
-    except KeyError as e:
+    except (KeyError, ValueError) as e:
         typer.echo(f"cannot generate: {e.args[0]}", err=True)
         raise typer.Exit(1)
     for sheet, path in made:

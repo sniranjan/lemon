@@ -1,0 +1,43 @@
+{
+  "id": "MA-6A-B-045",
+  "subject": "math",
+  "level": "6A",
+  "section": "B",
+  "part": 5,
+  "sheet_type": "count_and_say",
+  "page_number": 75,
+  "variant": 1,
+  "seed": 1698327812988401424,
+  "title": "Count and say",
+  "parent_tip": "Touch each picture and count together. Say the last number big: that's how many!",
+  "items": [
+    {
+      "kind": "count",
+      "n": 7,
+      "object": "ball",
+      "picture": "ball",
+      "word": "seven"
+    },
+    {
+      "kind": "count",
+      "n": 8,
+      "object": "apple",
+      "picture": "apple",
+      "word": "eight"
+    },
+    {
+      "kind": "count",
+      "n": 10,
+      "object": "dog",
+      "picture": "dog",
+      "word": "ten"
+    }
+  ],
+  "answer_key": [
+    7,
+    8,
+    10
+  ],
+  "new_words": [],
+  "review_words": []
+}

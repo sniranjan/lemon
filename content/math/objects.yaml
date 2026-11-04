@@ -1,0 +1,9 @@
+# Countable objects for math sheets. One object type per counting row.
+# `placeholder: true` objects reuse pipeline-test pictures until real ones are drawn.
+- { name: apple, picture: apple, placeholder: true }
+- { name: ball,  picture: ball,  placeholder: true }
+- { name: fish,  picture: fish,  placeholder: true }
+- { name: sun,   picture: sun,   placeholder: true }
+- { name: cup,   picture: cup,   placeholder: true }
+- { name: cat,   picture: cat,   placeholder: true }
+- { name: dog,   picture: dog,   placeholder: true }

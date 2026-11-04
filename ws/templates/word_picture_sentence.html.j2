@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.stack { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 20px; }
+.stack .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 32px; padding: 12px 32px; }
+.stack .card img { flex: 0 1 280px; width: 280px; min-width: 200px; max-height: 100%; aspect-ratio: 1; object-fit: contain; }
+.stack .card .text { flex: 1; min-width: 0; }
+.stack .card .word { font-size: 80px; font-weight: 700; line-height: 1; }
+.stack .card .sentence { font-size: 32px; line-height: 1.25; margin-top: 14px; }
+{% endblock %}
+{% block body %}
+    <div class="stack">
+{% for item in sheet.items if item.kind == "card" %}
+      <div class="card"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><div class="text"><div class="word">{{ item.word }}</div><div class="sentence">{{ item.sentence }}</div></div></div>
+{% endfor %}
+    </div>
+{% endblock %}
+{% block after_body %}
+{% include "_say_it_again.html.j2" %}
+{% endblock %}

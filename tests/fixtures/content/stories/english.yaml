@@ -1,0 +1,11 @@
+# 7A-C word stories are built from sentence frames. Each frame has one slot `{w}` for a
+# known word (and `{a}` for its article, a/an). Every other token must be in
+# `allowed_words`, so stories only use words the child has met.
+allowed_words: [I, see, a, an, look, at, the, here, is, my, this, like, have]
+frames:
+  - "I see {a} {w}."
+  - "Look at the {w}."
+  - "Here is my {w}."
+  - "This is {a} {w}."
+  - "I like the {w}."
+  - "I have {a} {w}."

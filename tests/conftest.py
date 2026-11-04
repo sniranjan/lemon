@@ -13,8 +13,7 @@ GOLDEN = Path(__file__).parent / "golden"
 
 
 def _clear_content_caches():
-    for f in (content.vocab, content.tips, content.licenses):
-        f.cache_clear()
+    content.clear_caches()
 
 
 @pytest.fixture

@@ -1,0 +1,56 @@
+{
+  "id": "EN-7A-C-003",
+  "subject": "english",
+  "level": "7A",
+  "section": "C",
+  "part": null,
+  "sheet_type": "word_story",
+  "page_number": 143,
+  "variant": 1,
+  "seed": 16683094056471445779,
+  "title": "Read together",
+  "parent_tip": "Read each line, then read it again together. Point to each word as you say it.",
+  "items": [
+    {
+      "kind": "picture",
+      "word": "rainbow",
+      "picture": "rainbow"
+    },
+    {
+      "kind": "sentence",
+      "word": "rainbow",
+      "before": "This is a ",
+      "after": ".",
+      "text": "This is a rainbow."
+    },
+    {
+      "kind": "sentence",
+      "word": "apple",
+      "before": "I see an ",
+      "after": ".",
+      "text": "I see an apple."
+    },
+    {
+      "kind": "sentence",
+      "word": "ball",
+      "before": "I have a ",
+      "after": ".",
+      "text": "I have a ball."
+    },
+    {
+      "kind": "sentence",
+      "word": "cat",
+      "before": "I like the ",
+      "after": ".",
+      "text": "I like the cat."
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "rainbow",
+    "apple",
+    "ball",
+    "cat"
+  ]
+}

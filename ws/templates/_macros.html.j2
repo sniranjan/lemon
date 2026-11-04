@@ -1,0 +1,8 @@
+{# Count pictures: up to 5 in one row, 6–10 as two rows of five (ten-frame style). #}
+{% macro objects(n, picture, size) %}
+<div class="objects" style="--obj: {{ size }}px">
+{% for row in range(0, n, 5) %}
+  <div class="obj-row">{% for _ in range(row, [row + 5, n] | min) %}<img src="{{ root }}/assets/pictures/{{ picture }}.svg" alt="">{% endfor %}</div>
+{% endfor %}
+</div>
+{% endmacro %}

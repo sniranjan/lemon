@@ -43,3 +43,23 @@ def licenses() -> dict[str, dict]:
 
 def picture_path(slug: str) -> Path:
     return PICTURES_DIR / f"{slug}.svg"
+
+
+@lru_cache(maxsize=None)
+def stories(subject: str = "english") -> dict:
+    return yaml.safe_load((CONTENT_DIR / "stories" / f"{subject}.yaml").read_text())
+
+
+@lru_cache(maxsize=None)
+def math_objects() -> tuple[dict, ...]:
+    return tuple(yaml.safe_load((CONTENT_DIR / "math" / "objects.yaml").read_text()))
+
+
+@lru_cache(maxsize=None)
+def line_targets() -> tuple[str, ...]:
+    return tuple(yaml.safe_load((CONTENT_DIR / "pencil" / "line_targets.yaml").read_text()))
+
+
+def clear_caches() -> None:
+    for f in (vocab, tips, licenses, stories, math_objects, line_targets):
+        f.cache_clear()

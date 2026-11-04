@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.canvas { flex: 1; min-height: 0; display: flex; }
+.canvas svg { width: 100%; height: 100%; }
+{% endblock %}
+{% block body %}
+    <div class="canvas">
+      <svg viewBox="0 0 704 680" preserveAspectRatio="xMidYMid meet">
+{% for item in sheet.items %}
+        <path d="{{ item.d }}" fill="none" stroke="#1d1d1f" stroke-width="{{ item.lane + 6 }}" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="{{ item.d }}" fill="none" stroke="var(--tint)" stroke-width="{{ item.lane }}" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="{{ item.start[0] }}" cy="{{ item.start[1] }}" r="11" fill="#1d1d1f"/>
+        <circle cx="{{ item.end[0] }}" cy="{{ item.end[1] }}" r="{{ item.disc }}" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+        <image href="{{ root }}/assets/pictures/{{ item.target }}.svg" x="{{ item.end[0] - item.size / 2 }}" y="{{ item.end[1] - item.size / 2 }}" width="{{ item.size }}" height="{{ item.size }}"/>
+{% endfor %}
+      </svg>
+    </div>
+{% endblock %}

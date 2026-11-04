@@ -1,0 +1,58 @@
+{
+  "id": "MA-6A-B-051",
+  "subject": "math",
+  "level": "6A",
+  "section": "B",
+  "part": 6,
+  "sheet_type": "count_and_point",
+  "page_number": 81,
+  "variant": 1,
+  "seed": 5212216890778875224,
+  "title": "Count and point",
+  "parent_tip": "Touch and count each picture. Ask: which number shows how many?",
+  "items": [
+    {
+      "kind": "count",
+      "n": 10,
+      "object": "sun",
+      "picture": "sun",
+      "word": "ten",
+      "choices": [
+        10,
+        9,
+        8
+      ]
+    },
+    {
+      "kind": "count",
+      "n": 1,
+      "object": "fish",
+      "picture": "fish",
+      "word": "one",
+      "choices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "count",
+      "n": 4,
+      "object": "dog",
+      "picture": "dog",
+      "word": "four",
+      "choices": [
+        6,
+        4,
+        3
+      ]
+    }
+  ],
+  "answer_key": [
+    10,
+    1,
+    4
+  ],
+  "new_words": [],
+  "review_words": []
+}

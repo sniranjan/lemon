@@ -15,6 +15,17 @@ ROOT = Path(__file__).resolve().parent.parent
 SYLLABUS_DIR = ROOT / "syllabus"
 
 
+# Levels in teaching order (earliest first). "≤ current level" means "not later in this list".
+LEVEL_ORDER = ["7A", "6A", "5A", "4A", "3A", "2A"]
+
+
+def level_rank(level: str) -> int:
+    try:
+        return LEVEL_ORDER.index(level)
+    except ValueError:
+        raise ValueError(f"unknown level {level!r}; add it to LEVEL_ORDER") from None
+
+
 def level_path(subject: str, level: str) -> Path:
     return SYLLABUS_DIR / subject / f"{level}.yaml"
 
@@ -52,7 +63,7 @@ def resolve_page(level: Level, page: int) -> PageSpec:
     part = section.part_for_page(page)
     types = (part.sheet_types if part and part.sheet_types else None) or section.sheet_types
     # Pages cycle through the type list, counted from the start of the part (or section).
-    first = part.pages[0] if part else section.pages[0]
+    first, last = part.pages if part else section.pages
     sheet_type = types[(page - first) % len(types)]
     rules = merge_rules(level.rules, section.rules, part.rules if part else {})
     return PageSpec(
@@ -63,6 +74,7 @@ def resolve_page(level: Level, page: int) -> PageSpec:
         page=page,
         sheet_type=sheet_type,
         rules=rules,
+        progress=(page - first) / (last - first) if last > first else 0.0,
     )
 
 

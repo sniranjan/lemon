@@ -1,0 +1,51 @@
+{
+  "id": "MA-6A-C-031",
+  "subject": "math",
+  "level": "6A",
+  "section": "C",
+  "part": 4,
+  "sheet_type": "number_read",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 15609623265556793513,
+  "title": "Read the numbers",
+  "parent_tip": "Point to each number and say it together. Then count the small pictures to check.",
+  "items": [
+    {
+      "kind": "count",
+      "n": 7,
+      "object": "fish",
+      "picture": "fish",
+      "word": "seven"
+    },
+    {
+      "kind": "count",
+      "n": 10,
+      "object": "ball",
+      "picture": "ball",
+      "word": "ten"
+    },
+    {
+      "kind": "count",
+      "n": 8,
+      "object": "apple",
+      "picture": "apple",
+      "word": "eight"
+    },
+    {
+      "kind": "count",
+      "n": 3,
+      "object": "dog",
+      "picture": "dog",
+      "word": "three"
+    }
+  ],
+  "answer_key": [
+    7,
+    10,
+    8,
+    3
+  ],
+  "new_words": [],
+  "review_words": []
+}
