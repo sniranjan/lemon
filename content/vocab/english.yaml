@@ -1,11 +1,44 @@
-# Word bank. File order is introduction order: the 7A planner introduces words in this order.
-# `placeholder: true` entries exist only to prove the pipeline (milestone 2); they are
-# replaced by the approved batches of 40 in milestone 4.
-- { word: apple,   picture: apple,   category: food,    level: 7A, placeholder: true, sentences: ["I like the red apple."] }
-- { word: ball,    picture: ball,    category: toys,    level: 7A, placeholder: true, sentences: ["I kick the ball."] }
-- { word: cat,     picture: cat,     category: animals, level: 7A, placeholder: true, sentences: ["The cat is soft."] }
-- { word: dog,     picture: dog,     category: animals, level: 7A, placeholder: true, sentences: ["The dog can run."] }
-- { word: sun,     picture: sun,     category: nature,  level: 7A, placeholder: true, sentences: ["The sun is hot."] }
-- { word: cup,     picture: cup,     category: home,    level: 7A, placeholder: true, sentences: ["I drink from my cup."] }
-- { word: fish,    picture: fish,    category: animals, level: 7A, placeholder: true, sentences: ["The fish can swim."] }
-- { word: rainbow, picture: rainbow, category: nature,  level: 7A, placeholder: true, sentences: ["I see a big rainbow."] }
+# Word bank. File order is introduction order: the 7A planner introduces words in this order,
+# two per page. Batches of 40 are approved as a table before pictures are drawn.
+
+# Batch 1 (approved 2026-11-03): 7A pages 1-20
+- { word: apple,   picture: apple,   category: food,     level: 7A, sentences: ["I like the red apple."] }
+- { word: ball,    picture: ball,    category: toys,     level: 7A, sentences: ["I kick the ball."] }
+- { word: cat,     picture: cat,     category: animals,  level: 7A, sentences: ["The cat is soft."] }
+- { word: dog,     picture: dog,     category: animals,  level: 7A, sentences: ["The dog can run."] }
+- { word: sun,     picture: sun,     category: nature,   level: 7A, sentences: ["The sun is hot."] }
+- { word: cup,     picture: cup,     category: home,     level: 7A, sentences: ["I drink from my cup."] }
+- { word: fish,    picture: fish,    category: animals,  level: 7A, sentences: ["The fish can swim."] }
+- { word: rainbow, picture: rainbow, category: nature,   level: 7A, sentences: ["I see a big rainbow."] }
+- { word: mom,     picture: mom,     category: family,   level: 7A, sentences: ["I love my mom."] }
+- { word: dad,     picture: dad,     category: family,   level: 7A, sentences: ["Dad reads me a book."] }
+- { word: baby,    picture: baby,    category: family,   level: 7A, sentences: ["The baby is sleeping."] }
+- { word: milk,    picture: milk,    category: food,     level: 7A, mass: true, sentences: ["I drink cold milk."] }
+- { word: banana,  picture: banana,  category: food,     level: 7A, sentences: ["The banana is yellow."] }
+- { word: car,     picture: car,     category: vehicles, level: 7A, sentences: ["The car goes fast."] }
+- { word: bus,     picture: bus,     category: vehicles, level: 7A, sentences: ["We ride the big bus."] }
+- { word: duck,    picture: duck,    category: animals,  level: 7A, sentences: ["The duck says quack."] }
+- { word: bed,     picture: bed,     category: home,     level: 7A, sentences: ["I sleep in my bed."] }
+- { word: shoe,    picture: shoe,    category: clothes,  level: 7A, sentences: ["I put on my shoe."] }
+- { word: hat,     picture: hat,     category: clothes,  level: 7A, sentences: ["Dad has a red hat."] }
+- { word: book,    picture: book,    category: home,     level: 7A, sentences: ["We read a book."] }
+- { word: tree,    picture: tree,    category: nature,   level: 7A, sentences: ["The tree is tall."] }
+- { word: flower,  picture: flower,  category: nature,   level: 7A, sentences: ["The flower smells nice."] }
+- { word: bird,    picture: bird,    category: animals,  level: 7A, sentences: ["The bird can fly."] }
+- { word: hand,    picture: hand,    category: body,     level: 7A, sentences: ["I wave my hand."] }
+- { word: nose,    picture: nose,    category: body,     level: 7A, sentences: ["I touch my nose."] }
+- { word: foot,    picture: foot,    category: body,     level: 7A, sentences: ["I hop on one foot."] }
+- { word: ear,     picture: ear,     category: body,     level: 7A, sentences: ["I hear with my ear."] }
+- { word: spoon,   picture: spoon,   category: home,     level: 7A, sentences: ["I eat with a spoon."] }
+- { word: egg,     picture: egg,     category: food,     level: 7A, sentences: ["I eat an egg."] }
+- { word: bread,   picture: bread,   category: food,     level: 7A, mass: true, sentences: ["I like warm bread."] }
+- { word: cookie,  picture: cookie,  category: food,     level: 7A, sentences: ["Mom gives me a cookie."] }
+- { word: bear,    picture: bear,    category: animals,  level: 7A, sentences: ["The bear is big and brown."] }
+- { word: truck,   picture: truck,   category: vehicles, level: 7A, sentences: ["The truck is very big."] }
+- { word: boat,    picture: boat,    category: vehicles, level: 7A, sentences: ["The boat is on the water."] }
+- { word: moon,    picture: moon,    category: nature,   level: 7A, sentences: ["I see the moon at night."] }
+- { word: star,    picture: star,    category: nature,   level: 7A, sentences: ["The star is bright."] }
+- { word: sock,    picture: sock,    category: clothes,  level: 7A, sentences: ["I have one blue sock."] }
+- { word: coat,    picture: coat,    category: clothes,  level: 7A, sentences: ["I wear my warm coat."] }
+- { word: chair,   picture: chair,   category: home,     level: 7A, sentences: ["I sit on the chair."] }
+- { word: door,    picture: door,    category: home,     level: 7A, sentences: ["Please close the door."] }

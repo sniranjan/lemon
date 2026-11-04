@@ -140,6 +140,7 @@ class VocabEntry(_Strict):
     level: str
     sentences: list[str] = Field(default_factory=list)
     placeholder: bool = False   # pipeline-test word, replaced by an approved batch
+    mass: bool = False          # takes "some", not "a" (milk, bread)
 
 
 class Issue(_Strict):

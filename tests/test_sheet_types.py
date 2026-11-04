@@ -139,3 +139,34 @@ def test_page_range_matches_full_run(out_dir, fixture_content):
     full = {s.id: s for s, _ in gen.generate_pages(ZI, list(range(1, 21)))}
     for sid, sheet in alone.items():
         assert sheet == full[sid]
+
+
+def test_story_frames_suit_the_word():
+    import random
+
+    from ws.content import stories, vocab_by_word
+    from ws.sheet_types.word_story import article, pick_frames
+
+    bank = vocab_by_word()
+    data = stories()
+    for _ in range(20):
+        mom, nose, milk = bank["mom"], bank["nose"], bank["milk"]
+        f_mom, f_nose = pick_frames(random.Random(_), [mom, nose], data)
+        assert f_mom in data["frames_by_category"]["family"] and "{a}" not in f_mom
+        assert f_nose in data["frames_by_category"]["body"]
+    assert article(bank["milk"]) == "some" and article(bank["egg"]) == "an" and article(bank["dog"]) == "a"
+    frames = pick_frames(random.Random(1), [bank["dog"], bank["cat"], bank["cup"], bank["ball"]], data)
+    assert len(set(frames)) == 4
+
+
+def test_story_allowed_words_cover_every_frame():
+    import re
+
+    from ws.content import stories
+
+    data = stories()
+    allowed = {w.lower() for w in data["allowed_words"]} | {"some", "a", "an"}
+    frames = data["frames"] + [f for fs in data["frames_by_category"].values() for f in fs]
+    for f in frames:
+        for token in re.findall(r"[A-Za-z]+", f.replace("{w}", "").replace("{a}", "")):
+            assert token.lower() in allowed, (f, token)

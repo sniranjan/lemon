@@ -1,7 +1,8 @@
 # 7A-C word stories are built from sentence frames. Each frame has one slot `{w}` for a
-# known word (and `{a}` for its article, a/an). Every other token must be in
-# `allowed_words`, so stories only use words the child has met.
-allowed_words: [I, see, a, an, look, at, the, here, is, my, this, like, have]
+# known word (and `{a}` for its article: a / an, or "some" for words marked `mass: true`).
+# Every other token must be in `allowed_words`, so stories only use words the child has met.
+# A word uses the frames for its category if there are any, otherwise the default `frames`.
+allowed_words: [I, see, a, an, some, look, at, the, here, is, my, this, like, have, love, hug, touch]
 frames:
   - "I see {a} {w}."
   - "Look at the {w}."
@@ -9,3 +10,7 @@ frames:
   - "This is {a} {w}."
   - "I like the {w}."
   - "I have {a} {w}."
+frames_by_category:
+  family: ["Here is my {w}.", "I love my {w}.", "I hug my {w}.", "Look at my {w}."]
+  body: ["This is my {w}.", "I touch my {w}.", "Look at my {w}.", "Here is my {w}."]
+  nature: ["I see the {w}.", "Look at the {w}.", "I like the {w}.", "Here is the {w}."]

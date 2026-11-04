@@ -17,8 +17,23 @@ from ._common import error
 TOKEN = re.compile(r"[A-Za-z']+")
 
 
-def article(word: str) -> str:
-    return "an" if word[0] in "aeiou" else "a"
+def article(entry) -> str:
+    if entry.mass:
+        return "some"
+    return "an" if entry.word[0] in "aeiou" else "a"
+
+
+def pick_frames(rng, words: list, story_data: dict) -> list[str]:
+    """One frame per word, from its category's frames (or the defaults), no frame twice if avoidable."""
+    used: set[str] = set()
+    chosen = []
+    for entry in words:
+        options = story_data.get("frames_by_category", {}).get(entry.category) or story_data["frames"]
+        fresh = [f for f in options if f not in used] or options
+        frame = rng.choice(fresh)
+        used.add(frame)
+        chosen.append(frame)
+    return chosen
 
 
 @register("word_story")
@@ -27,11 +42,11 @@ class WordStory(SheetType):
 
     def generate(self, ctx: GenContext) -> SheetContent:
         words = list(ctx.plan.for_page(ctx.spec.page).review_words)
-        frames = ctx.rng.sample(stories()["frames"], len(words))
         bank = vocab_by_word()
+        frames = pick_frames(ctx.rng, [bank[w] for w in words], stories())
         items = [{"kind": "picture", "word": words[0], "picture": bank[words[0]].picture}]
         for frame, w in zip(frames, words):
-            before, after = frame.replace("{a}", article(w)).split("{w}")
+            before, after = frame.replace("{a}", article(bank[w])).split("{w}")
             items.append({"kind": "sentence", "word": w, "picture": bank[w].picture,
                           "before": before, "after": after, "text": f"{before}{w}{after}"})
         return SheetContent(

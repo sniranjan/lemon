@@ -20,9 +20,9 @@
       "kind": "sentence",
       "word": "rainbow",
       "picture": "rainbow",
-      "before": "This is a ",
+      "before": "Here is the ",
       "after": ".",
-      "text": "This is a rainbow."
+      "text": "Here is the rainbow."
     },
     {
       "kind": "sentence",
@@ -36,17 +36,17 @@
       "kind": "sentence",
       "word": "ball",
       "picture": "ball",
-      "before": "I have a ",
+      "before": "I like the ",
       "after": ".",
-      "text": "I have a ball."
+      "text": "I like the ball."
     },
     {
       "kind": "sentence",
       "word": "cat",
       "picture": "cat",
-      "before": "I like the ",
+      "before": "Look at the ",
       "after": ".",
-      "text": "I like the cat."
+      "text": "Look at the cat."
     }
   ],
   "answer_key": null,
