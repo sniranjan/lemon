@@ -40,6 +40,10 @@ of good sheets on demand, for example:
 - Sheet IDs use our own scheme: `EN-7A-A-001`, `MA-6A-B-014`, `ZI-A-003`.
 - Content must suit a 3–6 year old: no scary, violent or brand-name content; everyday
   objects, animals, food, family, home, nature, transport.
+- **American spelling and words for all text a child or parent sees** (color, mom, diaper,
+  coloring). Code, file names, YAML keys and sheet type names may keep British spelling
+  (e.g. `colouring`).
+- Home language: TODO (the parent will fill this in: languages spoken at home, words to avoid or include).
 - Every picture in `assets/pictures/` must have a recorded source and licence in
   `assets/pictures/LICENSES.yaml` (either "original" or an open licence such as CC-BY with attribution).
 - Never mark a task done unless `ws verify` passes on everything that was generated.
@@ -59,7 +63,7 @@ of good sheets on demand, for example:
 ## 4. Repository layout
 
 ```
-worksheets/
+lemon/                           # repo root
   CLAUDE.md
   pyproject.toml
   syllabus/                      # WHAT to teach (structure), one file per subject+level
@@ -114,17 +118,20 @@ level: 7A
 title: Repeating familiar words
 aims:
   - Repeat familiar words and everyday expressions while looking at them
-  - Introduce ~306 words
+  - Introduce ~200 words, each seen at least 3 times
 pages: 200
 daily_pages: 5
 sct_minutes_per_page: null
-vocab_target: 306
+vocab_target: 200
 sections:
   - code: A
     name: Familiar Words
     pages: [1, 100]
-    sheet_types: [word_picture_pair, word_picture_sentence]
-    rules: { new_words_per_sheet: 2, review_words_per_sheet: 0, max_word_length: 7 }
+    sheet_types: [word_picture_pair, word_picture_sentence]   # pages cycle through this list
+    rules:
+      new_words_per_sheet: 2
+      max_word_length: 7
+      say_it_again: { count: 2, sheets_back: [3, 10] }   # small review strip; omitted on pages 1–3
   - code: B
     name: Familiar Words Review
     pages: [101, 140]
@@ -156,8 +163,20 @@ sections:
       - { part: 5, pages: [111, 120], rules: { addend: 1, max_first: 59 } }
       - { part: 6, pages: [121, 130], rules: { addend: 1, max_first: 999 } }   # up to 1000+1
 ```
-A part's `rules` override the section's. `--part N` selects one part; otherwise pages map to
-parts by page number.
+Rules merge **level → section → part**, later ones winning. A part may also set its own
+`sheet_types`. When a section or part lists several sheet types, pages cycle through the
+list in order (list a type twice to weight it). `--part N` selects one part; otherwise pages
+map to parts by page number. Values we chose ourselves (not from the published chart) carry
+`source: ours`.
+
+**Sheet IDs** number pages *within the section*: 7A page 101 is `EN-7A-B-001`. Pencil sheets
+drop the subject prefix (`ZI-A-003`). Variants after the first add a suffix (`EN-7A-A-001-v2`).
+**Seeds** are the first 8 bytes of `sha256("subject|level|section|page|variant")`, never Python's `hash()`.
+
+**Planning is level-wide.** Before generating, the planner builds a schedule for the whole
+level (which words are new on which page, which go in each "Say it again" strip, review grid
+and story). Each page is then built from that plan, so `--pages 51-100` gives the same sheets
+whether or not pages 1–50 exist yet.
 
 ### `content/vocab/english.yaml`
 ```yaml
@@ -178,7 +197,7 @@ title, parent_tip, items[], answer_key (if any), new_words[], review_words[]
 
 ## 6. Pictures (the real bottleneck)
 
-7A alone needs ~300 pictured words. Pictures are therefore a first-class workstream.
+7A alone needs ~200 pictured words. Pictures are therefore a first-class workstream.
 
 - Style: simple flat illustration, **thick dark outline (3px at 100×100 viewBox)**, flat
   pastel fill, no text inside, no gradients, recognisable in grayscale.
@@ -213,8 +232,8 @@ test.** Nothing else in the code should change.
 
 | Sheet type | Used in | What the child does |
 |---|---|---|
-| `word_picture_pair` | EN 7A-A | 2 big picture+word cards, says each word back |
-| `word_picture_sentence` | EN 7A-A | Picture + word + short sentence read aloud together |
+| `word_picture_pair` | EN 7A-A | 2 big picture+word cards (the 2 new words), says each word back; "Say it again" strip |
+| `word_picture_sentence` | EN 7A-A | 2 cards of picture + word + short sentence read aloud together; "Say it again" strip |
 | `review_grid_4` | EN 7A-B, 6A-A | 4 known pictures+words; "find it" game |
 | `word_story` | EN 7A-C | 1 picture, 2–4 short sentences using known words |
 | `phrase_card` | EN 6A-B | Picture + 2–3 word phrase ("a red ball") |
@@ -233,6 +252,10 @@ test.** Nothing else in the code should change.
 | `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
 | `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
 | `add_facts` | MA 3A-C…F, 2A | Vertical list of `a + b =` facts within the part's range; answer key generated |
+
+**"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
+page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.
+The main cards stay at 2 new words. Pages 1–3 have no strip, because no word is old enough yet.
 
 Later levels (4A–2A English, 3A–2A Math) need more types. Add them when the child is about
 one level away. Don't build them early.
@@ -266,8 +289,12 @@ Each check returns `Issue(sheet_id, severity, message)`. Any `error` → non-zer
 - `letter_trace`: letters requested exist in the trace font.
 
 **Exposure checks (per section / level run)**
-- In 7A-A every introduced word is seen ≥ 3 times across the level (new + review + stories).
-- No word appears on two consecutive sheets as "new".
+- Words are "new" exactly once in the level.
+- Every 7A word appears ≥ 3 times across the level (new + "Say it again" strip + review
+  grid + stories). The strip has only ~194 slots, and words introduced on the last pages of
+  7A-A never reach it, so the planner must give 7A-B grid slots and 7A-C story words to the
+  words the strip served least.
+- Every strip word was introduced 3–10 sheets before the sheet it appears on.
 
 **Layout checks (Playwright, after render)**
 - Each sheet renders to exactly **one** Letter page (816×1056 CSS px); nothing overflows
@@ -336,13 +363,13 @@ No SCT. Do ZI alongside the first English/Math level; it must be finished before
 and MA 4A, which start tracing.
 | Level | Sections (code: name, pages) | Notes |
 |---|---|---|
-| ZI (100p) | A Colouring 1–20 · B Straight Lines 21–50 · C Curved Lines 51–100 | Colouring 1–2, Straight Lines 1–3, Curved Lines 1–5 (10 pages each) |
+| ZI (100p) | A Coloring 1–20 · B Straight Lines 21–50 · C Curved Lines 51–100 | Coloring 1–2, Straight Lines 1–3, Curved Lines 1–5 (10 pages each) |
 | ZII (100p) | A Shapes & Pictures 1–30 · B Shapes & Pictures (Stories) 31–60 · C Back & Forth 61–80 · D Corners & Curves 81–100 | e.g. "draw a line from the circle to the star" |
 
 ### English (from the syllabus chart)
 | Level | Sections (code: name, pages) | Aims / notes |
 |---|---|---|
-| 7A | A Familiar Words 1–100 · B Familiar Words Review 101–140 · C Word Stories 141–200 | Repeat familiar words; ~306 words |
+| 7A | A Familiar Words 1–100 · B Familiar Words Review 101–140 · C Word Stories 141–200 | Repeat familiar words; ~200 words (our choice: fewer words, learned well), each seen ≥ 3 times |
 | 6A | A Vocabulary Review 1–30 · B Simple Phrases 31–100 · C Familiar Sentence Structures 101–200 | Recite words/phrases/sentences; +210 words |
 | 5A | A Letter Tracing 1–70 · B Sound Parts 71–150 · C Letter Review 151–160 · D Word Tracing 161–200 | Read short sentences; initial consonants, short vowels; trace a–z; +113 words |
 | 4A | A Familiar Letter Combinations 1–100 · B Rhyming Skills 101–140 · C Sentence Tracing 141–200 | Double consonants, clusters, phonograms; SCT 1–2 min/page; +225 words |
@@ -357,10 +384,10 @@ are 1–2 min/page.
 
 | Level | Section (code: name, pages) | Parts / number range |
 |---|---|---|
-| 6A Counting | A Counting up to 5, 1–30 | 3 parts |
-| | B Counting up to 10, 31–100 | 7 parts |
-| | C Number Reading up to 10, 101–150 | 5 parts (read numerals with pictures) |
-| | D Number of Dots up to 10, 151–200 | 5 parts (dot patterns ↔ numeral) |
+| 6A Counting | A Counting up to 5, 1–30 | 3 parts: up to 3 / 4 / 5 (`source: ours`) |
+| | B Counting up to 10, 31–100 | 7 parts: up to 6 / 7 / 8 / 9 / 10 (`count_and_say`), then 2 mixed up to 10 (`count_and_point`) |
+| | C Number Reading up to 10, 101–150 | 5 parts: 1–4 / 1–6 / 1–8 / 1–10 / mixed 1–10 (read numerals with pictures) |
+| | D Number of Dots up to 10, 151–200 | 5 parts: 1–5 / 1–7 / 1–9 / 1–10 / mixed 1–10 (dot patterns ↔ numeral) |
 | 5A Reading Numbers | A Number Reading up to 30, 1–100 | 10 parts |
 | | B Sequence of Numbers up to 30, 101–130 | 3 parts |
 | | C Sequence of Numbers up to 40, 131–160 | 3 parts |
@@ -397,7 +424,8 @@ the child sees that +1 means "the next number". Reproduce the *idea* with our ow
 ## 12. Pedagogy rules the generator must respect
 
 - **5 pages a day** is the default unit. Booklets are printed in batches of 10 pages.
-- **Spiral repetition**: each new 7A word is seen ≥ 3 times within the level. Sections
+- **Spiral repetition**: each 7A word is new exactly once and seen ≥ 3 times within the
+  level (new card, "Say it again" strip, review grid, stories). Sections
   marked "Review" draw only from already-introduced items.
 - **Small steps**: no section jumps more than one new idea per sheet (e.g. one new number
   per counting sheet, two new words per word sheet).
@@ -412,11 +440,12 @@ the child sees that +1 means "the next number". Reproduce the *idea* with our ow
 ## 13. Build order (first milestones)
 
 1. Scaffold package, models, syllabus YAML for EN 7A + MA 6A + pencil ZI, CLI skeleton.
-2. Sheet types `word_picture_pair`, `review_grid_4`, `word_story`, `count_and_say`,
+2. Sheet types `word_picture_pair`, `word_picture_sentence`, `review_grid_4`, `word_story`, `count_and_say`,
    `count_and_point`, `number_read`, `dots_to_number`, `colouring`, `line_path`, plus templates.
 3. Verification (content + layout + contact sheet) and render-to-PDF booklet.
 4. Seed word bank: 60 words + pictures for 7A-A pages 1–30; prove the pipeline end to end.
-5. Grow the word bank to ~300 words in batches of 40, then generate all of EN 7A, MA 6A, ZI.
+5. Grow the word bank to ~200 words in batches of 40 (show each batch as a table of
+   word, category and sentence and wait for an OK before drawing; show the contact sheet after), then generate all of EN 7A, MA 6A, ZI.
 6. Only then: 6A sheet types and content.
 
 ## 14. Definition of done for any request
