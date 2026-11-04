@@ -1,0 +1,10 @@
+# One entry per picture. source: original (drawn for this project) or an open-licence set.
+# Open-licence entries need: source, licence, author, url, and any changes made.
+apple:   { source: original, licence: original }
+ball:    { source: original, licence: original }
+cat:     { source: original, licence: original }
+cup:     { source: original, licence: original }
+dog:     { source: original, licence: original }
+fish:    { source: original, licence: original }
+rainbow: { source: original, licence: original }
+sun:     { source: original, licence: original }

@@ -136,6 +136,7 @@ class VocabEntry(_Strict):
     category: str
     level: str
     sentences: list[str] = Field(default_factory=list)
+    placeholder: bool = False   # pipeline-test word, replaced by an approved batch
 
 
 class Issue(_Strict):

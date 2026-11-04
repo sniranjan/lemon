@@ -1,0 +1,11 @@
+# Word bank. File order is introduction order: the 7A planner introduces words in this order.
+# `placeholder: true` entries exist only to prove the pipeline (milestone 2); they are
+# replaced by the approved batches of 40 in milestone 4.
+- { word: apple,   picture: apple,   category: food,    level: 7A, placeholder: true, sentences: ["I like the red apple."] }
+- { word: ball,    picture: ball,    category: toys,    level: 7A, placeholder: true, sentences: ["I kick the ball."] }
+- { word: cat,     picture: cat,     category: animals, level: 7A, placeholder: true, sentences: ["The cat is soft."] }
+- { word: dog,     picture: dog,     category: animals, level: 7A, placeholder: true, sentences: ["The dog can run."] }
+- { word: sun,     picture: sun,     category: nature,  level: 7A, placeholder: true, sentences: ["The sun is hot."] }
+- { word: cup,     picture: cup,     category: home,    level: 7A, placeholder: true, sentences: ["I drink from my cup."] }
+- { word: fish,    picture: fish,    category: animals, level: 7A, placeholder: true, sentences: ["The fish can swim."] }
+- { word: rainbow, picture: rainbow, category: nature,  level: 7A, placeholder: true, sentences: ["I see a big rainbow."] }

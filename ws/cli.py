@@ -7,7 +7,7 @@ from typing import Optional
 import typer
 
 from . import registry
-from .syllabus import load_level, resolve_page, sheet_id
+from .syllabus import ROOT, load_level, parse_pages, resolve_page, sheet_id
 
 app = typer.Typer(no_args_is_help=True, add_completion=False, help="Generate, verify and print worksheets.")
 pictures_app = typer.Typer(no_args_is_help=True, help="Picture helpers.")
@@ -16,6 +16,14 @@ syllabus_app = typer.Typer(no_args_is_help=True, help="Inspect the syllabus.")
 app.add_typer(pictures_app, name="pictures")
 app.add_typer(vocab_app, name="vocab")
 app.add_typer(syllabus_app, name="syllabus")
+
+
+def _load(subject: str, level: str):
+    try:
+        return load_level(subject, level)
+    except (FileNotFoundError, ValueError) as e:
+        typer.echo(str(e), err=True)
+        raise typer.Exit(1)
 
 
 def _not_yet(command: str, milestone: int) -> None:
@@ -37,7 +45,28 @@ def generate(
     variant: int = typer.Option(1, help="Alternative version of the same pages"),
 ) -> None:
     """Generate sheets."""
-    _not_yet("generate", 2)
+    from .generate import generate_pages
+
+    lvl = _load(subject, level)
+    if count is not None or all_ or part is not None:
+        _not_yet("generate --count/--all/--part", 2)
+    if not pages:
+        typer.echo("give --pages (e.g. --pages 1-4)", err=True)
+        raise typer.Exit(1)
+    page_list = parse_pages(pages)
+    if section:
+        s = lvl.section(section)
+        outside = [p for p in page_list if not s.pages[0] <= p <= s.pages[1]]
+        if outside:
+            typer.echo(f"pages {outside} are outside {level}-{section} (pages {s.pages[0]}–{s.pages[1]})", err=True)
+            raise typer.Exit(1)
+    try:
+        made = generate_pages(lvl, page_list, variant, seed, sheet_type)
+    except KeyError as e:
+        typer.echo(f"cannot generate: {e.args[0]}", err=True)
+        raise typer.Exit(1)
+    for sheet, path in made:
+        typer.echo(f"{sheet.id}  page {sheet.page_number}  {sheet.sheet_type}  {path.relative_to(ROOT)}")
 
 
 @app.command()
@@ -54,9 +83,33 @@ def render(
     subject: str = typer.Option(...),
     level: str = typer.Option(...),
     pdf: bool = typer.Option(False, "--pdf", help="Also build booklet PDFs"),
+    png: bool = typer.Option(False, "--png", help="Page PNGs + contact sheet (layout preview)"),
 ) -> None:
-    """Render sheets to HTML/PDF."""
-    _not_yet("render", 3)
+    """Render generated sheets to PNG (and later PDF)."""
+    from .generate import OUT_DIR, load_manifest, sheet_dir
+    from .render import contact_sheet, render_pngs
+
+    if pdf:
+        _not_yet("render --pdf", 3)
+    if not png:
+        typer.echo("give --png (PDF booklets come in milestone 3)", err=True)
+        raise typer.Exit(1)
+    sheets = load_manifest(subject, level)
+    if not sheets:
+        typer.echo(f"nothing generated yet for {subject} {level}", err=True)
+        raise typer.Exit(1)
+    results = render_pngs([sheet_dir(s) / f"{s.id}.html" for s in sheets])
+    failed = False
+    for r in results:
+        status = "ok" if not r.problems else "; ".join(r.problems)
+        failed |= bool(r.problems)
+        typer.echo(f"{r.png.relative_to(ROOT)}  {status}")
+    out = OUT_DIR / subject / level / "review.png"
+    contact_sheet([r.png for r in results], out, f"{subject} {level}: {len(results)} pages",
+                  grayscale_sample=results[-1].png)
+    typer.echo(f"contact sheet: {out.relative_to(ROOT)}")
+    if failed:
+        raise typer.Exit(1)
 
 
 @pictures_app.command("missing")
@@ -80,11 +133,7 @@ def vocab_stats(level: str = typer.Option(...)) -> None:
 @syllabus_app.command("show")
 def syllabus_show(subject: str, level: str) -> None:
     """Print a level's sections, page ranges, parts and sheet types."""
-    try:
-        lvl = load_level(subject, level)
-    except (FileNotFoundError, ValueError) as e:
-        typer.echo(str(e), err=True)
-        raise typer.Exit(1)
+    lvl = _load(subject, level)
 
     built = set(registry.implemented())
     typer.echo(f"{lvl.subject} {lvl.level}: {lvl.title}  ({lvl.pages} pages, {lvl.daily_pages}/day)")

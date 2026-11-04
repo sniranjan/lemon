@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.pair .card { display: flex; flex-direction: column; align-items: center; padding: 34px 16px 30px; }
+.pair .card img { width: 240px; height: 240px; }
+.pair .card .word { font-size: 72px; font-weight: 700; line-height: 1.1; margin-top: 18px; }
+{% endblock %}
+{% block body %}
+    <div class="pair">
+{% for item in sheet.items if item.kind == "card" %}
+      <div class="card"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><div class="word">{{ item.word }}</div></div>
+{% endfor %}
+    </div>
+{% endblock %}
+{% block after_body %}
+{% include "_say_it_again.html.j2" %}
+{% endblock %}
