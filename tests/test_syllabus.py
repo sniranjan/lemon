@@ -122,7 +122,8 @@ def test_part_sheet_types_override_section():
 
 def test_sheet_types_cycle_within_section():
     lvl = load_level("english", "7A")
-    assert [resolve_page(lvl, p).sheet_type for p in (1, 2, 3, 4)] == [
+    assert {resolve_page(lvl, p).sheet_type for p in range(1, 21)} == {"word_picture_pair"}
+    assert [resolve_page(lvl, p).sheet_type for p in (21, 22, 23, 100)] == [
         "word_picture_pair", "word_picture_sentence", "word_picture_pair", "word_picture_sentence"]
     lvl6 = load_level("math", "6A")
     # cycle restarts at each part so every part opens with number_read
@@ -163,3 +164,11 @@ def test_parse_pages():
     assert parse_pages("1-3,7") == [1, 2, 3, 7]
     with pytest.raises(ValueError):
         parse_pages("5-1")
+
+
+def test_ZI_line_rules_reach_line_sections():
+    lvl = load_level("pencil", "ZI")
+    rules = resolve_page(lvl, 75).rules
+    assert rules["flow"] == ["left_to_right", "top_to_bottom"]
+    assert (rules["start_marker"], rules["end_marker"], rules["arrows"]) == ("dot", "picture", False)
+    assert rules["length_frac"] == [0.4, 0.9] and rules["path"] == "wave"

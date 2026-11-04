@@ -132,6 +132,9 @@ sections:
       new_words_per_sheet: 2
       max_word_length: 7
       say_it_again: { count: 2, sheets_back: [3, 10] }   # small review strip; omitted on pages 1–3
+    parts:   # a part can narrow the sheet types: pairs only until the routine is familiar
+      - { part: 1, pages: [1, 20],   sheet_types: [word_picture_pair] }
+      - { part: 2, pages: [21, 100], sheet_types: [word_picture_pair, word_picture_sentence] }
   - code: B
     name: Familiar Words Review
     pages: [101, 140]
@@ -242,7 +245,7 @@ test.** Nothing else in the code should change.
 | `sound_parts` | EN 5A-B | Word split into onset + rime with picture |
 | `word_trace` | EN 5A-D | Dotted whole words to trace under pictures |
 | `colouring` | ZI-A | Simple outline shape to colour inside |
-| `line_path` | ZI-B/C, ZII-C/D | Draw from start icon to end icon along straight/curved/zigzag path |
+| `line_path` | ZI-B/C, ZII-C/D | Draw from a start dot to a small picture to reach ("take the bee to the flower") along a straight/curved/zigzag lane. Lines always run left→right or top→bottom; no arrows or text for the child; lines get longer across each part |
 | `count_and_say` | MA 6A-A/B | Rows of N pictures + big numeral + number word; count aloud while pointing |
 | `count_and_point` | MA 6A-B/C | Rows of N pictures + 3 numeral choices to point at |
 | `number_read` | MA 6A-C, 5A-A | Numerals (in jars/balloons/boxes) to read aloud, with matching pictures |
@@ -343,14 +346,15 @@ booklet. Answer keys go in a separate `-answers.pdf`.
 
 - Page: US Letter 816×1056 px, padding 48/56/40 px, white background.
 - Font: **Andika** (designed for early readers, single-storey "a"), bold for headings.
-- Header: small caps line `LEVEL 7A · ENGLISH`, sheet title (34px bold), pill "Sheet N",
+- Header: small caps line `LEVEL 7A · ENGLISH`, sheet title (34px bold), pill with the page number **within the level** (`7A · 101`, so progress
+  reads 1–200 in one line),
   and `Name ____ Date ____ Time ____` on the right, then a 3px rule in the subject colour.
 - Subject colours: English teal `#0B7A75` (tint `#E6F4F3`), Math orange `#B4410C`
   (tint `#FDEDE3`), Pencil skills purple `#6B4FBB` (tint `#EFEBFA`). Must print legibly in grayscale.
 - Parent tip box under the header, tinted background, 17px.
 - Cards: 3px near-black border, 28px radius. Pictures 200–250px in 7A English, 72px
   per item in counting rows.
-- Footer: 12px grey sheet ID (e.g. `EN-7A-A-001`). No branding.
+- Footer: 12px grey sheet ID (section-relative, e.g. `EN-7A-B-001`). No branding.
 
 ---
 

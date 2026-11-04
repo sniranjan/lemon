@@ -9,6 +9,17 @@ daily_pages: 5
 sct_minutes_per_page: null
 # Section names and part counts follow the chart; the rules inside each part are ours.
 # lane_px is the width of the guide lane the line stays inside; it narrows as skill grows.
+# Every line_path sheet: lines run left→right or top→bottom (diagonals top-left→bottom-right),
+# start at a dot and end at a small picture to reach. No arrows or text for the child.
+# length_frac is the line length as a fraction of the usable width/height; it grows linearly
+# from the first to the last page of each part.
+rules:
+  flow: [left_to_right, top_to_bottom]
+  start_marker: dot
+  end_marker: picture
+  arrows: false
+  child_text: false
+  length_frac: [0.4, 0.9]
 sections:
   - code: A
     name: Coloring
