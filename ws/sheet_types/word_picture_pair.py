@@ -20,7 +20,7 @@ class WordPicturePair(SheetType):
         entry = ctx.plan.for_page(ctx.spec.page)
         return SheetContent(
             title="Look and say",
-            parent_tip=ctx.rng.choice(ctx.banks["tips"][self.name]),
+            parent_tip=ctx.tip(self.name),
             items=card_items(entry.new_words, "card") + card_items(entry.review_words, "strip"),
             new_words=list(entry.new_words),
             review_words=list(entry.review_words),

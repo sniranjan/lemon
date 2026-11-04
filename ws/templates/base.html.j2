@@ -33,10 +33,11 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
 .fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
 
 /* parent tip */
-.tip { margin-top: 18px; background: var(--tint); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
 .tip b { color: var(--accent); }
 
-.body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; }
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
 
 /* cards */
 .card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }

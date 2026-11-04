@@ -1,5 +1,3 @@
-import shutil
-
 import pytest
 
 from ws import generate as gen
@@ -14,17 +12,6 @@ EN7A = load_level("english", "7A")
 
 def _bank(n: int) -> list[VocabEntry]:
     return [VocabEntry(word=f"w{i:03d}", picture="apple", category="test", level="7A") for i in range(n)]
-
-
-@pytest.fixture
-def out_dir(monkeypatch):
-    """A scratch output tree inside the repo's out/ (git-ignored), like real output."""
-    d = ROOT / "out" / "_pytest"
-    shutil.rmtree(d, ignore_errors=True)
-    monkeypatch.setattr(gen, "OUT_DIR", d)
-    monkeypatch.setattr(gen, "MANIFEST", d / "manifest.jsonl")
-    yield d
-    shutil.rmtree(d, ignore_errors=True)
 
 
 # --- planner -----------------------------------------------------------------------------
@@ -75,7 +62,7 @@ def test_tips_are_short():
 
 # --- generate + render ---------------------------------------------------------------------
 
-def test_sheet_contents_page_4():
+def test_sheet_contents_page_4(fixture_content):
     plan = gen.build_plan(EN7A)
     sheet = gen.build_sheet(EN7A, 4, plan)
     assert sheet.id == "EN-7A-A-004" and sheet.sheet_type == "word_picture_pair"
@@ -83,7 +70,7 @@ def test_sheet_contents_page_4():
     assert get("word_picture_pair").verify(sheet) == []
 
 
-def test_html_is_deterministic(out_dir):
+def test_html_is_deterministic(out_dir, fixture_content):
     first = {p.name: p.read_bytes() for _, p in gen.generate_pages(EN7A, [1, 2, 3, 4])}
     second = {p.name: p.read_bytes() for _, p in gen.generate_pages(EN7A, [4, 3, 2, 1])}
     assert first == second
@@ -93,7 +80,7 @@ def test_html_is_deterministic(out_dir):
     assert 'class="strip"' not in first["EN-7A-A-001.html"].decode()
 
 
-def test_pages_render_cleanly(out_dir):
+def test_pages_render_cleanly(out_dir, fixture_content):
     pytest.importorskip("playwright")
     from ws.render import render_pngs
 
@@ -102,3 +89,33 @@ def test_pages_render_cleanly(out_dir):
     for r in results:
         assert r.problems == [], (r.html.name, r.problems)
         assert r.png.stat().st_size > 10_000
+
+
+def test_golden_page_4(out_dir, fixture_content, golden):
+    (sheet, path), = gen.generate_pages(EN7A, [4])
+    golden("EN-7A-A-004.html", path.read_text())
+    golden("EN-7A-A-004.json", sheet.model_dump_json(indent=2) + "\n")
+
+
+def test_section_tips_override_subject_tips(fixture_content):
+    import random
+
+    from ws.content import tips
+    from ws.registry import GenContext
+    from ws.syllabus import resolve_page
+
+    spec = resolve_page(EN7A, 5)
+    custom = spec.model_copy(update={"rules": {**spec.rules, "tips": {"word_picture_pair": ["Part tip."]}}})
+    ctx = GenContext(spec=custom, rng=random.Random(1), banks={"tips": tips("english")})
+    assert ctx.tip("word_picture_pair") == "Part tip."
+    ctx = GenContext(spec=spec, rng=random.Random(1), banks={"tips": tips("english")})
+    assert ctx.tip("word_picture_pair") in tips("english")["word_picture_pair"]
+
+
+def test_syllabus_tips_are_short():
+    from ws.syllabus import all_levels, resolve_page
+
+    for lvl in all_levels():
+        for page in range(1, lvl.pages + 1):
+            for sheet_type, lines in resolve_page(lvl, page).rules.get("tips", {}).items():
+                assert all(len(t) <= 220 for t in lines), (lvl.level, page, sheet_type)

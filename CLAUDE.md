@@ -203,7 +203,11 @@ title, parent_tip, items[], answer_key (if any), new_words[], review_words[]
 7A alone needs ~200 pictured words. Pictures are therefore a first-class workstream.
 
 - Style: simple flat illustration, **thick dark outline (3px at 100×100 viewBox)**, flat
-  pastel fill, no text inside, no gradients, recognisable in grayscale.
+  **mid-tone** fill, no text inside, no gradients, recognizable in grayscale.
+- **Fill lightness**: the main fill (the most common color after the dark outline) must be
+  **50–75% lightness in grayscale**, measured as `0.2126 R + 0.7152 G + 0.0722 B` (the CSS
+  `grayscale()` weights). Pastels are too light and vanish in black and white.
+  `ws pictures sheet` measures every picture on a real render and flags any outside the range.
 - Format: SVG, `viewBox="0 0 100 100"`, no `<style>`, no scripts, no embedded rasters.
 - Sources, in order of preference: (1) original SVGs drawn by Claude Code in the house
   style; (2) open-licence sets (e.g. OpenMoji CC BY-SA 4.0), recorded in `LICENSES.yaml`.
@@ -351,7 +355,12 @@ booklet. Answer keys go in a separate `-answers.pdf`.
   and `Name ____ Date ____ Time ____` on the right, then a 3px rule in the subject colour.
 - Subject colours: English teal `#0B7A75` (tint `#E6F4F3`), Math orange `#B4410C`
   (tint `#FDEDE3`), Pencil skills purple `#6B4FBB` (tint `#EFEBFA`). Must print legibly in grayscale.
-- Parent tip box under the header, tinted background, 17px.
+- Parent tip box under the header, tinted background, 2px solid border in the subject color
+  (so it still shows in black and white), 17px. Tips come from `content/tips/<subject>.yaml`
+  per sheet type; a section or part can override them with `rules: { tips: { <sheet_type>: [...] } }`.
+- The body fills the height left between header/tip and strip/footer; no floating, centered
+  blocks. 7A word cards are stacked one per row (picture ~280px left, word 96px bold right, lowercase).
+- Ligatures are off (`font-variant-ligatures: none`) so early readers see every letter.
 - Cards: 3px near-black border, 28px radius. Pictures 200–250px in 7A English, 72px
   per item in counting rows.
 - Footer: 12px grey sheet ID (section-relative, e.g. `EN-7A-B-001`). No branding.

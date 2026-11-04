@@ -22,10 +22,8 @@ def test_syllabus_show_unknown_level():
 
 @pytest.mark.parametrize("args", [
     ["generate", "--subject", "math", "--level", "6A", "--all"],
-    ["verify"],
     ["render", "--subject", "english", "--level", "7A", "--pdf"],
-    ["pictures", "missing", "--subject", "english", "--level", "7A"],
-    ["pictures", "sheet"],
+    ["verify"],
     ["vocab", "stats", "--level", "7A"],
 ])
 def test_unbuilt_commands_exit_nonzero(args):
@@ -52,3 +50,9 @@ def test_exposure_word_is_new_once():
     assert ex.total("apple") == 3 and ex.new_on("apple") == 1
     with pytest.raises(ValueError, match="already new"):
         ex.add("apple", "new", page=9)
+
+
+def test_pictures_missing_passes_for_bank():
+    r = runner.invoke(app, ["pictures", "missing", "--subject", "english", "--level", "7A"])
+    assert r.exit_code == 0, r.output
+    assert "0 missing" in r.output

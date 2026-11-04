@@ -114,14 +114,34 @@ def render(
 
 @pictures_app.command("missing")
 def pictures_missing(subject: str = typer.Option(...), level: str = typer.Option(...)) -> None:
-    """List words with no SVG picture."""
-    _not_yet("pictures missing", 4)
+    """List words with no SVG picture or no licence entry."""
+    from .content import licenses, picture_path, vocab
+
+    lic = licenses()
+    missing = [w for w in vocab(subject) if w.level == level
+               and (not picture_path(w.picture).exists() or w.picture not in lic)]
+    for w in missing:
+        what = "no SVG" if not picture_path(w.picture).exists() else "no licence entry"
+        typer.echo(f"{w.word:<12} {w.picture}.svg  {what}")
+    typer.echo(f"{len(missing)} missing")
+    if missing:
+        raise typer.Exit(1)
 
 
 @pictures_app.command("sheet")
 def pictures_sheet() -> None:
-    """Make a contact sheet PNG of all pictures."""
-    _not_yet("pictures sheet", 4)
+    """Contact sheet of all pictures (color + grayscale); flags fills outside 50–75% lightness."""
+    from .pictures import check_pictures, picture_sheet
+
+    reports = check_pictures()
+    out = picture_sheet(reports, ROOT / "out" / "pictures" / "contact.png")
+    for r in reports:
+        if r.problems:
+            typer.echo(f"{r.slug}: " + "; ".join(r.problems))
+    flagged = sum(bool(r.problems) for r in reports)
+    typer.echo(f"{len(reports)} pictures, {flagged} flagged. contact sheet: {out.relative_to(ROOT)}")
+    if flagged:
+        raise typer.Exit(1)
 
 
 @vocab_app.command("stats")

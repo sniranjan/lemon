@@ -33,6 +33,17 @@ class GenContext:
     def rules(self) -> dict[str, Any]:
         return self.spec.rules
 
+    def tip(self, sheet_type: str) -> str:
+        """A parent tip for this page, picked by the seeded RNG.
+
+        A part or section can supply its own under `rules.tips.<sheet_type>`; otherwise
+        the subject-wide list in content/tips/<subject>.yaml is used.
+        """
+        options = self.rules.get("tips", {}).get(sheet_type) or self.banks["tips"].get(sheet_type)
+        if not options:
+            raise KeyError(f"no parent tips for {sheet_type!r} (add them to content/tips/{self.spec.subject}.yaml)")
+        return self.rng.choice(options)
+
 
 @dataclass
 class SheetContent:

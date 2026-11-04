@@ -1,0 +1,44 @@
+{
+  "id": "EN-7A-A-004",
+  "subject": "english",
+  "level": "7A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "word_picture_pair",
+  "page_number": 4,
+  "variant": 1,
+  "seed": 11452556396873120263,
+  "title": "Look and say",
+  "parent_tip": "Point to each picture and say the word slowly. Let your child say it back. Then say the small pictures again together.",
+  "items": [
+    {
+      "kind": "card",
+      "word": "fish",
+      "picture": "fish"
+    },
+    {
+      "kind": "card",
+      "word": "rainbow",
+      "picture": "rainbow"
+    },
+    {
+      "kind": "strip",
+      "word": "apple",
+      "picture": "apple"
+    },
+    {
+      "kind": "strip",
+      "word": "ball",
+      "picture": "ball"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "fish",
+    "rainbow"
+  ],
+  "review_words": [
+    "apple",
+    "ball"
+  ]
+}
