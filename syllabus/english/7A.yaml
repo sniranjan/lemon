@@ -1,0 +1,41 @@
+subject: english
+level: 7A
+title: Repeating familiar words
+aims:
+  - Repeat familiar words and everyday expressions while looking at them
+  - Introduce ~200 words, each seen at least 3 times
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: null
+vocab_target: 200
+rules:
+  min_exposures_per_word: 3
+sections:
+  - code: A
+    name: Familiar Words
+    pages: [1, 100]
+    # Pages cycle through this list: odd pages pair cards, even pages cards with a sentence.
+    sheet_types: [word_picture_pair, word_picture_sentence]
+    rules:
+      new_words_per_sheet: 2
+      max_word_length: 7
+      # Small strip at the bottom: 2 words introduced 3–10 sheets earlier. Omitted on pages 1–3.
+      say_it_again: { count: 2, sheets_back: [3, 10] }
+
+  - code: B
+    name: Familiar Words Review
+    pages: [101, 140]
+    sheet_types: [review_grid_4]
+    rules:
+      new_words_per_sheet: 0
+      review_from_sections: [A]
+      words_per_sheet: 4
+
+  - code: C
+    name: Word Stories
+    pages: [141, 200]
+    sheet_types: [word_story]
+    rules:
+      new_words_per_sheet: 0
+      sentences_per_story: [2, 4]
+      only_known_words: true

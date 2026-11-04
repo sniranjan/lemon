@@ -1,0 +1,42 @@
+subject: pencil
+level: ZI
+title: Pencil skills 1
+aims:
+  - Hold a crayon or pencil and color inside a simple shape
+  - Draw straight lines, then curved lines, from a start picture to an end picture
+pages: 100
+daily_pages: 5
+sct_minutes_per_page: null
+# Section names and part counts follow the chart; the rules inside each part are ours.
+# lane_px is the width of the guide lane the line stays inside; it narrows as skill grows.
+sections:
+  - code: A
+    name: Coloring
+    pages: [1, 20]
+    sheet_types: [colouring]
+    source: ours
+    parts:
+      - { part: 1, pages: [1, 10],  rules: { shapes_per_sheet: 1, shape_size: large } }
+      - { part: 2, pages: [11, 20], rules: { shapes_per_sheet: 2, shape_size: medium } }
+
+  - code: B
+    name: Straight Lines
+    pages: [21, 50]
+    sheet_types: [line_path]
+    source: ours
+    parts:
+      - { part: 1, pages: [21, 30], rules: { path: straight, directions: [horizontal], paths_per_sheet: 2, lane_px: 80 } }
+      - { part: 2, pages: [31, 40], rules: { path: straight, directions: [horizontal, vertical], paths_per_sheet: 3, lane_px: 64 } }
+      - { part: 3, pages: [41, 50], rules: { path: straight, directions: [horizontal, vertical, diagonal], paths_per_sheet: 3, lane_px: 52 } }
+
+  - code: C
+    name: Curved Lines
+    pages: [51, 100]
+    sheet_types: [line_path]
+    source: ours
+    parts:
+      - { part: 1, pages: [51, 60],  rules: { path: arc,  humps: 1, paths_per_sheet: 2, lane_px: 80 } }
+      - { part: 2, pages: [61, 70],  rules: { path: arc,  humps: 1, paths_per_sheet: 3, lane_px: 64 } }
+      - { part: 3, pages: [71, 80],  rules: { path: wave, humps: 2, paths_per_sheet: 2, lane_px: 64 } }
+      - { part: 4, pages: [81, 90],  rules: { path: wave, humps: 3, paths_per_sheet: 2, lane_px: 56 } }
+      - { part: 5, pages: [91, 100], rules: { path: mixed_curves, humps: [1, 3], paths_per_sheet: 3, lane_px: 52 } }

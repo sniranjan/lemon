@@ -1,0 +1,28 @@
+[project]
+name = "ws"
+version = "0.1.0"
+description = "Home worksheet generator: daily practice sheets for a young child"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "jinja2>=3.1",
+    "typer>=0.12",
+    "playwright>=1.44",
+]
+
+[project.scripts]
+ws = "ws.cli:app"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ws"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

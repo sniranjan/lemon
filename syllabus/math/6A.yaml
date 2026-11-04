@@ -1,0 +1,62 @@
+subject: math
+level: 6A
+title: Counting
+aims:
+  - Count objects up to 10 while pointing and saying the numbers
+  - Read the numerals 1 to 10
+  - Recognize dot patterns up to 10
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: null
+# Part ranges are our own (approved table): each part adds a new top number
+# (`new`) and mixes in the earlier ones from [min, max]. `new: null` = mixed review.
+sections:
+  - code: A
+    name: Counting up to 5
+    pages: [1, 30]
+    sheet_types: [count_and_say]
+    source: ours
+    parts:
+      - { part: 1, pages: [1, 10],  rules: { min: 1, max: 3, new: 3 } }
+      - { part: 2, pages: [11, 20], rules: { min: 1, max: 4, new: 4 } }
+      - { part: 3, pages: [21, 30], rules: { min: 1, max: 5, new: 5 } }
+
+  - code: B
+    name: Counting up to 10
+    pages: [31, 100]
+    sheet_types: [count_and_say]
+    source: ours
+    parts:
+      - { part: 1, pages: [31, 40],  rules: { min: 1, max: 6,  new: 6 } }
+      - { part: 2, pages: [41, 50],  rules: { min: 1, max: 7,  new: 7 } }
+      - { part: 3, pages: [51, 60],  rules: { min: 1, max: 8,  new: 8 } }
+      - { part: 4, pages: [61, 70],  rules: { min: 1, max: 9,  new: 9 } }
+      - { part: 5, pages: [71, 80],  rules: { min: 1, max: 10, new: 10 } }
+      - { part: 6, pages: [81, 90],  sheet_types: [count_and_point], rules: { min: 1, max: 10, new: null, choices: 3 } }
+      - { part: 7, pages: [91, 100], sheet_types: [count_and_point], rules: { min: 1, max: 10, new: null, choices: 3 } }
+
+  - code: C
+    name: Number Reading up to 10
+    pages: [101, 150]
+    # Pages alternate: read the numerals, then count and point to the right one.
+    sheet_types: [number_read, count_and_point]
+    rules: { choices: 3 }
+    source: ours
+    parts:
+      - { part: 1, pages: [101, 110], rules: { min: 1, max: 4,  new: 4 } }
+      - { part: 2, pages: [111, 120], rules: { min: 1, max: 6,  new: 6 } }
+      - { part: 3, pages: [121, 130], rules: { min: 1, max: 8,  new: 8 } }
+      - { part: 4, pages: [131, 140], rules: { min: 1, max: 10, new: 10 } }
+      - { part: 5, pages: [141, 150], rules: { min: 1, max: 10, new: null } }
+
+  - code: D
+    name: Number of Dots up to 10
+    pages: [151, 200]
+    sheet_types: [dots_to_number]
+    source: ours
+    parts:
+      - { part: 1, pages: [151, 160], rules: { min: 1, max: 5,  new: 5 } }
+      - { part: 2, pages: [161, 170], rules: { min: 1, max: 7,  new: 7 } }
+      - { part: 3, pages: [171, 180], rules: { min: 1, max: 9,  new: 9 } }
+      - { part: 4, pages: [181, 190], rules: { min: 1, max: 10, new: 10 } }
+      - { part: 5, pages: [191, 200], rules: { min: 1, max: 10, new: null } }
