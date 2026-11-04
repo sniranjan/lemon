@@ -43,7 +43,6 @@ of good sheets on demand, for example:
 - **American spelling and words for all text a child or parent sees** (color, mom, diaper,
   coloring). Code, file names, YAML keys and sheet type names may keep British spelling
   (e.g. `colouring`).
-- Home language: TODO (the parent will fill this in: languages spoken at home, words to avoid or include).
 - Every picture in `assets/pictures/` must have a recorded source and licence in
   `assets/pictures/LICENSES.yaml` (either "original" or an open licence such as CC-BY with attribution).
 - Never mark a task done unless `ws verify` passes on everything that was generated.
