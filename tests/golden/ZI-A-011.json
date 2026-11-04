@@ -13,14 +13,14 @@
   "items": [
     {
       "kind": "shape",
-      "shape": "star",
-      "path": "M50 6 L61 37 L94 38 L68 58 L77 90 L50 71 L23 90 L32 58 L6 38 L39 37 Z",
+      "shape": "kite",
+      "path": "M50 6 L84 42 L50 94 L16 42 Z",
       "size": "medium"
     },
     {
       "kind": "shape",
-      "shape": "cloud",
-      "path": "M26 74 C8 74 6 52 22 48 C20 30 42 24 50 36 C56 20 82 24 80 44 C96 46 96 74 78 74 Z",
+      "shape": "egg",
+      "path": "M50 6 C74 6 88 44 88 62 C88 82 72 94 50 94 C28 94 12 82 12 62 C12 44 26 6 50 6 Z",
       "size": "medium"
     }
   ],

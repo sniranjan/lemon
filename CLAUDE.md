@@ -304,7 +304,7 @@ Each check returns `Issue(sheet_id, severity, message)`. Any `error` → non-zer
   built from sentence frames with a slot (`"I see {a} {w}."`), so the planner can aim them
   at the words seen least.
 - `word_picture_sentence`: the sentence is read *to* the child, so it is exempt from the
-  known-words check; it must contain the card's word and stay within `max_sentence_words` (default 6).
+  known-words check; it must contain the card's word and stay within the section's `max_sentence_words` (6 in 7A).
 - `letter_trace`: letters requested exist in the trace font.
 
 **Exposure checks (per section / level run)**

@@ -42,16 +42,58 @@ def build_sheet(level: Level, page: int, plan: LevelPlan, variant: int = 1,
     )
 
 
+MAX_ATTEMPTS = 100
+
+
+def _same_content(a: Sheet, b: Sheet) -> bool:
+    return a.sheet_type == b.sheet_type and a.items == b.items
+
+
+def build_section(level: Level, section_code: str, up_to: int, plan: LevelPlan,
+                  variant: int = 1) -> dict[int, Sheet]:
+    """Build the section's pages in order up to `up_to`, with no repeated sheet.
+
+    A page whose items match an earlier page of the section is rebuilt with the next seed
+    in a fixed sequence. Every page depends only on the syllabus, the plan and the pages
+    before it in the section, never on which pages were generated before, so any page range
+    gives the same sheets as a full run.
+    """
+    section = level.section(section_code)
+    built: dict[int, Sheet] = {}
+    for page in range(section.pages[0], up_to + 1):
+        for attempt in range(MAX_ATTEMPTS):
+            seed = page_seed(level.subject, level.level, section_code, page, variant, attempt)
+            sheet = build_sheet(level, page, plan, variant, seed)
+            if not any(_same_content(sheet, other) for other in built.values()):
+                break
+        # if every attempt repeats, keep the last one: verify reports the duplicate
+        built[page] = sheet
+    return built
+
+
 def sheet_dir(sheet: Sheet) -> Path:
     return OUT_DIR / sheet.subject / sheet.level / sheet.section
 
 
 def generate_pages(level: Level, pages: list[int], variant: int = 1,
                    seed: int | None = None, sheet_type: str | None = None) -> list[tuple[Sheet, Path]]:
+    """Write the requested pages. A forced `seed` or `sheet_type` (previews, one-offs) builds
+    each page on its own; otherwise pages come from `build_section`, free of repeats."""
     plan = build_plan(level, variant)
+    sheets: dict[int, Sheet] = {}
+    if seed is not None or sheet_type:
+        for page in pages:
+            sheets[page] = build_sheet(level, page, plan, variant, seed, sheet_type)
+    else:
+        by_section: dict[str, list[int]] = {}
+        for page in pages:
+            by_section.setdefault(level.section_for_page(page).code, []).append(page)
+        for code, wanted in by_section.items():
+            built = build_section(level, code, max(wanted), plan, variant)
+            sheets.update({p: built[p] for p in wanted})
     out = []
     for page in pages:
-        sheet = build_sheet(level, page, plan, variant, seed, sheet_type)
+        sheet = sheets[page]
         path = sheet_dir(sheet) / f"{sheet.id}.html"
         write_html(sheet, level, path)
         out.append((sheet, path))

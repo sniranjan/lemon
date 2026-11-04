@@ -117,3 +117,25 @@ def test_worst_case_pages_render_cleanly(level, pages, sheet_type, out_dir, fixt
     made = gen.generate_pages(level, pages, variant=2 if sheet_type else 1, sheet_type=sheet_type)
     for r in render_pngs([p for _, p in made]):
         assert r.problems == [], (r.html.name, r.problems)
+
+
+@pytest.mark.parametrize("level", [MA6A, ZI, EN7A], ids=lambda l: l.level)
+def test_no_duplicate_sheets_in_level(level, fixture_content):
+    plan = gen.build_plan(level)
+    seen = {}
+    for s in level.sections:
+        last = max((p for p in plan.pages if s.pages[0] <= p <= s.pages[1]), default=s.pages[1]) \
+            if level.subject == "english" else s.pages[1]
+        for page, sheet in gen.build_section(level, s.code, last, plan).items():
+            key = (sheet.sheet_type, repr(sheet.items))
+            if level.subject == "english" and s.code == "B":
+                continue   # 8-word fixture bank: grids repeat word sets by necessity (order still differs)
+            assert key not in seen, f"{sheet.id} repeats {seen[key]}"
+            seen[key] = sheet.id
+
+
+def test_page_range_matches_full_run(out_dir, fixture_content):
+    alone = {s.id: s for s, _ in gen.generate_pages(ZI, [5, 6, 7])}
+    full = {s.id: s for s, _ in gen.generate_pages(ZI, list(range(1, 21)))}
+    for sid, sheet in alone.items():
+        assert sheet == full[sid]

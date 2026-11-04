@@ -48,10 +48,13 @@ def test_plan_stops_where_bank_runs_out():
 
 # --- content -------------------------------------------------------------------------------
 
-def test_every_bank_picture_exists_and_is_licensed():
-    for w in vocab("english"):
-        assert picture_path(w.picture).exists(), w.picture
-        assert w.picture in licenses(), f"{w.picture} has no LICENSES.yaml entry"
+def test_every_content_picture_exists_and_is_licensed():
+    from ws.content import line_targets, math_objects
+
+    slugs = [w.picture for w in vocab("english")] + [o["picture"] for o in math_objects()] + list(line_targets())
+    for slug in slugs:
+        assert picture_path(slug).exists(), slug
+        assert slug in licenses(), f"{slug} has no LICENSES.yaml entry"
 
 
 def test_tips_are_short():

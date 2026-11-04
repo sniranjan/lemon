@@ -87,8 +87,10 @@ def sheet_id(level: Level, section: Section, page: int, variant: int = 1) -> str
     return f"{sid}-v{variant}" if variant > 1 else sid
 
 
-def page_seed(subject: str, level: str, section: str, page: int, variant: int = 1) -> int:
-    digest = hashlib.sha256(f"{subject}|{level}|{section}|{page}|{variant}".encode()).digest()
+def page_seed(subject: str, level: str, section: str, page: int, variant: int = 1, attempt: int = 0) -> int:
+    """`attempt` > 0 gives the follow-up seeds used when a page would repeat an earlier one."""
+    key = f"{subject}|{level}|{section}|{page}|{variant}" + (f"|{attempt}" if attempt else "")
+    digest = hashlib.sha256(key.encode()).digest()
     return int.from_bytes(digest[:8], "big")
 
 

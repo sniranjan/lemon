@@ -36,7 +36,7 @@ class WordPictureSentence(SheetType):
     def verify(self, sheet: Sheet) -> list[Issue]:
         from ..syllabus import load_level, resolve_page
 
-        limit = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules.get("max_sentence_words", 6)
+        limit = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules["max_sentence_words"]
         issues = []
         for c in (i for i in sheet.items if i["kind"] == "card"):
             if c["word"].lower() not in c["sentence"].lower():
