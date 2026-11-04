@@ -1,0 +1,22 @@
+{% extends "booklet/_doc.html.j2" %}
+{% block style %}
+td { height: 34px; }
+.c-id { width: 30%; } .c-page { width: 14%; }
+{% endblock %}
+{% block pages %}
+{% for chunk in rows | batch(20) %}
+<div class="page">
+  <div class="rule">
+    <div class="eyebrow">Level {{ level.level }} · {{ theme.label }}</div>
+    <h1>Answers{% if loop.length > 1 %} ({{ loop.index }} of {{ loop.length }}){% endif %}</h1>
+  </div>
+  <table style="margin-top: 20px;">
+    <tr><th class="c-id">Sheet</th><th class="c-page">Page</th><th>Answers, top to bottom</th></tr>
+{% for r in chunk %}
+    <tr><td>{{ r.id }}</td><td>{{ level.level }} · {{ r.page }}</td><td>{{ r.answers }}</td></tr>
+{% endfor %}
+  </table>
+  <div class="foot">{{ booklet_id }}-answers</div>
+</div>
+{% endfor %}
+{% endblock %}

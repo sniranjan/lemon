@@ -9,6 +9,7 @@ dependencies = [
     "jinja2>=3.1",
     "typer>=0.12",
     "playwright>=1.44",
+    "pypdf>=6.21.4",
 ]
 
 [project.scripts]

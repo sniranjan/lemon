@@ -1,0 +1,8 @@
+# Words that must never appear in any output (matched case-insensitively, whole words).
+# Covers the "never mention" rule, brand names and violence/scary words.
+never: [kumon]
+brands: [disney, lego, barbie, pokemon, mcdonalds, "mcdonald's", coca-cola, coke, pepsi, nike, adidas,
+         starbucks, "hot wheels", "paw patrol", peppa, elsa, mickey, minnie, spiderman, "spider-man",
+         batman, superman, nintendo, mario, sonic, minecraft, roblox, youtube, iphone, ipad, amazon]
+violence: [gun, guns, kill, killed, blood, knife, knives, sword, bomb, war, fight, dead, die, died,
+           shoot, hit, hurt, monster, ghost, scary, weapon, poison]

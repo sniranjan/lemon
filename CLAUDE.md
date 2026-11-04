@@ -55,6 +55,7 @@ of good sheets on demand, for example:
 - Python 3.11+, run with `uv` (or a plain venv).
 - `pydantic` for schemas, `PyYAML` for content, `Jinja2` for HTML templates.
 - `playwright` (Chromium) to render HTML → PDF and to run layout checks.
+- `pypdf` to merge per-sheet PDFs into booklets (with fixed metadata, so output is byte-identical).
 - `pytest` for tests.
 - CLI entry point: `ws` (via `[project.scripts]` in `pyproject.toml`), built with `typer`.
 
@@ -281,6 +282,17 @@ one level away. Don't build them early.
 
 Run on any set of generated sheets (default: everything in the latest manifest entries).
 Each check returns `Issue(sheet_id, severity, message)`. Any `error` → non-zero exit.
+Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "duplicate" of variant 1.
+
+- **Stale check**: every sheet is rebuilt from its recorded seed and compared; a mismatch means
+  code or content changed since it was generated ("stale: regenerate it").
+- **Plan-based exposure**: the exposure rules are checked on the level plan, which always covers
+  the whole level, so verify passes on a partly generated level. Real exposure counts from the
+  manifest are checked too once every page of the level exists. While the word bank doesn't
+  cover all of 7A-A, verify warns (7A-B/C sheets will change as words are added).
+- A sheet type forced with `--sheet-type` is a warning, not an error.
+- Banned words live in `content/banned.yaml` (matched case-insensitively, whole words) and are
+  checked on every sheet's text and on booklet covers, logs and answer pages.
 
 **Content checks (all types)**
 - Schema valid; sheet ID unique; page number inside the section's range.
@@ -318,10 +330,14 @@ Each check returns `Issue(sheet_id, severity, message)`. Any `error` → non-zer
 **Layout checks (Playwright, after render)**
 - Each sheet renders to exactly **one** Letter page (816×1056 CSS px); nothing overflows
   (`scrollHeight ≤ clientHeight` for the page root and every card).
-- Minimum font sizes: child-facing text ≥ 28px (7A–5A), ≥ 20px (4A+); parent tip ≥ 16px.
+- Minimum font sizes: child-facing text ≥ 28px (7A–5A and pencil levels), ≥ 20px (4A+); parent tip ≥ 16px.
+  Parent-facing parts of a template carry `data-audience="parent"` (header, tip, footer, strip
+  label); every other piece of text on the page counts as child-facing.
+- Each sheet prints (Chromium PDF) to exactly one 612×792pt page.
 - All images loaded (no broken `<img>`).
 - Output a **contact sheet PNG** (thumbnails of every generated page) to
-  `out/<subject>/<level>/review.png`. Claude Code must look at this image before reporting done.
+  `out/<subject>/<level>/review.png`, plus one per section (`review-<section>.png`); more than
+  10 pages use quarter-size thumbnails. Claude Code must look at this image before reporting done.
 
 ---
 
@@ -352,9 +368,11 @@ ws syllabus show english 7A                      # print sections, page ranges, 
 (per variant), so `--count 20` continues where the last run stopped. Running it again after
 the end of the section's range errors clearly ("7A-A is complete: pages 1–100").
 
-**Booklet PDF** = cover page (child's name field, level, page range) + the sheets in order +
-a final **progress log** page (date, pages, minutes, notes). No answer keys in the child's
-booklet. Answer keys go in a separate `-answers.pdf`.
+**Booklet PDF** = cover page (child's name field, level, page range, sections, and the mastery
+note from §12 for grown-ups) + the sheets in order + a final **progress log** page (date, pages,
+minutes, notes). No answer keys in the child's booklet. Answer keys go in a separate `-answers.pdf`.
+Names: one per section from the pages present (`EN-7A-A-001-020.pdf`) and one for the whole
+level (`EN-7A-level.pdf`, `ZI-level.pdf`); variants add `-vN`. Gaps in a section are a warning.
 
 ---
 

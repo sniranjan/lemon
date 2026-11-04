@@ -21,8 +21,6 @@ def test_syllabus_show_unknown_level():
 
 
 @pytest.mark.parametrize("args", [
-    ["render", "--subject", "english", "--level", "7A", "--pdf"],
-    ["verify"],
     ["vocab", "stats", "--level", "7A"],
 ])
 def test_unbuilt_commands_exit_nonzero(args):

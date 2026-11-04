@@ -1,7 +1,7 @@
 {% set strip = sheet.items | selectattr("kind", "equalto", "strip") | list %}
 {% if strip %}
   <section class="strip">
-    <div class="strip-label">Say it again</div>
+    <div class="strip-label" data-audience="parent">Say it again</div>
 {% for item in strip %}
     <div class="strip-item"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><span class="word">{{ item.word }}</span></div>
 {% endfor %}

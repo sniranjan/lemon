@@ -64,13 +64,51 @@ def generate(
         typer.echo(f"{sheet.id}  page {sheet.page_number}  {sheet.sheet_type}  {path.relative_to(ROOT)}")
 
 
+def _print_issues(issues) -> int:
+    errors = [i for i in issues if i.severity == "error"]
+    warnings = [i for i in issues if i.severity == "warning"]
+    for i in errors:
+        typer.echo(f"ERROR    {i.sheet_id}: {i.message}")
+    for i in warnings:
+        typer.echo(f"warning  {i.sheet_id}: {i.message}")
+    return len(errors)
+
+
 @app.command()
 def verify(
     subject: Optional[str] = typer.Option(None),
     level: Optional[str] = typer.Option(None),
+    layout: bool = typer.Option(True, "--layout/--no-layout", help="Render pages and run layout checks"),
 ) -> None:
-    """Run content and layout checks on generated sheets."""
-    _not_yet("verify", 3)
+    """Check generated sheets (content, exposure, layout) and write contact sheets."""
+    from collections import defaultdict
+
+    from .generate import OUT_DIR, load_manifest
+    from .render import contact_sheet
+    from .verify import verify_layout, verify_sheets
+
+    sheets = load_manifest(subject, level)
+    if not sheets:
+        typer.echo("nothing generated yet", err=True)
+        raise typer.Exit(1)
+    issues = verify_sheets(sheets)
+    if layout:
+        layout_issues, pngs = verify_layout(sheets)
+        issues += layout_issues
+        for (subj, lvl), files in pngs.items():
+            by_section = defaultdict(list)
+            for f in files:
+                by_section[f.parent.name].append(f)
+            out = contact_sheet(files, OUT_DIR / subj / lvl / "review.png", f"{subj} {lvl}: {len(files)} pages")
+            typer.echo(f"contact sheet: {out.relative_to(ROOT)}")
+            for code, section_files in sorted(by_section.items()):
+                contact_sheet(section_files, OUT_DIR / subj / lvl / f"review-{code}.png",
+                              f"{subj} {lvl} section {code}: {len(section_files)} pages")
+    n_err = _print_issues(issues)
+    n_warn = sum(i.severity == "warning" for i in issues)
+    typer.echo(f"{len(sheets)} sheets checked: {n_err} errors, {n_warn} warnings")
+    if n_err:
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -85,9 +123,21 @@ def render(
     from .render import contact_sheet, render_pngs
 
     if pdf:
-        _not_yet("render --pdf", 3)
+        from .booklet import build_booklets
+
+        variants = sorted({s.variant for s in load_manifest(subject, level)}) or [1]
+        errors = 0
+        for v in variants:
+            report = build_booklets(subject, level, v)
+            for b in report.booklets:
+                typer.echo(f"booklet: {b.relative_to(ROOT)}")
+            errors += _print_issues(report.issues)
+        if errors:
+            raise typer.Exit(1)
+        if not png:
+            return
     if not png:
-        typer.echo("give --png (PDF booklets come in milestone 3)", err=True)
+        typer.echo("give --pdf (booklets) and/or --png (page images + contact sheet)", err=True)
         raise typer.Exit(1)
     sheets = load_manifest(subject, level)
     if not sheets:

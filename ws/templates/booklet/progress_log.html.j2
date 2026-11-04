@@ -1,0 +1,20 @@
+{% extends "booklet/_doc.html.j2" %}
+{% block style %}
+td { height: 44px; }
+.c-date { width: 20%; } .c-pages { width: 18%; } .c-min { width: 16%; }
+{% endblock %}
+{% block pages %}
+<div class="page">
+  <div class="rule">
+    <div class="eyebrow">Level {{ level.level }} · {{ theme.label }}</div>
+    <h1>Progress log</h1>
+  </div>
+  <table style="margin-top: 20px;">
+    <tr><th class="c-date">Date</th><th class="c-pages">Pages</th><th class="c-min">Minutes</th><th>Notes</th></tr>
+{% for _ in range(18) %}
+    <tr><td></td><td></td><td></td><td></td></tr>
+{% endfor %}
+  </table>
+  <div class="foot">{{ booklet_id }}</div>
+</div>
+{% endblock %}
