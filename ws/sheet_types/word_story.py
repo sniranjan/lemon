@@ -1,4 +1,8 @@
-"""EN 7A-C: one picture and 2–4 short sentences built from frames, using only known words."""
+"""EN 7A-C: one big picture and 2–4 short sentences built from frames, using only known words.
+
+Each sentence ends with a small picture of its word, so a child who can't read yet
+can still "read" the line from the pictures.
+"""
 
 from __future__ import annotations
 
@@ -28,8 +32,8 @@ class WordStory(SheetType):
         items = [{"kind": "picture", "word": words[0], "picture": bank[words[0]].picture}]
         for frame, w in zip(frames, words):
             before, after = frame.replace("{a}", article(w)).split("{w}")
-            items.append({"kind": "sentence", "word": w, "before": before, "after": after,
-                          "text": f"{before}{w}{after}"})
+            items.append({"kind": "sentence", "word": w, "picture": bank[w].picture,
+                          "before": before, "after": after, "text": f"{before}{w}{after}"})
         return SheetContent(
             title="Read together",
             parent_tip=ctx.tip(self.name),
