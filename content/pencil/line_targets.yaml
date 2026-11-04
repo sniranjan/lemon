@@ -1,9 +1,14 @@
-# Small pictures at the end of a line_path lane ("take it to the apple").
-# Placeholders until real targets (flower, house, nest, ...) are drawn.
-- apple
-- ball
-- fish
+# Small pictures at the end of a line_path lane: places and things worth "going to"
+# (take the line to the flower, the bed, the door ...).
+- flower
+- tree
+- bed
+- door
+- star
+- moon
 - sun
-- cat
-- dog
+- boat
+- ball
+- cookie
+- apple
 - cup
