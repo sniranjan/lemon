@@ -92,7 +92,7 @@ const LOOK: Record<string, Look> = {
     mascot: "/pictures/bear.svg",
     color: "teal",
     blurb: "Reading passages aloud with expression, plus two-digit adding and subtracting.",
-    preview: { kind: "read", lines: ["Mia sees a robin in the tree.", "The robin has a red chest.", "It sings a happy song."], picture: "robin" },
+    preview: { kind: "read", lines: ["Mia sees a robin in the tree.", "It sings a happy song.", "It finds a worm to eat."], picture: "robin" },
   },
   foxes: {
     mascot: "/brand/fox.svg",

@@ -201,7 +201,7 @@ const FAQ = [
   },
   {
     q: "Do I need a color printer?",
-    a: "No. Every sheet is designed to read clearly in black and white. The few pages that teach color words are listed on the cover of the PDF, so you can print just those in color if you like.",
+    a: "No. Every sheet is designed to read clearly in black and white. The few pages that teach color words are listed on the cover of the reading PDF, so you can print just those in color if you like.",
   },
   {
     q: "How long does a day take?",

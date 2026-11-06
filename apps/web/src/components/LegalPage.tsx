@@ -31,7 +31,8 @@ function Refunds() {
         <p className="text-3xl font-bold leading-tight sm:text-4xl">All sales are final. No refunds.</p>
         <p className="mt-2 text-lg font-semibold text-white/95">
           Our levels are digital downloads you get instantly, so we can't take them back. Once you buy a level,
-          we don't give refunds, exchanges or credit, for any reason.
+          we don't give refunds, exchanges or credit. The only exception is an accidental duplicate charge (see
+          below).
         </p>
       </div>
 

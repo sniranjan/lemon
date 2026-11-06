@@ -62,8 +62,10 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
         <SheetPreview level={level} className="h-full" />
       </div>
 
-      {/* While peeking, the buttons float on the sheet so they're easy to reach (the pocket drops out of the way). */}
-      <div className="invisible absolute inset-x-12 bottom-[132px] z-20 flex translate-y-3 flex-col items-stretch gap-2.5 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-none">
+      {/* While peeking, the buttons float on the sheet so they're easy to reach (the pocket drops out of the way).
+          With reduced motion only visibility transitions: it must never flip instantly, or Tab from the card
+          hides these buttons before focus can land on them. */}
+      <div className="invisible absolute inset-x-12 bottom-[132px] z-20 flex translate-y-3 flex-col items-stretch gap-2.5 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-[visibility]">
         {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} floating />}
         <PreviewButton level={level} hasPreview={hasPreview} floating />
       </div>
