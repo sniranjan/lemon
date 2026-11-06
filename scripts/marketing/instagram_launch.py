@@ -382,7 +382,7 @@ def post_previews() -> str:
 <div class="blob" style="right:-140px;top:280px;width:320px;height:320px;background:{SUN};opacity:.55"></div>
 <div class="abs fred" style="left:60px;right:60px;top:66px;text-align:center;font-size:118px">Try it free</div>
 <div class="abs" style="left:0;right:0;top:214px;display:flex;justify-content:center">
-  <span class="chip" style="font-size:42px;padding:10px 34px 12px;box-shadow:8px 8px 0 {INK}">Free preview for every level</span></div>
+  <span class="chip" style="font-size:42px;padding:10px 34px 12px;box-shadow:8px 8px 0 {INK}">Free previews: Chicks &amp; Ducklings</span></div>
 <div class="abs hand" style="left:60px;right:60px;top:318px;text-align:center;font-size:48px;color:#fff;transform:rotate(-1.5deg)">
   print a few pages and see how they feel</div>
 {fan}
@@ -519,13 +519,13 @@ See all thirteen levels at the link in bio.""",
         "files": ["post.png"],
         "caption": """Try it free 🎁
 
-Every level gets a free preview: a handful of real pages to print and try before you buy. Chicks and Ducklings previews are ready now, and each new level gets its own as it opens.
+Chicks and Ducklings each have a free preview: a handful of real pages to print and try before you buy. More levels coming soon, each with its own free preview.
 
 Print a few pages, sit down together, and see how they feel.
 
-👉 paperlessons.com (link in bio)""",
+👉 Free previews at the link in bio.""",
         "tags": f"{TAGS_BASE} #freeprintables #freeworksheets #learnathome #preschoolmom #printables #paperlessons",
-        "alt": "Coral background titled \"Try it free\" with a white label \"Free preview for every level\". Four real preview pages from Chicks and Ducklings are fanned out like playing cards, with a chick and a duckling peeking over them, and paperlessons.com at the bottom.",
+        "alt": "Coral background titled \"Try it free\" with a white label \"Free previews: Chicks & Ducklings\". Four real preview pages from Chicks and Ducklings are fanned out like playing cards, with a chick and a duckling peeking over them, and paperlessons.com at the bottom.",
     },
 }
 
@@ -560,9 +560,10 @@ def grid_preview() -> str:
   <img src="{AVATAR}" style="width:190px;height:190px;border-radius:50%;border:2px solid #ddd" alt="">
   <div style="font-family:Nunito;color:#111">
     <div style="font-size:40px;font-weight:900">paper.lessons</div>
-    <div style="font-size:30px;font-weight:800;margin-top:8px">paperlessons &middot; printable practice</div>
-    <div style="font-size:27px;font-weight:400;margin-top:8px;line-height:1.35;max-width:790px">Printable reading &amp; math for ages 3&ndash;12 ✏️ About two grades ahead of school. A few pages a day. Free previews ↓</div>
-    <div style="font-size:28px;font-weight:800;margin-top:6px;color:#00376b">paperlessons.com</div>
+    <div style="font-size:30px;font-weight:800;margin-top:8px">Paper Lessons - Printable Worksheets for Kids</div>
+    <div style="font-size:27px;font-weight:400;margin-top:6px;color:#737373">Education</div>
+    <div style="font-size:27px;font-weight:400;margin-top:4px;line-height:1.35;max-width:790px">Printable reading &amp; math for ages 3&ndash;12 ✏️ About two grades ahead of school. A few pages a day. Free previews ↓</div>
+    <div style="font-size:28px;font-weight:800;margin-top:6px;color:#00376b">paperlessons.com/ig</div>
   </div></div>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">{tiles}</div>
 """
