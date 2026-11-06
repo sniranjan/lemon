@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { SectionHeading } from "@/components/SectionHeading";
 import { LegalLinks, LegalPage, isLegalPath } from "@/components/LegalPage";
+import { CookieBanner } from "@/components/CookieBanner";
 import { Library } from "@/components/Library";
+import { consentRequired, openCookieSettings } from "@/lib/consent";
 import { OrderPage } from "@/components/OrderPage";
 import { SheetPreview } from "@/components/SheetPreview";
 import { Waitlist } from "@/components/Waitlist";
@@ -37,6 +39,7 @@ export default function App() {
         </main>
       )}
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
@@ -269,7 +272,14 @@ function Footer() {
     <footer className="border-t-[3px] border-ink bg-white px-4 py-10 sm:px-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <Logo />
-        <LegalLinks />
+        <div className="flex flex-col items-center gap-1">
+          <LegalLinks />
+          {consentRequired() && (
+            <button type="button" onClick={openCookieSettings} className="text-sm font-bold text-ink/70 hover:text-coral">
+              Cookie settings
+            </button>
+          )}
+        </div>
         <p className="text-sm font-semibold text-ink/60">
           © {new Date().getFullYear()} Madras Labs LLC · Made with care for little learners
         </p>

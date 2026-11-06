@@ -72,6 +72,31 @@ app.route("/", shop);
 app.all("/api/*", (c) => c.json({ ok: false, error: "Not found" }, 404));
 
 // Everything else is the React app (static assets).
-app.all("*", (c) => c.env.ASSETS.fetch(c.req.raw));
+// Visitors where analytics need opt-in consent (GDPR / UK GDPR / Swiss FADP): EU, EEA, UK, Switzerland.
+const CONSENT_COUNTRIES = new Set(
+  ("AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE " + "IS LI NO GB CH").split(" "),
+);
+
+/**
+ * Everything else is the React app (static assets). Pages get a flag in <head> telling the inline Google
+ * tag loader and the cookie banner whether this visitor must opt in first. `?region=eu` forces it (testing).
+ */
+app.all("*", async (c) => {
+  const res = await c.env.ASSETS.fetch(c.req.raw);
+  if (!res.headers.get("content-type")?.includes("text/html")) return res;
+  const country = (c.req.raw.cf?.country as string | undefined) ?? "";
+  const needsConsent = CONSENT_COUNTRIES.has(country) || new URL(c.req.url).searchParams.get("region") === "eu";
+  const page = new HTMLRewriter()
+    .on("head", {
+      element(head) {
+        head.prepend(`<script>window.__PL_CONSENT_REQUIRED=${needsConsent};</script>`, { html: true });
+      },
+    })
+    .transform(res);
+  const headers = new Headers(page.headers);
+  headers.set("cache-control", "private, no-cache");
+  headers.delete("etag");
+  return new Response(page.body, { status: page.status, headers });
+});
 
 export default app;

@@ -3,8 +3,12 @@
 // Runs only on the real site, so local dev and test runs don't create sessions.
 import { tracker } from "@openreplay/tracker";
 
+let started = false;
+
+/** Called via startTracking() in consent.ts, which checks the visitor's cookie choice first. */
 export function startReplay() {
-  if (location.hostname !== "paperlessons.com") return;
+  if (started || location.hostname !== "paperlessons.com") return;
+  started = true;
   try {
     tracker.configure({
       projectKey: "rwtuupd5Hv1QVJwXGKro",

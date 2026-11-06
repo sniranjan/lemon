@@ -225,6 +225,11 @@ function Privacy() {
 
       <H>Your choices</H>
       <ul className="list-disc space-y-2 pl-6">
+        <li>
+          If you're in the EU/EEA, the UK or Switzerland, Google Analytics and session recording only start after you
+          click "Accept all" on our cookie banner. "Reject all" keeps them off, and "Cookie settings" at the bottom of
+          every page lets you change your choice.
+        </li>
         <li>Email us to see, correct or delete the information we hold about you.</li>
         <li>You can block or clear cookies in your browser, and use Google's analytics opt-out add-on.</li>
         <li>Depending on where you live, you may have more rights under laws such as the GDPR or CCPA; email us to use them.</li>

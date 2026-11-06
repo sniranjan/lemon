@@ -2,12 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google tag (Tag Manager container GTM-P385W3LF) -->
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P385W3LF"></script>
+    <!-- Google tag (Tag Manager container GTM-P385W3LF). Visitors in the EU/EEA, UK and Switzerland
+         (the Worker sets window.__PL_CONSENT_REQUIRED) only get it after accepting the cookie banner
+         (src/lib/consent.ts); everyone else gets it straight away. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.__plLoadGtm = function () {
+        if (window.__plGtm) return;
+        window.__plGtm = true;
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtm.js?id=GTM-P385W3LF";
+        document.head.appendChild(s);
+        gtag("js", new Date());
+      };
+      (function () {
+        var consent = document.cookie.match(/(?:^|; )pl_consent=(granted|denied)/);
+        if (window.__PL_CONSENT_REQUIRED !== true || (consent && consent[1] === "granted")) window.__plLoadGtm();
+      })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>paperlessons · little lessons, one page at a time</title>
