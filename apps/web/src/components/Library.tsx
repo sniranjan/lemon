@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Download, Sparkles } from "lucide-react";
-import { LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
+import { gradeLabel, LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
 import { SheetPreview } from "@/components/SheetPreview";
 import { SectionHeading } from "@/components/SectionHeading";
 import { cn } from "@/lib/utils";
@@ -32,11 +32,11 @@ export function Library() {
     <section id="library" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="the library" title="Twelve levels, one big climb">
-          Every level has reading and math, from age 3 to 12, and runs a little ahead of school.
+          Every level has reading and math, from age 3 to 12, and the work runs about two grades ahead of school.
           <span className="hidden sm:inline"> Hover a level to peek at a sheet.</span>
           <span className="sm:hidden"> Tap a level to peek at a sheet.</span>
         </SectionHeading>
-        <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {LEVELS.map((level, i) => (
             <LevelCard key={level.slug} level={level} index={i} hasPreview={available.has(level.slug)} />
           ))}
@@ -88,6 +88,9 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
         <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 peek:opacity-0">
           <img src={level.mascot} alt="" className="mascot-bob size-16 shrink-0 rounded-full border-[3px] border-ink bg-white p-1.5" />
           <div className="flex flex-wrap gap-1.5">
+            <span className="rounded-full border-2 border-ink bg-ink px-2.5 py-0.5 text-xs font-extrabold text-white">
+              {gradeLabel(level.grade)}
+            </span>
             {level.subjects.map((s) => (
               <span key={s} className="rounded-full border-2 border-ink bg-white px-2.5 py-0.5 text-xs font-extrabold">
                 {SUBJECT_LABEL[s]}

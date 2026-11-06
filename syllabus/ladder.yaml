@@ -4,77 +4,94 @@
 # children who start at 3 do reading 7A and math 6A together, so reading runs one code ahead.
 # The first two levels also carry pencil warm-ups. Internal codes never appear on anything a buyer sees.
 #
+# Content runs about two school grades ahead of the child's age (content_grade = the US school grade the
+# work matches). Chicks–Cubs follow the existing structure, which is already ahead of school. From Foxes on,
+# each level covers more than one step of that structure to stay two grades ahead; their strand codes are
+# placeholders until we write those syllabi to the content_grade target.
+#
 # strands: subject -> internal level code (a file in syllabus/<subject>/<code>.yaml once it is built).
 # Strands whose syllabus file doesn't exist yet are "coming soon".
 
 - slug: chicks
   public_name: Chicks
-  public_title: First words and counting
+  public_title: Picture words and counting to 10
+  content_grade: "Pre-K"
   ages: "3–4"
   strands: { english: 7A, math: 6A, pencil: ZI }
 
 - slug: ducklings
   public_name: Ducklings
-  public_title: Little phrases and numbers to 30
+  public_title: Little phrases and numbers to 50
+  content_grade: "K"
   ages: "3–4"
   strands: { english: 6A, math: 5A, pencil: ZII }
 
 - slug: bunnies
   public_name: Bunnies
-  public_title: Letters and writing numbers
+  public_title: Letters, sounds and writing numbers
+  content_grade: "K–1"
   ages: "4–5"
   strands: { english: 5A, math: 4A }
 
 - slug: kittens
   public_name: Kittens
-  public_title: Letter teams and adding 1 to 3
+  public_title: Letter teams, rhymes and adding 1 to 3
+  content_grade: "1"
   ages: "4–5"
   strands: { english: 4A, math: 3A }
 
 - slug: puppies
   public_name: Puppies
-  public_title: Spelling patterns and adding to 10
+  public_title: Spelling patterns, adding and subtracting to 20
+  content_grade: "1–2"
   ages: "5"
   strands: { english: 3A, math: 2A }
 
 - slug: cubs
   public_name: Cubs
-  public_title: Reading aloud and adding bigger numbers
+  public_title: Reading aloud and two-digit adding and subtracting
+  content_grade: "2"
   ages: "5–6"
   strands: { english: 2A, math: A }
 
 - slug: foxes
   public_name: Foxes
-  public_title: Sentences and subtraction
+  public_title: Short stories and times tables
+  content_grade: "3"
   ages: "6–7"
   strands: { english: A, math: B }
 
 - slug: owls
   public_name: Owls
-  public_title: Short stories and multiplication
+  public_title: Chapter books, long multiplication and division
+  content_grade: "4"
   ages: "7–8"
   strands: { english: B, math: C }
 
 - slug: otters
   public_name: Otters
-  public_title: Paragraphs and long division
+  public_title: Finding details, fractions and decimals
+  content_grade: "5"
   ages: "8–9"
   strands: { english: C, math: D }
 
 - slug: pandas
   public_name: Pandas
-  public_title: Main ideas and fractions
+  public_title: Main idea and inference, ratios and fractions
+  content_grade: "6"
   ages: "9–10"
   strands: { english: D, math: E }
 
 - slug: penguins
   public_name: Penguins
-  public_title: Summaries and decimals
+  public_title: Summaries, negative numbers, percents and expressions
+  content_grade: "7"
   ages: "10–11"
   strands: { english: E, math: F }
 
 - slug: lions
   public_name: Lions
-  public_title: Reading closely and first algebra
+  public_title: Close reading, linear equations and exponents
+  content_grade: "8"
   ages: "11–12"
   strands: { english: F, math: G }

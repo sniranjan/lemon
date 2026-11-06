@@ -523,6 +523,10 @@ app much later. This repo is a monorepo: the generator stays at the root (Python
   age (reading 7A + math 6A, reading 6A + math 5A, …); Chicks and Ducklings also carry pencil warm-ups
   (ZI, ZII). Public subjects are "Reading", "Math" and "Pencil skills". Each internal level belongs to
   exactly one public level; `load_level` fills in its public name from the ladder.
+- **Content runs about two school grades ahead of the child's age.** Each ladder level records its
+  `content_grade` (Chicks Pre-K … Lions grade 8, for ages 3–4 … 11–12). Chicks–Cubs follow the existing
+  structure; from Foxes on a level covers more than one step of it, and those syllabi are written to the
+  `content_grade` target when we build them.
   Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may
   stay inside the generator, but anything a buyer sees (sheet headers, page pills, footers, PDF names,
   covers) must use public names before it is sold or offered as a preview.

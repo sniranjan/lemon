@@ -61,8 +61,8 @@ function Hero() {
             one page at a time.
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink/80">
-            Printable reading and math sheets that run a little ahead of school, from first words
-            and counting to fractions and first algebra. A few pages a day, one small step at a time.
+            Printable reading and math sheets that run about two grades ahead of school, from first
+            words and counting to fractions and algebra. A few pages a day, one small step at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="coral" size="pill">
@@ -147,7 +147,7 @@ const SUBJECTS = [
     icon: Calculator,
     color: "bg-coral",
     title: "Math",
-    text: "From counting to ten all the way to times tables, fractions, decimals and first algebra, one small step at a time.",
+    text: "From counting to ten all the way to times tables, fractions, percents and linear equations, one small step at a time.",
   },
   {
     icon: Pencil,
@@ -197,7 +197,7 @@ function EarlyAccess() {
 const FAQ = [
   {
     q: "What age is this for?",
-    a: "Ages 3 to 12, from first words and counting all the way into middle school. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
+    a: "Ages 3 to 12. The work runs about two grades ahead of school, so a first grader works on third-grade reading and math, one small step at a time. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
   },
   {
     q: "Do I need a color printer?",

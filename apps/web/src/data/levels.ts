@@ -27,6 +27,7 @@ export type Level = Look & {
   name: string;
   title: string;
   ages: string;
+  grade: string;          // US school grade the work matches, e.g. "3", "K–1", "Pre-K"
   subjects: Subject[];
   status: "ready" | "soon";
 };
@@ -76,58 +77,63 @@ const LOOK: Record<string, Look> = {
   kittens: {
     mascot: "/pictures/cat.svg",
     color: "grape",
-    blurb: "Letter teams like sh and ch, rhyming words, and adding 1, 2 and 3 by finding the next number.",
+    blurb: "Letter teams like sh and ch, rhymes, and adding 1, 2 and 3 by finding the next number.",
     preview: { kind: "facts", subject: "math", bridge: "3 →", lines: ["3 + 1 =", "7 + 1 =", "5 + 2 =", "6 + 3 ="] },
   },
   puppies: {
     mascot: "/pictures/dog.svg",
     color: "sun",
-    blurb: "Spelling patterns, longer words and sentence copying, and adding all the way to 10.",
-    preview: { kind: "facts", subject: "math", lines: ["7 + 5 =", "9 + 4 =", "6 + 6 =", "8 + 7 ="] },
+    blurb: "Spelling patterns and copying sentences, plus adding and subtracting all the way to 20.",
+    preview: { kind: "facts", subject: "math", lines: ["8 + 7 =", "13 − 6 =", "9 + 9 =", "17 − 8 ="] },
   },
   cubs: {
     mascot: "/pictures/bear.svg",
     color: "teal",
-    blurb: "Reading short passages aloud with expression, and adding bigger numbers in their heads.",
+    blurb: "Reading passages aloud with expression, plus two-digit adding and subtracting.",
     preview: { kind: "read", lines: ["I see a big bear.", "The bear can swim.", "I like the bear."], picture: "bear" },
   },
   foxes: {
     mascot: "/brand/fox.svg",
     color: "coral",
-    blurb: "Building sentences and reading little stories, plus subtraction and two-digit adding.",
-    preview: { kind: "facts", subject: "math", lines: ["12 − 5 =", "15 − 8 =", "34 + 27 =", "50 − 16 ="] },
+    blurb: "Short stories with questions to answer, and learning the times tables by heart.",
+    preview: { kind: "facts", subject: "math", lines: ["3 × 4 =", "6 × 7 =", "8 × 9 =", "7 × 8 ="] },
   },
   owls: {
     mascot: "/pictures/owl.svg",
     color: "grape",
-    blurb: "Short stories with questions to answer, and the times tables up to multiplying bigger numbers.",
-    preview: { kind: "facts", subject: "math", lines: ["3 × 4 =", "6 × 7 =", "8 × 9 =", "23 × 3 ="] },
+    blurb: "First chapter books, plus long multiplication and long division.",
+    preview: { kind: "facts", subject: "math", lines: ["23 × 14 =", "156 ÷ 6 =", "48 × 25 =", "912 ÷ 8 ="] },
   },
   otters: {
     mascot: "/brand/otter.svg",
     color: "sky",
-    blurb: "Reading paragraphs and finding the details, plus long division with remainders.",
-    preview: { kind: "facts", subject: "math", lines: ["84 ÷ 4 =", "96 ÷ 8 =", "125 ÷ 5 =", "100 ÷ 7 ="] },
+    blurb: "Finding the details in a paragraph, and working with fractions and decimals.",
+    preview: { kind: "facts", subject: "math", lines: ["½ + ¼ =", "0.3 + 0.45 =", "¾ − ⅓ =", "2.5 × 4 ="] },
   },
   pandas: {
     mascot: "/brand/panda.svg",
     color: "leaf",
-    blurb: "Finding the main idea of a passage, and adding, subtracting and comparing fractions.",
-    preview: { kind: "facts", subject: "math", lines: ["½ + ¼ =", "¾ − ⅓ =", "⅖ + ⅖ =", "1 − ⅝ ="] },
+    blurb: "Finding the main idea and reading between the lines, plus ratios and fraction math.",
+    preview: { kind: "facts", subject: "math", lines: ["3 : 5 = 12 : ?", "⅔ × ¾ =", "1½ ÷ ⅜ =", "40% of 75 ="] },
   },
   penguins: {
     mascot: "/brand/penguin.svg",
     color: "teal",
-    blurb: "Summarizing what they read in their own words, and working with decimals and percents.",
-    preview: { kind: "facts", subject: "math", lines: ["0.6 × 5 =", "2.5 + 1.75 =", "4.2 ÷ 0.7 =", "10% of 80 ="] },
+    blurb: "Summarizing in their own words, plus negative numbers, percents and first expressions.",
+    preview: { kind: "facts", subject: "math", lines: ["−4 + 9 =", "−3 × −6 =", "25% of 80 =", "3a + 2a ="] },
   },
   lions: {
     mascot: "/pictures/lion.svg",
     color: "sun",
-    blurb: "Reading closely and explaining why, plus negative numbers and first algebra.",
-    preview: { kind: "facts", subject: "math", lines: ["2x + 3 = 11", "x = ?", "−4 + 9 =", "3(x − 2) = 12"] },
+    blurb: "Reading closely and explaining why, plus linear equations and exponents.",
+    preview: { kind: "facts", subject: "math", lines: ["2x + 3 = 11", "x = ?", "3² + 4² =", "5(x − 2) = 15"] },
   },
 };
+
+/** "Grade 3 work", "K–1 work", "Pre-K work". */
+export function gradeLabel(grade: string): string {
+  return /^\d/.test(grade) ? `Grade ${grade} work` : `${grade} work`;
+}
 
 export const LEVELS: Level[] = ladder.map((r) => {
   const look = LOOK[r.slug];
@@ -138,6 +144,7 @@ export const LEVELS: Level[] = ladder.map((r) => {
     name: r.name,
     title: r.title,
     ages: r.ages,
+    grade: r.grade,
     subjects: r.subjects as Subject[],
     status: r.ready ? "ready" : "soon",
   };
