@@ -64,7 +64,8 @@ def _strings(value: Any) -> Iterable[str]:
 # --- pictures ----------------------------------------------------------------------------
 
 def _picture_slugs(sheet: Sheet) -> set[str]:
-    return {item[k] for item in sheet.items for k in ("picture", "target") if k in item}
+    return {item[k] for item in sheet.items for k in ("picture", "target") if k in item} \
+        | {p for item in sheet.items for p in item.get("pictures", [])}
 
 
 @lru_cache(maxsize=None)
@@ -224,20 +225,33 @@ def check_group(level: Level, variant: int, sheets: list[Sheet], plan: LevelPlan
     if color_pages:
         issues.append(_warn(tag, f"pages {_ranges(color_pages)} use color words; print them in color if you can"))
 
+    # earlier levels this one reviews (6A-A reviews 7A): warn while their word bank is short
+    bank = vocab_by_word()
+    from_levels = sorted({lv for p in range(1, level.pages + 1)
+                          for lv in resolve_page(level, p).rules.get("review_from_levels", [])})
+    for lv in from_levels:
+        target = load_level(level.subject, lv).vocab_target or 0
+        have = sum(1 for e in bank.values() if e.level == lv)
+        if have < target:
+            issues.append(_warn(tag, f"this level reviews {lv} words: the word bank has {have} of {lv}'s {target}; "
+                                     f"sheets that review or reuse them will change as words are added"))
+
     # exposure rules, on the plan (always the whole level)
-    word_pages = [p for s in _word_sections(level) for p in range(s.pages[0], s.pages[1] + 1)]
+    word_pages = [p for p in range(1, level.pages + 1)
+                  if resolve_page(level, p).rules.get("new_words_per_sheet", 0)]
     missing = [p for p in word_pages if p not in plan.pages]
     if missing:
-        later = [s for s in sheets if s.page_number > max(word_pages)]
+        later = [s for s in sheets if s.page_number > missing[0] and s.page_number not in word_pages]
         issues.append(_warn(tag, f"the word bank covers {len(word_pages) - len(missing)} of {len(word_pages)} "
                                  f"new-word pages (next: page {missing[0]}); exposure rules are checked once it's "
                                  f"complete" + (f", and the {len(later)} review/story sheets already generated "
                                                 f"will change as words are added" if later else "")))
     else:
         min_seen = level.rules.get("min_exposures_per_word", 0)
+        new_here = {w for p in plan.pages.values() for w in p.new_words}
         counts = Counter(w for p in plan.pages.values() for w in p.new_words + p.review_words)
         for w, n in sorted(counts.items()):
-            if n < min_seen:
+            if w in new_here and n < min_seen:
                 issues.append(_err(tag, f"plan shows {w!r} only {n} times (needs {min_seen})"))
     # strip words must be 3–10 sheets old
     intro = {w: page for page, p in plan.pages.items() for w in p.new_words}

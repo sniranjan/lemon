@@ -1,0 +1,128 @@
+# Phrases (6A-B) and sentences (6A-C), built from frames with slots, like the 7A-C stories.
+#
+# A frame is text with slots in braces: "{a} {color} {colored}". Each slot names a slot kind below,
+# which lists the words that may fill it. `{a}` is the article for the next word: a / an, "some"
+# when the noun is `mass: true`, nothing when it is listed under `plural`. Every other token must be in
+# `allowed_words`, so the child only meets words he knows. The planner fills slots with the words
+# seen least so far (CLAUDE.md §5, level-wide planning); a page that introduces a new word must use it.
+#
+# Adding approved 6A words: give them `level: 6A` in content/vocab/english.yaml with a category a
+# slot kind lists (or add the category/word here), and, for a new kind of word (big, little, ...),
+# a new slot kind + frame group. Nothing in the code changes.
+
+# Function words the child sees in phrases and sentences. All but "and" also appear in 7A stories.
+allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
+
+# Nouns that read as plural: no article ("blue pants"), and never in "... is ..." frames.
+plural: [grapes, pants, boots, blocks, teeth]
+
+# The color each picture is drawn in (its main fill, checked by eye on the pictures). Only pictures
+# that are clearly one color are listed, so "a red apple" always matches what the child sees.
+picture_colors:
+  apple: red
+  car: red
+  hat: red
+  coat: red
+  bike: red
+  balloon: red
+  drum: red
+  clock: red
+  van: red
+  scarf: red
+  ball: blue
+  bird: blue
+  sock: blue
+  bowl: blue
+  plane: blue
+  pants: blue
+  dress: blue
+  plate: blue
+  towel: blue
+  swing: blue
+  banana: yellow
+  bus: yellow
+  duck: yellow
+  truck: yellow
+  sun: yellow
+  moon: yellow
+  star: yellow
+  cheese: yellow
+  bee: yellow
+  boots: yellow
+  lamp: yellow
+  key: yellow
+  tree: green
+  frog: green
+  shirt: green
+  pear: green
+  turtle: green
+  tractor: green
+  flower: pink
+  pig: pink
+  soap: pink
+  cup: purple
+  grapes: purple
+  pillow: purple
+  doll: purple
+
+# Who can do each action ("The dog can run."). People (the `person` slot and "I") can do all of these.
+can_do:
+  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep]
+  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse]
+  swim: [fish, duck, frog, turtle, dog]
+  eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion]
+  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby]
+  sit: [dog, cat, monkey, bunny]
+  clap: []
+  wash: []
+
+# Things that go together, for "mom and dad" phrases (both words are pictured).
+pairs:
+  - [mom, dad]
+  - [grandma, grandpa]
+  - [sister, brother]
+  - [cup, spoon]
+  - [sun, moon]
+  - [moon, star]
+  - [cat, dog]
+  - [hat, coat]
+  - [shoe, sock]
+  - [bread, cheese]
+  - [table, chair]
+  - [bed, pillow]
+  - [soap, towel]
+  - [cow, pig]
+  - [duck, frog]
+  - [car, bus]
+  - [hand, foot]
+  - [eye, ear]
+  - [apple, pear]
+  - [bowl, spoon]
+
+# Slot kinds: which words may fill a slot. `categories` and `words` add words; `except` removes them;
+# `colored: true` keeps only words in picture_colors; `people: true` marks a subject that can do any
+# action; `subject: true` marks an animal subject checked against can_do.
+slots:
+  thing:   { categories: [food, toys, animals, nature, home, vehicles, clothes] }
+  colored: { colored: true }
+  colored_mine: { categories: [toys, clothes, home], colored: true }   # "my red hat"
+  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny] }
+  animal:  { categories: [animals], subject: true }
+  person:  { words: [mom, dad, grandma, grandpa], people: true }
+  action:  { categories: [actions], except: [wash] }          # "wash" needs an object: "I wash my hand."
+  color:   { categories: [colors] }
+  eatable: { categories: [food], except: [milk, juice, soup] }  # "I eat ..." (not drinks)
+  washable: { words: [hand, foot, hair] }
+  family:  { categories: [family] }
+
+# Frame groups. A section part lists the groups its pages use (`phrase_groups`), one new idea per part.
+phrase_groups:          # 6A-B: 2–3 word phrases, lower case, no period
+  color_thing: ["{a} {color} {colored}"]
+  my_thing: ["my {mine}", "my {color} {colored_mine}"]
+  pair: ["{x} and {y}"]
+  can_do: ["I can {action}", "{person} can {action}"]
+sentence_groups:        # 6A-C: short sentences, recited three times
+  this_is: ["This is {a} {thing}.", "I see {a} {thing}.", "Here is my {mine}.", "Look at the {thing}."]
+  colors: ["I see {a} {color} {colored}.", "The {colored} is {color}.", "I like my {color} {colored_mine}."]
+  can: ["The {animal} can {action}.", "I can {action}.", "{person} can {action}."]
+  daily: ["I like to {action}.", "I eat {a} {eatable}.", "I wash my {washable}.", "I love my {family}."]

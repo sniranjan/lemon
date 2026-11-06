@@ -7,9 +7,9 @@ import random
 from pathlib import Path
 
 from . import registry
-from .content import tips, vocab
+from .content import phrases, tips, vocab
 from .models import Level, Sheet
-from .plan import LevelPlan, plan_new_words, plan_review
+from .plan import LevelPlan, plan_new_words, plan_phrases, plan_review
 from .render import write_html
 from .syllabus import ROOT, page_seed, resolve_page, sheet_id
 
@@ -19,7 +19,9 @@ MANIFEST = OUT_DIR / "manifest.jsonl"
 
 def build_plan(level: Level, variant: int = 1) -> LevelPlan:
     if level.subject == "english":
-        return plan_review(level, plan_new_words(level, vocab("english"), variant))
+        bank = vocab("english")
+        plan = plan_review(level, plan_new_words(level, bank, variant), bank)
+        return plan_phrases(level, bank, plan, phrases("english"))
     return LevelPlan(subject=level.subject, level=level.level, variant=variant)
 
 
@@ -61,6 +63,8 @@ def build_section(level: Level, section_code: str, up_to: int, plan: LevelPlan,
     section = level.section(section_code)
     built: dict[int, Sheet] = {}
     for page in range(section.pages[0], up_to + 1):
+        if page < up_to and level.subject == "english" and page not in plan.pages:
+            continue   # the word bank can't plan this page yet (6A-C part 5 before part 10)
         for attempt in range(MAX_ATTEMPTS):
             seed = page_seed(level.subject, level.level, section_code, page, variant, attempt)
             sheet = build_sheet(level, page, plan, variant, seed)
