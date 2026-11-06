@@ -1,0 +1,71 @@
+# Ratio table contexts (Pandas math, 6.RP.1 and 6.RP.3a). Our own sentences; American spelling.
+# Each context:
+#   id:     stable name (stored on the sheet)
+#   text:   the ratio in words, with {a} and {b} (the two numbers of the simplest ratio) and
+#           {top} / {bottom} (the row labels, singular when the number is 1)
+#   top, bottom: [singular, plural] row labels; the table's rows use the plural
+# The numbers come from the part's rules, so any context works with any ratio.
+- id: lemonade
+  text: "A pitcher of lemonade uses {a} {top} for every {b} {bottom}."
+  top: [lemon, lemons]
+  bottom: [cup of water, cups of water]
+- id: pancakes
+  text: "The pancake recipe uses {a} {top} for every {b} {bottom}."
+  top: [cup of flour, cups of flour]
+  bottom: [egg, eggs]
+- id: paint
+  text: "To make green paint, mix {a} {top} with {b} {bottom}."
+  top: [spoon of yellow, spoons of yellow]
+  bottom: [spoon of blue, spoons of blue]
+- id: beads
+  text: "Lily's bracelet pattern has {a} {top} for every {b} {bottom}."
+  top: [red bead, red beads]
+  bottom: [white bead, white beads]
+- id: laps
+  text: "Omar swims {a} {top} in {b} {bottom}."
+  top: [lap, laps]
+  bottom: [minute, minutes]
+- id: seeds
+  text: "The farmer plants {a} {top} for every {b} {bottom}."
+  top: [row of beans, rows of beans]
+  bottom: [row of corn, rows of corn]
+- id: trail_mix
+  text: "The trail mix has {a} {top} for every {b} {bottom}."
+  top: [cup of nuts, cups of nuts]
+  bottom: [cup of raisins, cups of raisins]
+- id: pages
+  text: "Maya reads {a} {top} every {b} {bottom}."
+  top: [page, pages]
+  bottom: [day, days]
+- id: tickets
+  text: "The fair gives {a} {top} for every {b} {bottom}."
+  top: [ticket, tickets]
+  bottom: [dollar, dollars]
+- id: soup
+  text: "The soup uses {a} {top} for every {b} {bottom}."
+  top: [carrot, carrots]
+  bottom: [potato, potatoes]
+- id: fruit_basket
+  text: "The fruit basket has {a} {top} for every {b} {bottom}."
+  top: [apple, apples]
+  bottom: [orange, oranges]
+- id: garden
+  text: "In the garden there are {a} {top} for every {b} {bottom}."
+  top: [tomato plant, tomato plants]
+  bottom: [pepper plant, pepper plants]
+- id: bike
+  text: "In the bike rack there are {a} {top} for every {b} {bottom}."
+  top: [blue bike, blue bikes]
+  bottom: [red bike, red bikes]
+- id: pond
+  text: "The pond has {a} {top} for every {b} {bottom}."
+  top: [goldfish, goldfish]
+  bottom: [frog, frogs]
+- id: smoothie
+  text: "A berry smoothie uses {a} {top} for every {b} {bottom}."
+  top: [cup of berries, cups of berries]
+  bottom: [banana, bananas]
+- id: stickers
+  text: "A sticker sheet has {a} {top} for every {b} {bottom}."
+  top: [star, stars]
+  bottom: [moon, moons]

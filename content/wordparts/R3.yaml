@@ -1,0 +1,94 @@
+# Foxes Reading, section B "Word Builders" (pages 51–90): a known word + un-, re-, -ful or -less, and
+# compound words (L.3.4b, RF.3.3a; compounds L.2.4d). Hand-checked; approved with
+# syllabus/drafts/R3-words.md. Schema: ws/passages.py WordPart.
+#
+# Each word: `built` = the pieces joined with no spelling change; `meaning` (shown as the right
+# choice in "Circle the meaning"); `sentence` with one blank (___) and a `foil`: the other word the
+# child chooses from, which must NOT fit the sentence. Prefix words use the plain base word as the
+# foil (unhappy / happy), so the choice is exactly about what the prefix adds; re- words, which still
+# make sense without "again", use another re- word; -ful and -less words use their opposite where
+# there is one (careful / careless).
+
+affixes:
+  un:   { show: "un-",   means: "not",     title: "Words with un-" }
+  re:   { show: "re-",   means: "again",   title: "Words with re-" }
+  ful:  { show: "-ful",  means: "full of", title: "Words with -ful" }
+  less: { show: "-less", means: "without", title: "Words with -less" }
+  compound: { show: "word + word", means: "two words in one", title: "Two words in one" }
+
+words:
+  # --- un- = not ---------------------------------------------------------------------------
+  - { built: unhappy,    affix: un, base: happy,    meaning: not happy,    foil: happy,    sentence: "Leo felt ___ when the rain stopped his soccer game." }
+  - { built: unkind,     affix: un, base: kind,     meaning: not kind,     foil: kind,     sentence: "It is ___ to laugh when a friend trips." }
+  - { built: unsafe,     affix: un, base: safe,     meaning: not safe,     foil: safe,     sentence: "The ice on the pond is too thin, so it is ___ to skate there." }
+  - { built: unfair,     affix: un, base: fair,     meaning: not fair,     foil: fair,     sentence: "Ana got two turns and I got none, which was ___." }
+  - { built: unlucky,    affix: un, base: lucky,    meaning: not lucky,    foil: lucky,    sentence: "Dad was ___ and missed the bus by one minute." }
+  - { built: untidy,     affix: un, base: tidy,     meaning: not tidy,     foil: tidy,     sentence: "My room was so ___ that I could not find my shoes." }
+  - { built: unable,     affix: un, base: able,     meaning: not able,     foil: able,     sentence: "With both hands full of bags, Grandpa was ___ to open the door." }
+  - { built: unsure,     affix: un, base: sure,     meaning: not sure,     foil: sure,     sentence: "Mia was ___ of the answer, so she checked the book again." }
+  - { built: unwell,     affix: un, base: well,     meaning: not well,     foil: well,     sentence: "Kai felt ___, so he stayed home and rested in bed." }
+  - { built: unclear,    affix: un, base: clear,    meaning: not clear,    foil: clear,    sentence: "The note got wet, and the last word was smudged and ___." }
+  - { built: unfriendly, affix: un, base: friendly, meaning: not friendly, foil: friendly, sentence: "The goose honked and flapped at us, which seemed ___." }
+  - { built: unafraid,   affix: un, base: afraid,   meaning: not afraid,   foil: afraid,   sentence: "The brave puppy was ___ of the waves and splashed right in." }
+  - { built: uneven,     affix: un, base: even,     meaning: not even,     foil: even,     sentence: "The table wobbled because its legs were ___." }
+  - { built: unusual,    affix: un, base: usual,    meaning: not usual,    foil: usual,    sentence: "A pink frog with blue spots would be a very ___ sight." }
+  - { built: unhealthy,  affix: un, base: healthy,  meaning: not healthy,  foil: healthy,  sentence: "Eating only candy for dinner would be ___." }
+  - { built: unknown,    affix: un, base: known,    meaning: not known,    foil: known,    sentence: "Nobody saw who left the flowers, so the giver is still ___." }
+
+  # --- re- = again -------------------------------------------------------------------------
+  - { built: reread,  affix: re, base: read,  meaning: read again,  foil: rebuild, sentence: "That book was so funny that I want to ___ it." }
+  - { built: retell,  affix: re, base: tell,  meaning: tell again,  foil: refill,  sentence: "Can you ___ the story of the three bears in your own words?" }
+  - { built: rebuild, affix: re, base: build, meaning: build again, foil: reread,  sentence: "A wave knocked down our sandcastle, so we had to ___ it." }
+  - { built: refill,  affix: re, base: fill,  meaning: fill again,  foil: retell,  sentence: "My water bottle is empty, so I will ___ it at the sink." }
+  - { built: repaint, affix: re, base: paint, meaning: paint again, foil: replant, sentence: "The old fence is peeling, so Dad will ___ it bright blue." }
+  - { built: replant, affix: re, base: plant, meaning: plant again, foil: repaint, sentence: "The puppy dug up the tulips, so we had to ___ them." }
+  - { built: reheat,  affix: re, base: heat,  meaning: heat again,  foil: rewrite, sentence: "The soup got cold, so Mom will ___ it on the stove." }
+  - { built: rewrite, affix: re, base: write, meaning: write again, foil: reheat,  sentence: "My note was too messy to read, so I had to ___ it." }
+  - { built: reuse,   affix: re, base: use,   meaning: use again,   foil: retie,   sentence: "Don't throw away that jar, because we can ___ it for buttons." }
+  - { built: redo,    affix: re, base: do,    meaning: do again,    foil: reopen,  sentence: "I added the numbers wrong, so I have to ___ the problem." }
+  - { built: retie,   affix: re, base: tie,   meaning: tie again,   foil: reuse,   sentence: "Your shoelace came loose, so stop and ___ it." }
+  - { built: reopen,  affix: re, base: open,  meaning: open again,  foil: redo,    sentence: "The bakery closed for a week, but it will ___ on Monday." }
+  - { built: replay,  affix: re, base: play,  meaning: play again,  foil: rewrap,  sentence: "That song is great, so please ___ it from the start!" }
+  - { built: rewrap,  affix: re, base: wrap,  meaning: wrap again,  foil: replay,  sentence: "The paper on the gift tore, so we had to ___ it." }
+
+  # --- -ful = full of ----------------------------------------------------------------------
+  - { built: careful,  affix: ful, base: care,  meaning: full of care,   foil: careless,  sentence: "Carry the eggs slowly and be ___ not to drop them." }
+  - { built: helpful,  affix: ful, base: help,  meaning: full of help,   foil: helpless,  sentence: "You washed all the dishes, so you were very ___ today!" }
+  - { built: hopeful,  affix: ful, base: hope,  meaning: full of hope,   foil: hopeless,  sentence: "The sky is clearing, so we are ___ that the picnic will happen." }
+  - { built: playful,  affix: ful, base: play,  meaning: full of play,   foil: restful,   sentence: "The ___ kitten wanted to chase the ball and pounce on our toes." }
+  - { built: useful,   affix: ful, base: use,   meaning: full of use,    foil: useless,   sentence: "A flashlight is ___ when the lights go out." }
+  - { built: thankful, affix: ful, base: thank, meaning: full of thanks, foil: colorless, sentence: "We were ___ when the neighbors helped us shovel the snow." }
+  - { built: cheerful, affix: ful, base: cheer, meaning: full of cheer,  foil: seedless,  sentence: "Grandma's ___ song made everyone smile." }
+  - { built: colorful, affix: ful, base: color, meaning: full of color,  foil: colorless, sentence: "The ___ parrot had red, blue and yellow feathers." }
+  - { built: joyful,   affix: ful, base: joy,   meaning: full of joy,    foil: spotless,  sentence: "The ___ crowd clapped and cheered at the parade." }
+  - { built: peaceful, affix: ful, base: peace, meaning: full of peace,  foil: helpless,  sentence: "The lake was calm and ___ in the early morning." }
+  - { built: restful,  affix: ful, base: rest,  meaning: full of rest,   foil: restless,  sentence: "A quiet nap on a rainy day is very ___." }
+  - { built: truthful, affix: ful, base: truth, meaning: full of truth,  foil: seedless,  sentence: "Sam was ___ and told Mom that he broke the vase." }
+
+  # --- -less = without ---------------------------------------------------------------------
+  - { built: careless,  affix: less, base: care,  meaning: without care,   foil: careful,  sentence: "Leaving your new bike out in the rain was ___." }
+  - { built: helpless,  affix: less, base: help,  meaning: without help,   foil: helpful,  sentence: "The tiny baby bird was ___ until its wings grew strong." }
+  - { built: hopeless,  affix: less, base: hope,  meaning: without hope,   foil: hopeful,  sentence: "Finding the ring in all that sand seemed ___, but we kept looking." }
+  - { built: useless,   affix: less, base: use,   meaning: without use,    foil: useful,   sentence: "A pen with no ink is ___." }
+  - { built: colorless, affix: less, base: color, meaning: without color,  foil: colorful, sentence: "Clean water is ___, so you can see right through it." }
+  - { built: restless,  affix: less, base: rest,  meaning: without rest,   foil: restful,  sentence: "After the long car ride, the puppy was ___ and wanted to run." }
+  - { built: fearless,  affix: less, base: fear,  meaning: without fear,   foil: useless,  sentence: "Nora was ___ and jumped off the high diving board." }
+  - { built: spotless,  affix: less, base: spot,  meaning: without spots,  foil: toothless, sentence: "After we scrubbed it, the kitchen floor was ___." }
+  - { built: harmless,  affix: less, base: harm,  meaning: without harm,   foil: hopeless, sentence: "Don't worry, because that little ladybug is ___." }
+  - { built: seedless,  affix: less, base: seed,  meaning: without seeds,  foil: endless,  sentence: "I like ___ grapes because there is nothing to spit out." }
+  - { built: endless,   affix: less, base: end,   meaning: without an end, foil: seedless, sentence: "The line for the slide seemed ___, but it finally moved." }
+  - { built: toothless, affix: less, base: tooth, meaning: without teeth,  foil: endless,  sentence: "The ___ baby gave us a big, gummy smile." }
+
+  # --- compound words: two words in one (pictures of both parts) ---------------------------
+  - { built: starfish,  affix: compound, parts: [star, fish],   pictures: [star, fish],   meaning: a sea animal shaped like a star,  foil: sunflower, sentence: "At the beach we found a ___ with five arms." }
+  - { built: cupcake,   affix: compound, parts: [cup, cake],    pictures: [cup, cake],    meaning: a little cake baked in a cup,    foil: fishbowl,  sentence: "I put pink frosting on top of my ___." }
+  - { built: snowball,  affix: compound, parts: [snow, ball],   pictures: [snow, ball],   meaning: a ball made of snow,             foil: raincoat,  sentence: "Mila rolled a ___ and tossed it at the fence." }
+  - { built: raincoat,  affix: compound, parts: [rain, coat],   pictures: [rain, coat],   meaning: a coat you wear in the rain,     foil: sandbox,   sentence: "It is pouring outside, so wear your ___." }
+  - { built: sandbox,   affix: compound, parts: [sand, box],    pictures: [sand, box],    meaning: a box of sand to play in,        foil: doorbell,  sentence: "The kids built a castle in the ___ at the park." }
+  - { built: fishbowl,  affix: compound, parts: [fish, bowl],   pictures: [fish, bowl],   meaning: a glass bowl for a pet fish,     foil: eggshell,  sentence: "Our goldfish swims around and around in its ___." }
+  - { built: eggshell,  affix: compound, parts: [egg, shell],   pictures: [egg, shell],   meaning: the hard outside of an egg,      foil: cupcake,   sentence: "Be careful not to drop a piece of ___ into the batter." }
+  - { built: handbag,   affix: compound, parts: [hand, bag],    pictures: [hand, bag],    meaning: a small bag you carry by hand,   foil: hairbrush, sentence: "Grandma keeps her keys and glasses in her ___." }
+  - { built: hairbrush, affix: compound, parts: [hair, brush],  pictures: [hair, brush],  meaning: a brush for your hair,           foil: handbag,   sentence: "After her bath, Ava used a ___ to smooth her hair." }
+  - { built: doorbell,  affix: compound, parts: [door, bell],   pictures: [door, bell],   meaning: a bell you ring at a door,       foil: starfish,  sentence: "Ding-dong! Someone just rang the ___." }
+  - { built: sunflower, affix: compound, parts: [sun, flower],  pictures: [sun, flower],  meaning: a tall flower that looks like the sun, foil: catfish, sentence: "The ___ grew taller than Dad and turned toward the sun." }
+  - { built: catfish,   affix: compound, parts: [cat, fish],    pictures: [cat, fish],    meaning: a fish with whiskers like a cat, foil: snowball,  sentence: "Grandpa showed us a ___ with long whiskers in the pond." }

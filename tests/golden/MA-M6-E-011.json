@@ -1,0 +1,137 @@
+{
+  "id": "MA-M6-E-011",
+  "subject": "math",
+  "level": "M6",
+  "section": "E",
+  "part": 2,
+  "sheet_type": "expression_eval",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 1712789592477880886,
+  "title": "Write an expression",
+  "parent_tip": "Read each phrase out loud and point to the numbers and the letter. Any correct order is fine: n + 7 or 7 + n.",
+  "items": [
+    {
+      "kind": "expr",
+      "n": 1,
+      "task": "write",
+      "form": 3,
+      "nums": {
+        "K": 4
+      },
+      "letter": "t",
+      "phrase": "t divided by 4",
+      "expr": "t / 4",
+      "show": "t ÷ 4",
+      "answer": "t ÷ 4"
+    },
+    {
+      "kind": "expr",
+      "n": 2,
+      "task": "write",
+      "form": 4,
+      "nums": {
+        "K": 9
+      },
+      "letter": "k",
+      "phrase": "the sum of k and 9",
+      "expr": "k + 9",
+      "show": "k + 9",
+      "answer": "k + 9"
+    },
+    {
+      "kind": "expr",
+      "n": 3,
+      "task": "write",
+      "form": 11,
+      "nums": {
+        "K": 4
+      },
+      "letter": "t",
+      "phrase": "4 less than 3 times t",
+      "expr": "3*t - 4",
+      "show": "3t − 4",
+      "answer": "3t − 4"
+    },
+    {
+      "kind": "expr",
+      "n": 4,
+      "task": "write",
+      "form": 13,
+      "nums": {
+        "K": 3
+      },
+      "letter": "p",
+      "phrase": "half of p, plus 3",
+      "expr": "p / 2 + 3",
+      "show": "p ÷ 2 + 3",
+      "answer": "p ÷ 2 + 3"
+    },
+    {
+      "kind": "expr",
+      "n": 5,
+      "task": "write",
+      "form": 12,
+      "nums": {},
+      "letter": "t",
+      "phrase": "t cubed",
+      "expr": "t**3",
+      "show": "t³",
+      "answer": "t³"
+    },
+    {
+      "kind": "expr",
+      "n": 6,
+      "task": "write",
+      "form": 1,
+      "nums": {
+        "K": 2
+      },
+      "letter": "t",
+      "phrase": "2 less than t",
+      "expr": "t - 2",
+      "show": "t − 2",
+      "answer": "t − 2"
+    },
+    {
+      "kind": "expr",
+      "n": 7,
+      "task": "write",
+      "form": 6,
+      "nums": {
+        "K": 4
+      },
+      "letter": "n",
+      "phrase": "subtract n from 4",
+      "expr": "4 - n",
+      "show": "4 − n",
+      "answer": "4 − n"
+    },
+    {
+      "kind": "expr",
+      "n": 8,
+      "task": "write",
+      "form": 5,
+      "nums": {
+        "K": 5
+      },
+      "letter": "p",
+      "phrase": "the product of 5 and p",
+      "expr": "5*p",
+      "show": "5p",
+      "answer": "5p"
+    }
+  ],
+  "answer_key": [
+    "t ÷ 4",
+    "k + 9",
+    "3t − 4",
+    "p ÷ 2 + 3",
+    "t³",
+    "t − 2",
+    "4 − n",
+    "5p"
+  ],
+  "new_words": [],
+  "review_words": []
+}

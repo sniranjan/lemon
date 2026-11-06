@@ -1,0 +1,83 @@
+{
+  "id": "MA-M4-C-021",
+  "subject": "math",
+  "level": "M4",
+  "section": "C",
+  "part": 3,
+  "sheet_type": "long_multiplication",
+  "page_number": 81,
+  "variant": 1,
+  "seed": 17189967044294706542,
+  "title": "Two-by-two",
+  "parent_tip": "Guess first: 48 times 31 is about 50 times 30, so about 1500.",
+  "items": [
+    {
+      "kind": "times",
+      "layout": "partials",
+      "a": 93,
+      "b": 45,
+      "cols": 4,
+      "partials": [
+        465,
+        3720
+      ],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": true
+    },
+    {
+      "kind": "times",
+      "layout": "partials",
+      "a": 73,
+      "b": 14,
+      "cols": 4,
+      "partials": [
+        292,
+        730
+      ],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": true
+    },
+    {
+      "kind": "times",
+      "layout": "partials",
+      "a": 97,
+      "b": 93,
+      "cols": 4,
+      "partials": [
+        291,
+        8730
+      ],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": true
+    },
+    {
+      "kind": "times",
+      "layout": "partials",
+      "a": 75,
+      "b": 91,
+      "cols": 4,
+      "partials": [
+        75,
+        6750
+      ],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": true
+    }
+  ],
+  "answer_key": [
+    "4185 (465 + 3720)",
+    "1022 (292 + 730)",
+    "9021 (291 + 8730)",
+    "6825 (75 + 6750)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

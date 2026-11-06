@@ -1,0 +1,69 @@
+{
+  "id": "MA-M6-D-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "signed_numbers",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 9784158619483363,
+  "title": "Below zero",
+  "parent_tip": "Numbers to the left of 0 are below zero. A box means write the number at the dot; a number means draw its dot.",
+  "items": [
+    {
+      "kind": "line",
+      "n": 1,
+      "task": "name",
+      "lo": -10,
+      "hi": 10,
+      "value": "9",
+      "answer": "9"
+    },
+    {
+      "kind": "line",
+      "n": 2,
+      "task": "mark",
+      "lo": -10,
+      "hi": 10,
+      "value": "4",
+      "answer": "dot at 4"
+    },
+    {
+      "kind": "line",
+      "n": 3,
+      "task": "opposite",
+      "lo": -10,
+      "hi": 10,
+      "value": "2",
+      "answer": "dot at −2"
+    },
+    {
+      "kind": "line",
+      "n": 4,
+      "task": "name",
+      "lo": -10,
+      "hi": 10,
+      "value": "-1",
+      "answer": "−1"
+    },
+    {
+      "kind": "line",
+      "n": 5,
+      "task": "mark",
+      "lo": -10,
+      "hi": 10,
+      "value": "-10",
+      "answer": "dot at −10"
+    }
+  ],
+  "answer_key": [
+    "9",
+    "dot at 4",
+    "dot at −2",
+    "−1",
+    "dot at −10"
+  ],
+  "new_words": [],
+  "review_words": []
+}

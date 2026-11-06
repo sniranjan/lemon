@@ -17,7 +17,7 @@ from __future__ import annotations
 from fractions import Fraction
 
 from ..models import Issue, Sheet
-from ..registry import GenContext, SheetContent, SheetType, register
+from ..registry import GenContext, SheetContent
 from ._algebra import equation_tokens, fstr, numbers_in, show, solve
 from ._common import error
 
@@ -130,9 +130,11 @@ def _ok(left, right, r: dict, form: str) -> bool:
     return whole and all(0 < abs(v) <= r["max_number"] for v in nums)
 
 
-@register("multi_step_equation")
-class MultiStepEquation(SheetType):
-    template = "multi_step_equation.html.j2"
+class MultiStep:
+    """A mode of `equation_solve` (rules `mode`); equation_solve.py dispatches here."""
+
+    name = "equation_solve"
+    template = "equation_solve_multi_step.html.j2"
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r, rng = ctx.rules, ctx.rng

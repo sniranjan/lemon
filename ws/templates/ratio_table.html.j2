@@ -1,0 +1,42 @@
+{% extends "base.html.j2" %}
+{# Ratio tables: two labeled rows, one column per multiplier. Empty cells are white boxes to
+   write in; a table without a first column also asks for the simplest ratio. #}
+{% block style %}
+.tables { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat({{ sheet.items | length }}, 1fr); gap: 14px; }
+.tables .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 10px 22px 10px 34px; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.say { font-size: 25px; line-height: 1.25; }
+.row { display: flex; align-items: center; gap: 22px; }
+table.rt { border-collapse: collapse; }
+table.rt th { font-size: 22px; font-weight: 700; text-align: left; padding: 0 12px 0 0; width: 168px; line-height: 1.1; }
+table.rt td { width: 66px; height: 46px; border: 3px solid var(--ink); text-align: center; font-size: 28px; font-weight: 700; }
+table.rt td.blank { background: #fff; }
+table.rt tr:first-child td { background: var(--tint); }
+table.rt tr:first-child td.blank { background: #fff; }
+.simplest { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 22px; font-weight: 700; white-space: nowrap; color: var(--accent); }
+.simplest div { display: flex; align-items: center; gap: 6px; color: var(--ink); }
+.simplest .colon { font-size: 32px; font-weight: 700; }
+.box { display: inline-block; width: 46px; height: 46px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+{% endblock %}
+{% block body %}
+    <div class="tables">
+{% for t in sheet.items %}
+{% set empty = t.blanks | map("join", ",") | list %}
+      <div class="card"><span class="qn" data-audience="parent">{{ t.n }}</span>
+{% if t.text %}
+        <div class="say">{{ t.text }}</div>
+{% endif %}
+        <div class="row">
+          <table class="rt">
+{% for label, values, row in [(t.top_label, t.top, 0), (t.bottom_label, t.bottom, 1)] %}
+            <tr><th>{{ label }}</th>{% for v in values %}{% if (row ~ "," ~ loop.index0) in empty %}<td class="blank"></td>{% else %}<td>{{ v }}</td>{% endif %}{% endfor %}</tr>
+{% endfor %}
+          </table>
+{% if t.ask_simplest %}
+          <div class="simplest"><span>simplest ratio</span><div><span class="box"></span><span class="colon">:</span><span class="box"></span></div></div>
+{% endif %}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

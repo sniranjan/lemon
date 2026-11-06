@@ -1,0 +1,99 @@
+{
+  "id": "MA-M5-E-001",
+  "subject": "math",
+  "level": "M5",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "decimal_ops",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 15781493450637381957,
+  "title": "Moving the point",
+  "parent_tip": "Times 10 moves every digit one place to the left; times 100, two places. Sharing by 10 moves them to the right.",
+  "items": [
+    {
+      "kind": "times_power",
+      "op": "×",
+      "a": "35.2",
+      "b": "10",
+      "n": 1
+    },
+    {
+      "kind": "times_power",
+      "op": "×",
+      "a": "4.94",
+      "b": "100",
+      "n": 2
+    },
+    {
+      "kind": "divide_power",
+      "op": "÷",
+      "a": "671.4",
+      "b": "10",
+      "n": 3
+    },
+    {
+      "kind": "times_power",
+      "op": "×",
+      "a": "68.3",
+      "b": "100",
+      "n": 4
+    },
+    {
+      "kind": "times_power",
+      "op": "×",
+      "a": "888.1",
+      "b": "100",
+      "n": 5
+    },
+    {
+      "kind": "times_power",
+      "op": "×",
+      "a": "7.829",
+      "b": "1000",
+      "n": 6
+    },
+    {
+      "kind": "divide_power",
+      "op": "÷",
+      "a": "93.78",
+      "b": "10",
+      "n": 7
+    },
+    {
+      "kind": "divide_power",
+      "op": "÷",
+      "a": "624",
+      "b": "10",
+      "n": 8
+    },
+    {
+      "kind": "divide_power",
+      "op": "÷",
+      "a": "10.68",
+      "b": "10",
+      "n": 9
+    },
+    {
+      "kind": "divide_power",
+      "op": "÷",
+      "a": "4237",
+      "b": "10",
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    "352",
+    "494",
+    "67.14",
+    "6830",
+    "88810",
+    "7829",
+    "9.378",
+    "62.4",
+    "1.068",
+    "423.7"
+  ],
+  "new_words": [],
+  "review_words": []
+}

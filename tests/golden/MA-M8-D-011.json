@@ -1,0 +1,131 @@
+{
+  "id": "MA-M8-D-011",
+  "subject": "math",
+  "level": "M8",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "coordinate_grid",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 11836222888832025883,
+  "title": "Find the slope",
+  "parent_tip": "Count the rise (up or down) first, then the run to the right. Simplify the fraction; a line going down to the right has a negative slope.",
+  "items": [
+    {
+      "n": 1,
+      "task": "read_slope",
+      "m": "-1",
+      "b": "0",
+      "grid": 6,
+      "dots": [
+        [
+          -3,
+          3
+        ],
+        [
+          4,
+          -4
+        ]
+      ],
+      "ends": [
+        [
+          -6.0,
+          6.0
+        ],
+        [
+          6.0,
+          -6.0
+        ]
+      ]
+    },
+    {
+      "n": 2,
+      "task": "read_slope",
+      "m": "-1/3",
+      "b": "3",
+      "grid": 6,
+      "dots": [
+        [
+          -3,
+          4
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "ends": [
+        [
+          -6.0,
+          5.0
+        ],
+        [
+          6.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "n": 3,
+      "task": "read_slope",
+      "m": "-1",
+      "b": "3",
+      "grid": 6,
+      "dots": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "ends": [
+        [
+          -3.0,
+          6.0
+        ],
+        [
+          6.0,
+          -3.0
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "task": "read_slope",
+      "m": "-2",
+      "b": "3",
+      "grid": 6,
+      "dots": [
+        [
+          -1,
+          5
+        ],
+        [
+          3,
+          -3
+        ]
+      ],
+      "ends": [
+        [
+          -1.5,
+          6.0
+        ],
+        [
+          4.5,
+          -6.0
+        ]
+      ]
+    }
+  ],
+  "answer_key": [
+    "slope −1",
+    "slope −1/3",
+    "slope −1",
+    "slope −2"
+  ],
+  "new_words": [],
+  "review_words": []
+}

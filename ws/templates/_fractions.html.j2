@@ -1,0 +1,12 @@
+{# Stacked fractions and mixed numbers (Pandas math). `s` is a stored number string: "3/4",
+   "2 1/2", "5", "-3". Classes: .q (the number), .q-w (whole part), .q-f (stacked fraction). #}
+{% macro number(s) %}{% set p = s | frac_parts %}<span class="q">{% if p.sign %}<span class="q-s">{{ p.sign }}</span>{% endif %}{% if p.whole is not none %}<span class="q-w">{{ p.whole }}</span>{% endif %}{% if p.num is not none %}<span class="q-f"><span>{{ p.num }}</span><span>{{ p.den }}</span></span>{% endif %}</span>{% endmacro %}
+
+{# CSS for the macro; size is the numerator/denominator font size in px. #}
+{% macro style(size=30) %}
+.q { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; vertical-align: middle; }
+.q-w, .q-s { font-size: {{ (size * 1.4) | round | int }}px; line-height: 1; }
+.q-f { display: inline-flex; flex-direction: column; align-items: center; font-size: {{ size }}px; line-height: 1.08; }
+.q-f > span:first-child { border-bottom: 3px solid var(--ink); padding: 0 4px 1px; }
+.q-f > span:last-child { padding: 1px 4px 0; }
+{% endmacro %}

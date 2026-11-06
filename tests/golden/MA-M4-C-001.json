@@ -1,0 +1,97 @@
+{
+  "id": "MA-M4-C-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "long_multiplication",
+  "page_number": 61,
+  "variant": 1,
+  "seed": 2134947255164088175,
+  "title": "Times tens",
+  "parent_tip": "Times 40 is times 4, then times 10. Write a 0 in the ones box first, then multiply by 4.",
+  "items": [
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 78,
+      "b": 60,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 64,
+      "b": 70,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 69,
+      "b": 90,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 77,
+      "b": 40,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 45,
+      "b": 30,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 43,
+      "b": 90,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1
+      ],
+      "zero_shown": false
+    }
+  ],
+  "answer_key": [
+    "4680",
+    "4480",
+    "6210",
+    "3080",
+    "1350",
+    "3870"
+  ],
+  "new_words": [],
+  "review_words": []
+}

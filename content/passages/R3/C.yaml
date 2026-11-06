@@ -1,0 +1,814 @@
+- id: c01-crow-and-the-pebbles
+  title: The Thirsty Crow
+  moral: "When a problem is hard, think of a clever way to solve it."
+  text: |
+    On a hot summer afternoon, a thirsty crow flew over the dusty fields. At last she spotted a tall
+    clay pitcher sitting beside a farmhouse door.
+
+    The crow peeked inside. There was a little water at the very bottom, but her beak was too short
+    to reach it. She tried tipping the pitcher over, but it was much too heavy.
+
+    The crow did not give up. She looked around the yard and noticed a pile of small, round pebbles.
+    She picked up one pebble and dropped it into the pitcher. Plop! Then she dropped another, and
+    another.
+
+    Slowly the water climbed higher and higher. After many pebbles, the cool water reached the top.
+    The crow took a long, happy drink and flew home to her nest.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What problem did the crow have at the start?
+          choices: [She could not reach the water., She could not find her nest., She lost her pebbles.]
+          evidence: her beak was too short to reach it
+        - ask: What did the crow try first?
+          choices: [tipping the pitcher over, calling for help, flying to a pond]
+          evidence: She tried tipping the pitcher over
+        - ask: How did the crow finally get a drink?
+          sample: The crow dropped pebbles into the pitcher until the water came to the top.
+          evidence: She picked up one pebble and dropped it into the pitcher.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Think of a clever way to solve it., Always drink water in the morning., Big birds are better than small birds.]
+          evidence: The crow did not give up.
+        - ask: Which detail shows the crow kept thinking?
+          choices: [She noticed a pile of pebbles., She flew over the dusty fields., She had a nest at home.]
+          evidence: noticed a pile of small, round pebbles
+        - ask: How does the crow show the lesson?
+          sample: The crow shows the lesson because she found a smart way to raise the water.
+          evidence: Slowly the water climbed higher and higher.
+
+- id: c02-ant-and-the-cricket
+  title: The Busy Ant
+  moral: "Plan ahead and get ready for the days to come."
+  text: |
+    All summer long, a little ant carried seeds across the meadow to her home. Each morning she
+    worked from sunrise until the stars came out.
+
+    A cricket sat on a warm leaf and played his fiddle. "Why work so hard?" he asked. "There is plenty
+    of food everywhere. Come and dance with me!"
+
+    "Winter is coming," said the ant. "I am filling my pantry now, so I will have food when the snow
+    falls." The cricket only laughed and played another tune.
+
+    When the cold winter arrived, the meadow was covered in snow. The cricket was hungry and shivering.
+    He knocked on the ant's tiny door. The ant shared some seeds with him and let him warm up by her
+    fire. The cricket said, "Next summer, I will gather food, too."
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did the ant do all summer?
+          choices: [She carried seeds to her home., She danced with the cricket., She slept on a warm leaf.]
+          evidence: a little ant carried seeds across the meadow
+        - ask: What happened when winter came?
+          choices: [The cricket was cold and hungry., The cricket found many seeds., The ant moved to a new meadow.]
+          evidence: The cricket was hungry and shivering.
+        - ask: What did the ant do when the cricket knocked?
+          sample: The ant shared some seeds with the cricket and let him warm up.
+          evidence: The ant shared some seeds with him
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Plan ahead for the days to come., Music is better than work., Never open your door in winter.]
+          evidence: I am filling my pantry now
+        - ask: Which detail shows the ant planned ahead?
+          choices: [She filled her pantry in summer., She laughed at the cricket., She played a tune on a fiddle.]
+          evidence: I am filling my pantry now, so I will have food when the snow falls.
+        - ask: What will the cricket do next summer?
+          sample: Next summer the cricket will gather food so he is ready for winter.
+          evidence: Next summer, I will gather food, too.
+
+- id: c03-tortoise-and-the-rabbit
+  title: The Big Race
+  moral: "Slow and steady work gets the job done."
+  text: |
+    Rabbit loved to brag about his speed. "Nobody in the forest can beat me," he said. Tortoise smiled
+    and answered, "Let's have a race to the old maple tree."
+
+    The animals gathered to watch. When Owl called, "Go!" Rabbit dashed away and was soon far ahead.
+    He looked back and laughed. Tortoise was barely past the starting line.
+
+    "I have plenty of time," Rabbit said, and he curled up under a shady bush for a nap. Meanwhile,
+    Tortoise kept walking, one careful step after another. He never stopped, not even once.
+
+    When Rabbit woke up, the sun was low in the sky. He raced toward the maple tree as fast as he
+    could. But Tortoise was already there, and all the animals were cheering for him.
+  pages:
+    - focus: recount
+      questions:
+        - ask: How did the race begin?
+          choices: [Owl called go and Rabbit dashed ahead., Tortoise ran faster than Rabbit., The animals went home.]
+          evidence: Rabbit dashed away and was soon far ahead.
+        - ask: What did Rabbit do in the middle of the race?
+          choices: [He took a nap under a bush., He helped Tortoise walk., He ate a carrot.]
+          evidence: he curled up under a shady bush for a nap
+        - ask: Tell what happened at the end of the race.
+          sample: Tortoise reached the maple tree first, and the animals cheered for him.
+          evidence: But Tortoise was already there
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Slow and steady work gets it done., Naps are the best part of a race., Fast animals always win.]
+          evidence: one careful step after another
+        - ask: Which detail shows the lesson?
+          choices: [Tortoise never stopped once., Owl called the start., The sun was low in the sky.]
+          evidence: He never stopped, not even once.
+        - ask: What should Rabbit do next time?
+          sample: Next time Rabbit should keep going and not stop to nap.
+          evidence: I have plenty of time
+
+- id: c04-lion-and-the-mouse
+  title: The Lion and the Mouse
+  moral: "Even a small friend can be a big help."
+  text: |
+    One sunny morning, a tiny mouse ran across the paw of a sleeping lion. The lion woke up with a
+    roar and held the mouse gently under his paw. "Please let me go," squeaked the mouse. "Someday I
+    will help you." The lion chuckled at the idea, but he lifted his paw and let her scamper away.
+
+    A few weeks later, the lion was exploring near the river. He stepped into a fisherman's rope net, and
+    the ropes wrapped around him. The more he pulled, the tighter they became.
+
+    The mouse heard his loud roars and hurried over. She began chewing the thick ropes with her sharp
+    little teeth. Soon one rope snapped, then another. At last the lion stepped free.
+
+    "Thank you, little friend," said the lion. "You were right after all."
+  pages:
+    - focus: recount
+      questions:
+        - ask: What happened at the start of the fable?
+          choices: [A mouse ran across a sleeping lion., A lion chased a mouse home., A mouse fell into a river.]
+          evidence: a tiny mouse ran across the paw of a sleeping lion
+        - ask: What problem did the lion have later?
+          choices: [He was caught in a rope net., He lost his way home., He could not find food.]
+          evidence: He stepped into a fisherman's rope net
+        - ask: How did the mouse help the lion?
+          sample: The mouse chewed the ropes with her teeth until the lion was free.
+          evidence: She began chewing the thick ropes with her sharp little teeth.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [A small friend can be a big help., Lions should never sleep outside., Mice are faster than lions.]
+          evidence: "Thank you, little friend,"
+        - ask: Why did the lion chuckle at the mouse?
+          choices: [He did not think she could help him., He liked her funny squeak., She told him a joke.]
+          evidence: The lion chuckled at the idea
+        - ask: How does the lion learn the lesson?
+          sample: The lion learns the lesson when the tiny mouse frees him from the net.
+          evidence: At last the lion stepped free.
+
+- id: c05-squirrel-keeps-her-promise
+  title: The Squirrel's Promise
+  moral: "A promise is something you should always keep."
+  text: |
+    Squirrel and Chipmunk were best friends. One Monday, Chipmunk said, "Will you help me fix my roof
+    on Saturday? The rain gets inside my home." Squirrel nodded. "I promise I will come," she said.
+
+    On Saturday morning, Squirrel's cousins arrived. "Come with us to the acorn festival!" they
+    shouted. "There will be games and a parade." Squirrel really wanted to go.
+
+    Then she remembered Chipmunk's leaky roof. "I made a promise," she told her cousins. "I will
+    visit the festival another day."
+
+    Squirrel hurried to Chipmunk's home. Together they carried twigs and leaves and patched every hole.
+    That night it rained hard, but Chipmunk stayed warm and dry. The next week, Chipmunk took Squirrel
+    to the festival, and they had a wonderful time together.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Chipmunk ask Squirrel to do?
+          choices: [help him fix his roof, take him to a parade, find him some acorns]
+          evidence: Will you help me fix my roof on Saturday?
+        - ask: What happened on Saturday morning?
+          choices: [Squirrel's cousins invited her out., Chipmunk's roof fell down., It started to snow.]
+          evidence: On Saturday morning, Squirrel's cousins arrived.
+        - ask: What happened at the end of the fable?
+          sample: Chipmunk took Squirrel to the festival, and they had a wonderful time.
+          evidence: Chipmunk took Squirrel to the festival
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Always keep your promises., Festivals are more fun than work., Never fix a roof in the rain.]
+          evidence: I made a promise
+        - ask: Which detail shows Squirrel kept her word?
+          choices: [She hurried to Chipmunk's home., She played games with her cousins., She watched the parade.]
+          evidence: Squirrel hurried to Chipmunk's home.
+        - ask: Why was keeping the promise a good choice?
+          sample: It was a good choice because Chipmunk stayed warm and dry in the rain.
+          evidence: Chipmunk stayed warm and dry
+
+- id: c06-wind-and-the-sun
+  title: The Wind and the Sun
+  moral: "Being gentle can work better than being rough."
+  text: |
+    One day the North Wind and the Sun had an argument. "I am the strongest," said the Wind. "No, I
+    am," said the Sun. Just then they noticed a traveler walking down the road in a warm wool coat.
+
+    "Let's have a contest," said the Sun. "Whoever can get that coat off is the strongest."
+
+    The Wind went first. He blew a cold, wild gust. The traveler shivered and pulled his coat tighter.
+    The Wind blew harder and harder, but the traveler only buttoned every button.
+
+    Then it was the Sun's turn. The Sun shone softly and warmly over the road. Soon the traveler
+    wiped his forehead and smiled. He took off his heavy coat and rested under a tree. The Wind
+    quietly drifted away.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What were the Wind and the Sun arguing about?
+          choices: [who was the strongest, who was the brightest, who had the best coat]
+          evidence: I am the strongest
+        - ask: What happened when the Wind blew?
+          choices: [The traveler pulled his coat tighter., The traveler took off his coat., The traveler went to sleep.]
+          evidence: The traveler shivered and pulled his coat tighter.
+        - ask: How did the Sun win the contest?
+          sample: The Sun shone warmly until the traveler took off his coat.
+          evidence: He took off his heavy coat
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Gentle can work better than rough., The wind is always cold., Never wear a coat outside.]
+          evidence: The Sun shone softly and warmly over the road.
+        - ask: Which detail shows the rough way did not work?
+          choices: [The traveler buttoned every button., The Sun shone softly., The traveler rested under a tree.]
+          evidence: the traveler only buttoned every button
+        - ask: What should the Wind do next time?
+          sample: Next time the Wind should try being gentle instead of rough.
+          evidence: The Wind blew harder and harder
+
+- id: c07-beavers-build-together
+  title: "The Beavers' Dam"
+  moral: "Many helpers working together can do more than one alone."
+  text: |
+    Young Beaver wanted to build a dam across the creek. "I can do it all by myself," he told his
+    sisters. "I don't need any help."
+
+    All morning he dragged branches to the water. But each time he set one down, the rushing creek
+    carried it away. By lunchtime, Young Beaver was tired and muddy, and the creek was still flowing
+    as fast as ever.
+
+    His sisters watched from the bank. "May we help?" asked the oldest. Young Beaver sighed and
+    nodded. One sister held the branches steady. Another packed mud between them. Young Beaver
+    stacked the logs on top.
+
+    Before sunset, a strong dam stretched across the creek, and a calm pond began to fill behind it.
+    "Building together was faster," Young Beaver said, "and it was more fun, too."
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Young Beaver want to build?
+          choices: [a dam across the creek, a house in a tree, a boat for the pond]
+          evidence: Young Beaver wanted to build a dam across the creek.
+        - ask: What went wrong in the morning?
+          choices: [The creek carried his branches away., His sisters took his branches., It started to snow.]
+          evidence: the rushing creek carried it away
+        - ask: What happened before sunset?
+          sample: The beavers finished a strong dam, and a calm pond began to fill.
+          evidence: Before sunset, a strong dam stretched across the creek
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Working together can do more., Creeks are too fast for beavers., It is best to work alone.]
+          evidence: Building together was faster
+        - ask: Which detail shows the sisters' help mattered?
+          choices: [One sister held the branches steady., Young Beaver was tired and muddy., The creek was flowing fast.]
+          evidence: One sister held the branches steady.
+        - ask: How does Young Beaver learn the lesson?
+          sample: He learns the lesson when his sisters help and the dam gets built fast.
+          evidence: Building together was faster
+
+
+- id: c08-peacock-who-showed-off
+  title: The Proud Peacock
+  moral: "Showing off can get in the way of being a good friend."
+  text: |
+    Peacock had the most beautiful feathers in the garden. Every day he spread his tail and strutted
+    past the other birds. "Look at me!" he called. "Nobody else is as splendid as I am."
+
+    One afternoon, the birds were planning a picnic. Sparrow asked Peacock to help carry the berries.
+    "I can't," said Peacock. "I might bend my lovely feathers." So the others did all the work.
+
+    Later, Peacock pushed through a thick hedge to show off for the picnic. His long tail tangled in
+    the branches, and he could not move.
+
+    Little Sparrow saw him and flew over at once. Carefully, she pulled each feather loose. Peacock
+    felt embarrassed. "Thank you," he said softly. "You helped me even though I did not help you."
+    The next day, Peacock carried the berries himself.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Peacock do every day?
+          choices: [He spread his tail and strutted., He carried berries for friends., He built nests for birds.]
+          evidence: Every day he spread his tail and strutted
+        - ask: What happened when Peacock pushed through the hedge?
+          choices: [His tail got tangled in branches., He found a picnic basket., He lost his way home.]
+          evidence: His long tail tangled in the branches
+        - ask: What did Sparrow do to help Peacock?
+          sample: Sparrow carefully pulled each of his feathers loose.
+          evidence: Carefully, she pulled each feather loose.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Showing off gets in the way of friends., Long tails are always the best., Picnics need lots of berries.]
+          evidence: Nobody else is as splendid as I am.
+        - ask: Why did Peacock refuse to carry the berries?
+          choices: [He was afraid to bend his feathers., He did not like berries., He was too busy eating.]
+          evidence: I might bend my lovely feathers.
+        - ask: How does Peacock change at the end?
+          sample: Peacock changes because he carries the berries himself the next day.
+          evidence: The next day, Peacock carried the berries himself.
+
+
+- id: c09-honest-raccoon
+  title: The Honest Raccoon
+  moral: "Being honest is the right thing, even when nobody is watching."
+  text: |
+    Raccoon was walking through the woods one evening when he found a basket by the path. It was full
+    of plump, juicy blackberries. A ribbon on the handle had a picture of a badger on it.
+
+    Raccoon's tummy rumbled. "Nobody would know if I ate them," he thought. He picked up one berry and
+    looked at it for a long time.
+
+    Then he put the berry back. "These belong to Badger," he said. "She must be looking for them."
+    Raccoon carried the heavy basket all the way to Badger's burrow and knocked on the door.
+
+    Badger opened it and gasped with joy. "My berries! I picked them all day and dropped them on the
+    way home." She thanked Raccoon and invited him inside. Together they baked a warm blackberry pie
+    and shared every slice.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Raccoon find by the path?
+          choices: [a basket of blackberries, a lost baby badger, a ribbon in a tree]
+          evidence: It was full of plump, juicy blackberries.
+        - ask: How did Raccoon know whose basket it was?
+          choices: [The ribbon had a badger picture., Badger told him that morning., He saw Badger drop it.]
+          evidence: A ribbon on the handle had a picture of a badger on it.
+        - ask: What did Raccoon and Badger do at the end?
+          sample: Raccoon and Badger baked a blackberry pie and shared it.
+          evidence: Together they baked a warm blackberry pie
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Be honest even when no one watches., Always eat berries you find., Never walk in the woods at night.]
+          evidence: Nobody would know if I ate them
+        - ask: Which detail shows Raccoon chose to be honest?
+          choices: [He put the berry back., His tummy rumbled., He walked through the woods.]
+          evidence: Then he put the berry back.
+        - ask: Why was Raccoon's choice a good one?
+          sample: It was a good choice because Badger got her berries back and shared a pie with him.
+          evidence: She thanked Raccoon and invited him inside.
+
+
+- id: c10-spider-tries-again
+  title: The Spider Tries Again
+  moral: "If something goes wrong, keep trying until you get it right."
+  text: |
+    Little Spider spun her very first web between two branches of a rosebush. She worked all morning,
+    weaving each silky thread in a careful circle. When she finished, the web sparkled in the sunshine.
+
+    That afternoon, a gusty breeze swept through the garden. Snap! The threads broke, and the web
+    flapped away like a flag. Little Spider felt like giving up. "I will never make a good web," she
+    sighed.
+
+    A wise old snail was resting on a leaf nearby. "The first time I climbed this rosebush, I slid down twice," he said kindly.
+    "But I kept practicing."
+
+    So Little Spider began again. This time she tied the threads more tightly and added extra lines
+    to the branches. When the wind blew that evening, her new web swayed but did not break. Little
+    Spider smiled proudly.
+  pages:
+    - focus: recount
+      questions:
+        - ask: Where did Little Spider spin her first web?
+          choices: [between branches of a rosebush, on a garden gate, under a big leaf]
+          evidence: between two branches of a rosebush
+        - ask: What happened to the first web?
+          choices: [A breeze broke the threads., A bird ate the threads., The rain washed it away.]
+          evidence: The threads broke
+        - ask: What did Little Spider do differently the second time?
+          sample: She tied the threads more tightly and added extra lines.
+          evidence: she tied the threads more tightly and added extra lines
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Keep trying until you get it right., Never build a web in a garden., Snails are slower than spiders.]
+          evidence: So Little Spider began again.
+        - ask: Which detail shows Little Spider did not give up?
+          choices: [So Little Spider began again., The web sparkled in the sunshine., A snail rested on a leaf.]
+          evidence: So Little Spider began again.
+        - ask: How did the snail help Little Spider?
+          sample: The snail told her that he kept practicing, so she tried again.
+          evidence: But I kept practicing.
+
+- id: c11-goat-who-did-not-listen
+  title: The Little Goat
+  moral: "Listen to good advice before you rush ahead."
+  text: |
+    Little Goat lived on a hillside with her grandmother. One morning, they set off to visit the
+    farm on the other side of the stream. "The stepping stones are slippery," Grandmother warned.
+    "Cross slowly, one stone at a time."
+
+    But Little Goat was too excited to listen. She galloped ahead and leaped onto the first mossy
+    stone. Her hooves slid in every direction. Splash! She landed in the shallow water, wet from her
+    horns to her tail.
+
+    Grandmother helped her climb out and dried her with a soft blanket from her basket. Then
+    Grandmother showed her how to step carefully and keep her balance.
+
+    On the way home, Little Goat crossed the stones slowly. She reached the other side without a
+    single splash, and Grandmother clapped for her.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Grandmother tell Little Goat to do?
+          choices: [cross the stones slowly, run across the stream, jump on the biggest rock]
+          evidence: Cross slowly, one stone at a time.
+        - ask: What happened when Little Goat galloped ahead?
+          choices: [She slipped into the water., She got to the farm first., She lost her blanket.]
+          evidence: She landed in the shallow water
+        - ask: What happened on the way home?
+          sample: Little Goat crossed the stones slowly and did not fall in.
+          evidence: On the way home, Little Goat crossed the stones slowly.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Listen to good advice first., Streams are fun to swim in., Goats should stay on hills.]
+          evidence: But Little Goat was too excited to listen.
+        - ask: Why did Little Goat fall in the stream?
+          choices: [She did not listen to Grandmother., Grandmother pushed her in., A stone was missing.]
+          evidence: But Little Goat was too excited to listen.
+        - ask: How does Little Goat learn the lesson?
+          sample: She learns the lesson when she slips after rushing, and then crosses safely by going slowly.
+          evidence: She reached the other side without a single splash
+
+
+- id: c12-bear-asks-for-help
+  title: The Bear Asks for Help
+  moral: "It is smart to ask for help when you need it."
+  text: |
+    Bear loved the shiny red apples at the top of the old apple tree. Every fall he stretched his
+    paws as high as he could, but the best apples were always out of reach.
+
+    "I am big and strong," Bear grumbled. "I should be able to do this myself." He jumped and
+    jumped until he was out of breath, but not one apple fell.
+
+    A small bluebird was watching from a branch. "I could help you," she chirped. Bear felt a little
+    silly, but he nodded. "Yes, please," he said.
+
+    The bluebird hopped along the high branches. She pecked at the stems, and one apple after another
+    dropped into Bear's paws. Soon Bear had a whole pile. He gave the bluebird the sweetest apple of
+    all, and they ate their snack together in the shade.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What problem did Bear have?
+          choices: [He could not reach the top apples., He could not find the apple tree., He did not like apples.]
+          evidence: the best apples were always out of reach
+        - ask: What did Bear do before he asked for help?
+          choices: [He jumped until he was out of breath., He climbed to the top branch., He went home to sleep.]
+          evidence: He jumped and jumped until he was out of breath
+        - ask: How did the bluebird help Bear?
+          sample: The bluebird pecked the stems so the apples dropped into Bear's paws.
+          evidence: She pecked at the stems
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [It is smart to ask for help., Big animals never need help., Apples taste best in summer.]
+          evidence: Yes, please
+        - ask: Why didn't Bear want help at first?
+          choices: [He thought he should do it himself., He did not like the bluebird., He was not hungry yet.]
+          evidence: I should be able to do this myself.
+        - ask: What did Bear do to thank the bluebird?
+          sample: Bear gave the bluebird the sweetest apple, and they ate together.
+          evidence: He gave the bluebird the sweetest apple of all
+
+
+- id: c13-thankful-hedgehog
+  title: The Thankful Hedgehog
+  moral: "Saying thank you makes friends glad to help again."
+  text: |
+    Two hedgehogs lived at the edge of the meadow. When the first frost came, Rabbit noticed that
+    their homes needed more leaves to keep them warm. So she gathered two big bundles of dry leaves.
+
+    Rabbit carried the first bundle to Prickles. He took the leaves without looking up. "Next time,
+    bring more," he said, and he closed his door.
+
+    Then Rabbit carried the second bundle to Bramble. Bramble's eyes lit up. "Thank you, Rabbit!" she
+    said. "You walked all this way for me. Please come in for some warm tea."
+
+    All winter, Rabbit visited Bramble often. They told stories and shared acorn muffins. When Bramble
+    needed more leaves, Rabbit was happy to bring them. Prickles sat alone in his house and wondered
+    why nobody came to visit.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Rabbit gather for the hedgehogs?
+          choices: [bundles of dry leaves, baskets of acorns, cups of warm tea]
+          evidence: she gathered two big bundles of dry leaves
+        - ask: What did Prickles do when Rabbit came?
+          choices: [He took the leaves and closed his door., He invited Rabbit in for tea., He gave Rabbit a muffin.]
+          evidence: he closed his door
+        - ask: What did Bramble and Rabbit do all winter?
+          sample: They told stories and shared acorn muffins all winter.
+          evidence: They told stories and shared acorn muffins.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Saying thank you makes friends glad., Leaves are the best gift of all., Winter is a time to stay alone.]
+          evidence: Thank you, Rabbit!
+        - ask: Which detail shows Bramble was thankful?
+          choices: [She invited Rabbit in for tea., She asked for more leaves., She closed her door.]
+          evidence: Please come in for some warm tea.
+        - ask: What should Prickles do next time?
+          sample: Next time Prickles should say thank you to Rabbit.
+          evidence: Next time, bring more
+
+
+- id: c14-mole-says-sorry
+  title: The Mole Says Sorry
+  moral: "When you make a mistake, admit it and help fix it."
+  text: |
+    Rabbit spent a whole morning building a tall tower of carrots for the fall party. She stacked
+    them carefully, one on top of another, until the tower was taller than she was.
+
+    Mole was digging a new tunnel nearby. He was not watching where he went, and he popped up right
+    under the tower. The carrots tumbled everywhere and rolled across the grass.
+
+    Mole looked around. Nobody had seen him. He thought about slipping back into his tunnel. Then he
+    saw Rabbit coming down the path with a basket.
+
+    Mole took a deep breath. "Rabbit, I knocked over your tower," he said. "I'm very sorry. I'll help
+    you build it again." Rabbit was sad, but she smiled. Together they gathered the carrots
+    and built an even taller tower before the party began.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Rabbit build in the morning?
+          choices: [a tall tower of carrots, a tunnel under the grass, a basket for the party]
+          evidence: building a tall tower of carrots
+        - ask: How did the tower fall down?
+          choices: [Mole popped up right under it., The wind blew it over., Rabbit bumped into it.]
+          evidence: he popped up right under the tower
+        - ask: What happened at the end of the fable?
+          sample: Mole and Rabbit built an even taller tower before the party.
+          evidence: built an even taller tower before the party began
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Admit your mistakes and help fix them., Never dig tunnels in a garden., Carrot towers always fall.]
+          evidence: I'm very sorry. I'll help you build it again.
+        - ask: What did Mole think about doing at first?
+          choices: [slipping back into his tunnel, eating all of the carrots, hiding Rabbit's basket]
+          evidence: He thought about slipping back into his tunnel.
+        - ask: Why was telling the truth a good choice?
+          sample: It was a good choice because Rabbit smiled and they built a better tower together.
+          evidence: Rabbit was sad, but she smiled.
+
+
+- id: c15-two-goats-on-the-bridge
+  title: Two Goats, One Bridge
+  moral: "Taking turns works better than being stubborn."
+  text: |
+    A narrow wooden bridge crossed a deep, rushing stream. It was only wide enough for one animal at
+    a time. One morning, a white goat stepped onto one end, and a brown goat stepped onto the other.
+
+    They met in the middle. "Move back," said the white goat. "I was here first." "No, you move
+    back," said the brown goat. Neither goat would budge. They stood nose to nose while the bridge
+    creaked and wobbled dangerously.
+
+    A wise old turtle called up from the riverbank. "If you both stay stubborn, you will both end up
+    in the water!"
+
+    The brown goat considered the problem carefully. Then she knelt down flat on the boards. The white goat
+    stepped carefully over her back. Both goats crossed safely, and they waved to each other from
+    opposite sides of the stream.
+  pages:
+    - focus: recount
+      questions:
+        - ask: Where did the two goats meet?
+          choices: [in the middle of the bridge, at the edge of the stream, on top of a hill]
+          evidence: They met in the middle.
+        - ask: What did each goat want?
+          choices: [for the other goat to move back, to swim across the stream, to talk to the turtle]
+          evidence: Move back
+        - ask: How did the goats solve their problem?
+          sample: The brown goat knelt down, and the white goat stepped over her back.
+          evidence: The white goat stepped carefully over her back.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Taking turns beats being stubborn., The first one there always wins., Bridges are too dangerous.]
+          evidence: If you both stay stubborn, you will both end up in the water!
+        - ask: Which detail shows the goats were stubborn?
+          choices: [Neither goat would budge., The bridge was narrow., The turtle was on the riverbank.]
+          evidence: Neither goat would budge.
+        - ask: How did the brown goat help both goats?
+          sample: She knelt down so the white goat could step over, and then both crossed safely.
+          evidence: Both goats crossed safely
+
+- id: c16-duck-shares-her-oats
+  title: The Duck Who Shared
+  moral: "When you share what you have, everyone can enjoy it."
+  text: |
+    A kind girl walked by the pond and poured a whole bag of duck oats on the bank. Duck paddled
+    over quickly and got there first. "This is all mine," she quacked, and she swam to a quiet
+    corner by herself.
+
+    The pile was much too big for one duck. Duck nibbled and nibbled until her tummy was full, but
+    most of the oats were still left. Soon the rain made them soggy, and they washed away.
+
+    Across the pond, the geese and the young ducklings watched hungrily. Duck looked at the soggy
+    oats, and then she looked at her hungry neighbors.
+
+    The next day, the girl brought another bag. This time Duck pushed the oats into many small piles and
+    called everyone over. The whole pond splashed and quacked happily, and nothing was wasted at all.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Duck do with the first bag of oats?
+          choices: [She kept it all for herself., She shared it with the geese., She gave it back to the girl.]
+          evidence: This is all mine
+        - ask: What happened to the oats Duck could not eat?
+          choices: [They got soggy and washed away., The geese stole them from her., The girl took them home.]
+          evidence: Soon the rain made them soggy, and they washed away.
+        - ask: What did Duck do with the second bag?
+          sample: Duck pushed the oats into small piles and shared them with everyone.
+          evidence: Duck pushed the oats into many small piles and
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Sharing lets everyone enjoy it., Oats are better when they are soggy., Ducks should swim alone.]
+          evidence: The whole pond splashed and quacked happily
+        - ask: Which detail shows keeping it all was a problem?
+          choices: [Most of the oats were still left., The girl walked by the pond., Duck paddled over quickly.]
+          evidence: most of the oats were still left
+        - ask: How does Duck learn the lesson?
+          sample: Duck learns the lesson when her extra oats wash away and her neighbors stay hungry.
+          evidence: then she looked at her hungry neighbors
+
+
+- id: c17-turtle-and-the-pumpkin
+  title: "The Turtle's Pumpkin"
+  moral: "Good things take time, so be patient."
+  text: |
+    In the spring, Turtle planted a pumpkin seed in her garden. The very next morning, she hurried
+    outside. "Where is my pumpkin?" she asked. There was only brown dirt.
+
+    Her neighbor, Frog, laughed gently. "Seeds need time," he said. "Give it water and sunshine, and
+    wait."
+
+    Turtle wanted to dig up the seed to see what was happening. Instead, she watered it every day.
+    Soon a tiny green sprout poked up. Then came wide leaves and a long, curling vine. In summer, a
+    yellow flower bloomed, and a small green pumpkin appeared.
+
+    Turtle waited all summer long. Day by day, the pumpkin grew rounder and turned bright orange. By
+    fall, it was the biggest pumpkin in the whole valley. Turtle invited Frog over, and they shared
+    a delicious pumpkin pie.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Turtle plant in the spring?
+          choices: [a pumpkin seed, an apple tree, a row of flowers]
+          evidence: Turtle planted a pumpkin seed in her garden
+        - ask: What did Turtle see the very next morning?
+          choices: [only brown dirt, a big orange pumpkin, a yellow flower]
+          evidence: There was only brown dirt.
+        - ask: What happened by fall?
+          sample: By fall the pumpkin was the biggest one in the whole valley.
+          evidence: it was the biggest pumpkin in the whole valley
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Good things take time., Pumpkins grow in one night., Never listen to a frog.]
+          evidence: Seeds need time
+        - ask: Which detail shows Turtle was patient?
+          choices: [She watered it every day., She hurried outside., She dug up the seed.]
+          evidence: she watered it every day
+        - ask: What did Turtle want to do instead of waiting?
+          sample: Turtle wanted to dig up the seed to see what was happening.
+          evidence: Turtle wanted to dig up the seed to see what was happening.
+
+
+- id: c18-deer-and-the-duckling
+  title: The Gentle Deer
+  moral: "Be kind to those who are smaller than you."
+  text: |
+    One foggy morning, a tiny duckling wandered away from her family. She waddled through the tall
+    reeds, peeping and peeping, but she could not find the pond.
+
+    A rabbit hopped past without stopping. "I'm too busy," he said. A proud elk walked by and did not
+    even look down. The little duckling sat on a log and shivered.
+
+    Then a gentle deer noticed her. The deer lowered her long neck and spoke softly. "Are you lost,
+    little one? Climb onto my back, and we will look together."
+
+    The deer walked carefully through the meadow while the duckling held on. At last they heard loud
+    quacking. The mother duck was calling for her baby. The duckling slid down and ran to her family.
+    Mother Duck thanked the deer again and again, and the deer smiled all the way home.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What problem did the duckling have?
+          choices: [She could not find her family., She could not swim yet., She was too hungry to walk.]
+          evidence: a tiny duckling wandered away from her family
+        - ask: What did the rabbit do?
+          choices: [He hopped past without stopping., He carried the duckling home., He called the mother duck.]
+          evidence: A rabbit hopped past without stopping.
+        - ask: How did the deer help the duckling?
+          sample: The deer carried the duckling on her back until they found her family.
+          evidence: Climb onto my back, and we will look together.
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Be kind to those smaller than you., Ducklings must stay home., Big animals are always busy.]
+          evidence: The deer lowered her long neck and spoke softly.
+        - ask: Which detail shows the deer was gentle?
+          choices: [She spoke softly., She walked by without looking., She hopped through the reeds.]
+          evidence: The deer lowered her long neck and spoke softly.
+        - ask: How did the deer feel at the end? Why?
+          sample: The deer felt happy because she helped the duckling find her family.
+          evidence: the deer smiled all the way home
+
+
+- id: c19-crow-with-too-many-seeds
+  title: Too Many Seeds
+  moral: "Take only what you need."
+  text: |
+    A farmer spilled a sack of sunflower seeds at the edge of his field. Crow spotted them from the
+    sky and swooped down. "I will carry every single seed home," he cawed.
+
+    He filled his beak, his feet, and a little basket he found nearby. The basket was so full that
+    seeds spilled over the top. Crow flapped his wings as hard as he could, but he could barely lift
+    off the ground.
+
+    Halfway home, the heavy basket tipped. Seeds scattered all over the meadow below. Crow landed
+    with an empty basket and a very tired pair of wings.
+
+    His friend Robin had taken only what she could carry. She flew home easily and had plenty of seeds
+    for supper. The next day, Crow went back to the field. This time he took one small bundle, and he
+    flew home with every seed.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did Crow find at the edge of the field?
+          choices: [spilled sunflower seeds, a nest full of eggs, a basket of apples]
+          evidence: A farmer spilled a sack of sunflower seeds
+        - ask: What happened halfway home?
+          choices: [The heavy basket tipped over., Robin took his seeds., It began to rain.]
+          evidence: Halfway home, the heavy basket tipped.
+        - ask: What did Crow do the next day?
+          sample: The next day Crow took one small bundle and got every seed home.
+          evidence: This time he took one small bundle
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Take only what you need., Crows are the strongest birds., Always use a basket.]
+          evidence: His friend Robin had taken only what she could carry.
+        - ask: Which detail shows taking too much was a mistake?
+          choices: [Seeds scattered all over the meadow., Robin flew home easily., The farmer had a field.]
+          evidence: Seeds scattered all over the meadow below.
+        - ask: How was Robin different from Crow?
+          sample: Robin took only what she could carry, so she flew home easily.
+          evidence: She flew home easily and had plenty of seeds for supper.
+
+
+- id: c20-otter-and-the-new-friend
+  title: "The Otters' New Friend"
+  moral: "Include others, and everyone has more fun."
+  text: |
+    The young otters loved to slide down the muddy riverbank into the water. Every afternoon they
+    raced up and slid down, laughing and splashing.
+
+    One day a shy beaver paddled close and watched. "Can I play, too?" she asked quietly. The
+    otters looked at her flat tail. "You are not an otter," said Oscar. "This game is only for
+    otters." The beaver swam away slowly.
+
+    The next morning, the riverbank was dry and hard, and nobody could slide. The otters sat on the
+    rocks feeling bored. Then they saw the beaver building something amazing: a smooth ramp of logs
+    and mud that led into a deep pool.
+
+    Oscar swam over. "I'm sorry I left you out," he said. The beaver smiled. "Everyone can slide on
+    my ramp," she said. Soon all of the animals were laughing and splashing together.
+  pages:
+    - focus: recount
+      questions:
+        - ask: What did the otters do every afternoon?
+          choices: [slid down the muddy riverbank, built ramps from logs, hunted for shells]
+          evidence: Every afternoon they raced up and slid down
+        - ask: What did Oscar tell the beaver?
+          choices: [The game was only for otters., She could go first., Her tail was very pretty.]
+          evidence: This game is only for otters.
+        - ask: What did the beaver build?
+          sample: The beaver built a smooth ramp of logs and mud into a deep pool.
+          evidence: a smooth ramp of logs and mud that led into a deep pool
+    - focus: lesson
+      questions:
+        - ask: What is the lesson of this fable?
+          choices: [Include others so all have fun., Only otters can slide well., Muddy banks are always best.]
+          evidence: Everyone can slide on my ramp
+        - ask: Which detail shows the beaver was kind?
+          choices: [She let everyone slide on her ramp., She swam away slowly., She watched from far away.]
+          evidence: Everyone can slide on my ramp
+        - ask: What should Oscar do next time?
+          sample: Next time Oscar should let a new friend join the game right away.
+          evidence: I'm sorry I left you out

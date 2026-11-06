@@ -1,0 +1,420 @@
+# Word problems with exact fraction, decimal and money answers (Pandas math: 6.NS.1, 6.RP.2–3,
+# 6.EE.7). Our own sentences; American spelling.
+# Each frame:
+#   id:      stable name (stored on the sheet)
+#   tag:     the kind of problem; a part's `tags` rule picks one frame of each listed tag a page
+#   text:    the problem, with {names} filled in from `vars` and `let`
+#   vars:    the numbers the generator picks: [lo, hi] (whole numbers) or {choices: [...]} (numbers as
+#            text: "3/4", "1 1/2", "2.25")
+#   let:     numbers worked out from the vars (c = a * b), so answers come out exact
+#   answer:  the expression verify recomputes exactly (+ - * / and numbers, on the names above)
+#   checks:  conditions that keep the story true to life
+#   whole:   names that must come out whole (a count printed in the text)
+#   style:   how the answer is written: whole (must be a whole number), fraction (simplest form,
+#            mixed numbers above 1), decimal, money (dollars and cents)
+#   show:    how a number is printed in the text: money ($2.50), decimal (2.5); fractions otherwise
+#   unit:    the word printed after the answer box ("$" frames put the dollar sign before it)
+#   equation: true: the child writes an equation before solving (one-step equations, 6.EE.7)
+# Every number in the text and the answer is above 0.
+
+# --- dividing fractions (6.NS.1) ------------------------------------------------------------
+- id: ribbon_pieces
+  tag: fraction_divide
+  text: "Zoe has {a} yards of ribbon. She cuts it into pieces that are each {b} yard long. How many pieces does she get?"
+  vars: { a: [2, 6], b: { choices: ["1/2", "1/3", "1/4", "2/3", "3/4"] } }
+  answer: "a / b"
+  style: whole
+  unit: pieces
+- id: rice_servings
+  tag: fraction_divide
+  text: "A bag holds {a} cups of rice. One serving is {b} cup. How many servings are in the bag?"
+  vars: { a: { choices: ["3", "4", "1 1/2", "2 1/4", "4 1/2"] }, b: { choices: ["1/4", "3/4", "1/2", "3/8"] } }
+  answer: "a / b"
+  style: whole
+  unit: servings
+- id: pizza_friends
+  tag: fraction_divide
+  text: "There is {a} of a pizza left. Each friend gets {b} of a pizza. How many friends get a piece?"
+  vars: { a: { choices: ["3/4", "2/3", "5/6", "1/2"] }, b: { choices: ["1/8", "1/6", "1/12"] } }
+  answer: "a / b"
+  checks: ["a / b >= 2"]
+  style: whole
+  unit: friends
+- id: jug_bottles
+  tag: fraction_divide
+  text: "A jug holds {a} gallon of juice. One bottle holds {b} gallon. How many bottles can the jug fill?"
+  vars: { a: { choices: ["3/4", "2/3", "5/6", "7/8"] }, b: { choices: ["1/3", "1/4", "1/2", "3/8"] } }
+  answer: "a / b"
+  checks: ["a > b"]
+  style: fraction
+  unit: bottles
+- id: walk_hour
+  tag: fraction_divide
+  text: "Sam walks {a} mile in {b} hour. At that speed, how many miles does he walk in one hour?"
+  vars: { a: { choices: ["1/2", "3/4", "2/3", "3/5"] }, b: { choices: ["1/4", "1/3", "1/2", "1/6"] } }
+  answer: "a / b"
+  checks: ["a > b"]
+  style: fraction
+  unit: miles
+- id: garden_bed
+  tag: fraction_divide
+  text: "A garden bed covers {a} square yard. It is {b} yard wide. How long is it?"
+  vars: { a: { choices: ["3/4", "2/3", "5/8", "1/2"] }, b: { choices: ["1/2", "1/3", "1/4", "2/3"] } }
+  answer: "a / b"
+  checks: ["a > b"]
+  style: fraction
+  unit: yards
+- id: shelf_boards
+  tag: fraction_divide
+  text: "A board is {a} feet long. Each shelf needs {b} feet. How many shelves can be cut from the board?"
+  vars: { a: { choices: ["6", "7 1/2", "9", "4 1/2"] }, b: { choices: ["1 1/2", "3/4", "2 1/4"] } }
+  answer: "a / b"
+  style: whole
+  unit: shelves
+
+# --- unit rates (6.RP.2, 6.RP.3b) -------------------------------------------------------------
+- id: pages_day
+  tag: unit_rate
+  text: "Mia reads {c} pages in {a} days. She reads the same number of pages each day. How many pages does she read in one day?"
+  vars: { a: [3, 9], b: [8, 25] }
+  let: { c: "a * b" }
+  answer: "b"
+  style: whole
+  unit: pages
+- id: bottles_minute
+  tag: unit_rate
+  text: "A machine fills {c} bottles in {a} minutes. How many bottles does it fill in one minute?"
+  vars: { a: [4, 12], b: [12, 40] }
+  let: { c: "a * b" }
+  answer: "b"
+  style: whole
+  unit: bottles
+- id: muffins_flour
+  tag: unit_rate
+  text: "A recipe uses {f} cups of flour for {m} muffins. How many cups of flour are needed for {k} muffins?"
+  vars: { m: { choices: ["12", "24"] }, f: { choices: ["2", "3", "4"] }, k: { choices: ["6", "18", "36", "48", "30"] } }
+  answer: "f / m * k"
+  checks: ["k != m"]
+  style: fraction
+  unit: cups
+- id: buses_students
+  tag: unit_rate
+  text: "{c} students ride on {a} buses. Each bus has the same number of students. How many students ride on {k} buses?"
+  vars: { a: [3, 6], b: [20, 40], k: [2, 9] }
+  let: { c: "a * b" }
+  answer: "b * k"
+  checks: ["k != a"]
+  style: whole
+  unit: students
+- id: plants_rows
+  tag: unit_rate
+  text: "Leo plants {c} seeds in {a} rows, with the same number in each row. How many seeds are in one row?"
+  vars: { a: [4, 9], b: [6, 15] }
+  let: { c: "a * b" }
+  answer: "b"
+  style: whole
+  unit: seeds
+- id: water_hours
+  tag: unit_rate
+  text: "A hose fills a {c}-gallon pool in {a} hours at a steady rate. How many gallons does it fill in one hour?"
+  vars: { a: [2, 8], b: [15, 60] }
+  let: { c: "a * b" }
+  answer: "b"
+  style: whole
+  unit: gallons
+
+# --- constant speed (6.RP.3b) -----------------------------------------------------------------
+- id: train_speed
+  tag: speed
+  text: "A train travels {c} miles in {a} hours at a steady speed. How many miles does it travel in one hour?"
+  vars: { a: [2, 6], b: [40, 80] }
+  let: { c: "a * b" }
+  answer: "b"
+  style: whole
+  unit: miles
+- id: runner_meters
+  tag: speed
+  text: "A runner goes {c} meters in {a} minutes. At that rate, how far does she go in {k} minutes?"
+  vars: { a: [2, 5], b: [150, 250], k: [2, 9] }
+  let: { c: "a * b" }
+  answer: "b * k"
+  checks: ["k != a", "b * k <= 2000"]
+  style: whole
+  unit: meters
+- id: snail_inches
+  tag: speed
+  text: "A snail crawls {c} inches in {a} minutes. How many inches does it crawl in one minute?"
+  vars: { a: [2, 5], b: { choices: ["1/2", "1 1/2", "2 1/2", "3/4"] } }
+  let: { c: "a * b" }
+  answer: "b"
+  style: fraction
+  unit: inches
+- id: plane_hours
+  tag: speed
+  text: "A plane flies {c} miles in {a} hours. At the same speed, how many hours does it take to fly {d} miles?"
+  vars: { a: [2, 4], b: [300, 500], k: [5, 8] }
+  let: { c: "a * b", d: "k * b" }
+  answer: "d / b"
+  style: whole
+  unit: hours
+- id: bike_trip
+  tag: speed
+  text: "Ava rides her bike {b} miles each hour. How many miles does she ride in {a} hours?"
+  vars: { a: { choices: ["2", "3", "1 1/2", "2 1/2"] }, b: [8, 14] }
+  answer: "a * b"
+  style: fraction
+  unit: miles
+
+# --- unit prices (6.RP.3b) --------------------------------------------------------------------
+- id: notebook_price
+  tag: unit_price
+  text: "{a} notebooks cost ${c}. How much does one notebook cost?"
+  vars: { a: [3, 8], p: { choices: ["1.25", "0.75", "2.50", "1.50", "0.80"] } }
+  let: { c: "a * p" }
+  answer: "p"
+  show: { c: money }
+  style: money
+  unit: "$"
+- id: juice_pack
+  tag: unit_price
+  text: "A pack of {a} juice boxes costs ${c}. What is the price of one juice box?"
+  vars: { a: { choices: ["4", "6", "8", "10"] }, p: { choices: ["0.50", "0.45", "0.60", "0.75"] } }
+  let: { c: "a * p" }
+  answer: "p"
+  show: { c: money }
+  style: money
+  unit: "$"
+- id: apples_pound
+  tag: unit_price
+  text: "Apples cost ${p} a pound. How much do {a} pounds of apples cost?"
+  vars: { a: [2, 6], p: { choices: ["1.20", "1.50", "2.25", "0.90"] } }
+  answer: "a * p"
+  show: { p: money }
+  style: money
+  unit: "$"
+- id: tickets_more
+  tag: unit_price
+  text: "{a} tickets to the zoo cost ${c}. How much do {k} tickets cost?"
+  vars: { a: [2, 5], p: [6, 15], k: [3, 8] }
+  let: { c: "a * p" }
+  answer: "p * k"
+  checks: ["k != a"]
+  show: { c: money }
+  style: money
+  unit: "$"
+- id: better_rate
+  tag: unit_price
+  text: "A store sells {a} cans of beans for ${c}. At that price, how much do {k} cans cost?"
+  vars: { a: { choices: ["4", "5", "10"] }, p: { choices: ["0.80", "0.90", "1.20"] }, k: [2, 9] }
+  let: { c: "a * p" }
+  answer: "p * k"
+  checks: ["k != a"]
+  show: { c: money }
+  style: money
+  unit: "$"
+
+# --- converting units (6.RP.3d) ---------------------------------------------------------------
+- id: feet_inches
+  tag: convert
+  text: "There are 12 inches in 1 foot. A table is {a} feet long. How many inches long is it?"
+  vars: { a: { choices: ["3", "4", "5", "2 1/2", "3 1/2", "1 1/4"] } }
+  answer: "a * 12"
+  style: whole
+  unit: inches
+- id: yards_feet
+  tag: convert
+  text: "There are 3 feet in 1 yard. A rope is {c} feet long. How many yards long is it?"
+  vars: { a: [2, 12] }
+  let: { c: "a * 3" }
+  answer: "a"
+  style: whole
+  unit: yards
+- id: hours_minutes
+  tag: convert
+  text: "There are 60 minutes in 1 hour. A movie lasts {a} hours. How many minutes is that?"
+  vars: { a: { choices: ["2", "1 1/2", "2 1/2", "1 1/4", "1 3/4", "3"] } }
+  answer: "a * 60"
+  style: whole
+  unit: minutes
+- id: quarts_gallons
+  tag: convert
+  text: "There are 4 quarts in 1 gallon. A cooler holds {c} quarts of water. How many gallons is that?"
+  vars: { a: [2, 10] }
+  let: { c: "a * 4" }
+  answer: "a"
+  style: whole
+  unit: gallons
+- id: pounds_ounces
+  tag: convert
+  text: "There are 16 ounces in 1 pound. A bag of flour weighs {a} pounds. How many ounces is that?"
+  vars: { a: { choices: ["2", "5", "1 1/2", "2 1/4", "3 1/2"] } }
+  answer: "a * 16"
+  style: whole
+  unit: ounces
+- id: meters_cm
+  tag: convert
+  text: "There are 100 centimeters in 1 meter. A ribbon is {a} meters long. How many centimeters is that?"
+  vars: { a: { choices: ["2.5", "1.75", "3.2", "0.6", "4.05"] } }
+  show: { a: decimal }
+  answer: "a * 100"
+  style: whole
+  unit: centimeters
+- id: cups_pints
+  tag: convert
+  text: "There are 2 cups in 1 pint. A pot of soup holds {c} cups. How many pints is that?"
+  vars: { a: [3, 12] }
+  let: { c: "a * 2" }
+  answer: "a"
+  style: whole
+  unit: pints
+
+# --- percents (6.RP.3c) -----------------------------------------------------------------------
+- id: walk_school
+  tag: percent_of
+  text: "A school has {w} students. {p}% of them walk to school. How many students walk?"
+  vars: { w: { choices: ["200", "300", "400", "500", "600", "800"] }, p: { choices: ["10", "20", "25", "30", "40", "15"] } }
+  answer: "p / 100 * w"
+  style: whole
+  unit: students
+- id: jacket_sale
+  tag: percent_of
+  text: "A jacket costs ${w}. It is on sale for {p}% off. How many dollars do you save?"
+  vars: { w: { choices: ["40", "60", "80", "50", "120"] }, p: { choices: ["10", "20", "25", "30", "50"] } }
+  answer: "p / 100 * w"
+  show: { w: money }
+  style: money
+  unit: "$"
+- id: quiz_right
+  tag: percent_of
+  text: "There were {w} questions on a quiz. Ana got {p}% of them right. How many questions did she get right?"
+  vars: { w: { choices: ["20", "25", "40", "50"] }, p: { choices: ["80", "90", "60", "75", "70"] } }
+  answer: "p / 100 * w"
+  style: whole
+  unit: questions
+- id: tank_full
+  tag: percent_of
+  text: "A fish tank holds {w} gallons. It is {p}% full. How many gallons of water are in it?"
+  vars: { w: { choices: ["20", "40", "30", "60"] }, p: { choices: ["50", "75", "25", "90", "60"] } }
+  answer: "p / 100 * w"
+  style: fraction
+  unit: gallons
+- id: library_books
+  tag: percent_of
+  text: "A library has {w} books about animals. {p}% of them are about birds. How many books are about birds?"
+  vars: { w: { choices: ["120", "150", "240", "80", "160"] }, p: { choices: ["5", "10", "15", "20", "25"] } }
+  answer: "p / 100 * w"
+  style: whole
+  unit: books
+- id: class_size
+  tag: percent_whole
+  text: "{c} students in a class walk to school. That is {p}% of the class. How many students are in the class?"
+  vars: { w: { choices: ["20", "24", "25", "28", "30", "32"] }, p: { choices: ["25", "50", "75", "10", "20"] } }
+  let: { c: "p / 100 * w" }
+  whole: [c]
+  answer: "w"
+  style: whole
+  unit: students
+- id: bike_saved
+  tag: percent_whole
+  text: "Leo has saved ${c}. That is {p}% of the price of a new bike. How much does the bike cost?"
+  vars: { w: { choices: ["120", "150", "200", "240", "180"] }, p: { choices: ["25", "50", "20", "40", "30"] } }
+  let: { c: "p / 100 * w" }
+  show: { c: money }
+  answer: "w"
+  style: money
+  unit: "$"
+- id: team_games
+  tag: percent_whole
+  text: "A soccer team won {c} games. That was {p}% of the games it played. How many games did it play?"
+  vars: { w: { choices: ["20", "16", "24", "30", "40"] }, p: { choices: ["25", "50", "75", "60", "40"] } }
+  let: { c: "p / 100 * w" }
+  whole: [c]
+  answer: "w"
+  style: whole
+  unit: games
+- id: book_pages
+  tag: percent_whole
+  text: "Mia has read {c} pages. That is {p}% of her book. How many pages long is the book?"
+  vars: { w: { choices: ["120", "160", "200", "240", "300"] }, p: { choices: ["10", "20", "25", "40", "75"] } }
+  let: { c: "p / 100 * w" }
+  whole: [c]
+  answer: "w"
+  style: whole
+  unit: pages
+- id: jar_marbles
+  tag: percent_whole
+  text: "There are {c} blue marbles in a jar. They are {p}% of all the marbles. How many marbles are in the jar?"
+  vars: { w: { choices: ["40", "60", "80", "50", "100"] }, p: { choices: ["10", "20", "25", "30", "15"] } }
+  let: { c: "p / 100 * w" }
+  whole: [c]
+  answer: "w"
+  style: whole
+  unit: marbles
+
+# --- one-step equations (6.EE.7) ---------------------------------------------------------------
+- id: stickers_more
+  tag: equation
+  text: "Kai had some stickers. He got {p} more, and now he has {q}. How many stickers did he have at first?"
+  vars: { x: [12, 60], p: [8, 35] }
+  let: { q: "x + p" }
+  answer: "x"
+  style: whole
+  unit: stickers
+  equation: true
+- id: crayon_boxes
+  tag: equation
+  text: "{p} boxes hold the same number of crayons. There are {q} crayons in all. How many crayons are in each box?"
+  vars: { x: [8, 24], p: [3, 9] }
+  let: { q: "p * x" }
+  answer: "x"
+  style: whole
+  unit: crayons
+  equation: true
+- id: taller_sister
+  tag: equation
+  text: "Jay is {p} inches taller than his sister. Jay is {q} inches tall. How tall is his sister?"
+  vars: { x: { choices: ["48", "50 1/2", "52", "46 1/2", "49 3/4"] }, p: [3, 9] }
+  let: { q: "x + p" }
+  answer: "x"
+  style: fraction
+  unit: inches
+  equation: true
+- id: movie_tickets
+  tag: equation
+  text: "A movie ticket costs ${p}. Nora paid ${q} for some tickets. How many tickets did she buy?"
+  vars: { x: [2, 6], p: { choices: ["8.50", "7.25", "9.75", "6.50"] } }
+  let: { q: "p * x" }
+  answer: "x"
+  show: { p: money, q: money }
+  style: whole
+  unit: tickets
+  equation: true
+- id: rope_pieces
+  tag: equation
+  text: "A rope {q} feet long is cut into {p} pieces of the same length. How long is each piece?"
+  vars: { x: { choices: ["1.5", "2.5", "3.5", "1.25", "2.75"] }, p: [2, 6] }
+  let: { q: "p * x" }
+  show: { q: decimal }
+  answer: "x"
+  style: decimal
+  unit: feet
+  equation: true
+- id: savings_goal
+  tag: equation
+  text: "Ella needs ${q} for a kite. She already has ${p}. How much more money does she need?"
+  vars: { x: { choices: ["4.50", "6.25", "3.75", "5.40", "8.15"] }, p: { choices: ["7.50", "9.25", "6.75", "10.60"] } }
+  let: { q: "x + p" }
+  show: { p: money, q: money }
+  answer: "x"
+  style: money
+  unit: "$"
+  equation: true
+- id: oranges_weight
+  tag: equation
+  text: "Each orange in a bag weighs {p} pound. The oranges weigh {q} pounds in all. How many oranges are in the bag?"
+  vars: { x: [6, 16], p: { choices: ["1/2", "1/4", "3/4"] } }
+  let: { q: "p * x" }
+  answer: "x"
+  style: whole
+  unit: oranges
+  equation: true

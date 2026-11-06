@@ -19,7 +19,7 @@ from __future__ import annotations
 from fractions import Fraction
 
 from ..models import Issue, Sheet
-from ..registry import GenContext, SheetContent, SheetType, register
+from ..registry import GenContext, SheetContent
 from ._algebra import MINUS, clip, floats, fstr, lattice, line_tokens, show
 from ._common import error
 
@@ -124,9 +124,11 @@ def _key(i: dict) -> tuple:
     return tuple(sorted((k, str(v)) for k, v in i.items() if k != "n"))
 
 
-@register("slope_graph")
-class SlopeGraph(SheetType):
-    template = "slope_graph.html.j2"
+class Lines:
+    """A mode of `coordinate_grid` (rules `mode`); coordinate_grid.py dispatches here."""
+
+    name = "coordinate_grid"
+    template = "coordinate_grid_lines.html.j2"
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r, spec = ctx.rules, ctx.spec

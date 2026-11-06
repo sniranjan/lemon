@@ -1,0 +1,112 @@
+{
+  "id": "EN-R3-B-001",
+  "subject": "english",
+  "level": "R3",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "word_builder",
+  "page_number": 51,
+  "variant": 1,
+  "seed": 4131417937365291222,
+  "title": "Words with un-",
+  "parent_tip": "Read each built word and ask: what does the word part add?",
+  "items": [
+    {
+      "kind": "rule",
+      "parts": [
+        {
+          "show": "un-",
+          "means": "not"
+        }
+      ]
+    },
+    {
+      "kind": "build",
+      "n": 1,
+      "first": "un",
+      "second": "tidy",
+      "built": "untidy",
+      "part": "first"
+    },
+    {
+      "kind": "build",
+      "n": 2,
+      "first": "un",
+      "second": "well",
+      "built": "unwell",
+      "part": "first"
+    },
+    {
+      "kind": "build",
+      "n": 3,
+      "first": "un",
+      "second": "kind",
+      "built": "unkind",
+      "part": "first"
+    },
+    {
+      "kind": "build",
+      "n": 4,
+      "first": "un",
+      "second": "afraid",
+      "built": "unafraid",
+      "part": "first"
+    },
+    {
+      "kind": "meaning",
+      "n": 5,
+      "built": "unkind",
+      "choices": [
+        "not healthy",
+        "kind again",
+        "not kind"
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "meaning",
+      "n": 6,
+      "built": "unafraid",
+      "choices": [
+        "afraid again",
+        "not afraid",
+        "not tidy"
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "sentence",
+      "n": 7,
+      "before": "My room was so ",
+      "after": " that I could not find my shoes.",
+      "options": [
+        "tidy",
+        "untidy"
+      ],
+      "answer": "untidy"
+    },
+    {
+      "kind": "sentence",
+      "n": 8,
+      "before": "Kai felt ",
+      "after": ", so he stayed home and rested in bed.",
+      "options": [
+        "well",
+        "unwell"
+      ],
+      "answer": "unwell"
+    }
+  ],
+  "answer_key": [
+    "1. untidy",
+    "2. unwell",
+    "3. unkind",
+    "4. unafraid",
+    "5. C (not kind)",
+    "6. B (not afraid)",
+    "7. untidy",
+    "8. unwell"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "EN-R3-E-001",
+  "subject": "english",
+  "level": "R3",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "full_sentence_answer",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 11971714691050721857,
+  "title": "Ada and the Bees",
+  "parent_tip": "Show how each answer reuses the question's words. Spelling can wobble.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "e01-ada-and-the-bees",
+      "set": 0,
+      "again": false,
+      "heading": "Ada and the Bees",
+      "paragraphs": [
+        "Ada visited her aunt's farm on a sunny morning in June. Her aunt kept six white beehives at the edge of a field of clover. She gave Ada a hat with a soft net so the bees would not land on her face.",
+        "\"Bees fly from flower to flower to drink a sweet juice called nectar,\" her aunt explained. \"They carry it back to the hive and turn it into honey.\"",
+        "Ada watched the busy bees zoom in and out of a tiny door. Her aunt lifted a wooden frame from the hive. It was covered with golden wax cells full of honey.",
+        "At lunch, Ada spread fresh honey on warm toast. It tasted like flowers and sunshine. \"Thank you, bees,\" she whispered."
+      ]
+    },
+    {
+      "kind": "write",
+      "n": 1,
+      "ask": "What did Ada's aunt keep at the edge of the field?",
+      "lines": 2,
+      "starter": "Ada's aunt kept"
+    },
+    {
+      "kind": "write",
+      "n": 2,
+      "ask": "What did Ada wear on her head?",
+      "lines": 2,
+      "starter": "Ada wore"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "What did Ada spread on her toast?",
+      "lines": 2,
+      "starter": "Ada spread"
+    }
+  ],
+  "answer_key": [
+    "1. Sample: Ada's aunt kept six white beehives at the edge of the field.",
+    "2. Sample: Ada wore a hat with a soft net on her head.",
+    "3. Sample: Ada spread fresh honey on her warm toast."
+  ],
+  "new_words": [],
+  "review_words": []
+}

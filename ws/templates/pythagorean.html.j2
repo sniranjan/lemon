@@ -1,0 +1,53 @@
+{% extends "base.html.j2" %}
+{# Right triangles: drawn from the two legs only (a across, b up), so the picture matches the numbers.
+   The square corner is at the bottom left (or bottom right when flipped). #}
+{% import "_algebra.html.j2" as alg %}
+{% macro triangle(i) %}
+{% set c2 = i.a * i.a + (i.b * i.b if i.b is defined else i.c * i.c - i.a * i.a) %}
+{% set b = (c2 - i.a * i.a) ** 0.5 %}
+{% set s = [190 / i.a, 104 / b] | min %}
+{% set x0 = 214 if i.flip else 34 %}
+{% set dir = -1 if i.flip else 1 %}
+{% set y0 = 128 %}
+{% set x1, y2 = x0 + dir * i.a * s, y0 - b * s %}
+{% set mx, my = (x1 + x0) / 2, (y0 + y2) / 2 %}
+{% set d = ((mx - x0) ** 2 + (my - y0) ** 2) ** 0.5 %}
+<svg class="tri" width="248" height="160" viewBox="0 0 248 160">
+  <polygon points="{{ x0 }},{{ y0 }} {{ x1 | round(2) }},{{ y0 }} {{ x0 }},{{ y2 | round(2) }}" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="{{ x0 + dir * 14 }},{{ y0 }} {{ x0 + dir * 14 }},{{ y0 - 14 }} {{ x0 }},{{ y0 - 14 }}" fill="none" stroke="#1d1d1f" stroke-width="2"/>
+  <text x="{{ ((x0 + x1) / 2) | round(2) }}" y="{{ y0 + 26 }}" text-anchor="middle">{{ i.a }}</text>
+  <text x="{{ x0 - dir * 8 }}" y="{{ ((y0 + y2) / 2 + 8) | round(2) }}" text-anchor="{{ 'start' if i.flip else 'end' }}">{{ '?' if i.task == 'leg' else i.b }}</text>
+  <text x="{{ (mx + (mx - x0) * 20 / d) | round(2) }}" y="{{ (my + (my - y0) * 20 / d + 8) | round(2) }}" text-anchor="middle">{{ '?' if i.task == 'hypotenuse' else i.c }}</text>
+</svg>
+{% endmacro %}
+{% block style %}
+{{ alg.math_style() }}
+{% set n = sheet.items | length %}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ n // 2 }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 8px 14px 8px 26px; border-radius: 22px; }
+svg.tri text { font-family: "Andika", sans-serif; font-weight: 700; font-size: 24px; fill: #1d1d1f; }
+.ans { font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap; align-self: flex-end; }
+.ans .line { display: inline-block; width: 150px; border-bottom: 3px solid var(--ink); height: 28px; }
+.q { font-size: 26px; font-weight: 700; text-align: center; line-height: 1.35; }
+.yn { display: flex; gap: 26px; font-size: 26px; font-weight: 700; }
+.yn span { border: 3px solid var(--ink); border-radius: 999px; padding: 2px 18px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if i.task == "is_right" %}
+        <div class="q">Sides {{ i.sides[0] }}, {{ i.sides[1] }} and {{ i.sides[2] }}.<br>Is it a right triangle?</div>
+        <div class="yn"><span>yes</span><span>no</span></div>
+{% elif i.task == "distance" %}
+        <div class="q" style="font-size: 22px">{{ alg.point(i.p1) }} to {{ alg.point(i.p2) }}</div>
+        {{ alg.grid(i.grid, 19, [], [i.p1, i.p2]) }}
+        <div class="ans"><span class="line"></span> units</div>
+{% else %}
+        {{ triangle(i) }}
+        <div class="ans">? = <span class="line"></span></div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

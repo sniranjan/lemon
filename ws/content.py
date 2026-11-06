@@ -109,6 +109,20 @@ def line_stories() -> tuple[tuple[str, str], ...]:
 
 
 @lru_cache(maxsize=None)
+def level_passages(level: str, section: str) -> tuple[dict, ...]:
+    """Reading passages for one section of a passage level: content/passages/<level>/<section>.yaml."""
+    path = CONTENT_DIR / "passages" / level / f"{section}.yaml"
+    return tuple(yaml.safe_load(path.read_text()) or []) if path.exists() else ()
+
+
+@lru_cache(maxsize=None)
+def wordparts(level: str) -> dict:
+    """Prefixes, suffixes and compound words to build: content/wordparts/<level>.yaml."""
+    path = CONTENT_DIR / "wordparts" / f"{level}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
 def story_problems() -> tuple[dict, ...]:
     """Story problem frames for math word problems (see the file's header)."""
     frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "story_problems.yaml").read_text()))
@@ -119,16 +133,16 @@ def story_problems() -> tuple[dict, ...]:
 
 
 @lru_cache(maxsize=None)
-def system_stories() -> tuple[dict, ...]:
-    """Story frames for two equations at once (Lions math; see content/math/systems.yaml)."""
-    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "systems.yaml").read_text()))
+def math_frames(name: str) -> tuple[dict, ...]:
+    """Frames and contexts for Pandas math: content/math/<name>.yaml (ratios, rational_stories)."""
+    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / f"{name}.yaml").read_text()))
     ids = [f["id"] for f in frames]
     if len(set(ids)) != len(ids):
-        raise ValueError("systems.yaml: frame ids must be unique")
+        raise ValueError(f"{name}.yaml: ids must be unique")
     return frames
 
 
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories, story_problems, grammar, passages, system_stories):
+              line_stories, story_problems, grammar, passages, level_passages, wordparts, math_frames):
         f.cache_clear()

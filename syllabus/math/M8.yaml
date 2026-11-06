@@ -106,16 +106,17 @@ sections:
     name: Multi-Step Linear Equations in One Variable
     public_name: Multi-Step Equations
     pages: [51, 100]
-    sheet_types: [multi_step_equation]
+    sheet_types: [equation_solve]   # mode multi_step (ws/sheet_types/_multi_step.py)
     standards: [8.EE.7, 8.EE.7b]
     source: ours
     rules:
+      mode: multi_step
       title: Solve each equation
       problems: 6
       solutions: [-12, 12]
       max_number: 99           # no number on the page bigger than this (before solving)
       tips:
-        multi_step_equation:
+        equation_solve:
           - "Tidy each side first, then get the letter on one side and the numbers on the other. Whatever you do to one side, do to the other."
           - "Check each answer by putting it back into the first equation: both sides should come out the same."
     parts:
@@ -128,7 +129,7 @@ sections:
         rules:
           forms: [both_sides]
           tips:
-            multi_step_equation:
+            equation_solve:
               - "Letters on both sides: take away the smaller letter term from both sides first, so the letter is on one side only."
               - "Check each answer by putting it back into the first equation: both sides should come out the same."
       - part: 3
@@ -136,7 +137,7 @@ sections:
         rules:
           forms: [distribute, distribute_like, distribute_right]
           tips:
-            multi_step_equation:
+            equation_solve:
               - "Open the brackets first: 3(x − 4) is 3 times x and 3 times −4, so 3x − 12. Then tidy and solve."
               - "Watch the sign in front of a bracket: −2(x + 5) is −2x − 10."
       - part: 4
@@ -145,7 +146,7 @@ sections:
           forms: [distribute_both, both_sides, fraction_coef, distribute]
           fraction_solutions: 2    # answers like 5/2 on each page
           tips:
-            multi_step_equation:
+            equation_solve:
               - "Some answers are fractions now, like x = 5/2. A fraction answer is fine: leave it as a fraction in lowest terms."
               - "With a fraction in front of the letter, multiply both sides by the bottom number first to clear it."
       - part: 5
@@ -154,7 +155,7 @@ sections:
           forms: [both_sides, distribute_right, distribute_both, like_terms]
           special: 2               # one equation with no solution and one true for every number
           tips:
-            multi_step_equation:
+            equation_solve:
               - "If the letters cancel out, look at what is left. 5 = 5 is always true (every number works). 5 = 3 is never true (no solution)."
               - "Tidy each side first, then solve. Two equations on each page are special: no solution, or every number works."
         standards: [8.EE.7a]
@@ -163,16 +164,17 @@ sections:
     name: Slope and Linear Functions
     public_name: Lines and Slope
     pages: [101, 150]
-    sheet_types: [slope_graph]
+    sheet_types: [coordinate_grid]   # mode lines (ws/sheet_types/_lines.py)
     standards: [8.EE.5, 8.EE.6, 8.F.1, 8.F.3, 8.F.4]
     source: ours
     rules:
+      mode: lines
       grid: 6                  # the grid runs from −6 to 6 on both axes
       slopes: ["-3", "-2", "-3/2", "-1", "-2/3", "-1/2", "-1/3", "0", "1/3", "1/2", "2/3", "1", "3/2", "2", "3"]
       intercepts: [-4, 4]
       points: [-6, 6]
       tips:
-        slope_graph:
+        coordinate_grid:
           - "Slope is rise over run: how far up (or down) the line goes for each step to the right."
           - "Lines going up to the right have a positive slope, lines going down have a negative slope, flat lines have slope 0."
     parts:
@@ -187,25 +189,25 @@ sections:
           title: Find the slope
           mixes: [[read_slope], [table]]
           tips:
-            slope_graph:
-              - "On a graph, start at one dot and count up or down to the other, then right. Write rise over run and simplify."
-              - "In a table, see how much y changes each time x goes up. Divide the change in y by the change in x."
+            coordinate_grid:
+              - "Slope is rise over run. On a graph, count from one dot to the other; in a table, divide the change in y by the change in x."
+              - "Count the rise (up or down) first, then the run to the right. Simplify the fraction; a line going down to the right has a negative slope."
       - part: 3
         pages: [121, 130]
         rules:
           title: y = mx + b
           mixes: [[read_mb], [write_graph]]
           tips:
-            slope_graph:
+            coordinate_grid:
               - "In y = mx + b, the number in front of x is the slope and b is where the line crosses the y-axis."
-              - "To write the equation of a graph, find where it crosses the y-axis (b), then count rise over run (m)."
+              - "On a graph, read b first (where the line crosses the y-axis), then count rise over run for m. Check: does the sign of m match the way the line goes?"
       - part: 4
         pages: [131, 140]
         rules:
           title: Graph the line
           mixes: [[draw_line]]
           tips:
-            slope_graph:
+            coordinate_grid:
               - "Put a dot at b on the y-axis. From there, count the run to the right and the rise up (or down) for the next dot. Join them with a ruler."
               - "A fraction slope like 2/3 means up 2, right 3. Check the line with one more point from the equation."
       - part: 5
@@ -214,24 +216,25 @@ sections:
           title: Write the equation
           mixes: [[from_points, from_table], [write_graph, draw_line]]
           tips:
-            slope_graph:
-              - "Find the slope first. Then put one point into y = mx + b to find b."
-              - "In a table, look for the y-value when x is 0: that is b. The change in y for each step in x is m."
+            coordinate_grid:
+              - "Find the slope m first (from two points, a table or the graph), then use one point in y = mx + b to find b."
+              - "To draw a line, put a dot at b on the y-axis, then count the run and rise for the next dot. In a table, the y-value at x = 0 is b."
         standards: [8.F.2]
 
   - code: E
     name: Systems of Two Linear Equations
     public_name: Two Equations at Once
     pages: [151, 180]
-    sheet_types: [linear_system]
+    sheet_types: [coordinate_grid]   # mode systems (ws/sheet_types/_systems.py)
     standards: [8.EE.8, 8.EE.8a, 8.EE.8b]
     source: ours
     rules:
+      mode: systems
       grid: 6
       solutions: [-5, 5]       # x and y of every answer
       max_number: 60
       tips:
-        linear_system:
+        coordinate_grid:
           - "The answer is one pair of numbers (x, y) that makes both equations true. Check it in both equations."
     parts:
       - part: 1
@@ -241,7 +244,7 @@ sections:
           problems: 4
           tasks: [graph_read, graph_read, graph_draw, graph_draw]
           tips:
-            linear_system:
+            coordinate_grid:
               - "Each line shows every pair that works for one equation. Where the two lines cross works for both: that point is the answer."
               - "Graph each line from its y-intercept and slope with a ruler, then read the crossing point. Check it in both equations."
       - part: 2
@@ -251,17 +254,17 @@ sections:
           problems: 4
           tasks: [substitution]
           tips:
-            linear_system:
+            coordinate_grid:
               - "One equation already says what y is. Put that into the other equation in place of y, solve for x, then find y."
               - "Write the answer as a point (x, y) and check it in both equations."
       - part: 3
         pages: [171, 180]
         rules:
           title: Solve by elimination
-          problems: 4
-          tasks: [elimination, elimination, inspect, story]
+          problems: 5
+          tasks: [elimination, elimination, elimination, inspect, story]
           tips:
-            linear_system:
+            coordinate_grid:
               - "Add or take away the equations so one letter cancels. You may need to multiply one equation first."
               - "Some pairs have no answer (parallel lines) or every answer (the same line). Look at the slopes before solving."
               - "For the story, choose a letter for each unknown, write two equations from the sentences, then solve."

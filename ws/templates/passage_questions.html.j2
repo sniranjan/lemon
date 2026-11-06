@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% import "_passage.html.j2" as pq %}
+{% block style %}
+{{ pq.style() }}
+{% endblock %}
+{% block body %}
+{{ pq.passage(sheet.items[0]) }}
+    <div class="qs">
+{% for q in sheet.items[1:] %}
+{{ pq.question(q) }}
+{% endfor %}
+    </div>
+{% endblock %}

@@ -19,9 +19,9 @@ from __future__ import annotations
 
 from fractions import Fraction
 
-from ..content import system_stories
+from ..content import math_frames
 from ..models import Issue, Sheet
-from ..registry import GenContext, SheetContent, SheetType, register
+from ..registry import GenContext, SheetContent
 from ._algebra import clip, floats, fstr, lattice, merge, show, side_tokens
 from ._common import error
 
@@ -121,7 +121,7 @@ def _item(ctx: GenContext, task: str) -> dict | None:
         lines = []
         for m in (m1, m2):
             b = y - m * x
-            if b.denominator > 1 or abs(b) > R - 1 or len(lattice(m, b, R)) < 3:
+            if b.denominator > 1 or abs(b) > R - 1 or len(lattice(m, b, R)) < 3 or (m == 0 and b == 0):
                 return None
             lines.append((m, b))
         e1, e2 = si(*lines[0]), si(*lines[1])
@@ -143,7 +143,7 @@ def _item(ctx: GenContext, task: str) -> dict | None:
             e1, e2 = e2, e1
         return {"task": task, "x": x, "y": y, "eq1": e1, "eq2": e2}
     if task == "elimination":
-        A1, B1 = _nz(rng, -6, 6), _nz(rng, -6, 6)
+        A1, B1 = rng.randint(1, 6), _nz(rng, -6, 6)
         k = rng.choice([1, -1, -1, 2, -2, 3])
         if rng.random() < 0.5:   # y cancels after multiplying the first equation by k
             A2, B2 = _nz(rng, -6, 6), -k * B1
@@ -171,7 +171,7 @@ def _item(ctx: GenContext, task: str) -> dict | None:
             e1, e2 = std(A, B, C), std(k * A, k * B, k * C)
         return {"task": task, "eq1": e1, "eq2": e2}
     if task == "story":
-        frame = rng.choice(system_stories())
+        frame = rng.choice(math_frames("systems"))
         x, y = rng.randint(*frame["x"]), rng.randint(*frame["y"])
         p = rng.choice(frame["p"]) if frame["kind"] == "sum_value" else None
         q = rng.choice(frame["q"]) if frame["kind"] == "sum_value" else None
@@ -187,6 +187,8 @@ def _ok(item: dict, r: dict) -> bool:
     if item["task"] == "story":
         return True
     nums = numbers(item["eq1"]) + numbers(item["eq2"])
+    if item["task"] != "inspect" and solve(item["eq1"], item["eq2"]) != (item["x"], item["y"]):
+        return False   # e.g. the same line twice: not one crossing point
     return all(abs(v) <= r["max_number"] for v in nums)
 
 
@@ -194,9 +196,11 @@ def _key(i: dict) -> str:
     return str(sorted((k, str(v)) for k, v in i.items() if k != "n"))
 
 
-@register("linear_system")
-class LinearSystem(SheetType):
-    template = "linear_system.html.j2"
+class Systems:
+    """A mode of `coordinate_grid` (rules `mode`); coordinate_grid.py dispatches here."""
+
+    name = "coordinate_grid"
+    template = "coordinate_grid_systems.html.j2"
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r = ctx.rules
@@ -224,7 +228,7 @@ class LinearSystem(SheetType):
         want = [r["tasks"][k % len(r["tasks"])] for k in range(r["problems"])]
         if [i["task"] for i in sheet.items] != want:
             issues.append(error(sheet, f"tasks {[i['task'] for i in sheet.items]} should be {want}"))
-        frames = {f["id"]: f for f in system_stories()}
+        frames = {f["id"]: f for f in math_frames("systems")}
         for i in sheet.items:
             t, label = i["task"], f"problem {i.get('n')} ({i['task']})"
             if t == "story":

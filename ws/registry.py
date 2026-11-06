@@ -24,10 +24,21 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Puppies Reading (3A): spelling patterns, word endings, syllables, sentence copying
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
+    # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
+    "passage_questions", "word_builder", "full_sentence_answer",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
+    "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
+    "order_of_operations", "box_volume",
+    # Pandas math (M6; dividing fractions extends fraction_ops): ratios, rates, percents, negatives, the coordinate
+    # plane, expressions and one-step equations
+    "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
-    "power_root", "sci_notation", "multi_step_equation", "slope_graph", "linear_system", "pythagorean",   # Lions math (M8)
+    # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
+    "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
+    "power_root", "sci_notation", "pythagorean",   # Lions math (M8; equations and graphs are modes of equation_solve, coordinate_grid)
 })
 
 
@@ -74,6 +85,10 @@ class SheetType:
 
     def verify(self, sheet: Sheet) -> list[Issue]:
         return []
+
+    def template_for(self, sheet: Sheet) -> str:
+        """The template for one sheet; a type with several modes may pick one per mode."""
+        return self.template
 
 
 _REGISTRY: dict[str, type[SheetType]] = {}

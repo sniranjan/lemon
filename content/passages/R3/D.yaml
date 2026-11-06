@@ -1,0 +1,792 @@
+# Foxes Reading, section D "Why Did They?" (pages 131–170): feelings and the reasons for them (RL.3.3 / RL.3.1).
+# Original stories (ours). Schema: ws/passages.py. Each passage serves 2 pages (one question set each).
+
+- id: d01-first-day-at-the-pool
+  title: The Big Pool
+  text: |
+    Maya stood at the edge of the big pool and held her towel tightly. Her cousins were already
+    splashing in the deep end, but her legs felt like jelly. She had only ever swum in the small pool
+    near her grandmother's house.
+
+    "I will stay right beside you," said her swim teacher, Coach Reyes. He showed her how to hold the
+    wall and kick her feet. Maya kicked slowly at first, and then she kicked harder.
+
+    After a while, Coach Reyes asked her to let go of the wall for three seconds. Maya took a deep
+    breath and floated on her back. The water held her up like a soft blanket.
+
+    When she stood up, her cousins were clapping. Maya grinned so widely that her cheeks ached. "Can I
+    try again tomorrow?" she asked.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Maya feel at the start of the story?"
+          choices: ["nervous", "bored", "angry"]
+          evidence: "her legs felt like jelly"
+        - ask: "Which words show that Maya felt proud at the end?"
+          choices: ["Maya grinned so widely", "She held her towel tightly", "Her legs felt like jelly"]
+          evidence: "Maya grinned so widely"
+        - ask: "How did Maya feel when her cousins clapped?"
+          sample: "Maya felt proud and happy because she floated on her own."
+          evidence: "her cousins were clapping"
+    - focus: reasons
+      questions:
+        - ask: "Why was Maya nervous at the big pool?"
+          choices: ["She had only swum in a small pool.", "Her towel was wet.", "Her cousins were mean to her."]
+          evidence: "She had only ever swum in the small pool"
+        - ask: "What helped Maya feel brave enough to try?"
+          choices: ["Her teacher stayed beside her.", "Her cousins left the pool.", "She got a new towel."]
+          evidence: "I will stay right beside you"
+        - ask: "Why did Maya want to try again tomorrow?"
+          sample: "Maya wanted to try again because floating made her feel proud."
+          evidence: "Can I try again tomorrow?"
+
+- id: d02-the-frog-song
+  title: The Frog Song
+  text: |
+    When Eli's baby sister came home from the hospital, the house filled with visitors. Aunts, uncles,
+    and neighbors crowded around the tiny bundle in the blue blanket. Everyone wanted to hold Baby
+    Rose, and nobody asked Eli about his soccer game.
+
+    Eli sat on the stairs and frowned. He kicked the bottom step with his sock. "Nobody even notices me
+    anymore," he mumbled.
+
+    That evening, Rose began to cry and would not stop. Mom rocked her, and Dad walked her around the
+    kitchen. Then Grandma had an idea. "Eli, why don't you sing her your silly frog song?"
+
+    Eli sang softly, and Rose opened her eyes wide. She stopped crying and stared right at him. Eli
+    felt a warm glow inside. "I think she likes me best," he whispered with a smile.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Eli feel when the visitors came?"
+          choices: ["left out", "excited", "sleepy"]
+          evidence: "Nobody even notices me anymore"
+        - ask: "Which action shows that Eli was upset?"
+          choices: ["He kicked the bottom step.", "He sang a frog song.", "He held Baby Rose."]
+          evidence: "He kicked the bottom step with his sock."
+        - ask: "How did Eli feel when Rose stopped crying?"
+          sample: "Eli felt happy and proud when Rose stopped crying."
+          evidence: "Eli felt a warm glow inside."
+    - focus: reasons
+      questions:
+        - ask: "Why did Eli feel left out?"
+          choices: ["Everyone paid attention to the baby.", "He lost his soccer game.", "He had to go to bed early."]
+          evidence: "Everyone wanted to hold Baby Rose"
+        - ask: "Why did Grandma ask Eli to sing?"
+          choices: ["Rose would not stop crying.", "Eli wanted to be on stage.", "The visitors asked for a song."]
+          evidence: "Rose began to cry and would not stop"
+        - ask: "Why did Eli's feelings change at the end?"
+          sample: "Eli's feelings changed because his song helped Rose stop crying."
+          evidence: "She stopped crying and stared right at him."
+
+- id: d03-lemon-bars
+  title: Lemon Bars Next Door
+  text: |
+    Sofia's family moved to a new town in the middle of summer. Her new bedroom was bigger than her old
+    one, but it felt empty and quiet. She missed the window where she used to watch the neighbor's cat.
+
+    For three days, Sofia unpacked boxes slowly and hardly said a word. At dinner she pushed her peas
+    around her plate. "I don't know anybody here," she told her dad.
+
+    On the fourth morning, a girl knocked on the front door with a plate of lemon bars. "I'm Hope from
+    next door," she said. "My mom made these to welcome you. Do you like to draw?"
+
+    Sofia nodded and ran to get her colored pencils. The two girls drew pictures on the porch until
+    lunchtime. That night, Sofia's new room did not feel quite so empty.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Sofia feel in her first days in the new town?"
+          choices: ["lonely", "silly", "angry"]
+          evidence: "I don't know anybody here"
+        - ask: "Which clue shows Sofia was unhappy at dinner?"
+          choices: ["She pushed her peas around.", "She ate every bite.", "She sang a song."]
+          evidence: "At dinner she pushed her peas around her plate."
+        - ask: "How did Sofia feel when Hope asked her to draw?"
+          sample: "Sofia felt happy and excited when Hope asked her to draw."
+          evidence: "Sofia nodded and ran to get her colored pencils."
+    - focus: reasons
+      questions:
+        - ask: "Why did Sofia's new room feel empty?"
+          choices: ["She missed her old home.", "It had no bed in it.", "Her dad took her toys."]
+          evidence: "She missed the window where she used to watch the neighbor's cat."
+        - ask: "Why did Hope bring lemon bars?"
+          choices: ["to welcome Sofia's family", "to sell them at the door", "to give them to the cat"]
+          evidence: "My mom made these to welcome you."
+        - ask: "Why did the room feel less empty at the end?"
+          sample: "The room felt less empty because Sofia had made a new friend."
+          evidence: "The two girls drew pictures on the porch"
+
+- id: d04-the-wiggly-tooth
+  title: The Wiggly Tooth
+  text: |
+    Jonah's front tooth had been wiggly for two whole weeks. He wiggled it with his tongue during
+    reading time and while he brushed his teeth. His big sister said he should just pull it out, but
+    Jonah shook his head. He was worried that it would sting.
+
+    At lunch on Friday, Jonah took a big bite of a crunchy green apple. Something hard landed on his
+    tongue. He spit it into his hand and stared. It was his tooth!
+
+    For a second, Jonah's mouth fell open in surprise. Then he laughed so loudly that the whole table
+    turned around. "It didn't even sting!" he said.
+
+    Jonah wrapped the tooth carefully in a napkin and put it in his pocket. All afternoon he smiled at
+    everyone, showing off the new gap in his grin.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Jonah feel about pulling his tooth out?"
+          choices: ["worried", "bored", "jealous"]
+          evidence: "He was worried that it would sting."
+        - ask: "How did Jonah feel when the tooth came out?"
+          choices: ["surprised", "sleepy", "lonely"]
+          evidence: "Jonah's mouth fell open in surprise"
+        - ask: "How did Jonah feel all afternoon? How do you know?"
+          sample: "Jonah felt proud and happy because he smiled at everyone."
+          evidence: "All afternoon he smiled at everyone"
+    - focus: reasons
+      questions:
+        - ask: "Why did Jonah shake his head at his sister?"
+          choices: ["He thought pulling it would sting.", "He wanted a new apple.", "He was brushing his teeth."]
+          evidence: "He was worried that it would sting."
+        - ask: "Why did the whole table turn around?"
+          choices: ["Jonah laughed very loudly.", "Jonah dropped his apple.", "The bell rang for recess."]
+          evidence: "he laughed so loudly that the whole table turned around"
+        - ask: "Why did Jonah show everyone his grin?"
+          sample: "Jonah showed his grin because he was proud of the new gap."
+          evidence: "showing off the new gap in his grin"
+
+- id: d05-the-missed-kick
+  title: The Missed Kick
+  text: |
+    The score was tied when Coach Kim called Lila's name. Lila placed the ball on the white spot and
+    took a deep breath. She kicked as hard as she could, but the ball sailed over the net.
+
+    The other team cheered, and the game ended in a loss. Lila walked off the field with her head down.
+    Her eyes stung, and she did not want to talk to anyone.
+
+    Her teammate Amara jogged over and bumped her shoulder gently. "Last week I missed two shots,"
+    Amara said. "Everybody misses sometimes. Want to practice with me tomorrow?"
+
+    The next afternoon, the two girls kicked balls at the old goal behind the library. Lila kept her
+    eyes on the ball and her foot low. When her tenth kick zipped into the corner, she threw her arms up
+    and cheered.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Lila feel after she missed the kick?"
+          choices: ["disappointed", "proud", "sleepy"]
+          evidence: "Lila walked off the field with her head down."
+        - ask: "Which words show that Lila was upset?"
+          choices: ["Her eyes stung", "The other team cheered", "She took a deep breath"]
+          evidence: "Her eyes stung"
+        - ask: "How did Lila feel at the end of the story?"
+          sample: "Lila felt happy and proud when her kick went into the goal."
+          evidence: "she threw her arms up and cheered"
+    - focus: reasons
+      questions:
+        - ask: "Why was Lila sad after the game?"
+          choices: ["She missed the kick.", "She lost her shoe.", "It started to rain."]
+          evidence: "the ball sailed over the net"
+        - ask: "Why did Amara tell Lila about her own misses?"
+          choices: ["to help Lila feel better", "to win the next game", "to make the coach laugh"]
+          evidence: "Everybody misses sometimes."
+        - ask: "What helped Lila feel better?"
+          sample: "Practicing with Amara helped Lila feel better."
+          evidence: "Want to practice with me tomorrow?"
+
+- id: d06-big-elephants
+  title: Big Elephants
+  text: |
+    On Thursday night, Marcus sat at the kitchen table with his spelling list. Most of the words were
+    easy, but one word kept tricking him. Every time he wrote "because," the letters came out in the
+    wrong order.
+
+    "I'll never get it right," Marcus groaned, and he pushed the paper away. His shoulders slumped, and
+    he stared at the floor.
+
+    His older brother, Dev, sat down beside him. "I had trouble with that word too," he said. "Try this
+    silly sentence. Big elephants can always understand small elephants." Marcus giggled and wrote the
+    first letter of each word. The letters spelled the word!
+
+    On Friday morning, Marcus whispered the elephant sentence during the test. When his teacher handed
+    back the papers, every word had a check mark. Marcus could hardly wait to show Dev.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Marcus feel on Thursday night?"
+          choices: ["frustrated", "excited", "sleepy"]
+          evidence: "I'll never get it right"
+        - ask: "What shows that Marcus started to feel better?"
+          choices: ["He giggled at the sentence.", "He pushed the paper away.", "He stared at the floor."]
+          evidence: "Marcus giggled"
+        - ask: "How did Marcus feel when he got his test back?"
+          sample: "Marcus felt proud because every word had a check mark."
+          evidence: "every word had a check mark"
+    - focus: reasons
+      questions:
+        - ask: "Why was Marcus frustrated?"
+          choices: ["He kept spelling one word wrong.", "His brother was too loud.", "The list was too long."]
+          evidence: "one word kept tricking him"
+        - ask: "Why did Dev tell Marcus a silly sentence?"
+          choices: ["to help him spell the word", "to send him to bed", "to teach him about animals"]
+          evidence: "Try this silly sentence."
+        - ask: "Why could Marcus hardly wait to show Dev?"
+          sample: "Marcus wanted to show Dev because Dev's trick helped him get every word right."
+          evidence: "Marcus could hardly wait to show Dev."
+
+- id: d07-the-lost-library-book
+  title: The Lost Library Book
+  text: |
+    Amara's library book was due on Monday, and she could not find it anywhere. She looked under her
+    bed, inside her backpack, and behind the bookshelf. Her stomach felt tight, and she chewed on her
+    bottom lip.
+
+    "What if the librarian is upset with me?" she asked her mom. Mom gave her a hug and said, "Let's
+    keep looking together. Books don't just walk away."
+
+    They checked the car, the porch, and the laundry basket. Then Amara heard a funny thumping sound
+    from the living room. Her puppy, Pepper, was wagging her tail beside the couch. Under the couch was
+    the book, safe and only a little dusty.
+
+    Amara let out a long breath and hugged Pepper. On Monday she returned the book right on time. The
+    librarian smiled and helped her choose two new ones.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Amara feel when she could not find the book?"
+          choices: ["worried", "proud", "silly"]
+          evidence: "Her stomach felt tight"
+        - ask: "Which action shows that Amara felt relieved?"
+          choices: ["She let out a long breath.", "She chewed her lip.", "She looked under her bed."]
+          evidence: "Amara let out a long breath"
+        - ask: "What was Amara worried about when she asked Mom?"
+          sample: "Amara was worried that the librarian would be upset with her."
+          evidence: "What if the librarian is upset with me?"
+    - focus: reasons
+      questions:
+        - ask: "Why was Amara worried?"
+          choices: ["Her book was due on Monday.", "Her puppy ran away.", "She lost her backpack."]
+          evidence: "Amara's library book was due on Monday"
+        - ask: "How did Pepper help Amara?"
+          choices: ["She wagged her tail by the book.", "She carried the book to Mom.", "She barked at the librarian."]
+          evidence: "wagging her tail beside the couch"
+        - ask: "Why did Amara hug Pepper?"
+          sample: "Amara hugged Pepper because Pepper helped her find the lost book."
+          evidence: "hugged Pepper"
+
+- id: d08-the-rainy-saturday
+  title: The Rainy Saturday
+  text: |
+    Owen pressed his nose against the window and sighed. Rain was pouring down, and the family trip to
+    the zoo had been canceled. He had been looking forward to seeing the giraffes for a whole month.
+
+    "This is the worst Saturday ever," Owen grumbled. He flopped onto the couch and pulled a pillow over
+    his face.
+
+    Just then, the doorbell rang. Owen didn't move until he heard a deep, happy laugh in the hallway.
+    He sat straight up. Grandpa Joe stood in the doorway. He held a wet umbrella and a big paper bag!
+
+    "I flew in this morning to surprise you," Grandpa said. Inside the bag was a giant puzzle of a
+    giraffe family. Owen and Grandpa worked on it all afternoon.
+    "Maybe this is the best Saturday ever," Owen said.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Owen feel at the start of the story?"
+          choices: ["disappointed", "excited", "proud"]
+          evidence: "This is the worst Saturday ever"
+        - ask: "What did Owen do when he heard Grandpa's laugh?"
+          choices: ["He sat straight up.", "He hid under a pillow.", "He ran outside."]
+          evidence: "He sat straight up."
+        - ask: "How did Owen feel at the end of the story?"
+          sample: "Owen felt happy at the end because Grandpa came to visit."
+          evidence: "Maybe this is the best Saturday ever"
+    - focus: reasons
+      questions:
+        - ask: "Why was Owen disappointed?"
+          choices: ["The zoo trip was canceled.", "He lost his puzzle.", "Grandpa went home."]
+          evidence: "the family trip to the zoo had been canceled"
+        - ask: "Why did Grandpa come to Owen's house?"
+          choices: ["to surprise Owen", "to go to the zoo", "to fix the doorbell"]
+          evidence: "I flew in this morning to surprise you"
+        - ask: "Why do you think Grandpa brought a giraffe puzzle?"
+          sample: "Grandpa brought a giraffe puzzle because Owen wanted to see the giraffes."
+          evidence: "looking forward to seeing the giraffes"
+
+- id: d09-the-piano-recital
+  title: The Piano Recital
+  text: |
+    Chloe had practiced her piano song every day for a month. She could play it with her eyes closed
+    in the living room. But now she was sitting backstage at her first recital, and her hands were cold
+    and shaky.
+
+    Through the curtain she could see rows and rows of chairs. "What if I forget the notes?" she
+    whispered to her teacher. "Look for your family and play just for them," her teacher said.
+    "Pretend you are at home."
+
+    When her name was called, Chloe walked to the piano and found her grandmother in the second row.
+    Grandma gave her a tiny wave. Chloe played the first note, then the next, and soon the song was
+    flowing like water.
+
+    The audience clapped loudly when she finished. Chloe bowed, and her cheeks turned pink with pride.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Chloe feel backstage?"
+          choices: ["nervous", "bored", "angry"]
+          evidence: "her hands were cold and shaky"
+        - ask: "Which words show Chloe felt proud at the end?"
+          choices: ["her cheeks turned pink with pride", "rows and rows of chairs", "her hands were cold"]
+          evidence: "her cheeks turned pink with pride"
+        - ask: "How did Chloe feel once she started to play?"
+          sample: "Chloe felt calm and happy because the song was flowing like water."
+          evidence: "the song was flowing like water"
+    - focus: reasons
+      questions:
+        - ask: "Why was Chloe nervous?"
+          choices: ["She was afraid she would forget.", "She had never seen a piano.", "Her grandmother was late."]
+          evidence: "What if I forget the notes?"
+        - ask: "Why did Chloe look for her grandmother?"
+          choices: ["Her teacher said to play for family.", "She wanted to go home.", "She needed a drink of water."]
+          evidence: "Look for your family and play just for them"
+        - ask: "What helped Chloe stop feeling nervous?"
+          sample: "Seeing her grandmother wave helped Chloe stop feeling nervous."
+          evidence: "Grandma gave her a tiny wave."
+
+- id: d10-the-silver-robot
+  title: The Silver Robot
+  text: |
+    Diego's favorite toy was a silver robot with arms that could lift tiny blocks. One afternoon he
+    found his little sister, Luz, playing with it on the rug. Before he could say a word, one of the
+    robot's arms snapped off.
+
+    "You broke it!" Diego shouted. His face turned red, and he stomped to his room and slammed the
+    door.
+
+    A few minutes later, there was a soft knock. Luz stood in the hallway holding the robot and its
+    arm. Her eyes were full of tears. "I'm sorry, Diego," she said. "I just wanted to see it lift the
+    blocks."
+
+    Diego looked at his sister's sad face, and his anger began to melt. He and Dad glued the arm back
+    on, and Luz held the pieces still. That evening, the robot lifted blocks for both of them.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Diego feel when the arm snapped off?"
+          choices: ["angry", "proud", "sleepy"]
+          evidence: "His face turned red"
+        - ask: "How did Luz feel when she knocked on the door?"
+          choices: ["sorry", "bored", "jealous"]
+          evidence: "I'm sorry, Diego"
+        - ask: "Which actions show that Diego was angry?"
+          sample: "Diego shouted, stomped to his room, and slammed the door."
+          evidence: "stomped to his room and slammed the door"
+    - focus: reasons
+      questions:
+        - ask: "Why was Luz playing with the robot?"
+          choices: ["She wanted to see it lift blocks.", "She wanted to break it.", "She was cleaning the rug."]
+          evidence: "I just wanted to see it lift the blocks."
+        - ask: "Why did Diego's anger begin to melt?"
+          choices: ["He saw his sister's sad face.", "Dad gave him a new robot.", "He fell asleep."]
+          evidence: "Diego looked at his sister's sad face"
+        - ask: "How did Diego's feelings change by the end?"
+          sample: "Diego was angry at first, but then he forgave Luz and shared the robot."
+          evidence: "the robot lifted blocks for both of them"
+
+- id: d11-the-puppet-theater
+  title: The Puppet Theater
+  text: |
+    Ruby's class had a new puppet theater, and everyone wanted a turn. Her teacher wrote names on a
+    list, and Ruby's name was last. Every day she watched other children make the puppets talk and
+    dance. She tapped her foot and counted the days.
+
+    At last, on Friday, it was Ruby's turn. She grabbed the dragon puppet and hurried behind the stage.
+    Then she noticed Leah, the new girl, standing alone. Leah was staring at the puppets, but she did
+    not say anything.
+
+    Ruby remembered how long the waiting had felt. She held out the owl puppet. "Do you want to do a
+    show with me?" she asked. Leah's face lit up.
+
+    Together they made up a story about a dragon who was afraid of the dark. Their classmates laughed
+    and clapped. Ruby decided that sharing her turn had made it twice as fun.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Ruby feel while she waited?"
+          choices: ["impatient", "sleepy", "angry"]
+          evidence: "She tapped her foot and counted the days."
+        - ask: "How did Leah feel when Ruby asked her to play?"
+          choices: ["happy", "upset", "bored"]
+          evidence: "Leah's face lit up."
+        - ask: "How do you think Leah felt before Ruby asked her?"
+          sample: "Leah felt shy and lonely because she was standing alone."
+          evidence: "standing alone"
+    - focus: reasons
+      questions:
+        - ask: "Why did Ruby have to wait so long?"
+          choices: ["Her name was last on the list.", "The theater was broken.", "She was sick all week."]
+          evidence: "Ruby's name was last"
+        - ask: "Why did Ruby ask Leah to join her?"
+          choices: ["She remembered how waiting felt.", "Her teacher told her to.", "She did not like owls."]
+          evidence: "Ruby remembered how long the waiting had felt."
+        - ask: "Why did Ruby think sharing made her turn better?"
+          sample: "Ruby thought sharing made it better because it was twice as fun with Leah."
+          evidence: "twice as fun"
+
+- id: d12-paper-frogs
+  title: Paper Frogs
+  text: |
+    Every day at lunch, Isaac and his best friend Ezra sat at the end of the long table. They traded
+    crackers and told jokes until the bell rang. But on Tuesday, Ezra was sitting with a new boy named
+    Ali.
+
+    Isaac stood holding his lunch box. His chest felt heavy, and he sat down at the other end of the
+    table by himself. He nibbled his sandwich and did not feel like telling jokes at all.
+
+    After a few minutes, Ezra waved both arms. "Isaac, come here!" he called. "Ali knows how to make
+    paper frogs that jump!"
+
+    Isaac hesitated, then picked up his lunch box and walked over. Ali showed them how to fold the
+    paper, and soon three green frogs were hopping across the table. Isaac laughed. Maybe lunch was even
+    better with three friends.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Isaac feel when he saw Ezra with Ali?"
+          choices: ["left out", "excited", "proud"]
+          evidence: "His chest felt heavy"
+        - ask: "Which clue shows Isaac was sad at lunch?"
+          choices: ["He did not feel like telling jokes.", "He traded crackers.", "He made a paper frog."]
+          evidence: "did not feel like telling jokes at all"
+        - ask: "How did Isaac feel at the end of lunch?"
+          sample: "Isaac felt happy at the end of lunch because he laughed with his friends."
+          evidence: "Isaac laughed."
+    - focus: reasons
+      questions:
+        - ask: "Why did Isaac sit by himself?"
+          choices: ["His best friend sat with someone new.", "The table was full.", "He wanted to read."]
+          evidence: "Ezra was sitting with a new boy named Ali"
+        - ask: "Why did Ezra call Isaac over?"
+          choices: ["to show him the paper frogs", "to trade his sandwich", "to tell him to be quiet"]
+          evidence: "Ali knows how to make paper frogs that jump!"
+        - ask: "Why do you think Isaac hesitated before walking over?"
+          sample: "Isaac hesitated because he still felt a little left out."
+          evidence: "Isaac hesitated"
+
+- id: d13-the-indoor-picnic
+  title: The Indoor Picnic
+  text: |
+    Nora had planned the perfect picnic for Sunday. She made peanut butter sandwiches, packed
+    strawberries, and folded her checkered blanket. But when she woke up, gray clouds filled the sky,
+    and rain drummed on the roof.
+
+    Nora slumped at the kitchen table with her chin in her hands. "Now my whole day is ruined," she
+    said. She did not even want her breakfast.
+
+    Her mom looked at the picnic basket and smiled. "Who says a picnic has to be outside?" she asked.
+    Together they pushed two chairs apart and draped the blanket over them to make a cozy tent. Nora's
+    little brother brought his flashlight and three stuffed animals.
+
+    They ate sandwiches inside the tent while the rain kept falling. Nora told stories, and everyone
+    laughed. "This might be my best picnic yet," she decided.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Nora feel when she saw the rain?"
+          choices: ["disappointed", "excited", "proud"]
+          evidence: "Now my whole day is ruined"
+        - ask: "Which action shows that Nora was unhappy?"
+          choices: ["She did not want her breakfast.", "She told stories.", "She made sandwiches."]
+          evidence: "She did not even want her breakfast."
+        - ask: "How did Nora feel at the end of the story?"
+          sample: "Nora felt happy at the end because the tent picnic was fun."
+          evidence: "This might be my best picnic yet"
+    - focus: reasons
+      questions:
+        - ask: "Why did Nora think her day was ruined?"
+          choices: ["Rain spoiled her picnic plan.", "She lost her blanket.", "Her brother ate her sandwich."]
+          evidence: "rain drummed on the roof"
+        - ask: "Why did Mom smile at the picnic basket?"
+          choices: ["She had an idea for the picnic.", "She was very hungry.", "She found a lost toy."]
+          evidence: "Who says a picnic has to be outside?"
+        - ask: "What changed Nora's feelings about the day?"
+          sample: "Having a picnic in a cozy blanket tent changed Nora's feelings."
+          evidence: "make a cozy tent"
+
+- id: d14-no-more-training-wheels
+  title: No Training Wheels
+  text: |
+    Aiden's dad took the training wheels off his bike on a sunny Saturday morning. Aiden stared at the
+    two empty spots and gripped the handlebars. Without the little wheels, the bike looked tall and
+    wobbly.
+
+    "I'll hold the back of your seat," Dad promised. Aiden pushed the pedals, and the bike rolled slowly
+    down the sidewalk. Twice it tipped over, and twice Aiden landed on the soft grass. He brushed off
+    his knees and frowned. "Maybe I'm not ready," he said.
+
+    Dad sat down next to him. "You pedaled farther each time," he pointed out. "Let's try once more."
+
+    Aiden climbed back on and pedaled hard. The wind rushed past his ears. When he looked back, Dad was
+    waving from far away. He wasn't holding the seat at all! Aiden laughed and rang his bell again and
+    again.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Aiden feel when the training wheels came off?"
+          choices: ["nervous", "angry", "sleepy"]
+          evidence: "gripped the handlebars"
+        - ask: "How did Aiden feel after he tipped over twice?"
+          choices: ["discouraged", "proud", "silly"]
+          evidence: "Maybe I'm not ready"
+        - ask: "How did Aiden feel when he saw Dad far away?"
+          sample: "Aiden felt surprised and proud that he was riding by himself."
+          evidence: "Aiden laughed and rang his bell"
+    - focus: reasons
+      questions:
+        - ask: "Why did the bike look tall and wobbly to Aiden?"
+          choices: ["The little wheels were gone.", "It was a brand-new bike.", "The tires were flat."]
+          evidence: "Without the little wheels"
+        - ask: "What did Dad say to help Aiden try again?"
+          choices: ["You pedaled farther each time.", "You can ride tomorrow.", "The grass is soft."]
+          evidence: "You pedaled farther each time"
+        - ask: "Why did Aiden ring his bell again and again?"
+          sample: "Aiden rang his bell because he was happy he could ride on his own."
+          evidence: "He wasn't holding the seat at all!"
+
+- id: d15-grandmas-dumplings
+  title: Grandma's Dumplings
+  text: |
+    Ming's grandmother was famous in the family for her dumplings. On Saturday she finally let Ming help
+    fold them. Ming watched Grandma's quick fingers pinch each one into a neat little moon.
+
+    When Ming tried, the filling squished out the sides. Her first dumpling looked like a lumpy rock.
+    Her second one fell apart completely. Ming's cheeks grew hot, and she wanted to quit. "Mine are all
+    ugly," she said quietly.
+
+    Grandma laughed kindly. "My first dumplings looked like rocks too," she said. "My mother ate them
+    anyway." Then she showed Ming how to use less filling and press the edges slowly.
+
+    Ming tried again. Her tenth dumpling was not perfect, but it held together. At dinner, Ming's
+    father ate it first and asked for another. Ming beamed.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Ming feel when her dumplings fell apart?"
+          choices: ["frustrated", "proud", "sleepy"]
+          evidence: "she wanted to quit"
+        - ask: "Which words show that Ming was embarrassed?"
+          choices: ["Ming's cheeks grew hot", "Grandma laughed kindly", "Ming tried again"]
+          evidence: "Ming's cheeks grew hot"
+        - ask: "How did Ming feel at dinner? How do you know?"
+          sample: "Ming felt proud at dinner because she beamed when her father liked it."
+          evidence: "Ming beamed."
+    - focus: reasons
+      questions:
+        - ask: "Why did Ming want to quit?"
+          choices: ["Her dumplings did not look right.", "She was too tired.", "Grandma told her to stop."]
+          evidence: "Her first dumpling looked like a lumpy rock."
+        - ask: "Why did Grandma talk about her first dumplings?"
+          choices: ["to help Ming feel better", "to ask Ming to cook dinner", "to show off her cooking"]
+          evidence: "My first dumplings looked like rocks too"
+        - ask: "What helped Ming make a better dumpling?"
+          sample: "Using less filling and pressing the edges slowly helped Ming."
+          evidence: "use less filling and press the edges slowly"
+
+- id: d16-the-tall-tree
+  title: The Tall Tree
+  text: |
+    Daniel wanted to be the brave captain in the class play. When his teacher posted the parts, he hurried
+    to the bulletin board. Next to his name were two words: Tall Tree. Daniel's smile disappeared. "A tree doesn't
+    even talk," he grumbled on the way home.
+
+    That evening, his mom read the script with him. "Look," she said, pointing at the page. "The tree is
+    on stage the whole time. During the storm, the tree has to sway and make the wind sound."
+
+    Daniel practiced swaying his arms and whooshing like a gust of wind. Every evening he practiced in the living
+    room, making the sound louder and wilder.
+
+    On the night of the play, Daniel's storm was so good that the audience gasped. Afterward, the
+    captain ran up to him. "Your wind made the whole scene!" she said. Daniel stood up a little taller,
+    just like a tree.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Daniel feel when he saw his part?"
+          choices: ["disappointed", "excited", "proud"]
+          evidence: "Daniel's smile disappeared."
+        - ask: "How did the audience feel during the storm?"
+          choices: ["amazed", "bored", "sleepy"]
+          evidence: "the audience gasped"
+        - ask: "How did Daniel feel after the play? How do you know?"
+          sample: "Daniel felt proud because he stood up a little taller."
+          evidence: "Daniel stood up a little taller"
+    - focus: reasons
+      questions:
+        - ask: "Why was Daniel upset about being a tree?"
+          choices: ["He thought a tree was not important.", "He did not like plants.", "His costume was too big."]
+          evidence: "A tree doesn't even talk"
+        - ask: "Why did Daniel practice whooshing each night?"
+          choices: ["The tree makes the wind sound.", "His mom wanted him to be quiet.", "He wanted to be the captain."]
+          evidence: "the tree has to sway and make the wind sound"
+        - ask: "What changed how Daniel felt about his part?"
+          sample: "Daniel felt better when he learned that the tree has an important job."
+          evidence: "The tree is on stage the whole time."
+
+- id: d17-the-sunflower-pot
+  title: The Sunflower Pot
+  text: |
+    In April, Tess planted three sunflower seeds in a pot by the kitchen window. She watered them every
+    morning and checked the dirt after school. Day after day, nothing happened. The pot looked exactly
+    the same.
+
+    "Plants are too slow," Tess complained after two weeks. She crossed her arms and turned her back on
+    the pot. Her brother had planted beans, and his were already curling out of the soil.
+
+    Her aunt, who loved gardening, came for dinner and peeked into the pot. "Sunflowers take their
+    time," she explained. "Their roots grow first, deep down where you can't see them. Be patient a
+    little longer."
+
+    Three days later, Tess woke up early and ran to the window. A tiny green loop was poking up through
+    the dirt! Tess squealed and called the whole family to come and look.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Tess feel after two weeks?"
+          choices: ["impatient", "proud", "sleepy"]
+          evidence: "Plants are too slow"
+        - ask: "What did Tess do that shows she was upset?"
+          choices: ["She turned her back on the pot.", "She watered the pot.", "She ran to the window."]
+          evidence: "turned her back on the pot"
+        - ask: "How did Tess feel when she saw the green loop?"
+          sample: "Tess felt excited when she saw the sprout, so she squealed."
+          evidence: "Tess squealed"
+    - focus: reasons
+      questions:
+        - ask: "Why might Tess have felt jealous of her brother?"
+          choices: ["His beans were already growing.", "He got a bigger pot.", "He had more seeds."]
+          evidence: "his were already curling out of the soil"
+        - ask: "Why had Tess not seen anything grow?"
+          choices: ["The roots were growing first.", "She forgot to water it.", "The pot was too small."]
+          evidence: "Their roots grow first"
+        - ask: "Why did Tess call her whole family?"
+          sample: "Tess called her family because her sunflower had finally started to grow."
+          evidence: "A tiny green loop was poking up through the dirt!"
+
+- id: d18-the-shadow-rabbit
+  title: The Shadow Rabbit
+  text: |
+    Ali was excited about his first sleepover at his cousin Sami's apartment. They built a pillow fort,
+    ate popcorn, and played board games until bedtime.
+
+    But when Aunt Nadia turned off the lights, the room felt strange. The ceiling fan made a humming
+    noise that Ali had never heard before. He pulled the blanket up to his chin and thought about his
+    own bed at home. A small lump rose in his throat.
+
+    Sami noticed that Ali was very quiet. He switched on a flashlight and made a shadow rabbit on the
+    wall. "Want to hear the story of the rabbit who lost his hat?" he whispered.
+
+    Ali giggled as the rabbit hopped across the ceiling. Soon the humming fan sounded like a soft song.
+    By the time the story ended, Ali was fast asleep with a smile on his face.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Ali feel before bedtime?"
+          choices: ["excited", "lonely", "angry"]
+          evidence: "Ali was excited about his first sleepover"
+        - ask: "How did Ali feel when the lights went off?"
+          choices: ["homesick", "proud", "silly"]
+          evidence: "thought about his own bed at home"
+        - ask: "How did Ali feel at the end? How do you know?"
+          sample: "Ali felt calm and happy because he fell asleep with a smile."
+          evidence: "with a smile on his face"
+    - focus: reasons
+      questions:
+        - ask: "Why did the room feel strange to Ali?"
+          choices: ["It was not his own room.", "The pillow fort fell down.", "Sami was snoring."]
+          evidence: "thought about his own bed at home"
+        - ask: "Why did Sami make a shadow rabbit?"
+          choices: ["He noticed Ali was quiet.", "He wanted to stay up late.", "The fan was too loud."]
+          evidence: "Sami noticed that Ali was very quiet."
+        - ask: "Why did the fan sound different at the end?"
+          sample: "The fan sounded like a soft song because Ali felt calm and safe."
+          evidence: "the humming fan sounded like a soft song"
+
+- id: d19-the-birthday-card
+  title: The Birthday Card
+  text: |
+    Leah wanted to make the most beautiful birthday card ever for her mom. She folded a big sheet of
+    paper and drew a garden full of flowers. Then, while she was writing "Happy Birthday," her marker
+    slipped. A long purple line streaked right across the sun.
+
+    Leah stared at the line, and her eyes filled with tears. "It's ruined," she whispered. She thought
+    about throwing the card away and starting over, but there was no more paper.
+
+    Her grandpa leaned over her shoulder. "That line could be something new," he said. "What if it were
+    a kite string?" Leah tilted her head. Then she drew a kite at the end of the line, flying above the
+    flowers.
+
+    When Mom opened the card, she gasped. "A kite in my garden! It's perfect," she said. She hung it on
+    the fridge where everyone could see it.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Leah feel when her marker slipped?"
+          choices: ["upset", "proud", "sleepy"]
+          evidence: "her eyes filled with tears"
+        - ask: "How did Mom feel when she opened the card?"
+          choices: ["delighted", "angry", "bored"]
+          evidence: "It's perfect"
+        - ask: "How did Leah feel when she started the card?"
+          sample: "Leah felt excited because she wanted to make a beautiful card."
+          evidence: "the most beautiful birthday card ever"
+    - focus: reasons
+      questions:
+        - ask: "Why did Leah think the card was ruined?"
+          choices: ["A marker line went across the sun.", "She ran out of markers.", "Grandpa spilled water on it."]
+          evidence: "A long purple line streaked right across the sun."
+        - ask: "Why didn't Leah start a new card?"
+          choices: ["There was no more paper.", "Her grandpa said no.", "It was time for bed."]
+          evidence: "there was no more paper"
+        - ask: "How did Grandpa help Leah feel better?"
+          sample: "Grandpa helped by showing Leah that the line could be a kite string."
+          evidence: "What if it were a kite string?"
+
+- id: d20-new-glasses
+  title: New Glasses
+  text: |
+    Ezra got his first pair of glasses on Sunday afternoon. They had round blue frames, and everything
+    looked sharp and bright through them. He could even read the tiny words on the cereal box.
+
+    But on Monday morning, Ezra stood by the front door and would not put on his coat. "What if
+    everybody laughs at me?" he asked his dad. He took the glasses off and squeezed them in his hand.
+
+    Dad knelt down. "Remember how blurry the board looked last week?" he asked. "Your glasses will help
+    you see it." Ezra sighed and slowly put them back on.
+
+    At school, his friend Maya noticed right away. "Cool glasses!" she said. "They make you look like a
+    scientist." During math, Ezra could see every number on the board for the first time. He grinned
+    and raised his hand.
+  pages:
+    - focus: feelings
+      questions:
+        - ask: "How did Ezra feel on Monday morning?"
+          choices: ["worried", "excited", "angry"]
+          evidence: "What if everybody laughs at me?"
+        - ask: "Which action shows that Ezra was nervous?"
+          choices: ["He squeezed the glasses in his hand.", "He raised his hand in math.", "He read the cereal box."]
+          evidence: "squeezed them in his hand"
+        - ask: "How did Ezra feel during math? How do you know?"
+          sample: "Ezra felt happy and confident because he grinned and raised his hand."
+          evidence: "He grinned and raised his hand."
+    - focus: reasons
+      questions:
+        - ask: "Why didn't Ezra want to wear his glasses?"
+          choices: ["He thought kids would laugh.", "They were too heavy.", "He lost his coat."]
+          evidence: "What if everybody laughs at me?"
+        - ask: "Why did Dad remind Ezra about the board?"
+          choices: ["to show why glasses would help", "to tell him to clean it", "to make him late"]
+          evidence: "Your glasses will help you see it."
+        - ask: "What made Ezra feel better about his glasses?"
+          sample: "Maya's kind words and seeing the board clearly made Ezra feel better."
+          evidence: "Cool glasses!"

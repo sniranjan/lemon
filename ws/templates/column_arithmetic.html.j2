@@ -3,7 +3,8 @@
    own column on the left. Regrouping parts get dashed boxes above the columns: adding, one above
    each column a carry can land in; taking away, one above each digit of the top number. #}
 {% set n = sheet.items | length %}
-{% set per_row = 3 if n in (6, 9) else 2 %}
+{% set wide = sheet.items[0].cols >= 4 %}{# four-digit numbers (Owls): 2 a row, compact sizes #}
+{% set per_row = 2 if wide else 3 if n in (6, 9) else 2 %}
 {% block style %}
 .problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat({{ per_row }}, 1fr); grid-auto-rows: 1fr; gap: 24px; }
 .problems .card { min-height: 0; display: flex; align-items: center; justify-content: center; padding: 12px; }
@@ -13,7 +14,7 @@
 .carry { width: 40px; height: 38px; border: 2px dashed var(--accent); border-radius: 8px; margin-bottom: 4px; }
 .rule { grid-column: 1 / -1; justify-self: stretch; height: 0; border-top: 4px solid var(--ink); margin: 6px 0 10px; }
 .ans { width: 44px; height: 60px; border: 3px solid var(--ink); border-radius: 10px; }
-{% if n == 9 %}
+{% if n == 9 or wide %}
 /* 9 problems (Foxes): a compact 3 × 3 grid */
 .problems { gap: 16px 20px; }
 .problems .card { padding: 6px; border-radius: 22px; }

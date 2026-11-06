@@ -1,0 +1,87 @@
+{
+  "id": "MA-M4-E-011",
+  "subject": "math",
+  "level": "M4",
+  "section": "E",
+  "part": 2,
+  "sheet_type": "factor_pairs",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 3386473613570880704,
+  "title": "Factors and primes",
+  "parent_tip": "A prime number has only one factor pair: 1 times itself. A composite number has more. 1 is neither, so it isn't on these pages.",
+  "items": [
+    {
+      "kind": "pairs",
+      "n": 88,
+      "pairs": [
+        [
+          1,
+          88
+        ],
+        [
+          2,
+          44
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "show_first": false
+    },
+    {
+      "kind": "prime",
+      "numbers": [
+        85,
+        37,
+        81
+      ]
+    },
+    {
+      "kind": "circle",
+      "base": 4,
+      "numbers": [
+        80,
+        92,
+        22,
+        70,
+        56,
+        65,
+        66,
+        45
+      ]
+    },
+    {
+      "kind": "pairs",
+      "n": 68,
+      "pairs": [
+        [
+          1,
+          68
+        ],
+        [
+          2,
+          34
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "show_first": false
+    }
+  ],
+  "answer_key": [
+    "88: 1×88 2×44 4×22 8×11",
+    "85 composite; 37 prime; 81 composite",
+    "circle 80 92 56",
+    "68: 1×68 2×34 4×17"
+  ],
+  "new_words": [],
+  "review_words": []
+}

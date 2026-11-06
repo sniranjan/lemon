@@ -1,0 +1,98 @@
+{% extends "base.html.j2" %}
+{# Boxes drawn in a simple slanted view (depth goes up and to the right at 0.55 × 0.45 of the width).
+   Everything comes from the whole-number edges in `dims`. cubes: cube lines on the three faces;
+   base: the hidden base edges dashed and the base area given; two_boxes: side by side, same width. #}
+{% set VW, VH = 318, 200 %}
+{% set sq = {"cm": "sq cm", "in": "sq in", "ft": "sq ft", "m": "sq m"} %}
+{% macro prism(x0, y0, L, W, H, s, grid=false, base=false) %}
+{% set lp, hp, dx, dy = L * s, H * s, W * s * 0.55, W * s * 0.45 %}
+          <rect x="{{ x0 | round(1) }}" y="{{ (y0 - hp) | round(1) }}" width="{{ lp | round(1) }}" height="{{ hp | round(1) }}" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="{{ x0 | round(1) }},{{ (y0 - hp) | round(1) }} {{ (x0 + lp) | round(1) }},{{ (y0 - hp) | round(1) }} {{ (x0 + lp + dx) | round(1) }},{{ (y0 - hp - dy) | round(1) }} {{ (x0 + dx) | round(1) }},{{ (y0 - hp - dy) | round(1) }}" fill="{{ theme.tint }}" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="{{ (x0 + lp) | round(1) }},{{ y0 | round(1) }} {{ (x0 + lp + dx) | round(1) }},{{ (y0 - dy) | round(1) }} {{ (x0 + lp + dx) | round(1) }},{{ (y0 - hp - dy) | round(1) }} {{ (x0 + lp) | round(1) }},{{ (y0 - hp) | round(1) }}" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+{% if grid %}
+{% for k in range(1, L) %}
+          <line x1="{{ (x0 + k * s) | round(1) }}" y1="{{ y0 | round(1) }}" x2="{{ (x0 + k * s) | round(1) }}" y2="{{ (y0 - hp) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="{{ (x0 + k * s) | round(1) }}" y1="{{ (y0 - hp) | round(1) }}" x2="{{ (x0 + k * s + dx) | round(1) }}" y2="{{ (y0 - hp - dy) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+{% endfor %}
+{% for k in range(1, H) %}
+          <line x1="{{ x0 | round(1) }}" y1="{{ (y0 - k * s) | round(1) }}" x2="{{ (x0 + lp) | round(1) }}" y2="{{ (y0 - k * s) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="{{ (x0 + lp) | round(1) }}" y1="{{ (y0 - k * s) | round(1) }}" x2="{{ (x0 + lp + dx) | round(1) }}" y2="{{ (y0 - k * s - dy) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+{% endfor %}
+{% for j in range(1, W) %}
+{% set ox, oy = dx * j / W, dy * j / W %}
+          <line x1="{{ (x0 + ox) | round(1) }}" y1="{{ (y0 - hp - oy) | round(1) }}" x2="{{ (x0 + lp + ox) | round(1) }}" y2="{{ (y0 - hp - oy) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="{{ (x0 + lp + ox) | round(1) }}" y1="{{ (y0 - oy) | round(1) }}" x2="{{ (x0 + lp + ox) | round(1) }}" y2="{{ (y0 - hp - oy) | round(1) }}" stroke="#1d1d1f" stroke-width="1.5"/>
+{% endfor %}
+{% endif %}
+{% if base %}
+          <polyline points="{{ x0 | round(1) }},{{ y0 | round(1) }} {{ (x0 + dx) | round(1) }},{{ (y0 - dy) | round(1) }} {{ (x0 + lp + dx) | round(1) }},{{ (y0 - dy) | round(1) }}" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-dasharray="6 5"/>
+          <line x1="{{ (x0 + dx) | round(1) }}" y1="{{ (y0 - dy) | round(1) }}" x2="{{ (x0 + dx) | round(1) }}" y2="{{ (y0 - hp - dy) | round(1) }}" stroke="#1d1d1f" stroke-width="2" stroke-dasharray="6 5"/>
+{% endif %}
+{% endmacro %}
+{% macro label(x, y, text, anchor="middle") %}<text x="{{ x | round(1) }}" y="{{ y | round(1) }}" text-anchor="{{ anchor }}" dominant-baseline="middle">{{ text }}</text>{% endmacro %}
+{% block style %}
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px 20px; }
+.problems .card { position: relative; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 24px 6px 14px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+svg.box text { font-family: "Andika", sans-serif; font-weight: 700; font-size: 28px; fill: #1d1d1f; }
+.given { font-size: 28px; font-weight: 700; }
+.line { display: flex; align-items: center; gap: 10px; font-size: 30px; font-weight: 700; white-space: nowrap; }
+.ans { display: inline-block; width: 110px; height: 52px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+{% endblock %}
+{% block body %}
+    <div class="problems">
+{% for i in sheet.items %}
+{% set u = i.unit %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <svg class="box" width="{{ VW }}" height="{{ VH }}" viewBox="0 0 {{ VW }} {{ VH }}">
+{% if i.task == "cubes" %}
+{% set L, W, H = i.dims[0] %}
+{% set s = [270 / (L + 0.55 * W), 180 / (H + 0.45 * W), 40] | min %}
+{% set x0 = (VW - (L + 0.55 * W) * s) / 2 %}
+{% set y0 = VH - (VH - (H + 0.45 * W) * s) / 2 %}
+{{ prism(x0, y0, L, W, H, s, grid=true) }}
+{% elif i.task == "two_boxes" %}
+{% set l1, W, h1 = i.dims[0] %}
+{% set l2, h2 = i.dims[1][0], i.dims[1][2] %}
+{% set H = [h1, h2] | max %}
+{% set s = [170 / (l1 + l2 + 0.55 * W), 150 / (H + 0.45 * W), 26] | min %}
+{% set x0 = 78 + (170 - (l1 + l2 + 0.55 * W) * s) / 2 %}
+{% set y0 = 160 %}
+{% set dx, dy = W * s * 0.55, W * s * 0.45 %}
+{{ prism(x0, y0, l1, W, h1, s) }}
+{{ prism(x0 + l1 * s, y0, l2, W, h2, s) }}
+          {{ label(x0 + l1 * s / 2, y0 + 22, l1) }}
+          {{ label(x0 + l1 * s + l2 * s / 2, y0 + 22, l2) }}
+          {{ label(x0 - 8, y0 - h1 * s / 2, h1, "end") }}
+          {{ label(x0 + (l1 + l2) * s + dx + 6, y0 - dy - h2 * s / 2, h2, "start") }}
+          {{ label(x0 + dx / 2 - 8, y0 - h1 * s - dy / 2 - 6, W, "end") }}
+{% else %}
+{% set L, W, H = i.dims[0] %}
+{% set s = [172 / (L + 0.55 * W), 148 / (H + 0.45 * W), 30] | min %}
+{% set x0 = 82 + (172 - (L + 0.55 * W) * s) / 2 %}
+{% set y0 = 160 %}
+{% set dx, dy = W * s * 0.55, W * s * 0.45 %}
+{{ prism(x0, y0, L, W, H, s, base=(i.task == "base")) }}
+{% if i.task == "box" %}
+          {{ label(x0 + L * s / 2, y0 + 22, L ~ " " ~ u) }}
+          {{ label(x0 + L * s + dx / 2 + 8, y0 - dy / 2 + 12, W ~ " " ~ u, "start") }}
+{% endif %}
+          {{ label(x0 - 8, y0 - H * s / 2, H ~ " " ~ u, "end") }}
+{% endif %}
+        </svg>
+{% if i.task == "base" %}
+        <div class="given">Base area = {{ i.base }} {{ sq[u] }}</div>
+{% elif i.task == "two_boxes" %}
+        <div class="given">Edges in {{ {"cm": "centimeters", "in": "inches", "ft": "feet", "m": "meters"}[u] }}</div>
+{% endif %}
+{% if i.task == "cubes" %}
+        <div class="line"><span class="ans"></span><span>cubes</span></div>
+{% elif i.task == "two_boxes" %}
+        <div class="line"><span>V =</span><span class="ans"></span><span>cubic {{ u }}</span></div>
+{% else %}
+        <div class="line"><span>V =</span><span class="ans"></span><span>cubic {{ u }}</span></div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
