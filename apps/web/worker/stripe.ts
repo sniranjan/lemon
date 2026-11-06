@@ -40,6 +40,18 @@ async function call<T>(key: string, method: "GET" | "POST", path: string, params
   return data;
 }
 
+export type Price = { id: string; lookup_key: string | null; unit_amount: number | null; currency: string };
+
+/** Active prices by lookup key (Stripe allows 10 keys per request). */
+export async function pricesByLookupKey(key: string, lookupKeys: string[]): Promise<Price[]> {
+  const out: Price[] = [];
+  for (let i = 0; i < lookupKeys.length; i += 10) {
+    const q = form({ active: true, limit: 100, lookup_keys: lookupKeys.slice(i, i + 10) }).toString();
+    out.push(...(await call<{ data: Price[] }>(key, "GET", `/prices?${q}`)).data);
+  }
+  return out;
+}
+
 export function createCheckoutSession(key: string, params: Record<string, unknown>) {
   return call<CheckoutSession>(key, "POST", "/checkout/sessions", params);
 }

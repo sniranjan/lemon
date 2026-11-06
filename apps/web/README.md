@@ -25,7 +25,7 @@ npm run deploy              # build, apply D1 migrations remotely, deploy
 | `POST /api/waitlist` | `{ email, childAge? }` → row in D1 `waitlist` (upsert on email) |
 | `GET /api/previews` | slugs that have a free preview PDF in R2 |
 | `GET /api/previews/:slug` | streams `previews/<slug>.pdf` from R2, logs a row in `preview_downloads` |
-| `GET /api/catalog` | `{ previews, forSale, priceCents, currency }` for the library (forSale is empty while checkout is off) |
+| `GET /api/catalog` | `{ previews, forSale, prices }` for the library (a level is for sale once its PDFs are in R2 and its Stripe price exists) |
 | `POST /api/checkout` | `{ level }` → Stripe Checkout Session URL |
 | `POST /api/stripe/webhook` | Stripe `checkout.session.completed` → row in D1 `orders` (signature checked) |
 | `GET /api/orders/session/:sid` | thanks page → order token (asks Stripe directly if the webhook hasn't landed) |
@@ -53,15 +53,17 @@ Preview PDFs must not show internal level codes or anything referencing other pr
   npx wrangler r2 object put paperlessons-files/levels/chicks/chicks-reading-level.pdf \
     --file ../../out/english/7A/chicks-reading-level.pdf --content-type application/pdf --remote
   ```
-- **Price:** `LEVEL_PRICE_CENTS` / `CURRENCY` in `wrangler.jsonc` (one price for every level for now).
-- **Turning checkout on** (it stays off until the secret key exists):
+- **Products and prices live in Stripe.** One product per level (`level_<slug>`) with a price whose lookup
+  key is `level_<slug>`; the site reads prices from Stripe. To change a price, add a new price to the
+  product in the dashboard and move the lookup key to it (tick "transfer lookup key").
+- **Setup (once, re-runnable):** put the key in `~/.config/paperlessons/stripe.env` as
+  `STRIPE_SECRET_KEY=sk_live_…` (chmod 600, outside the repo), then:
   ```bash
-  npx wrangler secret put STRIPE_SECRET_KEY        # sk_live_… (or sk_test_… to try it)
-  npx wrangler secret put STRIPE_WEBHOOK_SECRET    # whsec_… from the webhook endpoint below
+  node scripts/stripe-setup.mjs            # dry run: shows the account and what it would create
+  node scripts/stripe-setup.mjs --apply    # products, prices, webhook endpoint, and both Worker secrets
   ```
-  In the Stripe dashboard add a webhook endpoint `https://paperlessons.com/api/stripe/webhook` with
-  events `checkout.session.completed` and `checkout.session.async_payment_succeeded`, and turn on
-  email receipts.
+  The webhook signing secret goes straight from Stripe into `wrangler secret put`; nothing is printed.
+  Turn on email receipts in the Stripe dashboard (Settings → Customer emails).
 - **Flow:** Buy → Stripe's hosted checkout → `/thanks?session_id=…` → `/orders/<token>`, a private page
   with the download links (bookmarkable; the token is the only key). Orders are in D1 `orders`.
 - **Local testing:** put test values in `.dev.vars` (git-ignored); `stripe listen --forward-to

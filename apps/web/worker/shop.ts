@@ -1,20 +1,20 @@
 // Selling whole levels as PDFs: Stripe Checkout (hosted page) → order row in D1 → download page.
 //
 // What's for sale is whatever is in R2: a level is buyable once `levels/<slug>/` holds its PDFs
-// (uploaded from the generator's booklets). Checkout stays off until the Stripe secrets are set:
+// (uploaded from the generator's booklets) AND its Stripe price exists (lookup key `level_<slug>`,
+// created by scripts/stripe-setup.mjs; change prices in the Stripe dashboard by moving the lookup key
+// to a new price). Checkout stays off until the Stripe secrets are set:
 //   npx wrangler secret put STRIPE_SECRET_KEY
 //   npx wrangler secret put STRIPE_WEBHOOK_SECRET
 import { Hono } from "hono";
 import ladder from "../src/data/ladder.json";
-import { createCheckoutSession, getCheckoutSession, newToken, verifyWebhook, type CheckoutSession } from "./stripe";
+import { createCheckoutSession, getCheckoutSession, newToken, pricesByLookupKey, verifyWebhook, type CheckoutSession } from "./stripe";
 
 export type ShopEnv = {
   DB: D1Database;
   FILES: R2Bucket;
   STRIPE_SECRET_KEY?: string;
   STRIPE_WEBHOOK_SECRET?: string;
-  LEVEL_PRICE_CENTS: string;
-  CURRENCY: string;
 };
 
 const LEVELS = new Map(ladder.map((l) => [l.slug, l]));
@@ -25,7 +25,29 @@ const SESSION = /^cs_[A-Za-z0-9_]{10,200}$/;
 const shop = new Hono<{ Bindings: ShopEnv }>();
 
 const checkoutOn = (env: ShopEnv) => Boolean(env.STRIPE_SECRET_KEY);
-const price = (env: ShopEnv) => Number(env.LEVEL_PRICE_CENTS);
+
+type LevelPrice = { id: string; cents: number; currency: string };
+let priceCache: { at: number; bySlug: Map<string, LevelPrice> } | null = null;
+
+/** Each level's Stripe price (lookup key `level_<slug>`), cached for 5 minutes per isolate. */
+async function levelPrices(env: ShopEnv): Promise<Map<string, LevelPrice>> {
+  if (!env.STRIPE_SECRET_KEY) return new Map();
+  if (priceCache && Date.now() - priceCache.at < 300_000) return priceCache.bySlug;
+  try {
+    const prices = await pricesByLookupKey(env.STRIPE_SECRET_KEY, [...LEVELS.keys()].map((s) => `level_${s}`));
+    const bySlug = new Map<string, LevelPrice>();
+    for (const p of prices) {
+      if (p.lookup_key?.startsWith("level_") && p.unit_amount != null) {
+        bySlug.set(p.lookup_key.slice("level_".length), { id: p.id, cents: p.unit_amount, currency: p.currency });
+      }
+    }
+    priceCache = { at: Date.now(), bySlug };
+  } catch (e) {
+    console.error(e);
+    if (!priceCache) return new Map();
+  }
+  return priceCache!.bySlug;
+}
 
 /** Slugs with whole-level PDFs in R2. */
 async function levelsForSale(files: R2Bucket): Promise<string[]> {
@@ -47,19 +69,23 @@ function rank(name: string): number {
   return (subject < 0 ? 3 : subject) * 2 + (name.includes("answers") ? 1 : 0);
 }
 
-/** What the library needs in one request: previews, what's buyable, and the price. */
+/** What the library needs in one request: previews, what's buyable, and each level's price. */
 shop.get("/api/catalog", async (c) => {
-  const [previewList, forSale] = await Promise.all([c.env.FILES.list({ prefix: "previews/" }), levelsForSale(c.env.FILES)]);
+  const [previewList, withFiles, prices] = await Promise.all([
+    c.env.FILES.list({ prefix: "previews/" }),
+    levelsForSale(c.env.FILES),
+    levelPrices(c.env),
+  ]);
   const previews = previewList.objects
     .map((o) => o.key.slice("previews/".length))
     .filter((k) => k.endsWith(".pdf"))
     .map((k) => k.slice(0, -4));
+  const forSale = checkoutOn(c.env) ? withFiles.filter((s) => prices.has(s)) : [];
   return c.json(
     {
       previews,
-      forSale: checkoutOn(c.env) ? forSale : [],
-      priceCents: price(c.env),
-      currency: c.env.CURRENCY,
+      forSale,
+      prices: Object.fromEntries(forSale.map((s) => [s, { cents: prices.get(s)!.cents, currency: prices.get(s)!.currency }])),
     },
     200,
     { "cache-control": "public, max-age=60" },
@@ -70,26 +96,15 @@ shop.post("/api/checkout", async (c) => {
   if (!checkoutOn(c.env)) return c.json({ ok: false, error: "Checkout isn't open yet." }, 503);
   const body = await c.req.json<{ level?: string }>().catch(() => ({}) as { level?: string });
   const level = LEVELS.get(String(body.level ?? ""));
-  if (!level || !(await levelFiles(c.env.FILES, level.slug)).length) {
+  const levelPrice = level && (await levelPrices(c.env)).get(level.slug);
+  if (!level || !levelPrice || !(await levelFiles(c.env.FILES, level.slug)).length) {
     return c.json({ ok: false, error: "That level isn't for sale yet." }, 404);
   }
   const origin = new URL(c.req.url).origin;
   try {
     const session = await createCheckoutSession(c.env.STRIPE_SECRET_KEY!, {
       mode: "payment",
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: c.env.CURRENCY,
-            unit_amount: price(c.env),
-            product_data: {
-              name: `${level.name}: the whole level (printable PDF)`,
-              description: `${level.title}. Reading and math, age ${level.age}.`,
-            },
-          },
-        },
-      ],
+      line_items: [{ price: levelPrice.id, quantity: 1 }],
       allow_promotion_codes: true,
       metadata: { level: level.slug },
       payment_intent_data: { metadata: { level: level.slug } },
@@ -106,7 +121,8 @@ shop.post("/api/checkout", async (c) => {
 /** Store a paid session as an order (idempotent) and return its download token. */
 async function recordOrder(db: D1Database, s: CheckoutSession): Promise<string | null> {
   const level = s.metadata?.level;
-  if (s.payment_status !== "paid" || !level || !LEVELS.has(level)) return null;
+  // "no_payment_required" = a 100%-off promotion code, which is still a real order.
+  if (s.payment_status === "unpaid" || s.status !== "complete" || !level || !LEVELS.has(level)) return null;
   await db
     .prepare(
       "INSERT INTO orders (session_id, token, level, email, amount_cents, currency) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(session_id) DO NOTHING",

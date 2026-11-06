@@ -38,7 +38,7 @@ export function Library() {
 function LevelCard({ level, index, catalog }: { level: Level; index: number; catalog: Catalog }) {
   const [open, setOpen] = useState(false);
   const hasPreview = catalog.previews.includes(level.slug);
-  const forSale = catalog.forSale.includes(level.slug);
+  const price = catalog.forSale.includes(level.slug) ? catalog.prices[level.slug] : undefined;
   const ready = level.status === "ready";
   return (
     <article
@@ -76,7 +76,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
         </div>
         <div className="mt-2 flex items-center gap-2">
           <PreviewButton level={level} hasPreview={hasPreview} />
-          {forSale && <BuyButton level={level} price={formatPrice(catalog.priceCents, catalog.currency)} />}
+          {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} />}
         </div>
 
         <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 peek:opacity-0">

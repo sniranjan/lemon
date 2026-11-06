@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 export type Catalog = {
   previews: string[];   // level slugs with a free preview PDF
   forSale: string[];    // level slugs that can be bought right now (empty while checkout is off)
-  priceCents: number;
-  currency: string;
+  prices: Record<string, { cents: number; currency: string }>;   // from Stripe, per level
 };
 
-const EMPTY: Catalog = { previews: [], forSale: [], priceCents: 0, currency: "usd" };
+const EMPTY: Catalog = { previews: [], forSale: [], prices: {} };
 
 /** What the library shows: previews, buyable levels and the price, asked once from the Worker. */
 export function useCatalog(): Catalog {
