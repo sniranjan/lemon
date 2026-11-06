@@ -381,3 +381,48 @@
 - { word: rake,    picture: rake,    category: toys,     level: 4A, sentences: ["Look at the rake."] }
 - { word: crow,    picture: crow,    category: animals,  level: 4A, sentences: ["I see a crow."] }
 - { word: jar,     picture: jar,     category: home,     level: 4A, sentences: ["Look at the jar."] }
+
+# ---- Cubs Reading (2A) word batch 1 (approved by the orchestrator under user delegation, 2026-11-06;
+# syllabus/drafts/2A-words-batch1.md). One new word a page on 2A pages 61–100, in this order: naming words
+# (part 1), doing words (part 2), describing words (part 3, no picture), then a mix (part 4). Word kinds are
+# hand-checked in content/grammar/english.yaml.
+- { word: pencil,   picture: pencil,   category: home,     level: 2A, sentences: ["I write my name with a pencil."] }
+- { word: button,   picture: button,   category: clothes,  level: 2A, sentences: ["My coat has a big button."] }
+- { word: ribbon,   picture: ribbon,   category: toys,     level: 2A, sentences: ["She ties a ribbon in her hair."] }
+- { word: helmet,   picture: helmet,   category: clothes,  level: 2A, sentences: ["I wear a helmet on my bike."] }
+- { word: magnet,   picture: magnet,   category: toys,     level: 2A, sentences: ["The magnet sticks to the fridge."] }
+- { word: candle,   picture: candle,   category: home,     level: 2A, sentences: ["There is a candle on the cake."] }
+- { word: napkin,   picture: napkin,   category: home,     level: 2A, sentences: ["I wipe my mouth with a napkin."] }
+- { word: kettle,   picture: kettle,   category: home,     level: 2A, sentences: ["The kettle whistles when the water is hot."] }
+- { word: rabbit,   picture: rabbit,   category: animals,  level: 2A, sentences: ["The rabbit has long ears."] }
+- { word: robin,    picture: robin,    category: animals,  level: 2A, sentences: ["A robin sings in the tree."] }
+- { word: carry,    picture: carry,    category: actions,  level: 2A, sentences: ["I carry the box to my room."] }
+- { word: bake,     picture: bake,     category: actions,  level: 2A, sentences: ["We bake cookies with Grandma."] }
+- { word: sweep,    picture: sweep,    category: actions,  level: 2A, sentences: ["I sweep the floor with a broom."] }
+- { word: skip,     picture: skip,     category: actions,  level: 2A, sentences: ["I skip down the path to the park."] }
+- { word: tiptoe,   picture: tiptoe,   category: actions,  level: 2A, sentences: ["We tiptoe past the sleeping baby."] }
+- { word: wiggle,   picture: wiggle,   category: actions,  level: 2A, sentences: ["I wiggle my toes."] }
+- { word: giggle,   picture: giggle,   category: actions,  level: 2A, sentences: ["We giggle at Dad's funny joke."] }
+- { word: munch,    picture: munch,    category: actions,  level: 2A, sentences: ["I munch a crunchy apple."] }
+- { word: sniff,    picture: sniff,    category: actions,  level: 2A, sentences: ["I sniff the pretty flower."] }
+- { word: stir,     picture: stir,     category: actions,  level: 2A, sentences: ["I stir the soup with a spoon."] }
+- { word: soft,     picture: null,     category: describing, level: 2A, sentences: ["My pillow is soft."] }
+- { word: fluffy,   picture: null,     category: describing, level: 2A, sentences: ["The lamb has fluffy wool."] }
+- { word: tiny,     picture: null,     category: describing, level: 2A, sentences: ["An ant is tiny."] }
+- { word: shiny,    picture: null,     category: describing, level: 2A, sentences: ["My new bike is shiny."] }
+- { word: sticky,   picture: null,     category: describing, level: 2A, sentences: ["Honey is sticky."] }
+- { word: noisy,    picture: null,     category: describing, level: 2A, sentences: ["The drum is noisy."] }
+- { word: quiet,    picture: null,     category: describing, level: 2A, sentences: ["We are quiet when the baby sleeps."] }
+- { word: muddy,    picture: null,     category: describing, level: 2A, sentences: ["My boots are muddy."] }
+- { word: sleepy,   picture: null,     category: describing, level: 2A, sentences: ["The baby is sleepy."] }
+- { word: hungry,   picture: null,     category: describing, level: 2A, sentences: ["I am hungry for lunch."] }
+- { word: tulip,    picture: tulip,    category: nature,   level: 2A, sentences: ["A red tulip grows in the garden."] }
+- { word: scrub,    picture: scrub,    category: actions,  level: 2A, sentences: ["I scrub my hands with soap."] }
+- { word: pony,     picture: pony,     category: animals,  level: 2A, sentences: ["I ride a brown pony at the farm."] }
+- { word: gentle,   picture: null,     category: describing, level: 2A, sentences: ["Be gentle with the kitten."] }
+- { word: hamster,  picture: hamster,  category: animals,  level: 2A, sentences: ["The hamster runs on its wheel."] }
+- { word: listen,   picture: listen,   category: actions,  level: 2A, sentences: ["I listen to the birds sing."] }
+- { word: sandwich, picture: sandwich, category: food,     level: 2A, sentences: ["Mom packs a sandwich for my lunch."] }
+- { word: silly,    picture: null,     category: describing, level: 2A, sentences: ["Dad makes a silly face."] }
+- { word: pebble,   picture: pebble,   category: nature,   level: 2A, sentences: ["I find a smooth gray pebble."] }
+- { word: lizard,   picture: lizard,   category: animals,  level: 2A, sentences: ["A green lizard sits on a warm rock."] }

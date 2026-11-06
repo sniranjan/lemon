@@ -68,9 +68,20 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
+- **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
+  A Picture Puzzles 1–60 (missing letters, then little crosswords) · B Kinds of Words 61–150 (naming / doing /
+  describing words: pick, sort, fill in) · C Read Aloud 151–200 (25 original passages of 43–60 words, each read on
+  two pages with different questions). New sheet types `word_puzzle`, `word_sort`, `read_aloud`; planner
+  `ws/reading.py` (`plan_reading`, picked up by rules `puzzle` / `word_kinds` / `passage_words`); hand-checked word
+  kinds, fill-in sentences and puzzle words in `content/grammar/english.yaml`; passages in
+  `content/passages/english.yaml`. Word batch 2A-1 (40 words: 16 naming, 12 doing, 12 describing; one new a page on
+  61–100; drafts `syllabus/drafts/2A-words-batch1.md`, `2A-passages.md`, approved under user delegation) and 28
+  pictures (`draw_2A_batch1.py`). Verify 0 errors, 0 warnings; every new word seen ≥ 3 times; booklets
+  `cubs-reading-level.pdf` (202 pages) + `-answers.pdf` and one pair per section. Preview pages 5, 45, 95, 155: the
+  Cubs free preview waits for Cubs Math (M2). Tests: `tests/test_english_2A.py`; the sentence scan covers Cubs text.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,

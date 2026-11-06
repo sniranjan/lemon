@@ -17,3 +17,21 @@ phrase_card:
   - "Point to each word as you say the phrase together. Then let your child say it alone while touching the picture."
 sentence_recite:
   - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
+# Cubs Reading (2A)
+word_puzzle:
+  - "Say the picture's word together and stretch out its sounds. Your child writes the letters that are missing."
+  - "Point to each letter box as you say the word slowly. Which sound is missing? Let your child write it."
+  - "Let your child name the picture first. If a word is tricky, say it slowly and listen for each sound together."
+word_sort_pick:   # word_sort tips, one list per layout
+  - "Read the new word and its sentence together. Then read each row: which word names a thing, is something you do, or tells what it is like?"
+  - "Naming words name a thing, doing words are something you can do, describing words tell what it is like. Act out the doing words!"
+word_sort_sort:
+  - "Read each word together. Ask: can you touch it, can you do it, or does it tell what something is like? Then check one box."
+  - "Try each word in a little sentence: \"I see a ...\" for naming words, \"I can ...\" for doing words. Praise every good try."
+word_sort_fill:
+  - "Read the sentence with each choice. Which one sounds right? Praise every good try."
+  - "Read the sentence aloud with the blank as \"hmm\", then try both words. Let your child circle the one that fits."
+read_aloud:
+  - "Let your child read the story aloud while you time it. Help with a hard word, then let them go on. Read the questions together."
+  - "Read the story together first if it helps, then let your child read it alone. Talk about the questions; the answers are in the story."
+  - "On the second reading, listen for a smooth, happy voice. Write the time and cheer if it got quicker."

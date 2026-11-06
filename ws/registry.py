@@ -24,6 +24,7 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
 })
 
 

@@ -1,0 +1,66 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.kinds { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.ask { font-size: 30px; font-weight: 700; margin: 2px 0 0; }
+/* the page's new word: picture, word and its sentence (read together) */
+.newcard { flex: none; display: flex; align-items: center; gap: 28px; padding: 8px 28px; background: var(--tint); }
+.newcard img { width: 120px; height: 120px; flex: none; }
+.newcard .tag { font-size: 20px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
+.newcard .w { font-size: 60px; font-weight: 700; line-height: 1.05; }
+.newcard .s { font-size: 30px; line-height: 1.25; }
+/* pick: three words in a row, circle one */
+.rows { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+.rows .card { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: space-around; padding: 6px 20px; }
+.rows .word { font-size: 44px; font-weight: 700; padding: 2px 22px; }
+/* sort: check one box per word */
+.sort { flex: 1; min-height: 0; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; grid-auto-rows: minmax(0, 1fr); border: 3px solid var(--ink); border-radius: 28px; overflow: hidden; }
+.sort > div { display: flex; align-items: center; justify-content: center; border-bottom: 2px solid #c9c9cd; }
+.sort > div.h { font-size: 22px; font-weight: 700; text-align: center; line-height: 1.1; padding: 4px; background: var(--tint); border-bottom: 3px solid var(--ink); }
+.sort > div.w { font-size: 38px; font-weight: 700; justify-content: flex-start; padding-left: 28px; }
+.sort .tick { width: 44px; height: 44px; border: 3px dashed var(--accent); border-radius: 12px; }
+/* fill: a sentence with a blank and two words to choose from */
+.fills { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.fills .card { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 6px 28px; }
+.fills .sentence { font-size: 30px; line-height: 1.2; }
+.fills .blank { display: inline-block; width: 120px; border-bottom: 4px solid var(--ink); }
+.fills .choices { display: flex; gap: 48px; }
+.fills .choices span { font-size: 30px; font-weight: 700; border: 3px dashed var(--accent); border-radius: 999px; padding: 0 26px; }
+{% endblock %}
+{% block body %}
+    <div class="kinds">
+{% for item in sheet.items if item.kind == "new_word" %}
+      <div class="card newcard">
+{% if item.get("picture") %}        <img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt="">
+{% endif %}
+        <div><div class="tag">New word</div><div class="w">{{ item.word }}</div><div class="s">{{ item.sentence }}</div></div>
+      </div>
+{% endfor %}
+{% set work = sheet.items | rejectattr("kind", "equalto", "new_word") | list %}
+{% if work[0].kind == "pick" %}
+      <p class="ask">{{ work[0].ask }}</p>
+      <div class="rows">
+{% for row in work %}
+        <div class="card">{% for w in row.words %}<span class="word">{{ w }}</span>{% endfor %}</div>
+{% endfor %}
+      </div>
+{% elif work[0].kind == "sort" %}
+      <p class="ask">What kind of word is it? Check one box.</p>
+      <div class="card sort">
+        <div class="h">word</div><div class="h">naming word</div><div class="h">doing word</div><div class="h">describing word</div>
+{% for item in work %}
+        <div class="w">{{ item.word }}</div><div><span class="tick"></span></div><div><span class="tick"></span></div><div><span class="tick"></span></div>
+{% endfor %}
+      </div>
+{% else %}
+      <p class="ask">Circle the word that fits. Then read the sentence.</p>
+      <div class="fills">
+{% for item in work %}
+        <div class="card">
+          <div class="sentence">{% set parts = item.text.split("___") %}{{ parts[0] }}<span class="blank"></span>{{ parts[1] }}</div>
+          <div class="choices">{% for c in item.choices %}<span>{{ c }}</span>{% endfor %}</div>
+        </div>
+{% endfor %}
+      </div>
+{% endif %}
+    </div>
+{% endblock %}
