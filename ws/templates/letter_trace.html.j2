@@ -1,0 +1,58 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.lt { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 18px; }
+.lt .card { display: flex; align-items: center; padding: 12px 22px; }
+.lt .solid { flex: none; font-weight: 700; line-height: 1; color: var(--ink); }
+.lt .model { flex: 1; min-height: 0; gap: 24px; padding-top: 2px; padding-bottom: 2px; }
+.lt .model + .practice { flex: none; }
+.lt .model .solid { font-size: 104px; min-width: 170px; text-align: center; }
+.lt .practice { flex: 1; min-height: 0; flex-direction: column; justify-content: center; gap: 10px; }
+.lt .words { display: flex; gap: 18px; }
+.lt .words .card { flex: 1; flex-direction: column; gap: 6px; padding: 12px; }
+.lt .words img { width: 130px; height: 130px; }
+.lt .word { font-size: 56px; line-height: 1.1; font-weight: 400; }
+.lt .word b { font-weight: 700; color: var(--accent); }
+/* review rows: (capital +) small letter, a dotted row, the picture word */
+.lt .row { flex: 1; min-height: 0; gap: 20px; }
+.lt .row .solid { font-size: 66px; min-width: 128px; text-align: center; }
+.lt .row .trace { flex: none; }
+.lt .row .pic { flex: none; width: 166px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.lt .row .pic img { width: 104px; height: 104px; }
+.lt .row .word { font-size: 38px; }
+{% endblock %}
+{% block body %}
+    <div class="lt">
+{% for item in sheet.items if item.kind == "letter" %}
+{% if item.step == 1 %}
+      <div class="card model">
+        <div class="solid">{{ item.upper }}{{ item.letter }}</div>
+        {{ trace(item.letter * 2, 1.6, gap=70, width_px=400) }}
+      </div>
+      <div class="card practice">
+        {{ trace_row(item.letter, 0.8, 620, solid=1) }}
+      </div>
+{% else %}
+      <div class="card practice">
+{% for r in range(3) %}
+        {{ trace_row(item.letter, 0.8, 620, solid=1 if r == 0 else 0) }}
+{% endfor %}
+      </div>
+{% endif %}
+{% endfor %}
+{% set words = sheet.items | selectattr("kind", "equalto", "word") | list %}
+{% if words %}
+      <div class="words">
+{% for item in words %}
+        <div class="card"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><div class="word">{% for text, hit in item.runs %}{% if hit %}<b>{{ text }}</b>{% else %}{{ text }}{% endif %}{% endfor %}</div></div>
+{% endfor %}
+      </div>
+{% endif %}
+{% for item in sheet.items if item.kind == "row" %}
+      <div class="card row">
+        <div class="solid">{% if item.upper %}{{ item.upper }}{% endif %}{{ item.letter }}</div>
+        {{ trace_row(item.letter, 0.92, 316) }}
+        <div class="pic"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><div class="word">{% for text, hit in item.runs %}{% if hit %}<b>{{ text }}</b>{% else %}{{ text }}{% endif %}{% endfor %}</div></div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

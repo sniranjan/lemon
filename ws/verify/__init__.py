@@ -148,7 +148,7 @@ def check_sheet(sheet: Sheet, level: Level, plan: LevelPlan) -> list[Issue]:
                 issues.append(_err(sid, f"word {w!r} belongs to level {entry.level}, after {level.level}"))
             if "max_word_length" in rules and len(w) > rules["max_word_length"]:
                 issues.append(_err(sid, f"word {w!r} is longer than {rules['max_word_length']} letters"))
-        allowed_new = rules.get("new_words_per_sheet", 0)
+        allowed_new = rules.get("new_words_per_sheet", rules.get("max_new_words", 0))
         if len(sheet.new_words) > allowed_new:
             issues.append(_err(sid, f"{len(sheet.new_words)} new words; this section allows {allowed_new}"))
         if not forced and sheet.page_number in plan.pages:
@@ -217,6 +217,20 @@ def check_group(level: Level, variant: int, sheets: list[Sheet], plan: LevelPlan
             if w in new_on:
                 issues.append(_err(s.id, f"{w!r} was already new on {new_on[w]}"))
             new_on[w] = s.id
+
+    # pages the word bank can't fill yet (letters-and-sounds levels): a warning, like a growing word bank
+    if plan.waiting:
+        reasons: dict[str, list[int]] = defaultdict(list)
+        for page, why in sorted(plan.waiting.items()):
+            reasons[why].append(page)
+        for why, pages in reasons.items():
+            issues.append(_warn(tag, f"pages {_ranges(pages)} wait for new words: {why}"))
+    elif level.rules.get("planner") == "letters":
+        min_seen = level.rules.get("min_exposures_per_word", 0)
+        counts = Counter(w for p in plan.pages.values() for w in p.new_words + p.review_words)
+        for w in sorted({w for p in plan.pages.values() for w in p.new_words}):
+            if counts[w] < min_seen:
+                issues.append(_err(tag, f"plan shows {w!r} only {counts[w]} times (needs {min_seen})"))
 
     if level.subject != "english" or not _word_sections(level):
         return issues

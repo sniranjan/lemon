@@ -1,0 +1,96 @@
+subject: english
+level: 5A
+title: Letters, sounds and first words to trace
+# Public level name: syllabus/ladder.yaml (Bunnies). Section public_name is what buyers see (CLAUDE.md §15).
+# Preview pages are built only from approved words (one per section).
+preview_pages: [10, 71, 151, 161]
+aims:
+  - Trace every lowercase letter a–z and name it with its capital letter
+  - Hear the first sound of a word and the short vowel in the middle (c + at = cat)
+  - Read and trace short words he already knows from pictures
+  - "Add about 23 new words (our choice, as in the levels before: fewer words, learned well; the chart says ~113), each seen at least 3 times"
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: null
+vocab_target: 23   # q (queen, quilt), z (zipper) and one word a page on Sound Pieces parts 7–8; source: ours
+rules:
+  # One planner for the whole level (ws/plan.py plan_letters): which letter, rime or words each page
+  # shows, from the hand-checked lists in content/sounds/english.yaml. A word of this level is new on
+  # the first page that shows it.
+  planner: letters
+  min_exposures_per_word: 3
+  max_new_words: 2
+sections:
+  # Letters in the order they are easiest to write, not a–z. Each group shares its first stroke, one
+  # he already drew in Pencil warm-ups: straight lines down; the "c" curve; down, back up and over;
+  # cups and slants; then the letters with tricky turns (e, s, f, j) and the rare q last.
+  # Each letter gets 2 pages (a big letter + a row; then three rows); each group ends with review
+  # pages (3 letters a page, the least-reviewed first).
+  - code: A
+    name: Letter Tracing
+    public_name: Letter Trails
+    pages: [1, 70]
+    sheet_types: [letter_trace]
+    standards: [L.K.1a, RF.K.1d, RF.K.3a]
+    source: ours
+    rules:
+      pages_per_letter: 2
+      review_rows: 3
+    parts:
+      - { part: 1, pages: [1, 9],   name: Straight down,   rules: { letters: [l, i, t] } }
+      - { part: 2, pages: [10, 23], name: Round like c,    rules: { letters: [c, o, a, d, g] } }
+      - { part: 3, pages: [24, 39], name: Down and over,   rules: { letters: [r, n, m, h, b, p] } }
+      - { part: 4, pages: [40, 57], name: Cups and slants, rules: { letters: [u, y, v, w, x, k, z] } }
+      - { part: 5, pages: [58, 70], name: Tricky turns,    rules: { letters: [e, s, f, j, q] } }
+
+  # Onset + rime with a picture: "c" + "at" = cat. One short vowel per part first, then rhyming
+  # families, then one new word a page (new words are short-vowel words that complete a family).
+  - code: B
+    name: Sound Parts
+    public_name: Sound Pieces
+    pages: [71, 150]
+    sheet_types: [sound_parts]
+    standards: [RF.K.2c, RF.K.2d, RF.K.3a, RF.K.3b, RF.1.3b]
+    source: ours
+    rules:
+      cards_per_sheet: 3
+    parts:
+      - { part: 1, pages: [71, 80],   name: Short a, rules: { vowels: [a] } }
+      - { part: 2, pages: [81, 90],   name: Short e, rules: { vowels: [e] } }
+      - { part: 3, pages: [91, 100],  name: Short i, rules: { vowels: [i] } }
+      - { part: 4, pages: [101, 110], name: Short o, rules: { vowels: [o] } }
+      - { part: 5, pages: [111, 120], name: Short u, rules: { vowels: [u] } }
+      - { part: 6, pages: [121, 130], name: Rhymes,  rules: { families: true }, standards: [RF.K.2a, RF.K.2e] }
+      - { part: 7, pages: [131, 140], rules: { vowels: [a, e, i, o, u], introduce: 1 }, standards: [RF.K.2e] }
+      - { part: 8, pages: [141, 150], rules: { vowels: [a, e, i, o, u], introduce: 1 }, standards: [RF.K.2e] }
+
+  # Capital and small letter side by side, a–z in order, three a page; the last page is b, d and p,
+  # the letters children mix up most.
+  - code: C
+    name: Letter Review
+    public_name: Letter Pairs
+    pages: [151, 160]
+    sheet_types: [letter_trace]
+    standards: [RF.K.1d, L.K.1a]
+    source: ours
+    rules:
+      show_upper: true
+      review_sets: [[a, b, c], [d, e, f], [g, h, i], [j, k, l], [m, n, o], [p, q, r], [s, t, u], [v, w, x],
+                    [y, z], [b, d, p]]
+
+  # Whole words to trace under their pictures: short-vowel words first, then picture words he knows,
+  # then this level's new words.
+  - code: D
+    name: Word Tracing
+    public_name: Word Trails
+    pages: [161, 200]
+    sheet_types: [word_trace]
+    standards: [L.K.1a, RF.K.1b, RF.1.3b]
+    source: ours
+    rules:
+      trace_words: 3
+    parts:
+      - { part: 1, pages: [161, 170], name: Three letters, rules: { word_set: short, min_letters: 3, max_letters: 3 } }
+      - { part: 2, pages: [171, 180], name: Four letters,  rules: { word_set: short, min_letters: 4, max_letters: 5 } }
+      - { part: 3, pages: [181, 190], name: Picture words, rules: { word_set: known, min_letters: 3, max_letters: 5 } }
+      - { part: 4, pages: [191, 200], name: New words,     rules: { word_set: this_level, max_letters: 6 } }

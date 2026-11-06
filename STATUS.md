@@ -58,7 +58,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **EN 5A (Bunnies Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 
@@ -82,6 +82,19 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `place_value`, `skip_count`, `column_arithmetic`, `math_story` (frames in `content/math/stories.yaml`).
   All 200 pages verify with 0 errors; booklets: one per section plus `cubs-math-level.pdf` (202 pages) and
   answers PDFs (`cubs-math-level-answers.pdf`, 10 pages). `ws preview` for Cubs needs Cubs Reading first.
+- **Bunnies Reading (EN 5A)** (2026-11-06): `syllabus/english/5A.yaml`: A Letter Trails 1–70 (letters in
+  stroke order: l i t · c o a d g · r n m h b p · u y v w x k z · e s f j q, 2 pages each + group reviews),
+  B Sound Pieces 71–150 (short a/e/i/o/u, rhyming families, then one new word a page), C Letter Pairs
+  151–160 (capital + small, a–z, then b/d/p), D Word Trails 161–200. New sheet types `letter_trace`,
+  `sound_parts`, `word_trace`; dotted letters come from our own single-stroke trace font (`ws/trace_font.py`);
+  planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
+  Word batch 5A-1 (23 words: queen, quilt, zipper + 20 short-vowel words; approved 2026-11-06 by the
+  orchestrator under the user's delegation; `draw_5A_batch1.py`, which also redraws **hat** as a straw sun hat
+  so it no longer looks like a cap): **Bunnies Reading is complete, 200/200 pages**, verify 0 errors and 0 warnings,
+  every new word seen at least 3 times. Optional words in the draft (igloo, otter, ox, vest, vase, yarn) are not approved.
+  `ws generate` now skips pages that still wait for words (with a note) for `--pages` and `--count` too.
+  Booklets: one per section plus `bunnies-reading-level.pdf` (202 pages = cover + 200 + log).
+  The hat redraw changes how Chicks and Ducklings pages with "hat" look: rebuild their booklets and the live previews when convenient.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in
