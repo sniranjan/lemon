@@ -160,15 +160,6 @@ def octopus_arms():
     return "".join(colored_line(a, PURPLE, 7) for a in arms)
 
 
-# One sandal seen from above (sole, T-strap, ankle strap, buckle) (one sandal, like shoe; boots is the pair).
-SANDAL = (p("M50 8 C66 8 72 22 70 40 C68 52 66 60 68 74 C70 88 62 96 50 96 C38 96 30 88 32 74 "
-            "C34 60 32 52 30 40 C28 22 34 8 50 8 Z", TAN)
-          + colored_line("M50 30 L50 64", BLUE, 7)
-          + colored_line("M31 32 C40 26 60 26 69 32", BLUE, 9)
-          + colored_line("M33 68 C42 62 58 62 67 68", BLUE, 9)
-          + r(58, 60, 9, 11, GOLD, 2))
-
-
 PICS = {
     # --- page 81: hippo, popcorn ------------------------------------------------------------
     "hippo": r(38, 64, 13, 26, HIPPO, 5) + r(72, 64, 13, 26, HIPPO, 5)
@@ -254,7 +245,6 @@ PICS = {
             + r(42, 74, 16, 14, SKIN)
             + child_face(50, 44, 30, 34, eyes_kind="happy", mouth=None)
             + c(28, 56, 4.5, PINK, False) + c(72, 56, 4.5, PINK, False)
-            + e(50, 71, 12, 10, TINT, 0, False)
             + e(50, 62, 9, 4.5, "#7A2E2E")
             + p("M42 62 C41 80 59 80 58 62 Z", "#E0607A")
             + line("M50 65 L50 72", 2),
@@ -305,10 +295,13 @@ PICS = {
            + p("M50 16 L82 68 C66 81 34 81 18 68 Z", "#D5E8B8")
            + p("M50 18 L78 64 C64 74 36 74 22 64 Z", RED)
            + "".join(e(x, y, 1.8, 3, "#222", 0, False) for x, y in ((50, 36), (42, 50), (58, 50), (34, 62), (50, 62), (66, 62))),
-    "potty": p("M64 58 L70 26 C72 18 88 20 86 28 L80 58 Z", BLUE)
-           + p("M24 62 L76 62 L70 92 L30 92 Z", BLUE)
-           + e(50, 60, 30, 9, LBLUE) + e(50, 60, 17, 4.5, DARK, 0, False)
-           + star(50, 78, 7, GOLD),
+    "potty": colored_line("M24 58 C12 56 12 70 24 70 M76 58 C88 56 88 70 76 70", BLUE, 4)
+           + p("M28 58 C26 30 34 20 50 20 C66 20 74 30 72 58 Z", BLUE)
+           + p("M22 60 L78 60 L72 88 C70 94 30 94 28 88 Z", BLUE)
+           + e(30, 92, 6, 3, BLUE) + e(70, 92, 6, 3, BLUE)
+           + e(50, 60, 32, 11, LBLUE) + e(50, 61, 19, 6, DARK, 0, False)
+           + p("M42 70 C42 62 58 62 58 70 Z", BLUE)
+           + star(50, 80, 6, GOLD),
     # --- page 91: gray, friend --------------------------------------------------------------
     "gray": crayon("#8E8E8E", "#5E5E5E"),
     "friend": heart(50, 14, 6, PINK)
@@ -344,7 +337,14 @@ PICS = {
                      ((30, 46, 20), (38, 30, -30), (56, 26, 40), (70, 34, -10), (78, 52, 30), (70, 70, -40),
                       (52, 80, 10), (34, 72, 50), (24, 58, -20), (62, 50, 0), (40, 56, 30), (50, 36, 60))),
     # --- page 94: sandal, basket ------------------------------------------------------------
-    "sandal": rot(-15, 50, 52, SANDAL),
+    # side view, toe to the right: heel cup, ankle strap with buckle, instep strap, toe strap, open toe
+    "sandal": '<g transform="translate(0 8)">' + p("M10 72 C8 54 12 40 26 36 L32 46 C22 50 20 60 22 72 Z", BLUE)
+            + colored_line("M26 40 C36 36 48 40 56 50", BLUE, 6)
+            + p("M38 72 L48 46 L57 50 L47 72 Z", BLUE)
+            + p("M58 72 C60 54 70 46 82 50 C90 53 92 62 92 72 L83 72 C83 64 80 59 74 59 C68 59 66 65 66 72 Z", BLUE)
+            + p("M4 76 C4 70 10 68 18 68 L88 68 C98 68 99 76 95 82 L10 86 C6 86 4 82 4 76 Z", TAN)
+            + line("M8 78 L94 76", 2.5, BARK)
+            + r(36, 33, 10, 11, GOLD, 2) + "</g>",
     "basket": c(38, 40, 10, RED) + r(52, 30, 15, 15, BLUE, 2) + colored_line("M22 48 C22 6 78 6 78 48", TAN, 6)
             + p("M12 46 L88 46 L80 90 C78 94 22 94 20 90 Z", TAN)
             + line("M16 62 L84 62 M18 76 L82 76 M30 50 L32 90 M44 50 L45 92 M56 50 L55 92 M70 50 L68 90", 2.5, BARK)
