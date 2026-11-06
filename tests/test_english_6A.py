@@ -214,3 +214,56 @@ def test_batch1_words_are_new_on_their_pages_with_their_picture():
         (w,) = plan.pages[p].new_words
         if bank[w].picture:
             assert w in {pic for ph in plan.pages[p].extra["phrases"] for pic in ph["pictures"]}, (p, w)
+
+
+# --- Ducklings word batch 2 (approved 2026-11-06): pages 151–190, the level is complete ----------
+
+def test_batch2_words_are_new_on_their_pages_and_seen_three_times():
+    """Words 41–80 fill pages 151–190 in word-bank order, each pictured on its page; every page of
+    the level is planned and every new word is seen at least 3 times."""
+    plan = gen.build_plan(EN6A)
+    assert sorted(plan.pages) == list(range(1, 201))
+    batch2 = [w.word for w in vocab() if w.level == "6A"][40:]
+    assert len(batch2) == 40 and batch2[0] == "zebra" and batch2[-1] == "family"
+    assert "push" in batch2 and "laugh" not in batch2
+    assert [plan.pages[p].new_words for p in range(151, 191)] == [[w] for w in batch2]
+    for p in range(151, 191):
+        (w,) = plan.pages[p].new_words
+        assert w in {pic for ph in plan.pages[p].extra["phrases"] for pic in ph["pictures"]}, (p, w)
+    seen = Counter(w for p in plan.pages.values() for w in p.new_words + p.review_words)
+    assert min(seen[w] for w in batch2) >= 3
+
+
+def test_batch2_sentences_stay_true():
+    data, known = phrases(), vocab_by_word()
+    texts = {render(f, fill, known, data) for g in data["sentence_groups"].values() for f in g
+             for fill in fillings(f, data, known)}
+    assert {"I eat peas.", "I like my blue pajamas.", "I see some sand.", "The oven is hot.", "The ice is cold.",
+            "The ant can crawl.", "The seal can swim.", "I can push.", "The giraffe is big.",
+            "I love my family."} <= texts
+    assert not {"The peas is green.", "Here is my shorts.", "Here is my oven.", "The ant can hug.",
+                "The tiger can push.", "The lamb is big.", "The giraffe is little.", "The fridge is hot.",
+                "This is a ice."} & texts
+    # hug, push, throw and catch are people-only: the pictures show a child
+    assert not [t for t in texts if t.startswith("The ") and t.split()[-1].rstrip(".") in
+                {"hug", "push", "throw", "catch"}]
+
+
+def test_golden_batch2_plural_and_mass(out_dir, golden):
+    """A plural word takes no article and a mass word takes "some". A fixed plan entry."""
+    from ws.plan import LevelPlan, PagePlan
+    from ws.render import write_html
+
+    phrases_ = [_phrase("I eat {a} {eatable}.", eatable="peas"),
+                _phrase("I see {a} {thing}.", thing="sand"),
+                _phrase("The {temp_thing} is {temp}.", temp_thing="oven", temp="hot")]
+    plan = LevelPlan(subject="english", level="6A")
+    plan.pages[170] = PagePlan(page=170, new_words=["peas"], extra={"phrases": phrases_},
+                               review_words=["hot", "oven", "sand"])
+    sheet = gen.build_sheet(EN6A, 170, plan)
+    assert registry.get(sheet.sheet_type).verify(sheet) == []
+    assert [i["text"] for i in sheet.items] == ["I eat peas.", "I see some sand.", "The oven is hot."]
+    path = out_dir / "plural-mass.html"
+    write_html(sheet, EN6A, path)
+    golden(f"{sheet.id}-plural-mass.html", path.read_text())
+    golden(f"{sheet.id}-plural-mass.json", sheet.model_dump_json(indent=2) + "\n")

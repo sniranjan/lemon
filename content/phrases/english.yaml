@@ -14,7 +14,7 @@
 allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
 
 # Nouns that read as plural: no article ("blue pants"), and never in "... is ..." frames.
-plural: [grapes, pants, boots, blocks, teeth]
+plural: [grapes, pants, boots, blocks, teeth, peas, pajamas, shorts]
 
 # The color each picture is drawn in (its main fill, checked by eye on the pictures). Only pictures
 # that are clearly one color are listed, so "a red apple" always matches what the child sees.
@@ -76,29 +76,39 @@ picture_colors:
   chick: yellow
   whale: blue
   crab: red
+  # Ducklings word batch 2 (checked on the drawn pictures)
+  wagon: red
+  crayon: red
+  cap: blue
+  sweater: green
+  pajamas: blue
+  shorts: red
+  peas: green
+  grass: green
 
 # big / little: nouns each is true of, in real life and in the picture (the picture is drawn large or
 # small to match). Hand-checked like the colors: no "a little whale", no "a big bee". No mass or plural nouns.
 sizes:
   big: [dog, bear, horse, cow, lion, whale, tree, truck, bus, train, tractor, plane, boat, ball, cake,
-        teddy, box, pig, sheep, goat, balloon]
+        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled]
   little: [mouse, bee, bird, chick, kitten, puppy, snail, crab, frog, duck, fish, egg, cookie, key, rock,
-           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat]
+           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen]
 
 # hot / cold: only things that really are (and whose pictures don't say otherwise; the soup steams).
 temperatures:
-  hot: [sun, soup]
-  cold: [snow, snowman, milk, juice]
+  hot: [sun, soup, oven, pot]          # the oven glows, the pot steams
+  cold: [snow, snowman, milk, juice, ice, fridge]
 
 # Who can do each action ("The dog can run."). People (the `person` slot and "I") can do all of these.
 # A sentence with an animal doing an action shows the animal only (the action pictures show a child).
 can_do:
-  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten]
-  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten]
-  swim: [fish, duck, frog, turtle, dog, whale]
+  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten,
+        zebra, tiger, giraffe, lamb]
+  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten, lamb]
+  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin]
   eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion,
-        puppy, kitten, chick, crab, snail, whale]
-  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten]
+        puppy, kitten, chick, crab, snail, whale, zebra, tiger, giraffe, hen, ant, seal, penguin, lamb]
+  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten, tiger, seal, lamb]
   sit: [dog, cat, monkey, bunny, puppy, kitten]
   clap: []
   wash: []
@@ -106,15 +116,23 @@ can_do:
   hop: [bunny, frog, bird]
   sing: [bird]
   dance: []
-  nap: [cat, dog, bear, pig, lion, baby, puppy, kitten]
+  nap: [cat, dog, bear, pig, lion, baby, puppy, kitten, tiger, seal, lamb]
   dig: [dog, bunny, puppy, crab]
-  walk: [dog, cat, horse, cow, pig, sheep, goat, duck, bear, lion, mouse, turtle, monkey, puppy, kitten, chick, crab]
+  walk: [dog, cat, horse, cow, pig, sheep, goat, duck, bear, lion, mouse, turtle, monkey, puppy, kitten, chick, crab,
+         zebra, tiger, giraffe, hen, ant, penguin, lamb]
   kick: [horse]
   wave: []
   read: []
   draw: []
-  climb: [monkey, cat, bear, goat, mouse, kitten, snail]
+  climb: [monkey, cat, bear, goat, mouse, kitten, snail, ant]
   hide: [cat, mouse, bunny, turtle, kitten, crab, snail]
+  # Ducklings word batch 2. hug / push / throw / catch: people only (the pictures show a child).
+  hug: []
+  push: []
+  throw: []
+  catch: []
+  crawl: [ant, turtle, crab, snail]
+  splash: [duck, dog, seal, whale]
 
 # Actions the child (3–4) can't truthfully say "I can ___" about: he likes to read, but can't yet.
 child_cannot: [read]
@@ -157,7 +175,8 @@ slots:
   thing:   { categories: [food, toys, animals, nature, home, vehicles, clothes] }
   colored: { colored: true }
   colored_mine: { categories: [toys, clothes, home], colored: true }   # "my red hat"
-  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny, puppy, kitten] }
+  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny, puppy, kitten],
+             except: [oven, fridge, window, pot] }   # "Here is my oven." isn't something a child says
   animal:  { categories: [animals], subject: true }
   person:  { words: [mom, dad, grandma, grandpa], people: true }
   size:    { words: [big, little] }

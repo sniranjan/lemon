@@ -1,0 +1,168 @@
+{
+  "id": "EN-6A-C-070",
+  "subject": "english",
+  "level": "6A",
+  "section": "C",
+  "part": 7,
+  "sheet_type": "sentence_recite",
+  "page_number": 170,
+  "variant": 1,
+  "seed": 1031588068622908834,
+  "title": "Say it three times",
+  "parent_tip": "Point to the picture and ask a question the sentence answers. Then say the sentence together and color a circle.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "I eat peas.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "eat",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "peas",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I eat {a} {eatable}.",
+      "slots": {
+        "eatable": "peas"
+      },
+      "word": "peas",
+      "words": [
+        "peas"
+      ],
+      "pictures": [
+        "peas"
+      ],
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "I see some sand.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "see",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "some",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "sand",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I see {a} {thing}.",
+      "slots": {
+        "thing": "sand"
+      },
+      "word": "sand",
+      "words": [
+        "sand"
+      ],
+      "pictures": [
+        "sand"
+      ],
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "The oven is hot.",
+      "runs": [
+        [
+          "The",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "oven",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "is",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "hot",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "The {temp_thing} is {temp}.",
+      "slots": {
+        "temp_thing": "oven",
+        "temp": "hot"
+      },
+      "word": "oven",
+      "words": [
+        "oven",
+        "hot"
+      ],
+      "pictures": [
+        "oven"
+      ],
+      "times": 3
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "peas"
+  ],
+  "review_words": [
+    "hot",
+    "oven",
+    "sand"
+  ]
+}

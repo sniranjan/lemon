@@ -206,8 +206,9 @@ def test_longest_real_words_fit_both_card_types(out_dir):
     from ws.content import vocab
     from ws.render import render_pngs
 
-    longest = max(len(w.word) for w in vocab())
-    pages = sorted({(i // 2) + 1 for i, w in enumerate(vocab()) if len(w.word) == longest})
+    bank = [w for w in vocab() if w.level == "7A"]   # 7A cards: Chicks words, 2 a page in bank order
+    longest = max(len(w.word) for w in bank)
+    pages = sorted({(i // 2) + 1 for i, w in enumerate(bank) if len(w.word) == longest})
     made = gen.generate_pages(EN7A, pages) + gen.generate_pages(EN7A, pages, variant=2, sheet_type="word_picture_sentence")
     for r in render_pngs([p for _, p in made]):
         assert r.problems == [], (r.html.name, r.problems)
