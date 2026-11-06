@@ -35,7 +35,7 @@ American spelling.
 | 1 | hop | actions | I can hop / The bunny can hop. | child hopping |
 | 2 | sing | actions | I can sing / Mom can sing. | child singing (music notes) |
 | 3 | dance | actions | I can dance | child dancing |
-| 4 | fly | actions | The bird can fly. | bird flapping its wings |
+| 4 | nap | actions | I can nap / The cat can nap. | child napping on a pillow |
 | 5 | dig | actions | The dog can dig. / I can dig | child with spade |
 | 6 | walk | actions | I can walk / Grandpa can walk | child walking |
 | 7 | kick | actions | I can kick | child kicking |
@@ -53,7 +53,7 @@ American spelling.
 | 19 | mitten | clothes | my mitten / my blue mitten | mitten (one color) |
 | 20 | skirt | clothes | my skirt / my pink skirt | skirt (one color) |
 | 21 | teddy | toys | my teddy | teddy bear |
-| 22 | crayon | toys | my crayon | crayon (not a color word, so a neutral color like brown) |
+| 22 | bag | toys | my bag / my red bag | backpack (one color) |
 | 23 | puzzle | toys | my puzzle | jigsaw piece |
 | 24 | robot | toys | my robot | friendly toy robot |
 | 25 | bucket | toys | my bucket | beach bucket |
@@ -81,6 +81,12 @@ words need a little code: a picture-size option and a "hot/cold things" list, li
 2. Is "and" OK as a new function word? It is the only word on the sheets so far that the child didn't
    meet in 7A. It appears in "mom and dad" phrases (pages 51–60).
 3. big/little/hot/cold: OK to add now (with the small code change), or keep 6A to nouns and actions?
+4. Pages 1–30 review the 7A words in word-bank order. Once 7A has all 200 words, the 80 newest come
+   back only in B/C phrases, not in the grids. Should the grids favor the words 7A showed least?
+5. "The mouse can eat." shows the mouse next to the action picture, which is a child eating. Is that
+   OK, or should action sentences with an animal show the animal only?
+6. Actions are limited to things people can really do, because "I can ___" and "Grandma can ___" accept
+   any action. That is why "fly" isn't proposed.
 
 ## Phrase frames (B, `content/phrases/english.yaml`)
 
