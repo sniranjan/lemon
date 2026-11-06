@@ -1,0 +1,46 @@
+# Owls Reading, section B "Word Detective" (pages 61–100): meaning from context (L.4.4a).
+# Each read serves 2 pages; each page bolds its own 2 `targets`. Questions: what does each bold word
+# mean (circle A, B or C), then which words in the text were the clue (written).
+# Schema and checks: ws/longreads.py. `evidence`: words copied exactly from the text.
+
+- id: b01-sunflower
+  title: The Sunflower Contest
+  text: |
+    Marco wanted to grow a sunflower for the school garden contest. His sister Ana gave him a tiny
+    seedling in a paper cup. "Be gentle," she warned. "It is fragile, which means it can break very
+    easily."
+
+    Marco carried the cup outside with both hands. Just as he set it down, the sprinkler turned on. In
+    seconds, Marco was drenched. He was soaked from his hair to his sneakers, but the seedling was safe.
+
+    All summer Marco watered his plant and pulled out weeds. By August, the sunflower was enormous. It
+    was not small like the seedling anymore. It was taller than the garage door!
+
+    On the morning of the contest, Marco felt reluctant to dig it up. He did not want to take it away
+    from the bees that visited it every morning. In the end, Ana helped him lift it, roots and all, and
+    they pulled it to school in a wagon. The bees followed them halfway there.
+  pages:
+    - focus: definition, restatement
+      targets: [fragile, drenched]
+      questions:
+        - ask: What does fragile mean?
+          choices: [easy to break, very heavy, bright yellow]
+          evidence: which means it can break very easily
+        - ask: What does drenched mean?
+          choices: [very wet, very cold, very tired]
+          evidence: He was soaked from his hair to his sneakers
+        - ask: Which words helped you know what drenched means?
+          sample: "\"He was soaked from his hair to his sneakers\" told me drenched means very wet."
+          evidence: He was soaked from his hair to his sneakers
+    - focus: contrast, example
+      targets: [enormous, reluctant]
+      questions:
+        - ask: What does enormous mean?
+          choices: [very big, very old, very pretty]
+          evidence: It was taller than the garage door!
+        - ask: What does reluctant mean?
+          choices: [not wanting to do something, ready to do something, too sleepy to do something]
+          evidence: He did not want to take it away
+        - ask: Which words helped you know what reluctant means?
+          sample: "\"He did not want to take it away from the bees\" showed me that reluctant means not wanting to."
+          evidence: He did not want to take it away from the bees

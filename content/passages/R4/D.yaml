@@ -1,0 +1,49 @@
+# Owls Reading, section D "Two Texts" (pages 141–170): two short texts on one topic (RI.4.9; some pairs
+# set a firsthand account beside an article, RI.4.6). Both texts are read on one page; the 5 questions
+# (3 circle, 2 written; at least 2 need both texts, with an evidence quote from each) are on the next.
+# Facts are simple, well established and checkable. Schema and checks: ws/longreads.py.
+
+- id: d01-monarchs
+  kind: article
+  title: Monarch Butterflies
+  texts:
+    - title: The Long Trip South
+      kind: article
+      text: |
+        Every fall, millions of monarch butterflies leave the northern United States and Canada. They
+        fly south to the mountains of central Mexico. Some of them travel nearly 3,000 miles! None of
+        these butterflies has ever made the trip before, yet each one finds its way. Scientists think
+        that monarchs use the sun to help them steer.
+
+        In Mexico, the monarchs spend the winter in cool fir forests high in the mountains. They crowd
+        together on the branches to stay warm. When spring comes, they start flying north again. They
+        lay eggs on milkweed plants along the way, and their children and grandchildren finish the trip.
+    - title: A Morning in the Butterfly Forest
+      kind: journal
+      text: |
+        January 14. Today my father and I hiked up a steep trail in the mountains of central Mexico.
+        The air was so cold that I could see my breath. At first, the fir trees looked very strange to
+        me. Their branches were covered with brown, droopy clumps that looked like dry leaves.
+
+        Then the sun came out. Suddenly the brown clumps began to open and glow orange. They were
+        butterflies, thousands and thousands of monarchs! A few floated gently down and landed on my
+        sleeve. The forest was so quiet that I could hear the soft whisper of their
+        wings. I will remember that magical morning for the rest of my life.
+  pages:
+    - focus: details, firsthand and secondhand, putting the texts together
+      questions:
+        - ask: Where do the monarchs spend the winter?
+          choices: [in fir forests in Mexico, in the north of Canada, on milkweed plants by the sea]
+          evidence: the monarchs spend the winter in cool fir forests high in the mountains
+        - ask: Which text was written by someone who was there?
+          choices: [Text 2, Text 1, both texts]
+          evidence: Today my father and I hiked up a steep trail
+        - ask: What do BOTH texts say about the monarchs in the trees?
+          choices: [Many of them crowd together., They lay eggs on the branches., They make a loud noise.]
+          evidence: [They crowd together on the branches, thousands and thousands of monarchs]
+        - ask: Use Text 1 to explain the brown clumps in Text 2.
+          sample: The clumps were monarchs crowded together on the branches to stay warm.
+          evidence: [They crowd together on the branches to stay warm., "covered with brown, droopy clumps"]
+        - ask: What does Text 1 tell you that Text 2 does not?
+          sample: Text 1 tells how far the monarchs fly and that they use the sun to steer.
+          evidence: Some of them travel nearly 3,000 miles!

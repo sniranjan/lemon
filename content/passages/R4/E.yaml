@@ -1,0 +1,51 @@
+# Owls Reading, section E "The Big Idea" (pages 171–200): first summaries. Stories (kind: story, RL.4.2)
+# and articles (kind: article, RI.4.2) take turns. Each read serves 2 pages; each page has 2 circle
+# questions, then the big idea / summary / lesson written in one sentence (the last question; with a
+# `starter` for part 1, pages 171–180). Schema and checks: ws/longreads.py.
+
+- id: e01-garden-lot
+  kind: story
+  title: The Empty Lot
+  text: |
+    Behind Lena's apartment building was an empty lot full of weeds, broken bricks, and old cans. Lena
+    pictured it full of tomatoes and sunflowers instead.
+
+    "That's too much work for one kid," her neighbor Mr. Diaz said when she told him her idea.
+
+    Lena decided to start small anyway. On Saturday she filled two bags with cans. On Sunday she pulled
+    weeds. The next weekend, Mr. Diaz came outside with a rake.
+
+    By June, twelve neighbors were working together. In August, they shared a picnic in the new
+    garden. Mr. Diaz raised his fork. "To Lena," he said, "who
+    started with two bags of cans."
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A girl starts a garden, and her neighbors join her.
+            - A girl collects cans to earn money.
+            - A man teaches children how to grow tomatoes.
+          evidence: By June, twelve neighbors were working together.
+        - ask: Why did Lena start with only two bags of cans?
+          choices: [She decided to start small., She ran out of bags., Mr. Diaz told her to.]
+          evidence: Lena decided to start small anyway.
+        - ask: Write the big idea of the story in one sentence.
+          starter: "Lena "
+          sample: Lena started cleaning the empty lot by herself, and soon her neighbors helped her make a garden.
+          evidence: By June, twelve neighbors were working together.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Lena began a garden, and her neighbors joined in.
+            - Lena pulled weeds on Sunday.
+            - Mr. Diaz came outside with a rake.
+          evidence: By June, twelve neighbors were working together.
+        - ask: Which detail is too small to put in a summary?
+          choices: [Mr. Diaz raised his fork., Lena wanted to make a garden., The neighbors worked together.]
+          evidence: Mr. Diaz raised his fork.
+        - ask: What lesson does the story teach? Use one sentence.
+          starter: "The story teaches "
+          sample: The story teaches that starting small can lead to something big.
+          evidence: who started with two bags of cans

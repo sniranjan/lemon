@@ -1,0 +1,27 @@
+{% extends "base.html.j2" %}
+{% import "_long_read.html.j2" as lr %}
+{% block style %}
+{{ lr.style() }}
+.big { position: relative; border: 3px solid var(--accent); border-radius: 18px; padding: 12px 16px 4px; margin-top: 10px; }
+/* the reminder sits on the box's top border, like a label, so it takes no height of its own */
+.big .hint { position: absolute; top: -14px; left: 18px; background: #fff; padding: 0 8px; font-size: 20px; line-height: 24px; color: #3a3a40; }
+.big .hint b { color: var(--accent); }
+{% endblock %}
+{% block body %}
+    <div class="card fit">
+{% set head = sheet.items[0] %}
+{{ lr.read_card(head, ("Read it again." if head.again else "Read it.") ~ " What is it mostly about?") }}
+    <div class="qs">
+{% for q in sheet.items[1:] %}
+{% if loop.last %}
+      <div class="big">
+        <div class="hint">{% if head.type == "story" %}<b>Who?</b> · <b>What did they want or do?</b> · <b>How did it end?</b>{% else %}<b>What is it about?</b> · <b>What is the most important point?</b>{% endif %}</div>
+{{ lr.question(q) }}
+      </div>
+{% else %}
+{{ lr.question(q) }}
+{% endif %}
+{% endfor %}
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+# Owls Reading, section C "True Facts" (pages 101–140): nonfiction with headings and a figure (RI.4.7).
+# Each article is read on one page (2–3 `## ` headings, then a figure drawn from data with a caption);
+# its 5 questions (3 circle, 2 written; at least one uses the figure) are on the next page.
+# Facts are simple, well established and checkable. Schema and checks: ws/longreads.py.
+
+- id: c01-water-cycle
+  kind: article
+  title: Where Rain Comes From
+  text: |
+    ## The Sun Starts It
+
+    Water moves around our planet on a path that never ends, and scientists call this path the water cycle. It begins when the sun
+    warms water in oceans, lakes, and rivers. Some of the warm water turns into an invisible gas called
+    water vapor. This change is called evaporation.
+
+    ## Clouds Form
+
+    Water vapor rises into the sky, where the air is much colder. The cold air cools the vapor, and it
+    turns back into tiny drops of water. Billions of these drops crowd together to make a cloud. This
+    change is called condensation.
+
+    ## Back to the Ground
+
+    When the drops in a cloud join together, they grow too heavy to float, so they fall. Water that
+    falls from clouds is called precipitation. It can be rain, snow, sleet, or hail. The water runs into
+    rivers and oceans or soaks into the ground, and then the sun warms it again.
+  figure:
+    kind: cycle
+    title: The Water Cycle
+    items: [Sun warms the water, Water vapor rises, Clouds form, Rain or snow falls]
+    caption: The same water goes around and around, again and again.
+  pages:
+    - focus: headings, key words, the diagram
+      questions:
+        - ask: What is evaporation?
+          choices: [water turning into water vapor, water falling from a cloud, drops crowding into a cloud]
+          evidence: Some of the warm water turns into an invisible gas called water vapor.
+        - ask: Which heading tells where to read about rain?
+          choices: [Back to the Ground, Clouds Form, The Sun Starts It]
+          evidence: Back to the Ground
+        - ask: In the diagram, what comes right after "Water vapor rises"?
+          choices: [Clouds form, Rain or snow falls, Sun warms the water]
+          evidence: Clouds form
+        - ask: Why do the drops of water fall from a cloud?
+          sample: The drops join together and grow too heavy to float, so they fall.
+          evidence: they grow too heavy to float, so they fall
+        - ask: What does the diagram show that helps you understand?
+          sample: It shows the steps of the water cycle in order and that they happen again and again.
+          evidence: The same water goes around and around, again and again.

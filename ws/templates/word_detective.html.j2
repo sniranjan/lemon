@@ -1,0 +1,16 @@
+{% extends "base.html.j2" %}
+{% import "_long_read.html.j2" as lr %}
+{% block style %}
+{{ lr.style() }}
+{% endblock %}
+{% block body %}
+    <div class="card fit">
+{% set head = sheet.items[0] %}
+{{ lr.read_card(head, ("Read it again. " if head.again else "Read it. ") ~ "Look for clues to the words in bold.") }}
+    <div class="qs">
+{% for q in sheet.items[1:] %}
+{{ lr.question(q, head.targets) }}
+{% endfor %}
+    </div>
+    </div>
+{% endblock %}
