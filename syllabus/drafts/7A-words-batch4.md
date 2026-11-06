@@ -1,6 +1,9 @@
 # Chicks reading (7A): word batch 4, draft for approval
 
-**Status: not approved.** Nothing below has been drawn, added to the word bank, or used on a sheet.
+**Status: approved 2026-11-06**, with one change: **hose** replaces glasses (#20). Decisions: bubbles, rice,
+noodles are `mass: true` (and plural); brown and black stay as crayon swatches; ride, roll, cook, pour kept;
+chin and neck drawn as a face with the part lightly tinted. Drawn (`scripts/pictures/draw_7A_batch4.py`),
+added to the word bank and used on pages 61–80.
 
 ## Where things stand
 
@@ -45,7 +48,7 @@ don't look alike.
 | 17 | bubbles | toys (`mass: true`) | I blow big bubbles. | bubble wand + 3 bubbles |
 | 18 | deer | animals | The deer runs fast. | deer with small antlers |
 | 19 | ride | actions | I ride my bike. | child riding a tricycle |
-| 20 | glasses | clothes (`mass: true`?) | Grandpa wears his glasses. | pair of eyeglasses |
+| 20 | ~~glasses~~ **hose** | home | We water flowers with the hose. | green coiled garden hose with nozzle |
 | 21 | tomato | food | The tomato is red. | round tomato with stem |
 | 22 | crib | home | The baby sleeps in a crib. | crib with bars |
 | 23 | brown | colors (`needs_color`) | The bear is brown. | brown crayon (`kind: color_swatch`) |

@@ -14,7 +14,8 @@
 allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
 
 # Nouns that read as plural: no article ("blue pants"), and never in "... is ..." frames.
-plural: [grapes, pants, boots, blocks, teeth]
+plural: [grapes, pants, boots, blocks, teeth,
+         bubbles, noodles]   # Chicks word batch 4
 
 # The color each picture is drawn in (its main fill, checked by eye on the pictures). Only pictures
 # that are clearly one color are listed, so "a red apple" always matches what the child sees.

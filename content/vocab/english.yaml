@@ -127,6 +127,48 @@
 - { word: teeth,   picture: teeth,   category: body,     level: 7A, sentences: ["I brush my teeth."] }
 - { word: slide,   picture: slide,   category: toys,     level: 7A, sentences: ["I go down the slide."] }
 
+# Batch 4 (approved 2026-11-06): 7A pages 61-80 (syllabus/drafts/7A-words-batch4.md; hose replaces glasses)
+- { word: fox,     picture: fox,     category: animals,  level: 7A, sentences: ["The fox has a fluffy tail."] }
+- { word: sink,    picture: sink,    category: home,     level: 7A, sentences: ["Wash your hands at the sink."] }
+- { word: lemon,   picture: lemon,   category: food,     level: 7A, sentences: ["The lemon is sour."] }
+- { word: scooter, picture: scooter, category: vehicles, level: 7A, sentences: ["I ride my scooter."] }
+- { word: drink,   picture: drink,   category: actions,  level: 7A, sentences: ["I drink my milk."] }
+- { word: nest,    picture: nest,    category: nature,   level: 7A, sentences: ["Eggs sit in the nest."] }
+- { word: belt,    picture: belt,    category: clothes,  level: 7A, sentences: ["Dad wears a belt."] }
+- { word: koala,   picture: koala,   category: animals,  level: 7A, sentences: ["The koala hugs the tree."] }
+- { word: rice,    picture: rice,    category: food,     level: 7A, mass: true, sentences: ["I eat rice with a spoon."] }
+- { word: rocket,  picture: rocket,  category: vehicles, level: 7A, sentences: ["The rocket goes up, up!"] }
+- { word: chin,    picture: chin,    category: body,     level: 7A, sentences: ["Tap your chin."] }
+- { word: puppet,  picture: puppet,  category: toys,     level: 7A, sentences: ["My puppet says hello."] }
+- { word: smile,   picture: smile,   category: actions,  level: 7A, sentences: ["Show me a big smile."] }
+- { word: broom,   picture: broom,   category: home,     level: 7A, sentences: ["Sweep with the broom."] }
+- { word: potato,  picture: potato,  category: food,     level: 7A, sentences: ["Mom cooks a potato."] }
+- { word: parrot,  picture: parrot,  category: animals,  level: 7A, sentences: ["The parrot can talk."] }
+- { word: bubbles, picture: bubbles, category: toys,     level: 7A, mass: true, sentences: ["I blow big bubbles."] }
+- { word: deer,    picture: deer,    category: animals,  level: 7A, sentences: ["The deer runs fast."] }
+- { word: ride,    picture: ride,    category: actions,  level: 7A, sentences: ["I ride my bike."] }
+- { word: hose,    picture: hose,    category: home,     level: 7A, sentences: ["We water flowers with the hose."] }
+- { word: tomato,  picture: tomato,  category: food,     level: 7A, sentences: ["The tomato is red."] }
+- { word: crib,    picture: crib,    category: home,     level: 7A, sentences: ["The baby sleeps in a crib."] }
+- { word: brown,   picture: brown,   category: colors,   level: 7A, needs_color: true, sentences: ["The bear is brown."] }
+- { word: camel,   picture: camel,   category: animals,  level: 7A, sentences: ["The camel has a hump."] }
+- { word: pour,    picture: pour,    category: actions,  level: 7A, sentences: ["I pour the milk."] }
+- { word: feather, picture: feather, category: nature,   level: 7A, sentences: ["The feather is soft."] }
+- { word: bib,     picture: bib,     category: clothes,  level: 7A, sentences: ["The baby wears a bib."] }
+- { word: cherry,  picture: cherry,  category: food,     level: 7A, sentences: ["A cherry is small."] }
+- { word: neck,    picture: neck,    category: body,     level: 7A, sentences: ["I wash my neck."] }
+- { word: tent,    picture: tent,    category: toys,     level: 7A, sentences: ["We sleep in a tent."] }
+- { word: cook,    picture: cook,    category: actions,  level: 7A, sentences: ["Dad and I cook."] }
+- { word: acorn,   picture: acorn,   category: nature,   level: 7A, sentences: ["The squirrel has an acorn."] }
+- { word: noodles, picture: noodles, category: food,     level: 7A, mass: true, sentences: ["I slurp my noodles."] }
+- { word: donkey,  picture: donkey,  category: animals,  level: 7A, sentences: ["The donkey says hee-haw."] }
+- { word: black,   picture: black,   category: colors,   level: 7A, needs_color: true, sentences: ["The cat is black."] }
+- { word: bathtub, picture: bathtub, category: home,     level: 7A, sentences: ["I sit in the bathtub."] }
+- { word: roll,    picture: roll,    category: actions,  level: 7A, sentences: ["I roll the ball."] }
+- { word: pumpkin, picture: pumpkin, category: food,     level: 7A, sentences: ["The pumpkin is big and orange."] }
+- { word: hill,    picture: hill,    category: nature,   level: 7A, sentences: ["We run up the hill."] }
+- { word: rug,     picture: rug,     category: home,     level: 7A, sentences: ["The cat naps on the rug."] }
+
 # --- Ducklings Reading (6A) word batch 1, approved 2026-11-06 (syllabus/drafts/6A-words-batch1.md) ---
 # One new word a page, in this order: words 1–30 on pages 71–100 (Little Phrases), 31–40 on pages
 # 141–150 (Say a Sentence). big/little/hot/cold have no picture of their own: the noun's picture carries

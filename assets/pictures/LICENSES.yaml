@@ -156,3 +156,45 @@ chick:   { source: original, licence: original }
 whale:   { source: original, licence: original }
 crab:    { source: original, licence: original }
 snail:   { source: original, licence: original }
+
+# --- Chicks Reading (7A) word batch 4, approved 2026-11-06 (scripts/pictures/draw_7A_batch4.py) ---
+fox:     { source: original, licence: original }
+sink:    { source: original, licence: original }
+lemon:   { source: original, licence: original }
+scooter: { source: original, licence: original }
+drink:   { source: original, licence: original }
+nest:    { source: original, licence: original }
+belt:    { source: original, licence: original }
+koala:   { source: original, licence: original }
+rice:    { source: original, licence: original }
+rocket:  { source: original, licence: original }
+chin:    { source: original, licence: original }
+puppet:  { source: original, licence: original }
+smile:   { source: original, licence: original }
+broom:   { source: original, licence: original }
+potato:  { source: original, licence: original }
+parrot:  { source: original, licence: original }
+bubbles: { source: original, licence: original }
+deer:    { source: original, licence: original }
+ride:    { source: original, licence: original }
+hose:    { source: original, licence: original }
+tomato:  { source: original, licence: original }
+crib:    { source: original, licence: original }
+brown:   { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+camel:   { source: original, licence: original }
+pour:    { source: original, licence: original }
+feather: { source: original, licence: original }
+bib:     { source: original, licence: original }
+cherry:  { source: original, licence: original }
+neck:    { source: original, licence: original }
+tent:    { source: original, licence: original }
+cook:    { source: original, licence: original }
+acorn:   { source: original, licence: original }
+noodles: { source: original, licence: original }
+donkey:  { source: original, licence: original }
+black:   { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+bathtub: { source: original, licence: original }
+roll:    { source: original, licence: original }
+pumpkin: { source: original, licence: original }
+hill:    { source: original, licence: original }
+rug:     { source: original, licence: original }
