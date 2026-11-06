@@ -325,7 +325,10 @@ class Mono:
         top = var_text(up)
         top = (str(top_c) if top_c != 1 or not top else "") + top
         bottom = var_text(down)
-        bottom = (str(bot_c) if bot_c != 1 or not bottom else "") + bottom
+        if bottom and (bot_c != 1 or len(down) > 1):
+            bottom = "(" + ("" if bot_c == 1 else str(bot_c)) + bottom + ")"   # 1/(3x²), not 1/3x²
+        else:
+            bottom = (str(bot_c) if bot_c != 1 or not bottom else "") + bottom
         return sign + (top if bottom == "1" else f"{top}/{bottom}")
 
 

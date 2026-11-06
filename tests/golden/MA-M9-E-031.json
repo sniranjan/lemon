@@ -1,0 +1,79 @@
+{
+  "id": "MA-M9-E-031",
+  "subject": "math",
+  "level": "M9",
+  "section": "E",
+  "part": 4,
+  "sheet_type": "quadratic_solve",
+  "page_number": 181,
+  "variant": 1,
+  "seed": 4602703934225038713,
+  "title": "Formula with roots",
+  "parent_tip": "Leave the answers exact, with a root. A calculator check: both answers should make the equation close to 0.",
+  "items": [
+    {
+      "method": "formula",
+      "n": 1,
+      "kind": "formula",
+      "lhs": "3x^2 + 9x - 4",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        3,
+        9,
+        -4
+      ],
+      "answer": "x = (−9 ± √129)/6"
+    },
+    {
+      "method": "formula",
+      "n": 2,
+      "kind": "formula",
+      "lhs": "x^2 - 2x - 7",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        -2,
+        -7
+      ],
+      "answer": "x = 1 ± 2√2"
+    },
+    {
+      "method": "formula",
+      "n": 3,
+      "kind": "formula",
+      "lhs": "2x^2 - 9x - 1",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        2,
+        -9,
+        -1
+      ],
+      "answer": "x = (9 ± √89)/4"
+    },
+    {
+      "method": "formula",
+      "n": 4,
+      "kind": "formula",
+      "lhs": "x^2 + x - 3",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        1,
+        -3
+      ],
+      "answer": "x = (−1 ± √13)/2"
+    }
+  ],
+  "answer_key": [
+    "1) x = (−9 ± √129)/6",
+    "2) x = 1 ± 2√2",
+    "3) x = (9 ± √89)/4",
+    "4) x = (−1 ± √13)/2"
+  ],
+  "new_words": [],
+  "review_words": []
+}

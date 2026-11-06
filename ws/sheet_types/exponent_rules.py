@@ -147,7 +147,7 @@ def choose(kind: str, rng, r: dict) -> dict:
     if kind == "power":
         n = rng.randint(2, 4)
         c = rng.choice([1, 2, 3]) if n <= 3 else rng.choice([1, 2])
-        return {"a": mono(c, x=e(lo, min(hi, 6))), "n": str(n)}
+        return {"a": mono(c, x=e(lo if c > 1 else max(lo, 2), min(hi, 6))), "n": str(n)}   # no bare (x)ⁿ
     if kind == "power_product":
         n = rng.randint(2, 3)
         return {"a": mono(rng.choice([1, 2, 3]), x=e(lo, 5), y=e(lo, 4)), "n": str(n)}

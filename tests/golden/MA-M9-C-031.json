@@ -1,0 +1,94 @@
+{
+  "id": "MA-M9-C-031",
+  "subject": "math",
+  "level": "M9",
+  "section": "C",
+  "part": 4,
+  "sheet_type": "polynomial_ops",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 6549864259993398503,
+  "title": "The box method",
+  "parent_tip": "Count the terms before you join them: 2 times 3 is 6 cells. Check the answer by putting x = 1 into both sides.",
+  "items": [
+    {
+      "layout": "box",
+      "n": 1,
+      "kind": "binomial_trinomial",
+      "q": "(x + 1)(2x^2 - 5x - 1)",
+      "answer": "2x^3 - 3x^2 - 6x - 1",
+      "box": {
+        "rows": [
+          "x",
+          "1"
+        ],
+        "cols": [
+          "2x^2",
+          "-5x",
+          "-1"
+        ]
+      }
+    },
+    {
+      "layout": "box",
+      "n": 2,
+      "kind": "binomial_trinomial",
+      "q": "(x + 3)(2x^2 - x - 2)",
+      "answer": "2x^3 + 5x^2 - 5x - 6",
+      "box": {
+        "rows": [
+          "x",
+          "3"
+        ],
+        "cols": [
+          "2x^2",
+          "-x",
+          "-2"
+        ]
+      }
+    },
+    {
+      "layout": "box",
+      "n": 3,
+      "kind": "binomial_lead",
+      "q": "(5x + 6)(x - 1)",
+      "answer": "5x^2 + x - 6",
+      "box": {
+        "rows": [
+          "5x",
+          "6"
+        ],
+        "cols": [
+          "x",
+          "-1"
+        ]
+      }
+    },
+    {
+      "layout": "box",
+      "n": 4,
+      "kind": "binomial_trinomial",
+      "q": "(2x + 6)(x^2 - x + 5)",
+      "answer": "2x^3 + 4x^2 + 4x + 30",
+      "box": {
+        "rows": [
+          "2x",
+          "6"
+        ],
+        "cols": [
+          "x^2",
+          "-x",
+          "5"
+        ]
+      }
+    }
+  ],
+  "answer_key": [
+    "1) 2x³ − 3x² − 6x − 1",
+    "2) 2x³ + 5x² − 5x − 6",
+    "3) 5x² + x − 6",
+    "4) 2x³ + 4x² + 4x + 30"
+  ],
+  "new_words": [],
+  "review_words": []
+}
