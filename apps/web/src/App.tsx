@@ -8,7 +8,6 @@ import { Library } from "@/components/Library";
 import { consentRequired, openCookieSettings } from "@/lib/consent";
 import { OrderPage } from "@/components/OrderPage";
 import { SheetPreview } from "@/components/SheetPreview";
-import { Waitlist } from "@/components/Waitlist";
 import { LEVELS } from "@/data/levels";
 
 /** Order pages: Stripe returns to /thanks, and each order lives at /orders/<token>. */
@@ -34,7 +33,6 @@ export default function App() {
           <HowItWorks />
           <Library />
           <Subjects />
-          <EarlyAccess />
           <Faq />
         </main>
       )}
@@ -53,11 +51,8 @@ function Nav() {
           <a href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">
             How it works
           </a>
-          <a href="/#library" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">
-            Library
-          </a>
           <Button asChild variant="sun" size="pill-sm">
-            <a href="/#early">Get updates</a>
+            <a href="/#library">Shop levels</a>
           </Button>
         </nav>
       </div>
@@ -91,9 +86,6 @@ function Hero() {
               <a href="#library">
                 Peek at the library <ArrowDown className="size-5" />
               </a>
-            </Button>
-            <Button asChild variant="paper" size="pill">
-              <a href="#early">Get updates</a>
             </Button>
           </div>
         </div>
@@ -197,25 +189,6 @@ function Subjects() {
             <p className="mt-2 text-lg leading-relaxed text-ink/80">{s.text}</p>
           </div>
         ))}
-      </div>
-    </section>
-  );
-}
-
-function EarlyAccess() {
-  return (
-    <section id="early" className="scroll-mt-24 px-4 py-20 sm:px-6">
-      <div className="sticker relative mx-auto max-w-3xl bg-teal p-8 text-white sm:p-12">
-        <img src="/pictures/star.svg" alt="" className="mascot-bob absolute -right-5 -top-7 size-16" />
-        <p className="font-hand text-2xl text-sun">ready now</p>
-        <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Download, print, play.</h2>
-        <p className="mt-4 max-w-xl text-lg text-white/90">
-          Chicks and Ducklings are ready to download today. More levels are on the way, and printed sets shipped to
-          your door after that. Leave your email and we'll tell you when the next level is ready.
-        </p>
-        <div className="mt-8">
-          <Waitlist />
-        </div>
       </div>
     </section>
   );

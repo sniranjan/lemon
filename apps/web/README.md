@@ -22,7 +22,6 @@ npm run deploy              # build, apply D1 migrations remotely, deploy
 | Route | What it does |
 |---|---|
 | `GET /api/health` | `{ ok: true }` |
-| `POST /api/waitlist` | `{ email, childAge? }` → row in D1 `waitlist` (upsert on email) |
 | `GET /api/previews` | slugs that have a free preview PDF in R2 |
 | `GET /api/previews/:slug` | streams `previews/<slug>.pdf` from R2, logs a row in `preview_downloads` |
 | `GET /api/catalog` | `{ previews, forSale, prices }` for the library (a level is for sale once its PDFs are in R2 and its Stripe price exists) |
