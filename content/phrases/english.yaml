@@ -116,6 +116,12 @@ can_do:
   climb: [monkey, cat, bear, goat, mouse, kitten, snail]
   hide: [cat, mouse, bunny, turtle, kitten, crab, snail]
 
+# Actions the child (3–4) can't truthfully say "I can ___" about: he likes to read, but can't yet.
+child_cannot: [read]
+# Actions only some people do in these phrases ("Mom can read.", "Dad can read."); others: everyone.
+people_can:
+  read: [mom, dad]
+
 # Things that go together, for "mom and dad" phrases (both words are pictured).
 pairs:
   - [mom, dad]

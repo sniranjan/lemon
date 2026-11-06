@@ -169,6 +169,16 @@ def test_animal_action_sentences_show_the_animal_only():
     assert pictures_for({"action": "hop"}, data) == ["hop"]
 
 
+def test_read_is_only_something_mom_and_dad_can_do():
+    data, known = phrases(), vocab_by_word()
+    texts = {render(f, fill, known, data) for g in ("can_do",) for f in data["phrase_groups"][g]
+             for fill in fillings(f, data, known)}
+    texts |= {render(f, fill, known, data) for g in ("can", "daily") for f in data["sentence_groups"][g]
+              for fill in fillings(f, data, known)}
+    reads = {t for t in texts if t.rstrip(".").endswith(" read")}
+    assert reads == {"mom can read", "dad can read", "Mom can read.", "Dad can read.", "I like to read."}
+
+
 def test_size_must_match_the_picture():
     from ws.phrases import check_phrase
 

@@ -88,6 +88,13 @@ def is_true(filling: dict[str, str], frame: str, data: dict) -> bool:
         subject_kind = next((k for k in filling if data["slots"].get(k, {}).get("subject")), None)
         if subject_kind and filling[subject_kind] not in data["can_do"].get(filling["action"], []):
             return False
+        # things a 3-year-old can't truthfully say he can do ("I can read"), and who can
+        if frame.startswith("I can ") and filling["action"] in data.get("child_cannot", []):
+            return False
+        people = data.get("people_can", {}).get(filling["action"])
+        person = next((w for k, w in filling.items() if data["slots"].get(k, {}).get("people")), None)
+        if people is not None and person is not None and person not in people:
+            return False
     if " is " in frame:
         if any(w in data.get("plural", []) for w in filling.values()):
             return False
