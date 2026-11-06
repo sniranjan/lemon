@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Puppies · Math · page 11</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.facts { flex: 1; min-height: 0; display: grid; gap: 14px 22px; }
+.facts .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eqn { display: flex; align-items: center; gap: 14px; font-size: 48px; font-weight: 700; line-height: 1; }
+.num { min-width: 0.6em; text-align: center; }
+.op { color: var(--accent); }
+.ans { display: inline-block; width: 84px; height: 66px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+
+.horizontal { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, 1fr); grid-auto-flow: column; }
+
+.vertical { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 20px 18px; }
+.col { display: grid; grid-template-columns: auto auto; justify-items: end; align-items: center; column-gap: 10px; row-gap: 6px; font-size: 48px; font-weight: 700; line-height: 1; }
+.col .rule { grid-column: 1 / 3; justify-self: stretch; border-top: 4px solid var(--ink); margin-top: 4px; }
+.col .ans { width: 92px; height: 66px; }
+
+.bridge { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, 1fr); gap: 12px 22px; }
+.bridge .wide { grid-column: 1 / 3; justify-content: space-between; padding: 0 40px 0 48px; }
+.bridge .eqn { font-size: 44px; }
+.track { position: relative; display: flex; gap: 10px; padding-top: 24px; }
+.cell { width: 60px; height: 54px; border: 3px solid var(--ink); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 700; }
+.cell.start { background: var(--tint); border-color: var(--accent); border-width: 4px; }
+.cell.empty { border-style: dashed; }
+.hop { position: absolute; top: 4px; height: 22px; width: 70px; border: 3px solid var(--accent); border-bottom: none; border-radius: 35px 35px 0 0; }
+
+.families { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); gap: 20px; }
+.families .card { justify-content: space-between; padding: 0 22px 0 26px; }
+.house { display: flex; flex-direction: column; align-items: center; width: 132px; }
+.roof { display: block; }
+.rooms { display: grid; grid-template-columns: 1fr 1fr; width: 124px; border: 3px solid var(--ink); border-top: none; border-radius: 0 0 12px 12px; background: var(--tint); }
+.rooms div { font-size: 34px; font-weight: 700; text-align: center; padding: 8px 0; line-height: 1; }
+.rooms div + div { border-left: 3px solid var(--ink); }
+.roof-num { font-size: 32px; font-weight: 700; margin-top: -46px; height: 42px; line-height: 44px; }
+.fam-facts { display: grid; grid-template-columns: auto auto; gap: 22px 26px; }
+.fam-facts .eqn { font-size: 36px; gap: 8px; position: relative; padding-left: 18px; }
+.fam-facts .eqn .ans { width: 62px; height: 52px; }
+.fam-facts .qn { top: -4px; left: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Puppies · Math</div>
+      <div class="title-row"><h1>Add</h1><span class="pill">Puppies · 11</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Let your child read and answer each fact. Praise the ones they know right away, then check the rest.</div>
+  <main class="body">
+    <div class="facts horizontal">
+      <div class="card"><span class="qn" data-audience="parent">1</span><div class="eqn"><span class="num">11</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">2</span><div class="eqn"><span class="num">4</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">3</span><div class="eqn"><span class="num">6</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">4</span><div class="eqn"><span class="num">12</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">5</span><div class="eqn"><span class="num">13</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">6</span><div class="eqn"><span class="num">10</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">7</span><div class="eqn"><span class="num">14</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">8</span><div class="eqn"><span class="num">3</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">9</span><div class="eqn"><span class="num">7</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">10</span><div class="eqn"><span class="num">16</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">11</span><div class="eqn"><span class="num">1</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+      <div class="card"><span class="qn" data-audience="parent">12</span><div class="eqn"><span class="num">9</span><span class="op">+</span><span class="num">4</span><span class="op">=</span><span class="ans"></span></div></div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Puppies · Math · page 11</footer>
+</div>
+</body>
+</html>

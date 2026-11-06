@@ -1,0 +1,151 @@
+{
+  "id": "MA-M1-B-001",
+  "subject": "math",
+  "level": "M1",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 11,
+  "variant": 1,
+  "seed": 9378969055255332291,
+  "title": "Add",
+  "parent_tip": "Let your child read and answer each fact. Praise the ones they know right away, then check the rest.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 11,
+      "op": "+",
+      "b": 4,
+      "c": 15,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "+",
+      "b": 4,
+      "c": 8,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "+",
+      "b": 4,
+      "c": 10,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 12,
+      "op": "+",
+      "b": 4,
+      "c": 16,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 4
+    },
+    {
+      "kind": "fact",
+      "a": 13,
+      "op": "+",
+      "b": 4,
+      "c": 17,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 5
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "+",
+      "b": 4,
+      "c": 14,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 6
+    },
+    {
+      "kind": "fact",
+      "a": 14,
+      "op": "+",
+      "b": 4,
+      "c": 18,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 7
+    },
+    {
+      "kind": "fact",
+      "a": 3,
+      "op": "+",
+      "b": 4,
+      "c": 7,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 8
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "+",
+      "b": 4,
+      "c": 11,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 9
+    },
+    {
+      "kind": "fact",
+      "a": 16,
+      "op": "+",
+      "b": 4,
+      "c": 20,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 10
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 4,
+      "c": 5,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 11
+    },
+    {
+      "kind": "fact",
+      "a": 9,
+      "op": "+",
+      "b": 4,
+      "c": 13,
+      "blank": "c",
+      "layout": "horizontal",
+      "n": 12
+    }
+  ],
+  "answer_key": [
+    15,
+    8,
+    10,
+    16,
+    17,
+    14,
+    18,
+    7,
+    11,
+    20,
+    5,
+    13
+  ],
+  "new_words": [],
+  "review_words": []
+}

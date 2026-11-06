@@ -1,0 +1,148 @@
+{
+  "id": "MA-M1-F-001",
+  "subject": "math",
+  "level": "M1",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 14873548128572065111,
+  "title": "Take away",
+  "parent_tip": "On the number tracks, start on the colored box and hop back one box for each one taken away.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "-",
+      "b": 2,
+      "c": 2,
+      "blank": "c",
+      "track": [
+        2,
+        3,
+        4
+      ],
+      "layout": "bridge",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 8,
+      "op": "-",
+      "b": 2,
+      "c": 6,
+      "blank": "c",
+      "track": [
+        6,
+        7,
+        8
+      ],
+      "layout": "bridge",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "-",
+      "b": 2,
+      "c": 4,
+      "blank": "c",
+      "track": [
+        4,
+        5,
+        6
+      ],
+      "layout": "bridge",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 12,
+      "op": "-",
+      "b": 1,
+      "c": 11,
+      "blank": "c",
+      "track": [
+        11,
+        12
+      ],
+      "layout": "bridge",
+      "n": 4
+    },
+    {
+      "kind": "fact",
+      "a": 9,
+      "op": "-",
+      "b": 2,
+      "c": 7,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 5
+    },
+    {
+      "kind": "fact",
+      "a": 12,
+      "op": "-",
+      "b": 2,
+      "c": 10,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 6
+    },
+    {
+      "kind": "fact",
+      "a": 5,
+      "op": "-",
+      "b": 1,
+      "c": 4,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 7
+    },
+    {
+      "kind": "fact",
+      "a": 8,
+      "op": "-",
+      "b": 1,
+      "c": 7,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 8
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "-",
+      "b": 1,
+      "c": 9,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 9
+    },
+    {
+      "kind": "fact",
+      "a": 11,
+      "op": "-",
+      "b": 1,
+      "c": 10,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    2,
+    6,
+    4,
+    11,
+    7,
+    10,
+    4,
+    7,
+    9,
+    10
+  ],
+  "new_words": [],
+  "review_words": []
+}
