@@ -88,6 +88,17 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `full_sentence_answer` (planner `passages` in `ws/passages.py`); child text 20px (`min_child_px` for R levels);
   answers PDF lists one line per answer (level rule `answers: by_line`). All 200 pages verify with 0 errors and
   0 warnings; booklets per section + `foxes-reading-level.pdf` (202 pages) + answers. `daily_pages: 2` (ours).
+- **Pandas Math (M6, our own level, grade 6 work for age 9, 200 pages)** (2026-11-06): `syllabus/math/M6.yaml`:
+  A Dividing Fractions 1–30 (6.NS.1) · B Ratios and Rates 31–70 (6.RP.1, 6.RP.2, 6.RP.3a/b/d) · C Percents 71–100
+  (6.RP.3c) · D Below Zero 101–130 (6.NS.5–8) · E Letters for Numbers 131–170 (6.EE.1, 6.EE.2a/c) · F One-Step
+  Equations 171–200 (6.EE.5, 6.EE.7); codes checked on thecorestandards.org. Dividing fractions extends Otters'
+  `fraction_ops` (`op: div`, layouts `model` with fraction bars and `list`; Otters output byte-identical). New sheet types `ratio_table`, `rational_story` (frames in `content/math/rational_stories.yaml`, contexts in `ratios.yaml`; copies in
+  test fixtures), `percent_problem`, `signed_numbers`, `coordinate_grid`, `expression_eval`, `equation_solve`, sharing
+  exact-number helpers in `ws/sheet_types/_rational.py` (Fraction parse/format/evaluate, `pretty` printing; Jinja
+  filters `frac_parts`, `minus`, `pretty`). Grade 6 only: no adding/taking away negatives, all equation numbers
+  nonnegative. Child text ≥ 22px (`min_child_px` M6). Tests in `tests/test_math_M6.py` (18 goldens). All 200 pages verify with
+  0 errors and 0 warnings; booklets per section + `pandas-math-level.pdf` (202 pages) and
+  `pandas-math-level-answers.pdf` (14 pages). Free preview pages 11, 51, 121, 171 wait for Pandas Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -116,7 +127,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **MA M6 (Pandas Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:

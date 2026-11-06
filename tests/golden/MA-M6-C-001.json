@@ -1,0 +1,55 @@
+{
+  "id": "MA-M6-C-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "percent_problem",
+  "page_number": 71,
+  "variant": 1,
+  "seed": 2107459144744606184,
+  "title": "Out of 100",
+  "parent_tip": "Percent means out of 100. Count the shaded columns of ten first, then the extra squares.",
+  "items": [
+    {
+      "kind": "grid",
+      "n": 1,
+      "shaded": 35
+    },
+    {
+      "kind": "grid",
+      "n": 2,
+      "shaded": 88
+    },
+    {
+      "kind": "grid",
+      "n": 3,
+      "shaded": 53
+    },
+    {
+      "kind": "grid",
+      "n": 4,
+      "shaded": 84
+    },
+    {
+      "kind": "grid",
+      "n": 5,
+      "shaded": 24
+    },
+    {
+      "kind": "grid",
+      "n": 6,
+      "shaded": 44
+    }
+  ],
+  "answer_key": [
+    "35%",
+    "88%",
+    "53%",
+    "84%",
+    "24%",
+    "44%"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,73 @@
+{
+  "id": "MA-M6-A-023",
+  "subject": "math",
+  "level": "M6",
+  "section": "A",
+  "part": 3,
+  "sheet_type": "rational_story",
+  "page_number": 23,
+  "variant": 1,
+  "seed": 7699872283626680035,
+  "title": "Fraction stories",
+  "parent_tip": "Say the division out loud first, like 3 ÷ 3/4, then work it out and write the answer in the box.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "garden_bed",
+      "picks": {
+        "a": "2/3",
+        "b": "1/2"
+      },
+      "values": {
+        "a": "2/3",
+        "b": "1/2"
+      },
+      "text": "A garden bed covers 2/3 square yard. It is 1/2 yard wide. How long is it?",
+      "answer": "1 1/3",
+      "unit": "yards",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "rice_servings",
+      "picks": {
+        "a": "1 1/2",
+        "b": "3/8"
+      },
+      "values": {
+        "a": "1 1/2",
+        "b": "3/8"
+      },
+      "text": "A bag holds 1 1/2 cups of rice. One serving is 3/8 cup. How many servings are in the bag?",
+      "answer": "4",
+      "unit": "servings",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "ribbon_pieces",
+      "picks": {
+        "a": "2",
+        "b": "1/3"
+      },
+      "values": {
+        "a": "2",
+        "b": "1/3"
+      },
+      "text": "Zoe has 2 yards of ribbon. She cuts it into pieces that are each 1/3 yard long. How many pieces does she get?",
+      "answer": "6",
+      "unit": "pieces",
+      "equation": false
+    }
+  ],
+  "answer_key": [
+    "1 1/3 yards",
+    "4 servings",
+    "6 pieces"
+  ],
+  "new_words": [],
+  "review_words": []
+}
