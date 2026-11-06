@@ -98,7 +98,7 @@ const STEPS = [
     icon: Sprout,
     color: "bg-leaf",
     title: "Pick a level",
-    text: "Start with the animal that fits. Little ones begin with Tadpoles and Chicks; older kids jump in higher up.",
+    text: "Start with the animal that fits. Little ones begin with Chicks; older kids jump in higher up.",
   },
   {
     icon: Printer,

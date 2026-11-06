@@ -29,7 +29,7 @@ npm run deploy              # build, apply D1 migrations remotely, deploy
 ## Free previews
 
 One PDF per level in R2 at `previews/<level-slug>.pdf` (slugs in `src/data/levels.ts`:
-`tadpoles`, `chicks`, `ducklings`, ...). A level's "Free preview" button lights up automatically once its
+`chicks`, `ducklings`, `bunnies`, ... `lions`). A level's "Free preview" button lights up automatically once its
 file exists:
 
 ```bash

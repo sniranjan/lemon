@@ -38,7 +38,7 @@ of good sheets on demand, for example:
   "Kumon" on any output.** We follow the published *syllabus structure* only (level names,
   page ranges, section topics, aims). All content is original.
 - Sheet IDs use our own scheme: `EN-7A-A-001`, `MA-6A-B-014`, `ZI-A-003`.
-- Content must suit a 3–6 year old: no scary, violent or brand-name content; everyday
+- Content must suit ages 3–12 (topics fit the level's age band): no scary, violent or brand-name content; everyday
   objects, animals, food, family, home, nature, transport.
 - **American spelling and words for all text a child or parent sees** (color, mom, diaper,
   coloring). Code, file names, YAML keys and sheet type names may keep British spelling
@@ -381,7 +381,7 @@ note from §12 for grown-ups) + the sheets in order + a final **progress log** p
 minutes, notes). No answer keys in the child's booklet. Answer keys go in a separate `-answers.pdf`.
 Names use public names (§15): one per section from the pages present, numbered by level page
 (`chicks-reading-pages-001-020.pdf`), and one for the whole level (`chicks-reading-level.pdf`,
-`tadpoles-level.pdf`); variants add `-vN`. Gaps in a section are a warning.
+`chicks-math-level.pdf`); variants add `-vN`. Gaps in a section are a warning.
 
 ---
 
