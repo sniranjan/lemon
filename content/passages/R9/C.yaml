@@ -57,12 +57,12 @@
             - On Thursday evening, the school board will hear comments from the public.
           evidence: We would arrive alert instead of exhausted, curious instead of cranky, and prepared instead of merely present.
         - kind: paragraph
-          ask: How does the speaker answer the worry about sports practices? Is her answer convincing?
+          ask: How does the speaker answer the worry about sports practices? Is the answer convincing?
           sample: >-
-            The speaker admits the worry is real, saying "That concern is fair," which makes her sound
-            reasonable. Then she answers it with a specific fact: practices would move back "a difference
-            of only half an hour." Her answer is convincing because it shows the cost is small.
-          rubric: names the counterclaim, quotes her rebuttal, and judges whether the fact answers the worry
+            The speaker admits the worry is real, saying "That concern is fair," which sounds reasonable.
+            Then the speaker answers it with a specific fact: practices would move back "a difference of
+            only half an hour." The answer is convincing because it shows the cost is small.
+          rubric: names the counterclaim, quotes the rebuttal, and judges whether the fact answers the worry
           evidence: a difference of only half an hour
     - focus: evaluating the argument
       look_for: the claim with the weakest support
@@ -70,7 +70,7 @@
         - kind: mc
           ask: Which part of the argument has the weakest support?
           choices:
-            - the claim that her cousin's grades prove grades would rise here
+            - the claim that a cousin's grades prove grades would rise here
             - the survey of 240 students about feeling tired
             - the plan to start practices at three-forty-five
             - the invitation to the school board meeting
@@ -134,15 +134,15 @@
             - Our library owns more than forty thousand books, more than any other building in Linden.
           evidence: Where else can a tired parent find a free story time after a long shift?
         - kind: paragraph
-          ask: How does the writer make readers trust her? Use evidence from the letter.
+          ask: How does the writer earn readers' trust? Use evidence from the letter.
           sample: >-
-            The writer builds trust by showing her experience, since she "has unlocked those doors every
-            morning for nineteen years." She also treats the other side fairly when she says "I do not
-            dismiss it" about the money. Readers trust her because she knows the library and is honest.
-          rubric: a claim about her credibility, one or two exact quotes, and how each makes her believable
+            The writer builds trust by showing long experience as the librarian who "has unlocked those
+            doors every morning for nineteen years." The writer also treats the other side fairly by saying
+            "I do not dismiss it" about the money. Readers trust someone who knows the library and is honest.
+          rubric: a claim about the writer's credibility, one or two exact quotes, and how each builds trust
           evidence: unlocked those doors every morning for nineteen years
     - focus: evaluating the argument
-      look_for: a fact that does not help her case
+      look_for: a fact that does not help the case
       questions:
         - kind: mc
           ask: Which detail does the least to support keeping the library open in the evening?
@@ -153,16 +153,16 @@
             - the Friends of the Library offered to raise money
           evidence: Our library owns more than forty thousand books
         - kind: write
-          ask: Why doesn't the number of books support her claim about evening hours?
+          ask: Why doesn't the number of books support the claim about evening hours?
           sample: The library would keep its books either way; the number says nothing about who needs it at night.
           evidence: Our library owns more than forty thousand books, more than any other building in Linden.
         - kind: paragraph
-          ask: How does the writer answer the council's argument about money? Is her answer strong?
+          ask: How does the writer answer the council's argument about money? Is the answer strong?
           sample: >-
-            The writer admits the savings are "a real amount of money," so she does not ignore the
-            council. She answers that a used-book sale could "raise half of that sum," which cuts the
-            cost. Her answer is fairly strong, but it covers only half of the money.
-          rubric: names the council's reason, quotes her answer, and judges whether it is enough
+            The writer admits the savings are "a real amount of money," so the council is not ignored.
+            The answer is that a used-book sale could "raise half of that sum," which cuts the cost. This
+            answer is fairly strong, but it covers only half of the money.
+          rubric: names the council's reason, quotes the writer's answer, and judges whether it is enough
           evidence: raise half of that sum through a used-book sale
 
 - id: c03-make-something-new
@@ -213,10 +213,10 @@
             - I hope every one of you chooses to be a maker.
           evidence: I understand that worry, but most useful inventions start with ordinary materials and an ordinary irritation.
         - kind: paragraph
-          ask: Why does the speaker mention the craft sticks on his kitchen table? Use a quote.
+          ask: Why does the speaker mention the craft sticks on the kitchen table? Use a quote.
           sample: >-
             The speaker tells this small story to prove that inventing does not need a fancy laboratory.
-            His bridge design began with "craft sticks on my kitchen table," which shows that even an
+            The speaker's bridge design began with "craft sticks on my kitchen table," which shows that even an
             expert starts simply. This makes inventing feel possible for every student listening.
           rubric: a claim about the anecdote's purpose, an exact quote, and its effect on the audience
           evidence: built from craft sticks on my kitchen table
@@ -239,7 +239,7 @@
           ask: Is the speaker's argument stronger in paragraph 4 or paragraph 5? Explain with evidence.
           sample: >-
             The argument is stronger in paragraph 4, which gives a reason anyone can test. Inventing
-            teaches you "to observe carefully, to test patiently, and to fail without quitting," and his
+            teaches you "to observe carefully, to test patiently, and to fail without quitting," and the
             bridge story supports that. Paragraph 5 only offers an either/or choice that ignores people who
             do both.
           rubric: picks one paragraph, quotes it, and explains why its reasoning holds up better
@@ -296,12 +296,12 @@
           ask: How does the speaker use both feelings and facts to argue for the meadow? Quote each.
           sample: >-
             The speaker first appeals to feelings with the image of children who "chase fireflies through
-            the tall grass." Then she turns to facts, reporting that the creek "rose two feet less" beside
-            the meadow. Using both makes her case appeal to the heart and the mind.
+            the tall grass." Then the speaker turns to facts, reporting that the creek "rose two feet less" beside
+            the meadow. Using both makes the case appeal to the heart and the mind.
           rubric: one quote that appeals to feeling, one that gives a fact, and why using both helps
           evidence: rose two feet less than beside the paved lot downstream
     - focus: evaluating the argument
-      look_for: a claim she never backs up
+      look_for: a claim that is never backed up
       questions:
         - kind: mc
           ask: Which claim does the speaker give no evidence for?
@@ -313,7 +313,7 @@
           evidence: Alder Creek is the most beautiful park in the entire state, and everyone knows it.
         - kind: write
           ask: How does the speaker answer people who say visitors need more parking?
-          sample: She agrees the lot fills up, but says the town's empty lot two blocks away could be used instead.
+          sample: The speaker agrees the lot fills up, but says the town's empty lot two blocks away could be used instead.
           evidence: the town already owns an empty lot two blocks away
         - kind: paragraph
           ask: Which reason in the speech is the strongest? Explain why it is better supported than the others.
@@ -375,9 +375,9 @@
           ask: How does the writer's own experience at the pantry make the essay more persuasive?
           sample: >-
             The writer's experience makes the essay believable because it comes from real Saturdays at the
-            pantry. She admits she first expected "a chore," but it became "the part of the week I look
+            pantry. The writer first expected "a chore," but it became "the part of the week I look
             forward to most." This change shows readers that they might feel the same way.
-          rubric: a claim about her experience, one or two exact quotes, and their effect on readers
+          rubric: a claim about the writer's experience, one or two exact quotes, and their effect on readers
           evidence: the part of the week I look forward to most
     - focus: evaluating the argument
       look_for: a reason that relies on the crowd
@@ -392,13 +392,13 @@
           evidence: Almost everyone in my grade volunteers somewhere now, so you should too.
         - kind: write
           ask: What evidence does the writer give that volunteering builds useful skills?
-          sample: She learned to organize a storeroom, explain tasks to new helpers, and stay calm when deliveries were late.
+          sample: The writer learned to organize a storeroom, explain tasks to new helpers, and stay calm when deliveries were late.
           evidence: I have learned to organize a storeroom
         - kind: paragraph
           ask: Would the essay be stronger without paragraph 5? Explain your answer with evidence.
           sample: >-
             The essay would be stronger without paragraph 5. The claim that "Almost everyone in my grade
-            volunteers somewhere now" is a bandwagon appeal, not a reason. Her other paragraphs give real reasons, such
+            volunteers somewhere now" is a bandwagon appeal, not a reason. The other paragraphs give real reasons, such
             as learning "to stay calm when a delivery arrives an hour late."
           rubric: a clear judgment, a quote from paragraph 5 and one stronger reason, and why
           evidence: Almost everyone in my grade volunteers somewhere now
@@ -450,10 +450,10 @@
         - kind: paragraph
           ask: How does Grandma Lucia answer Mateo's worry about time? Is her answer persuasive?
           sample: >-
-            She first calls his concern "reasonable," so Mateo feels heard. Then she points out that
+            She first calls Mateo's concern "reasonable," so Mateo feels heard. Then she points out that
             rehearsals happen "during the school day" and that practice takes less time than choosing what
-            to watch. Her answer is persuasive because it compares the cost to a habit he already has.
-          rubric: names his worry, quotes her answer, and judges how well it answers him
+            to watch. Her answer is persuasive because it compares the cost to a habit Mateo already has.
+          rubric: names Mateo's worry, quotes her answer, and judges how well it answers it
           evidence: rehearsals happen during the school day
     - focus: evaluating the argument
       look_for: a promise that goes too far
@@ -471,7 +471,7 @@
           sample: In an orchestra each part matters, but only when it joins everyone else's part.
           evidence: in an orchestra your part matters, but only together with everyone else's
         - kind: paragraph
-          ask: Should Mateo believe that his "grades will soar"? Explain using the letter.
+          ask: Should Mateo trust the promise that "your grades will soar"? Explain using the letter.
           sample: >-
             Mateo should not believe it, because the letter gives no evidence for it. The claim that
             "Everyone who plays an instrument is better at math" is far too broad. Her stronger reasons
@@ -603,8 +603,8 @@
         - kind: paragraph
           ask: How does the writer show that reading aloud helps the older student too? Use a quote.
           sample: >-
-            The writer says "The benefits flow in both directions" and then gives her own example. She has
-            become "a more expressive reader" because she changes her voice and pauses for surprises. This
+            The writer says "The benefits flow in both directions" and then gives a personal example. The
+            writer has become "a more expressive reader" by changing voices and pausing for surprises. This
             shows that the program helps both the reader and the listener.
           rubric: a claim about the older reader's benefit, an exact quote, and how it supports the argument
           evidence: The benefits flow in both directions.
@@ -632,7 +632,7 @@
           sample: >-
             The claim is not reasonable, because it offers only two outcomes. Saying these children "will
             grow up hating books" ignores parents, teachers, and libraries that also share stories. The
-            writer's argument is stronger when she uses real examples, like Felix laughing "at the same
+            writer's argument is stronger with real examples, like Felix laughing "at the same
             pages every single time."
           rubric: a clear judgment, a quote from paragraph 5, and why the either/or reasoning fails
           evidence: these children will grow up hating books
@@ -708,9 +708,9 @@
           sample: The team won six of its last eight games and lost the final by only one goal.
           evidence: we won six of our last eight games
         - kind: paragraph
-          ask: Does the coach need paragraph 4 to prove her point? Explain with evidence.
+          ask: Does the coach need paragraph 4 to prove the point? Explain with evidence.
           sample: >-
-            The coach does not need paragraph 4, because the team's own season proves her point. They
+            The coach does not need paragraph 4, because the team's own season proves the point. They
             lost their first four games but later "won six of our last eight games." That real evidence is
             far stronger than the sweeping claim about "Every champion in history."
           rubric: a clear judgment, a quote of real evidence and of the sweeping claim, and a comparison
@@ -844,7 +844,7 @@
           ask: How do the details in paragraph 3 support the writer's claim about memories?
           sample: >-
             The details prove that writing things down saves moments we would forget. The writer found
-            "the smell of the gym on the first day of school" and her brother's joke in old entries. These
+            "the smell of the gym on the first day of school" and a brother's joke in old entries. These
             small, specific memories show that "Without the journal, those moments would have disappeared."
           rubric: a claim about the details, one or two exact quotes, and how they support the claim
           evidence: the smell of the gym on the first day of school
@@ -855,20 +855,20 @@
           ask: Which claim in the essay has no support at all?
           choices:
             - Journal keepers make better decisions.
-            - Writing helps the writer find her beliefs.
+            - Writing helps the writer find beliefs.
             - Old entries hold forgotten details.
             - Ten minutes is shorter than most videos.
           evidence: People who keep journals make better decisions than people who do not.
         - kind: write
           ask: How does the writer answer students who say they have nothing interesting to say?
-          sample: She says an ordinary day becomes interesting as soon as you describe it carefully.
+          sample: The writer says an ordinary day becomes interesting as soon as you describe it carefully.
           evidence: an ordinary day becomes interesting the moment you describe it carefully
         - kind: paragraph
           ask: What would the writer need to prove that journal keepers "make better decisions"? Explain.
           sample: >-
             The writer would need evidence that compares people who keep journals with people who do not.
             Right now, "People who keep journals make better decisions" is only a sentence with no example
-            or study behind it. Even one story of a decision her journal helped with would make it stronger.
+            or study behind it. Even one story of a decision the journal helped with would make it stronger.
           rubric: names the unsupported claim, quotes it, and says what evidence would support it
           evidence: People who keep journals make better decisions than people who do not.
 
@@ -908,7 +908,7 @@
             - to show how the idea began
             - to sell toasters to families
             - to warn about loose wires
-            - to praise his kitchen table
+            - to praise the kitchen table
           evidence: That small repair gave me an idea
         - kind: quote
           ask: Which sentence is the speaker's call to action?
@@ -919,7 +919,7 @@
             - That is a reasonable concern, so every volunteer would be trained
           evidence: Join us on the first Saturday of next month, bring something broken, and leave with something fixed.
         - kind: write
-          ask: What does the speaker mean when he says repair is "a way of respecting the things we own"?
+          ask: What does the speaker mean by saying repair is "a way of respecting the things we own"?
           sample: Fixing something shows we value it and the work that went into making it, instead of wasting it.
           evidence: it is a way of respecting the things we own
     - focus: evaluating the argument
@@ -935,7 +935,7 @@
           evidence: Our town has more hardware stores per person than any other town in the county.
         - kind: write
           ask: How does the speaker answer the worry that repairs could be unsafe?
-          sample: He says every volunteer would be trained and a licensed electrician would inspect electrical repairs.
+          sample: The speaker says every volunteer would be trained and a licensed electrician would inspect electrical repairs.
           evidence: every volunteer would be trained
         - kind: paragraph
           ask: Is the speaker's evidence relevant and sufficient? Judge two pieces of it.

@@ -8,7 +8,7 @@ title: Author's choices, complex characters, rhetoric and analytical paragraphs
 # (written by scripts/r9_drafts.py from the YAML).
 # Standards checked on thecorestandards.org (2026-11-06): RL.9-10.1–5, RL.9-10.10, RI.9-10.1, 4, 5, 6,
 # 8, 10, W.9-10.1, W.9-10.9a, W.9-10.9b.
-preview_pages: [1, 2, 102, 172]   # one whole spread (story + questions), a rhetoric questions page, an analytical paragraph page
+preview_pages: [101, 102, 171, 172]   # two whole spreads: a speech and its questions, a story and its analytical paragraph
 aims:
   - Analyze how a writer's choices about structure, order of events and pacing create suspense, surprise or tension (RL.9-10.5)
   - Work out figurative and connotative meanings and how word choice shapes tone (RL.9-10.4, RI.9-10.4)
@@ -82,7 +82,7 @@ sections:
     public_name: The Art of Persuasion
     pages: [101, 150]
     sheet_types: [passage_spread]
-    standards: [RI.9-10.6, RI.9-10.8, RI.9-10.1, RI.9-10.4, RI.9-10.5, RI.9-10.10]
+    standards: [RI.9-10.6, RI.9-10.8, RI.9-10.1, RI.9-10.4, RI.9-10.5, RI.9-10.10, W.9-10.9b]
     source: ours
     rules:
       passages: C

@@ -280,7 +280,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Whales Reading (R9, our own level, grade 9 reading for age 12, 200 pages)** (2026-11-06): `syllabus/english/R9.yaml`:
   A The Writer's Choices 1–50 (RL.9-10.5, RL.9-10.4: flashback, frame, in medias res, held-back facts, slowed or
   compressed time, reverse order, circular endings; connotation and tone) · B Characters in Conflict 51–100
-  (RL.9-10.3) · C The Art of Persuasion 101–150 (RI.9-10.6, RI.9-10.8: speeches, essays and letters on school start
+  (RL.9-10.3) · C The Art of Persuasion 101–150 (RI.9-10.6, RI.9-10.8, W.9-10.9b: speeches, essays and letters on school start
   times, libraries, inventing, volunteering, a park meadow, gardens, journals…, each with one deliberate weak spot in
   its reasoning) · D Prove It in a Paragraph 151–200 (RL.9-10.1, W.9-10.1, W.9-10.9a: part 1 plans with a
   Claim / Evidence / Explanation organizer, part 2 picks the strongest quote; then a 9-line paragraph). Codes checked
@@ -292,7 +292,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   ~265 words of grade 9 prose, so passages stay near 260–290 words (≤ ~40 words end on the questions page). Tests
   `tests/test_whales_reading.py` (5 goldens). Verify 0 errors, 0 warnings; booklets per section +
   `whales-reading-level.pdf` (202 pages) and `whales-reading-level-answers.pdf` (38 pages, samples + rubrics); no
-  internal codes in PDF text. Free preview pages 1, 2, 102, 172: `ws preview whales` builds `out/previews/whales.pdf`
+  internal codes in PDF text. Free preview pages 101–102 and 171–172 (two whole spreads): `ws preview whales` builds `out/previews/whales.pdf`
   (10 pages; not uploaded).
 
 ## Next steps
