@@ -1,0 +1,55 @@
+{
+  "id": "MA-M2-B-024",
+  "subject": "math",
+  "level": "M2",
+  "section": "B",
+  "part": 3,
+  "sheet_type": "place_value",
+  "page_number": 44,
+  "variant": 1,
+  "seed": 8855995294971624296,
+  "title": "Bigger or smaller?",
+  "parent_tip": "Look at the biggest place first. If those digits match, look at the next place. The open side faces the bigger number.",
+  "items": [
+    {
+      "kind": "compare",
+      "left": 147,
+      "right": 144
+    },
+    {
+      "kind": "compare",
+      "left": 665,
+      "right": 624
+    },
+    {
+      "kind": "compare",
+      "left": 492,
+      "right": 494
+    },
+    {
+      "kind": "compare",
+      "left": 850,
+      "right": 805
+    },
+    {
+      "kind": "compare",
+      "left": 594,
+      "right": 472
+    },
+    {
+      "kind": "compare",
+      "left": 839,
+      "right": 884
+    }
+  ],
+  "answer_key": [
+    ">",
+    ">",
+    "<",
+    ">",
+    ">",
+    "<"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "EN-5A-D-001",
+  "subject": "english",
+  "level": "5A",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "word_trace",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 10326615442283824483,
+  "title": "Trace the words",
+  "parent_tip": "Read each word together while pointing to the picture. Then your child traces the dots, left to right.",
+  "items": [
+    {
+      "kind": "word",
+      "word": "sun",
+      "picture": "sun"
+    },
+    {
+      "kind": "word",
+      "word": "dog",
+      "picture": "dog"
+    },
+    {
+      "kind": "word",
+      "word": "pig",
+      "picture": "pig"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "sun",
+    "dog",
+    "pig"
+  ]
+}

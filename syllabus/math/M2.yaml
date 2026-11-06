@@ -1,0 +1,134 @@
+subject: math
+level: M2
+title: Place value and two- and three-digit adding and subtracting
+# Our own level (source: ours), not from the published chart: Cubs math is compressed so grade 2
+# place value and adding/subtracting (2.NBT.1–7, 2.OA.1) are done before Foxes, which opens with
+# 3-digit regrouping (syllabus/PLAN-upper-levels.md).
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [5, 55, 115, 191]   # this strand's pages in the level's free preview (ws preview)
+aims:
+  - See two- and three-digit numbers as hundreds, tens and ones; read and write them in parts and as words
+  - Compare three-digit numbers with <, > and =
+  - Skip-count by 5s, 10s and 100s within 1000
+  - Add and subtract two-digit numbers in columns, first without and then with regrouping
+  - Add and subtract three-digit numbers with one regrouping
+  - Solve tiny story problems within 100
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [2, 4]   # source: ours
+# Column rules (column_arithmetic, math_story):
+#   op: add | sub | mixed      a / b: [lo, hi] for the top number / the other number(s)
+#   addends: 2 (default) or 3  max_answer / min_answer: answer bounds (min_answer defaults to 1)
+#   regroup: none | all | mixed  (every problem / no problem / some problems regroup)
+#   max_regroups: columns that may regroup in one problem (default 1, so no borrowing across a zero)
+#   problems: problems per page (default 6)
+# All part ranges are ours.
+sections:
+  - code: A
+    name: Tens and Ones
+    public_name: Tens and Ones
+    pages: [1, 20]
+    sheet_types: [place_value]
+    # A short on-ramp: two-digit place value is grade 1 work (1.NBT.2), here to warm up for hundreds.
+    standards: [1.NBT.2, 2.NBT.3]
+    source: ours
+    parts:
+      - { part: 1, pages: [1, 10],  name: Tens bars and ones, rules: { mode: blocks, min: 11, max: 99 } }
+      - { part: 2, pages: [11, 20], name: Parts and number words,
+          rules: { mode: expanded, min: 11, max: 99, forms: [parts_to_number, number_to_parts, name_to_number] } }
+
+  - code: B
+    name: Hundreds, Tens and Ones
+    public_name: Hundreds, Tens and Ones
+    pages: [21, 50]
+    sheet_types: [place_value]
+    standards: [2.NBT.1, 2.NBT.1a, 2.NBT.1b, 2.NBT.3, 2.NBT.4]
+    source: ours
+    parts:
+      - { part: 1, pages: [21, 30], name: Hundred squares, rules: { mode: blocks, min: 100, max: 999, tips: { place_value_blocks: [
+          "Ten tens make one hundred: a big square is ten bars side by side. Count squares by hundreds, bars by tens, small squares by ones.",
+          "Count the big squares by hundreds (each is ten tens), the bars by tens and the small squares by ones. A zero means none of that kind." ] } },
+          standards: [2.NBT.1, 2.NBT.1a, 2.NBT.1b] }
+      - { part: 2, pages: [31, 40], name: Three-digit parts and words,
+          rules: { mode: expanded, min: 100, max: 999, forms: [parts_to_number, units_to_number, number_to_parts, name_to_number] },
+          standards: [2.NBT.3] }
+      - { part: 3, pages: [41, 50], name: Bigger or smaller, rules: { mode: compare, min: 100, max: 999 },
+          standards: [2.NBT.4] }
+
+  - code: C
+    name: Skip Counting
+    public_name: Counting by 5s, 10s and 100s
+    pages: [51, 70]
+    sheet_types: [skip_count]
+    standards: [2.NBT.2]
+    source: ours
+    parts:
+      - { part: 1, pages: [51, 60], rules: { steps: [5, 10], min: 5, max: 200, length: 8, gaps: 3 } }
+      - { part: 2, pages: [61, 70], rules: { steps: [10, 100], min: 10, max: 1000, length: 7, gaps: 2, tips: { skip_count: [
+          "Read each row together from the first number. Say the jump out loud (ten more, a hundred more) and write the missing numbers.",
+          "Count along each row together. With tens, only the tens digit changes until you pass a hundred; with hundreds, only the hundreds digit." ] } } }
+
+  - code: D
+    name: Adding Ones
+    public_name: Adding Ones
+    pages: [71, 90]
+    sheet_types: [column_arithmetic]
+    standards: [2.NBT.5]
+    source: ours
+    rules: { op: add, a: [11, 98], b: [1, 9], max_answer: 99 }
+    parts:
+      - { part: 1, pages: [71, 80], name: No carrying, rules: { regroup: none } }
+      - { part: 2, pages: [81, 90], name: Carrying a ten, rules: { regroup: all } }
+
+  - code: E
+    name: Adding Tens and Ones
+    public_name: Adding Two-Digit Numbers
+    pages: [91, 130]
+    sheet_types: [column_arithmetic]
+    standards: [2.NBT.5, 2.NBT.6]
+    source: ours
+    rules: { op: add, a: [11, 89], b: [11, 88], max_answer: 99 }
+    parts:
+      - { part: 1, pages: [91, 100],  name: No carrying, rules: { regroup: none } }
+      - { part: 2, pages: [101, 110], name: Carrying a ten, rules: { regroup: all } }
+      - { part: 3, pages: [111, 120], name: Carry or not, rules: { regroup: mixed } }
+      - { part: 4, pages: [121, 130], name: Three numbers,
+          rules: { regroup: mixed, addends: 3, a: [11, 39], b: [11, 39], max_regroups: 1 }, standards: [2.NBT.6] }
+
+  - code: F
+    name: Taking Away
+    public_name: Taking Away Two-Digit Numbers
+    pages: [131, 170]
+    sheet_types: [column_arithmetic]
+    standards: [2.NBT.5]
+    source: ours
+    rules: { op: sub }
+    parts:
+      - { part: 1, pages: [131, 140], name: Take away ones, rules: { a: [12, 99], b: [1, 9], regroup: none } }
+      - { part: 2, pages: [141, 150], name: Take away tens and ones, rules: { a: [21, 99], b: [11, 88], regroup: none } }
+      - { part: 3, pages: [151, 160], name: Breaking a ten (ones), rules: { a: [20, 99], b: [2, 9], regroup: all } }
+      - { part: 4, pages: [161, 170], name: Breaking a ten, rules: { a: [30, 99], b: [11, 89], regroup: all } }
+
+  - code: G
+    name: Three-Digit Adding and Taking Away
+    public_name: Big Number Adding and Taking Away
+    pages: [171, 190]
+    sheet_types: [column_arithmetic]
+    standards: [2.NBT.7]
+    source: ours
+    # Four problems a page: three columns need more room. One regrouping at most (no borrowing across a zero).
+    rules: { a: [100, 899], b: [100, 899], max_answer: 999, problems: 4, max_regroups: 1 }
+    parts:
+      - { part: 1, pages: [171, 175], name: "Adding, no carrying", rules: { op: add, regroup: none } }
+      - { part: 2, pages: [176, 180], name: Adding with one carry, rules: { op: add, regroup: all } }
+      - { part: 3, pages: [181, 185], name: "Taking away, no breaking", rules: { op: sub, a: [200, 999], b: [100, 899], regroup: none } }
+      - { part: 4, pages: [186, 190], name: Taking away with one break, rules: { op: sub, a: [200, 999], b: [100, 899], regroup: all } }
+
+  - code: H
+    name: Story Problems and Review
+    public_name: Story Problems
+    pages: [191, 200]
+    sheet_types: [math_story, column_arithmetic]
+    standards: [2.OA.1, 2.NBT.5]
+    source: ours
+    rules: { op: mixed, a: [21, 89], b: [11, 69], max_answer: 99, regroup: mixed }

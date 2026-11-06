@@ -1,0 +1,59 @@
+{
+  "id": "MA-M2-A-009",
+  "subject": "math",
+  "level": "M2",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "place_value",
+  "page_number": 9,
+  "variant": 1,
+  "seed": 3753548951588238311,
+  "title": "Tens and ones",
+  "parent_tip": "Count the big squares by hundreds, the bars by tens and the small squares by ones. A zero means none of that kind.",
+  "items": [
+    {
+      "kind": "blocks",
+      "n": 22,
+      "places": [
+        2,
+        2
+      ],
+      "width": 2
+    },
+    {
+      "kind": "blocks",
+      "n": 14,
+      "places": [
+        1,
+        4
+      ],
+      "width": 2
+    },
+    {
+      "kind": "blocks",
+      "n": 91,
+      "places": [
+        9,
+        1
+      ],
+      "width": 2
+    },
+    {
+      "kind": "blocks",
+      "n": 77,
+      "places": [
+        7,
+        7
+      ],
+      "width": 2
+    }
+  ],
+  "answer_key": [
+    22,
+    14,
+    91,
+    77
+  ],
+  "new_words": [],
+  "review_words": []
+}

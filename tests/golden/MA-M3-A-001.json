@@ -13,105 +13,114 @@
   "items": [
     {
       "kind": "column",
-      "n": 1,
-      "a": 286,
-      "op": "+",
-      "b": 194,
-      "c": 480,
-      "regroups": 2,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        117,
+        217
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 2,
-      "a": 196,
-      "op": "+",
-      "b": 663,
-      "c": 859,
-      "regroups": 1,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        172,
+        361
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 3,
-      "a": 486,
-      "op": "+",
-      "b": 446,
-      "c": 932,
-      "regroups": 2,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        286,
+        194
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 4,
-      "a": 136,
-      "op": "+",
-      "b": 447,
-      "c": 583,
-      "regroups": 1,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        196,
+        663
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 5,
-      "a": 138,
-      "op": "+",
-      "b": 103,
-      "c": 241,
-      "regroups": 1,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        486,
+        446
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 6,
-      "a": 227,
-      "op": "+",
-      "b": 686,
-      "c": 913,
-      "regroups": 2,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        227,
+        686
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 7,
-      "a": 249,
-      "op": "+",
-      "b": 472,
-      "c": 721,
-      "regroups": 2,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        540,
+        265
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 8,
-      "a": 656,
-      "op": "+",
-      "b": 307,
-      "c": 963,
-      "regroups": 1,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        249,
+        472
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 9,
-      "a": 423,
-      "op": "+",
-      "b": 293,
-      "c": 716,
-      "regroups": 1,
-      "width": 3
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        656,
+        307
+      ],
+      "cols": 3,
+      "boxes": true
     }
   ],
   "answer_key": [
+    334,
+    533,
     480,
     859,
     932,
-    583,
-    241,
     913,
+    805,
     721,
-    963,
-    716
+    963
   ],
   "new_words": [],
   "review_words": []

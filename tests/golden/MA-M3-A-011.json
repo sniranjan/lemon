@@ -9,109 +9,118 @@
   "variant": 1,
   "seed": 14187174800379697311,
   "title": "Big taking away",
-  "parent_tip": "For 402 take away 168, there are no tens to trade: trade a hundred for ten tens first, then a ten for ten ones.",
+  "parent_tip": "Start with the ones. If the top digit is too small, trade one ten for ten ones and write the new digits in the little boxes.",
   "items": [
     {
       "kind": "column",
-      "n": 1,
-      "a": 502,
-      "op": "-",
-      "b": 279,
-      "c": 223,
-      "regroups": 2,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        504,
+        427
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 2,
-      "a": 511,
-      "op": "-",
-      "b": 263,
-      "c": 248,
-      "regroups": 2,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        927,
+        465
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 3,
-      "a": 710,
-      "op": "-",
-      "b": 173,
-      "c": 537,
-      "regroups": 2,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        597,
+        219
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 4,
-      "a": 672,
-      "op": "-",
-      "b": 608,
-      "c": 64,
-      "regroups": 1,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        908,
+        483
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 5,
-      "a": 985,
-      "op": "-",
-      "b": 896,
-      "c": 89,
-      "regroups": 2,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        809,
+        661
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 6,
-      "a": 211,
-      "op": "-",
-      "b": 188,
-      "c": 23,
-      "regroups": 2,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        710,
+        173
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 7,
-      "a": 319,
-      "op": "-",
-      "b": 181,
-      "c": 138,
-      "regroups": 1,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        985,
+        896
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 8,
-      "a": 981,
-      "op": "-",
-      "b": 256,
-      "c": 725,
-      "regroups": 1,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        211,
+        188
+      ],
+      "cols": 3,
+      "boxes": true
     },
     {
       "kind": "column",
-      "n": 9,
-      "a": 792,
-      "op": "-",
-      "b": 417,
-      "c": 375,
-      "regroups": 1,
-      "width": 3
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        319,
+        181
+      ],
+      "cols": 3,
+      "boxes": true
     }
   ],
   "answer_key": [
-    223,
-    248,
+    77,
+    462,
+    378,
+    425,
+    148,
     537,
-    64,
     89,
     23,
-    138,
-    725,
-    375
+    138
   ],
   "new_words": [],
   "review_words": []

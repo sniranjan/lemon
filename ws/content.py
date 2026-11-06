@@ -58,8 +58,21 @@ def phrases(subject: str = "english") -> dict:
 
 
 @lru_cache(maxsize=None)
+def sounds(subject: str = "english") -> dict:
+    """Letter words and onset + rime splits for letters-and-sounds levels (5A)."""
+    path = CONTENT_DIR / "sounds" / f"{subject}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
 def math_objects() -> tuple[dict, ...]:
     return tuple(yaml.safe_load((CONTENT_DIR / "math" / "objects.yaml").read_text()))
+
+
+@lru_cache(maxsize=None)
+def math_stories() -> dict:
+    """Story-problem frames for Cubs math (content/math/stories.yaml)."""
+    return yaml.safe_load((CONTENT_DIR / "math" / "stories.yaml").read_text())
 
 
 @lru_cache(maxsize=None)
@@ -85,5 +98,5 @@ def story_problems() -> tuple[dict, ...]:
 
 
 def clear_caches() -> None:
-    for f in (vocab, tips, licenses, stories, phrases, math_objects, line_targets, line_stories, story_problems):
+    for f in (vocab, tips, licenses, stories, phrases, sounds, math_objects, math_stories, line_targets, line_stories, story_problems):
         f.cache_clear()

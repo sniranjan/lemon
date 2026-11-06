@@ -1,0 +1,23 @@
+# Test letters and sounds (see content/sounds/english.yaml), for the fixture word bank.
+letter_words:
+  a: [apple]
+  b: [ball, bag, bed]
+  c: [cat, cup]
+  d: [dog]
+  f: [fish, fan]
+  h: [hat]
+  p: [pig]
+  s: [sun]
+  v: [van]
+letter_inside:
+  a: [cat, hat]
+rimes:
+  at: [cat, hat]
+  an: [van, fan]
+  ag: [bag]
+  ed: [bed]
+  ig: [pig]
+  up: [cup]
+  un: [sun]
+  og: [dog]
+  ish: [fish]

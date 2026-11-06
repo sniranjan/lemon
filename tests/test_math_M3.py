@@ -7,7 +7,7 @@ import pytest
 
 from ws import generate as gen
 from ws import registry
-from ws.sheet_types.column_arithmetic import across_zero, regroup_count
+from ws.sheet_types.column_arithmetic import across_zero, answer, regroups
 from ws.sheet_types.story_problem import evaluate
 from ws.syllabus import load_level, resolve_page, sheet_id
 from ws.verify import banned_words
@@ -34,13 +34,13 @@ def test_M3_shape():
 
 
 def test_regroup_counting():
-    assert regroup_count(345, "+", 123) == 0
-    assert regroup_count(358, "+", 125) == 1     # ones carry
-    assert regroup_count(375, "+", 152) == 1     # tens carry
-    assert regroup_count(468, "+", 357) == 2
-    assert regroup_count(532, "-", 117) == 1
-    assert regroup_count(402, "-", 168) == 2 and across_zero(402, "-", 168)
-    assert not across_zero(452, "-", 168)
+    assert regroups("add", [345, 123]) == 0
+    assert regroups("add", [358, 125]) == 1     # ones carry
+    assert regroups("add", [375, 152]) == 1     # tens carry
+    assert regroups("add", [468, 357]) == 2
+    assert regroups("sub", [532, 117]) == 1
+    assert regroups("sub", [402, 168]) == 2 and across_zero("sub", [402, 168])
+    assert not across_zero("sub", [452, 168])
 
 
 def test_story_expressions():
@@ -71,7 +71,9 @@ def test_whole_level_passes_and_keeps_to_the_parts(fixture_content):
         assert check(sheet) == [], (sheet.id, check(sheet))
         r = resolve_page(M3, page).rules
         if sheet.sheet_type == "column_arithmetic":
-            assert all(0 <= p["c"] <= 999 and p["regroups"] in r["regroups"] for p in sheet.items)
+            assert len(sheet.items) == 9
+            assert all(1 <= answer(p["op"], p["numbers"]) <= 999 for p in sheet.items)
+            assert all(regroups(p["op"], p["numbers"]) in r["regroup_counts"] for p in sheet.items)
         if sheet.sheet_type == "fact_drill":
             layouts.add(sheet.items[0]["layout"])
             facts = [f for i in sheet.items if i["kind"] != "track" for f in i.get("facts", [i])]
@@ -88,24 +90,24 @@ def test_whole_level_passes_and_keeps_to_the_parts(fixture_content):
 
 def test_verify_catches_bad_columns(fixture_content):
     plan = gen.build_plan(M3)
-    sheet = gen.build_sheet(M3, 11, plan)   # taking away, 1–2 trades, one across a zero
+    sheet = gen.build_sheet(M3, 11, plan)   # taking away, 1–2 trades, one through a zero
+    assert check(sheet) == []
 
-    def broken(**change):
+    def broken(numbers):
         bad = copy.deepcopy(sheet)
-        bad.items[0].update(change)
+        bad.items[0]["numbers"] = numbers
+        bad.answer_key[0] = answer("sub", numbers)
         return check(bad)
 
-    p = sheet.items[0]
-    assert any("is wrong" in m for m in broken(c=p["c"] + 1))
-    assert any("regroup count" in m for m in broken(regroups=p["regroups"] + 1))
-    assert any("below zero" in m for m in broken(a=210, b=420, c=-210, regroups=regroup_count(210, "-", 420)))
-    assert any("sign" in m for m in broken(op="+", c=p["a"] + p["b"]))
+    assert any("regroup" in m for m in broken([987, 123]))          # no trade on a trading page
+    assert any("below" in m for m in broken([210, 420]))
+    assert any("outside" in m for m in broken([150, 120]))
     no_zero = copy.deepcopy(sheet)
     for q in no_zero.items:
-        if across_zero(q["a"], q["op"], q["b"]):
-            q.update(a=q["a"] + 10, c=q["c"] + 10, regroups=regroup_count(q["a"] + 10, "-", q["b"]))
-    no_zero.answer_key = [q["c"] for q in no_zero.items]
-    assert any("across a zero" in m for m in check(no_zero))
+        if across_zero(q["op"], q["numbers"]):
+            q["numbers"][0] += 10
+    no_zero.answer_key = [answer(q["op"], q["numbers"]) for q in no_zero.items]
+    assert any("through a zero" in m for m in check(no_zero))
     bad_key = sheet.model_copy(update={"answer_key": [x + 1 for x in sheet.answer_key]})
     assert any("answer key" in m for m in check(bad_key))
 

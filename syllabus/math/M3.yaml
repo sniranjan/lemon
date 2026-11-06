@@ -30,40 +30,51 @@ sections:
     standards: [3.NBT.2]
     source: ours
     rules:
-      max_total: 999
-      count: 9
-      tips:
-        column_arithmetic:
-          - "Start with the ones, on the right. If a column makes 10 or more, write the ten in the little box over the next column."
-          - "Say each column out loud: ones, then tens, then hundreds. Let your child decide when a trade is needed."
+      # column_arithmetic (shared with Cubs Math): 9 problems a page, every problem regroups in exactly one of
+      # `regroup_counts` columns (each count on every page); `across_zero` take-aways trade through a 0 (402 − 168)
+      max_answer: 999
+      problems: 9
+      max_regroups: 2
     parts:
       - part: 1
         pages: [1, 10]
-        rules: { title: Big adding, ops: ["+"], first: [100, 899], second: [100, 899], regroups: [1, 2] }
+        rules:
+          title: Big adding
+          op: add
+          a: [100, 899]
+          b: [100, 899]
+          regroup: all
+          regroup_counts: [1, 2]
+          tips:
+            column_add_regroup:
+              - "Start with the ones, on the right. If a column makes 10 or more, write the ten in the little box over the next column."
+              - "Say each column out loud: ones, then tens, then hundreds. Let your child decide when a carry is needed."
       - part: 2
         pages: [11, 20]
         rules:
           title: Big taking away
-          ops: ["-"]
-          first: [200, 999]
-          second: [100, 899]
-          regroups: [1, 2]
+          op: sub
+          a: [200, 999]
+          b: [100, 899]
+          regroup: all
+          regroup_counts: [1, 2]
           across_zero: 1
           tips:
-            column_arithmetic:
+            column_sub_regroup:
               - "Start with the ones. If the top digit is too small, trade one ten for ten ones and write the new digits in the little boxes."
               - "For 402 take away 168, there are no tens to trade: trade a hundred for ten tens first, then a ten for ten ones."
       - part: 3
         pages: [21, 30]
         rules:
           title: Add or take away
-          ops: ["+", "-"]
-          first: [200, 999]
-          second: [100, 799]
-          regroups: [0, 1, 2]
+          op: mixed
+          a: [200, 999]
+          b: [100, 799]
+          regroup: mixed
+          regroup_counts: [0, 1, 2]
           across_zero: 1
           tips:
-            column_arithmetic:
+            column_mixed_regroup:
               - "Adding and taking away are mixed now. Point to the sign together before each problem, then start with the ones."
               - "Some problems need no trades at all. Ask your child to check each column before deciding."
 

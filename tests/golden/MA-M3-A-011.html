@@ -56,14 +56,23 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
 .obj-row img { width: var(--obj); height: var(--obj); }
 
 .foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
-.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 16px 20px; }
-.problems .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; }
-.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
-.colsum { display: grid; grid-template-columns: 40px repeat(3, 46px); justify-items: center; align-items: center; row-gap: 3px; font-size: 44px; font-weight: 700; line-height: 1; }
-.colsum .op { color: var(--accent); }
-.carry { width: 30px; height: 28px; border: 2px dashed #8a8a90; border-radius: 7px; }
-.colsum .rule { grid-column: 1 / 5; justify-self: stretch; border-top: 4px solid var(--ink); margin-top: 4px; }
-.digit { width: 40px; height: 50px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; margin-top: 4px; }
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 24px; }
+.problems .card { min-height: 0; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.sum { display: grid; grid-template-columns: 44px repeat(var(--cols), 46px); column-gap: 3px; align-items: center; justify-items: center; }
+.d { font-size: 54px; font-weight: 700; line-height: 64px; height: 64px; }
+.sign { font-size: 50px; font-weight: 700; line-height: 64px; }
+.carry { width: 40px; height: 38px; border: 2px dashed var(--accent); border-radius: 8px; margin-bottom: 4px; }
+.rule { grid-column: 1 / -1; justify-self: stretch; height: 0; border-top: 4px solid var(--ink); margin: 6px 0 10px; }
+.ans { width: 44px; height: 60px; border: 3px solid var(--ink); border-radius: 10px; }
+/* 9 problems (Foxes): a compact 3 × 3 grid */
+.problems { gap: 16px 20px; }
+.problems .card { padding: 6px; border-radius: 22px; }
+.sum { grid-template-columns: 36px repeat(var(--cols), 44px); }
+.d { font-size: 44px; line-height: 50px; height: 50px; }
+.sign { font-size: 42px; line-height: 50px; }
+.carry { width: 30px; height: 28px; border-radius: 7px; }
+.rule { margin: 4px 0 8px; }
+.ans { width: 40px; height: 50px; border-radius: 9px; }
 </style>
 </head>
 <body>
@@ -79,90 +88,72 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
       <div><span>Time</span><i></i></div>
     </div>
   </header>
-  <div class="tip" data-audience="parent"><b>For grown-ups:</b> For 402 take away 168, there are no tens to trade: trade a hundred for ten tens first, then a ten for ten ones.</div>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Start with the ones. If the top digit is too small, trade one ten for ten ones and write the new digits in the little boxes.</div>
   <main class="body">
     <div class="problems">
-      <div class="card"><span class="qn" data-audience="parent">1</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>5</span><span>0</span><span>2</span>
-          <span class="op">&minus;</span><span>2</span><span>7</span><span>9</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">2</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>5</span><span>1</span><span>1</span>
-          <span class="op">&minus;</span><span>2</span><span>6</span><span>3</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">3</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>7</span><span>1</span><span>0</span>
-          <span class="op">&minus;</span><span>1</span><span>7</span><span>3</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">4</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>6</span><span>7</span><span>2</span>
-          <span class="op">&minus;</span><span>6</span><span>0</span><span>8</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">5</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>9</span><span>8</span><span>5</span>
-          <span class="op">&minus;</span><span>8</span><span>9</span><span>6</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">6</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>2</span><span>1</span><span>1</span>
-          <span class="op">&minus;</span><span>1</span><span>8</span><span>8</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">7</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>3</span><span>1</span><span>9</span>
-          <span class="op">&minus;</span><span>1</span><span>8</span><span>1</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">8</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>9</span><span>8</span><span>1</span>
-          <span class="op">&minus;</span><span>2</span><span>5</span><span>6</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
-      <div class="card"><span class="qn" data-audience="parent">9</span>
-        <div class="colsum">
-          <span></span><span class="carry"></span><span class="carry"></span><span></span>
-          <span></span><span>7</span><span>9</span><span>2</span>
-          <span class="op">&minus;</span><span>4</span><span>1</span><span>7</span>
-          <span class="rule"></span>
-          <span></span><span class="digit"></span><span class="digit"></span><span class="digit"></span>
-        </div>
-      </div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">5</span><span class="d">0</span><span class="d">4</span>
+        <span class="sign">−</span><span class="d">4</span><span class="d">2</span><span class="d">7</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">9</span><span class="d">2</span><span class="d">7</span>
+        <span class="sign">−</span><span class="d">4</span><span class="d">6</span><span class="d">5</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">5</span><span class="d">9</span><span class="d">7</span>
+        <span class="sign">−</span><span class="d">2</span><span class="d">1</span><span class="d">9</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">9</span><span class="d">0</span><span class="d">8</span>
+        <span class="sign">−</span><span class="d">4</span><span class="d">8</span><span class="d">3</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">8</span><span class="d">0</span><span class="d">9</span>
+        <span class="sign">−</span><span class="d">6</span><span class="d">6</span><span class="d">1</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">7</span><span class="d">1</span><span class="d">0</span>
+        <span class="sign">−</span><span class="d">1</span><span class="d">7</span><span class="d">3</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">9</span><span class="d">8</span><span class="d">5</span>
+        <span class="sign">−</span><span class="d">8</span><span class="d">9</span><span class="d">6</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">2</span><span class="d">1</span><span class="d">1</span>
+        <span class="sign">−</span><span class="d">1</span><span class="d">8</span><span class="d">8</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
+      <div class="card"><div class="sum" style="--cols: 3">
+        <span></span><span class="carry"></span><span class="carry"></span><span class="carry"></span>
+        <span class="sign"></span><span class="d">3</span><span class="d">1</span><span class="d">9</span>
+        <span class="sign">−</span><span class="d">1</span><span class="d">8</span><span class="d">1</span>
+        <span class="rule"></span>
+        <span></span><span class="ans"></span><span class="ans"></span><span class="ans"></span>
+      </div></div>
     </div>
   </main>
   <footer class="foot" data-audience="parent">Foxes · Math · page 11</footer>
