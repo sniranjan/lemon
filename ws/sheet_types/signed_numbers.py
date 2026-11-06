@@ -27,15 +27,15 @@ from ._rational import fmt, parse, show
 
 LINES, FACTS = 5, 12
 MAX_TRIES = 2000
-# Real situations for signed numbers (6.NS.5): (text with {n}, sign of the number it stands for)
+# Real situations for signed numbers (6.NS.5): (text with {n}, sign of the number, largest sensible size)
 CONTEXTS = (
-    ("{n} degrees below zero", -1), ("{n} degrees above zero", 1),
-    ("{n} feet below sea level", -1), ("{n} feet above sea level", 1),
-    ("a gain of {n} yards in a football game", 1), ("a loss of {n} yards in a football game", -1),
-    ("{n} floors below the ground floor", -1), ("{n} floors above the ground floor", 1),
-    ("putting ${n} into a savings account", 1), ("taking ${n} out of a savings account", -1),
-    ("losing {n} points in a game", -1), ("winning {n} points in a game", 1),
-    ("a diver {n} meters under the water", -1), ("a kite {n} meters above the ground", 1),
+    ("{n} degrees below zero", -1, 30), ("{n} degrees above zero", 1, 40),
+    ("{n} feet below sea level", -1, 50), ("{n} feet above sea level", 1, 50),
+    ("a gain of {n} yards in a football game", 1, 20), ("a loss of {n} yards in a football game", -1, 15),
+    ("{n} floors below the ground floor", -1, 4), ("{n} floors above the ground floor", 1, 12),
+    ("putting ${n} into a savings account", 1, 50), ("taking ${n} out of a savings account", -1, 40),
+    ("losing {n} points in a game", -1, 20), ("winning {n} points in a game", 1, 30),
+    ("a diver {n} meters under the water", -1, 30), ("a kite {n} meters above the ground", 1, 40),
 )
 ONE_ROW = {"order"}
 
@@ -67,7 +67,7 @@ def answer_for(i: dict) -> str:
 
 
 def context_text(i: dict) -> str:
-    text, _ = CONTEXTS[i["context"]]
+    text = CONTEXTS[i["context"]][0]
     return text.format(n=num(abs(parse(i["value"]))))
 
 
@@ -103,7 +103,7 @@ class SignedNumbers(SheetType):
                         item["value"] = num(v)
                 elif task == "context":
                     c = ctx_order.pop()
-                    v = Fraction(rng.randint(2, r.get("context_max", hi)) * CONTEXTS[c][1])
+                    v = Fraction(rng.randint(2, min(r.get("context_max", hi), CONTEXTS[c][2])) * CONTEXTS[c][1])
                     item.update(context=c, value=num(v))
                     item["text"] = context_text(item)
                 elif task in ("opposite", "abs"):
@@ -177,6 +177,8 @@ class SignedNumbers(SheetType):
                 if not isinstance(c, int) or not 0 <= c < len(CONTEXTS):
                     issues.append(error(sheet, f"{label}: unknown situation"))
                 else:
+                    if abs(vals[0]) > CONTEXTS[c][2]:
+                        issues.append(error(sheet, f"{label}: {num(vals[0])} is too big for {i.get('text')!r}"))
                     if (vals[0] > 0) != (CONTEXTS[c][1] > 0) or i.get("text") != context_text(i):
                         issues.append(error(sheet, f"{label}: the number's sign doesn't match {i.get('text')!r}"))
             if task == "compare" and (len(vals) != 2 or vals[0] == vals[1] or min(vals) >= 0):

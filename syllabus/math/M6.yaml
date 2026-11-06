@@ -69,14 +69,15 @@ sections:
         pages: [21, 30]
         sheet_types: [fraction_divide, fraction_divide, rational_story]
         rules:
-          title: Dividing mixed numbers
+          title: Mixed numbers
           layout: facts
           problems: 10
           dividend: [mixed, whole, mixed, proper, mixed]
           divisor: [proper, mixed, unit, proper, proper]
           max_whole: 5
           max_answer: 20
-          tags: [fraction_divide, fraction_divide, fraction_divide, fraction_divide]
+          story_title: Fraction stories
+          tags: [fraction_divide, fraction_divide, fraction_divide]
           tips:
             fraction_divide:
               - "Turn mixed numbers into fractions first: 2 1/2 is 5/2. Then keep, change and flip as before."
@@ -113,7 +114,7 @@ sections:
         name: Ratio tables, any column
         pages: [41, 50]
         rules:
-          title: Find the missing numbers
+          title: Missing numbers
           start: false
           base: [1, 9]
           multipliers: [2, 12]
@@ -128,7 +129,7 @@ sections:
         rules:
           title: Unit rates
           max_value: 5000
-          tags: [unit_rate, speed, unit_price, unit_rate]
+          tags: [unit_rate, speed, unit_price]
           tips:
             rational_story:
               - "A unit rate is how much for one: one day, one hour, one notebook. Divide to find it, then multiply to scale it up."
@@ -140,7 +141,7 @@ sections:
         rules:
           title: Rates and units
           max_value: 5000
-          tags: [convert, speed, unit_price, convert]
+          tags: [convert, speed, convert]
           tips:
             rational_story:
               - "Converting units is a ratio too: 3 feet for every 1 yard. Ask: do we need more of the small unit or fewer of the big one?"
@@ -176,6 +177,7 @@ sections:
           tasks: [of]
           percents: [10, 20, 25, 50, 75, 5, 30, 40, 60, 1, 15, 80]
           whole: [10, 400]
+          whole_step: 5
           max_part: 300
           tips:
             percent_problem:
@@ -192,8 +194,10 @@ sections:
           tasks: [of, whole, whole, of, whole, percent]
           percents: [10, 20, 25, 50, 75, 5, 40, 60]
           whole: [10, 400]
+          whole_step: 5
           max_part: 300
-          tags: [percent_of, percent_whole, percent_of, percent_whole]
+          story_title: Percent stories
+          tags: [percent_of, percent_whole, percent_whole]
           tips:
             percent_problem:
               - "For 25% of what is 20: 25% is a quarter, so 20 is a quarter of the whole, and the whole is 4 × 20 = 80."
@@ -243,7 +247,7 @@ sections:
         pages: [121, 130]
         sheet_types: [coordinate_grid]
         rules:
-          title: The coordinate plane
+          title: Coordinate plane
           range: 6
           read: 4
           plot: 4
@@ -320,7 +324,7 @@ sections:
         name: Adding equations
         pages: [171, 180]
         rules:
-          title: Solve for the letter
+          title: Solve the equation
           forms: [add, add_left]
           numbers: [whole]
           max_q: 100
@@ -332,7 +336,7 @@ sections:
         name: Times equations
         pages: [181, 190]
         rules:
-          title: Solve for the letter
+          title: Solve the equation
           forms: [times, add, times, add_left, times]
           numbers: [whole]
           max_q: 150
@@ -345,12 +349,13 @@ sections:
         pages: [191, 200]
         sheet_types: [equation_solve, rational_story]
         rules:
-          title: Decimals and fractions
+          title: Harder equations
           problems: 8
           forms: [add, times, add_left, times]
           numbers: [decimal, fraction, decimal]
           max_q: 30
-          tags: [equation, equation, equation, equation]
+          story_title: Equation stories
+          tags: [equation, equation, equation]
           tips:
             equation_solve:
               - "The steps are the same with decimals and fractions: take away to undo +, divide to undo ×. Line up decimal points."

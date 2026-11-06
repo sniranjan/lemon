@@ -4,7 +4,7 @@ operations, writing expressions from words, and evaluating expressions and formu
 Rules (merged level → section → part):
 - `task`: `power` (work out 2³ + 5 or 3(4 + 2)²), `write` (write "7 more than n" as n + 7),
   `substitute` (if n = 5, 3n + 4 = ☐), `formula` (two or three letters: if l = 7 and w = 4, A = lw = ☐).
-- `problems`: items a page (default 12; `write` and `formula` 8).
+- `problems`: items a page (default 10; `write` and `formula` 8).
 - `max_value`: largest answer (default 200). `max_var`: largest value a letter takes (default 12).
 - `title`: the sheet title.
 Expressions are stored in Python form ("3*n+4") and as printed ("3n + 4"); verify prints and
@@ -54,7 +54,7 @@ FORMULAS = (
     (None, "5*x - y", {"x": (2, 12), "y": (1, 20)}), (None, "2*(x + y)", {"x": (1, 15), "y": (1, 15)}),
     (None, "x**2 - y**2", {"x": (3, 12), "y": (1, 11)}),
 )
-FEWER = {"write": 8, "formula": 8}
+FEWER = {"write": 8, "formula": 8, "substitute": 10, "power": 10}
 
 
 def fill(form: str, nums: dict[str, int], letter: str = "v") -> str:
@@ -106,8 +106,8 @@ def check_item(i: dict, r: dict) -> str | None:
         return f"printed as {i.get('show')!r}, should be {pretty(expr)!r}"
     if "a" in vals or ("letter" in i and i["letter"] not in LETTERS):
         return "letters must not be `a`"
-    if task == "substitute" and not all(1 <= x <= max_var for x in vals.values()):
-        return f"letter values {vals} are outside 1–{max_var}"
+    if task == "substitute" and not all(2 <= x <= max_var for x in vals.values()):
+        return f"letter values {vals} are outside 2–{max_var}"
     for k, (lo, hi) in NUMS.items():
         if k in i.get("nums", {}) and not lo <= i["nums"][k] <= hi:
             return f"number {k} = {i['nums'][k]} is outside {lo}–{hi}"
@@ -157,7 +157,7 @@ class ExpressionEval(SheetType):
                     f = SUB_FORMS[form]
                     used = {k: v for k, v in nums.items() if k in uses(f)}
                     v = rng.choice(LETTERS)
-                    item.update(nums=used, letter=v, vars={v: rng.randint(1, r.get("max_var", 12))},
+                    item.update(nums=used, letter=v, vars={v: rng.randint(2, r.get("max_var", 12))},
                                 expr=fill(f, used, v))
                 else:
                     name, expr, ranges = FORMULAS[form]

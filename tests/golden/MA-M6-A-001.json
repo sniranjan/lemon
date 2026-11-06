@@ -1,0 +1,84 @@
+{
+  "id": "MA-M6-A-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "fraction_divide",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 16154473559584519669,
+  "title": "How many fit?",
+  "parent_tip": "Read 3 ÷ 1/4 as: how many quarters are in 3? Count the quarter pieces in three whole bars.",
+  "items": [
+    {
+      "kind": "divide",
+      "n": 1,
+      "a": "2",
+      "b": "1/3",
+      "answer": "6",
+      "bar": {
+        "bars": 2,
+        "pieces": 3,
+        "shaded": 6
+      }
+    },
+    {
+      "kind": "divide",
+      "n": 2,
+      "a": "2/3",
+      "b": "1/6",
+      "answer": "4",
+      "bar": {
+        "bars": 1,
+        "pieces": 6,
+        "shaded": 4
+      }
+    },
+    {
+      "kind": "divide",
+      "n": 3,
+      "a": "1",
+      "b": "1/4",
+      "answer": "4",
+      "bar": {
+        "bars": 1,
+        "pieces": 4,
+        "shaded": 4
+      }
+    },
+    {
+      "kind": "divide",
+      "n": 4,
+      "a": "3/5",
+      "b": "1/10",
+      "answer": "6",
+      "bar": {
+        "bars": 1,
+        "pieces": 10,
+        "shaded": 6
+      }
+    },
+    {
+      "kind": "divide",
+      "n": 5,
+      "a": "1",
+      "b": "1/3",
+      "answer": "3",
+      "bar": {
+        "bars": 1,
+        "pieces": 3,
+        "shaded": 3
+      }
+    }
+  ],
+  "answer_key": [
+    "6",
+    "4",
+    "4",
+    "6",
+    "3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

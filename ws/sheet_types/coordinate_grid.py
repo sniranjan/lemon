@@ -21,13 +21,14 @@ from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
 from ._rational import show
 
-CELL = 34
+CELL = 38
+TOP = 16          # room above the grid for the top label
 MARGIN = 26        # room for the y-axis labels left of the grid
 LETTERS = "ABCDEFGHJKLMNPQRSTUVWXYZ"   # no I or O: they look like 1 and 0
 
 
 def origin(rng_r: int) -> tuple[int, int]:
-    return MARGIN + rng_r * CELL, 6 + rng_r * CELL
+    return MARGIN + rng_r * CELL, TOP + rng_r * CELL
 
 
 def pixel(x: int, y: int, R: int) -> tuple[int, int]:
@@ -119,6 +120,8 @@ class CoordinateGrid(SheetType):
         R = r.get("range", 6)
         items = sheet.items
         issues: list[Issue] = []
+        if R != 6:
+            issues.append(error(sheet, f"the template draws the grid from −6 to 6, not ±{R}"))
         kinds = [i.get("kind") for i in items]
         want = ["read"] * r["read"] + ["plot"] * r["plot"] + ["distance"] * r.get("distance", 0)
         if kinds != want:

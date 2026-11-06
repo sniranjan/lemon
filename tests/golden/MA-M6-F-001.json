@@ -1,0 +1,139 @@
+{
+  "id": "MA-M6-F-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "equation_solve",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 17100398844016186582,
+  "title": "Solve the equation",
+  "parent_tip": "Ask: what number plus 7 makes 15? Take 7 away from 15 to find it. Then put the answer back in to check.",
+  "items": [
+    {
+      "kind": "equation",
+      "n": 1,
+      "form": "add",
+      "numbers": "whole",
+      "letter": "y",
+      "p": "24",
+      "q": "51",
+      "x": "27",
+      "answer": "y = 27"
+    },
+    {
+      "kind": "equation",
+      "n": 2,
+      "form": "add_left",
+      "numbers": "whole",
+      "letter": "k",
+      "p": "9",
+      "q": "25",
+      "x": "16",
+      "answer": "k = 16"
+    },
+    {
+      "kind": "equation",
+      "n": 3,
+      "form": "add",
+      "numbers": "whole",
+      "letter": "x",
+      "p": "44",
+      "q": "55",
+      "x": "11",
+      "answer": "x = 11"
+    },
+    {
+      "kind": "equation",
+      "n": 4,
+      "form": "add_left",
+      "numbers": "whole",
+      "letter": "t",
+      "p": "15",
+      "q": "53",
+      "x": "38",
+      "answer": "t = 38"
+    },
+    {
+      "kind": "equation",
+      "n": 5,
+      "form": "add",
+      "numbers": "whole",
+      "letter": "y",
+      "p": "32",
+      "q": "71",
+      "x": "39",
+      "answer": "y = 39"
+    },
+    {
+      "kind": "equation",
+      "n": 6,
+      "form": "add_left",
+      "numbers": "whole",
+      "letter": "x",
+      "p": "8",
+      "q": "13",
+      "x": "5",
+      "answer": "x = 5"
+    },
+    {
+      "kind": "equation",
+      "n": 7,
+      "form": "add",
+      "numbers": "whole",
+      "letter": "y",
+      "p": "44",
+      "q": "48",
+      "x": "4",
+      "answer": "y = 4"
+    },
+    {
+      "kind": "equation",
+      "n": 8,
+      "form": "add_left",
+      "numbers": "whole",
+      "letter": "t",
+      "p": "19",
+      "q": "65",
+      "x": "46",
+      "answer": "t = 46"
+    },
+    {
+      "kind": "equation",
+      "n": 9,
+      "form": "add",
+      "numbers": "whole",
+      "letter": "p",
+      "p": "24",
+      "q": "31",
+      "x": "7",
+      "answer": "p = 7"
+    },
+    {
+      "kind": "equation",
+      "n": 10,
+      "form": "add_left",
+      "numbers": "whole",
+      "letter": "y",
+      "p": "12",
+      "q": "42",
+      "x": "30",
+      "answer": "y = 30"
+    }
+  ],
+  "answer_key": [
+    "y = 27",
+    "k = 16",
+    "x = 11",
+    "t = 38",
+    "y = 39",
+    "x = 5",
+    "y = 4",
+    "t = 46",
+    "p = 7",
+    "y = 30"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -7,13 +7,13 @@
 {% block style %}
 .probs { flex: 1; min-height: 0; display: grid; gap: 14px 18px; grid-auto-rows: 1fr;
          grid-template-columns: {{ "1fr" if task == "write" else "1fr 1fr" }}; }
-.probs .card { position: relative; min-height: 0; display: flex; flex-direction: {{ "row" if task in ("power", "write") else "column" }}; align-items: {{ "center" if task in ("power", "write") else "flex-start" }}; justify-content: center; gap: 10px 16px; padding: 8px 20px 8px 34px; border-radius: 22px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: {{ "row" if task in ("power", "write") else "column" }}; align-items: {{ "center" if task in ("power", "write") else "flex-start" }}; justify-content: center; gap: 4px 16px; padding: 6px 12px 6px 30px; border-radius: 22px; }
 .qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
-.ex { display: flex; align-items: center; gap: 10px; font-size: 30px; font-weight: 700; white-space: nowrap; }
-.ex i, .given i { font-family: "Andika", serif; font-style: italic; }
+.ex { display: flex; align-items: center; gap: 8px; font-size: 29px; font-weight: 700; white-space: nowrap; }
+.ex i, .given i, .phrase i { font-family: "Andika", serif; font-style: italic; }
 .given { font-size: 24px; color: var(--accent); font-weight: 700; white-space: nowrap; }
-.phrase { flex: 1; font-size: 28px; }
-.box { display: inline-block; width: 86px; height: 56px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; flex: none; }
+.phrase { flex: 1; font-size: 30px; }
+.box { display: inline-block; width: 74px; height: 50px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; flex: none; }
 .box.long { width: 230px; }
 {% endblock %}
 {% block body %}
@@ -23,7 +23,7 @@
 {% if task == "power" %}
         <div class="ex"><span>{{ math(i.show) }} =</span><span class="box"></span></div>
 {% elif task == "write" %}
-        <div class="phrase">{{ i.phrase }}</div><span class="box long"></span>
+        <div class="phrase">{% for w in i.phrase.split(" ") %}{% if w.rstrip(",") == i.letter %}<i>{{ i.letter }}</i>{{ w[1:] }}{% else %}{{ w }}{% endif %}{% if not loop.last %} {% endif %}{% endfor %}</div><span class="box long"></span>
 {% elif task == "substitute" %}
         <div class="given">if {{ math(i.letter) }} = {{ i.vars[i.letter] }}</div>
         <div class="ex"><span>{{ math(i.show) }} =</span><span class="box"></span></div>

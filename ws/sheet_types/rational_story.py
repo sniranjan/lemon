@@ -8,7 +8,7 @@ from the stored picks and recomputes everything exactly. Rules (merged level →
   [unit_rate, speed, unit_price, convert].
 - `max_value`: no number in the story or the answer above it (default 2000).
 - `max_den`: fraction answers and fractions in the text keep denominators at or below it (default 12).
-- `title`: the sheet title.
+- `title`: the sheet title; `story_title` overrides it when a part mixes stories with other pages.
 Stored items: the frame id, the picked numbers (`picks`, as text), every number of the story
 (`values`, as text), the printed text, and the answer (as text, written in the frame's style).
 """
@@ -155,7 +155,7 @@ class RationalStory(SheetType):
                           "values": {k: fmt(v) for k, v in values.items()},
                           "text": fill_text(frame, values), "answer": answer_text(frame, answer),
                           "unit": frame["unit"], "equation": frame.get("equation", False)})
-        return SheetContent(title=r["title"], parent_tip=ctx.tip(self.name), items=items,
+        return SheetContent(title=r.get("story_title", r["title"]), parent_tip=ctx.tip(self.name), items=items,
                             answer_key=[f"{i['answer']}" if i["unit"] == "$" else f"{i['answer']} {i['unit']}"
                                         for i in items])
 

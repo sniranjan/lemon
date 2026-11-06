@@ -1,0 +1,76 @@
+{
+  "id": "MA-M6-F-022",
+  "subject": "math",
+  "level": "M6",
+  "section": "F",
+  "part": 3,
+  "sheet_type": "rational_story",
+  "page_number": 192,
+  "variant": 1,
+  "seed": 8758385272595855488,
+  "title": "Equation stories",
+  "parent_tip": "Ask your child what the unknown is first. Then write the equation on the line before working it out.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "stickers_more",
+      "picks": {
+        "x": "59",
+        "p": "34"
+      },
+      "values": {
+        "x": "59",
+        "p": "34",
+        "q": "93"
+      },
+      "text": "Kai had some stickers. He got 34 more, and now he has 93. How many stickers did he have at first?",
+      "answer": "59",
+      "unit": "stickers",
+      "equation": true
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "movie_tickets",
+      "picks": {
+        "x": "4",
+        "p": "8.50"
+      },
+      "values": {
+        "x": "4",
+        "p": "8 1/2",
+        "q": "34"
+      },
+      "text": "A movie ticket costs $8.50. Nora paid $34 for some tickets. How many tickets did she buy?",
+      "answer": "4",
+      "unit": "tickets",
+      "equation": true
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "crayon_boxes",
+      "picks": {
+        "x": "11",
+        "p": "6"
+      },
+      "values": {
+        "x": "11",
+        "p": "6",
+        "q": "66"
+      },
+      "text": "6 boxes hold the same number of crayons. There are 66 crayons in all. How many crayons are in each box?",
+      "answer": "11",
+      "unit": "crayons",
+      "equation": true
+    }
+  ],
+  "answer_key": [
+    "59 stickers",
+    "4 tickets",
+    "11 crayons"
+  ],
+  "new_words": [],
+  "review_words": []
+}

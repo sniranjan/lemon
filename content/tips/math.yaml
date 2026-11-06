@@ -88,3 +88,20 @@ factor_pairs:
 fraction_bars:
   - "Same size bars, different pieces. Count the shaded parts on each bar together."
   - "When the bottom numbers match, add or take away the tops; the bottom stays the same."
+# Pandas math (M6). Parts carry their own tips in syllabus/math/M6.yaml; these are fallbacks.
+fraction_divide:
+  - "Ask how many of the second number fit in the first. Check by multiplying the answer by the second number."
+ratio_table:
+  - "Every column of a ratio table is the same ratio, grown by the same number on both rows."
+rational_story:
+  - "Read each problem twice, decide what is being asked, then write the answer with its unit."
+percent_problem:
+  - "Percent means out of 100. Find 10% or 1% first, then scale up."
+signed_numbers:
+  - "Numbers to the left of 0 are below zero. The further right, the bigger the number."
+coordinate_grid:
+  - "Read x first, across, then y, up or down."
+expression_eval:
+  - "Put each number in place of its letter, then work it out in order: brackets, powers, times and divide, add and take away."
+equation_solve:
+  - "Undo what is done to the letter: take away to undo adding, divide to undo times. Then check by putting the answer back."

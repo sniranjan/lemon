@@ -9,16 +9,16 @@
 {% block style %}
 .probs { flex: 1; min-height: 0; display: grid; gap: 14px 18px; grid-auto-rows: 1fr;
          grid-template-columns: {{ "1fr" if lines else "1fr 1fr" }}; }
-.probs .card { position: relative; min-height: 0; display: flex; align-items: center; gap: 12px; padding: 6px 18px 6px 32px; border-radius: 22px; }
+.probs .card { position: relative; min-height: 0; display: flex; align-items: center; gap: 12px; padding: 6px 12px 6px 30px; border-radius: 22px; }
 .probs .card.wide { grid-column: 1 / -1; }
 .qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
 svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
 svg.nl { flex: none; }
 .side { width: 90px; flex: none; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 32px; font-weight: 700; }
-.fact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 27px; font-weight: 700; line-height: 1.2; }
+.fact { display: flex; flex-wrap: nowrap; white-space: nowrap; align-items: center; gap: 8px; font-size: 26px; font-weight: 700; line-height: 1.2; }
 .fact.say { font-weight: 400; font-size: 24px; }
 .fact.say b { font-weight: 700; }
-.box { display: inline-block; width: 70px; height: 52px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; flex: none; }
+.box { display: inline-block; width: 66px; height: 48px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; flex: none; }
 .box.sm { width: 52px; }
 .lt { font-size: 24px; color: var(--muted); }
 {% endblock %}

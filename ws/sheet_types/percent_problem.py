@@ -9,6 +9,7 @@ Rules (merged level → section → part):
 - `tasks` (facts): what the facts ask, cycling down the page: `of` (25% of 80 = ☐),
   `whole` (25% of ☐ = 20), `percent` (☐% of 80 = 20).
 - `percents` (facts): the percents used. `whole`: [lo, hi] for the whole; `max_part`: largest part.
+  `whole_step`: wholes are multiples of this (default 1).
 - `title`: the sheet title.
 Every fact has a whole-number part and whole; verify recomputes p × whole ÷ 100 = part exactly.
 Grids shade whole columns of ten first, then part of the next column, top to bottom.
@@ -32,7 +33,7 @@ def fact_answer(f: dict) -> str:
 
 def answers_for(item: dict) -> str:
     if item["kind"] == "grid":
-        return f"{item['shaded']}/100 = {item['shaded']}%"
+        return f"{item['shaded']}%"
     return fact_answer(item)
 
 
@@ -54,6 +55,8 @@ class PercentProblem(SheetType):
                 for _ in range(MAX_TRIES):
                     p = ctx.rng.choice(r["percents"])
                     w = ctx.rng.randint(*r["whole"])
+                    if w % r.get("whole_step", 1):
+                        continue
                     part = Fraction(p * w, 100)
                     if part.denominator == 1 and 0 < part <= r["max_part"] and (p, w) not in seen:
                         break
@@ -87,7 +90,7 @@ class PercentProblem(SheetType):
             if i.get("kind") != "fact" or i.get("task") != task:
                 issues.append(error(sheet, f"{label}: should be a {task!r} fact"))
             p, w, part = i.get("p"), i.get("whole"), i.get("part")
-            if p not in r["percents"] or not r["whole"][0] <= w <= r["whole"][1]:
+            if p not in r["percents"] or not r["whole"][0] <= w <= r["whole"][1] or w % r.get("whole_step", 1):
                 issues.append(error(sheet, f"{label}: {p}% of {w} is outside this part's numbers"))
             if Fraction(p * w, 100) != part:
                 issues.append(error(sheet, f"{label}: {p}% of {w} is {Fraction(p * w, 100)}, not {part}"))

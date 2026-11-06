@@ -3,7 +3,7 @@
    every tick. Points to read are drawn at their stored pixel positions (verify checks them
    against the coordinates). Points to plot and distances are listed beside and under the grid. #}
 {% set R = 6 %}
-{% set CELL, M, TOP = 34, 26, 6 %}
+{% set CELL, M, TOP = 38, 26, 16 %}
 {% set OX, OY = M + R * CELL, TOP + R * CELL %}
 {% set W = M + 2 * R * CELL + 20 %}
 {% set H = TOP + 2 * R * CELL + 34 %}
@@ -13,14 +13,14 @@
 {% block style %}
 .plane { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
 .plane .card { position: relative; min-height: 0; border-radius: 22px; }
-.top { flex: 1; display: flex; align-items: center; gap: 14px; padding: 10px 14px; }
+.top { flex: 1; display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
 svg.grid text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
 svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
 .lists { flex: 1; display: flex; flex-direction: column; gap: 18px; }
-.lists h2 { margin: 0; font-size: 22px; color: var(--accent); }
-.row { display: flex; align-items: center; gap: 5px; font-size: 26px; font-weight: 700; white-space: nowrap; }
-.row .L { width: 26px; }
-.box { display: inline-block; width: 44px; height: 42px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
+.lists h2 { margin: 0 0 4px; font-size: 22px; line-height: 1.15; color: var(--accent); }
+.row { display: flex; align-items: center; gap: 4px; font-size: 24px; font-weight: 700; white-space: nowrap; }
+.row .L { width: 22px; }
+.box { display: inline-block; width: 38px; height: 40px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
 .dists { display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 12px 22px; }
 .drow { display: flex; align-items: center; gap: 10px; font-size: 24px; }
 .drow .box { width: 60px; }
@@ -38,7 +38,6 @@ svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-line
           <text class="pt" x="{{ OX + k * CELL }}" y="{{ OY + 24 }}" text-anchor="middle" style="font-size: 22px">{{ k | string | minus }}</text>
           <text class="pt" x="{{ OX - 6 }}" y="{{ OY - k * CELL + 8 }}" text-anchor="end" style="font-size: 22px">{{ k | string | minus }}</text>
 {% endfor %}
-          <text class="pt" x="{{ OX - 6 }}" y="{{ OY + 24 }}" text-anchor="end" style="font-size: 22px">0</text>
           <text class="pt" x="{{ M + 2 * R * CELL + 8 }}" y="{{ OY + 8 }}" style="font-size: 24px; font-style: italic">x</text>
           <text class="pt" x="{{ OX + 8 }}" y="{{ TOP + 20 }}" style="font-size: 24px; font-style: italic">y</text>
 {% for p in reads %}
