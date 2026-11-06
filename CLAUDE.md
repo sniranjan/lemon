@@ -363,7 +363,7 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
 **Layout checks (Playwright, after render)**
 - Each sheet renders to exactly **one** Letter page (816×1056 CSS px); nothing overflows
   (`scrollHeight ≤ clientHeight` for the page root and every card).
-- Minimum font sizes: child-facing text ≥ 28px (7A–5A and pencil levels), ≥ 20px (4A+); parent tip ≥ 16px.
+- Minimum font sizes: child-facing text ≥ 28px (7A–5A, math 4A and pencil levels), ≥ 20px (other 4A+); parent tip ≥ 16px.
   Parent-facing parts of a template carry `data-audience="parent"` (header, tip, footer, strip
   label); every other piece of text on the page counts as child-facing.
 - Each sheet prints (Chromium PDF) to exactly one 612×792pt page.
