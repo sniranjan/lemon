@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% import "_long_read.html.j2" as lr %}
+{% block style %}
+{{ lr.style() }}
+.done { margin-top: auto; padding-top: 10px; display: flex; gap: 36px; font-size: 20px; white-space: nowrap; }
+.done span { display: flex; align-items: center; gap: 10px; }
+.done i { flex: none; width: 26px; height: 26px; border: 2px solid var(--ink); border-radius: 6px; }
+{% endblock %}
+{% block body %}
+    <div class="card fit">
+{{ lr.read_card(sheet.items[0], lr.label(sheet.items[0])) }}
+    <div class="done"><span><i></i>I read it once.</span><span><i></i>I read it again.</span><span>Questions: next page.</span></div>
+    </div>
+{% endblock %}

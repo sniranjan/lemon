@@ -1,0 +1,899 @@
+# Owls Reading, section C "True Facts" (pages 101–140): nonfiction with headings and a figure (RI.4.7).
+# Each article is read on one page (2–3 `## ` headings, then a figure drawn from data with a caption);
+# its 5 questions (3 circle, 2 written; at least one uses the figure) are on the next page.
+# Facts are simple, well established and checkable. Schema and checks: ws/longreads.py.
+
+- id: c01-water-cycle
+  kind: article
+  title: Where Rain Comes From
+  text: |
+    ## The Sun Starts It
+
+    Water moves around our planet on a path that never ends, and scientists call this path the water cycle. It begins when the sun
+    warms water in oceans, lakes, and rivers. Some of the warm water turns into an invisible gas called
+    water vapor. This change is called evaporation.
+
+    ## Clouds Form
+
+    Water vapor rises into the sky, where the air is much colder. The cold air cools the vapor, and it
+    turns back into tiny drops of water. Billions of these drops crowd together to make a cloud. This
+    change is called condensation.
+
+    ## Back to the Ground
+
+    When the drops in a cloud join together, they grow too heavy to float, so they fall. Water that
+    falls from clouds is called precipitation. It can be rain, snow, sleet, or hail. The water runs into
+    rivers and oceans or soaks into the ground, and then the sun warms it again.
+  figure:
+    kind: cycle
+    title: The Water Cycle
+    items: [Sun warms the water, Water vapor rises, Clouds form, Rain or snow falls]
+    caption: The same water goes around and around, again and again.
+  pages:
+    - focus: headings, key words, the diagram
+      questions:
+        - ask: What is evaporation?
+          choices: [water turning into water vapor, water falling from a cloud, drops crowding into a cloud]
+          evidence: Some of the warm water turns into an invisible gas called water vapor.
+        - ask: Which heading tells where to read about rain?
+          choices: [Back to the Ground, Clouds Form, The Sun Starts It]
+          evidence: Back to the Ground
+        - ask: In the diagram, what comes right after "Water vapor rises"?
+          choices: [Clouds form, Rain or snow falls, Sun warms the water]
+          evidence: Clouds form
+        - ask: Why do the drops of water fall from a cloud?
+          sample: The drops join together and grow too heavy to float, so they fall.
+          evidence: they grow too heavy to float, so they fall
+        - ask: What does the diagram show that helps you understand?
+          sample: It shows the steps of the water cycle in order and that they happen again and again.
+          evidence: The same water goes around and around, again and again.
+
+- id: c02-butterfly
+  kind: article
+  title: From Egg to Butterfly
+  text: |
+    ## A Tiny Start
+
+    A butterfly begins its life as an egg about the size of a pinhead. A mother butterfly glues her eggs
+    to a leaf. A monarch butterfly, for example, lays her eggs on milkweed plants. She does this
+    because the young will eat those leaves.
+
+    ## A Hungry Caterpillar
+
+    After a few days, a caterpillar crawls out of the egg. It eats and eats, and it grows very quickly.
+    Its skin cannot stretch, so the caterpillar sheds its old skin several times as it grows bigger.
+
+    ## A Big Change
+
+    When the caterpillar is fully grown, it hangs upside down. Then it forms a hard case called a chrysalis.
+    Inside, its body slowly changes into a completely new shape. Finally, an adult butterfly climbs out.
+    It pumps its crumpled wings until they are flat and strong, and then it flies away.
+  figure:
+    kind: cycle
+    title: Life Cycle of a Butterfly
+    items: [Egg on a leaf, Caterpillar, Chrysalis, Adult butterfly]
+    caption: An adult butterfly lays eggs, and the cycle begins again.
+  pages:
+    - focus: sequence, key words, the diagram
+      questions:
+        - ask: Why does a monarch lay eggs on milkweed?
+          choices: [The young will eat its leaves., Milkweed keeps the eggs warm., The leaves hide the eggs from rain.]
+          evidence: because the young will eat those leaves
+        - ask: What is a chrysalis?
+          choices: [a hard case the caterpillar forms, a leaf that a caterpillar eats, the skin a caterpillar sheds]
+          evidence: forms a hard case called a chrysalis
+        - ask: In the diagram, what comes right before "Chrysalis"?
+          choices: [Caterpillar, Egg on a leaf, Adult butterfly]
+          evidence: Caterpillar
+        - ask: Why does a caterpillar shed its skin?
+          sample: It sheds its skin because its skin cannot stretch as the caterpillar grows bigger.
+          evidence: Its skin cannot stretch, so the caterpillar sheds its old skin
+        - ask: What does the caption tell you that the article does not?
+          sample: The caption tells me that the adult butterfly lays eggs, so the cycle starts again.
+          evidence: An adult butterfly lays eggs, and the cycle begins again.
+
+- id: c03-seed
+  kind: article
+  title: How a Seed Grows
+  text: |
+    ## A Plant in a Package
+
+    A seed may look like a tiny pebble, but it holds a baby plant inside. It also holds a store of food
+    that the baby plant can use until it makes its own. A hard outer layer called the seed coat protects
+    everything inside.
+
+    ## Waking Up
+
+    A seed needs water, air, and warmth before it begins to grow. When the seed soaks up water, it swells
+    and the seed coat splits open. The first part to come out is a root. The root always grows down into
+    the soil, where it can find more water.
+
+    ## Reaching for the Light
+
+    Next, a small green stem pushes up through the soil toward the light. Soon the first leaves unfold.
+    Leaves use sunlight, air, and water to make food for the plant, so now the young plant can feed
+    itself as it grows.
+  figure:
+    kind: steps
+    title: How a Seed Grows
+    items: [Seed soaks up water, Seed coat splits, Root grows down, Stem grows up, Leaves open]
+    caption: The root comes out first, and then the stem and leaves follow.
+  pages:
+    - focus: sequence, key words, the diagram
+      questions:
+        - ask: What does a seed need before it begins to grow?
+          choices:
+            - water, air, and warmth
+            - sunlight and soil only
+            - a seed coat and leaves
+          evidence: A seed needs water, air, and warmth before it begins to grow.
+        - ask: What protects the inside of a seed?
+          choices: [the seed coat, the first root, the store of food]
+          evidence: A hard outer layer called the seed coat protects everything inside.
+        - ask: In the diagram, what comes right after "Seed coat splits"?
+          choices: [Root grows down, Leaves open, Stem grows up]
+          evidence: Root grows down
+        - ask: Why does the root grow down into the soil?
+          sample: The root grows down so it can find more water in the soil.
+          evidence: where it can find more water
+        - ask: How do leaves help the young plant?
+          sample: Leaves use sunlight, air, and water to make food, so the plant can feed itself.
+          evidence: Leaves use sunlight, air, and water to make food for the plant
+
+- id: c04-frog
+  kind: article
+  title: A Frog's Life
+  text: |
+    ## Eggs in the Water
+
+    Most frogs begin life in a pond. A mother frog lays hundreds of eggs in the water, and each egg is
+    wrapped in clear jelly. The jelly keeps the eggs wet and helps them stick together in a clump.
+
+    ## Tadpoles
+
+    Out of each egg wiggles a tadpole. A tadpole looks more like a tiny fish than a frog. It has a long
+    tail for swimming and gills for breathing underwater. Tadpoles nibble on soft plants and grow bigger
+    every day.
+
+    ## Growing Up
+
+    After a few weeks, the tadpole grows back legs, and later it grows front legs. Its tail slowly
+    shrinks, and it grows lungs for breathing air. Now it is called a froglet. Finally, it becomes an
+    adult frog that can hop onto land and swim in the water.
+  figure:
+    kind: cycle
+    title: Life Cycle of a Frog
+    items: [Eggs in jelly, Tadpole, Froglet, Adult frog]
+    caption: An adult frog lays eggs in the water, and new tadpoles hatch.
+  pages:
+    - focus: sequence, compare stages, the diagram
+      questions:
+        - ask: What does a tadpole use to breathe underwater?
+          choices: [gills, lungs, its tail]
+          evidence: gills for breathing underwater
+        - ask: What does the jelly around frog eggs do?
+          choices: [It keeps the eggs wet., It feeds the tadpoles., It makes the eggs float away.]
+          evidence: The jelly keeps the eggs wet
+        - ask: In the diagram, what comes between Tadpole and Adult frog?
+          choices: [Froglet, Eggs in jelly, Caterpillar]
+          evidence: Froglet
+        - ask: How is a tadpole different from an adult frog?
+          sample: A tadpole has a tail and gills, but an adult frog has legs and lungs.
+          evidence: It has a long tail for swimming and gills for breathing underwater.
+        - ask: Which heading tells where to read about legs growing?
+          sample: The heading "Growing Up" tells where to read about the legs.
+          evidence: Growing Up
+
+- id: c05-moon
+  kind: article
+  title: The Changing Moon
+  text: |
+    ## Borrowed Light
+
+    The moon seems to glow at night, but it does not make any light of its own. The bright part of the
+    moon is lit by the sun, just as a flashlight lights up a ball in a dark room.
+
+    ## Phases of the Moon
+
+    The moon travels around Earth, and the trip takes about one month. As it moves, we see different
+    amounts of its sunlit side, and these different shapes are called phases. When we cannot see the lit
+    side at all, it is a new moon, and when we see the whole lit side, it is a full moon.
+
+    ## Around Again
+
+    Between a new moon and a full moon, the bright part grows a little larger each night, and after the
+    full moon, it shrinks again. Then the pattern repeats, month after month.
+  figure:
+    kind: cycle
+    title: Phases of the Moon
+    items: [New moon, First quarter, Full moon, Last quarter]
+    caption: The moon goes through all of its phases in about one month.
+  pages:
+    - focus: key words, cause and effect, the diagram
+      questions:
+        - ask: Where does the moon's light come from?
+          choices: [the sun, the moon itself, the stars]
+          evidence: The bright part of the moon is lit by the sun
+        - ask: What are the moon's phases?
+          choices: [the different shapes we see, the paths of the planets, the dark spots on the moon]
+          evidence: these different shapes are called phases
+        - ask: In the diagram, which phase comes after "Full moon"?
+          choices: [Last quarter, New moon, First quarter]
+          evidence: Last quarter
+        - ask: What happens to the bright part after a full moon?
+          sample: After a full moon, the bright part of the moon shrinks again.
+          evidence: after the full moon, it shrinks again
+        - ask: Why does the article compare the moon to a ball?
+          sample: It shows that the sun lights the moon the way a flashlight lights a ball.
+          evidence: just as a flashlight lights up a ball in a dark room
+
+- id: c06-planets
+  kind: article
+  title: A Year on Each Planet
+  text: |
+    ## Eight Planets
+
+    Our solar system has eight planets that travel around the sun. In order from the sun, they are
+    Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. The four planets closest to the
+    sun are made mostly of rock.
+
+    ## What Is a Year?
+
+    A year is the time a planet takes to travel all the way around the sun one time. On Earth, that trip
+    takes about 365 days. Planets that are closer to the sun have a shorter path. They also move
+    faster, so their years are shorter.
+
+    ## Near and Far
+
+    Mercury is the closest planet, so it has the shortest year of all. Mars is farther away than Earth,
+    and its year is almost twice as long as ours. Faraway Neptune takes much longer than a whole human
+    lifetime to go around just once.
+  figure:
+    kind: bars
+    title: Days to Go Around the Sun
+    unit: days
+    rows: [["Mercury", "88"], ["Venus", "225"], ["Earth", "365"], ["Mars", "687"]]
+    caption: The four rocky planets, in order from the sun.
+  pages:
+    - focus: key words, cause and effect, the bar chart
+      questions:
+        - ask: Which planet is closest to the sun?
+          choices: [Mercury, Venus, Mars]
+          evidence: Mercury is the closest planet
+        - ask: What is a year?
+          choices: [one trip around the sun, one spin of a planet, the time from one moon to the next]
+          evidence: A year is the time a planet takes to travel all the way around the sun one time.
+        - ask: Use the chart. How many days is a year on Venus?
+          choices: ["225", "88", "687"]
+          evidence: "225"
+        - ask: Why are years shorter on planets closer to the sun?
+          sample: They have a shorter path around the sun, and they move faster.
+          evidence: Planets that are closer to the sun have a shorter path.
+        - ask: What does the bar chart show you quickly?
+          sample: It shows that a planet farther from the sun has a longer year.
+          evidence: Days to Go Around the Sun
+
+- id: c07-honey
+  kind: article
+  title: How Bees Make Honey
+  text: |
+    ## Flower Visits
+
+    Honey starts as nectar, a sweet, watery juice inside flowers. Worker honeybees fly from flower to
+    flower and sip the nectar with their long tongues. A bee stores the nectar in a special stomach,
+    called a honey stomach, to carry it home.
+
+    ## Back at the Hive
+
+    At the hive, the bee passes the nectar to other bees. They chew it and pass it along, and this
+    slowly changes the nectar. Then the bees spread it into tiny wax rooms called cells.
+
+    ## Drying It Out
+
+    Fresh nectar is mostly water, so it is too thin to be honey. The bees beat their wings over the cells
+    like little fans until most of the water dries up. When the honey is thick, the bees close each cell
+    with a wax lid. The honey will feed the hive all winter.
+  figure:
+    kind: steps
+    title: From Flower to Honey
+    items: [Bee sips nectar, Bee flies to the hive, Bees fill wax cells, Bees fan their wings, Bees seal the cells]
+    caption: Bees make honey in steps, and the whole hive eats it in winter.
+  pages:
+    - focus: sequence, key words, the diagram
+      questions:
+        - ask: What is nectar?
+          choices: [a sweet juice inside flowers, a wax room in the hive, a lid on a honey cell]
+          evidence: "a sweet, watery juice inside flowers"
+        - ask: Where does a bee carry nectar home?
+          choices: [in its honey stomach, on its wings, on its long tongue]
+          evidence: A bee stores the nectar in a special stomach
+        - ask: In the diagram, what comes before "Bees seal the cells"?
+          choices: [Bees fan their wings, Bee sips nectar, Bee flies to the hive]
+          evidence: Bees fan their wings
+        - ask: Why do the bees beat their wings over the cells?
+          sample: They fan the nectar to dry up most of the water so it becomes thick honey.
+          evidence: until most of the water dries up
+        - ask: Why do bees save honey in the hive?
+          sample: The bees save honey so the hive has food all winter.
+          evidence: The honey will feed the hive all winter.
+
+- id: c08-earth-layers
+  kind: article
+  title: Inside Planet Earth
+  text: |
+    ## Like a Peach
+
+    If you could slice Earth in half, you would find layers, a bit like the layers of a peach. The thin
+    skin is the crust, the soft fruit is the mantle, and the pit in the middle is the core.
+
+    ## Crust and Mantle
+
+    We live on the crust, the rocky outside layer. Compared with the rest of Earth, the crust is very
+    thin. Below it is the mantle, the thickest layer. The mantle is made of hot rock that moves very
+    slowly, even more slowly than your fingernails grow.
+
+    ## The Core
+
+    At the center of Earth is the core, which is made mostly of the metals iron and nickel. The outer
+    core is so hot that its metal is liquid. The inner core is even hotter, but it stays solid because
+    the layers above press on it so hard.
+  figure:
+    kind: table
+    title: Earth's Layers
+    columns: [Layer, What it is like]
+    rows:
+      - ["Crust", "thin and rocky; we live on it"]
+      - ["Mantle", "thickest; hot rock that moves slowly"]
+      - ["Outer core", "hot liquid metal"]
+      - ["Inner core", "hottest; solid metal"]
+    caption: The layers in order, from the outside of Earth to the center.
+  pages:
+    - focus: compare, key details, the table
+      questions:
+        - ask: Which layer do we live on?
+          choices: [the crust, the mantle, the core]
+          evidence: We live on the crust, the rocky outside layer.
+        - ask: Which part of a peach is like Earth's core?
+          choices: [the pit, the skin, the soft fruit]
+          evidence: the pit in the middle is the core
+        - ask: Use the table. Which layer is hot liquid metal?
+          choices: [Outer core, Inner core, Mantle]
+          evidence: hot liquid metal
+        - ask: Why does the inner core stay solid?
+          sample: It stays solid because the layers above press on it so hard.
+          evidence: it stays solid because the layers above press on it so hard
+        - ask: How does the table help you?
+          sample: The table helps me compare the four layers quickly, from the outside to the center.
+          evidence: The layers in order, from the outside of Earth to the center.
+
+- id: c09-senses
+  kind: article
+  title: Your Five Senses
+  text: |
+    ## Messages to the Brain
+
+    Your senses tell you about the world around you. You have five of them: sight, hearing, smell,
+    taste, and touch. Each sense uses a different part of your body to collect information. That part
+    sends messages to your brain, and your brain figures out what they mean.
+
+    ## Senses Work Together
+
+    Senses often work as a team. When you eat a strawberry, your eyes see that it is red and your tongue
+    tastes that it is sweet. Your nose helps too, because much of what we call flavor really comes from
+    smell. That is why food can seem plain when you have a stuffy nose. Senses also help keep you safe. Your ears hear a car coming, and your skin feels when a pan is too
+    hot to touch.
+  figure:
+    kind: table
+    title: The Five Senses
+    columns: [Sense, Body part]
+    rows: [["Sight", "eyes"], ["Hearing", "ears"], ["Smell", "nose"], ["Taste", "tongue"], ["Touch", "skin"]]
+    caption: Each sense has its own body part that sends messages to the brain.
+  pages:
+    - focus: main points, examples, the table
+      questions:
+        - ask: What does the brain do with messages from the senses?
+          choices: [It figures out what they mean., It sends them back to the eyes., It keeps them all a secret.]
+          evidence: your brain figures out what they mean
+        - ask: Which sense helps the most with flavor?
+          choices: [smell, sight, hearing]
+          evidence: much of what we call flavor really comes from smell
+        - ask: Use the table. Which body part goes with touch?
+          choices: [skin, tongue, ears]
+          evidence: skin
+        - ask: How do your senses work together to eat a strawberry?
+          sample: My eyes see that it is red, my tongue tastes that it is sweet, and my nose helps with flavor.
+          evidence: your eyes see that it is red and your tongue tastes that it is sweet
+        - ask: Give one way your senses keep you safe.
+          sample: My ears hear a car coming, so I can stay out of the way.
+          evidence: Your ears hear a car coming
+
+- id: c10-bread
+  kind: article
+  title: Why Bread Rises
+  text: |
+    ## A Tiny Helper
+
+    Bread dough rises because of yeast. Yeast is a tiny living thing, so small that you would need a
+    microscope to see just one. A spoonful of dry yeast holds billions of them, resting until they get
+    wet and warm.
+
+    ## Bubbles in the Dough
+
+    A baker mixes flour, water, yeast, and a little sugar into dough. The yeast eats the sugar and gives
+    off a gas called carbon dioxide. The stretchy dough traps the gas in tiny bubbles. As more bubbles
+    form, the dough puffs up, often to twice its size.
+
+    ## Into the Oven
+
+    When the dough has risen, the baker puts it in a hot oven. The heat makes the bubbles grow a little
+    more, and then it sets the bread firmly in place. When you slice the bread, you can see the little
+    holes that the bubbles left behind.
+  figure:
+    kind: steps
+    title: From Dough to Bread
+    items: [Mix the dough, Yeast eats sugar, Gas bubbles form, Dough rises, Bake the bread]
+    caption: The holes in a slice of bread were once bubbles of gas.
+  pages:
+    - focus: cause and effect, key words, the diagram
+      questions:
+        - ask: What is yeast?
+          choices: [a tiny living thing, a kind of flour, a gas in the oven]
+          evidence: Yeast is a tiny living thing
+        - ask: What gas does yeast give off?
+          choices: [carbon dioxide, water vapor, steam from the oven]
+          evidence: gives off a gas called carbon dioxide
+        - ask: In the diagram, what happens right after "Yeast eats sugar"?
+          choices: [Gas bubbles form, Dough rises, Bake the bread]
+          evidence: Gas bubbles form
+        - ask: Why does the dough puff up?
+          sample: The dough puffs up because it traps gas from the yeast in tiny bubbles.
+          evidence: The stretchy dough traps the gas in tiny bubbles.
+        - ask: What does the caption help you understand?
+          sample: It helps me understand that the holes in bread come from gas bubbles.
+          evidence: The holes in a slice of bread were once bubbles of gas.
+
+- id: c11-magnets
+  kind: article
+  title: The Pull of Magnets
+  text: |
+    ## An Invisible Pull
+
+    A magnet can pull some objects toward it without even touching them. This invisible pull is called
+    magnetism. Magnets pull on things made of iron or steel, such as nails and paper clips. They do not
+    pull on wood, plastic, paper, or glass.
+
+    ## Poles and Compasses
+
+    Every magnet has two ends, called the north pole and the south pole. If you hold the north pole of
+    one magnet near the south pole of another, they snap together. If you hold two north poles together,
+    they push each other away. Earth itself acts like a giant magnet. That is why the needle of a compass, which is a small magnet,
+    always swings to point north. Travelers have used compasses to find their way for hundreds of years.
+  figure:
+    kind: table
+    title: Will a Magnet Pull It?
+    columns: ["Object", "Does a magnet pull it?"]
+    rows: [["Iron nail", "yes"], ["Steel paper clip", "yes"], ["Wooden spoon", "no"], ["Plastic cup", "no"]]
+    caption: A magnet pulls only the things made of iron or steel.
+  pages:
+    - focus: key words, cause and effect, the table
+      questions:
+        - ask: What happens when two north poles meet?
+          choices: [They push each other away., They snap together., Nothing happens at all.]
+          evidence: they push each other away
+        - ask: Why does a compass needle point north?
+          choices: [Earth acts like a giant magnet., The needle is made of wood., The wind pushes it north.]
+          evidence: Earth itself acts like a giant magnet.
+        - ask: Use the table. Which object does a magnet pull?
+          choices: [Steel paper clip, Wooden spoon, Plastic cup]
+          evidence: Steel paper clip
+        - ask: What is magnetism?
+          sample: Magnetism is the invisible pull a magnet has on some objects.
+          evidence: This invisible pull is called magnetism.
+        - ask: Would a magnet pick up a paper cup? How do you know?
+          sample: No, it would not, because magnets do not pull on paper.
+          evidence: They do not pull on wood, plastic, paper, or glass.
+
+- id: c12-simple-machines
+  kind: article
+  title: Simple Machines
+  text: |
+    ## Machines Without Motors
+
+    A machine is anything that makes work easier. Some machines have motors, but simple machines have few
+    or no moving parts. People have used them for thousands of years to move heavy things.
+
+    ## Levers and Ramps
+
+    A lever is a strong bar that rests on a point, and when you push down on one end, the other end goes
+    up. A seesaw is a lever. A ramp is a flat, slanted surface, and pushing a heavy box up a ramp is
+    easier than lifting it straight up.
+
+    ## Wheels and Pulleys
+
+    A wheel and axle is a wheel that turns on a rod. Wagons use wheels and axles to roll
+    heavy loads. A pulley is a wheel with a rope around it. When you pull down on the rope, a flag can
+    rise up a tall pole.
+  figure:
+    kind: table
+    title: Simple Machines Around Us
+    columns: [Simple machine, Example]
+    rows: [["Lever", "a seesaw"], ["Ramp", "a slide"], ["Wheel and axle", "a wagon"], ["Pulley", "a flagpole rope"]]
+    caption: Simple machines are all around you, at the park and at school.
+  pages:
+    - focus: key words, examples, the table
+      questions:
+        - ask: What is a machine?
+          choices: [anything that makes work easier, anything that has a motor, a heavy box on a ramp]
+          evidence: A machine is anything that makes work easier.
+        - ask: Which simple machine is a wheel with a rope around it?
+          choices: [a pulley, a lever, a ramp]
+          evidence: A pulley is a wheel with a rope around it.
+        - ask: Use the table. Which example goes with a ramp?
+          choices: [a slide, a seesaw, a wagon]
+          evidence: a slide
+        - ask: How does a lever work?
+          sample: When you push down on one end of a lever, the other end goes up.
+          evidence: when you push down on one end, the other end goes
+        - ask: Name a simple machine you have used. Use the table.
+          sample: I have used a lever when I rode a seesaw at the park.
+          evidence: a seesaw
+
+- id: c13-insect-legs
+  kind: article
+  title: Six Legs or Eight?
+  text: |
+    ## Count the Legs
+
+    Insects and spiders are both small creatures with hard outer shells. People often mix them up.
+    The easiest way to tell them apart is to count their legs. Every adult insect has six legs. Every
+    spider has eight.
+
+    ## Body Parts
+
+    Insects have three main body parts: a head, a middle part called the thorax, and a back part called
+    the abdomen. Most insects also have antennae, and many have wings. A spider has only two main body
+    parts, and it never has antennae or wings. Spiders belong to a different group of animals called arachnids. Scorpions and ticks are arachnids
+    too, and they also have eight legs. So the next time you see a little creature, count its legs
+    before you name it.
+  figure:
+    kind: bars
+    title: How Many Legs?
+    unit: legs
+    rows: [["Ant", "6"], ["Ladybug", "6"], ["Spider", "8"], ["Scorpion", "8"]]
+    caption: Ants and ladybugs are insects. Spiders and scorpions are arachnids.
+  pages:
+    - focus: compare, key words, the bar chart
+      questions:
+        - ask: How many legs does every spider have?
+          choices: [eight, six, ten]
+          evidence: Every spider has eight.
+        - ask: What is the middle body part of an insect called?
+          choices: [the thorax, the abdomen, the antennae]
+          evidence: a middle part called the thorax
+        - ask: Use the chart. Which animal has 8 legs?
+          choices: [Scorpion, Ladybug, Ant]
+          evidence: Scorpion
+        - ask: How can you tell an insect from a spider?
+          sample: Count the legs. An insect has six legs, but a spider has eight.
+          evidence: The easiest way to tell them apart is to count their legs.
+        - ask: What does the caption add to the chart?
+          sample: The caption tells which animals are insects and which ones are arachnids.
+          evidence: Ants and ladybugs are insects. Spiders and scorpions are arachnids.
+
+- id: c14-teeth
+  kind: article
+  title: Two Sets of Teeth
+  text: |
+    ## Baby Teeth
+
+    Most babies get their first tooth when they are about six months old. By the age of three, most
+    children have a full set of twenty baby teeth. These small teeth help children bite, chew, and
+    speak clearly.
+
+    ## A New Set
+
+    Around the age of six, baby teeth start to fall out one by one. Grown-up teeth have been growing
+    inside the jaw, and they push the baby teeth loose. Over the next several years, a bigger set of
+    teeth slowly takes their place.
+
+    ## Teeth for Life
+
+    A full grown-up set has thirty-two teeth. The last ones, called wisdom teeth, often do not appear
+    until a person is almost an adult. Unlike baby teeth, grown-up teeth are never replaced, so they need
+    to last a whole lifetime.
+  figure:
+    kind: bars
+    title: Teeth in a Full Set
+    unit: teeth
+    rows: [["Baby teeth", "20"], ["Grown-up teeth", "32"]]
+    caption: Grown-up teeth take the place of baby teeth, and there are more of them.
+  pages:
+    - focus: sequence, key details, the bar chart
+      questions:
+        - ask: How many baby teeth do most children have?
+          choices: [twenty, thirty-two, six]
+          evidence: most children have a full set of twenty baby teeth
+        - ask: What pushes baby teeth loose?
+          choices: [grown-up teeth growing in the jaw, chewing very hard food, the wisdom teeth]
+          evidence: Grown-up teeth have been growing inside the jaw, and they push the baby teeth loose.
+        - ask: Use the chart. How many teeth are in a full grown-up set?
+          choices: ["32", "20", "12"]
+          evidence: "32"
+        - ask: What are wisdom teeth?
+          sample: Wisdom teeth are the last grown-up teeth, and they often come in when a person is almost an adult.
+          evidence: The last ones, called wisdom teeth
+        - ask: Why do grown-up teeth need to last a lifetime?
+          sample: They need to last a lifetime because grown-up teeth are never replaced.
+          evidence: grown-up teeth are never replaced
+
+- id: c15-inventions
+  kind: article
+  title: Three Big Inventions
+  text: |
+    ## Pictures That Last
+
+    Before cameras, the only way to save a picture of a person was to paint or draw it. In 1839, a man
+    in France named Louis Daguerre shared a new way to make photographs. He made them on shiny metal plates. Sitting for a
+    picture took minutes, so people had to hold very still.
+
+    ## Talking Across Miles
+
+    Long ago, people sent messages by letter. A letter could take weeks to arrive. In 1876,
+    Alexander Graham Bell received a patent for the telephone. For the first time, people could hear
+    each other's voices from far away.
+
+    ## Light at the Flip of a Switch
+
+    Before electric lights, homes were lit by candles and oil lamps. Many inventors tried to make a
+    light bulb that would glow for a long time. In 1879, Thomas Edison and his team made a bulb that
+    could shine for many hours.
+  figure:
+    kind: timeline
+    title: When They Were Invented
+    rows: [["1839", "Photographs on metal plates"], ["1876", "The telephone"], ["1879", "A long-lasting light bulb"]]
+    caption: These three inventions all came within forty years of each other.
+  pages:
+    - focus: chronology, key details, the time line
+      questions:
+        - ask: How did people send messages before telephones?
+          choices: [by letter, by photograph, by light bulb]
+          evidence: people sent messages by letter
+        - ask: Why did people hold still for early photographs?
+          choices: [Sitting for a picture took minutes., The camera was very loud., The metal plates were heavy.]
+          evidence: Sitting for a picture took minutes, so people had to hold very still.
+        - ask: Use the time line. What came in 1879?
+          choices: [A long-lasting light bulb, The telephone, Photographs on metal plates]
+          evidence: A long-lasting light bulb
+        - ask: Why was the telephone an important invention?
+          sample: People could hear each other's voices from far away instead of waiting weeks for a letter.
+          evidence: people could hear each other's voices from far away
+        - ask: How does the time line help you?
+          sample: It puts the three inventions in order by year so I can see which came first.
+          evidence: When They Were Invented
+
+- id: c16-flight
+  kind: article
+  title: Up, Up and Away
+  text: |
+    ## A Basket in the Sky
+
+    People have always wanted to fly. In 1783, two brothers in France built a huge balloon of cloth and
+    paper. They filled it with hot air, which rises because it is lighter than cool air. That year, a
+    balloon carried people into the sky for the first time.
+
+    ## Wings and Engines
+
+    A balloon drifts wherever the wind blows it. Inventors wanted a flying machine that a pilot could
+    steer. In 1903, the Wright brothers flew an airplane with wings, an engine, and controls for
+    steering. The first flight lasted only twelve seconds.
+
+    ## All the Way to the Moon
+
+    Just sixty-six years later, in 1969, astronauts landed on the moon and walked on its dusty surface.
+    In less than two hundred years, people went from floating in baskets to visiting another world.
+  figure:
+    kind: timeline
+    title: Three Steps in Flying
+    rows: [["1783", "People ride in a hot air balloon"], ["1903", "The first airplane flight"], ["1969", "People walk on the moon"]]
+    caption: Each new way of flying went higher and farther than the one before.
+  pages:
+    - focus: chronology, cause and effect, the time line
+      questions:
+        - ask: Why does a hot air balloon rise?
+          choices: [Hot air is lighter than cool air., The wind pushes it up., Its engine lifts it.]
+          evidence: hot air, which rises because it is lighter than cool air
+        - ask: How long did the first airplane flight last?
+          choices: [twelve seconds, twelve minutes, twelve hours]
+          evidence: The first flight lasted only twelve seconds.
+        - ask: Use the time line. What happened in 1969?
+          choices: [People walk on the moon, The first airplane flight, People ride in a hot air balloon]
+          evidence: People walk on the moon
+        - ask: Why did inventors want something better than balloons?
+          sample: Balloons drift wherever the wind blows, and inventors wanted a machine a pilot could steer.
+          evidence: A balloon drifts wherever the wind blows it
+        - ask: What does the time line show about flying?
+          sample: It shows that each new way of flying came later and went higher and farther.
+          evidence: Each new way of flying went higher and farther than the one before.
+
+- id: c17-maple-year
+  kind: article
+  title: A Maple Tree's Year
+  text: |
+    ## Spring and Summer
+
+    In spring, tiny buds on a maple tree's branches swell and open into new green leaves. All summer,
+    the leaves use sunlight, air, and water to make food for the tree. Their green color comes from a
+    substance called chlorophyll, which helps the leaves catch sunlight.
+
+    ## Fall Colors
+
+    As fall days grow shorter and cooler, the leaves stop making food. The green chlorophyll fades away,
+    and yellow and orange colors that were hidden all along begin to show. Some maples also turn bright
+    red. Then the leaves drop to the ground.
+
+    ## Resting in Winter
+
+    In winter, the bare maple rests. It lives on food that it stored in its roots and trunk. Its new
+    buds wait, wrapped tightly in hard scales, until spring warms the air again.
+  figure:
+    kind: timeline
+    title: Through the Seasons
+    rows: [["Spring", "Buds open into new leaves"], ["Summer", "Leaves make food"], ["Fall", "Leaves change color and drop"], ["Winter", "The bare tree rests"]]
+    caption: A maple tree changes with every season of the year.
+  pages:
+    - focus: key words, cause and effect, the time line
+      questions:
+        - ask: What gives leaves their green color?
+          choices: [chlorophyll, sunlight, hard scales]
+          evidence: Their green color comes from a substance called chlorophyll
+        - ask: Why do yellow and orange show in the fall?
+          choices: [The green color fades away., The leaves soak up more rain., The buds open in the cold.]
+          evidence: The green chlorophyll fades away
+        - ask: Use the time line. When do buds open into new leaves?
+          choices: [Spring, Fall, Winter]
+          evidence: Buds open into new leaves
+        - ask: Why do the leaves stop making food in the fall?
+          sample: The leaves stop making food because the fall days grow shorter and cooler.
+          evidence: As fall days grow shorter and cooler, the leaves stop making food.
+        - ask: How does a maple tree get food in the winter?
+          sample: It lives on food that it stored in its roots and trunk.
+          evidence: It lives on food that it stored in its roots and trunk.
+
+- id: c18-rainbow
+  kind: article
+  title: How a Rainbow Forms
+  text: |
+    ## Hidden Colors
+
+    Sunlight looks white, but it is really a mix of many colors. You usually cannot see them, because
+    they travel together. A rainbow appears when something spreads the colors apart so that each one
+    can be seen.
+
+    ## Raindrops Bend Light
+
+    After a rain shower, millions of tiny drops of water float in the air. When sunlight shines into a
+    raindrop, the light bends. Each color bends a slightly different amount, so the colors spread out.
+    The light bounces off the back of the drop and comes back out toward you.
+
+    ## Where to Look
+
+    To see a rainbow, stand with the sun behind you and the rain in front of you. The colors always
+    appear in the same order. Red is on the outside. Then come orange, yellow, green, and blue, with
+    violet on the inside.
+  figure:
+    kind: steps
+    title: How a Rainbow Forms
+    items: [Sunlight shines into rain, Light bends in each drop, Colors spread apart, A rainbow appears]
+    caption: Every rainbow needs two things, sunlight and drops of water.
+  pages:
+    - focus: cause and effect, key details, the diagram
+      questions:
+        - ask: What is sunlight really made of?
+          choices: [a mix of many colors, only the color white, tiny drops of water]
+          evidence: it is really a mix of many colors
+        - ask: Where should the sun be when you look for a rainbow?
+          choices: [behind you, in front of you, right above the rain]
+          evidence: stand with the sun behind you
+        - ask: In the diagram, what happens before "Colors spread apart"?
+          choices: [Light bends in each drop, A rainbow appears, The rain stops falling]
+          evidence: Light bends in each drop
+        - ask: Why do the colors spread out inside a raindrop?
+          sample: Each color bends a slightly different amount, so the colors spread out.
+          evidence: Each color bends a slightly different amount, so the colors spread out.
+        - ask: What two things does every rainbow need?
+          sample: Every rainbow needs sunlight and drops of water.
+          evidence: Every rainbow needs two things, sunlight and drops of water.
+
+- id: c19-plant-parts
+  kind: article
+  title: The Parts of a Plant
+  text: |
+    ## A Team of Parts
+
+    A plant may look simple, but each of its parts has an important job. The parts work together like a
+    team, and the plant needs all of them to grow and stay healthy. Let's look at what each part does.
+
+    ## Below and Above the Ground
+
+    The roots grow underground. They hold the plant firmly in the soil and soak up water and minerals.
+    The stem carries that water up to the rest of the plant, and it holds the leaves up toward the
+    sunlight.
+
+    ## Food and Seeds
+
+    The leaves are the plant's food factories. They use sunlight, air, and water to make sugar that the
+    plant uses for energy. The flowers have a different job. Often with help from bees and other
+    insects, flowers make seeds that can grow into new plants.
+  figure:
+    kind: table
+    title: What Each Part Does
+    columns: [Part, Its job]
+    rows:
+      - ["Roots", "hold the plant and soak up water"]
+      - ["Stem", "carries water; holds up the leaves"]
+      - ["Leaves", "make food from sunlight"]
+      - ["Flowers", "make seeds"]
+    caption: Every part of a plant has its own job to do.
+  pages:
+    - focus: main points, key details, the table
+      questions:
+        - ask: Which part carries water up the plant?
+          choices: [the stem, the roots, the flowers]
+          evidence: The stem carries that water up to the rest of the plant
+        - ask: Why are leaves called food factories?
+          choices: [They make sugar for energy., They store the seeds., They soak up water from soil.]
+          evidence: "They use sunlight, air, and water to make sugar"
+        - ask: Use the table. What is the job of flowers?
+          choices: [make seeds, make food from sunlight, hold the plant]
+          evidence: make seeds
+        - ask: What two jobs do roots do?
+          sample: Roots hold the plant in the soil, and they soak up water and minerals.
+          evidence: They hold the plant firmly in the soil and soak up water and minerals.
+        - ask: Which heading tells about seeds? How do you know?
+          sample: The heading "Food and Seeds" tells about seeds, because it has the word seeds in it.
+          evidence: Food and Seeds
+
+- id: c20-recycling-paper
+  kind: article
+  title: New Paper From Old
+  text: |
+    ## A Second Life
+
+    Every day, people throw away newspapers, boxes, and old homework. When that paper is recycled, it
+    can be made into new paper instead of filling up a landfill. Recycling also means that fewer trees
+    need to be cut down.
+
+    ## Into the Soup
+
+    First, trucks carry the used paper to a recycling plant. There, workers sort it and drop it into a
+    giant tank of water. Machines stir the paper until it breaks apart into tiny fibers. This mushy
+    mixture is called pulp, and it looks a little like oatmeal.
+
+    ## Pressing and Drying
+
+    Next, the pulp is cleaned to remove ink, tape, and staples. Then it is spread onto screens, and big
+    rollers squeeze out the water. Finally, the thin sheet is dried on hot rollers. Then it is wound into
+    huge rolls of new paper.
+  figure:
+    kind: steps
+    title: Recycling Paper
+    items: [Collect used paper, Mix it with water, Make pulp, Clean the pulp, Press and dry it]
+    caption: Paper can be recycled many times, but its fibers get shorter each time.
+  pages:
+    - focus: sequence, key words, the diagram
+      questions:
+        - ask: What is pulp?
+          choices: [a mushy mix of paper and water, a pile of old newspapers, a roll of new paper]
+          evidence: This mushy mixture is called pulp
+        - ask: What do the big rollers squeeze out?
+          choices: [water, ink, staples]
+          evidence: big rollers squeeze out the water
+        - ask: In the diagram, which step comes after "Make pulp"?
+          choices: [Clean the pulp, Collect used paper, Press and dry it]
+          evidence: Clean the pulp
+        - ask: Give one reason why recycling paper helps.
+          sample: Recycling paper helps because fewer trees need to be cut down.
+          evidence: fewer trees need to be cut down
+        - ask: What does the caption tell you that the article does not?
+          sample: It tells me that paper fibers get shorter each time paper is recycled.
+          evidence: Paper can be recycled many times, but its fibers get shorter each time.

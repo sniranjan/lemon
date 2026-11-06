@@ -1,0 +1,714 @@
+# Owls Reading, section E "The Big Idea" (pages 171–200): first summaries. Stories (kind: story, RL.4.2)
+# and articles (kind: article, RI.4.2) take turns. Each read serves 2 pages; each page has 2 circle
+# questions, then the big idea / summary / lesson written in one sentence (the last question; with a
+# `starter` for part 1, pages 171–180). Schema and checks: ws/longreads.py.
+
+- id: e01-garden-lot
+  kind: story
+  title: The Empty Lot
+  text: |
+    Behind Lena's apartment building was an empty lot full of weeds, broken bricks, and old cans. Lena
+    pictured it full of tomatoes and sunflowers instead.
+
+    "That's too much work for one kid," her neighbor Mr. Diaz said when she told him her idea.
+
+    Lena decided to start small anyway. On Saturday she filled two bags with cans. On Sunday she pulled
+    weeds. The next weekend, Mr. Diaz came outside with a rake.
+
+    By June, twelve neighbors were working together. In August, they shared a picnic in the new
+    garden. Mr. Diaz raised his fork. "To Lena," he said, "who
+    started with two bags of cans."
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A girl starts a garden, and her neighbors join her.
+            - A girl collects cans to earn money.
+            - A man teaches children how to grow tomatoes.
+          evidence: By June, twelve neighbors were working together.
+        - ask: Why did Lena start with only two bags of cans?
+          choices: [She decided to start small., She ran out of bags., Mr. Diaz told her to.]
+          evidence: Lena decided to start small anyway.
+        - ask: Write the big idea of the story in one sentence.
+          starter: "Lena "
+          sample: Lena started cleaning the empty lot by herself, and soon her neighbors helped her make a garden.
+          evidence: By June, twelve neighbors were working together.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Lena began a garden, and her neighbors joined in.
+            - Lena pulled weeds on Sunday.
+            - Mr. Diaz came outside with a rake.
+          evidence: By June, twelve neighbors were working together.
+        - ask: Which detail is too small to put in a summary?
+          choices: [Mr. Diaz raised his fork., Lena wanted to make a garden., The neighbors worked together.]
+          evidence: Mr. Diaz raised his fork.
+        - ask: What lesson does the story teach? Use one sentence.
+          starter: "The story teaches "
+          sample: The story teaches that starting small can lead to something big.
+          evidence: who started with two bags of cans
+
+- id: e02-fall-leaves
+  kind: article
+  title: Why Leaves Change
+  text: |
+    In summer, most tree leaves are green. They get their color from chlorophyll, which helps leaves
+    use sunlight to make food for the tree. But in the fall, the days grow shorter and the air turns
+    cooler. Trees slowly stop making chlorophyll, and the green color fades away.
+
+    Yellow and orange colors were hiding in the leaves all summer long. Once the green is gone, these
+    bright colors finally show. Some trees also make new red and purple colors in the fall. Soon the
+    leaves drop to the ground, and the tree rests until spring.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - why leaves change color in the fall
+            - how to rake leaves into a pile
+            - which trees grow the tallest
+          evidence: the green color fades away
+        - ask: What helps leaves use sunlight to make food?
+          choices:
+            - chlorophyll
+            - the ground
+            - cool air
+          evidence: chlorophyll, which helps leaves use sunlight to make food
+        - ask: Write the big idea in one sentence.
+          starter: "In the fall, "
+          sample: In the fall, trees stop making green chlorophyll, so other leaf colors can show.
+          evidence: Trees slowly stop making chlorophyll
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - When the green fades in fall, other colors show.
+            - Leaves are green in the summer.
+            - Trees rest until spring.
+          evidence: Once the green is gone, these bright colors finally show.
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - Some trees make purple colors.
+            - Trees stop making chlorophyll.
+            - The green color fades away.
+          evidence: Some trees also make new red and purple colors
+        - ask: What is the most important point? Use one sentence.
+          starter: "The most important point is "
+          sample: The most important point is that fall colors show when the green color fades.
+          evidence: Once the green is gone, these bright colors finally show.
+
+- id: e03-kai-rides
+  kind: story
+  title: Kai Learns to Ride
+  text: |
+    Kai's little sister could already ride a bike without training wheels, and Kai wanted to ride one
+    too. On Monday, his dad took the training wheels off. Kai wobbled three feet and tipped into the
+    grass.
+
+    "Maybe bikes aren't for me," he grumbled.
+
+    "You just need more practice," said his sister, Mina. Every afternoon she ran beside him and held
+    the back of his seat. On Wednesday he rode to the mailbox. On Thursday he rode to the corner.
+
+    On Saturday, Kai pedaled all the way to the park. He didn't even notice when Mina let go.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A boy keeps practicing until he can ride a bike.
+            - A girl teaches her dad to fix a bike.
+            - A boy rides his bike to the mailbox.
+          evidence: Kai pedaled all the way to the park.
+        - ask: Who helped Kai practice?
+          choices:
+            - his sister Mina
+            - his dad
+            - a neighbor
+          evidence: Every afternoon she ran beside him
+        - ask: Write the big idea of the story in one sentence.
+          starter: "Kai "
+          sample: Kai kept practicing with his sister's help until he could ride his bike to the park.
+          evidence: Kai pedaled all the way to the park.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Kai practiced every day and learned to ride.
+            - Kai rode to the corner on Thursday.
+            - Mina took off the training wheels.
+          evidence: You just need more practice
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - Kai rode to the mailbox.
+            - Kai wanted to ride a bike.
+            - Kai learned to ride.
+          evidence: On Wednesday he rode to the mailbox.
+        - ask: What lesson does the story teach? Use one sentence.
+          starter: "The story teaches "
+          sample: The story teaches that practice helps you learn hard things.
+          evidence: You just need more practice
+
+- id: e04-camels
+  kind: article
+  title: Built for the Desert
+  text: |
+    Camels live in hot, dry deserts, and their bodies are built for this hard place. A camel's hump
+    does not hold water. It stores fat, which the camel can use for energy when food is hard to find.
+    Camels can also go for many days without drinking.
+
+    Sand is everywhere in the desert, but camels can handle it. Two rows of long eyelashes keep sand out
+    of their eyes. They can close their nostrils during windy sandstorms. Their wide, flat feet help
+    them walk across soft sand without sinking.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how a camel's body helps it live in the desert
+            - how people ride camels across the sand
+            - why deserts are hot and dry
+          evidence: their bodies are built for this hard place
+        - ask: What does a camel's hump store?
+          choices:
+            - fat
+            - water
+            - sand
+          evidence: It stores fat
+        - ask: Write the big idea in one sentence.
+          starter: "Camels "
+          sample: Camels have bodies that help them live in hot, dry, sandy deserts.
+          evidence: their bodies are built for this hard place
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - "Camels have humps, eyelashes and feet made for deserts."
+            - Camels can close their nostrils.
+            - Deserts have a lot of sand.
+          evidence: their bodies are built for this hard place
+        - ask: Why do camels have wide, flat feet?
+          choices:
+            - to walk on sand without sinking
+            - to swim across rivers
+            - to dig for water
+          evidence: Their wide, flat feet help them walk across soft sand without sinking.
+        - ask: What is the most important point? Use one sentence.
+          starter: "The most important point is "
+          sample: The most important point is that a camel's body is made for life in the desert.
+          evidence: their bodies are built for this hard place
+
+- id: e05-broken-pot
+  kind: story
+  title: The Broken Pot
+  text: |
+    Eli was practicing soccer in his backyard when his ball bounced over the fence. Crash! It knocked Mrs. Park's flower pot off her porch steps, and the pot cracked in half.
+
+    Nobody had seen what happened, so Eli could easily grab his ball and hurry inside. Instead, he took a deep breath, walked next door, and knocked on her door.
+
+    "I'm really sorry," he said nervously. "My soccer ball accidentally broke your pot."
+
+    Mrs. Park smiled. "Thank you for telling me the truth," she said. That afternoon, they planted her red flowers in a new pot together, and she gave Eli a glass of lemonade.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A boy tells the truth after he breaks a pot.
+            - A boy wins a soccer game in his yard.
+            - A neighbor teaches a boy to grow flowers.
+          evidence: Thank you for telling me the truth
+        - ask: Why did Eli knock on Mrs. Park's door?
+          choices:
+            - to say he broke her pot
+            - to ask for lemonade
+            - to borrow a new ball
+          evidence: My soccer ball accidentally broke your pot.
+        - ask: Write the big idea of the story in one sentence.
+          starter: "Eli "
+          sample: Eli told Mrs. Park the truth about her pot, and they planted her flowers together.
+          evidence: Thank you for telling me the truth
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - "Eli broke a pot, told the truth and helped fix it."
+            - Eli kicked his ball over the fence.
+            - Mrs. Park gave Eli some lemonade.
+          evidence: they planted her red flowers in a new pot together
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - Mrs. Park's flowers were red.
+            - Eli broke the pot.
+            - Eli told the truth.
+          evidence: they planted her red flowers in a new pot together
+        - ask: What lesson does the story teach? Use one sentence.
+          starter: "The story teaches "
+          sample: The story teaches that it is best to tell the truth, even when it is hard.
+          evidence: Thank you for telling me the truth
+
+- id: e06-ant-team
+  kind: article
+  title: Ants Work as a Team
+  text: |
+    An ant colony can have thousands of ants, and every ant has a job. The queen ant lays the eggs.
+    Worker ants handle almost every other job. Some care for the young ants, some dig tunnels, and some
+    search for food.
+
+    When a worker ant finds food, it leaves a trail of scent on the way home. Other ants smell the trail
+    and follow it to the food. Soon a long line of ants is carrying crumbs back to the nest. By working
+    together, the colony gets everything it needs.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how ants share jobs and work together
+            - how to keep ants out of the kitchen
+            - why ants like sweet crumbs
+          evidence: every ant has a job
+        - ask: What is the queen ant's job?
+          choices:
+            - to lay the eggs
+            - to dig tunnels
+            - to find food
+          evidence: The queen ant lays the eggs.
+        - ask: Write the big idea in one sentence.
+          sample: Ants in a colony each have a job, and they work together to get what they need.
+          evidence: By working together, the colony gets everything it needs.
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - Ants share jobs and follow scent trails to find food.
+            - Some ants dig tunnels under the ground.
+            - Ants carry crumbs in a long line.
+          evidence: Other ants smell the trail and follow it to the food.
+        - ask: How do other ants find the food a worker found?
+          choices:
+            - They follow its scent trail.
+            - They look for crumbs.
+            - The queen tells them.
+          evidence: Other ants smell the trail and follow it to the food.
+        - ask: What is the most important point? Use one sentence.
+          sample: The most important point is that ants work as a team to help the whole colony.
+          evidence: every ant has a job
+
+- id: e07-block-tower
+  kind: story
+  title: The Tallest Tower
+  text: |
+    Ava and Ben both wanted to build the tallest block tower in the classroom. They sat on opposite sides of the rug and grabbed blocks as quickly as they could. Ava's tower leaned dangerously and tumbled down, and a moment later Ben's tower crashed too.
+
+    "There aren't enough blocks for two big towers," Ben sighed.
+
+    Ava studied the pile carefully. "Then let's build one together," she suggested.
+
+    Ben held the bottom steady while Ava stacked the top. Their tower grew taller than both of their old towers. When it was finished, it reached all the way up to the windowsill.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - Two friends build a taller tower together.
+            - Two friends clean up the blocks after class.
+            - A girl builds a tower all by herself.
+          evidence: Their tower grew taller than both of their old towers.
+        - ask: Why did Ben think two big towers would not work?
+          choices:
+            - There were not enough blocks.
+            - The rug was too small.
+            - Their teacher said no.
+          evidence: There aren't enough blocks for two big towers
+        - ask: Write the big idea of the story in one sentence.
+          sample: Ava and Ben stopped racing and built one tall tower together.
+          evidence: let's build one together
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - "Both towers fell, so the friends built one together."
+            - Ava's tower leaned to one side.
+            - The friends grabbed blocks very fast.
+          evidence: let's build one together
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - They sat on the rug.
+            - Both towers fell down.
+            - They built one tower together.
+          evidence: They sat on opposite sides of the rug
+        - ask: What lesson does the story teach? Use one sentence.
+          sample: The story teaches that people can do more when they work together.
+          evidence: Their tower grew taller than both of their old towers.
+
+- id: e08-seasons
+  kind: article
+  title: Why Seasons Change
+  text: |
+    Many people think summer comes when Earth is closest to the sun, but that is not the reason.
+    Seasons happen because Earth is tilted. Earth leans a little to one side as it travels around the sun
+    each year.
+
+    For part of the year, the northern half of Earth leans toward the sun. It gets more direct sunlight
+    and longer days, so it has summer. Six months later, the northern half leans away from the sun. Its
+    days are shorter and colder, so it has winter. The southern half has the opposite season.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how the tilt of Earth causes the seasons
+            - how long it takes to fly to the sun
+            - what people like to do in summer
+          evidence: Seasons happen because Earth is tilted.
+        - ask: When does the northern half of Earth have summer?
+          choices:
+            - when it leans toward the sun
+            - when it is closest to the moon
+            - when the sun gets bigger
+          evidence: the northern half of Earth leans toward the sun
+        - ask: Write the big idea in one sentence.
+          sample: We have seasons because Earth is tilted as it travels around the sun.
+          evidence: Seasons happen because Earth is tilted.
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - Earth's tilt gives each half summer and winter.
+            - Summer days are long and sunny.
+            - Earth goes around the sun each year.
+          evidence: Seasons happen because Earth is tilted.
+        - ask: Which is NOT the reason for summer?
+          choices:
+            - Earth being closest to the sun
+            - Earth leaning toward the sun
+            - more direct sunlight
+          evidence: that is not the reason
+        - ask: What is the most important point? Use one sentence.
+          sample: The most important point is that Earth's tilt, not its distance from the sun, causes seasons.
+          evidence: Seasons happen because Earth is tilted.
+
+- id: e09-quilt
+  kind: story
+  title: Grandma's Quilt
+  text: |
+    Zoe's old blanket was thin and full of holes, and she wanted a brand-new one from the store. Instead, Grandma pulled out a box of old clothes.
+
+    "Let's make a quilt," she said.
+
+    Every evening, they carefully cut fabric squares and sewed them together. One square came from Zoe's first birthday dress. Another came from Grandpa's favorite flannel shirt. Grandma told a funny or tender story about every patch.
+
+    When the quilt was finished, Zoe wrapped herself in it. "This is better than a store blanket," she said. "It's full of our stories."
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - Zoe and Grandma make a quilt full of memories.
+            - Zoe buys a new blanket at the store.
+            - Grandma teaches Zoe how to fold clothes.
+          evidence: It's full of our stories.
+        - ask: What did Grandma use to make the quilt?
+          choices:
+            - old clothes
+            - new cloth from a store
+            - Zoe's old blanket
+          evidence: Grandma pulled out a box of old clothes
+        - ask: Write the big idea of the story in one sentence.
+          sample: Zoe and Grandma sewed a quilt from old clothes, and Zoe loved it because of its stories.
+          evidence: It's full of our stories.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Zoe learned to love a quilt made from family clothes.
+            - One square came from a birthday dress.
+            - Zoe's blanket had holes in it.
+          evidence: This is better than a store blanket
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - One square was a flannel shirt.
+            - Zoe and Grandma made a quilt.
+            - Zoe loved the quilt.
+          evidence: Grandpa's favorite flannel shirt
+        - ask: What lesson does the story teach? Use one sentence.
+          sample: The story teaches that things made with love can mean more than new things.
+          evidence: This is better than a store blanket
+
+- id: e10-glass
+  kind: article
+  title: A Jar's Second Life
+  text: |
+    When you drop a glass jar into a recycling bin, its journey is just beginning. First, trucks carry
+    the glass to a recycling center. Workers and machines sort it by color, such as clear, green, and
+    brown.
+
+    Next, the glass is crushed into small pieces and melted in a very hot furnace. The melted glass is
+    shaped into new jars and bottles. Glass can be recycled again and again, and it stays just as
+    strong. Recycling glass saves energy, and it means less sand has to be dug up to make new glass.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how old glass is recycled into new glass
+            - how to wash glass jars at home
+            - why some bottles are green
+          evidence: The melted glass is shaped into new jars and bottles.
+        - ask: What happens right after the glass is crushed?
+          choices:
+            - It is melted in a furnace.
+            - It is sorted by color.
+            - It goes into a bin.
+          evidence: crushed into small pieces and melted in a very hot furnace
+        - ask: Write the big idea in one sentence.
+          sample: Old glass is sorted, crushed, melted, and made into new jars and bottles.
+          evidence: The melted glass is shaped into new jars and bottles.
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - Glass is melted and made new again, saving energy.
+            - Trucks carry glass to a recycling center.
+            - A furnace is very hot.
+          evidence: Recycling glass saves energy
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - Some glass is brown.
+            - Glass can be recycled many times.
+            - Recycling glass saves energy.
+          evidence: such as clear, green, and brown
+        - ask: What is the most important point? Use one sentence.
+          sample: The most important point is that glass can be recycled again and again to make new things.
+          evidence: Glass can be recycled again and again
+
+- id: e11-new-kid
+  kind: story
+  title: Lunch with Sam
+  text: |
+    On his first day at a new school, Sam sat alone at the very end of the long lunch table. He stared at his sandwich and wished he were back in his old neighborhood.
+
+    Leah noticed him from across the cafeteria. She remembered how lonely she had felt when her family moved to a different city last year. So she picked up her tray and sat down next to him.
+
+    "Do you like drawing?" she asked. Sam nodded eagerly, and soon they were sketching dragons on paper napkins. By Friday, Sam had three new friends, and he couldn't wait for lunch.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A girl is kind to a new boy, and they become friends.
+            - A boy moves back to his old town.
+            - Two friends enter a drawing contest.
+          evidence: By Friday, Sam had three new friends
+        - ask: Why did Leah sit next to Sam?
+          choices:
+            - She knew how lonely it felt.
+            - Her seat was taken.
+            - Sam asked her to sit there.
+          evidence: She remembered how lonely she had felt
+        - ask: Write the big idea of the story in one sentence.
+          sample: Leah sat with Sam, a lonely new boy, and soon he had new friends.
+          evidence: By Friday, Sam had three new friends
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Leah sat with lonely Sam, and he soon made friends.
+            - Sam ate a sandwich at lunch.
+            - Sam and Leah drew on napkins.
+          evidence: So she picked up her tray and sat down next to him.
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - They drew dragons on napkins.
+            - Sam was new and lonely.
+            - Leah was kind to Sam.
+          evidence: sketching dragons on paper napkins
+        - ask: What lesson does the story teach? Use one sentence.
+          sample: The story teaches that a small kind act can make someone feel welcome.
+          evidence: she picked up her tray and sat down next to him
+
+- id: e12-honey
+  kind: article
+  title: From Flower to Honey
+  text: |
+    Honeybees visit flowers to collect a sweet liquid called nectar. A bee sips the nectar and stores it
+    in a special part of its body called a honey stomach. Then it flies back to the hive.
+
+    Inside the hive, the bees pass the nectar to other bees. They put it into tiny wax rooms called
+    cells. Next, the bees fan their wings over the cells to dry out the extra water. The nectar slowly
+    turns thick and sticky. Finally, the bees seal each cell with wax. The honey is food the bees will
+    eat during the winter.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how honeybees turn nectar into honey
+            - why flowers come in so many colors
+            - how people build beehives
+          evidence: The nectar slowly turns thick and sticky.
+        - ask: Why do bees fan their wings over the cells?
+          choices:
+            - to dry out the extra water
+            - to make the cells bigger
+            - to call other bees
+          evidence: fan their wings over the cells to dry out the extra water
+        - ask: Write the big idea in one sentence.
+          sample: Honeybees collect nectar and dry it in wax cells to make honey for the winter.
+          evidence: The honey is food the bees will eat during the winter.
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - Bees bring nectar home and dry it into honey.
+            - Bees have a part called a honey stomach.
+            - Bees seal each cell with wax.
+          evidence: The nectar slowly turns thick and sticky.
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - The cells are made of wax.
+            - Bees collect nectar.
+            - Bees make honey for winter.
+          evidence: tiny wax rooms called cells
+        - ask: What is the most important point? Use one sentence.
+          sample: The most important point is that bees turn nectar into honey to eat in the winter.
+          evidence: The honey is food the bees will eat during the winter.
+
+- id: e13-bean-seed
+  kind: story
+  title: The Seed That Waited
+  text: |
+    Jonah planted a bean seed in a paper cup and set it on the sunny windowsill. The next morning, he checked the soil, but nothing had happened. The following morning, he still saw only dirt.
+
+    On the third day, Jonah dug up the seed to discover what was wrong. "Seeds need time," his mom explained gently. "If you keep digging, it can't grow."
+
+    Jonah pushed the seed back into the soil and watered it. Every day he wanted to peek, but he waited patiently. A week later, a tiny green sprout curled up out of the cup. Waiting had been worth it.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A boy learns to wait for his seed to grow.
+            - A boy plants a garden with his class.
+            - A boy waters his mom's flowers.
+          evidence: Waiting had been worth it.
+        - ask: Why did Mom say not to dig up the seed?
+          choices:
+            - It can't grow if he digs.
+            - The cup would break.
+            - The soil was too wet.
+          evidence: If you keep digging, it can't grow.
+        - ask: Write the big idea of the story in one sentence.
+          sample: Jonah learned to stop digging up his seed, and after a week it sprouted.
+          evidence: A week later, a tiny green sprout curled up out of the cup.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Jonah waited patiently, and his bean seed sprouted.
+            - Jonah set a cup on the windowsill.
+            - Jonah's mom spoke to him gently.
+          evidence: Every day he wanted to peek, but he waited
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - The cup was on the windowsill.
+            - Jonah waited for the seed.
+            - The seed sprouted.
+          evidence: set it on the sunny windowsill
+        - ask: What lesson does the story teach? Use one sentence.
+          sample: The story teaches that some good things take time and patience.
+          evidence: Waiting had been worth it.
+
+- id: e14-coral
+  kind: article
+  title: Tiny Reef Builders
+  text: |
+    A coral reef may look like colorful rock, but it was built by tiny animals. Each coral animal,
+    called a polyp, is often smaller than a pea. A polyp builds a hard cup around its soft body. The
+    cup keeps it safe.
+
+    Thousands of polyps live together and build their cups side by side. Over many years, the hard cups
+    pile up into a giant reef. Most reefs grow in warm, shallow ocean water. A reef becomes a home for
+    fish, crabs, sea turtles, and many other sea animals.
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this article mostly about?
+          choices:
+            - how tiny animals build coral reefs
+            - how fish swim in warm water
+            - why rocks can be so colorful
+          evidence: it was built by tiny animals
+        - ask: What is a polyp?
+          choices:
+            - a tiny coral animal
+            - a kind of rock
+            - a small fish
+          evidence: Each coral animal, called a polyp
+        - ask: Write the big idea in one sentence.
+          sample: Coral reefs are built over many years by tiny animals called polyps.
+          evidence: Over many years, the hard cups pile up into a giant reef.
+    - focus: summary and most important point
+      questions:
+        - ask: Which sentence is the best summary of the article?
+          choices:
+            - Tiny polyps build reefs where many sea animals live.
+            - Most reefs grow in shallow water.
+            - Crabs and fish live in the ocean.
+          evidence: A reef becomes a home for
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - A polyp is smaller than a pea.
+            - Polyps build reefs.
+            - Reefs are homes for sea animals.
+          evidence: often smaller than a pea
+        - ask: What is the most important point? Use one sentence.
+          sample: The most important point is that tiny animals build reefs that become homes for many sea animals.
+          evidence: A reef becomes a home for
+
+- id: e15-big-line
+  kind: story
+  title: Leo's Big Line
+  text: |
+    Leo had one line in the school play, and he practiced it every single night. "The treasure is buried under the old bridge!" he announced to his dog, his mirror, and his baby sister.
+
+    On the night of the performance, Leo stepped onto the stage and saw hundreds of faces. Suddenly his mind went completely blank, and for a moment the auditorium was silent.
+
+    Then his friend Ruby whispered, "Bridge." Leo took a breath and shouted his line loud and clear. The audience cheered. Afterward, Leo laughed. "I forgot," he said, "but I didn't give up."
+  pages:
+    - focus: the big idea
+      questions:
+        - ask: What is this story mostly about?
+          choices:
+            - A nervous boy forgets his line but finishes it.
+            - A boy hides treasure under a bridge.
+            - A girl stars in the school play.
+          evidence: but I didn't give up
+        - ask: How did Ruby help Leo?
+          choices:
+            - She whispered a word.
+            - She said his line for him.
+            - She held his hand.
+          evidence: Then his friend Ruby whispered
+        - ask: Write the big idea of the story in one sentence.
+          sample: Leo forgot his line in the play, but with Ruby's help he said it loud and clear.
+          evidence: Leo took a breath and shouted his line loud and clear.
+    - focus: summary and lesson
+      questions:
+        - ask: Which sentence is the best summary of the story?
+          choices:
+            - Leo forgot his line but kept going and said it.
+            - Leo's baby sister watched him practice.
+            - The audience was silent for a moment.
+          evidence: Leo took a breath and shouted his line loud and clear.
+        - ask: Which detail is too small to put in a summary?
+          choices:
+            - Leo practiced in front of a mirror.
+            - Leo forgot his line.
+            - Leo said his line.
+          evidence: his mirror
+        - ask: What lesson does the story teach? Use one sentence.
+          sample: The story teaches that you can keep going even after a mistake.
+          evidence: but I didn't give up

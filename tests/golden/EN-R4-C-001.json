@@ -1,0 +1,57 @@
+{
+  "id": "EN-R4-C-001",
+  "subject": "english",
+  "level": "R4",
+  "section": "C",
+  "part": null,
+  "sheet_type": "long_read_page",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 9387558013923125520,
+  "title": "Where Rain Comes From",
+  "parent_tip": "Take turns reading paragraphs. Stop once to ask a question.",
+  "items": [
+    {
+      "kind": "read",
+      "read": "c01-water-cycle",
+      "set": "read",
+      "again": false,
+      "type": "article",
+      "heading": "Where Rain Comes From",
+      "blocks": [
+        {
+          "h": "The Sun Starts It"
+        },
+        {
+          "p": "Water moves around our planet on a path that never ends, and scientists call this path the water cycle. It begins when the sun warms water in oceans, lakes, and rivers. Some of the warm water turns into an invisible gas called water vapor. This change is called evaporation."
+        },
+        {
+          "h": "Clouds Form"
+        },
+        {
+          "p": "Water vapor rises into the sky, where the air is much colder. The cold air cools the vapor, and it turns back into tiny drops of water. Billions of these drops crowd together to make a cloud. This change is called condensation."
+        },
+        {
+          "h": "Back to the Ground"
+        },
+        {
+          "p": "When the drops in a cloud join together, they grow too heavy to float, so they fall. Water that falls from clouds is called precipitation. It can be rain, snow, sleet, or hail. The water runs into rivers and oceans or soaks into the ground, and then the sun warms it again."
+        }
+      ],
+      "figure": {
+        "kind": "cycle",
+        "title": "The Water Cycle",
+        "caption": "The same water goes around and around, again and again.",
+        "items": [
+          "Sun warms the water",
+          "Water vapor rises",
+          "Clouds form",
+          "Rain or snow falls"
+        ]
+      }
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

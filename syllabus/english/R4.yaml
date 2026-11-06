@@ -1,0 +1,87 @@
+subject: english
+level: R4
+title: Chapter stories, word clues, true facts, two texts and first summaries
+# Our own level (source: ours), grade 4 reading for an on-pace 7-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md). Public level name: syllabus/ladder.yaml. Section public_name is what
+# buyers see (CLAUDE.md §15). Every read is original (content/passages/R4/<section>.yaml, schema and
+# checks in ws/longreads.py). Drafts and their approval: syllabus/drafts/R4-*.md (scripts/r4_drafts.py).
+# Standards checked on thecorestandards.org (2026-11-06).
+preview_pages: [1, 2, 61, 171]   # a chapter with its questions, Word Detective, a summary page
+aims:
+  - Follow a longer story across chapters and describe its characters, setting and events in depth (RL.4.3)
+  - Work out what a word means from clues around it (definitions, examples, restatements) (L.4.4a)
+  - Read nonfiction with headings, captions and diagrams, and explain what the diagram adds (RI.4.7)
+  - Put together information from two texts on one topic (RI.4.9)
+  - Find the big idea of a story or article and say it in one sentence (RL.4.2, RI.4.2)
+  - Read passages at a grade 4 level (Flesch-Kincaid grade 3.5–5.5)
+pages: 200
+daily_pages: 2               # source: ours; a reading page and its questions page make one day
+sct_minutes_per_page: [6, 12]  # source: ours
+rules:
+  # ws/longreads.py plan_long_reads: reads in file order. `spread` sections put a read on one page and
+  # its questions on the next; the others print the text and one question set on each page.
+  planner: long_reads
+  answers: by_line            # answers PDF: one line per answer (sample sentences), ws/booklet.py
+  fk_grade: [3.5, 5.5]        # Flesch-Kincaid grade of every read's body text (ws/readability.py)
+  max_choice: 56              # characters: a long choice takes its own line (one line at 20px)
+sections:
+  # 5 original stories, 6 chapters each; each chapter ~250 words on its own page, questions on the next.
+  - code: A
+    name: Chapters of Longer Stories
+    public_name: Chapter Stories
+    pages: [1, 60]
+    sheet_types: [long_read_page, look_back_questions]
+    standards: [RL.4.3, RL.4.1, RL.4.10, RF.4.4a]
+    source: ours
+    rules: { reads: A, spread: true, needs: chapter, passage_words: [220, 260],
+             questions_per_page: 5, written_answers: [2, 2] }
+
+  # Two bold words a page; the child picks each meaning and writes the clue words (L.4.4a examples:
+  # definitions, examples, restatements). Each read serves two pages with different words.
+  - code: B
+    name: Meaning from Context
+    public_name: Word Detective
+    pages: [61, 100]
+    sheet_types: [word_detective]
+    standards: [L.4.4a, L.4.4, RL.4.4, RI.4.4]
+    source: ours
+    rules: { reads: B, pages_per_passage: 2, passage_words: [125, 160], questions_per_page: 3,
+             written_answers: [1, 1], targets: 2, long_choice_questions: 1 }
+
+  # Articles with 2–3 headings and a diagram, table, bar chart or time line with a caption (RI.4.7);
+  # at least one question uses the figure.
+  - code: C
+    name: Nonfiction Text Features
+    public_name: True Facts
+    pages: [101, 140]
+    sheet_types: [long_read_page, look_back_questions]
+    standards: [RI.4.7, RI.4.1, RI.4.3, RI.4.5]
+    source: ours
+    rules: { reads: C, spread: true, needs: figure, passage_words: [120, 150],
+             questions_per_page: 5, written_answers: [2, 2] }
+
+  # Two short texts on one topic (some pairs: a firsthand account and an article, RI.4.6); at least
+  # two questions on each page need both texts.
+  - code: D
+    name: Comparing Two Texts
+    public_name: Two Texts
+    pages: [141, 170]
+    sheet_types: [long_read_page, look_back_questions]
+    standards: [RI.4.9, RI.4.6, RI.4.1]
+    source: ours
+    rules: { reads: D, spread: true, needs: two_texts, passage_words: [90, 112], compare_questions: 2,
+             questions_per_page: 5, written_answers: [2, 2] }
+
+  # Stories (RL.4.2) and articles (RI.4.2) in turn; the last question is the big idea in one sentence.
+  - code: E
+    name: Main Idea, Theme and Summary
+    public_name: The Big Idea
+    pages: [171, 200]
+    sheet_types: [big_idea_summary]
+    standards: [RL.4.2, RI.4.2]
+    source: ours
+    rules: { reads: E, pages_per_passage: 2, passage_words: [85, 105], questions_per_page: 3,
+             written_answers: [1, 1], long_choice_questions: 1 }
+    parts:
+      - { part: 1, pages: [171, 180], name: With a sentence starter, rules: { starters: true } }
+      - { part: 2, pages: [181, 200], name: On your own,             rules: { starters: false } }

@@ -118,3 +118,20 @@ read_aloud:
   - "Let your child read the story aloud while you time it. Help with a hard word, then let them go on. Read the questions together."
   - "Read the story together first if it helps, then let your child read it alone. Talk about the questions; the answers are in the story."
   - "On the second reading, listen for a smooth, happy voice. Write the time and cheer if it got quicker."
+long_read_page:
+  # Owls Reading: one line each, so the long read has the room
+  - "Your child reads it silently, then aloud. Keep this page out."
+  - "Take turns reading paragraphs. Stop once to ask a question."
+  - "Before turning the page, ask for a two-sentence retelling."
+look_back_questions:
+  - "Looking back is smart! Point to the words that prove it."
+  - "Answer aloud first, then write. Spelling can wobble."
+  - "Tricky answer? Reread that part together and try again."
+word_detective:
+  - "Read around each bold word. Which clue gives it away?"
+  - "Swap the answer in for the bold word. Does it still work?"
+  - "Clues: a definition, an example, a restatement or an opposite."
+big_idea_summary:
+  - "Ask: if you could tell a friend one sentence, what is it?"
+  - "Cover the text. Say the big idea aloud first, then write it."
+  - "Small details stay out of a summary. Main point or one part?"

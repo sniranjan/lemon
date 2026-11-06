@@ -1,0 +1,73 @@
+{
+  "id": "EN-R4-E-001",
+  "subject": "english",
+  "level": "R4",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "big_idea_summary",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 8669660909449374076,
+  "title": "The Empty Lot",
+  "parent_tip": "Ask: if you could tell a friend one sentence, what is it?",
+  "items": [
+    {
+      "kind": "read",
+      "read": "e01-garden-lot",
+      "set": 0,
+      "again": false,
+      "type": "story",
+      "heading": "The Empty Lot",
+      "blocks": [
+        {
+          "p": "Behind Lena's apartment building was an empty lot full of weeds, broken bricks, and old cans. Lena pictured it full of tomatoes and sunflowers instead."
+        },
+        {
+          "p": "\"That's too much work for one kid,\" her neighbor Mr. Diaz said when she told him her idea."
+        },
+        {
+          "p": "Lena decided to start small anyway. On Saturday she filled two bags with cans. On Sunday she pulled weeds. The next weekend, Mr. Diaz came outside with a rake."
+        },
+        {
+          "p": "By June, twelve neighbors were working together. In August, they shared a picnic in the new garden. Mr. Diaz raised his fork. \"To Lena,\" he said, \"who started with two bags of cans.\""
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What is this story mostly about?",
+      "choices": [
+        "A girl collects cans to earn money.",
+        "A girl starts a garden, and her neighbors join her.",
+        "A man teaches children how to grow tomatoes."
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "Why did Lena start with only two bags of cans?",
+      "choices": [
+        "She ran out of bags.",
+        "Mr. Diaz told her to.",
+        "She decided to start small."
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Write the big idea of the story in one sentence.",
+      "lines": 2,
+      "starter": "Lena "
+    }
+  ],
+  "answer_key": [
+    "1. B (A girl starts a garden, and her neighbors join her.)",
+    "2. C (She decided to start small.)",
+    "3. Sample: Lena started cleaning the empty lot by herself, and soon her neighbors helped her make a garden."
+  ],
+  "new_words": [],
+  "review_words": []
+}

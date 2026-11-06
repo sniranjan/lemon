@@ -1,0 +1,1454 @@
+# Owls Reading, section A "Chapter Stories" (pages 1–60): 5 original stories, 6 chapters each (RL.4.3).
+# Each chapter is read on one page; its 5 questions (3 circle, 2 written) are on the next page.
+# Schema and checks: ws/longreads.py. `evidence`: words copied exactly from the chapter.
+
+- id: a01-lighthouse-1
+  story: The Lighthouse Key
+  chapter: 1
+  title: A Box in the Attic
+  text: |
+    Nia spent the first week of summer at her grandmother's cottage by the sea. On the third day, a
+    storm rolled in, and rain drummed on the roof all morning. Gran handed her a flashlight. "Why don't
+    you explore the attic?" she suggested. "Nobody has sorted it in years."
+
+    The attic was dusty and smelled like old paper. Nia found a rocking horse with a missing ear, a trunk
+    full of wool sweaters, and a stack of photographs tied with string. In the far corner, under a folded
+    sail, sat a small wooden box with a brass latch.
+
+    Inside the box was a heavy iron key. A paper tag hung from it on a faded ribbon. In careful, curly
+    handwriting, someone had written: "For the keeper who comes next."
+
+    Nia carried the box downstairs. Gran was stirring a pot of vegetable soup, but she stopped when she
+    saw the key. For a long moment she did not say anything at all.
+
+    "Where did you find that?" she finally asked in a quiet voice.
+
+    "Under the old sail," Nia answered. "What does it open?"
+
+    Gran wiped her hands on her apron and looked out the window. Far across the bay, the old lighthouse
+    stood on its rocky point, gray and silent in the rain. Nobody had climbed its stairs for twenty years.
+
+    "That key belonged to my father," Gran said. "He was the last lighthouse keeper on this coast." She
+    smiled a little, but her eyes were shiny. "I thought it was lost forever."
+  pages:
+    - focus: setting, character feelings, prediction
+      questions:
+        - ask: Why did Nia go up to the attic?
+          choices: [Gran told her to explore it., She was looking for a flashlight., She heard a noise up there.]
+          evidence: "Why don't you explore the attic?"
+        - ask: Where did Nia find the wooden box?
+          choices: [under a folded sail, inside a trunk of sweaters, behind the rocking horse]
+          evidence: under a folded sail, sat a small wooden box
+        - ask: Who did the key belong to?
+          choices: [Gran's father, Gran's neighbor, a boat captain]
+          evidence: That key belonged to my father
+        - ask: How did Gran feel when she saw the key? How do you know?
+          sample: Gran felt surprised and a little sad, because she stopped stirring and her eyes were shiny.
+          evidence: [she stopped when she saw the key, her eyes were shiny]
+        - ask: What do you think the key opens? Why do you think so?
+          sample: I think it opens the old lighthouse, because Gran's father was the lighthouse keeper.
+          evidence: He was the last lighthouse keeper on this coast.
+
+- id: a02-lighthouse-2
+  story: The Lighthouse Key
+  chapter: 2
+  title: Across the Bay
+  text: |
+    By the next morning, the storm had disappeared, the sky was brilliant blue, and the waves sparkled
+    in the sunshine. Gran packed two cheese sandwiches and a thermos of cocoa. "Let's find out if that key
+    still works," she said with a wink.
+
+    They followed a sandy path along the edge of the bay. Seagulls circled above them, and little crabs
+    scuttled sideways into the rocks. Gran walked slowly, and she pointed out everything she remembered.
+    "That flat rock was my favorite reading spot," she said. "And over there is where my father kept his
+    little rowboat."
+
+    At last they reached the rocky point. Up close, the lighthouse was much taller than Nia had
+    imagined. Its white paint was peeling, and green moss grew around the bottom. A heavy wooden door
+    faced the sea, with an iron lock as big as Nia's hand.
+
+    Nia took a deep breath and pushed the key into the lock, but at first it would not move at all. She
+    wiggled it gently, the way Gran showed her. Then, with a loud clunk, the key turned.
+
+    The door creaked open, and inside, a narrow staircase curled up and up like the inside of a seashell.
+    Dust floated in the beams of sunlight from the tiny windows.
+
+    Gran put her hand on the railing. "I used to race up these stairs every evening," she whispered.
+    "My father let me help him light the lamp."
+
+    Nia squeezed her hand. "Then let's climb them together," she said.
+  pages:
+    - focus: setting, events, character feelings
+      questions:
+        - ask: What did Gran pack for the trip?
+          choices: [sandwiches and cocoa, apples and lemonade, soup and crackers]
+          evidence: Gran packed two cheese sandwiches and a thermos of cocoa.
+        - ask: How did Nia get the key to turn?
+          choices: [She wiggled it gently., She pulled it out and tried again., Gran pushed it with both hands.]
+          evidence: She wiggled it gently
+        - ask: What did the staircase look like?
+          choices: [the inside of a seashell, a ladder on a ship, a slide at the park]
+          evidence: like the inside of a seashell
+        - ask: Why did Gran point out so many places on the walk?
+          sample: Gran was remembering places from when she was a girl, like her reading spot and the rowboat.
+          evidence: she pointed out everything she remembered
+        - ask: How do you think Gran feels inside the lighthouse? Why?
+          sample: I think Gran feels happy but a little sad, because she remembers lighting the lamp with her father.
+          evidence: My father let me help him light the lamp.
+
+- id: a03-lighthouse-3
+  story: The Lighthouse Key
+  chapter: 3
+  title: The Keeper's Logbook
+  text: |
+    Nia counted the steps as they climbed, and there were ninety-eight of them. Gran stopped
+    to rest twice. At the very top was a round room with windows on every side. In the middle stood the great
+    lamp, inside a glass lens as tall as Nia. The lens was cloudy with dust, but it still caught the
+    light and scattered tiny rainbows.
+
+    Against one wall was a small desk. On it lay a thick book with a cracked leather cover, and Gran opened
+    it carefully. The pages were filled with dates, weather notes, and the names of passing ships, all
+    in the same curly handwriting as the tag on the key.
+
+    "This is my father's logbook," Gran said softly. "He wrote in it every single night."
+
+    Nia turned to the last page with writing and read it aloud:
+
+    "Tonight I light the lamp for the last time. Ships have new radio signals now, so they do not need
+    us anymore. I only wish the light could shine once more on Lantern Night, so everyone could see
+    it.
+
+    "What is Lantern Night?" Nia asked.
+
+    "It's our summer festival," Gran explained. "Every August, everyone carries paper lanterns down to
+    the beach. My father never got his wish. The lighthouse has been dark ever since."
+
+    Nia looked at the dusty lens, then out at the town across the bay. An idea began to glow inside her,
+    as bright as any lamp. "Gran," she said slowly, "how far away is August?"
+  pages:
+    - focus: details, character motives, prediction
+      questions:
+        - ask: How many steps did the lighthouse have?
+          choices: [ninety-eight, twenty, two hundred]
+          evidence: there were ninety-eight of them
+        - ask: What did the keeper write about in the logbook?
+          choices: [weather and passing ships, his favorite songs, recipes for fish soup]
+          evidence: "The pages were filled with dates, weather notes, and the names of passing ships"
+        - ask: Why did the lighthouse stop shining?
+          choices: [Ships had new radio signals., A storm broke the lamp., The town ran out of money.]
+          evidence: Ships have new radio signals now, so they do not need us anymore.
+        - ask: What was the keeper's wish?
+          sample: He wished the light could shine once more on Lantern Night so everyone could see it.
+          evidence: I only wish the light could shine once more on Lantern Night
+        - ask: What do you think Nia's idea is? What clue helps you?
+          sample: I think Nia wants to light the lighthouse on Lantern Night, because she asks how far away August is.
+          evidence: how far away is August?
+
+- id: a04-lighthouse-4
+  story: The Lighthouse Key
+  chapter: 4
+  title: A Plan for the Light
+  text: |
+    Lantern Night was only fifteen days away. That evening, Nia sat at the kitchen table with a pencil
+    and a long sheet of paper. At the top she wrote: "How to Light the Lighthouse." Underneath, she made
+    a list. The lens needed cleaning. The door and the railings needed paint. Most of all, the old lamp
+    needed someone who understood wires and electricity.
+
+    "This is a big job for one girl and her grandmother," Gran said, reading over her shoulder.
+
+    "Then we'll ask for help," Nia replied.
+
+    The next morning they walked into town. Their first stop was the hardware store, where Mr. Okafor
+    was stacking cans of paint. When Nia showed him the logbook, he took off his glasses and read the last
+    page twice. "My mother used to talk about that light," he said. "I'll donate the white paint."
+
+    At the library, Ms. Bell promised to make posters. At the harbor, a fisherman named Rosa offered her
+    boat to carry supplies across the bay. Then Mr. Okafor called his daughter, Dana, who was an
+    electrician. She agreed to inspect the old lamp on Saturday.
+
+    By the end of the day, Nia's list had a name next to almost every job. Her feet were tired, but her
+    heart felt light.
+
+    That night, Gran tucked the logbook under her arm and smiled at Nia. "You know," she said, "you
+    remind me of my father. He never thought a job was too big, as long as people did it together."
+  pages:
+    - focus: events, character traits, details
+      questions:
+        - ask: What did Nia do first to get ready?
+          choices: [She made a list of jobs., She painted the door., She called the library.]
+          evidence: Underneath, she made a list.
+        - ask: How did Rosa offer to help?
+          choices: [She would carry supplies in her boat., She would make posters., She would fix the old lamp.]
+          evidence: a fisherman named Rosa offered her boat to carry supplies across the bay
+        - ask: Why did Mr. Okafor want to help?
+          choices: [His mother told stories of the light., He wanted to sell more paint., Dana asked him to.]
+          evidence: My mother used to talk about that light
+        - ask: Which word describes Nia in this chapter? Why?
+          sample: Nia is determined, because she made a plan and asked the whole town for help.
+          evidence: Then we'll ask for help
+        - ask: How was Nia like Gran's father?
+          sample: Like Gran's father, Nia did not think a job was too big if people did it together.
+          evidence: He never thought a job was too big, as long as people did it together.
+
+- id: a05-lighthouse-5
+  story: The Lighthouse Key
+  chapter: 5
+  title: Many Helping Hands
+  text: |
+    For two weeks, the rocky point was the busiest place on the bay. Every morning, Rosa's boat chugged
+    across the water loaded with paint cans, ladders, buckets, and helpers. Children brought lemonade.
+    Grown-ups scraped off the peeling paint and brushed on fresh white coats.
+
+    Nia's job was the lens. She climbed the ninety-eight steps with a bucket of soapy water and a stack
+    of soft cloths. Gran showed her how to wipe each glass panel in small circles so it would not get
+    scratched. It was slow work. After three days, only half of the lens was clean, and Nia's arms ached.
+
+    "Maybe we won't finish in time," she sighed.
+
+    The next morning, she heard footsteps on the stairs. Four kids from town appeared, each carrying a
+    cloth. "Ms. Bell's poster said you needed help," said a boy with freckles. Together they finished the
+    lens in a single afternoon. When the sun shone through it, the whole room sparkled.
+
+    On Saturday, Dana examined the old lamp. She frowned at the crumbling wires. "These are much too old
+    to use safely," she said. "But I can put in new wiring and a modern bulb. It will shine just as
+    brightly." Dana worked carefully for two days while everyone waited.
+
+    Meanwhile, Nia found something in Gran's attic: an empty notebook with a blue cover. On the first
+    page, she wrote the date and the weather, just like the old keeper. Then she added the name of every
+    helper, so no one would ever be forgotten.
+  pages:
+    - focus: problem and solution, events, character feelings
+      questions:
+        - ask: What was Nia's job?
+          choices: [cleaning the lens, painting the door, driving the boat]
+          evidence: Nia's job was the lens.
+        - ask: Why did Nia wipe the glass in small circles?
+          choices: [so it would not get scratched, so it would dry faster, so the soap would bubble]
+          evidence: so it would not get scratched
+        - ask: Why couldn't Dana use the old wires?
+          choices: [They were too old to be safe., They were the wrong color., They were too short.]
+          evidence: These are much too old to use safely
+        - ask: How did Nia feel after three days? What changed it?
+          sample: Nia felt worried and tired, but she felt better when four kids came to help her finish the lens.
+          evidence: ["Maybe we won't finish in time,", "Four kids from town appeared, each carrying a cloth."]
+        - ask: Why did Nia write every helper's name in the notebook?
+          sample: She wrote their names so that no one who helped would ever be forgotten.
+          evidence: so no one would ever be forgotten
+
+- id: a06-lighthouse-6
+  story: The Lighthouse Key
+  chapter: 6
+  title: Lantern Night
+  text: |
+    On Lantern Night, the beach was crowded with families. Hundreds of paper lanterns glowed in the
+    soft summer darkness, red and yellow and green. Everyone kept glancing across the bay at the dark
+    shape of the lighthouse.
+
+    Nia and Gran stood at the top of the ninety-eight steps with Dana, the electrician. Nia was holding
+    the iron key, and her heart was pounding so hard she could hear it.
+
+    "Your great-grandfather would be very proud," Dana said. She pointed to a new switch on the wall.
+    "Whenever you're ready."
+
+    Gran shook her head with a gentle smile. "You do it, Nia. This was your idea."
+
+    Nia reached up and pressed the switch, and for a moment nothing happened. Then the lamp hummed, and a
+    golden beam burst through the clean lens. Slowly it began to turn, sweeping across the water, across
+    the boats, and across the beach full of lanterns. From the top of the tower, they could hear the
+    whole town cheering.
+
+    Gran wiped her eyes. "He finally got his wish," she whispered.
+
+    Later, back at the cottage, Gran tied the iron key to a fresh blue ribbon. She wrote a new tag in her
+    own handwriting and gave it to Nia. It said: "For the keeper who comes next. That's you."
+
+    Nia opened her blue notebook and wrote by the light of the window. "August 15. Clear skies, calm sea.
+    Tonight the lighthouse shone again, because a whole town worked together." Then she looked out at
+    the beam circling over the dark water, and she smiled.
+  pages:
+    - focus: resolution, character feelings, theme
+      questions:
+        - ask: Who pressed the switch to light the lamp?
+          choices: [Nia, Gran, Dana]
+          evidence: Nia reached up and pressed the switch
+        - ask: Why did Gran want Nia to press the switch?
+          choices: [It was Nia's idea., Gran was too tired., Dana told her to.]
+          evidence: This was your idea.
+        - ask: What did the town do when the light came on?
+          choices: [They cheered., They went home., They blew out their lanterns.]
+          evidence: they could hear the whole town cheering
+        - ask: What did Gran mean by "He finally got his wish"?
+          sample: She meant her father's wish came true, because the light shone again on Lantern Night.
+          evidence: He finally got his wish
+        - ask: Why do you think Gran gave Nia the key?
+          sample: I think Gran gave Nia the key because Nia is the new keeper who will take care of the lighthouse.
+          evidence: For the keeper who comes next.
+
+- id: a07-robot-1
+  story: The Garden Robot
+  chapter: 1
+  title: A Thirsty Garden
+  text: |
+    Behind Maple Street School was a small garden with six wooden beds. Every spring, Ms. Ortiz's class
+    planted tomatoes, beans, peppers, and sunflowers there. Theo loved it more than anything at school.
+
+    But this summer was hotter than ever before. Every afternoon, the tomato plants drooped like tired
+    puppies, and the bean leaves turned crispy at the edges. The students took turns watering, but
+    carrying heavy buckets from the faucet took forever. On weekends, nobody came at all. One Monday, Theo discovered the sunflowers bent over in the dry, cracked dirt, and he felt his stomach
+    sink.
+
+    His best friend, Priya, knelt beside him. Priya was always taking things apart to understand how
+    they worked. Last year she had built a doorbell out of a battery, a buzzer, and some wire.
+
+    "Somebody needs to water this garden every day," Theo said, "even when nobody is here."
+
+    Priya's eyes lit up. "Not somebody," she said. "Something. We could build a robot!"
+
+    Theo laughed, but then he stopped. "Could we really do that?"
+
+    "We can try," Priya said. "You're great at drawing plans, and I'm good at building. Let's invent a
+    robot that waters plants by itself."
+
+    That night, Theo filled three pages of his sketchbook with drawings. Some robots had long arms, and
+    some had wheels. One even had an enormous smiling face. At the bottom of the last page, he wrote a
+    name in capital letters: SPROUT.
+  pages:
+    - focus: setting, problem, character traits
+      questions:
+        - ask: What problem did the school garden have?
+          choices: [The plants needed more water., Rabbits were eating the beans., The beds were too small.]
+          evidence: the tomato plants drooped like tired puppies
+        - ask: Why was nobody watering on weekends?
+          choices: [Nobody came to school then., The faucet was locked., It rained every weekend.]
+          evidence: On weekends, nobody came at all.
+        - ask: What did Priya build last year?
+          choices: [a doorbell, a birdhouse, a kite]
+          evidence: Last year she had built a doorbell
+        - ask: What are Theo and Priya each good at?
+          sample: Theo is good at drawing plans, and Priya is good at building things.
+          evidence: You're great at drawing plans, and I'm good at building.
+        - ask: How did Theo feel about the sunflowers? How do you know?
+          sample: Theo felt sad and worried, because the story says he felt his stomach sink.
+          evidence: he felt his stomach sink
+
+- id: a08-robot-2
+  story: The Garden Robot
+  chapter: 2
+  title: Treasure in the Garage
+  text: |
+    On Saturday, Theo and Priya visited Priya's grandfather, Mr. Rao. He repaired bicycles in his
+    garage, and every shelf was crowded with jars of bolts, coils of tubing, and old wheels.
+
+    Theo spread his sketchbook on the workbench. Mr. Rao studied the drawings and stroked his gray beard.
+    "A robot with arms is very difficult to build," he said. "What does
+    Sprout really need to do?"
+
+    "It needs to carry water," he said, "and roll from plant to plant, and pour a
+    little water on each one."
+
+    "Then those are your three parts," Mr. Rao said. "Something to hold water, something to move, and
+    something to pour."
+
+    The friends began searching the garage like treasure hunters. Priya found a red wagon with a squeaky
+    wheel. Theo found a big plastic jug that could hold plenty of water. In a drawer, Mr. Rao discovered
+    a tiny pump from an old fish tank and some clear plastic tubing.
+
+    "This pump runs on batteries," he explained. "When it's switched on, it pulls water out of the jug
+    and pushes it through the tube."
+
+    They worked all afternoon. Priya tightened the squeaky wheel, and Theo cut a hole
+    in the jug's lid for the tube. Mr. Rao helped them attach a small motor and a battery box so the wagon
+    could roll by itself.
+
+    Sprout did not look anything like Theo's drawings. It was just a wagon with a jug, a
+    pump, and a tangle of wires. But to Theo, it was the most beautiful robot in the world.
+  pages:
+    - focus: details, sequence, character feelings
+      questions:
+        - ask: Where did Theo and Priya find parts for Sprout?
+          choices: [in Mr. Rao's garage, at the school library, in a toy store]
+          evidence: He repaired bicycles in his garage
+        - ask: What does the pump do?
+          choices: [It moves water through the tube., It makes the wagon roll., It keeps the water cold.]
+          evidence: it pulls water out of the jug and pushes it through the tube
+        - ask: Why did Mr. Rao say to skip the robot arms?
+          choices: [Arms are very difficult to build., Arms would frighten the birds., There was no room for arms.]
+          evidence: A robot with arms is very difficult to build
+        - ask: What three parts did Sprout need?
+          sample: Sprout needed something to hold water, something to move, and something to pour.
+          evidence: "Something to hold water, something to move, and something to pour."
+        - ask: Sprout did not look like the drawings. How did Theo feel?
+          sample: Theo still felt proud and happy, because he thought it was the most beautiful robot in the world.
+          evidence: it was the most beautiful robot in the world
+
+- id: a09-robot-3
+  story: The Garden Robot
+  chapter: 3
+  title: The First Test
+  text: |
+    On Monday, Ms. Ortiz let Theo and Priya test Sprout in the school garden while half the class
+    gathered around to watch. Theo filled the jug with water while Priya checked every wire again.
+
+    "Ready?" Priya asked. Theo nodded and flipped the switch.
+
+    Sprout rolled forward with a cheerful hum. It bumped gently along the path between the garden beds,
+    and the class clapped. Then Priya pressed the button for the pump. Instead of a gentle trickle, a
+    powerful jet of water shot straight up into the air. It splashed Priya's shoes, Theo's shirt, and the
+    top of Ms. Ortiz's sun hat. The tomato plants did not get a single drop.
+
+    After a moment of silence, Ms. Ortiz began to laugh, and soon the whole class was
+    laughing too.
+
+    Theo's cheeks felt hot, and he wanted to crawl under the nearest garden bed. "It's a disaster," he
+    mumbled. "Sprout doesn't work at all."
+
+    Priya wiped the water off her glasses and grinned. "It's not a disaster. It's information," she
+    said. "Now we know the pump is too strong, and the tube is pointing the wrong way."
+
+    Ms. Ortiz nodded. "Real inventors make lots of mistakes," she said. "Every mistake teaches you
+    something new."
+
+    That afternoon, the friends made two changes. They bent the end of the tube so it pointed down at the
+    soil, and they added a small clip to squeeze the tube and slow the water. When they tested Sprout
+    again, a gentle stream sprinkled the roots of the first tomato plant.
+  pages:
+    - focus: problem and solution, character feelings, lesson
+      questions:
+        - ask: What went wrong during the first test?
+          choices: [The water shot up into the air., The wagon would not move., The jug was empty.]
+          evidence: a powerful jet of water shot straight up into the air
+        - ask: Who laughed first after the splash?
+          choices: [Ms. Ortiz, Priya, Theo]
+          evidence: Ms. Ortiz began to laugh
+        - ask: How did the clip help Sprout?
+          choices: [It slowed down the water., It made the wheels turn faster., It held the jug closed.]
+          evidence: they added a small clip to squeeze the tube and slow the water
+        - ask: How did Theo feel after the splash? How do you know?
+          sample: Theo felt embarrassed, because his cheeks felt hot and he wanted to crawl under a garden bed.
+          evidence: Theo's cheeks felt hot
+        - ask: What did Priya mean when she said it was information?
+          sample: She meant the mistake showed them what to fix, like the strong pump and the tube's direction.
+          evidence: It's not a disaster. It's information
+
+- id: a10-robot-4
+  story: The Garden Robot
+  chapter: 4
+  title: Stuck in the Mud
+  text: |
+    For a whole week, Sprout watered the garden every afternoon, and the tomato plants stood up straight
+    again while the bean leaves turned a healthy green. Theo and Priya felt like real inventors.
+
+    Then, on Thursday night, a big rainstorm soaked the town. When the friends arrived on Friday, the
+    path between the beds had turned into thick, sticky mud. They switched on Sprout anyway, but after
+    rolling two feet, its thin wheels sank deep into the muck. The motor whined, but Sprout did not
+    move another inch.
+
+    "Your wheels are too skinny," Theo snapped impatiently. "I told you we should have used bigger ones."
+
+    "You never said that," Priya replied quietly, looking disappointed. "And they were the only wheels we
+    had." She turned and walked to the other side of the garden.
+
+    Standing alone beside the stuck robot, Theo realized he was being unfair. Priya had worked just as hard
+    as he had, and the mud was nobody's fault. He thought about how she had laughed off the splash on
+    the first day, even though she got wet too.
+
+    Slowly, he walked over to her. "I'm sorry, Priya," he said. "I was frustrated with Sprout, not with
+    you. You're the best building partner in the world."
+
+    After a moment, Priya gave him a small, forgiving smile. "Okay," she said. "But Sprout still
+    can't drive in mud. What do we do now?"
+
+    Theo looked at the deep tracks in the path, and an idea started to form. "Have you ever seen a
+    tractor's tires?" he asked.
+  pages:
+    - focus: conflict, character feelings, traits
+      questions:
+        - ask: Why did Sprout get stuck?
+          choices: [Its thin wheels sank in the mud., Its battery ran out., A plant blocked the path.]
+          evidence: its thin wheels sank deep into the muck
+        - ask: What caused the mud on the path?
+          choices: [a big rainstorm, a broken faucet, Sprout's leaking jug]
+          evidence: a big rainstorm soaked the town
+        - ask: What did Theo do to make things right?
+          choices: [He said sorry to Priya., He bought new wheels., He fixed the motor.]
+          evidence: I'm sorry, Priya
+        - ask: Why did Theo say he was being unfair to Priya?
+          sample: He was unfair because Priya worked as hard as he did and the mud was nobody's fault.
+          evidence: the mud was nobody's fault
+        - ask: What do you think Theo's idea is? What clue helps?
+          sample: I think he wants to give Sprout wide wheels like a tractor, because he asks about tractor tires.
+          evidence: Have you ever seen a tractor's tires?
+
+- id: a11-robot-5
+  story: The Garden Robot
+  chapter: 5
+  title: Wide Wheels
+  text: |
+    "Tractors work in muddy fields," Theo explained. "Their tires are really wide, so they
+    spread out the weight and don't sink."
+
+    Priya's eyes sparkled. "So Sprout needs wide wheels too!"
+
+    After school they hurried back to Mr. Rao's garage and searched every shelf, but there were no wide
+    wheels anywhere. Then Priya noticed four round plastic lids from big paint buckets.
+
+
+    "What if we glue two lids together for each wheel?" she suggested. "With rubber around the edge,
+    they'd be wide and grippy."
+
+    Theo measured carefully, and Priya glued and
+    clamped. It took the entire weekend, but by Sunday, Sprout stood on four fat new
+    wheels and looked a little silly, like a wagon wearing snow boots.
+
+    On Monday, the garden path was still muddy, and a group of curious classmates whispered that the
+    robot would never move. Theo held his breath as Priya flipped the switch.
+
+    Sprout rolled forward, and its wide wheels pressed down on the mud but did not sink. It traveled all the
+    way down the row, stopped at each plant, and sprinkled water on the roots.
+
+    Then Jamal, a quiet boy from the back row, raised his hand. "Could we help make Sprout even better?"
+    he asked. "I could paint a face on the jug, and Hana could make a sign."
+
+    Theo and Priya grinned at each other. Their team was growing.
+  pages:
+    - focus: problem solving, details, character traits
+      questions:
+        - ask: Why don't tractor tires sink in mud?
+          choices: [They are wide and spread out the weight., They are made of metal., They spin very fast.]
+          evidence: Their tires are really wide, so they
+        - ask: What did they use to make the new wheels?
+          choices: [plastic lids from paint buckets, old bicycle tires, wooden plates]
+          evidence: four round plastic lids from big paint buckets
+        - ask: What did Sprout look like with its new wheels?
+          choices: [a wagon wearing snow boots, a turtle in a shell, a tiny race car]
+          evidence: like a wagon wearing snow boots
+        - ask: How did Theo and Priya work as a team in this chapter?
+          sample: Theo measured carefully while Priya glued and clamped, and they built the wheels together.
+          evidence: Theo measured carefully, and Priya glued and
+        - ask: Why do you think Jamal and Hana wanted to help?
+          sample: I think they wanted to help because they saw Sprout work and wanted to be part of the team.
+          evidence: Could we help make Sprout even better?
+
+- id: a12-robot-6
+  story: The Garden Robot
+  chapter: 6
+  title: Sprout at the Fair
+  text: |
+    In September, the school held its science fair in the gym. Tables were covered with volcanoes,
+    rockets, and planet posters. In one corner stood Sprout, with a smiling face painted on its
+    jug and a sign that said: "Sprout the Garden Robot, built by Room 12."
+
+    Theo and Priya took turns explaining how Sprout worked. Theo showed his drawings and his list of
+    problems. Priya showed the pump, the bent tube, and the clip that slowed the
+    water. Jamal and Hana poured buckets of dirt onto a tray so visitors could watch Sprout roll through
+    it with its wide wheels.
+
+    One of the judges, Dr. Lin, asked a tricky question. "What was the hardest part of building it?"
+
+    Theo thought about the splash and the mud. Then he thought about the moment he snapped at Priya.
+    "The hardest part was not giving up," he said. "And remembering to be a good teammate when things
+    went wrong."
+
+    Sprout didn't win first prize. But Dr. Lin pinned a green ribbon
+    on Sprout's jug that said "Best Teamwork," and the class whooped.
+
+    The next week, the garden was bursting with ripe vegetables. Ms. Ortiz's class picked bright red
+    tomatoes, crunchy beans, and shiny peppers. Together they made a giant bowl of salsa and shared it
+    with the whole school.
+
+    That evening, Theo opened his sketchbook to a fresh page. He began drawing a new plan: Sprout Two,
+    a robot that could pull weeds. At the top he wrote, "Builders: Theo, Priya, and Room 12."
+  pages:
+    - focus: resolution, character growth, theme
+      questions:
+        - ask: Where was the science fair held?
+          choices: [in the gym, in the garden, at the library]
+          evidence: the school held its science fair in the gym
+        - ask: Which ribbon did Sprout get?
+          choices: [Best Teamwork, First Prize, Best Drawing]
+          evidence: Best Teamwork
+        - ask: What did the class make with the vegetables?
+          choices: [a giant bowl of salsa, a pot of bean soup, a big garden salad]
+          evidence: Together they made a giant bowl of salsa
+        - ask: What did Theo say was the hardest part? Why?
+          sample: Theo said not giving up was hardest, because they had problems like the splash and the mud.
+          evidence: The hardest part was not giving up
+        - ask: How has Theo changed since the start of the story?
+          sample: Theo learned to keep trying and to be a good teammate, so now he plans robots with the whole class.
+          evidence: "Builders: Theo, Priya, and Room 12."
+
+
+# --- Story 3: Snow Day Detectives -------------------------------------------------------------
+
+- id: a13-snow-1
+  story: Snow Day Detectives
+  chapter: 1
+  title: Tracks by the Fence
+  text: |
+    When Jonah woke up on Tuesday, the whole world outside his window was white. Eight inches of
+    snow had fallen during the night, and the radio announced that every school in town was closed.
+
+    Jonah and his little sister Ruby pulled on their boots, mittens, and puffy coats as fast as they
+    could. They raced into the backyard, ready to build the biggest snow fort on the block.
+
+    Then Ruby stopped short. "Jonah, look!" she whispered, pointing at the ground.
+
+    A line of strange prints crossed the yard, from the wooden fence all the way to the garden shed.
+    Each set had two long marks in front and two small round marks behind them. The sets were spaced
+    far apart, as if something had been leaping. "Who made these?" Ruby asked. "Was it a kangaroo?"
+
+    Jonah laughed, but he knelt down to study the prints closely. They were not boot prints, and
+    they were much too small for a dog. Someone had visited their yard while they were sleeping, and
+    he wanted to know who. "We have a mystery," he announced. "And mysteries need detectives."
+
+    Ruby ran inside and returned with a spiral notebook and a pencil. On the first page, in large
+    letters, she wrote SNOW DAY DETECTIVES. Below that, Jonah carefully drew one set of the prints.
+
+    The snow fort could wait. For the rest of the morning, the two detectives followed the tracks
+    around the yard, writing down every clue they found.
+  pages:
+    - focus: setting, character feelings and motives
+      questions:
+        - ask: Why was Jonah's school closed?
+          choices: [Snow fell during the night., The heater was broken., It was a holiday.]
+          evidence: Eight inches of snow had fallen during the night
+        - ask: What did Jonah and Ruby first plan to do outside?
+          choices: [build a snow fort, look for animals, go sledding]
+          evidence: ready to build the biggest snow fort on the block
+        - ask: How did Jonah know a dog did not make the prints?
+          choices: [They were too small., They were too deep., They had no toes.]
+          evidence: much too small for a dog
+        - ask: How does Jonah feel about the tracks? How do you know?
+          sample: Jonah feels curious, because he studies the prints closely and wants to know who made them.
+          evidence: he wanted to know who
+        - ask: Why did Ruby get a notebook and a pencil?
+          sample: Ruby got them so the detectives could draw the tracks and write down every clue.
+          evidence: writing down every clue they found
+
+- id: a14-snow-2
+  story: Snow Day Detectives
+  chapter: 2
+  title: The Tracking Journal
+  text: |
+    After lunch, the detectives spread their notebook on the kitchen table. Mom looked over their
+    shoulders and smiled at Jonah's drawing. "Real scientists measure things," she said, and she
+    handed them a ruler from the junk drawer.
+
+    Back outside, Ruby held the ruler beside one of the prints while Jonah wrote down the numbers.
+    The long marks were about three inches long. The round marks were only about one inch across.
+    The jumps between the sets were nearly two feet apart. "That animal can leap a long way," Ruby
+    said, "but it must have small feet."
+
+    That afternoon, Mom drove them to the library. The librarian helped them find a book called Who
+    Walked Here? It was full of drawings of animal tracks. Jonah turned the pages slowly, comparing
+    each drawing with the one in their notebook. Suddenly Ruby slapped her hand on a page. "That's
+    it!" she cried.
+
+    The picture showed a cottontail rabbit. The book explained that when a rabbit hops, its strong
+    back feet swing forward and land in front of its front feet. That is why the two long prints
+    appear ahead of the two small ones. A rabbit in a hurry can cover several feet in a single hop.
+
+    Jonah wrote RABBIT in big letters beside the drawing. Then he added a new heading with a
+    question mark after it: OTHER VISITORS? "Why the question mark?" Ruby asked.
+
+    "Because," Jonah said, "I saw some different tracks near the shed."
+  pages:
+    - focus: events, details, prediction
+      questions:
+        - ask: Why did Mom give the detectives a ruler?
+          choices: [Real scientists measure things., Ruby wanted to draw lines., The notebook needed a cover.]
+          evidence: Real scientists measure things
+        - ask: Where did they find the book about animal tracks?
+          choices: [at the library, in the garden shed, in the junk drawer]
+          evidence: Mom drove them to the library
+        - ask: Why are a rabbit's long prints in front?
+          choices: [Its back feet land ahead., It walks backward., Its front feet are long.]
+          evidence: its strong back feet swing forward and land in front of its front feet
+        - ask: How did the detectives solve the mystery of the tracks?
+          sample: They measured the prints and matched them to a drawing of a rabbit in a library book.
+          evidence: comparing each drawing with the one in their notebook
+        - ask: What do you think the detectives will study next? Why?
+          sample: I think they will study the new tracks near the shed, because Jonah saw different tracks there.
+          evidence: I saw some different tracks near the shed
+
+- id: a15-snow-3
+  story: Snow Day Detectives
+  chapter: 3
+  title: A Line of Dots
+  text: |
+    The next morning, Jonah and Ruby hurried to the garden shed before breakfast. Behind it, a single
+    line of prints ran along the fence. Each print was small and oval, with four toe marks and a tiny
+    dot at the tip of each toe.
+
+    "These look like dog prints," Ruby said, "but they're in a perfectly straight line. It's like
+    someone drew a dotted line with one finger."
+
+    Jonah measured the prints. Each one was about two inches long. He sketched them in the notebook and
+    wrote down how neatly they followed one another.
+
+    Their neighbor, Mrs. Patel, was shoveling her front steps. When she saw the detectives, she waved
+    them over.
+
+    "Are you two studying my early-morning visitor?" she asked. "I saw a red fox trot past my kitchen
+    window at sunrise. It had a fluffy tail with a white tip."
+
+    Ruby gasped. A real fox, right in their neighborhood!
+
+    At home, the detectives opened the library book again. The book said that a fox often steps its
+    back foot into the print its front foot just made. That habit saves energy in deep snow, and it
+    leaves a line of tracks that looks like a neat row of dots. Dogs usually wander and sniff, so their
+    tracks zigzag all over the place.
+
+    Ruby wrote FOX in the notebook and drew a small fox with a white-tipped tail. "I hope we get to see
+    it ourselves," she said.
+
+    Jonah nodded. "Detectives have to be patient," he reminded her.
+  pages:
+    - focus: details, compare, character words
+      questions:
+        - ask: What made the new tracks look unusual?
+          choices: [They were in a straight line., They were very large., They were bright red.]
+          evidence: they're in a perfectly straight line
+        - ask: Who saw the fox at sunrise?
+          choices: [Mrs. Patel, Mom, Jonah]
+          evidence: I saw a red fox trot past my kitchen window at sunrise.
+        - ask: Why does a fox step into its own prints?
+          choices: [It saves energy in deep snow., It wants to hide its trail., Its paws are cold.]
+          evidence: That habit saves energy in deep snow
+        - ask: How are fox tracks different from dog tracks?
+          sample: Fox tracks go in a neat straight line, but dog tracks zigzag all over the place.
+          evidence: their tracks zigzag all over the place
+        - ask: What does Jonah mean when he says to be patient?
+          sample: He means they have to wait calmly, because the fox may not come back right away.
+          evidence: Detectives have to be patient
+
+- id: a16-snow-4
+  story: Snow Day Detectives
+  chapter: 4
+  title: Tiny Forks in the Snow
+  text: |
+    On Thursday, a fresh layer of snow covered all the old tracks. Ruby was disappointed at first,
+    but Jonah pointed out that a clean page was perfect for new clues.
+
+    Under the big maple tree, they discovered dozens of tiny marks. Each one looked like a little
+    fork with three thin lines pointing forward and one line pointing back. "Those marks must be
+    bird toes," Ruby said excitedly.
+
+    Jonah noticed something interesting about the pattern of the bird tracks. Some of the bird
+    tracks came in pairs, side by side, as if the bird had hopped with both feet together. Other
+    tracks were in a single line, one foot after the other, like a person walking. "Why are they
+    different?" Ruby wondered.
+
+    They sat very still on the back steps and watched. Soon a group of small gray birds with white
+    bellies landed under the maple. The birds hopped across the snow, pecking at bits of seed.
+    Later, a big black crow strutted across the yard, placing one foot in front of the other. "Small
+    birds hop, and the crow walks!" Jonah said. He recorded the discovery in the journal right away.
+
+    Ruby looked at the hungry little birds searching the snow. "There isn't much food for them out
+    here in winter," she said quietly. "Can we help them?"
+
+    Jonah thought about it. Then he grinned. "Detectives can also be builders," he said. "Let's make
+    a bird feeder this weekend."
+  pages:
+    - focus: observation, events, character traits
+      questions:
+        - ask: What did the bird tracks look like?
+          choices: [little forks, small circles, long ovals]
+          evidence: Each one looked like a little fork
+        - ask: How did the crow move across the yard?
+          choices: [It walked one foot at a time., It hopped with both feet., It slid on its belly.]
+          evidence: placing one foot in front of the other
+        - ask: Why was Ruby disappointed at first?
+          choices: [New snow covered the old tracks., The birds flew away., Jonah lost the notebook.]
+          evidence: a fresh layer of snow covered all the old tracks
+        - ask: How did they find out why the bird tracks were different?
+          sample: They sat still and watched, and they saw the small birds hop while the crow walked.
+          evidence: They sat very still on the back steps and watched.
+        - ask: What does Ruby's question show about her?
+          sample: It shows that Ruby is kind and cares about the hungry birds in winter.
+          evidence: Can we help them?
+
+- id: a17-snow-5
+  story: Snow Day Detectives
+  chapter: 5
+  title: Building a Feeder
+  text: |
+    On Saturday morning, the kitchen table was covered with supplies: an empty milk carton, a bag of
+    sunflower seeds, a ball of string, and a pair of scissors. Dad read the directions out loud
+    while the detectives got to work.
+
+    First, Dad helped Jonah cut a window on two sides of the carton. Ruby poked a hole near the top
+    and threaded the string through it. Then they pushed a wooden spoon through the carton below
+    each window so that birds would have a place to perch. "Why does it need perches?" Ruby asked.
+
+    "Birds like to rest their feet while they eat," Dad explained. "It also keeps the seeds from
+    spilling everywhere." Ruby decorated the sides with drawings of a rabbit, a fox, and a crow.
+    Jonah poured in the sunflower seeds until the carton was half full. They hung the feeder from a
+    low branch of the maple tree, where they could see it from the kitchen window. Then they waited.
+    And waited.
+
+    An hour passed, and not a single bird came. Ruby pressed her nose against the glass with a
+    frown. "Maybe they don't like my drawings," she sighed.
+
+    "Birds need time to notice something new," Dad said gently. "Let's check again after lunch."
+
+    After lunch, Jonah peeked outside and burst into a huge smile. Three small gray birds were
+    perched on the spoons, cracking open seeds with their beaks. Ruby added a new page to the
+    journal: OUR FEEDER WORKS!
+  pages:
+    - focus: steps, feelings, inference
+      questions:
+        - ask: What did they use to make the feeder?
+          choices: [an empty milk carton, an old shoe box, a glass jar]
+          evidence: an empty milk carton
+        - ask: Why does the feeder need perches?
+          choices: [Birds rest their feet while eating., Birds use them to build nests., They keep the rain out.]
+          evidence: Birds like to rest their feet while they eat
+        - ask: Where did they hang the feeder?
+          choices: [on a low branch of the maple tree, on the garden shed door, from the front porch]
+          evidence: They hung the feeder from a low branch of the maple tree
+        - ask: How did Ruby feel when no birds came? How do you know?
+          sample: Ruby felt disappointed, because she frowned at the window and sighed.
+          evidence: Ruby pressed her nose against the glass with a frown.
+        - ask: Why do you think Dad said to check again after lunch?
+          sample: Dad knew the birds needed some time to notice the new feeder.
+          evidence: Birds need time to notice something new
+
+- id: a18-snow-6
+  story: Snow Day Detectives
+  chapter: 6
+  title: The Fox at Dawn
+  text: |
+    On Sunday, Ruby set her alarm clock for six o'clock. "Detectives get up early," she told Jonah the
+    night before.
+
+    The house was dark and quiet when they tiptoed downstairs. They sat by the kitchen window wrapped
+    in a blanket, holding mugs of warm cocoa. Outside, the sky slowly turned from gray to pink.
+
+    Then Jonah grabbed Ruby's arm. Along the back fence, a slim orange animal was trotting through the
+    snow. Its fluffy tail had a bright white tip, just as Mrs. Patel had said.
+
+    The fox paused and lifted its pointed nose to sniff the cold air. It glanced toward the house for a
+    moment. Then it continued along the fence and disappeared behind the shed.
+
+    Neither detective said a word until it was gone. Then Ruby let out her breath in a happy squeal.
+
+    As soon as the sun was up, they pulled on their boots and ran outside. There, along the fence, was a
+    fresh line of prints as neat as a row of dots. The fox had walked along the same path as before.
+
+    Back inside, Ruby drew the fox carefully in the notebook. Jonah counted all the visitors they had
+    identified: one rabbit, one red fox, two kinds of birds, and a whole flock of feeder guests.
+
+    "The snow will melt soon," Ruby said, sounding a little sad.
+
+    "That's okay," Jonah said, closing the journal. "The animals will still be here. And next winter,
+    the Snow Day Detectives will be ready."
+  pages:
+    - focus: events, feelings, how the characters changed
+      questions:
+        - ask: What color did the sky turn at sunrise?
+          choices: [pink, purple, orange]
+          evidence: the sky slowly turned from gray to pink
+        - ask: How did the detectives know the animal was the fox?
+          choices: [Its tail had a white tip., It hopped like a rabbit., It ate seeds at the feeder.]
+          evidence: Its fluffy tail had a bright white tip
+        - ask: What did they find along the fence after sunrise?
+          choices: [a fresh line of fox prints, a new bird feeder, a pile of seeds]
+          evidence: a fresh line of prints as neat as a row of dots
+        - ask: Why was Ruby a little sad at the end?
+          sample: Ruby was a little sad because the snow would melt soon and the tracks would be gone.
+          evidence: The snow will melt soon
+        - ask: What did the detectives learn during their snow days?
+          sample: They learned to tell which animals made the tracks, like a rabbit, a fox, and birds.
+          evidence: one rabbit, one red fox, two kinds of birds
+
+# --- Story 4: Grandpa's Recipe Card -----------------------------------------------------------
+
+- id: a19-recipe-1
+  story: Grandpa's Recipe Card
+  chapter: 1
+  title: A Smudged Card
+  text: |
+    Every spring, the town of Willow Creek held a cook-off in the park. Families set up long tables,
+    and anyone could taste a spoonful of every dish for one ticket. This year, Mateo wanted to enter
+    with his grandpa.
+
+    "We should make Bisabuela's corn soup," Mateo said. Bisabuela was Grandpa's mother, and her soup was
+    famous in the family. Grandpa said it tasted like sunshine in a bowl.
+
+    Grandpa smiled and opened an old tin box on the kitchen shelf. Inside were dozens of recipe cards,
+    soft and yellow with age. He searched until he found one with curly blue handwriting at the top.
+
+    Then his smile faded. Long ago, someone had spilled water on the card. Most of the ink had run
+    together into pale blue clouds. Mateo could read the words corn, onion, and milk, but the amounts
+    were gone. The bottom half of the card was just a blur.
+
+    "I watched my mother make it a hundred times," Grandpa said softly, "but I never wrote anything
+    down. I always thought she would be there to show me."
+
+    Mateo looked at the card for a long time. Then he had an idea.
+
+    "Lots of people ate Bisabuela's soup, right?" he asked. "Maybe each of them remembers a piece of it.
+    We could put the pieces together, like a puzzle."
+
+    Grandpa's eyes brightened. He reached for his coat. "Let's start with your Aunt Lucia," he said.
+    "She never forgets a meal."
+  pages:
+    - focus: characters, problem, plan
+      questions:
+        - ask: What did Mateo want to make for the cook-off?
+          choices: [Bisabuela's corn soup, Grandpa's apple pie, Aunt Lucia's salad]
+          evidence: We should make Bisabuela's corn soup
+        - ask: What happened to the recipe card?
+          choices: [Water smudged the ink., It was torn in half., It was lost in a move.]
+          evidence: someone had spilled water on the card
+        - ask: Who was Bisabuela?
+          choices: [Grandpa's mother, Mateo's aunt, a famous chef]
+          evidence: Bisabuela was Grandpa's mother
+        - ask: Why did Grandpa's smile fade?
+          sample: His smile faded because the water had blurred most of his mother's recipe.
+          evidence: Most of the ink had run together into pale blue clouds.
+        - ask: What is Mateo's plan? Why is it a good idea?
+          sample: Mateo plans to ask people who ate the soup, because each one might remember part of it.
+          evidence: Maybe each of them remembers a piece of it.
+
+- id: a20-recipe-2
+  story: Grandpa's Recipe Card
+  chapter: 2
+  title: Aunt Lucia Remembers
+  text: |
+    Aunt Lucia lived across town in a yellow house with a squeaky gate. When she heard about the
+    smudged recipe card, she hugged Mateo tightly and pulled them both into her kitchen.
+
+    "Oh, I remember that soup," she said, closing her eyes. "Mama always roasted the peppers first,
+    turning them over a flame until the skins were blackened and crackly. The whole house smelled
+    smoky and sweet." Mateo carefully recorded the first instruction in his notebook: Roast the
+    peppers until the skin is black.
+
+    "Did she peel off the blackened skin?" Grandpa asked.
+
+    Aunt Lucia nodded. "She sealed the hot peppers inside a paper bag for about ten minutes. The
+    steam loosened the skins, and afterward they slid right off. I used to help her peel them at
+    your age." She pulled an old photograph from a drawer. It showed a small woman in a flowered
+    apron, laughing beside an enormous pot. A little girl with braids stood on a stool next to her.
+    "Is that you?" Mateo asked.
+
+    "It certainly is," Aunt Lucia said proudly. "I was always the official stirrer." Before they
+    left, she remembered one more important detail. "Mama used fresh corn in summer, but in winter
+    she used frozen corn," she said. "She claimed the soup never noticed the difference."
+
+    On the drive home, Mateo read his notes out loud. The recipe was growing, but several questions
+    remained. How much milk? Which herbs? Grandpa considered the problem at a red light. "Mr.
+    Ramos," he announced. "He was her neighbor, and he grew her herbs."
+  pages:
+    - focus: details, character feelings
+      questions:
+        - ask: What did Bisabuela do to the peppers first?
+          choices: [She roasted them., She chopped them small., She froze them.]
+          evidence: Mama always roasted the peppers first
+        - ask: Why did she put the peppers in a paper bag?
+          choices: [The steam loosened the skins., It kept them warm for later., It made them sweeter.]
+          evidence: The steam loosened the skins
+        - ask: Who is the little girl in the old photograph?
+          choices: [Aunt Lucia, Mateo's mom, Bisabuela]
+          evidence: It certainly is
+        - ask: How does Aunt Lucia feel about her memories?
+          sample: She feels happy and proud, because she hugs Mateo and proudly shows the photograph.
+          evidence: Aunt Lucia said proudly
+        - ask: Why did Grandpa think of Mr. Ramos?
+          sample: Grandpa thought of Mr. Ramos because he grew Bisabuela's herbs.
+          evidence: he grew her herbs
+
+- id: a21-recipe-3
+  story: Grandpa's Recipe Card
+  chapter: 3
+  title: Mr. Ramos's Garden
+  text: |
+    Mr. Ramos was ninety-one years old, but he still worked in his garden every single morning.
+
+    "Your mother!" he said to Grandpa, his face lighting up. "Best cook on the whole street. Every
+    Sunday I traded her a bunch of herbs for a bowl of soup. It was the best trade I ever made."
+
+    Mateo held out his notebook. "Do you remember which herbs she used?"
+
+    Mr. Ramos picked a few leaves and crushed them between his fingers. "Cilantro," he said. "She
+    chopped a big handful and sprinkled it on top at the very end. That kept it bright and fresh."
+    Then he snapped off a sprig of a gray-green plant. "And a little oregano," he added. "Just a
+    pinch. She always said too much oregano was like a drummer who plays too loud."
+
+    Mateo laughed and carefully recorded everything. Mr. Ramos generously gave them a paper bag full
+    of cilantro and oregano to take home. "Will you come to the cook-off?" Mateo asked. "You could
+    taste the soup and tell us if we got it right."
+
+    Mr. Ramos straightened his straw hat. "I wouldn't miss it for the world," he promised.
+
+    At home, Grandpa spread out Mateo's notes beside the smudged card. Now they knew about the
+    peppers, the corn, the cilantro, and the oregano. Only one question remained: how much of
+    everything should go into the pot? "There is only one way to find out," Grandpa said, tying on
+    an apron. "We test it."
+  pages:
+    - focus: details, character traits, prediction
+      questions:
+        - ask: What did Mr. Ramos trade for soup every Sunday?
+          choices: [a bunch of herbs, a basket of corn, a loaf of bread]
+          evidence: Every Sunday I traded her a bunch of herbs for a bowl of soup.
+        - ask: When did Bisabuela add the cilantro?
+          choices: [at the very end, at the very start, while the peppers roasted]
+          evidence: sprinkled it on top at the very end
+        - ask: What was too much oregano like, she said?
+          choices: [a drummer who plays too loud, a dog that barks all night, a song that is too long]
+          evidence: like a drummer who plays too loud
+        - ask: What kind of person is Mr. Ramos? Use details.
+          sample: He is generous and hard-working, because he gardens every morning and gives them herbs.
+          evidence:
+            - he still worked in his garden every single morning
+            - Mr. Ramos generously gave them a paper bag full of cilantro and oregano
+        - ask: What do you think Grandpa and Mateo will do next?
+          sample: I think they will cook test batches of soup to figure out the right amounts.
+          evidence: We test it.
+
+- id: a22-recipe-4
+  story: Grandpa's Recipe Card
+  chapter: 4
+  title: Too Much Salt
+  text: |
+    The first test batch took the entire Saturday afternoon. Mateo roasted the peppers with
+    Grandpa's help, then sealed them in a paper bag to steam, exactly as Aunt Lucia had described.
+
+    When the soup was finally ready, they each tasted a spoonful. Immediately, Grandpa's face
+    wrinkled up like a raisin. "Far too salty," he announced, reaching for a glass of water.
+
+    Mateo tasted it and agreed. His drooped with disappointment, because they had worked for hours
+    and the soup was still wrong.
+
+    Grandpa put a gentle hand on his shoulder. "Every good cook makes mistakes," he said. "My mother
+    once burned an entire pot of beans. The important thing is to write down what went wrong so you
+    can fix it next time."
+
+    So Mateo wrote a careful note: Batch 1 had too much salt, so use half next time.
+
+    On Sunday they tried again with half the salt. This time the soup tasted better, but it seemed a
+    little flat and ordinary. Grandpa sniffed the pot thoughtfully. "Something is missing," he said.
+    "Lime! I remember now. She always squeezed in some lime juice right before serving."
+
+    They added the juice of one lime and sprinkled fresh cilantro on top. Mateo lifted the spoon to
+    his mouth and closed his eyes. The soup was creamy, smoky, sweet, and bright all at once.
+    Grandpa took a taste and became very quiet. Then he smiled. "That's it," he whispered. "That's
+    my mother's soup."
+  pages:
+    - focus: problem and solution, character traits, feelings
+      questions:
+        - ask: What was wrong with the first batch of soup?
+          choices: [It was too salty., It was too cold., It was too spicy.]
+          evidence: Far too salty
+        - ask: What did Grandpa suddenly remember on Sunday?
+          choices: [She added lime juice., She added more salt., She added cheese on top.]
+          evidence: She always squeezed in some lime juice right before serving.
+        - ask: Which word best describes Grandpa when Mateo felt bad?
+          choices: [encouraging, impatient, grumpy]
+          evidence: Every good cook makes mistakes
+        - ask: Why did Mateo write a note after the first batch?
+          sample: He wrote a note so they could remember what went wrong and fix it next time.
+          evidence: write down what went wrong so you can fix it next time
+        - ask: How did Grandpa feel at the end? How do you know?
+          sample: He felt happy and moved, because he went quiet, smiled, and whispered that it was his mother's soup.
+          evidence: That's my mother's soup.
+
+- id: a23-recipe-5
+  story: Grandpa's Recipe Card
+  chapter: 5
+  title: Cook-Off Day
+  text: |
+    On the morning of the cook-off, the park was full of tables, tents, and delicious smells. There were
+    twenty-two families entered, and each one had a number. Grandpa and Mateo were number fourteen.
+
+    Their neighbors at table thirteen were making spicy noodles. At table fifteen, a woman was frying
+    tiny potato pancakes. Mateo's stomach began to flutter. What if nobody liked their soup?
+
+    He and Grandpa set up a big pot on a camping stove and lined up the paper cups. Mateo had made a
+    sign with markers that said Bisabuela's Corn Soup, a Family Recipe. Beside it, he placed the old
+    smudged recipe card in a frame so everyone could see it.
+
+    Aunt Lucia arrived first, wearing a flowered apron. Then Mr. Ramos came, leaning on his cane, with a
+    fresh bunch of cilantro for the top of each cup.
+
+    Soon a line stretched past the next three tables. People tasted the soup, and many of them came back
+    for a second cup. One girl asked if she could have the recipe. An older man read the card in the
+    frame and said it reminded him of his own grandmother's cooking.
+
+    At noon, three judges in white hats walked up to table fourteen. Each judge tasted the soup slowly
+    and wrote something on a clipboard. They didn't smile or frown. They just nodded and moved on.
+
+    Mateo let out a long breath. "I can't tell if they liked it," he whispered.
+
+    "Neither can I," said Grandpa. "But look at that line."
+  pages:
+    - focus: setting, feelings, what a character means
+      questions:
+        - ask: What number was Grandpa and Mateo's table?
+          choices: [fourteen, thirteen, fifteen]
+          evidence: Grandpa and Mateo were number fourteen.
+        - ask: Why did Mateo put the old card in a frame?
+          choices: [So everyone could see it., So the judges could copy it., So he could sell it.]
+          evidence: so everyone could see it
+        - ask: What did Mr. Ramos bring to the cook-off?
+          choices: [fresh cilantro, a camping stove, paper cups]
+          evidence: with a fresh bunch of cilantro
+        - ask: How did Mateo feel at the start? How do you know?
+          sample: He felt nervous, because his stomach fluttered and he worried nobody would like the soup.
+          evidence: Mateo's stomach began to flutter.
+        - ask: 'What does Grandpa mean by "look at that line"?'
+          sample: He means that lots of people liked the soup, even if they can't tell what the judges think.
+          evidence: Soon a line stretched past the next three tables.
+
+- id: a24-recipe-6
+  story: Grandpa's Recipe Card
+  chapter: 6
+  title: A New Recipe Card
+  text: |
+    At four o'clock, everyone gathered by the bandstand to hear the winners. Mateo held Grandpa's hand
+    tightly.
+
+    The first prize went to the spicy noodles at table thirteen. Mateo clapped for them, but his heart
+    sank a little.
+
+    Then the head judge picked up one more envelope. "This year, we have a special award," she
+    announced. "It is called the Heart of Willow Creek Award. It goes to the dish that best shares a
+    family's story. The winner is table fourteen, Bisabuela's Corn Soup!"
+
+    Mateo and Grandpa walked up to the bandstand together. The judge handed them a blue ribbon and shook
+    their hands. In the crowd, Aunt Lucia was cheering, and Mr. Ramos waved his straw hat in the air.
+
+    That evening, Mateo sat at the kitchen table with a stack of fresh white cards. In his neatest
+    handwriting, he copied the whole recipe: the roasted peppers, the corn, half the salt, the pinch of
+    oregano, the lime juice, and the cilantro at the very end. At the bottom, he wrote the names of
+    everyone who had helped remember it.
+
+    He made twenty copies. The next week, he mailed one to every cousin, aunt, and uncle in the family.
+
+    Grandpa placed the new card in the tin box, right in front of the smudged one. "Now the recipe can
+    never be lost again," he said.
+
+    Mateo looked at the two cards side by side. One was old and blurry, and one was new and clear.
+    Somehow, he thought, they were both just right.
+  pages:
+    - focus: events, motives, theme
+      questions:
+        - ask: Which dish won first prize?
+          choices: [the spicy noodles, the potato pancakes, the corn soup]
+          evidence: The first prize went to the spicy noodles at table thirteen.
+        - ask: What is the Heart of Willow Creek Award for?
+          choices: [a dish that shares a family's story, the biggest pot of soup, the fastest cook]
+          evidence: It goes to the dish that best shares a family's story.
+        - ask: Whose names did Mateo write on the new card?
+          choices: [everyone who helped remember it, the three judges, his school friends]
+          evidence: he wrote the names of everyone who had helped remember it
+        - ask: Why did Mateo mail copies of the recipe?
+          sample: He mailed copies so everyone in the family would have it and it could never be lost again.
+          evidence:
+            - he mailed one to every cousin, aunt, and uncle in the family
+            - Now the recipe can never be lost again
+        - ask: Why are both cards just right to Mateo?
+          sample: The old card is from Bisabuela, and the new card keeps her recipe safe for the family.
+          evidence: One was old and blurry, and one was new and clear.
+
+# --- Story 5: The Night Sky Club --------------------------------------------------------------
+
+- id: a25-sky-1
+  story: The Night Sky Club
+  chapter: 1
+  title: A Sign on the Board
+  text: |
+    Amara had loved the stars ever since she was five years old. On clear nights, she lay on a
+    blanket in her backyard and tried to count them. She always lost track somewhere after two
+    hundred.
+
+    One afternoon at the Maple Street Library, she noticed something new behind the front desk. It
+    was a long black tube on three legs, with a tag that read Telescope: Ask to Borrow. "Libraries
+    lend telescopes?" Amara asked in amazement.
+
+    "This one does," said Ms. Reyes, the librarian. "A family donated it last month. But nobody has
+    checked it out yet."
+
+    Amara could hardly believe it. A real telescope was waiting for someone to use it! Then a bigger
+    idea popped into her head. "What if we started a club?" she asked. "A night sky club for kids.
+    We could meet here, learn about the stars together, and take turns with the telescope."
+
+    Ms. Reyes tapped her chin. "We would need a grown-up at every meeting," she said slowly. "And at
+    least four members."
+
+    "My dad would come," Amara said quickly. "He knows the names of lots of stars."
+
+    Ms. Reyes smiled and handed her a sheet of bright yellow paper and a box of markers. "Then you
+    had better make a sign," she said.
+
+    Amara worked on the sign for an hour. At the top, she wrote NIGHT SKY CLUB in large letters and
+    drew a crescent moon. Underneath, she wrote that all kids were welcome on Friday at seven
+    o'clock. She pinned it to the bulletin board and crossed her fingers.
+  pages:
+    - focus: character traits and motives, details
+      questions:
+        - ask: What did Amara find at the library?
+          choices: [a telescope to borrow, a book about planets, a map of the moon]
+          evidence: 'Telescope: Ask to Borrow'
+        - ask: What did the club need besides a grown-up?
+          choices: [at least four members, a lot of money, a bigger room]
+          evidence: And at least four members.
+        - ask: Who did Amara say would come to the meetings?
+          choices: [her dad, her teacher, her grandmother]
+          evidence: My dad would come
+        - ask: What words show that Amara really loves the stars?
+          sample: Ever since she was five, she lay on a blanket on clear nights and tried to count the stars.
+          evidence: On clear nights, she lay on a blanket in her backyard and tried to count them.
+        - ask: Why did Amara cross her fingers at the end?
+          sample: She crossed her fingers because she hoped enough kids would see the sign and join.
+          evidence: She pinned it to the bulletin board and crossed her fingers.
+
+- id: a26-sky-2
+  story: The Night Sky Club
+  chapter: 2
+  title: The First Meeting
+  text: |
+    On Friday evening, Amara arrived at the library twenty minutes early. She set out cookies, arranged
+    chairs in a circle, and checked the clock about fifty times.
+
+    At five minutes to seven, the door opened. In came Leo and his twin sister Gabi, who lived on
+    Amara's street. Next came Priya, a fourth grader with a notebook full of planet drawings. Amara
+    counted on her fingers. That made four members, including herself!
+
+    Then, just as the meeting started, one more boy slipped through the door. He sat in the chair
+    closest to the exit and pulled his hood over his ears. When Amara asked his name, he looked at the
+    floor.
+
+    "Ben," he said, so quietly she almost missed it.
+
+    Amara's dad showed them a star chart. He explained that people long ago connected bright stars into
+    shapes called constellations. One of the easiest to find is the Big Dipper. Its seven bright stars
+    form a shape like a giant spoon with a long handle.
+
+    "The two stars at the end of the cup point toward the North Star," Dad said. "Sailors used it to
+    find their way at night."
+
+    Everyone leaned in to look, except Ben, who stayed in his chair by the door. But Amara noticed that
+    he was drawing something on the back of his hand with a pen. It was seven little dots in the shape
+    of a spoon.
+
+    After the meeting, Amara walked over to him. "See you next Friday?" she asked.
+
+    Ben shrugged. But he almost smiled.
+  pages:
+    - focus: characters, details, inference
+      questions:
+        - ask: How many kids came to the first meeting?
+          choices: [five, four, three]
+          evidence: one more boy slipped through the door
+        - ask: What shape does the Big Dipper make?
+          choices: [a spoon with a long handle, a square box, a bright circle]
+          evidence: like a giant spoon with a long handle
+        - ask: Why did sailors use the North Star?
+          choices: [to find their way at night, to tell the time, to know the weather]
+          evidence: Sailors used it to find their way at night.
+        - ask: What clues show that Ben is shy?
+          sample: He sits by the door, hides under his hood, and says his name very quietly.
+          evidence:
+            - pulled his hood over his ears
+            - so quietly she almost missed it
+        - ask: What did Amara notice about Ben? What does it show?
+          sample: She saw him draw the Big Dipper on his hand, which shows he was listening and interested.
+          evidence: It was seven little dots in the shape of a spoon.
+
+- id: a27-sky-3
+  story: The Night Sky Club
+  chapter: 3
+  title: Clouds Again
+  text: |
+    The next two Fridays were a disappointment. Thick gray clouds covered the sky both nights, and not a
+    single star peeked through. The telescope stayed in its corner, and the members stared glumly out
+    the library window.
+
+    "Maybe we should stop meeting until summer," Gabi suggested.
+
+    Amara didn't want to give up. That night at home, she thought hard about what to do. If they
+    couldn't go to the stars, maybe the stars could come to them.
+
+    At the next meeting, she brought a stack of black paper, some pushpins, and a few flashlights.
+    "Let's make our own constellations," she said. "We poke holes where the stars go. Then we shine a
+    flashlight through the paper, and the stars appear on the ceiling."
+
+    Everyone grabbed a sheet. Leo made the Big Dipper. Priya made a constellation called Orion, with
+    three stars in a row for his belt. Gabi invented a new one shaped like her cat.
+
+    Ben worked alone at the end of the table. When he finally held up his paper, the room went quiet. He
+    had poked out a whole sky map, with dozens of tiny holes and every constellation from Dad's chart.
+
+    Amara turned off the lights, and Ben shone his flashlight upward. The ceiling filled with dozens of
+    tiny points of light.
+
+    "Wow," Priya breathed. "How did you remember all of those?"
+
+    Ben's cheeks turned pink. "I practiced every night this week," he said. It was the most words he had
+    ever said at the club.
+  pages:
+    - focus: problem and solution, character change
+      questions:
+        - ask: Why couldn't the club see any stars for two weeks?
+          choices: [Clouds covered the sky., The telescope was broken., The library was closed.]
+          evidence: Thick gray clouds covered the sky both nights
+        - ask: What did Gabi's new constellation look like?
+          choices: [her cat, a big spoon, a crescent moon]
+          evidence: Gabi invented a new one shaped like her cat.
+        - ask: What did Ben make with his paper?
+          choices: [a whole sky map, only the Big Dipper, a picture of a planet]
+          evidence: He had poked out a whole sky map
+        - ask: How did Amara solve the problem of the cloudy nights?
+          sample: She had everyone poke star pictures in paper and shine flashlights so the stars showed on the ceiling.
+          evidence: maybe the stars could come to them
+        - ask: How is Ben starting to change? Use details.
+          sample: Ben is opening up, because he shows his map and talks more than he ever has.
+          evidence: It was the most words he had ever said at the club.
+
+- id: a28-sky-4
+  story: The Night Sky Club
+  chapter: 4
+  title: The Moon Up Close
+  text: |
+    At last, on the fourth Friday, the sky was perfectly clear. The air felt crisp, and a half moon
+    glowed brightly above the library roof. Dad demonstrated how to aim it. "Look through the small end and turn this knob slowly
+    until the picture becomes perfectly sharp," he explained.
+
+    Leo went first. "It's covered with holes!" he exclaimed.
+
+    "Those are craters," Dad explained. "Long ago, rocks from space crashed into the moon and left
+    giant dents. The moon has no wind or rain to wear them away, so they remain for millions of
+    years." One by one, the members took turns at the telescope. Priya sketched the craters in her
+    notebook, and Gabi decided the moon looked like a slice of Swiss cheese.
+
+    Ben went last. He stared through the eyepiece for a long time without saying a word. Finally he
+    stepped back and turned toward the group. "The craters look deepest near the line where the
+    bright part meets the dark part," he said. "Why does that happen?"
+
+    Dad looked impressed. "Excellent observation, Ben," he said. "Near that line, sunlight arrives
+    from the side, like a flashlight held low. It makes long shadows, so the edges of the craters
+    stand out."
+
+    Amara noticed that Ben wasn't sitting by the door tonight. Instead, he was standing right in the
+    middle of the group. "Next month there's a meteor shower," Ben said quietly. "Could the club
+    watch it together?"
+
+    Amara grinned at him. "That's a wonderful idea," she said.
+  pages:
+    - focus: science details, character change
+      questions:
+        - ask: What are the craters on the moon?
+          choices: [dents made by space rocks, holes dug by animals, dark lakes of water]
+          evidence: rocks from space crashed into the moon and left giant dents
+        - ask: Why do the craters stay on the moon so long?
+          choices: [It has no wind or rain., It is very cold there., It spins very slowly.]
+          evidence: The moon has no wind or rain to wear them away
+        - ask: What did Gabi say the moon looked like?
+          choices: [a slice of Swiss cheese, a big spoon, a bright flashlight]
+          evidence: a slice of Swiss cheese
+        - ask: Why do craters stand out near the light and dark line?
+          sample: The sunlight comes in from the side there, so it makes long shadows.
+          evidence: It makes long shadows
+        - ask: How has Ben changed since the first meeting?
+          sample: Ben used to sit by the door, but now he stands in the middle of the group and shares ideas.
+          evidence: he was standing right in the middle of the group
+
+- id: a29-sky-5
+  story: The Night Sky Club
+  chapter: 5
+  title: A Plan for August
+  text: |
+    The next week, the Night Sky Club had a planning meeting. Ben had brought a library book about
+    meteor showers, and he read a page aloud while everyone listened.
+
+    "Every August, Earth passes through a trail of dust left behind by a comet," he read. "Tiny bits of
+    dust, many no bigger than a grain of sand, zoom into our air very fast. They heat up and glow,
+    making bright streaks across the sky. These streaks are called meteors."
+
+    "So they aren't really stars at all," Priya said.
+
+    This shower would be at its best around August twelfth. The book said the best time to watch was
+    late at night, in a dark place far from city lights. It also said something surprising: you don't
+    need a telescope to see meteors. A telescope shows only a tiny piece of the sky, and meteors can
+    appear anywhere.
+
+    "So we just use our eyes?" Leo asked.
+
+    "And lie down on our backs," Ben added, "to see more of the sky."
+
+    Dad suggested Pine Hill Park, just outside of town, where the sky was very dark. Each member would
+    need a permission note, a sleeping bag, warm clothes, and a family member to come along.
+
+    Amara made a checklist on the whiteboard. Gabi offered to bring hot cocoa, and Priya offered to make
+    a chart for counting meteors.
+
+    Then Amara turned to Ben. "Would you be our guide that night?" she asked. "You know the most about
+    meteors."
+
+    Ben's eyes widened. Then, for the first time, he smiled a big smile.
+  pages:
+    - focus: science details, motives, feelings
+      questions:
+        - ask: What are meteors?
+          choices: [glowing bits of space dust, stars that fall down, flashes from the moon]
+          evidence: These streaks are called meteors.
+        - ask: Why don't you need a telescope to see meteors?
+          choices: [They can appear anywhere in the sky., They are too bright for it., Telescopes only work by day.]
+          evidence: meteors can appear anywhere
+        - ask: Where did Dad suggest they watch the meteor shower?
+          choices: [Pine Hill Park, the library lawn, Amara's backyard]
+          evidence: Dad suggested Pine Hill Park
+        - ask: Why did Amara ask Ben to be the guide?
+          sample: She asked Ben because he knows the most about meteors.
+          evidence: You know the most about meteors.
+        - ask: Why do you think Ben smiled a big smile?
+          sample: Ben felt proud and happy that the club trusted him to be their guide.
+          evidence: for the first time, he smiled a big smile
+
+- id: a30-sky-6
+  story: The Night Sky Club
+  chapter: 6
+  title: Streaks of Light
+  text: |
+    On the night of August twelfth, the club spread their sleeping bags in a circle at Pine Hill
+    Park. The sky was so dark that the Milky Way stretched
+    overhead like a faint, glowing river. "Give your eyes about twenty minutes," Ben told everyone.
+    "They need time to get used to the dark. And no flashlights, or you'll have to start over."
+
+    For a long while, nothing happened at all, and Gabi yawned while Leo started to wiggle
+    impatiently. Then, suddenly, a thin line of light flashed across the sky and vanished. "One!"
+    everyone shouted at once.
+
+    Priya made a mark on her chart, and soon the meteors appeared more frequently. Some were quick
+    and faint. Others were bright and left a glowing trail for a second or two. One was so bright
+    that the parents gasped too.
+
+    By one o'clock in the morning, Priya's chart showed forty-seven meteors. Amara lay on her back next to Ben, still watching. "Thank you for
+    starting the club," Ben whispered. "Before this, I didn't really talk to anybody at school."
+
+    Amara smiled in the dark. "Thank you for joining it," she said. "You taught us the most." Just
+    then, the brightest meteor of the night streaked across the sky from one side to the other.
+    Neither of them said a word, because they didn't need to.
+
+    The next morning, there were three new names on the club's sign-up sheet, and Ben was already
+    planning the next meeting.
+  pages:
+    - focus: details, character feelings, theme
+      questions:
+        - ask: Why did Ben say to keep the flashlights off?
+          choices: [Your eyes need time to adjust., The lights scare the meteors., The parents were asleep.]
+          evidence: They need time to get used to the dark.
+        - ask: How many meteors did Priya count?
+          choices: [forty-seven, twelve, one hundred]
+          evidence: Priya's chart showed forty-seven meteors
+        - ask: What did the Milky Way look like?
+          choices: [a faint glowing river, a giant spoon, a bright half moon]
+          evidence: like a faint, glowing river
+        - ask: What did Ben thank Amara for? Why?
+          sample: He thanked her for starting the club, because before it he didn't really talk to anybody.
+          evidence: Before this, I didn't really talk to anybody at school.
+        - ask: How did the club grow by the end of the story?
+          sample: Three new kids signed up for the club the next morning.
+          evidence: there were three new names on the club's sign-up sheet

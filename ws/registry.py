@@ -47,6 +47,8 @@ CATALOGUE: frozenset[str] = frozenset({
     # equation_solve (two_step)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
+    # Owls Reading (R4): long reads on one page and their questions on the next, context clues, summaries
+    "long_read_page", "look_back_questions", "word_detective", "big_idea_summary",
     "power_root", "sci_notation", "pythagorean",   # Lions math (M8; equations and graphs are modes of equation_solve, coordinate_grid)
 })
 
