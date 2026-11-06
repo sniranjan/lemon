@@ -172,8 +172,8 @@ sections:
           kinds: [binomial, binomial_lead, square, conjugate, binomial_lead]
           tips:
             polynomial_ops:
-              - "FOIL: First, Outer, Inner, Last. The two middle terms are like terms, so add them."
-              - "In a box, each cell is the row term times the column term. Add the cells, joining the like terms."
+              - "Every term times every term: First, Outer, Inner, Last, or one box cell each. The two middle terms are like terms, so add them."
+              - "Each product is one term times one term. Add them up, joining the like terms. A box and FOIL give the same four products."
       - part: 4
         pages: [101, 110]
         rules:
@@ -283,8 +283,8 @@ sections:
           root: [-6, 6]
           tips:
             quadratic_solve:
-              - "Write down the three numbers in front of x squared, x and the constant first, then the number under the root, then the formula."
-              - "When the number under the root is a perfect square, the answers are whole numbers or fractions."
+              - "The formula: x = −b ± √(b² − 4ac), all over 2 times a. Fill in the boxes for a, b, c and b² − 4ac first."
+              - "x = −b ± √(b² − 4ac), all over 2 times a. When b² − 4ac is a perfect square, the answers are whole numbers or fractions."
       - part: 4
         pages: [181, 190]
         rules:
@@ -298,7 +298,7 @@ sections:
           max_disc: 200
           tips:
             quadratic_solve:
-              - "Simplify the root first, then divide every part by a common factor: (4 ± 2 root 3) over 2 is 2 ± root 3."
+              - "x = −b ± √(b² − 4ac), all over 2 times a. Simplify the root, then divide every part by a common factor: (4 ± 2√3)/2 = 2 ± √3."
               - "Leave the answers exact, with a root. A calculator check: both answers should make the equation close to 0."
       - part: 5
         pages: [191, 200]

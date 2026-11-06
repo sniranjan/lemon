@@ -9,7 +9,7 @@
   "variant": 1,
   "seed": 10833117685078903988,
   "title": "Quadratic formula",
-  "parent_tip": "When the number under the root is a perfect square, the answers are whole numbers or fractions.",
+  "parent_tip": "x = −b ± √(b² − 4ac), all over 2 times a. When b² − 4ac is a perfect square, the answers are whole numbers or fractions.",
   "items": [
     {
       "method": "formula",

@@ -9,7 +9,7 @@
   "variant": 1,
   "seed": 15669098826090168235,
   "title": "Multiply binomials",
-  "parent_tip": "FOIL: First, Outer, Inner, Last. The two middle terms are like terms, so add them.",
+  "parent_tip": "Every term times every term: First, Outer, Inner, Last, or one box cell each. The two middle terms are like terms, so add them.",
   "items": [
     {
       "layout": "box",
