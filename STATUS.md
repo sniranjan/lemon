@@ -107,6 +107,42 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `full_sentence_answer` (planner `passages` in `ws/passages.py`); child text 20px (`min_child_px` for R levels);
   answers PDF lists one line per answer (level rule `answers: by_line`). All 200 pages verify with 0 errors and
   0 warnings; booklets per section + `foxes-reading-level.pdf` (202 pages) + answers. `daily_pages: 2` (ours).
+- **Lions Math (M8, our own level, grade 8 work for age 11, 200 pages)** (2026-11-06): `syllabus/math/M8.yaml`:
+  A Exponents and Square Roots 1–30 (8.EE.1–2, 8.NS.2) · B Very Big and Very Small 31–50 (8.EE.3–4) · C Multi-Step
+  Equations 51–100 (8.EE.7a–b) · D Lines and Slope 101–150 (8.EE.5–6, 8.F.1–4) · E Two Equations at Once 151–180
+  (8.EE.8a–c) · F Right Triangles 181–200 (8.G.6–8). New sheet types `power_root`, `sci_notation`, `pythagorean`;
+  multi-step equations are `equation_solve` `mode: multi_step`, lines and systems are `coordinate_grid` `mode: lines` /
+  `systems` (Pandas output byte-identical; a `template_for(sheet)` hook in the registry picks the mode's template).
+  Exact helpers `ws/sheet_types/_algebra.py` + `templates/_lions_algebra.html.j2` (tokens, stacked fractions, SVG grid);
+  system story frames `content/math/systems.yaml` (copy in test fixtures). Letters a, m, r never used (2a, m8, r5
+  would read as codes). Child text ≥ 20px (`min_child_px`). Tests `tests/test_math_M8.py`. All 200 pages verify with
+  0 errors and 0 warnings; booklets per section + `lions-math-level.pdf` (202 pages) and
+  `lions-math-level-answers.pdf` (16 pages); no internal codes in PDF text. Free preview pages 11, 61, 131, 181 wait
+  for Lions Reading.
+- **Pandas Math (M6, our own level, grade 6 work for age 9, 200 pages)** (2026-11-06): `syllabus/math/M6.yaml`:
+  A Dividing Fractions 1–30 (6.NS.1) · B Ratios and Rates 31–70 (6.RP.1, 6.RP.2, 6.RP.3a/b/d) · C Percents 71–100
+  (6.RP.3c) · D Below Zero 101–130 (6.NS.5–8) · E Letters for Numbers 131–170 (6.EE.1, 6.EE.2a/c) · F One-Step
+  Equations 171–200 (6.EE.5, 6.EE.7); codes checked on thecorestandards.org. Dividing fractions extends Otters'
+  `fraction_ops` (`op: div`, layouts `model` with fraction bars and `list`; Otters output byte-identical). New sheet types `ratio_table`, `rational_story` (frames in `content/math/rational_stories.yaml`, contexts in `ratios.yaml`; copies in
+  test fixtures), `percent_problem`, `signed_numbers`, `coordinate_grid`, `expression_eval`, `equation_solve`, sharing
+  exact-number helpers in `ws/sheet_types/_rational.py` (Fraction parse/format/evaluate, `pretty` printing; Jinja
+  filters `frac_parts`, `minus`, `pretty`). Grade 6 only: no adding/taking away negatives, all equation numbers
+  nonnegative. Child text ≥ 22px (`min_child_px` M6). Tests in `tests/test_math_M6.py` (18 goldens). All 200 pages verify with
+  0 errors and 0 warnings; booklets per section + `pandas-math-level.pdf` (202 pages) and
+  `pandas-math-level-answers.pdf` (14 pages). Free preview pages 11, 51, 121, 171 wait for Pandas Reading.
+- **Penguins Math (M7, our own level, grade 7 work for age 10, 200 pages)** (2026-11-06): `syllabus/math/M7.yaml`:
+  A Adding and Subtracting Negatives 1–40 (7.NS.1a–d) · B Multiplying and Dividing Negatives 41–70 (7.NS.2a–c) ·
+  C All Kinds of Numbers 71–100 (7.NS.1d, 2c, 2d, 3) · D Proportions and Percent Change 101–140 (7.RP.1, 2a–c, 3) ·
+  E Tidy Expressions 141–170 (7.EE.1–2) · F Two-Step Equations and Inequalities 171–200 (7.EE.3, 4a, 4b); 10-page parts
+  (`source: ours`). No new sheet types: modes of the Pandas types, Pandas/Otters output byte-identical:
+  `signed_numbers` `layout: operations` (`_signed_ops.py`), `rational_story` with 68 new frames (tags signed_story,
+  fraction_rate, percent_change, money_percent, two_step_story, inequality_story; `signed`, percent, step ranges,
+  floor/ceil), `ratio_table` `mode: proportional` (`_proportional.py`), `expression_eval` `task: tidy` (`_tidy.py`),
+  `equation_solve` `mode: two_step` (`_two_step.py`, inequalities graphed on a number line). Exact numbers and a tiny
+  linear-expression type in `ws/sheet_types/_linear.py`; `SheetType.template_for(sheet)` lets a mode use its own
+  template. Child text ≥ 20px (`min_child_px("M7")`). Tests `tests/test_math_M7.py`. All 200 pages verify with 0 errors,
+  0 warnings; booklets per section + `penguins-math-level.pdf` (202 pages) and `penguins-math-level-answers.pdf`
+  (15 pages). Preview pages 1, 45, 121, 191 (wait for Penguins Reading).
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -135,7 +171,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **MA M6 (Pandas Math)**, **MA M7 (Penguins Math)**, **MA M8 (Lions Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
@@ -196,6 +232,24 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   new -et, -op, -en, -in). Trace a Sentence: `level_word_first` makes each page's first sentence use a Kittens
   word (ship, pretzel, swan) when one fits. Verify 0 errors (1 warning: color-word pages); booklets:
   three section PDFs + `kittens-reading-level.pdf` (202 pages) + answers for Rhyme Time.
+
+- **Whales Math (M9, our own level, grade 9 / Algebra 1 work for age 12, 200 pages)** (2026-11-06):
+  `syllabus/math/M9.yaml`: A Powers and Roots 1–30 (exponent rules, rational exponents, simplifying radicals;
+  N-RN.A.1–2, part 1 also 8.EE.1 as an on-ramp) · B Lines and Inequalities 31–70 (write y = mx + b from tables,
+  points and situations; graph lines; solve and graph one-variable inequalities; graph two-variable inequalities
+  with shading; A-CED.A.2, F-LE.A.2, F-IF.B.6, F-IF.C.7a, A-REI.D.10, A-REI.B.3, A-REI.D.12) · C Polynomial
+  Operations 71–110 (add/subtract, distribute, FOIL rows, box method; A-APR.A.1) · D Factoring 111–150 (GCF,
+  x² + bx + c, leading 2/3/5, difference of squares; A-SSE.A.2, A-SSE.B.3a) · E Solving Quadratics 151–200
+  (factoring, square roots, the formula with rational then radical answers, choose a method + area story;
+  A-REI.B.4b). Standards checked on thecorestandards.org (written `N-RN.A.1` for the site's `HSN.RN.A.1`).
+  Exact algebra kit `ws/algebra.py` (Poly with a small ASCII parser, Mono with rational exponents, radicals,
+  quadratic roots (p ± q√d)/s checked in Q(√d)); new sheet types `exponent_rules`, `slope_intercept`,
+  `inequality_line`, `polynomial_ops`, `polynomial_factoring`, `quadratic_solve`; graphing lines and inequalities
+  extends Pandas' `coordinate_grid` (rule `graphs`, `ws/sheet_types/_slope_lines.py`; Pandas output byte-identical).
+  Situations in `content/math/algebra_stories.yaml` (copy in test fixtures). Variables are never `a` and the
+  general quadratic formula is never printed (digit + a would read as an internal code). Tests
+  `tests/test_math_M9.py` (19 goldens). Verify 0 errors, 0 warnings; booklets per section + `whales-math-level.pdf`
+  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 wait for Whales Reading.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

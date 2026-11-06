@@ -1,0 +1,47 @@
+{% extends "base.html.j2" %}
+{% from "_math_text.html.j2" import mt, mt_css %}
+{# Two-step equations (two columns: the equation, room to work, "x = ☐") and inequalities (one
+   column: the inequality, room to work, "x ☐" to write the answer, and a number line from −10 to
+   10 to graph it on). Tick k sits at X0 + STEP * (k + 10). #}
+{% set ineq = sheet.items[0].symbol is defined %}
+{% set X0, STEP, Y = 18, 21, 16 %}
+{% block style %}
+{{ mt_css() }}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: {{ "1fr" if ineq else "1fr 1fr" }}; grid-auto-rows: 1fr; gap: 12px 18px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: {{ '6px 18px 6px 34px' if ineq else '12px 18px 10px 34px' }}; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eq { font-size: {{ 32 if ineq else 36 }}px; font-weight: 700; white-space: nowrap; }
+.ans { align-self: flex-end; display: flex; align-items: center; gap: 8px; font-size: 30px; font-weight: 700; }
+.box { display: inline-block; width: 96px; height: {{ 44 if ineq else 50 }}px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+.row { display: flex; justify-content: space-between; align-items: flex-start; }
+.bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.box.wide { width: 150px; }
+svg.nl { flex: none; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; font-size: 20px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for e in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ e.n }}</span>
+{% if ineq %}
+        <div class="row"><div class="eq">{{ mt(e.show) }}</div></div>
+        <div class="bottom">
+          <svg class="nl" width="{{ X0 * 2 + STEP * 20 }}" height="44" viewBox="0 0 {{ X0 * 2 + STEP * 20 }} 44">
+            <line x1="{{ X0 - 10 }}" x2="{{ X0 + STEP * 20 + 10 }}" y1="{{ Y }}" y2="{{ Y }}" stroke="#1d1d1f" stroke-width="3"/>
+{% for k in range(-10, 11) %}
+            <line x1="{{ X0 + STEP * (k + 10) }}" x2="{{ X0 + STEP * (k + 10) }}" y1="{{ Y - (9 if k % 5 == 0 else 6) }}" y2="{{ Y + (9 if k % 5 == 0 else 6) }}" stroke="#1d1d1f" stroke-width="{{ 3 if k == 0 else 2 }}"/>
+{% if k % 2 == 0 %}
+            <text x="{{ X0 + STEP * (k + 10) }}" y="{{ Y + 27 }}" text-anchor="middle">{{ "−" ~ (-k) if k < 0 else k }}</text>
+{% endif %}
+{% endfor %}
+          </svg>
+          <div class="ans"><span>{{ e.letter }}</span><span class="box wide"></span></div>
+        </div>
+{% else %}
+        <div class="eq">{{ mt(e.show) }}</div>
+        <div class="ans"><span>{{ e.letter }}</span><span>=</span><span class="box"></span></div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

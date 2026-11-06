@@ -1,0 +1,81 @@
+{
+  "id": "MA-M8-A-011",
+  "subject": "math",
+  "level": "M8",
+  "section": "A",
+  "part": 2,
+  "sheet_type": "power_root",
+  "page_number": 11,
+  "variant": 1,
+  "seed": 955033013818583795,
+  "title": "Exponent rules",
+  "parent_tip": "Same base, multiplying: add the exponents. Same base, dividing: take them away. A power of a power: multiply them.",
+  "items": [
+    {
+      "n": 1,
+      "task": "product",
+      "base": 9,
+      "exp": -2,
+      "exp2": 3
+    },
+    {
+      "n": 2,
+      "task": "quotient",
+      "base": "k",
+      "exp": 7,
+      "exp2": 2
+    },
+    {
+      "n": 3,
+      "task": "power_of_power",
+      "base": 7,
+      "exp": 4,
+      "exp2": 3
+    },
+    {
+      "n": 4,
+      "task": "zero_negative",
+      "base": 4,
+      "exp": 0
+    },
+    {
+      "n": 5,
+      "task": "product",
+      "base": 12,
+      "exp": -2,
+      "exp2": 9
+    },
+    {
+      "n": 6,
+      "task": "quotient",
+      "base": "k",
+      "exp": 9,
+      "exp2": 8
+    },
+    {
+      "n": 7,
+      "task": "power_of_power",
+      "base": 10,
+      "exp": 3,
+      "exp2": 2
+    },
+    {
+      "n": 8,
+      "task": "zero_negative",
+      "base": 9,
+      "exp": -2
+    }
+  ],
+  "answer_key": [
+    "9^1",
+    "k^5",
+    "7^12",
+    "1",
+    "12^7",
+    "k^1",
+    "10^6",
+    "1/81"
+  ],
+  "new_words": [],
+  "review_words": []
+}

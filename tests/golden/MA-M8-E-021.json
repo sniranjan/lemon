@@ -1,0 +1,230 @@
+{
+  "id": "MA-M8-E-021",
+  "subject": "math",
+  "level": "M8",
+  "section": "E",
+  "part": 3,
+  "sheet_type": "coordinate_grid",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 3837396898205748887,
+  "title": "Solve by elimination",
+  "parent_tip": "Add or take away the equations so one letter cancels. You may need to multiply one equation first.",
+  "items": [
+    {
+      "n": 1,
+      "task": "elimination",
+      "x": 5,
+      "y": 5,
+      "eq1": {
+        "lhs": [
+          {
+            "c": "6",
+            "v": "x"
+          },
+          {
+            "c": "-6",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "0",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "6x − 6y = 0"
+        ]
+      },
+      "eq2": {
+        "lhs": [
+          {
+            "c": "6",
+            "v": "x"
+          },
+          {
+            "c": "-12",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "-30",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "6x − 12y = −30"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "task": "elimination",
+      "x": -5,
+      "y": 2,
+      "eq1": {
+        "lhs": [
+          {
+            "c": "4",
+            "v": "x"
+          },
+          {
+            "c": "-6",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "-32",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "4x − 6y = −32"
+        ]
+      },
+      "eq2": {
+        "lhs": [
+          {
+            "c": "3",
+            "v": "x"
+          },
+          {
+            "c": "-6",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "-27",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "3x − 6y = −27"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "task": "elimination",
+      "x": 1,
+      "y": -4,
+      "eq1": {
+        "lhs": [
+          {
+            "c": "5",
+            "v": "x"
+          },
+          {
+            "c": "-5",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "25",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "5x − 5y = 25"
+        ]
+      },
+      "eq2": {
+        "lhs": [
+          {
+            "c": "-2",
+            "v": "x"
+          },
+          {
+            "c": "-5",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "18",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "−2x − 5y = 18"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "task": "inspect",
+      "eq1": {
+        "lhs": [
+          {
+            "c": "2",
+            "v": "x"
+          },
+          {
+            "c": "5",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "-2",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "2x + 5y = −2"
+        ]
+      },
+      "eq2": {
+        "lhs": [
+          {
+            "c": "4",
+            "v": "x"
+          },
+          {
+            "c": "10",
+            "v": "y"
+          }
+        ],
+        "rhs": [
+          {
+            "c": "-4",
+            "v": ""
+          }
+        ],
+        "tokens": [
+          "4x + 10y = −4"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "task": "story",
+      "frame": "rope_pieces",
+      "x": 39,
+      "y": 17,
+      "values": {
+        "T": 56,
+        "D": 22
+      },
+      "names": [
+        "long piece (feet)",
+        "short piece (feet)"
+      ],
+      "text": "A rope 56 feet long is cut into two pieces. One piece is 22 feet longer than the other. How long is each piece?"
+    }
+  ],
+  "answer_key": [
+    "(5, 5)",
+    "(−5, 2)",
+    "(1, −4)",
+    "infinitely many solutions (the same line)",
+    "long piece (feet) 39, short piece (feet) 17"
+  ],
+  "new_words": [],
+  "review_words": []
+}

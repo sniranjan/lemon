@@ -1,0 +1,83 @@
+# Story frames for two equations at once (Lions math, 8.EE.8c). Our own sentences; American spelling.
+# Each frame:
+#   id:     stable name (stored on the sheet)
+#   kind:   sum_value  → x + y = T and p·x + q·y = V
+#           sum_diff   → x + y = T and x − y = D (x is the bigger one)
+#   text:   the story, with {T} {V} {D} {p} {q} filled in
+#   p, q:   the choices for the size/price of one x and one y (sum_value only; p ≠ q)
+#   x, y:   whole-number ranges for the hidden answers
+#   names:  what x and y count, printed by the answer boxes and in the answer key
+- id: play_tickets
+  kind: sum_value
+  text: "The school play sold {T} tickets. Adult tickets cost ${p} and student tickets cost ${q}. Ticket sales came to ${V}. How many of each kind of ticket were sold?"
+  p: [8, 10, 12]
+  q: [4, 5, 6]
+  x: [12, 60]
+  y: [15, 80]
+  names: [adult tickets, student tickets]
+- id: farm_legs
+  kind: sum_value
+  text: "A farm has {T} chickens and goats. Together they have {V} legs. How many chickens and how many goats are there?"
+  p: [2]
+  q: [4]
+  x: [6, 30]
+  y: [4, 25]
+  names: [chickens, goats]
+- id: bike_wheels
+  kind: sum_value
+  text: "A shop has {T} bikes and tricycles on display, with {V} wheels in all. How many bikes and how many tricycles are there?"
+  p: [2]
+  q: [3]
+  x: [5, 25]
+  y: [4, 20]
+  names: [bikes, tricycles]
+- id: coin_jar
+  kind: sum_value
+  text: "A jar holds {T} nickels and dimes worth {V} cents in all. How many nickels and how many dimes are in the jar?"
+  p: [5]
+  q: [10]
+  x: [6, 30]
+  y: [5, 25]
+  names: [nickels, dimes]
+- id: basket_points
+  kind: sum_value
+  text: "In a basketball game, Ana made {T} baskets. Some were worth 2 points and the rest were worth 3 points. She scored {V} points. How many of each kind did she make?"
+  p: [2]
+  q: [3]
+  x: [3, 12]
+  y: [2, 9]
+  names: [2-point baskets, 3-point baskets]
+- id: fruit_stand
+  kind: sum_value
+  text: "Leo bought {T} pieces of fruit for ${V}. Apples cost ${p} each and mangoes cost ${q} each. How many apples and how many mangoes did he buy?"
+  p: [1, 2]
+  q: [3, 4]
+  x: [4, 15]
+  y: [2, 10]
+  names: [apples, mangoes]
+- id: cafe_tables
+  kind: sum_value
+  text: "A cafe has {T} tables. Some seat 2 people and the others seat 4. There are {V} seats in all. How many of each kind of table are there?"
+  p: [2]
+  q: [4]
+  x: [4, 16]
+  y: [3, 14]
+  names: [tables for 2, tables for 4]
+- id: two_numbers
+  kind: sum_diff
+  text: "Two numbers add up to {T}. One of them is {D} more than the other. What are the two numbers?"
+  x: [12, 60]
+  y: [3, 40]
+  names: [bigger number, smaller number]
+- id: rope_pieces
+  kind: sum_diff
+  text: "A rope {T} feet long is cut into two pieces. One piece is {D} feet longer than the other. How long is each piece?"
+  x: [10, 40]
+  y: [3, 30]
+  names: [long piece (feet), short piece (feet)]
+- id: book_pages
+  kind: sum_diff
+  text: "Maya and Sam read {T} pages in all this week. Maya read {D} more pages than Sam. How many pages did each of them read?"
+  x: [30, 90]
+  y: [20, 80]
+  names: [Maya's pages, Sam's pages]

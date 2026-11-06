@@ -1,0 +1,77 @@
+{% extends "base.html.j2" %}
+{# The coordinate plane: grid lines at every whole number from -R to R, bold axes, a label at
+   every tick. Points to read are drawn at their stored pixel positions (verify checks them
+   against the coordinates). Points to plot and distances are listed beside and under the grid. #}
+{% set R = 6 %}
+{% set CELL, M, TOP = 38, 26, 16 %}
+{% set OX, OY = M + R * CELL, TOP + R * CELL %}
+{% set W = M + 2 * R * CELL + 20 %}
+{% set H = TOP + 2 * R * CELL + 34 %}
+{% set reads = sheet.items | selectattr("kind", "equalto", "read") | list %}
+{% set plots = sheet.items | selectattr("kind", "equalto", "plot") | list %}
+{% set dists = sheet.items | selectattr("kind", "equalto", "distance") | list %}
+{% block style %}
+{% if sheet.items[0].kind == "graph" %}
+{% include "_coordinate_graphs_style.html.j2" %}
+{% else %}
+.plane { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.plane .card { position: relative; min-height: 0; border-radius: 22px; }
+.top { flex: 1; display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
+svg.grid text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+.lists { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+.lists h2 { margin: 0 0 4px; font-size: 22px; line-height: 1.15; color: var(--accent); }
+.row { display: flex; align-items: center; gap: 4px; font-size: 24px; font-weight: 700; white-space: nowrap; }
+.row .L { width: 22px; }
+.box { display: inline-block; width: 38px; height: 40px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
+.dists { display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 12px 22px; }
+.drow { display: flex; align-items: center; gap: 10px; font-size: 24px; }
+.drow .box { width: 60px; }
+.qn { font-size: 13px; font-weight: 700; color: #8a8a90; width: 14px; }
+{% endif %}
+{% endblock %}
+{% block body %}
+{% if sheet.items[0].kind == "graph" %}
+{% include "_coordinate_graphs.html.j2" %}
+{% else %}
+    <div class="plane">
+      <div class="card top">
+        <svg class="grid" width="{{ W }}" height="{{ H }}" viewBox="0 0 {{ W }} {{ H }}">
+{% for k in range(-R, R + 1) %}
+          <line x1="{{ OX + k * CELL }}" x2="{{ OX + k * CELL }}" y1="{{ TOP }}" y2="{{ TOP + 2 * R * CELL }}" stroke="{{ '#1d1d1f' if k == 0 else '#9a9aa0' }}" stroke-width="{{ 3.5 if k == 0 else 1.2 }}"/>
+          <line x1="{{ M }}" x2="{{ M + 2 * R * CELL }}" y1="{{ OY - k * CELL }}" y2="{{ OY - k * CELL }}" stroke="{{ '#1d1d1f' if k == 0 else '#9a9aa0' }}" stroke-width="{{ 3.5 if k == 0 else 1.2 }}"/>
+{% endfor %}
+{% for k in range(-R, R + 1) if k != 0 %}
+          <text class="pt" x="{{ OX + k * CELL }}" y="{{ OY + 24 }}" text-anchor="middle" style="font-size: 22px">{{ k | string | minus }}</text>
+          <text class="pt" x="{{ OX - 6 }}" y="{{ OY - k * CELL + 8 }}" text-anchor="end" style="font-size: 22px">{{ k | string | minus }}</text>
+{% endfor %}
+          <text class="pt" x="{{ M + 2 * R * CELL + 8 }}" y="{{ OY + 8 }}" style="font-size: 24px; font-style: italic">x</text>
+          <text class="pt" x="{{ OX + 8 }}" y="{{ TOP + 20 }}" style="font-size: 24px; font-style: italic">y</text>
+{% for p in reads %}
+          <circle cx="{{ p.px }}" cy="{{ p.py }}" r="7" fill="{{ theme.accent }}" stroke="#1d1d1f" stroke-width="2"/>
+          <text class="pt" x="{{ p.px + 9 }}" y="{{ p.py - 8 }}" style="font-size: 24px; fill: {{ theme.accent }}">{{ p.label }}</text>
+{% endfor %}
+        </svg>
+        <div class="lists">
+          <div><h2>Write the point</h2>
+{% for p in reads %}
+            <div class="row"><span class="L">{{ p.label }}</span><span>(</span><span class="box"></span><span>,</span><span class="box"></span><span>)</span></div>
+{% endfor %}
+          </div>
+          <div><h2>Plot the point</h2>
+{% for p in plots %}
+            <div class="row"><span class="L">{{ p.label }}</span><span>({{ p.x | string | minus }}, {{ p.y | string | minus }})</span></div>
+{% endfor %}
+          </div>
+        </div>
+      </div>
+{% if dists %}
+      <div class="card dists">
+{% for d in dists %}
+        <div class="drow"><span class="qn" data-audience="parent">{{ loop.index }}</span><span>How far is ({{ d.p1[0] | string | minus }}, {{ d.p1[1] | string | minus }}) from ({{ d.p2[0] | string | minus }}, {{ d.p2[1] | string | minus }})?</span><span class="box"></span><span>units</span></div>
+{% endfor %}
+      </div>
+{% endif %}
+    </div>
+{% endif %}
+{% endblock %}

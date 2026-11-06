@@ -1,0 +1,194 @@
+{
+  "id": "MA-M6-E-021",
+  "subject": "math",
+  "level": "M6",
+  "section": "E",
+  "part": 3,
+  "sheet_type": "expression_eval",
+  "page_number": 151,
+  "variant": 1,
+  "seed": 16450833008948235683,
+  "title": "Put in the number",
+  "parent_tip": "Write the number in place of the letter, then work it out. If n = 5, 3n + 4 is 3 × 5 + 4 = 19.",
+  "items": [
+    {
+      "kind": "expr",
+      "n": 1,
+      "task": "substitute",
+      "form": 9,
+      "nums": {
+        "B": 20,
+        "C": 7
+      },
+      "letter": "p",
+      "vars": {
+        "p": 12
+      },
+      "expr": "20 + 7*p",
+      "show": "20 + 7p",
+      "answer": "104"
+    },
+    {
+      "kind": "expr",
+      "n": 2,
+      "task": "substitute",
+      "form": 5,
+      "nums": {
+        "B": 12
+      },
+      "letter": "t",
+      "vars": {
+        "t": 2
+      },
+      "expr": "12 - t",
+      "show": "12 − t",
+      "answer": "10"
+    },
+    {
+      "kind": "expr",
+      "n": 3,
+      "task": "substitute",
+      "form": 2,
+      "nums": {
+        "B": 11
+      },
+      "letter": "k",
+      "vars": {
+        "k": 10
+      },
+      "expr": "k**2 + 11",
+      "show": "k² + 11",
+      "answer": "111"
+    },
+    {
+      "kind": "expr",
+      "n": 4,
+      "task": "substitute",
+      "form": 7,
+      "nums": {
+        "C": 2
+      },
+      "letter": "t",
+      "vars": {
+        "t": 3
+      },
+      "expr": "2*t**2",
+      "show": "2t²",
+      "answer": "18"
+    },
+    {
+      "kind": "expr",
+      "n": 5,
+      "task": "substitute",
+      "form": 0,
+      "nums": {
+        "B": 6,
+        "C": 2
+      },
+      "letter": "k",
+      "vars": {
+        "k": 10
+      },
+      "expr": "2*k + 6",
+      "show": "2k + 6",
+      "answer": "26"
+    },
+    {
+      "kind": "expr",
+      "n": 6,
+      "task": "substitute",
+      "form": 10,
+      "nums": {
+        "B": 15
+      },
+      "letter": "t",
+      "vars": {
+        "t": 4
+      },
+      "expr": "t**3 + 15",
+      "show": "t³ + 15",
+      "answer": "79"
+    },
+    {
+      "kind": "expr",
+      "n": 7,
+      "task": "substitute",
+      "form": 1,
+      "nums": {
+        "B": 6,
+        "C": 2
+      },
+      "letter": "t",
+      "vars": {
+        "t": 11
+      },
+      "expr": "2*t - 6",
+      "show": "2t − 6",
+      "answer": "16"
+    },
+    {
+      "kind": "expr",
+      "n": 8,
+      "task": "substitute",
+      "form": 11,
+      "nums": {
+        "C": 7,
+        "D": 2
+      },
+      "letter": "x",
+      "vars": {
+        "x": 8
+      },
+      "expr": "7*(x - 2)",
+      "show": "7(x − 2)",
+      "answer": "42"
+    },
+    {
+      "kind": "expr",
+      "n": 9,
+      "task": "substitute",
+      "form": 4,
+      "nums": {
+        "B": 15,
+        "C": 6
+      },
+      "letter": "n",
+      "vars": {
+        "n": 12
+      },
+      "expr": "n / 6 + 15",
+      "show": "n ÷ 6 + 15",
+      "answer": "17"
+    },
+    {
+      "kind": "expr",
+      "n": 10,
+      "task": "substitute",
+      "form": 6,
+      "nums": {
+        "B": 2
+      },
+      "letter": "k",
+      "vars": {
+        "k": 5
+      },
+      "expr": "k**2 - 2",
+      "show": "k² − 2",
+      "answer": "23"
+    }
+  ],
+  "answer_key": [
+    "104",
+    "10",
+    "111",
+    "18",
+    "26",
+    "79",
+    "16",
+    "42",
+    "17",
+    "23"
+  ],
+  "new_words": [],
+  "review_words": []
+}

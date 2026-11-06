@@ -1,0 +1,139 @@
+{
+  "id": "MA-M6-E-031",
+  "subject": "math",
+  "level": "M6",
+  "section": "E",
+  "part": 4,
+  "sheet_type": "expression_eval",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 12499661647177059768,
+  "title": "Formulas",
+  "parent_tip": "A formula is a rule with letters. A = lw is length times width. Put each number in place of its letter.",
+  "items": [
+    {
+      "kind": "expr",
+      "n": 1,
+      "task": "formula",
+      "form": 13,
+      "name": null,
+      "vars": {
+        "x": 9,
+        "y": 7
+      },
+      "expr": "x**2 - y**2",
+      "show": "x² − y²",
+      "answer": "32"
+    },
+    {
+      "kind": "expr",
+      "n": 2,
+      "task": "formula",
+      "form": 9,
+      "name": null,
+      "vars": {
+        "x": 7,
+        "y": 1
+      },
+      "expr": "x**2 + y",
+      "show": "x² + y",
+      "answer": "50"
+    },
+    {
+      "kind": "expr",
+      "n": 3,
+      "task": "formula",
+      "form": 8,
+      "name": null,
+      "vars": {
+        "x": 11,
+        "y": 5
+      },
+      "expr": "x*y - 4",
+      "show": "xy − 4",
+      "answer": "51"
+    },
+    {
+      "kind": "expr",
+      "n": 4,
+      "task": "formula",
+      "form": 7,
+      "name": null,
+      "vars": {
+        "x": 11,
+        "y": 11
+      },
+      "expr": "3*x + 2*y",
+      "show": "3x + 2y",
+      "answer": "55"
+    },
+    {
+      "kind": "expr",
+      "n": 5,
+      "task": "formula",
+      "form": 5,
+      "name": "V",
+      "vars": {
+        "l": 6,
+        "w": 5,
+        "h": 5
+      },
+      "expr": "l*w*h",
+      "show": "lwh",
+      "answer": "150"
+    },
+    {
+      "kind": "expr",
+      "n": 6,
+      "task": "formula",
+      "form": 11,
+      "name": null,
+      "vars": {
+        "x": 9,
+        "y": 14
+      },
+      "expr": "5*x - y",
+      "show": "5x − y",
+      "answer": "31"
+    },
+    {
+      "kind": "expr",
+      "n": 7,
+      "task": "formula",
+      "form": 3,
+      "name": "A",
+      "vars": {
+        "s": 14
+      },
+      "expr": "s**2",
+      "show": "s²",
+      "answer": "196"
+    },
+    {
+      "kind": "expr",
+      "n": 8,
+      "task": "formula",
+      "form": 4,
+      "name": "d",
+      "vars": {
+        "r": 5,
+        "t": 4
+      },
+      "expr": "r*t",
+      "show": "rt",
+      "answer": "20"
+    }
+  ],
+  "answer_key": [
+    "32",
+    "50",
+    "51",
+    "55",
+    "150",
+    "31",
+    "196",
+    "20"
+  ],
+  "new_words": [],
+  "review_words": []
+}

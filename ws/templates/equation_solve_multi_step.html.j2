@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% import "_lions_algebra.html.j2" as alg %}
+{% block style %}
+{{ alg.math_style() }}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ (sheet.items | length + 1) // 2 }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 16px 14px 30px; border-radius: 22px; }
+.eq { font-size: 27px; font-weight: 700; white-space: nowrap; }
+.eq i { font-style: italic; }
+.ans { align-self: flex-end; font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.ans .line { display: inline-block; width: 150px; border-bottom: 3px solid var(--ink); height: 30px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="eq">{% for t in i.tokens %}{% if t is string %}{% for part in t.split(i.letter) %}{% if not loop.first %}<i>{{ i.letter }}</i>{% endif %}{{ part }}{% endfor %}{% else %}{{ alg.math([t]) }}{% endif %}{% endfor %}</div>
+        <div class="ans">{% if sheet.answer_key | select("in", ["no solution", "every number"]) | list %}<span class="line" style="width: 210px"></span>{% else %}<i>{{ i.letter }}</i> = <span class="line"></span>{% endif %}</div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

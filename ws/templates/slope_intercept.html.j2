@@ -1,0 +1,38 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg with context %}
+{# Write the line: tables and pairs of points in two columns, situations across the page; each card ends
+   with "y =" (or the situation's letter) and an answer line. #}
+{% block style %}
+{{ alg.styles() }}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 4px 16px 8px 32px; border-radius: 22px; }
+.probs .card.situation { grid-column: span 2; }
+.card .qn { position: absolute; top: 10px; left: 14px; }
+.ans { display: flex; align-items: flex-end; }
+.ans .v { font-size: 34px; font-weight: 700; }
+table.xy { border-collapse: collapse; font-size: 28px; font-weight: 700; }
+table.xy th, table.xy td { border: 2.5px solid var(--ink); padding: 0 5px; height: 34px; min-width: 42px; text-align: center; }
+table.xy th { color: var(--accent); font-style: italic; }
+.pts { font-size: 30px; font-weight: 700; line-height: 1.25; }
+.pts .pt { white-space: nowrap; }
+.situation p { font-size: 28px; line-height: 1.2; margin: 0; }
+{% endblock %}
+{% block body %}
+    <p class="ask">Write the equation of each line.</p>
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card {{ i.kind }}"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if i.kind == "table" %}
+        <table class="xy"><tr><th>x</th>{% for x in i.xs %}<td>{{ x | string | minus }}</td>{% endfor %}</tr><tr><th>y</th>{% for y in i.ys %}<td>{{ y | string | minus }}</td>{% endfor %}</tr></table>
+        <span class="ans"><span class="v">y</span><span class="eq">=</span><span class="line"></span></span>
+{% elif i.kind == "points" %}
+        <span class="pts"><span class="pt">({{ i.p1[0] | string | minus }}, {{ i.p1[1] | string | minus }})</span> and <span class="pt">({{ i.p2[0] | string | minus }}, {{ i.p2[1] | string | minus }})</span></span>
+        <span class="ans"><span class="v">y</span><span class="eq">=</span><span class="line"></span></span>
+{% else %}
+        <p>{{ i.text }}</p>
+        <span class="ans"><span class="v">{{ i.answer.split(" ")[0] }}</span><span class="eq">=</span><span class="line"></span></span>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

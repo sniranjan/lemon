@@ -1,0 +1,63 @@
+{
+  "id": "MA-M9-B-011",
+  "subject": "math",
+  "level": "M9",
+  "section": "B",
+  "part": 2,
+  "sheet_type": "coordinate_grid",
+  "page_number": 41,
+  "variant": 1,
+  "seed": 5116811818817150705,
+  "title": "Graph the line",
+  "parent_tip": "A negative slope goes down to the right. Plot a third point to check before drawing the line.",
+  "items": [
+    {
+      "kind": "graph",
+      "n": 1,
+      "sign": "=",
+      "form": "slope",
+      "slope": "2",
+      "b": -3,
+      "eq": "y = 2x - 3",
+      "answer": "1) line through (0, −3) and (1, −1)"
+    },
+    {
+      "kind": "graph",
+      "n": 2,
+      "sign": "=",
+      "form": "slope",
+      "slope": "1/3",
+      "b": 0,
+      "eq": "y = F(1|3)x",
+      "answer": "2) line through (0, 0) and (3, 1)"
+    },
+    {
+      "kind": "graph",
+      "n": 3,
+      "sign": "=",
+      "form": "slope",
+      "slope": "3/2",
+      "b": 3,
+      "eq": "y = F(3|2)x + 3",
+      "answer": "3) line through (0, 3) and (2, 6)"
+    },
+    {
+      "kind": "graph",
+      "n": 4,
+      "sign": "=",
+      "form": "slope",
+      "slope": "-3/2",
+      "b": 3,
+      "eq": "y = -F(3|2)x + 3",
+      "answer": "4) line through (0, 3) and (2, 0)"
+    }
+  ],
+  "answer_key": [
+    "1) line through (0, −3) and (1, −1)",
+    "2) line through (0, 0) and (3, 1)",
+    "3) line through (0, 3) and (2, 6)",
+    "4) line through (0, 3) and (2, 0)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

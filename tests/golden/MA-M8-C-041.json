@@ -1,0 +1,227 @@
+{
+  "id": "MA-M8-C-041",
+  "subject": "math",
+  "level": "M8",
+  "section": "C",
+  "part": 5,
+  "sheet_type": "equation_solve",
+  "page_number": 91,
+  "variant": 1,
+  "seed": 13897635622160326884,
+  "title": "Solve each equation",
+  "parent_tip": "If the letters cancel out, look at what is left. 5 = 5 is always true (every number works). 5 = 3 is never true (no solution).",
+  "items": [
+    {
+      "n": 1,
+      "form": "both_sides",
+      "special": null,
+      "letter": "k",
+      "left": [
+        {
+          "c": "4",
+          "v": "x"
+        },
+        {
+          "c": "19",
+          "v": ""
+        }
+      ],
+      "right": [
+        {
+          "c": "-4",
+          "v": "x"
+        },
+        {
+          "c": "-69",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "4k + 19 = −4k − 69"
+      ]
+    },
+    {
+      "n": 2,
+      "form": "distribute_right",
+      "special": "all",
+      "letter": "k",
+      "left": [
+        {
+          "k": "4",
+          "in": [
+            {
+              "c": "1",
+              "v": "x"
+            },
+            {
+              "c": "-7",
+              "v": ""
+            }
+          ]
+        }
+      ],
+      "right": [
+        {
+          "c": "4",
+          "v": "x"
+        },
+        {
+          "c": "-28",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "4(k − 7) = 4k − 28"
+      ]
+    },
+    {
+      "n": 3,
+      "form": "distribute_both",
+      "special": null,
+      "letter": "k",
+      "left": [
+        {
+          "k": "7",
+          "in": [
+            {
+              "c": "1",
+              "v": "x"
+            },
+            {
+              "c": "-5",
+              "v": ""
+            }
+          ]
+        }
+      ],
+      "right": [
+        {
+          "k": "2",
+          "in": [
+            {
+              "c": "1",
+              "v": "x"
+            },
+            {
+              "c": "-8",
+              "v": ""
+            }
+          ]
+        },
+        {
+          "c": "26",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "7(k − 5) = 2(k − 8) + 26"
+      ]
+    },
+    {
+      "n": 4,
+      "form": "like_terms",
+      "special": null,
+      "letter": "k",
+      "left": [
+        {
+          "c": "2",
+          "v": "x"
+        },
+        {
+          "c": "7",
+          "v": ""
+        },
+        {
+          "c": "-5",
+          "v": "x"
+        }
+      ],
+      "right": [
+        {
+          "c": "-26",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "2k + 7 − 5k = −26"
+      ]
+    },
+    {
+      "n": 5,
+      "form": "both_sides",
+      "special": "none",
+      "letter": "k",
+      "left": [
+        {
+          "c": "6",
+          "v": "x"
+        },
+        {
+          "c": "-5",
+          "v": ""
+        },
+        {
+          "c": "4",
+          "v": "x"
+        }
+      ],
+      "right": [
+        {
+          "c": "10",
+          "v": "x"
+        },
+        {
+          "c": "-3",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "6k − 5 + 4k = 10k − 3"
+      ]
+    },
+    {
+      "n": 6,
+      "form": "distribute_right",
+      "special": null,
+      "letter": "k",
+      "left": [
+        {
+          "k": "-4",
+          "in": [
+            {
+              "c": "1",
+              "v": "x"
+            },
+            {
+              "c": "4",
+              "v": ""
+            }
+          ]
+        }
+      ],
+      "right": [
+        {
+          "c": "-1",
+          "v": "x"
+        },
+        {
+          "c": "-1",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "−4(k + 4) = −k − 1"
+      ]
+    }
+  ],
+  "answer_key": [
+    "k = −11",
+    "every number",
+    "k = 9",
+    "k = 11",
+    "no solution",
+    "k = −5"
+  ],
+  "new_words": [],
+  "review_words": []
+}

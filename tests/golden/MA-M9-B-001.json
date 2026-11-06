@@ -1,0 +1,105 @@
+{
+  "id": "MA-M9-B-001",
+  "subject": "math",
+  "level": "M9",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "slope_intercept",
+  "page_number": 31,
+  "variant": 1,
+  "seed": 9130281398670314693,
+  "title": "Write the line",
+  "parent_tip": "In a situation, the starting amount is b and the amount per step is the slope. Check with one more row of the table.",
+  "items": [
+    {
+      "n": 1,
+      "kind": "table",
+      "m": 4,
+      "b": 0,
+      "xs": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ys": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "answer": "y = 4x"
+    },
+    {
+      "n": 2,
+      "kind": "points",
+      "m": -1,
+      "b": 8,
+      "p1": [
+        -3,
+        11
+      ],
+      "p2": [
+        -2,
+        10
+      ],
+      "answer": "y = −x + 8"
+    },
+    {
+      "n": 3,
+      "kind": "situation",
+      "m": 8,
+      "b": 12,
+      "story": {
+        "id": "bike",
+        "start": 12,
+        "slope": 8
+      },
+      "text": "A bike rental costs $12 plus $8 for each hour. Write the cost c for h hours.",
+      "answer": "c = 8h + 12"
+    },
+    {
+      "n": 4,
+      "kind": "table",
+      "m": 4,
+      "b": 7,
+      "xs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "ys": [
+        7,
+        11,
+        15,
+        19
+      ],
+      "answer": "y = 4x + 7"
+    },
+    {
+      "n": 5,
+      "kind": "points",
+      "m": -4,
+      "b": 3,
+      "p1": [
+        -3,
+        15
+      ],
+      "p2": [
+        3,
+        -9
+      ],
+      "answer": "y = −4x + 3"
+    }
+  ],
+  "answer_key": [
+    "1) y = 4x",
+    "2) y = −x + 8",
+    "3) c = 8h + 12",
+    "4) y = 4x + 7",
+    "5) y = −4x + 3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

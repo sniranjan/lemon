@@ -1,0 +1,139 @@
+{
+  "id": "MA-M9-E-001",
+  "subject": "math",
+  "level": "M9",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "quadratic_solve",
+  "page_number": 151,
+  "variant": 1,
+  "seed": 16770631474104541820,
+  "title": "Solve by factoring",
+  "parent_tip": "Check each answer by putting it back into the first equation.",
+  "items": [
+    {
+      "method": "factor",
+      "n": 1,
+      "kind": "monic",
+      "lhs": "x^2 - 4x - 12",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        -4,
+        -12
+      ],
+      "answer": "x = −2 or x = 6"
+    },
+    {
+      "method": "factor",
+      "n": 2,
+      "kind": "monic",
+      "lhs": "x^2 - 13x + 40",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        -13,
+        40
+      ],
+      "answer": "x = 5 or x = 8"
+    },
+    {
+      "method": "factor",
+      "n": 3,
+      "kind": "rearrange",
+      "lhs": "x^2 - 6x",
+      "rhs": "16",
+      "var": "x",
+      "coeffs": [
+        1,
+        -6,
+        -16
+      ],
+      "answer": "x = −2 or x = 8"
+    },
+    {
+      "method": "factor",
+      "n": 4,
+      "kind": "monic",
+      "lhs": "x^2 + 15x + 56",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        15,
+        56
+      ],
+      "answer": "x = −8 or x = −7"
+    },
+    {
+      "method": "factor",
+      "n": 5,
+      "kind": "lead",
+      "lhs": "3x^2 + 20x - 7",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        3,
+        20,
+        -7
+      ],
+      "answer": "x = −7 or x = 1/3"
+    },
+    {
+      "method": "factor",
+      "n": 6,
+      "kind": "rearrange",
+      "lhs": "x^2 + 2x",
+      "rhs": "24",
+      "var": "x",
+      "coeffs": [
+        1,
+        2,
+        -24
+      ],
+      "answer": "x = −6 or x = 4"
+    },
+    {
+      "method": "factor",
+      "n": 7,
+      "kind": "monic",
+      "lhs": "x^2 + 13x + 40",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        13,
+        40
+      ],
+      "answer": "x = −8 or x = −5"
+    },
+    {
+      "method": "factor",
+      "n": 8,
+      "kind": "double",
+      "lhs": "x^2 - 18x + 81",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        -18,
+        81
+      ],
+      "answer": "x = 9"
+    }
+  ],
+  "answer_key": [
+    "1) x = −2 or x = 6",
+    "2) x = 5 or x = 8",
+    "3) x = −2 or x = 8",
+    "4) x = −8 or x = −7",
+    "5) x = −7 or x = 1/3",
+    "6) x = −6 or x = 4",
+    "7) x = −8 or x = −5",
+    "8) x = 9"
+  ],
+  "new_words": [],
+  "review_words": []
+}

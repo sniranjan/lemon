@@ -1,0 +1,160 @@
+{
+  "id": "MA-M6-E-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "expression_eval",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 11652741265551081239,
+  "title": "Exponents and order",
+  "parent_tip": "A small raised number says how many times to multiply: 4² = 4 × 4 = 16 and 2³ = 2 × 2 × 2 = 8.",
+  "items": [
+    {
+      "kind": "expr",
+      "n": 1,
+      "task": "power",
+      "form": 8,
+      "nums": {
+        "A": 3,
+        "B": 14,
+        "C": 8
+      },
+      "expr": "14 + 8 * 3",
+      "show": "14 + 8 × 3",
+      "answer": "38"
+    },
+    {
+      "kind": "expr",
+      "n": 2,
+      "task": "power",
+      "form": 4,
+      "nums": {
+        "A": 2,
+        "C": 6
+      },
+      "expr": "6 * 2**2",
+      "show": "6 × 2²",
+      "answer": "24"
+    },
+    {
+      "kind": "expr",
+      "n": 3,
+      "task": "power",
+      "form": 10,
+      "nums": {
+        "A": 3,
+        "D": 3
+      },
+      "expr": "3**3 - 3",
+      "show": "3³ − 3",
+      "answer": "24"
+    },
+    {
+      "kind": "expr",
+      "n": 4,
+      "task": "power",
+      "form": 9,
+      "nums": {
+        "A": 7,
+        "B": 2,
+        "C": 6
+      },
+      "expr": "(2 + 6) * 7",
+      "show": "(2 + 6) × 7",
+      "answer": "56"
+    },
+    {
+      "kind": "expr",
+      "n": 5,
+      "task": "power",
+      "form": 0,
+      "nums": {
+        "A": 4
+      },
+      "expr": "4**2",
+      "show": "4²",
+      "answer": "16"
+    },
+    {
+      "kind": "expr",
+      "n": 6,
+      "task": "power",
+      "form": 11,
+      "nums": {
+        "A": 7,
+        "B": 19,
+        "C": 4
+      },
+      "expr": "4 * (7 + 19)",
+      "show": "4(7 + 19)",
+      "answer": "104"
+    },
+    {
+      "kind": "expr",
+      "n": 7,
+      "task": "power",
+      "form": 2,
+      "nums": {
+        "A": 5,
+        "B": 11
+      },
+      "expr": "5**2 + 11",
+      "show": "5² + 11",
+      "answer": "36"
+    },
+    {
+      "kind": "expr",
+      "n": 8,
+      "task": "power",
+      "form": 1,
+      "nums": {
+        "D": 2
+      },
+      "expr": "2**3",
+      "show": "2³",
+      "answer": "8"
+    },
+    {
+      "kind": "expr",
+      "n": 9,
+      "task": "power",
+      "form": 7,
+      "nums": {
+        "A": 6,
+        "B": 8
+      },
+      "expr": "6**2 - 8",
+      "show": "6² − 8",
+      "answer": "28"
+    },
+    {
+      "kind": "expr",
+      "n": 10,
+      "task": "power",
+      "form": 3,
+      "nums": {
+        "B": 3,
+        "D": 2
+      },
+      "expr": "3 + 2**3",
+      "show": "3 + 2³",
+      "answer": "11"
+    }
+  ],
+  "answer_key": [
+    "38",
+    "24",
+    "24",
+    "56",
+    "16",
+    "104",
+    "36",
+    "8",
+    "28",
+    "11"
+  ],
+  "new_words": [],
+  "review_words": []
+}

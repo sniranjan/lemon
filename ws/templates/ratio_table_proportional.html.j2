@@ -1,0 +1,39 @@
+{% extends "base.html.j2" %}
+{# Is it proportional? Each card: the situation, a two-row table (x on top, y below; one empty y
+   cell in a proportional table), and the questions: circle yes or no, then k and y = kx. #}
+{% block style %}
+.tables { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat({{ sheet.items | length }}, 1fr); gap: 14px; }
+.tables .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 10px 20px 10px 34px; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.say { font-size: 24px; line-height: 1.25; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+table.rt { border-collapse: collapse; }
+table.rt th { font-size: 20px; font-weight: 700; text-align: left; padding: 0 10px 0 0; width: 150px; line-height: 1.1; }
+table.rt td { width: 70px; height: 46px; border: 3px solid var(--ink); text-align: center; font-size: 26px; font-weight: 700; }
+table.rt tr:first-child td { background: var(--tint); }
+.qs { display: flex; flex-direction: column; gap: 8px; font-size: 22px; font-weight: 700; }
+.qs div { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.pick { border: 2px solid var(--ink); border-radius: 999px; padding: 0 12px; font-size: 22px; }
+.box { display: inline-block; width: 74px; height: 40px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+.muted { color: var(--muted); font-size: 20px; font-weight: 400; }
+{% endblock %}
+{% block body %}
+    <div class="tables">
+{% for t in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ t.n }}</span>
+        <div class="say">{{ t.say }}</div>
+        <div class="row">
+          <table class="rt">
+            <tr><th>{{ t.x_label }} (x)</th>{% for x in t.x %}<td>{{ x }}</td>{% endfor %}</tr>
+            <tr><th>{{ t.y_label }} (y)</th>{% for y in t.y %}<td>{% if t.blank != loop.index0 %}{{ y }}{% endif %}</td>{% endfor %}</tr>
+          </table>
+          <div class="qs">
+            <div>Proportional? <span class="pick">yes</span><span class="pick">no</span></div>
+            <div><span class="muted">If yes:</span> k = <span class="box"></span></div>
+            <div>y = <span class="box"></span>x</div>
+          </div>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

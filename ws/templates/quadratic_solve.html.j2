@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg with context %}
+{# Formula pages: four equations, one per card: the equation and boxes for the three numbers, then a box
+   for the number under the root and the answer line.
+   Other pages: equations in two columns, each with an answer line; a story (mixed pages) runs across
+   the page. The general formula is never printed (it would put the digit 2 against the letter a);
+   the tip says it in words. #}
+{% set method = sheet.items[0].method %}
+{% block style %}
+{{ alg.styles() }}
+.ex { font-size: 34px; }
+.qs { flex: 1; min-height: 0; display: grid; gap: 12px 14px; grid-auto-rows: 1fr; grid-template-columns: 1fr 1fr; }
+.qs.formula { grid-template-columns: 1fr; }
+.qs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 4px 12px 8px 30px; border-radius: 22px; }
+.qs .card.story { grid-column: span 2; }
+.card .qn { position: absolute; top: 10px; left: 14px; }
+.ans { display: flex; align-items: flex-end; }
+.ans .v { font-size: 34px; font-weight: 700; }
+.story p { font-size: 28px; line-height: 1.2; margin: 0; }
+.qs.formula .card { padding: 10px 20px 12px 34px; justify-content: space-around; }
+.frow { display: flex; align-items: center; justify-content: space-between; gap: 14px; white-space: nowrap; }
+.frow .ans { flex: 1; }
+.lab { font-size: 28px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.nums { display: flex; align-items: center; gap: 6px; }
+.box { display: inline-block; width: 56px; height: 40px; border: 3px solid var(--ink); border-radius: 9px; margin-right: 10px; }
+.box.wide { width: 90px; }
+{% endblock %}
+{% block body %}
+    <p class="ask">{% if method == "factor" %}Solve by factoring.{% elif method == "square_root" %}Use square roots. Exact answers.{% elif method == "formula" %}Use the quadratic formula. Exact answers.{% else %}Solve. Choose a method.{% endif %}</p>
+    <div class="qs {{ method }}">
+{% for i in sheet.items %}
+{% if i.kind == "area" %}
+      <div class="card story"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <p>{{ i.text }}</p>
+        <span class="ans"><span class="v">{{ i.var }}</span><span class="eq">=</span><span class="line"></span></span>
+      </div>
+{% elif method == "formula" %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="frow"><span class="ex">{{ i.lhs | alg }} = {{ i.rhs | alg }}</span><span class="nums"><span class="lab">a =</span><span class="box"></span><span class="lab">b =</span><span class="box"></span><span class="lab">c =</span><span class="box"></span></span></div>
+        <div class="frow"><span class="nums"><span class="lab">b² − 4ac =</span><span class="box wide"></span></span><span class="ans"><span class="v">x</span><span class="eq">=</span><span class="line"></span></span></div>
+      </div>
+{% else %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <span class="ex">{{ i.lhs | alg }} = {{ i.rhs | alg }}</span>
+        <span class="ans"><span class="v">{{ i.var }}</span><span class="eq">=</span><span class="line"></span></span>
+      </div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

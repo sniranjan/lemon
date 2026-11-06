@@ -1,0 +1,34 @@
+{% extends "base.html.j2" %}
+{% import "_lions_algebra.html.j2" as alg %}
+{% macro sci(coef, exp) %}{{ coef }} × 10<sup>{{ exp | string | replace("-", "−") }}</sup>{% endmacro %}
+{% block style %}
+{{ alg.math_style() }}
+{% set cols = 2 if sheet.items | length > 6 else 1 %}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat({{ cols }}, 1fr); grid-template-rows: repeat({{ (sheet.items | length + cols - 1) // cols }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; align-items: center; padding: 0 18px 0 36px; border-radius: 22px; }
+.prob { font-size: 30px; font-weight: 700; line-height: 1.5; }
+.prob sup { font-size: 21px; vertical-align: 14px; line-height: 0; margin-left: 1px; }
+.prob .ansbox.small { vertical-align: 10px; margin-left: 1px; }
+.prob .ansbox.wide { width: 250px; }
+.ask { font-size: 24px; font-weight: 400; }
+.prob.two { line-height: 1.3; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if i.task == "to_sci" %}
+        <div class="prob">{{ i.standard }} =<br><span class="ansbox"></span> × 10<span class="ansbox small"></span></div>
+{% elif i.task == "to_standard" %}
+        <div class="prob">{{ sci(i.coef, i.exp) }} =<br><span class="ansbox wide"></span></div>
+{% elif i.task == "multiply" %}
+        <div class="prob">({{ sci(i.coef, i.exp) }}) × ({{ sci(i.coef2, i.exp2) }}) = <span class="ansbox"></span> × 10<span class="ansbox small"></span></div>
+{% elif i.task == "divide" %}
+        <div class="prob">({{ sci(i.coef, i.exp) }}) ÷ ({{ sci(i.coef2, i.exp2) }}) = <span class="ansbox"></span> × 10<span class="ansbox small"></span></div>
+{% elif i.task == "times_bigger" %}
+        <div class="prob two"><span class="ask">How many times bigger is</span> {{ sci(i.coef, i.exp) }} <span class="ask">than</span> {{ sci(i.coef2, i.exp2) }}<span class="ask">?</span><br><span class="ansbox"></span> × 10<span class="ansbox small"></span></div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

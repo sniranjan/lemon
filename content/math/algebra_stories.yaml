@@ -1,0 +1,81 @@
+# Short situations for Whales math (Algebra 1). Our own sentences; American spelling; everyday topics.
+#
+# linear: situations that make a linear function y = slope·x + start (A-CED.A.2, F-LE.A.2).
+#   id:     stable name (stored on the sheet)
+#   text:   the situation, with {start} and {slope} filled in (whole numbers)
+#   x, y:   the two letters (never "a"); the child writes y = slope·x + start
+#   start:  [lo, hi] for the starting amount; slope: [lo, hi] for the change per step (negative = goes down)
+#
+# area: rectangle stories that make a quadratic (A-CED.A.1, A-REI.B.4b). The width w is a whole number
+#   in `width`; the length is w + {more}; the area is worked out. Only the positive answer is a length.
+linear:
+  - id: plant
+    text: "A plant is {start} cm tall and grows {slope} cm each week. Write its height h after w weeks."
+    x: w
+    y: h
+    start: [2, 15]
+    slope: [1, 4]
+  - id: savings
+    text: "Kim has ${start} saved and adds ${slope} every week. Write the savings s after w weeks."
+    x: w
+    y: s
+    start: [10, 60]
+    slope: [3, 9]
+  - id: bike
+    text: "A bike rental costs ${start} plus ${slope} for each hour. Write the cost c for h hours."
+    x: h
+    y: c
+    start: [3, 12]
+    slope: [2, 8]
+  - id: candle
+    text: "A candle is {start} cm tall and burns down {slope} cm each hour. Write its height h after t hours."
+    x: t
+    y: h
+    start: [15, 30]
+    slope: [-3, -1]
+  - id: pool
+    text: "A pool holds {start} cm of water and drains {slope} cm each minute. Write the depth d after t minutes."
+    x: t
+    y: d
+    start: [40, 90]
+    slope: [-5, -2]
+  - id: books
+    text: "Leo has read {start} pages and reads {slope} pages a day. Write the pages p after n days."
+    x: n
+    y: p
+    start: [5, 40]
+    slope: [8, 20]
+  - id: phone
+    text: "A phone battery is at {start} percent and loses {slope} percent each hour. Write the charge c after t hours."
+    x: t
+    y: c
+    start: [70, 100]
+    slope: [-9, -4]
+  - id: steps
+    text: "A stairway starts {start} cm above the floor and each step is {slope} cm higher. Write the height h of step n."
+    x: n
+    y: h
+    start: [10, 20]
+    slope: [15, 19]
+
+area:
+  - id: garden
+    text: "A garden is {more} m longer than it is wide. Its area is {area} square meters. How wide is it?"
+    width: [3, 12]
+    more: [2, 7]
+    unit: m
+  - id: poster
+    text: "A poster is {more} cm longer than it is wide. Its area is {area} square cm. Find the width."
+    width: [20, 40]
+    more: [5, 15]
+    unit: cm
+  - id: rug
+    text: "A rug is {more} ft longer than it is wide and covers {area} square feet. How wide is the rug?"
+    width: [3, 9]
+    more: [1, 5]
+    unit: ft
+  - id: tile
+    text: "A photo is {more} cm longer than it is wide. Its area is {area} square cm. What is the width?"
+    width: [8, 15]
+    more: [2, 6]
+    unit: cm

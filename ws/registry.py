@@ -30,12 +30,24 @@ CATALOGUE: frozenset[str] = frozenset({
     "read_then_answer", "clue_words", "figurative_language", "paragraph_summary",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    # Whales math (M9, Algebra 1): exponents and radicals, writing lines, inequalities on a number line, polynomials,
+    # factoring, quadratics (graphing lines and inequalities extends coordinate_grid)
+    "exponent_rules", "slope_intercept", "inequality_line", "polynomial_ops", "polynomial_factoring",
+    "quadratic_solve",
     # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
     "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
     "order_of_operations", "box_volume",
+    # Pandas math (M6; dividing fractions extends fraction_ops): ratios, rates, percents, negatives, the coordinate
+    # plane, expressions and one-step equations
+    "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
+    # Penguins math (M7) extends the Pandas types: signed_numbers (operations), rational_story
+    # (signed, percent and two-step stories), ratio_table (proportional), expression_eval (tidy),
+    # equation_solve (two_step)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
+    "power_root", "sci_notation", "pythagorean",   # Lions math (M8; equations and graphs are modes of equation_solve, coordinate_grid)
 })
 
 
@@ -82,6 +94,10 @@ class SheetType:
 
     def verify(self, sheet: Sheet) -> list[Issue]:
         return []
+
+    def template_for(self, sheet: Sheet) -> str:
+        """The template for this sheet (a type with several modes may print some with another)."""
+        return self.template
 
 
 _REGISTRY: dict[str, type[SheetType]] = {}
