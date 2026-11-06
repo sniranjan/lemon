@@ -63,11 +63,9 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
       </div>
 
       {/* While peeking, the buttons float on the sheet so they're easy to reach (the pocket drops out of the way). */}
-      <div
-        className="invisible absolute inset-x-4 top-[262px] z-20 flex translate-y-3 flex-wrap justify-center gap-2 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-none [&>a]:shadow-[0_3px_0_0_var(--ink)] [&>button]:shadow-[0_3px_0_0_var(--ink)] [&>span]:bg-white"
-      >
-        <PreviewButton level={level} hasPreview={hasPreview} />
-        {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} />}
+      <div className="invisible absolute inset-x-12 bottom-[132px] z-20 flex translate-y-3 flex-col items-stretch gap-2.5 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-none">
+        {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} floating />}
+        <PreviewButton level={level} hasPreview={hasPreview} floating />
       </div>
 
       {/* The pocket: slides down on hover / tap to reveal the sheet. */}
@@ -128,26 +126,39 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
   );
 }
 
-function PreviewButton({ level, hasPreview }: { level: Level; hasPreview: boolean }) {
+/** Big "pill-pop" buttons (ink border + offset shadow, like the header's Early access) for the floating row. */
+const FLOAT = "pill-pop justify-center rounded-full px-4 py-1.5 text-[0.95rem]";
+
+function PreviewButton({ level, hasPreview, floating }: { level: Level; hasPreview: boolean; floating?: boolean }) {
   if (hasPreview) {
     return (
       <a
         href={`/api/previews/${level.slug}`}
         onClick={(e) => e.stopPropagation()}
-        className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-ink bg-white px-2.5 py-1.5 text-[0.8rem] font-extrabold transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        className={cn(
+          "inline-flex shrink-0 items-center gap-1 font-extrabold",
+          floating
+            ? cn(FLOAT, "bg-white")
+            : "rounded-full border-2 border-ink bg-white px-2.5 py-1.5 text-[0.8rem] transition-transform hover:-translate-y-0.5 active:translate-y-0",
+        )}
       >
         <Download className="size-4" /> Free preview
       </a>
     );
   }
   return (
-    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-dashed border-ink/60 bg-white/50 px-2.5 py-1.5 text-xs font-extrabold text-ink/70">
+    <span
+      className={cn(
+        "inline-flex shrink-0 items-center justify-center gap-1 rounded-full border-2 border-dashed border-ink/60 px-2.5 py-1.5 text-xs font-extrabold text-ink/70",
+        floating ? "bg-white" : "bg-white/50",
+      )}
+    >
       <Sparkles className="size-3.5" /> Preview soon
     </span>
   );
 }
 
-function BuyButton({ level, price }: { level: Level; price: string }) {
+function BuyButton({ level, price, floating }: { level: Level; price: string; floating?: boolean }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   return (
@@ -162,7 +173,12 @@ function BuyButton({ level, price }: { level: Level; price: string }) {
           setBusy(false);
         }}
         aria-label={`Buy the whole ${level.name} level for ${price}`}
-        className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-ink bg-ink px-2.5 py-1.5 text-[0.8rem] font-extrabold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70"
+        className={cn(
+          "inline-flex shrink-0 items-center gap-1 font-extrabold disabled:opacity-70",
+          floating
+            ? cn(FLOAT, "bg-sun text-ink")
+            : "rounded-full border-2 border-ink bg-ink px-2.5 py-1.5 text-[0.8rem] text-white transition-transform hover:-translate-y-0.5 active:translate-y-0",
+        )}
       >
         {busy ? <Loader2 className="size-4 animate-spin" /> : <ShoppingBag className="size-4" />} Buy {price}
       </button>

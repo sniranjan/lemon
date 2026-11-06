@@ -84,8 +84,8 @@ function Body({ preview }: { preview: Preview }) {
       );
     case "phrase":
       return (
-        <div className="flex flex-col items-center gap-2 rounded-2xl border-2 border-ink p-3">
-          <Pic name={preview.picture} className="size-20" />
+        <div className="flex flex-col items-center gap-1.5 rounded-2xl border-2 border-ink p-2.5">
+          <Pic name={preview.picture} className="size-16" />
           <span className="font-display text-3xl font-bold">{preview.phrase}</span>
         </div>
       );
