@@ -1,0 +1,121 @@
+{
+  "id": "EN-6A-C-001",
+  "subject": "english",
+  "level": "6A",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "sentence_recite",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 16224909722979579816,
+  "title": "Say it three times",
+  "parent_tip": "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "This is a ball.",
+      "runs": [
+        [
+          "This",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "is",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "ball",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "This is {a} {thing}.",
+      "slots": {
+        "thing": "ball"
+      },
+      "word": "ball",
+      "words": [
+        "ball"
+      ],
+      "pictures": [
+        "ball"
+      ],
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "I see a fish.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "see",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "fish",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I see {a} {thing}.",
+      "slots": {
+        "thing": "fish"
+      },
+      "word": "fish",
+      "words": [
+        "fish"
+      ],
+      "pictures": [
+        "fish"
+      ],
+      "times": 3
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "ball",
+    "fish"
+  ]
+}

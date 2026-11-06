@@ -1,0 +1,23 @@
+# Fixed phrase frames for golden tests: the same group names as the real file, using only the
+# 8 fixture words (no color or action words), so 6A plans are stable while the real bank grows.
+allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
+plural: []
+picture_colors: { apple: red, ball: blue, sun: yellow, cup: purple }
+can_do: {}
+pairs:
+  - [cat, dog]
+  - [sun, rainbow]
+  - [cup, apple]
+slots:
+  thing: { categories: [food, toys, animals, nature, home] }
+  mine:  { categories: [toys, home], words: [dog, cat, fish] }
+phrase_groups:
+  color_thing: ["{a} {thing}"]
+  my_thing: ["my {mine}"]
+  pair: ["{x} and {y}"]
+  can_do: ["the {thing}"]
+sentence_groups:
+  this_is: ["This is {a} {thing}.", "I see {a} {thing}."]
+  colors: ["Here is my {mine}."]
+  can: ["Look at the {thing}."]
+  daily: ["I like the {thing}."]

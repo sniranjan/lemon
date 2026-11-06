@@ -1,0 +1,36 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.recite { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 22px; }
+.recite .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 28px; padding: 14px 32px; }
+.recite .pics { flex: none; display: flex; gap: 8px; align-items: center; }
+.recite .pics img { width: 200px; height: 200px; }
+.recite .pics.two img { width: 150px; height: 150px; }
+.recite .right { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.recite .sentence { font-size: 52px; line-height: 1.2; }
+.recite .sentence b { font-weight: 700; }
+/* one circle to color each time the sentence is said (no text for the child) */
+.recite .times { display: flex; gap: 24px; }
+.recite .times span { width: 60px; height: 60px; border: 4px solid var(--accent); border-radius: 50%; }
+/* three sentences (after the patterns are learned): smaller pictures and circles */
+.recite.three { gap: 18px; }
+.recite.three .card { padding: 10px 28px; }
+.recite.three .pics img { width: 160px; height: 160px; }
+.recite.three .pics.two img { width: 120px; height: 120px; }
+.recite.three .right { gap: 14px; }
+.recite.three .sentence { font-size: 46px; }
+.recite.three .times span { width: 48px; height: 48px; }
+{% endblock %}
+{% block body %}
+{% set n = sheet.items | selectattr("kind", "equalto", "sentence") | list | length %}
+    <div class="recite{% if n > 2 %} three{% endif %}">
+{% for item in sheet.items if item.kind == "sentence" %}
+      <div class="card">
+        <div class="pics{% if item.pictures | length > 1 %} two{% endif %}">{% for p in item.pictures %}<img src="{{ root }}/assets/pictures/{{ p }}.svg" alt="">{% endfor %}</div>
+        <div class="right">
+          <div class="sentence">{% for text, bold in item.runs %}{% if bold %}<b>{{ text }}</b>{% else %}{{ text }}{% endif %}{% endfor %}</div>
+          <div class="times">{% for _ in range(item.times) %}<span></span>{% endfor %}</div>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

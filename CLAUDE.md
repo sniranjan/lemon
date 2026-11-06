@@ -248,8 +248,8 @@ test.** Nothing else in the code should change.
 | `word_picture_sentence` | EN 7A-A | 2 cards of picture + word + short sentence read aloud together; "Say it again" strip |
 | `review_grid_4` | EN 7A-B, 6A-A | 4 known pictures+words; "find it" game |
 | `word_story` | EN 7A-C | 1 picture, 2–4 short sentences using known words |
-| `phrase_card` | EN 6A-B | Picture + 2–3 word phrase ("a red ball") |
-| `sentence_recite` | EN 6A-C | Picture + one sentence to recite 3 times |
+| `phrase_card` | EN 6A-B | 3 cards of picture(s) + 2–3 word phrase ("a red apple", "mom and dad"), built from frames in `content/phrases/english.yaml` |
+| `sentence_recite` | EN 6A-C | 2 blocks (3 on new-word pages) of picture(s) + one sentence ("The dog can run."), each with 3 circles to color, one per recitation |
 | `letter_trace` | EN 5A-A/C | Two picture words + large dotted lower-case letters to trace |
 | `sound_parts` | EN 5A-B | Word split into onset + rime with picture |
 | `word_trace` | EN 5A-D | Dotted whole words to trace under pictures |

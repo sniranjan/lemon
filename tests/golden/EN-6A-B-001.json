@@ -1,0 +1,109 @@
+{
+  "id": "EN-6A-B-001",
+  "subject": "english",
+  "level": "6A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "phrase_card",
+  "page_number": 31,
+  "variant": 1,
+  "seed": 12196424986912163298,
+  "title": "Say the words",
+  "parent_tip": "Point to each word as you say the phrase together. Then let your child say it alone while touching the picture.",
+  "items": [
+    {
+      "kind": "phrase",
+      "text": "a cat",
+      "runs": [
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "cat",
+          true
+        ]
+      ],
+      "frame": "{a} {thing}",
+      "slots": {
+        "thing": "cat"
+      },
+      "word": "cat",
+      "words": [
+        "cat"
+      ],
+      "pictures": [
+        "cat"
+      ]
+    },
+    {
+      "kind": "phrase",
+      "text": "a rainbow",
+      "runs": [
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "rainbow",
+          true
+        ]
+      ],
+      "frame": "{a} {thing}",
+      "slots": {
+        "thing": "rainbow"
+      },
+      "word": "rainbow",
+      "words": [
+        "rainbow"
+      ],
+      "pictures": [
+        "rainbow"
+      ]
+    },
+    {
+      "kind": "phrase",
+      "text": "a cup",
+      "runs": [
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "cup",
+          true
+        ]
+      ],
+      "frame": "{a} {thing}",
+      "slots": {
+        "thing": "cup"
+      },
+      "word": "cup",
+      "words": [
+        "cup"
+      ],
+      "pictures": [
+        "cup"
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "cat",
+    "rainbow",
+    "cup"
+  ]
+}

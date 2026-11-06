@@ -19,6 +19,13 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   covers 60 of 100 new-word pages, so 7A-B/C sheets will change as words are added).
 - `uv run pytest`: 99 tests pass.
 
+- **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
+  Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
+  picture colors and who-can-do-what in `content/phrases/english.yaml`; planner `plan_phrases`
+  (and `review_from_levels` for 6A-A). Built from the 120 approved words only: pages 1–70,
+  101–140, 191–200 (verify 0 errors, 3 expected warnings). 80 new-word pages (71–100, 141–190) wait for
+  approved 6A words.
+
 ## Next steps
 1. **Batch 4** (words 121–160, 7A pages 61–80): draft a table (word, category, sentence) and
    **wait for the user's OK before drawing**. After drawing, run `ws pictures sheet`, look at
@@ -26,6 +33,9 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 2. Batch 5 (words 161–200, pages 81–100). That completes 7A-A's word bank.
 3. Then generate all of EN 7A, MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
 4. `ws vocab stats` is a stub (exits 2); implement it when needed.
+5. **6A word batch 1**: draft in `syllabus/drafts/6A-words-batch1.md` (40 words, 80-word target, open
+   questions). Wait for the user's OK; then add words with `level: 6A`, draw pictures, and add `can_do`/slot
+   entries in `content/phrases/english.yaml` so each new word fits a frame (the planner errors if it doesn't).
 
 ## Open questions for the user
 - What should a 7A repeat (`--variant 2`) change? Today it keeps the same words and strip and only

@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.stack { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 20px; }
+.stack .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 28px; padding: 12px 28px; }
+.stack .pics { flex: none; display: flex; gap: 8px; align-items: center; justify-content: center; width: 230px; height: 100%; }
+.stack .pics img { width: 190px; max-height: 100%; aspect-ratio: 1; object-fit: contain; }
+.stack .pics.two img { width: 111px; }
+/* long pairs ("grandma and grandpa") wrap to two lines, never three */
+.stack .phrase { flex: 1; min-width: 0; font-size: 58px; line-height: 1.1; }
+.stack .phrase b { font-weight: 700; }
+{% endblock %}
+{% block body %}
+    <div class="stack">
+{% for item in sheet.items if item.kind == "phrase" %}
+      <div class="card">
+        <div class="pics{% if item.pictures | length > 1 %} two{% endif %}">{% for p in item.pictures %}<img src="{{ root }}/assets/pictures/{{ p }}.svg" alt="">{% endfor %}</div>
+        <div class="phrase">{% for text, bold in item.runs %}{% if bold %}<b>{{ text }}</b>{% else %}{{ text }}{% endif %}{% endfor %}</div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
