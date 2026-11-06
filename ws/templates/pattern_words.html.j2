@@ -1,0 +1,32 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.bank { flex: none; display: flex; justify-content: center; gap: 18px; margin-bottom: 16px; }
+.bank span { font-size: 40px; font-weight: 700; line-height: 1; padding: 10px 22px; border: 3px solid var(--accent);
+             border-radius: 16px; background: var(--tint); color: var(--ink); }
+.cards { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.cards .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 28px; padding: 4px 28px; }
+.cards img { width: 118px; height: 118px; flex: none; }
+.cards .right { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.cards .word { font-size: 44px; line-height: 1.15; letter-spacing: 0.04em; }
+.cards .word b { color: var(--accent); text-decoration: underline; text-underline-offset: 8px; }
+.gaps { display: flex; align-items: flex-end; gap: 6px; }
+.gaps span { font-size: 52px; line-height: 1; width: 44px; text-align: center; }
+.gaps i { display: block; width: 48px; height: 56px; border: 3px solid var(--ink); border-radius: 8px; background: #fff; }
+{% endblock %}
+{% block body %}
+{% set bank = sheet.items | selectattr("kind", "equalto", "bank") | first %}
+    <div class="bank">{% for p in bank.patterns %}<span>{{ p }}</span>{% endfor %}</div>
+    <div class="cards">
+{% for item in sheet.items if item.kind == "pattern" %}
+      <div class="card">
+        <img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt="">
+        <div class="right">
+{% if item.show_word %}
+          <div class="word">{% for ch, gap in item.letters %}{% if gap %}<b>{{ ch }}</b>{% else %}{{ ch }}{% endif %}{% endfor %}</div>
+{% endif %}
+          <div class="gaps">{% for ch, gap in item.letters %}{% if gap %}<i></i>{% else %}<span>{{ ch }}</span>{% endif %}{% endfor %}</div>
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

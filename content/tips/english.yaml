@@ -21,6 +21,23 @@ sentence_recite:
   - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
   - "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one."
   - "Point to the picture and ask a question the sentence answers. Then say the sentence together and color a circle."
+# Puppies Reading (3A)
+pattern_words:
+  - "Say the letter team at the top together. Then name each picture, stretch the word slowly, and let your child write the missing letters."
+  - "Read each word together, tapping the letter team. Then your child fills the boxes. Praise good tries, even if a letter is off."
+  - "Name the picture, then ask: which letter team makes that sound? Let your child look at the top row and write it in."
+word_endings:
+  - "Read the word, then the ending, then say them together. Let your child write the new word in the box, saying each sound."
+  - "Act out each word: jump, then jumping! Point to the ending as you say it. Your child writes the whole new word."
+  - "Some words change a little: hop gets a second p (hopping), bake drops its e (baking). Say the new word slowly as your child writes it."
+syllable_split:
+  - "Clap each word together, one clap for each part. Then your child writes one part in each box, or circles how many claps."
+  - "Put a hand under your chin and say the word: each time your chin drops is one part. Count the parts together."
+  - "Say the word like a robot, part by part. Let your child clap along, then write or circle the answer."
+sentence_copy:
+  - "Read the sentence together, pointing to each word. Then your child copies it: a capital letter first, a space between words, the end mark last."
+  - "Say each word as your child writes it. Check together: capital at the start? Mark at the end? Cheer for neat spaces."
+  - "Let your child read the sentence to you first. Then copy it one word at a time, looking back at each word."
 letter_trace:
   - "Trace the first big letter with your finger together, saying its name and sound. Then your child traces the dots with a pencil. Praise every try."
   - "Say the letter's sound and let your child find it in each picture word. Trace the dots slowly, from the top line down."

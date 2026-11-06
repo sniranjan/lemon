@@ -10,7 +10,7 @@ from . import registry
 from .content import grammar, passages, phonics, phrases, sounds, tips, vocab
 from .models import Level, Sheet
 from .phonics import plan_phonics
-from .plan import LevelPlan, plan_letters, plan_new_words, plan_phrases, plan_review
+from .plan import LevelPlan, plan_letters, plan_new_words, plan_phrases, plan_review, plan_spelling
 from .reading import plan_reading
 from .render import write_html
 from .syllabus import ROOT, page_seed, resolve_page, sheet_id
@@ -27,7 +27,8 @@ def build_plan(level: Level, variant: int = 1) -> LevelPlan:
         plan = plan_review(level, plan_new_words(level, bank, variant), bank)
         plan = plan_phonics(level, bank, plan, phonics("english"))
         plan = plan_phrases(level, bank, plan, phrases("english"))
-        return plan_reading(level, bank, plan, grammar("english"), passages("english"))
+        plan = plan_reading(level, bank, plan, grammar("english"), passages("english"))   # Cubs Reading (2A)
+        return plan_spelling(level, bank, plan, phonics("english"))   # Puppies Reading (3A)
     return LevelPlan(subject=level.subject, level=level.level, variant=variant)
 
 

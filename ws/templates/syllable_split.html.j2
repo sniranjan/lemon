@@ -1,0 +1,31 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.cards { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.cards .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 26px; padding: 8px 26px; }
+.cards img { width: 140px; height: 140px; flex: none; }
+.cards .right { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.cards .word { font-size: 52px; font-weight: 700; line-height: 1.1; }
+.boxes { display: flex; align-items: center; gap: 10px; }
+.boxes i { display: block; width: 150px; height: 64px; border: 3px solid var(--ink); border-radius: 10px; }
+.boxes .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); flex: none; }
+.claps { display: flex; gap: 28px; }
+.claps span { width: 64px; height: 64px; border: 3px solid var(--accent); border-radius: 50%; display: flex;
+              align-items: center; justify-content: center; font-size: 36px; font-weight: 700; }
+{% endblock %}
+{% block body %}
+    <div class="cards">
+{% for item in sheet.items if item.kind == "syllables" %}
+      <div class="card">
+        <img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt="">
+        <div class="right">
+          <div class="word">{{ item.word }}</div>
+{% if item.mode == "boxes" %}
+          <div class="boxes">{% for s in item.syllables %}{% if not loop.first %}<span class="dot"></span>{% endif %}<i></i>{% endfor %}</div>
+{% else %}
+          <div class="claps">{% for n in item.choices %}<span>{{ n }}</span>{% endfor %}</div>
+{% endif %}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
