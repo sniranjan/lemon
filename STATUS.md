@@ -100,7 +100,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   the key), `organizer` (Cause / Effect boxes). Planner: `plan_passages` with rule `spread: true` (Foxes unchanged).
   Draft record `syllabus/drafts/R6-passages.md` from `scripts/r6_drafts.py` (approved by the orchestrator under the
   user's delegation). Verify 0 errors, 0 warnings; booklets per section + `pandas-reading-level.pdf` (202 pages) and
-  `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1, 52, 102, 172.
+  `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1–2 and 171–172 (two whole spreads); `ws preview pandas` builds `out/previews/pandas.pdf` (10 pages, with Pandas Math; not uploaded).
 - **Lions Math (M8, our own level, grade 8 work for age 11, 200 pages)** (2026-11-06): `syllabus/math/M8.yaml`:
   A Exponents and Square Roots 1–30 (8.EE.1–2, 8.NS.2) · B Very Big and Very Small 31–50 (8.EE.3–4) · C Multi-Step
   Equations 51–100 (8.EE.7a–b) · D Lines and Slope 101–150 (8.EE.5–6, 8.F.1–4) · E Two Equations at Once 151–180

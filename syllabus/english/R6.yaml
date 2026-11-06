@@ -6,7 +6,7 @@ title: Central ideas, inference, purpose, text structure and written answers
 # Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
 # Every passage is original (content/passages/R6/<section>.yaml). Drafts and their approval:
 # syllabus/drafts/R6-passages.md (written by scripts/r6_drafts.py from the YAML).
-preview_pages: [1, 52, 102, 172]   # a reading page, then one questions page from B, C and E
+preview_pages: [1, 2, 171, 172]   # two whole spreads (reading page + its questions page): Central Idea, Short Written Answers
 aims:
   - Find the central idea of a text, show how its details build it, and write an objective summary (RI.6.2)
   - Draw inferences from stories and articles and cite the words in the text that support them (RL.6.1, RI.6.1)
