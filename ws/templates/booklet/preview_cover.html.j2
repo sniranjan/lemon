@@ -10,7 +10,8 @@
 .sections { font-size: 20px; line-height: 1.55; }
 .strand { margin-top: 10px; font-size: 22px; color: var(--accent); }
 .strand:first-child { margin-top: 0; }
-.sec { padding-left: 18px; }
+.secs { padding-left: 18px; }
+.secs span { white-space: nowrap; }
 .muted { color: var(--muted); font-size: 18px; }
 .name { font-size: 28px; display: flex; align-items: flex-end; gap: 16px; }
 .name i { flex: 1; border-bottom: 3px solid var(--ink); height: 1.2em; }
@@ -32,9 +33,7 @@
   <div class="sections">
 {% for g in groups %}
     <div class="strand"><b>{{ g.subject }}</b> <span class="muted">· {{ g.pages }} pages in the full level</span></div>
-{% for s in g.sections %}
-    <div class="sec">{{ s.name }} · page{{ "s" if s.pages | length > 1 }} {{ s.pages | join(", ") }}</div>
-{% endfor %}
+    <div class="secs">{% for s in g.sections %}<span>{{ s.name }} (p. {{ s.pages | join(", ") }})</span>{{ " · " if not loop.last }}{% endfor %}</div>
 {% endfor %}
   </div>
   <div class="name">Name <i></i></div>

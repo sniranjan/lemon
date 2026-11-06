@@ -38,7 +38,8 @@ function readKey() {
   if (process.env.STRIPE_SECRET_KEY) return process.env.STRIPE_SECRET_KEY.trim();
   const file = `${homedir()}/.config/paperlessons/stripe.env`;
   if (existsSync(file)) {
-    const m = readFileSync(file, "utf8").match(/^STRIPE_SECRET_KEY=(\S+)/m);
+    // `STRIPE_SECRET_KEY=sk_…` or just the key on its own line
+    const m = readFileSync(file, "utf8").match(/^(?:STRIPE_SECRET_KEY\s*=\s*)?["']?((?:sk|rk)_(?:live|test)_\w+)/m);
     if (m) return m[1];
   }
   throw new Error("No key: set STRIPE_SECRET_KEY or create ~/.config/paperlessons/stripe.env");
