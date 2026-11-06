@@ -160,7 +160,7 @@ def octopus_arms():
     return "".join(colored_line(a, PURPLE, 7) for a in arms)
 
 
-# One sandal seen from above (sole, T-strap, ankle strap, buckle); the picture shows a pair.
+# One sandal seen from above (sole, T-strap, ankle strap, buckle) (one sandal, like shoe; boots is the pair).
 SANDAL = (p("M50 8 C66 8 72 22 70 40 C68 52 66 60 68 74 C70 88 62 96 50 96 C38 96 30 88 32 74 "
             "C34 60 32 52 30 40 C28 22 34 8 50 8 Z", TAN)
           + colored_line("M50 30 L50 64", BLUE, 7)
@@ -344,8 +344,7 @@ PICS = {
                      ((30, 46, 20), (38, 30, -30), (56, 26, 40), (70, 34, -10), (78, 52, 30), (70, 70, -40),
                       (52, 80, 10), (34, 72, 50), (24, 58, -20), (62, 50, 0), (40, 56, 30), (50, 36, 60))),
     # --- page 94: sandal, basket ------------------------------------------------------------
-    "sandal": f'<g transform="translate(27 52) scale(0.86) rotate(-10) translate(-50 -52)">{SANDAL}</g>'
-            + f'<g transform="translate(73 50) scale(-0.86 0.86) rotate(-10) translate(-50 -52)">{SANDAL}</g>',
+    "sandal": rot(-15, 50, 52, SANDAL),
     "basket": c(38, 40, 10, RED) + r(52, 30, 15, 15, BLUE, 2) + colored_line("M22 48 C22 6 78 6 78 48", TAN, 6)
             + p("M12 46 L88 46 L80 90 C78 94 22 94 20 90 Z", TAN)
             + line("M16 62 L84 62 M18 76 L82 76 M30 50 L32 90 M44 50 L45 92 M56 50 L55 92 M70 50 L68 90", 2.5, BARK)
