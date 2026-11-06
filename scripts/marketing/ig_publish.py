@@ -4,6 +4,12 @@
     uv run python scripts/marketing/ig_publish.py marketing/instagram/posts/03-a-real-page
     uv run python scripts/marketing/ig_publish.py marketing/instagram/stories/highlights/levels.png --story
     uv run python scripts/marketing/ig_publish.py --check       # token + account + quota, posts nothing
+    uv run python scripts/marketing/ig_publish.py --inbox       # comments on recent posts + DMs
+    uv run python scripts/marketing/ig_publish.py --reply-comment <comment id> "Thank you!"
+    uv run python scripts/marketing/ig_publish.py --reply-dm <user id> "Hi! ..."   # within 24h of their message
+
+Every publish is appended to marketing/instagram/posted.jsonl; a folder that's already in it is refused
+unless --force. Full guide: marketing/instagram/API.md.
 
 A post folder holds `caption.md` (an `Images:` line listing the files in order, `## Caption` and
 `## Alt text` sections, as written by instagram_launch.py). One image → single post, several → carousel.
@@ -197,21 +203,129 @@ def check(ig: str, token: str) -> None:
     print(f"published in the last 24h: {quota['quota_usage']} of {quota['config']['quota_total']}")
 
 
+LOG = ROOT / "marketing" / "instagram" / "posted.jsonl"
+
+
+def log_key(target: Path, story: bool) -> str:
+    try:
+        rel = str(target.resolve().relative_to(ROOT))
+    except ValueError:
+        rel = str(target.resolve())
+    return ("story:" if story else "post:") + rel
+
+
+def read_log() -> list[dict]:
+    if not LOG.exists():
+        return []
+    return [json.loads(line) for line in LOG.read_text().splitlines() if line.strip()]
+
+
+def write_log(entry: dict) -> None:
+    with LOG.open("a") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+# ---------------------------------------------------------------- comments and messages
+
+
+def inbox(ig: str, token: str, posts: int) -> None:
+    """New comments on the latest posts, then DM conversations with their latest messages."""
+    media = graph("GET", f"{ig}/media", token, fields="id,caption,permalink,comments_count", limit=str(posts))["data"]
+    print(f"COMMENTS (latest {len(media)} posts)")
+    any_comment = False
+    for m in media:
+        if not m.get("comments_count"):
+            continue
+        title = (m.get("caption") or "").splitlines()[0][:50]
+        print(f"\n  {title} — {m['permalink']}")
+        comments = graph("GET", f"{m['id']}/comments", token,
+                         fields="id,text,username,timestamp,hidden,replies{id,text,username,timestamp}")["data"]
+        for c in comments:
+            any_comment = True
+            hidden = " [hidden]" if c.get("hidden") else ""
+            print(f"    [{c['id']}] @{c.get('username', '?')} {c['timestamp'][:16]}{hidden}: {c['text']}")
+            for r in (c.get("replies") or {}).get("data", []):
+                print(f"        ↳ @{r.get('username', '?')}: {r['text']}")
+    if not any_comment:
+        print("  no comments")
+
+    print("\nMESSAGES")
+    try:
+        convs = graph("GET", f"{ig}/conversations", token, platform="instagram",
+                      fields="id,updated_time,participants,messages.limit(3){id,message,from,created_time}")["data"]
+    except GraphError as e:
+        print(f"  can't read messages: {e}")
+        print("  (Instagram app → Settings → Messages and story replies → Message controls → Connected tools →"
+              " Allow access to messages)")
+        return
+    if not convs:
+        print("  no conversations (if you know there are some, turn on 'Allow access to messages', see API.md)")
+    for c in convs:
+        people = [p for p in c.get("participants", {}).get("data", []) if p.get("id") != ig]
+        who = ", ".join(f"@{p.get('username', '?')} (id {p.get('id')})" for p in people)
+        print(f"\n  {who} — updated {c.get('updated_time', '')[:16]}")
+        for msg in reversed(c.get("messages", {}).get("data", [])):
+            sender = msg.get("from", {}).get("username", "?")
+            print(f"    {msg.get('created_time', '')[:16]} @{sender}: {msg.get('message', '(attachment)')}")
+
+
+def reply_comment(comment_id: str, text: str, token: str) -> None:
+    r = graph("POST", f"{comment_id}/replies", token, message=text)
+    print(f"replied to comment {comment_id}: reply {r['id']}")
+
+
+def hide_comment(comment_id: str, token: str) -> None:
+    graph("POST", comment_id, token, hide="true")
+    print(f"hid comment {comment_id}")
+
+
+def reply_dm(ig: str, recipient: str, text: str, token: str) -> None:
+    """Meta only allows this within 24 hours of the person's last message."""
+    r = graph("POST", f"{ig}/messages", token, recipient=json.dumps({"id": recipient}),
+              message=json.dumps({"text": text}))
+    print(f"sent message {r.get('message_id', r)} to {recipient}")
+
+
+# ---------------------------------------------------------------- main
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("target", nargs="?", help="post folder (with caption.md) or an image for --story")
     ap.add_argument("--story", action="store_true", help="publish one image as a story (no caption)")
     ap.add_argument("--dry-run", action="store_true", help="show what would be posted; upload and post nothing")
+    ap.add_argument("--force", action="store_true", help="post again even if posted.jsonl says it's already up")
     ap.add_argument("--check", action="store_true", help="check token, account and quota, then stop")
+    ap.add_argument("--inbox", action="store_true", help="list comments on recent posts and DM conversations")
+    ap.add_argument("--posts", type=int, default=12, help="with --inbox: how many recent posts to scan")
+    ap.add_argument("--reply-comment", nargs=2, metavar=("COMMENT_ID", "TEXT"), help="reply to a comment (public)")
+    ap.add_argument("--hide-comment", metavar="COMMENT_ID", help="hide a comment (spam, rude)")
+    ap.add_argument("--reply-dm", nargs=2, metavar=("USER_ID", "TEXT"), help="send a DM (within 24h of theirs)")
     args = ap.parse_args()
 
     env = load_env()
     token, ig = env["IG_ACCESS_TOKEN"], env["IG_USER_ID"]
     try:
+        if args.inbox:
+            inbox(ig, token, args.posts)
+            return
+        if args.reply_comment:
+            reply_comment(*args.reply_comment, token)
+            return
+        if args.hide_comment:
+            hide_comment(args.hide_comment, token)
+            return
+        if args.reply_dm:
+            reply_dm(ig, *args.reply_dm, token)
+            return
         if args.check or not args.target:
             check(ig, token)
             return
         target = Path(args.target)
+        key = log_key(target, args.story)
+        done = [e for e in read_log() if e["key"] == key]
+        if done and not args.force and not args.dry_run:
+            sys.exit(f"already posted {done[-1]['posted_at']}: {done[-1].get('permalink')} (use --force to post again)")
         if args.story:
             images = sorted(target.glob("*.png")) if target.is_dir() else [target]
             if len(images) != 1:
@@ -229,7 +343,7 @@ def main() -> None:
         kind = "story" if args.story else ("carousel" if len(urls) > 1 else "image post")
         print(f"{kind}: {len(urls)} image(s)")
         for img, url in zip(images, urls):
-            print(f"  {img.relative_to(ROOT) if img.is_absolute() else img} → {url}")
+            print(f"  {img} → {url}")
         if caption:
             print(f"caption ({len(caption)} chars): {caption.splitlines()[0]} …")
         if alt:
@@ -239,6 +353,8 @@ def main() -> None:
             print("dry run: nothing uploaded or posted")
             return
         result = publish(ig, token, urls, caption, alt, args.story)
+        write_log({"key": key, "kind": kind, "media_id": result["id"], "permalink": result.get("permalink"),
+                   "posted_at": result.get("timestamp"), "images": urls})
         print(f"published {result['media_type']} {result['id']} at {result['timestamp']}")
         if result.get("permalink"):
             print(result["permalink"])
