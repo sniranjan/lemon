@@ -103,11 +103,9 @@ def _answer_rows(sheets: list[Sheet], by_line: bool) -> list[dict]:
     return rows
 
 
-def _answer_pages(rows: list[dict], by_line: bool, per_page: int = 20, height: int = 760) -> list[list[dict]]:
-    """Answer rows split into pages: 20 a page, or with `by_line` as many as fit (an estimated 24px per
-    printed line (with room to spare) at about 66 characters a line, plus 14px a row)."""
-    if not by_line:
-        return [rows[i:i + per_page] for i in range(0, len(rows), per_page)]
+def _answer_pages_by_line(rows: list[dict], height: int = 760) -> list[list[dict]]:
+    """Answer rows of a `by_line` level split into pages: as many as fit (an estimated 28px per printed
+    line at about 66 characters a line, plus 14px a row)."""
     pages: list[list[dict]] = [[]]
     used = 0
     for r in rows:
@@ -117,6 +115,24 @@ def _answer_pages(rows: list[dict], by_line: bool, per_page: int = 20, height: i
             used = 0
         pages[-1].append(r)
         used += h
+    return pages
+
+
+ANSWER_LINES = 20        # table lines on one answers page
+ANSWER_CHARS = 60        # characters that fit on one line of the answers column
+
+
+def _answer_pages(rows: list[dict]) -> list[list[dict]]:
+    """Split answer rows into pages of at most ANSWER_LINES lines; a long row wraps onto more lines."""
+    pages: list[list[dict]] = [[]]
+    used = 0
+    for row in rows:
+        lines = 1 + len(row["answers"]) // ANSWER_CHARS
+        if pages[-1] and used + lines > ANSWER_LINES:
+            pages.append([])
+            used = 0
+        pages[-1].append(row)
+        used += lines
     return pages
 
 
@@ -177,9 +193,12 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
                 f"paperlessons {public_label(level)} pages {first}-{last}"))
             answered = [s for s in group if s.answer_key]
             if answered:
-                by_line = level.rules.get("answers") == "by_line"
-                answers = doc("booklet/answers.html.j2", f"{booklet_id}-answers", booklet_id,
-                              chunks=_answer_pages(_answer_rows(answered, by_line), by_line))
+                if level.rules.get("answers") == "by_line":
+                    pages = _answer_pages_by_line(_answer_rows(answered, by_line=True))
+                else:
+                    pages = _answer_pages([{"id": s.id, "page": s.page_number, "answers": ", ".join(map(str, s.answer_key))}
+                                           for s in answered])
+                answers = doc("booklet/answers.html.j2", f"{booklet_id}-answers", booklet_id, rows=pages)
                 report.booklets.append(_write_booklet([answers], level_dir / f"{booklet_id}-answers.pdf",
                                                       f"paperlessons {public_label(level)} answers"))
 

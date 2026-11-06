@@ -23,7 +23,7 @@ from collections import Counter
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from .content import passages as load_passages
+from .content import level_passages as load_passages
 from .content import wordparts
 from .models import Level
 from .plan import LevelPlan, PagePlan

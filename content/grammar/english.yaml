@@ -1,0 +1,151 @@
+# Cubs Reading (2A) word work: hand-checked word kinds, fill-in sentences and picture-puzzle words.
+#
+# Kinds of Words (2A-B) sorts words into naming words (nouns), doing words (verbs) and describing words
+# (adjectives). Only words whose kind is clear in a child's everyday use are listed: "brush", "swing",
+# "paint", "drink", "rain", "rock", "box" and the like are both a thing and an action, so they are left out.
+# Every word must be in content/vocab/english.yaml; a word is used on a page only once the child knows it
+# (earlier levels, or a 2A word introduced on that page or before). The three lists must not overlap.
+kinds:
+  naming:
+    # Chicks and Ducklings words
+    [cat, dog, pig, cow, horse, frog, sheep, bee, bunny, mouse, lion, owl, goat, monkey, turtle, koala,
+     parrot, deer, camel, donkey, hippo, panda, octopus, ladybug, dolphin, worm, puppy, kitten, chick,
+     whale, crab, snail, zebra, tiger, giraffe, hen, ant, penguin, lamb,
+     apple, banana, egg, bread, cookie, cake, cheese, carrot, grapes, pear, corn, pizza, soup, lemon,
+     rice, potato, tomato, cherry, noodles, pumpkin, popcorn, honey, waffle, melon, bagel, plum, pickle,
+     peach, muffin, pancake, yogurt, peas,
+     bed, spoon, door, bowl, table, lamp, clock, pillow, crib, bathtub, rug, mirror, bottle, basket,
+     fork, sofa, blanket, window, oven, fridge,
+     sun, rainbow, tree, flower, moon, leaf, cloud, snowman, nest, feather, acorn, cactus, sand, shell,
+     grass, puddle,
+     ball, kite, balloon, blocks, doll, puppet, tent, crown, seesaw, teddy, robot, bucket, crayon, wagon,
+     car, bus, truck, plane, van, tractor, scooter, rocket, digger,
+     shoe, hat, shirt, pants, boots, scarf, diaper, belt, bib, apron, sandal, jacket, mitten, skirt,
+     sweater, pajamas, shorts,
+     nose, foot, ear, mouth, hair, leg, teeth, chin, neck, tongue, elbow, knee, finger, tummy, toe,
+     grandma, grandpa, sister, brother, friend, family,
+     # Cubs words
+     pencil, button, ribbon, helmet, magnet, candle, napkin, kettle, rabbit, robin, tulip, pony, hamster,
+     sandwich, pebble, lizard]
+  doing:
+    [run, jump, eat, sleep, sit, clap, swim, pour, build, hop, sing, dig, walk, read, draw, climb, hide,
+     throw, crawl,
+     carry, bake, sweep, skip, tiptoe, wiggle, giggle, munch, sniff, stir, scrub, listen]
+  describing:
+    # color words are left out: they are pictured as crayons and would need color printing
+    [big, little, hot, cold,
+     soft, fluffy, tiny, shiny, sticky, noisy, quiet, muddy, sleepy, hungry, gentle, silly]
+
+# Labels printed on the sheets (child-facing column heads and instructions).
+labels:
+  naming: naming word
+  doing: doing word
+  describing: describing word
+
+# Fill-in sentences: "___" is the blank. `answer` is the only choice of the right kind: the other choice
+# (picked by the planner) is a known word of another kind, so the sentence only makes sense with the answer.
+# Each sentence is true as written, uses everyday words, and passes the sentence-sense scan.
+fill:
+  naming:
+    - { text: "The ___ has long ears.", answer: rabbit }
+    - { text: "I write my name with a ___.", answer: pencil }
+    - { text: "A ___ sings in the tree.", answer: robin }
+    - { text: "My coat has a big red ___.", answer: button }
+    - { text: "I wear a ___ when I ride my bike.", answer: helmet }
+    - { text: "The ___ sticks to the fridge.", answer: magnet }
+    - { text: "There is one ___ on the cake.", answer: candle }
+    - { text: "I wipe my mouth with a ___.", answer: napkin }
+    - { text: "The ___ whistles when the water is hot.", answer: kettle }
+    - { text: "I found a smooth gray ___ by the pond.", answer: pebble }
+    - { text: "A red ___ grows in the garden.", answer: tulip }
+    - { text: "The ___ runs on its little wheel.", answer: hamster }
+    - { text: "I ride a brown ___ at the farm.", answer: pony }
+    - { text: "Mom packs a ___ for my lunch.", answer: sandwich }
+    - { text: "A ___ sits on a warm rock.", answer: lizard }
+    - { text: "She ties a pink ___ in her hair.", answer: ribbon }
+    - { text: "The ___ says moo.", answer: cow }
+    - { text: "The ___ sits on a lily pad.", answer: frog }
+    - { text: "The ___ hides in its shell.", answer: turtle }
+    - { text: "A ___ makes honey.", answer: bee }
+    - { text: "Grandpa gives me a ___ for my soup.", answer: spoon }
+    - { text: "The ___ flies up to the moon.", answer: rocket }
+    - { text: "The ___ barks at the mail truck.", answer: dog }
+    - { text: "The ___ ate the hay.", answer: horse }
+    - { text: "I play tag with my ___.", answer: friend }
+    - { text: "The ___ shines in the night sky.", answer: moon }
+    - { text: "I sleep in my ___.", answer: bed }
+    - { text: "The ___ has a very long neck.", answer: giraffe }
+    - { text: "A ___ lives in the sea.", answer: whale }
+    - { text: "The ___ is round and orange.", answer: pumpkin }
+  doing:
+    - { text: "I ___ the heavy box to my room.", answer: carry }
+    - { text: "We ___ cookies with Grandma.", answer: bake }
+    - { text: "I ___ the floor with a broom.", answer: sweep }
+    - { text: "I ___ down the path to the park.", answer: skip }
+    - { text: "We ___ past the sleeping baby.", answer: tiptoe }
+    - { text: "I ___ my toes in the sand.", answer: wiggle }
+    - { text: "We ___ at Dad's funny joke.", answer: giggle }
+    - { text: "The bunny likes to ___ on carrots.", answer: munch }
+    - { text: "The dog likes to ___ the grass.", answer: sniff }
+    - { text: "I ___ the soup with a spoon.", answer: stir }
+    - { text: "I ___ my hands with soap.", answer: scrub }
+    - { text: "I ___ to the birds in the morning.", answer: listen }
+    - { text: "Fish ___ in the pond.", answer: swim }
+    - { text: "The frog can ___ up high.", answer: jump }
+    - { text: "I ___ in my bed at night.", answer: sleep }
+    - { text: "We ___ a tall tower of blocks.", answer: build }
+    - { text: "The dog can ___ a hole in the sand.", answer: dig }
+    - { text: "I ___ a picture of my cat.", answer: draw }
+    - { text: "The monkey can ___ a tree.", answer: climb }
+    - { text: "I ___ under my blanket.", answer: hide }
+    - { text: "I ___ the ball to Dad.", answer: throw }
+    - { text: "The baby can ___ on the rug.", answer: crawl }
+    - { text: "Birds ___ in the morning.", answer: sing }
+    - { text: "I ___ milk into my cup.", answer: pour }
+    - { text: "We ___ our hands to the song.", answer: clap }
+    - { text: "We ___ to school with Mom.", answer: walk }
+    - { text: "I ___ a book with Grandpa.", answer: read }
+    - { text: "I ___ on the chair to eat.", answer: sit }
+    - { text: "Dogs ___ fast in the park.", answer: run }
+    - { text: "The bunny can ___ over the stick.", answer: hop }
+  describing:
+    - { text: "My pillow is ___.", answer: soft }
+    - { text: "The lamb has ___ wool.", answer: fluffy }
+    - { text: "An ant is very ___.", answer: tiny }
+    - { text: "My new bike is ___ and red.", answer: shiny }
+    - { text: "Honey is ___ on my fingers.", answer: sticky }
+    - { text: "The drum is very ___.", answer: noisy }
+    - { text: "We are ___ when the baby sleeps.", answer: quiet }
+    - { text: "My boots are ___ after the rain.", answer: muddy }
+    - { text: "The ___ baby yawns.", answer: sleepy }
+    - { text: "I am ___, so Mom makes lunch.", answer: hungry }
+    - { text: "Be ___ with the kitten.", answer: gentle }
+    - { text: "Dad makes a ___ face.", answer: silly }
+    - { text: "A whale is very ___.", answer: big }
+    - { text: "A mouse is ___.", answer: little }
+    - { text: "The soup is too ___ to eat.", answer: hot }
+    - { text: "Snow is ___.", answer: cold }
+    - { text: "The kitten is soft and ___.", answer: fluffy }
+    - { text: "The star looks ___ in the sky.", answer: shiny }
+    - { text: "My ___ puppy naps all day.", answer: sleepy }
+    - { text: "The big truck is ___.", answer: noisy }
+    - { text: "The library is a ___ place.", answer: quiet }
+    - { text: "The ___ pig rolls in the mud.", answer: muddy }
+    - { text: "The ___ bird eats a worm.", answer: hungry }
+    - { text: "A ladybug is ___.", answer: tiny }
+    - { text: "The clown wears a ___ hat.", answer: silly }
+    - { text: "Grandpa gives me a ___ hug.", answer: gentle }
+    - { text: "The jam is ___.", answer: sticky }
+    - { text: "My teddy is ___.", answer: soft }
+    - { text: "We wear coats on a ___ day.", answer: cold }
+    - { text: "A giraffe is very ___.", answer: big }
+
+# Picture Puzzles (2A-A): earlier-level words whose picture clearly names the word (hand-checked on the
+# pictures; no look-alikes such as cup/mug, rock/stone, hen/chicken, puppy/dog). The page's letters do the rest.
+puzzle_words:
+  [cat, dog, pig, cow, ant, bee, owl, fox, egg, sun, bus, car, van, bed, hat, key, box, fan,
+   fish, duck, bird, bear, frog, lion, goat, crab, moon, star, tree, leaf, cake, pear, sock, shoe, bell,
+   drum, kite, doll, ball, boat, bike, book, lamp, door, nose, hand, foot,
+   horse, sheep, zebra, tiger, whale, snail, apple, pizza, clock, chair, spoon, broom, robot, train,
+   plane, truck,
+   monkey, turtle, carrot, cookie, banana, pillow, basket, bucket, rocket, tomato]

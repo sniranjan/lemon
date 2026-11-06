@@ -6,7 +6,7 @@ import pytest
 
 from ws import generate as gen
 from ws import registry
-from ws.booklet import _answer_pages, _answer_rows
+from ws.booklet import _answer_pages_by_line, _answer_rows
 from ws.passages import (
     BRITISH, affixes, passage_problems, section_passages, word_parts, wordpart_problems,
 )
@@ -99,12 +99,10 @@ def test_golden(page, out_dir, golden):
     golden(f"{sheet.id}.json", sheet.model_dump_json(indent=2) + "\n")
 
 
-def test_answer_pages_split_by_height_only_for_by_line_levels():
+def test_answer_pages_split_by_height():
     plan = gen.build_plan(R3)
     sheets = [gen.build_sheet(R3, p, plan) for p in range(1, 51)]
     rows = _answer_rows(sheets, by_line=True)
     assert all(r["lines"] for r in rows)
-    pages = _answer_pages(rows, by_line=True)
+    pages = _answer_pages_by_line(rows)
     assert sum(len(p) for p in pages) == 50 and max(len(p) for p in pages) < 20
-    flat = _answer_rows(sheets, by_line=False)
-    assert [len(p) for p in _answer_pages(flat, by_line=False)] == [20, 20, 10]
