@@ -115,8 +115,8 @@ a child on pace does it (Foxes 6, Owls 7 … Lions 11). Then 12-year-olds (grade
 | Ducklings | 3 | preschool | K | K: numbers to 50 (K.CC.1); phrases spoken, not read | ≈ 0 (reading slightly under) |
 | Bunnies | 4 | Pre-K | 1 | K: writing numbers (K.CC.3), letters and first sounds | **−1** |
 | Kittens | 4 | Pre-K | 1 | K–1: numbers to 120 (1.NBT.1), +1 to +3, digraphs (RF.1.3a), rhymes (RF.K.2a) | ≈ −0.5 |
-| Puppies | 5 | K | 2 | 1: adding facts only (1.OA.6); long vowels, syllables (RF.1.3, RF.2.3) | **−1**. The live title says "subtracting", which this level doesn't teach |
-| Cubs | 5 | K | 2 | 1–2: subtraction facts (2.OA.2); parts of speech, reading aloud | **−1**. The live title says "two-digit adding and subtracting" (2.NBT.5), which this level doesn't teach |
+| Puppies | 5 | K | 2 | Math now 1–2 (built 2026-11-06, our M1: + and − within 20, 2.OA.2); reading 3A being built | ≈ 0 (math fixed) |
+| Cubs | 5 | K | 2 | Math now 2 (built 2026-11-06, our M2: place value to 1000, 2- and 3-digit add/subtract, 2.NBT.1–7); reading 2A being built | ≈ 0 (math fixed) |
 | Foxes → Lions | 6 → 11 | 1 → 6 | 3 → 8 | Math sections all match their grade (every code verified) | 0 |
 | Whales (new) | 12 | 7 | 9 | Algebra 1 and grade 9–10 reading (codes to be checked when built) | 0 |
 
