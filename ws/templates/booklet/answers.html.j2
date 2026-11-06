@@ -4,7 +4,7 @@ td { height: 34px; }
 .c-page { width: 18%; }
 {% endblock %}
 {% block pages %}
-{% for chunk in rows | batch(20) %}
+{% for chunk in rows %}{# pages of rows, split by ws.booklet._answer_pages #}
 <div class="page">
   <div class="rule">
     <div class="eyebrow">{{ level.public_name }} · {{ theme.label }}</div>
