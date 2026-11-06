@@ -1,0 +1,41 @@
+{% extends "base.html.j2" %}
+{# Percents. Grids: a 10 × 10 grid, columns of ten shaded from the left (top to bottom), and
+   "☐ out of 100 = ☐%" to write. Facts: two columns of percent facts with one box each. #}
+{% set grids = sheet.items[0].kind == "grid" %}
+{% set C = 17 %}
+{% block style %}
+.probs { flex: 1; min-height: 0; display: grid; gap: 16px 18px; grid-auto-rows: 1fr;
+         grid-template-columns: {{ "repeat(3, 1fr)" if grids else "1fr 1fr" }}; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: {{ "column" if grids else "row" }}; align-items: center; justify-content: center; gap: 14px; padding: 8px 14px 8px 30px; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.say { display: flex; align-items: center; gap: 8px; font-size: 26px; font-weight: 700; white-space: nowrap; }
+.fact { display: flex; align-items: center; gap: 10px; font-size: 32px; font-weight: 700; white-space: nowrap; }
+.box { display: inline-block; width: 76px; height: 54px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+.say .box { width: 58px; height: 46px; }
+.say small { font-size: 22px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for p in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ p.n }}</span>
+{% if grids %}
+        <svg width="{{ C * 10 + 4 }}" height="{{ C * 10 + 4 }}" viewBox="0 0 {{ C * 10 + 4 }} {{ C * 10 + 4 }}">
+{% for k in range(100) %}
+          <rect x="{{ 2 + (k // 10) * C }}" y="{{ 2 + (k % 10) * C }}" width="{{ C }}" height="{{ C }}" fill="{{ theme.accent if k < p.shaded else '#fff' }}" fill-opacity="{{ 0.6 if k < p.shaded else 1 }}" stroke="#1d1d1f" stroke-width="1.2"/>
+{% endfor %}
+          <rect x="2" y="2" width="{{ C * 10 }}" height="{{ C * 10 }}" fill="none" stroke="#1d1d1f" stroke-width="3"/>
+        </svg>
+        <div class="say"><span class="box"></span><small>out of 100</small></div>
+        <div class="say"><span>=</span><span class="box"></span><span>%</span></div>
+{% else %}
+        <div class="fact">
+{% if p.task == "of" %}<span>{{ p.p }}% of {{ p.whole }} =</span><span class="box"></span>
+{% elif p.task == "whole" %}<span>{{ p.p }}% of</span><span class="box"></span><span>= {{ p.part }}</span>
+{% else %}<span class="box"></span><span>% of {{ p.whole }} = {{ p.part }}</span>
+{% endif %}
+        </div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

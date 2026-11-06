@@ -24,6 +24,10 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    # Pandas math (M6): dividing fractions, ratios, rates, percents, negatives, the coordinate
+    # plane, expressions and one-step equations
+    "fraction_divide", "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
 })
 

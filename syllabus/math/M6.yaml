@@ -1,0 +1,360 @@
+subject: math
+level: M6
+title: Dividing Fractions, Ratios, Percents, Negative Numbers and Equations
+# Our own level (source: ours): Pandas math, grade 6 work for age 9 (syllabus/PLAN-upper-levels.md).
+# It assumes grade 5 math (fraction times fraction, decimals) from the level before.
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Standards checked on thecorestandards.org (Math/Content/6/NS, /RP, /EE), Nov 2026.
+preview_pages: [11, 51, 121, 171]   # fraction ÷ fraction, unit-rate stories, the coordinate plane, x + p = q
+aims:
+  - Divide fractions and mixed numbers by fractions, first with fraction bars, then by multiplying by the flipped divisor
+  - Use ratio language, fill ratio tables and solve unit-rate, unit-price, speed and unit-conversion problems
+  - Find a percent of a number as a rate per 100, and find the whole from a part and the percent
+  - Place and compare negative numbers, use absolute value and plot points in all four quadrants
+  - Write and evaluate expressions with letters and whole-number exponents, including formulas
+  - Solve one-step equations x + p = q and px = q with whole numbers, decimals and fractions
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [3, 6]   # source: ours (10 problems or 4 word problems a page)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# (ws/sheet_types/*.py). Numbers stay nonnegative except in Below Zero (grade 6: no adding or taking
+# away negative numbers yet; that is Penguins work).
+sections:
+  - code: A
+    name: Dividing Fractions by Fractions
+    public_name: Dividing Fractions
+    pages: [1, 30]
+    sheet_types: [fraction_divide]
+    standards: [6.NS.1]
+    source: ours
+    rules:
+      max_den: 12
+      max_whole: 6
+      tips:
+        fraction_divide:
+          - "To divide by a fraction, keep the first number, change ÷ to ×, and flip the second fraction: 3/4 ÷ 1/8 = 3/4 × 8/1 = 6."
+          - "Ask: how many of the second number fit in the first? 2 ÷ 1/3 means how many thirds fit in 2. The answer is 6."
+          - "Check an answer by multiplying back: if 3/4 ÷ 1/8 = 6, then 6 × 1/8 should be 3/4."
+    parts:
+      - part: 1
+        name: How many fit
+        pages: [1, 10]
+        rules:
+          title: How many fit?
+          layout: model
+          problems: 5
+          dividend: [whole, proper, whole, proper, whole]
+          divisor: [unit]
+          max_den: 10
+          max_whole: 3
+          max_pieces: 24
+          tips:
+            fraction_divide:
+              - "Each bar is one whole, cut into pieces the size of the second fraction. Count the shaded pieces: that is how many fit."
+              - "Read 3 ÷ 1/4 as: how many quarters are in 3? Count the quarter pieces in three whole bars."
+              - "For 3/4 ÷ 1/8, the shaded part is 3/4 of a bar. Count how many eighths it covers."
+      - part: 2
+        name: Fraction by fraction
+        pages: [11, 20]
+        rules:
+          title: Dividing fractions
+          layout: facts
+          problems: 10
+          dividend: [proper]
+          divisor: [proper, unit, proper, proper, unit]
+          max_den: 10
+          max_answer: 12
+      - part: 3
+        name: Mixed numbers and stories
+        pages: [21, 30]
+        sheet_types: [fraction_divide, fraction_divide, rational_story]
+        rules:
+          title: Dividing mixed numbers
+          layout: facts
+          problems: 10
+          dividend: [mixed, whole, mixed, proper, mixed]
+          divisor: [proper, mixed, unit, proper, proper]
+          max_whole: 5
+          max_answer: 20
+          tags: [fraction_divide, fraction_divide, fraction_divide, fraction_divide]
+          tips:
+            fraction_divide:
+              - "Turn mixed numbers into fractions first: 2 1/2 is 5/2. Then keep, change and flip as before."
+              - "Write the answer in simplest form. An answer above 1 can be a mixed number, like 2 1/3."
+            rational_story:
+              - "Read each story and ask: how many of these fit in that? That question is a division. Draw a bar if it helps."
+              - "Say the division out loud first, like 3 ÷ 3/4, then work it out and write the answer in the box."
+
+  - code: B
+    name: Ratios, Ratio Tables and Unit Rates
+    public_name: Ratios and Rates
+    pages: [31, 70]
+    sheet_types: [ratio_table]
+    standards: [6.RP.1, 6.RP.2, 6.RP.3a, 6.RP.3b, 6.RP.3d]
+    source: ours
+    rules:
+      tables: 4
+      columns: 5
+      max_value: 120
+    parts:
+      - part: 1
+        name: Ratio tables from the start
+        pages: [31, 40]
+        rules:
+          title: Ratio tables
+          tables: 3
+          start: true
+          base: [1, 9]
+          tips:
+            ratio_table:
+              - "Read the sentence together. The first column is the ratio. Each next column is 2, 3, 4 and 5 times as much."
+              - "A ratio table grows the same way on both rows. If the top doubles, the bottom doubles too."
+      - part: 2
+        name: Ratio tables, any column
+        pages: [41, 50]
+        rules:
+          title: Find the missing numbers
+          start: false
+          base: [1, 9]
+          multipliers: [2, 12]
+          tips:
+            ratio_table:
+              - "Find the column that is full. Divide both numbers by the same number to get the simplest ratio, then grow it to fill the gaps."
+              - "For 12 and 18, both divide by 6, so the simplest ratio is 2 : 3. Every column is a times 2 : 3."
+      - part: 3
+        name: Unit rates
+        pages: [51, 60]
+        sheet_types: [rational_story]
+        rules:
+          title: Unit rates
+          max_value: 5000
+          tags: [unit_rate, speed, unit_price, unit_rate]
+          tips:
+            rational_story:
+              - "A unit rate is how much for one: one day, one hour, one notebook. Divide to find it, then multiply to scale it up."
+              - "Ask your child what one of each costs or takes first. The rest of the problem usually follows from that."
+      - part: 4
+        name: Rates and units
+        pages: [61, 70]
+        sheet_types: [rational_story]
+        rules:
+          title: Rates and units
+          max_value: 5000
+          tags: [convert, speed, unit_price, convert]
+          tips:
+            rational_story:
+              - "Converting units is a ratio too: 3 feet for every 1 yard. Ask: do we need more of the small unit or fewer of the big one?"
+              - "Write the unit rate first, like 60 minutes in 1 hour, then multiply or divide."
+
+  - code: C
+    name: Percents
+    public_name: Percents
+    pages: [71, 100]
+    sheet_types: [percent_problem]
+    standards: [6.RP.3c]
+    source: ours
+    parts:
+      - part: 1
+        name: Out of 100
+        pages: [71, 80]
+        rules:
+          title: Out of 100
+          layout: grids
+          problems: 6
+          shaded: [3, 97]
+          tips:
+            percent_problem:
+              - "Percent means out of 100. Count the shaded columns of ten first, then the extra squares."
+              - "If 35 of the 100 squares are shaded, that is 35 out of 100, or 35%."
+      - part: 2
+        name: Percent of a number
+        pages: [81, 90]
+        rules:
+          title: Percent of a number
+          layout: facts
+          problems: 12
+          tasks: [of]
+          percents: [10, 20, 25, 50, 75, 5, 30, 40, 60, 1, 15, 80]
+          whole: [10, 400]
+          max_part: 300
+          tips:
+            percent_problem:
+              - "Find 10% first by dividing by 10. Then 20% is double that, and 5% is half of it."
+              - "25% is one quarter, 50% is one half and 75% is three quarters. Use those to check."
+      - part: 3
+        name: Finding the whole
+        pages: [91, 100]
+        sheet_types: [percent_problem, rational_story]
+        rules:
+          title: Percents and wholes
+          layout: facts
+          problems: 12
+          tasks: [of, whole, whole, of, whole, percent]
+          percents: [10, 20, 25, 50, 75, 5, 40, 60]
+          whole: [10, 400]
+          max_part: 300
+          tags: [percent_of, percent_whole, percent_of, percent_whole]
+          tips:
+            percent_problem:
+              - "For 25% of what is 20: 25% is a quarter, so 20 is a quarter of the whole, and the whole is 4 × 20 = 80."
+              - "If 10% is 7, then 100% is ten times as much: 70. Find 10% or 1% first, then scale up."
+            rational_story:
+              - "Ask: is the whole known, or the part? If the part and the percent are given, scale up to 100%."
+              - "Read each story twice. Underline the percent and the number it goes with, then decide what to find."
+
+  - code: D
+    name: Negative Numbers and the Coordinate Plane
+    public_name: Below Zero
+    pages: [101, 130]
+    sheet_types: [signed_numbers]
+    standards: [6.NS.5, 6.NS.6a, 6.NS.6b, 6.NS.6c, 6.NS.7, 6.NS.8]
+    source: ours
+    parts:
+      - part: 1
+        name: Numbers below zero
+        pages: [101, 110]
+        rules:
+          title: Below zero
+          range: [-10, 10]
+          layout: lines
+          problems: 5
+          tasks: [name, mark, opposite, name, mark]
+          tips:
+            signed_numbers:
+              - "Numbers to the left of 0 are below zero. A box means write the number at the dot; a number means draw its dot."
+              - "Opposites are the same distance from 0 on each side: 4 and −4. Count the jumps from 0 to check."
+      - part: 2
+        name: Compare and absolute value
+        pages: [111, 120]
+        rules:
+          title: Compare and order
+          range: [-12, 12]
+          halves: true
+          context_max: 50
+          layout: facts
+          problems: 11
+          tasks: [compare, abs, compare, opposite, compare, abs, compare, opposite, context, context, order]
+          tips:
+            signed_numbers:
+              - "On a number line, the number further right is bigger: −3 > −7. Write < or > in each small box, and order the last row from least to greatest."
+              - "Absolute value is the distance from 0, so it is never negative: |−6| = 6. Below zero means a minus sign."
+      - part: 3
+        name: The coordinate plane
+        pages: [121, 130]
+        sheet_types: [coordinate_grid]
+        rules:
+          title: The coordinate plane
+          range: 6
+          read: 4
+          plot: 4
+          axis_points: 1
+          distance: 2
+          tips:
+            coordinate_grid:
+              - "Read x first, across, then y, up or down: (3, −2) means 3 right and 2 down from the center."
+              - "For a distance across an axis, add the two distances from the axis: from (2, 4) to (2, −3) is 4 + 3 = 7 units."
+
+  - code: E
+    name: Expressions with Letters and Exponents
+    public_name: Letters for Numbers
+    pages: [131, 170]
+    sheet_types: [expression_eval]
+    standards: [6.EE.1, 6.EE.2a, 6.EE.2c]
+    source: ours
+    rules:
+      max_value: 200
+      max_var: 12
+    parts:
+      - part: 1
+        name: Exponents and order
+        pages: [131, 140]
+        rules:
+          title: Exponents and order
+          task: power
+          tips:
+            expression_eval:
+              - "A small raised number says how many times to multiply: 4² = 4 × 4 = 16 and 2³ = 2 × 2 × 2 = 8."
+              - "Work in order: brackets first, then powers, then × and ÷, then + and −. 3(2 + 4)² starts with 2 + 4."
+      - part: 2
+        name: Words to expressions
+        pages: [141, 150]
+        rules:
+          title: Write an expression
+          task: write
+          tips:
+            expression_eval:
+              - "The letter stands for a number we don't know yet. 7 more than n is n + 7; 3 times n is written 3n."
+              - "Read each phrase out loud and point to the numbers and the letter. Any correct order is fine: n + 7 or 7 + n."
+      - part: 3
+        name: Substituting
+        pages: [151, 160]
+        rules:
+          title: Put in the number
+          task: substitute
+          tips:
+            expression_eval:
+              - "Write the number in place of the letter, then work it out. If n = 5, 3n + 4 is 3 × 5 + 4 = 19."
+              - "3n means 3 times n. Multiply before you add, unless there are brackets."
+      - part: 4
+        name: Formulas
+        pages: [161, 170]
+        rules:
+          title: Formulas
+          task: formula
+          tips:
+            expression_eval:
+              - "A formula is a rule with letters. A = lw is length times width. Put each number in place of its letter."
+              - "With two letters, swap in both numbers before working it out: if x = 3 and y = 4, 3x + 2y = 9 + 8 = 17."
+
+  - code: F
+    name: One-Step Equations
+    public_name: One-Step Equations
+    pages: [171, 200]
+    sheet_types: [equation_solve]
+    standards: [6.EE.5, 6.EE.7]
+    source: ours
+    rules:
+      problems: 10
+    parts:
+      - part: 1
+        name: Adding equations
+        pages: [171, 180]
+        rules:
+          title: Solve for the letter
+          forms: [add, add_left]
+          numbers: [whole]
+          max_q: 100
+          tips:
+            equation_solve:
+              - "Ask: what number plus 7 makes 15? Take 7 away from 15 to find it. Then put the answer back in to check."
+              - "Do the same to both sides: if x + 9 = 20, take 9 from both sides, so x = 11."
+      - part: 2
+        name: Times equations
+        pages: [181, 190]
+        rules:
+          title: Solve for the letter
+          forms: [times, add, times, add_left, times]
+          numbers: [whole]
+          max_q: 150
+          tips:
+            equation_solve:
+              - "4x means 4 times x. To undo times, divide both sides: 4x = 36, so x = 36 ÷ 4 = 9."
+              - "Check each answer by putting it back in the equation. Both sides should match."
+      - part: 3
+        name: Decimals, fractions and stories
+        pages: [191, 200]
+        sheet_types: [equation_solve, rational_story]
+        rules:
+          title: Decimals and fractions
+          problems: 8
+          forms: [add, times, add_left, times]
+          numbers: [decimal, fraction, decimal]
+          max_q: 30
+          tags: [equation, equation, equation, equation]
+          tips:
+            equation_solve:
+              - "The steps are the same with decimals and fractions: take away to undo +, divide to undo ×. Line up decimal points."
+              - "For 2/3 x = 4, divide 4 by 2/3: keep, change, flip, so 4 × 3/2 = 6."
+            rational_story:
+              - "Use a letter for the number you don't know, write an equation like x + 14 = 52, then solve it."
+              - "Ask your child what the unknown is first. Then write the equation on the line before working it out."

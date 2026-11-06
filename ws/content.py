@@ -118,7 +118,17 @@ def story_problems() -> tuple[dict, ...]:
     return frames
 
 
+@lru_cache(maxsize=None)
+def math_frames(name: str) -> tuple[dict, ...]:
+    """Frames and contexts for Pandas math: content/math/<name>.yaml (ratios, rational_stories)."""
+    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / f"{name}.yaml").read_text()))
+    ids = [f["id"] for f in frames]
+    if len(set(ids)) != len(ids):
+        raise ValueError(f"{name}.yaml: ids must be unique")
+    return frames
+
+
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories, story_problems, grammar, passages):
+              line_stories, story_problems, grammar, passages, math_frames):
         f.cache_clear()
