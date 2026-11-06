@@ -1,0 +1,9 @@
+{# Math text from ws/sheet_types/_linear.py tokens(): plain strings, and {"n", "d"} fractions that
+   are stacked. Include the `math_text_style` block's CSS via {{ mt_css() }} in the page style. #}
+{% macro mt(toks) %}{% for t in toks %}{% if t is string %}<span class="mt-s">{{ t }}</span>{% else %}<span class="fr"><span>{{ t.n }}</span><span class="fr-d">{{ t.d }}</span></span>{% endif %}{% endfor %}{% endmacro %}
+{% macro mt_css() %}
+.mt-s { white-space: pre; }
+.fr { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 0.72em; line-height: 1.05; margin: 0 0.08em; }
+.fr > span { padding: 0 0.12em; }
+.fr .fr-d { border-top: 0.11em solid currentColor; }
+{% endmacro %}

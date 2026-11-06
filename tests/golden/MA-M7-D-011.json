@@ -1,0 +1,97 @@
+{
+  "id": "MA-M7-D-011",
+  "subject": "math",
+  "level": "M7",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "ratio_table",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 16083535114271034790,
+  "title": "Is it proportional?",
+  "parent_tip": "Divide each y by its x. If every column gives the same number, the table is proportional and that number is k.",
+  "items": [
+    {
+      "kind": "proportion",
+      "context": 7,
+      "x_label": "Weeks",
+      "y_label": "Dollars saved",
+      "say": "Mina saves the same amount each week.",
+      "x": [
+        "3",
+        "7",
+        "10",
+        "12"
+      ],
+      "y": [
+        "22.50",
+        "52.50",
+        "75",
+        "90"
+      ],
+      "proportional": true,
+      "k": "7.5",
+      "fee": null,
+      "blank": 2,
+      "n": 1,
+      "answer": "proportional, k = 7.5, y = 7.5x, missing 75"
+    },
+    {
+      "kind": "proportion",
+      "context": 4,
+      "x_label": "Tickets",
+      "y_label": "Cost ($)",
+      "say": "Tickets for the school play.",
+      "x": [
+        "4",
+        "5",
+        "10",
+        "11"
+      ],
+      "y": [
+        "27",
+        "33",
+        "63",
+        "69"
+      ],
+      "proportional": false,
+      "k": null,
+      "fee": "3",
+      "blank": null,
+      "n": 2,
+      "answer": "not proportional (y ÷ x changes)"
+    },
+    {
+      "kind": "proportion",
+      "context": 3,
+      "x_label": "Minutes",
+      "y_label": "Pages printed",
+      "say": "A printer prints pages.",
+      "x": [
+        "1",
+        "2",
+        "6",
+        "8"
+      ],
+      "y": [
+        "20",
+        "40",
+        "120",
+        "160"
+      ],
+      "proportional": true,
+      "k": "20",
+      "fee": null,
+      "blank": 1,
+      "n": 3,
+      "answer": "proportional, k = 20, y = 20x, missing 40"
+    }
+  ],
+  "answer_key": [
+    "proportional, k = 7.5, y = 7.5x, missing 75",
+    "not proportional (y ÷ x changes)",
+    "proportional, k = 20, y = 20x, missing 40"
+  ],
+  "new_words": [],
+  "review_words": []
+}

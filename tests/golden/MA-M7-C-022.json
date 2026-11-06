@@ -1,0 +1,77 @@
+{
+  "id": "MA-M7-C-022",
+  "subject": "math",
+  "level": "M7",
+  "section": "C",
+  "part": 3,
+  "sheet_type": "rational_story",
+  "page_number": 92,
+  "variant": 1,
+  "seed": 13872735725987854422,
+  "title": "Negatives in real life",
+  "parent_tip": "Ask: is the answer above or below zero? Sketch a quick number line for temperatures, heights and money owed.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "mini_golf",
+      "picks": {
+        "a": "-2",
+        "b": "3",
+        "c": "-2",
+        "d": "2"
+      },
+      "values": {
+        "a": "-2",
+        "b": "3",
+        "c": "-2",
+        "d": "2"
+      },
+      "text": "In mini golf, Ravi's scores compared with par on four holes were −2, 3, −2 and 2. What is his total compared with par?",
+      "answer": "1",
+      "unit": "",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "temp_drop",
+      "picks": {
+        "a": "2",
+        "b": "20"
+      },
+      "values": {
+        "a": "2",
+        "b": "20"
+      },
+      "text": "The temperature was 2°F at sunset. Overnight it dropped 20 degrees. What was the temperature in the morning?",
+      "answer": "−18",
+      "unit": "°F",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "diver_rise",
+      "picks": {
+        "a": "-48",
+        "b": "14"
+      },
+      "values": {
+        "a": "-48",
+        "b": "14"
+      },
+      "text": "A diver is at −48 feet, below the surface of the sea. She swims up 14 feet. What is her new position?",
+      "answer": "−34",
+      "unit": "feet",
+      "equation": false
+    }
+  ],
+  "answer_key": [
+    "1",
+    "−18 °F",
+    "−34 feet"
+  ],
+  "new_words": [],
+  "review_words": []
+}

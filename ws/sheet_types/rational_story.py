@@ -9,21 +9,25 @@ from the stored picks and recomputes everything exactly. Rules (merged level →
 - `max_value`: no number in the story or the answer above it (default 2000).
 - `max_den`: fraction answers and fractions in the text keep denominators at or below it (default 12).
 - `title`: the sheet title; `story_title` overrides it when a part mixes stories with other pages.
+Penguins math frames (grade 7) add: `signed: true` frames (numbers and answers may be below zero,
+printed with a true minus sign), `show: percent` and `style: percent`, vars `{range: [lo, hi],
+step: s}`, negative [lo, hi] ranges, and floor() / ceil() / abs() in answers (see the yaml header).
 Stored items: the frame id, the picked numbers (`picks`, as text), every number of the story
 (`values`, as text), the printed text, and the answer (as text, written in the frame's style).
 """
 
 from __future__ import annotations
 
+import re
 from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
-from ._rational import evaluate, fmt, parse
+from ._rational import MINUS, evaluate, fmt, parse
 
 MAX_TRIES = 2000
-STYLES = ("whole", "fraction", "decimal", "money")
+STYLES = ("whole", "fraction", "decimal", "money", "percent")
 
 
 def frames_by_id() -> dict[str, dict]:
@@ -34,17 +38,27 @@ def frames_by_id() -> dict[str, dict]:
 
 def _show(x: Fraction, how: str | None) -> str:
     if how == "money":
-        return fmt(x, "money")
+        return fmt(x, "money").replace("-", MINUS)
     if how == "decimal":
-        return fmt(x, "decimal")
-    return fmt(x)
+        return fmt(x, "decimal").replace("-", MINUS)
+    if how == "percent":
+        return _percent(x)
+    return fmt(x).replace("-", MINUS)
+
+
+def _percent(x: Fraction) -> str:
+    if (x * 10).denominator != 1:
+        raise ValueError(f"{x}% needs more than one decimal place")
+    return fmt(x, "decimal").replace("-", MINUS) + "%"
 
 
 def answer_text(frame: dict, x: Fraction) -> str:
     style = frame["style"]
     if style == "money":
-        return "$" + fmt(x, "money")
-    return fmt(x, "decimal" if style == "decimal" else "fraction")
+        return (MINUS if x < 0 else "") + "$" + fmt(abs(x), "money")
+    if style == "percent":
+        return _percent(x)
+    return fmt(x, "decimal" if style == "decimal" else "fraction").replace("-", MINUS)
 
 
 def work_out(frame: dict, picks: dict[str, str], r: dict) -> tuple[dict[str, Fraction], Fraction] | None:
@@ -59,14 +73,17 @@ def work_out(frame: dict, picks: dict[str, str], r: dict) -> tuple[dict[str, Fra
     except (ValueError, ZeroDivisionError):
         return None
     max_value, max_den = r.get("max_value", 2000), r.get("max_den", 12)
-    if any(v <= 0 or v > max_value for v in [*values.values(), answer]):
+    if frame.get("signed"):
+        if any(v == 0 or abs(v) > max_value for v in [*values.values(), answer]):
+            return None
+    elif any(v <= 0 or v > max_value for v in [*values.values(), answer]):
         return None
     if any(values[k].denominator != 1 for k in frame.get("whole", [])):
         return None
     show = frame.get("show", {})
     for k, v in values.items():
         how = show.get(k)
-        if how in ("money", "decimal"):
+        if how in ("money", "decimal", "percent"):
             try:
                 _show(v, how)
             except ValueError:
@@ -90,18 +107,25 @@ def fill_text(frame: dict, values: dict[str, Fraction]) -> str:
     return frame["text"].format(**{k: _show(v, show.get(k)) for k, v in values.items()})
 
 
+def _steps(spec: dict) -> list[str]:
+    """{range: [lo, hi], step: s} -> every number lo, lo + s, … hi, as text."""
+    lo, hi = (parse(str(x)) for x in spec["range"])
+    step = parse(str(spec["step"]))
+    return [fmt(lo + k * step, "decimal") for k in range(int((hi - lo) / step) + 1)]
+
+
 def _pick(rng, spec) -> str:
     if isinstance(spec, dict):
-        return rng.choice(spec["choices"])
+        return rng.choice(spec["choices"] if "choices" in spec else _steps(spec))
     lo, hi = spec
     return str(rng.randint(lo, hi))
 
 
 def _in_spec(value: str, spec) -> bool:
     if isinstance(spec, dict):
-        return value in spec["choices"]
+        return value in (spec["choices"] if "choices" in spec else _steps(spec))
     lo, hi = spec
-    return value.isdigit() and lo <= int(value) <= hi
+    return value.lstrip("-").isdigit() and lo <= int(value) <= hi
 
 
 def story_ok(item: dict, r: dict) -> str | None:
@@ -126,6 +150,8 @@ def story_ok(item: dict, r: dict) -> str | None:
         return f"{frame['id']}: text doesn't match the frame filled with {picks}"
     if item.get("unit") != frame["unit"] or item.get("equation", False) != frame.get("equation", False):
         return f"{frame['id']}: unit or equation line doesn't match the frame"
+    if re.search(r"(^|[\s($])-\d", item.get("text", "") + " " + item.get("answer", "")):
+        return f"{frame['id']}: a hyphen is printed where the minus sign {MINUS} belongs"
     return None
 
 
@@ -156,7 +182,7 @@ class RationalStory(SheetType):
                           "text": fill_text(frame, values), "answer": answer_text(frame, answer),
                           "unit": frame["unit"], "equation": frame.get("equation", False)})
         return SheetContent(title=r.get("story_title", r["title"]), parent_tip=ctx.tip(self.name), items=items,
-                            answer_key=[f"{i['answer']}" if i["unit"] == "$" else f"{i['answer']} {i['unit']}"
+                            answer_key=[f"{i['answer']}" if i["unit"] == "$" else f"{i['answer']} {i['unit']}".rstrip()
                                         for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
@@ -180,7 +206,8 @@ class RationalStory(SheetType):
         tags = sorted(known[f]["tag"] for f in frames if f in known)
         if tags != sorted(r["tags"]):
             issues.append(error(sheet, f"problem kinds {tags} should be {sorted(r['tags'])}"))
-        expected = [i.get("answer") if i.get("unit") == "$" else f"{i.get('answer')} {i.get('unit')}" for i in items]
+        expected = [i.get("answer") if i.get("unit") == "$" else f"{i.get('answer')} {i.get('unit')}".rstrip()
+                    for i in items]
         if sheet.answer_key != expected:
             issues.append(error(sheet, "answer key doesn't match the problems"))
         return issues
