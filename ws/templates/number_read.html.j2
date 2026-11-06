@@ -4,11 +4,27 @@
 .grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px; }
 .grid4 .card { min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 16px; }
 .numbox { width: 150px; height: 150px; border-radius: 24px; background: var(--tint); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 104px; font-weight: 700; line-height: 1; }
+{% if sheet.items[0].kind == "tens" %}
+.numbox.wide { width: 190px; }
+.grid4 .card.side { flex-direction: row; gap: 16px; }
+.side .numbox { width: 140px; height: 140px; font-size: 96px; }
+.frames { display: flex; flex-direction: column; gap: 8px; }
+.frames svg { width: 130px; height: 54px; display: block; }
+.rods svg { display: block; }
+{% endif %}
 {% endblock %}
+{# A ten-frame: 5×2 cells, filled top row first, left to right. #}
+{% macro ten_frame(filled) %}<svg viewBox="0 0 102 42">{% for c in range(10) %}{% set x = 1 + (c % 5) * 20 %}{% set y = 1 + (c // 5) * 20 %}<rect x="{{ x }}" y="{{ y }}" width="20" height="20" fill="#fff" stroke="#1d1d1f" stroke-width="2"/>{% if c < filled %}<circle cx="{{ x + 10 }}" cy="{{ y + 10 }}" r="7" fill="#1d1d1f"/>{% endif %}{% endfor %}</svg>{% endmacro %}
+{# Tens as bars of ten squares, ones as single squares in a column beside them. #}
+{% macro rods(tens, ones) %}{% set s = 14 %}{% set w = tens * (s + 6) + (s + 2 if ones else 0) + 2 %}<svg viewBox="0 0 {{ w }} {{ 10 * s + 2 }}" width="{{ w }}" height="{{ 10 * s + 2 }}">{% for t in range(tens) %}{% for c in range(10) %}<rect x="{{ 1 + t * (s + 6) }}" y="{{ 1 + c * s }}" width="{{ s }}" height="{{ s }}" fill="#F4B184" stroke="#1d1d1f" stroke-width="2"/>{% endfor %}{% endfor %}{% for c in range(ones) %}<rect x="{{ 1 + tens * (s + 6) + 2 }}" y="{{ 1 + (9 - c) * s }}" width="{{ s }}" height="{{ s }}" fill="#F4B184" stroke="#1d1d1f" stroke-width="2"/>{% endfor %}</svg>{% endmacro %}
 {% block body %}
     <div class="grid4">
 {% for item in sheet.items %}
+{% if item.kind == "tens" %}
+      <div class="card{% if item.show == "ten_frames" %} side{% endif %}"><div class="numbox{% if item.n >= 100 %} wide{% endif %}">{{ item.n }}</div>{% if item.show == "ten_frames" %}<div class="frames">{% for f in item.frames %}{{ ten_frame(f) }}{% endfor %}</div>{% else %}<div class="rods">{{ rods(item.tens, item.ones) }}</div>{% endif %}</div>
+{% else %}
       <div class="card"><div class="numbox">{{ item.n }}</div>{{ objects(item.n, item.picture, 44) }}</div>
+{% endif %}
 {% endfor %}
     </div>
 {% endblock %}

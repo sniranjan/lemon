@@ -11,6 +11,7 @@ from ws.plan import plan_new_words, plan_review
 from ws.syllabus import all_levels, load_level
 
 EN7A, MA6A, ZI = load_level("english", "7A"), load_level("math", "6A"), load_level("pencil", "ZI")
+MA5A = load_level("math", "5A")
 
 # (level, page, sheet type override) → one golden file per sheet type
 GOLDEN_PAGES = [
@@ -21,6 +22,9 @@ GOLDEN_PAGES = [
     (MA6A, 81, None),    # count_and_point
     (MA6A, 131, None),   # number_read
     (MA6A, 181, None),   # dots_to_number
+    (MA5A, 91, None),    # number_read with ten-frames, up to 30
+    (MA5A, 181, None),   # number_sequence, 4 gaps per track
+    (MA5A, 200, None),   # number_read with tens bars, up to 100
     (ZI, 11, None),      # colouring, two shapes
     (ZI, 100, None),     # line_path, mixed curves
 ]
@@ -42,7 +46,7 @@ def test_golden(level, page, sheet_type, out_dir, fixture_content, golden):
     golden(f"{sheet.id}.json", sheet.model_dump_json(indent=2) + "\n")
 
 
-@pytest.mark.parametrize("level", [MA6A, ZI], ids=lambda l: l.level)
+@pytest.mark.parametrize("level", [MA6A, MA5A, ZI], ids=lambda l: l.level)
 def test_whole_level_passes_type_checks(level, fixture_content):
     plan = gen.build_plan(level)
     for page in range(1, level.pages + 1):
@@ -105,7 +109,7 @@ def test_select_pages_continues_and_completes(out_dir, fixture_content):
 
 WORST_CASES = [
     (EN7A, [4], "word_picture_sentence"), (EN7A, [101, 141, 142, 143], None),
-    (MA6A, [75, 81, 131, 132, 190], None), (ZI, [1, 11, 30, 42, 50, 90, 100], None),
+    (MA6A, [75, 81, 131, 132, 190], None), (MA5A, [91, 100, 130, 181, 200], None), (ZI, [1, 11, 30, 42, 50, 90, 100], None),
 ]
 
 

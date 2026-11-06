@@ -10,3 +10,6 @@ number_read:
 dots_to_number:
   - "Count the dots together, touching each one. Then say the number next to them."
   - "Look at the dots. Count them, then read the number together."
+number_sequence:
+  - "Read each row together from the first number. When you reach an empty box, let your child say the missing number."
+  - "Touch each box as you count along. Pause at the empty boxes and let your child fill them in out loud."
