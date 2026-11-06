@@ -14,14 +14,15 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
   bumps, S-curves). Lanes go from 52 to 32 px. Verify samples each lane, so it never turns back and
   stays clear of the page edges and of other lanes. ZI output is unchanged.
-- **Word bank: 160 of ~200 words** in `content/vocab/english.yaml` (file order = introduction order,
+- **Word bank: Chicks complete, 200 words** in `content/vocab/english.yaml` (file order = introduction order,
   2 new words per page), all with original pictures in `assets/pictures/` and licence entries.
   | Batch | Words | 7A pages | Approved | Commit |
   |---|---|---|---|---|
   | 1 | 1–40 | 1–20 | 2026-11-03 | fa361bd |
   | 2 | 41–80 (incl. 6 color words, drawn as crayons) | 21–40 | 2026-11-03 | 1ba6f36 |
   | 3 | 81–120 (incl. 8 action words) | 41–60 | 2026-11-05 | baf79f9 |
-  | 4 | 121–160 (hose for glasses; brown/black crayons; 40 pictures, `draw_7A_batch4.py`) | 61–80 | 2026-11-06 | this branch |
+  | 4 | 121–160 (hose for glasses; brown/black crayons; 40 pictures, `draw_7A_batch4.py`) | 61–80 | 2026-11-06 | merged |
+  | 5 | 161–200, the last Chicks batch (gray crayon; popcorn/honey `mass`; 40 pictures + neck and pour redrawn, `draw_7A_batch5.py`) | 81–100 | 2026-11-06 | this branch |
 
   Ducklings Reading (EN 6A) words, `level: 6A`, one new word a page (target 80):
   | Batch | Words | 6A pages | Approved | Commit |
@@ -30,11 +31,16 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   | 6A-2 | 40 (8 animals, 6 actions incl. "push" for "laugh", 6 food, 3 toys, 5 home, 4 clothes, 5 nature, toe, thumb, family); 40 pictures (`draw_batch5.py`) | 151–190 | 2026-11-06 | merged |
 
   **Rule (user, 2026-11-06):** the 80 Ducklings words must not be reused as new words in Chicks batches 4–5.
-- Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): EN 7A pages 1–80 and 101–200;
+- **Chicks Reading (EN 7A) is complete: 200/200 pages** (2026-11-06). Verify checks the full exposure rules
+  (every Chicks word seen ≥ 3 times) with 0 errors; booklets: one per section plus `chicks-reading-level.pdf`
+  (202 pages = cover + 200 + log); no answers PDF (Chicks Reading has no answer keys). Ducklings Reading was
+  regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
+  pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
+- Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
   **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
-- `ws verify`: 0 errors after merging Chicks batch 4 and Ducklings batch 2 (regenerate 7A and 6A first;
-  expected warnings: color-word pages; Chicks word bank covers 80 of 100 new-word pages).
-- `uv run pytest`: see the latest run (152+ tests).
+- `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
+  the color-word pages of Chicks and Ducklings Reading).
+- `uv run pytest`: 203 passed (2026-11-06).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -50,14 +56,13 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
 
 ## Next steps
-1. **Batch 5** (words 161–200, 7A pages 81–100): draft a table and wait for the user's OK; avoid every
-   Ducklings word (`syllabus/drafts/6A-words-batch*.md`). That completes 7A-A's word bank. Plural words go
-   in `plural:` in `content/phrases/english.yaml` (stories and phrases then avoid "... is ...").
+1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in
+   `content/phrases/english.yaml` (stories and phrases then avoid "... is ...").
 2. Sentence-sense fixes: done (2026-11-06). Hand-checked `eatable`, `ownable`, `the_only` lists in
    `content/phrases/english.yaml`; story "my"/"I have" frames only for ownable words; `frames_by_word` for
    wash/ride; `tests/test_sentence_sense.py` scans every Chicks + Ducklings sentence. New words in later
    batches must be added to `ownable` / `eatable` by hand when they fit.
-3. Then generate all of EN 7A, MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
+3. EN 7A: done. Then generate all of MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
 4. `ws vocab stats` is a stub (exits 2); implement it when needed.
 5. Ducklings Reading is done (200/200). The live free preview may now differ from the rebuilt pages:
    rebuild with `ws preview` and re-upload only when the user says so.
@@ -78,6 +83,6 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 ## Picture workflow
 - `scripts/pictures/draw_batchN.py <out_dir>` wrote each batch's SVGs. They are a record only:
   the SVGs in `assets/pictures/` are the source of truth, so **don't re-run old batch scripts**
-  (later fixes may be overwritten). Copy the helpers from the latest `draw_batch5.py` into a new
-  `draw_batch6.py` for the next batch.
+  (later fixes may be overwritten). Chicks batches are `draw_7A_batchN.py`, Ducklings ones
+  `draw_batchN.py`; copy the helpers from `draw_7A_batch5.py` (it merges both sets) into a new script.
 - `scripts/pictures/zoom.py out.png name …` renders chosen pictures large for a close look.

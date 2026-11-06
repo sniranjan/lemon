@@ -21,7 +21,11 @@ frames_by_category:
   actions: ["I can {w}.", "I like to {w}."]
 # Body and family words: "my" is always true ("I touch my nose.", "I hug my grandma.").
 my_categories: [family, body]
-# Actions that need an object to make sense ("I can wash." / "I can ride.").
+# Words with their own frames: actions that need an object ("I can wash." / "I can ride."), and a few more.
 frames_by_word:
   wash: ["I {w} my hand.", "I {w} my hair."]
   ride: ["I {w} my bike.", "I can {w} my bike."]
+  # Chicks word batch 5: "I can blow." and "I like to yawn." are odd; "I touch my tongue." is not for a worksheet.
+  blow: ["I {w} my whistle.", "I can {w} my whistle."]
+  yawn: ["I can {w}.", "I {w}."]
+  tongue: ["This is my {w}.", "Look at my {w}.", "Here is my {w}."]
