@@ -1,0 +1,73 @@
+{
+  "id": "MA-3A-C-001",
+  "subject": "math",
+  "level": "3A",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "add_facts",
+  "page_number": 71,
+  "variant": 1,
+  "seed": 2036446674139050161,
+  "title": "Add 1",
+  "parent_tip": "Point to the number and count one more. The top box and the bottom box get the same answer.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 11,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    },
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    },
+    {
+      "kind": "fact",
+      "a": 9,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    },
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 1,
+      "bridge": true
+    }
+  ],
+  "answer_key": [
+    12,
+    12,
+    3,
+    3,
+    11,
+    11,
+    10,
+    10,
+    5,
+    5,
+    2,
+    2
+  ],
+  "new_words": [],
+  "review_words": []
+}

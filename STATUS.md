@@ -9,6 +9,14 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Math 5A (Ducklings math)**: `syllabus/math/5A.yaml`, 200 pages, sections A–E with `standards:`.
   `number_read` gained `show: ten_frames | rods` (11–30 as ten-frames, 51–100 as tens bars);
   new `number_sequence` (tracks with gaps to say aloud). All 200 pages verify with 0 errors.
+- **Math 3A (Kittens math, 200 pages)** (2026-11-06): `syllabus/math/3A.yaml`, sections A What Comes Next to 100
+  (1–60) · B What Comes Next to 120 (61–70) · C Plus One (71–130) · D Plus Two (131–160) · E Plus Three
+  (161–180) · F Plus One, Two or Three (181–200), with `standards:` and per-section SCT. New sheet types
+  `next_number` and `add_facts` (general: `op`, `addend`/`second`, `min_first`/`max_first`, `new_from`,
+  `rows`, `bridge`; C shows "n → box" above "n + 1 = box"). `max_first` follows CLAUDE.md §5 (sums up to the
+  chart's number: "up to 14+2" = `max_first: 12`). All 200 pages verify with 0 errors; booklets per
+  section + `kittens-math-level.pdf` (202 pages) and `-answers.pdf` files. The Kittens free preview waits
+  for Kittens Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -37,7 +45,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 3A, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
 - `uv run pytest`: 203 passed (2026-11-06).

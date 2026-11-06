@@ -262,8 +262,8 @@ test.** Nothing else in the code should change.
 | `number_sequence` | MA 5A-B/C/D | 4 tracks of 10 consecutive numerals with `gaps` empty boxes to say aloud (first box always shown, gaps never side by side); answer key = the gap numbers |
 | `number_trace` | MA 4A-A | Large dotted numerals to trace |
 | `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
-| `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
-| `add_facts` | MA 3A-C…F, 2A | Vertical list of `a + b =` facts within the part's range; answer key generated |
+| `next_number` | MA 3A-A/B | "Write the number that comes next": two columns of `n → box` (`order: run` or `mixed`; `max` is the largest answer) |
+| `add_facts` | MA 3A-C…F, 2A | Two columns of `a + b = box` facts within the part's range (`op`, `addend`/`second` one number or a list, `min_first`/`max_first`, `new_from`, `rows`); answer key generated, one answer per box. `bridge: N` (+1 only) shows `n → box` above `n + 1 = box`; reusable for subtraction (`op: "-"`) |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the

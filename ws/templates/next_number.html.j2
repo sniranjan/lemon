@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import arrow with context %}
+{% block style %}
+.cols { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.col { min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.col .card { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 8px 18px; }
+.num { min-width: 96px; height: 84px; padding: 0 10px; border-radius: 16px; background: var(--tint); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 700; line-height: 1; }
+.answer { width: 110px; height: 84px; border: 3px dashed var(--accent); border-radius: 16px; background: #fff; }
+{% endblock %}
+{% block body %}
+{% set half = (sheet.items | length) // 2 %}
+    <div class="cols">
+{% for col in [sheet.items[:half], sheet.items[half:]] %}
+      <div class="col">
+{% for item in col %}
+        <div class="card"><div class="num">{{ item.n }}</div>{{ arrow() }}<div class="answer"></div></div>
+{% endfor %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
