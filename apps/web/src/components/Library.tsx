@@ -62,11 +62,19 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
         <SheetPreview level={level} className="h-full" />
       </div>
 
+      {/* While peeking, the buttons float on the sheet so they're easy to reach (the pocket drops out of the way). */}
+      <div
+        className="invisible absolute inset-x-4 top-[262px] z-20 flex translate-y-3 flex-wrap justify-center gap-2 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-none [&>a]:shadow-[0_3px_0_0_var(--ink)] [&>button]:shadow-[0_3px_0_0_var(--ink)] [&>span]:bg-white"
+      >
+        <PreviewButton level={level} hasPreview={hasPreview} />
+        {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} />}
+      </div>
+
       {/* The pocket: slides down on hover / tap to reveal the sheet. */}
       <div
         className={cn(
           "absolute inset-x-0 bottom-0 z-10 h-[64%] rounded-t-[1.75rem] border-t-[3px] border-ink p-5 text-ink transition-transform duration-500 ease-[cubic-bezier(.2,.9,.3,1.1)]",
-          "peek:translate-y-[calc(100%-92px)] motion-reduce:transition-none",
+          "peek:translate-y-[calc(100%-62px)] motion-reduce:transition-none",
           BG[level.color],
         )}
       >
@@ -74,7 +82,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
           <h3 className="text-3xl font-bold leading-none">{level.name}</h3>
           <p className="shrink-0 text-sm font-extrabold opacity-80">Age {level.age}</p>
         </div>
-        <div className="mt-2 flex items-center gap-2">
+        <div className="mt-2 flex items-center gap-2 transition-all duration-300 peek:invisible peek:opacity-0">
           <PreviewButton level={level} hasPreview={hasPreview} />
           {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} />}
         </div>

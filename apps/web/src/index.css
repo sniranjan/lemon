@@ -10,12 +10,12 @@
 /* Dark mode only via an explicit .dark class (never set), so shadcn's dark: styles stay off. */
 @custom-variant dark (&:is(.dark *));
 
-/* "peek": a level card is open (mouse hover, keyboard focus, or tapped on touch screens). */
+/* "peek": a level card is open (mouse hover, keyboard focus on it or its buttons, or tapped on touch screens). */
 @custom-variant peek {
   @media (hover: hover) {
     &:is(.group:hover *) { @slot; }
   }
-  &:is(.group:focus-visible *, .group[data-open="true"] *) { @slot; }
+  &:is(.group:focus-visible *, .group:has(:focus-visible) *, .group[data-open="true"] *) { @slot; }
 }
 
 /* Bright, kid-friendly palette. Each color is used as a fill with ink text on top, so contrast holds. */
