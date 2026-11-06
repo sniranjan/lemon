@@ -17,6 +17,14 @@ app.use("*", async (c, next) => {
 
 app.get("/api/health", (c) => c.json({ ok: true }));
 
+// Short, clean links for profiles and posts that land with campaign tags (shows up in Google Analytics).
+const SHORT_LINKS: Record<string, string> = {
+  "/ig": "/?utm_source=instagram&utm_medium=bio",
+};
+for (const [path, target] of Object.entries(SHORT_LINKS)) {
+  app.get(path, (c) => c.redirect(target, 302));
+}
+
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const AGES = new Set(["2", "3", "4", "5", "6", "7+"]);
 
