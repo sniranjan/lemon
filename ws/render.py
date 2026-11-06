@@ -10,6 +10,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 from . import longreads, registry, trace_font
+from .sheet_types import _rational
 from .models import Level, Sheet
 from .syllabus import ROOT
 
@@ -28,6 +29,9 @@ _env = Environment(loader=FileSystemLoader(TEMPLATES), undefined=StrictUndefined
 _env.globals["trace"] = trace_font.svg       # dotted letters to trace (letter_trace, word_trace)
 _env.globals["trace_row"] = trace_font.row
 _env.globals["split_targets"] = longreads.split_targets   # Owls Reading: bold words to work out
+_env.filters["frac_parts"] = _rational.parts      # "2 1/2" -> whole, num, den for stacked fractions
+_env.filters["minus"] = _rational.show            # "-3" -> "−3" (the true minus sign)
+_env.filters["pretty"] = _rational.pretty         # "3*n+4" -> "3n + 4"
 
 
 def write_html(sheet: Sheet, level: Level, path: Path) -> None:
@@ -86,6 +90,8 @@ MIN_TIP_PX = 16
 def min_child_px(level: str, subject: str | None = None) -> int:
     if subject == "math" and level == "4A":
         return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
+    if subject == "math" and level == "M6":
+        return 22   # Pandas Math (age 9): grid labels and stacked fractions may go down to 22px
     if level[:1] == "R" and level[1:].isdigit():
         return 20   # our own reading levels (Foxes on): grade 3+ passages
     return 20 if level in {"4A", "3A", "2A"} else 28

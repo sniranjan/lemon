@@ -31,6 +31,10 @@ CATALOGUE: frozenset[str] = frozenset({
     # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
     "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
     "order_of_operations", "box_volume",
+    # Pandas math (M6; dividing fractions extends fraction_ops): ratios, rates, percents, negatives, the coordinate
+    # plane, expressions and one-step equations
+    "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",

@@ -17,6 +17,15 @@ Rules (merged level → section → part):
 - `layout`: list (default; 8 a page) or area (mul only: a unit square cut into columns by the first
   fraction's denominator and rows by the second's, both shaded, 4 a page).
 - `problems`, `title`.
+
+Dividing (Pandas math, 6.NS.1) is `op: div`, with its own rules (Otters pages never use them):
+- `dividend`, `divisor`: kinds the problems cycle through, in order: `whole` (3), `proper` (3/4),
+  `mixed` (2 1/2), `unit` (1/5, divisor only). `max_den`, `max_whole`: the largest denominator and whole.
+- `layout`: list (as above) or model (5 rows: whole bars cut into pieces the size of a unit-fraction
+  divisor, the dividend's pieces shaded, `bar` = {bars, pieces, shaded}; every answer is whole and at
+  least 2, at most `max_pieces` pieces drawn). On a list, `max_answer_den` (default 12) and
+  `max_answer` (default 20) keep answers friendly, and no answer is 1.
+Keep-change-flip is in the parent tips only, never on the child's page.
 """
 
 from __future__ import annotations
@@ -27,16 +36,54 @@ from math import gcd, lcm
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
-from ._exact import frac_str, is_simplest, operand, value
+from ._exact import as_mixed, frac_str, is_simplest, operand, value
 
 PROBLEMS = 8
 MAX_TRIES = 20000
-SIGN = {"add": "+", "sub": "−", "mul": "×"}
+SIGN = {"add": "+", "sub": "−", "mul": "×", "div": "÷"}
+DIV_DENS = (2, 3, 4, 5, 6, 8, 10, 12)
 
 
 def answer(item: dict) -> Fraction:
     a, b = value(item["a"]), value(item["b"])
-    return {"add": a + b, "sub": a - b, "mul": a * b}[item["op"]]
+    return {"add": a + b, "sub": a - b, "mul": a * b, "div": a / b}[item["op"]]
+
+
+# --- dividing (Pandas math) ------------------------------------------------------------------
+
+def div_kind(x: Fraction) -> str:
+    if x.denominator == 1:
+        return "whole"
+    if x < 1:
+        return "unit" if x.numerator == 1 else "proper"
+    return "mixed"
+
+
+def model_bar(a: Fraction, b: Fraction) -> dict:
+    """Whole bars, each cut into pieces the size of b; the dividend's pieces are shaded."""
+    return {"bars": -(-a.numerator // a.denominator), "pieces": b.denominator, "shaded": int(a * b.denominator)}
+
+
+def _div_pick(rng, kind: str, r: dict) -> Fraction:
+    if kind == "whole":
+        return Fraction(rng.randint(1, r["max_whole"]))
+    d = rng.choice([d for d in DIV_DENS if d <= r["max_den"]])
+    if kind == "unit":
+        return Fraction(1, d)
+    x = Fraction(rng.randint(1, d - 1), d)
+    return x if kind == "proper" else rng.randint(1, r["max_whole"]) + x
+
+
+def divide_ok(r: dict, a: Fraction, b: Fraction) -> bool:
+    q = a / b
+    if r.get("layout") == "model":
+        return (b.numerator == 1 and q.denominator == 1 and q >= 2 and (a * b.denominator).denominator == 1
+                and model_bar(a, b)["bars"] * b.denominator <= r.get("max_pieces", 24))
+    return q != 1 and q.denominator <= r.get("max_answer_den", 12) and q <= r.get("max_answer", 20)
+
+
+def _as_operand(x: Fraction) -> dict:
+    return as_mixed(x)
 
 
 def needs_simplify(item: dict) -> bool:
@@ -136,6 +183,8 @@ class FractionOps(SheetType):
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r, rng = ctx.rules, ctx.rng
+        if r["op"] == "div":
+            return self._generate_divide(ctx)
         n = r.get("problems", PROBLEMS)
         ops = _ops(r, n, rng)
         wholes = _wholes(r, ops, rng)
@@ -168,10 +217,77 @@ class FractionOps(SheetType):
         return SheetContent(title=r["title"], parent_tip=ctx.tip(self.name), items=items,
                             answer_key=[frac_str(answer(i)) for i in items])
 
+    def _generate_divide(self, ctx: GenContext) -> SheetContent:
+        r, rng = ctx.rules, ctx.rng
+        layout = r.get("layout", "list")
+        items, seen = [], set()
+        for k in range(r.get("problems", PROBLEMS)):
+            ka, kb = r["dividend"][k % len(r["dividend"])], r["divisor"][k % len(r["divisor"])]
+            for _ in range(MAX_TRIES):
+                a, b = _div_pick(rng, ka, r), _div_pick(rng, kb, r)
+                if (a, b) not in seen and div_kind(a) == ka and div_kind(b) == kb and divide_ok(r, a, b):
+                    break
+            else:
+                raise ValueError(f"fraction_ops: no {ka} ÷ {kb} problem fits {r}")
+            seen.add((a, b))
+            item = {"kind": "fraction", "layout": layout, "op": "div", "sign": SIGN["div"],
+                    "a": _as_operand(a), "b": _as_operand(b), "n": k + 1}
+            if layout == "model":
+                item["bar"] = model_bar(a, b)
+            items.append(item)
+        return SheetContent(title=r["title"], parent_tip=ctx.tip(self.name), items=items,
+                            answer_key=[frac_str(answer(i)) for i in items])
+
+    def _verify_divide(self, sheet: Sheet, r: dict) -> list[Issue]:
+        issues: list[Issue] = []
+        items = sheet.items
+        layout = r.get("layout", "list")
+        if len(items) != r.get("problems", PROBLEMS):
+            issues.append(error(sheet, f"{len(items)} problems; the part asks for {r.get('problems', PROBLEMS)}"))
+        if [i.get("n") for i in items] != list(range(1, len(items) + 1)):
+            issues.append(error(sheet, "problems are not numbered 1, 2, 3… in order"))
+        seen = set()
+        for k, i in enumerate(items):
+            label = f"problem {i.get('n')}"
+            if i.get("op") != "div" or i.get("sign") != "÷" or i.get("layout") != layout:
+                issues.append(error(sheet, f"{label}: should be a ÷ problem in the {layout} layout"))
+                continue
+            if not all(is_simplest(o) and o["whole"] >= 0 for o in (i["a"], i["b"])):
+                issues.append(error(sheet, f"{label}: numbers aren't in simplest form"))
+                continue
+            a, b = value(i["a"]), value(i["b"])
+            if a <= 0 or b <= 0:
+                issues.append(error(sheet, f"{label}: numbers must be above 0"))
+                continue
+            ka, kb = r["dividend"][k % len(r["dividend"])], r["divisor"][k % len(r["divisor"])]
+            if div_kind(a) != ka or div_kind(b) != kb:
+                issues.append(error(sheet, f"{label}: should be {ka} ÷ {kb}"))
+            if max(a.denominator, b.denominator) > r["max_den"] or max(int(a), int(b)) > r["max_whole"]:
+                issues.append(error(sheet, f"{label}: numbers are bigger than this part allows"))
+            if not divide_ok(r, a, b):
+                issues.append(error(sheet, f"{label}: {frac_str(a)} ÷ {frac_str(b)} = {frac_str(a / b)} "
+                                           f"doesn't fit this part"))
+            if (a, b) in seen:
+                issues.append(error(sheet, f"{label} appears twice"))
+            seen.add((a, b))
+            if layout == "model" and i.get("bar") != model_bar(a, b):
+                issues.append(error(sheet, f"{label}: the bar should be {model_bar(a, b)}"))
+            if layout != "model" and "bar" in i:
+                issues.append(error(sheet, f"{label}: only model pages have bars"))
+        try:
+            expected = [frac_str(answer(i)) for i in items]
+        except (ValueError, ZeroDivisionError, KeyError) as e:
+            return issues + [error(sheet, f"can't work out the answers: {e}")]
+        if sheet.answer_key != expected:
+            issues.append(error(sheet, f"answer key {sheet.answer_key} doesn't match the problems {expected}"))
+        return issues
+
     def verify(self, sheet: Sheet) -> list[Issue]:
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if r["op"] == "div":
+            return self._verify_divide(sheet, r)
         issues: list[Issue] = []
         n = r.get("problems", PROBLEMS)
         if len(sheet.items) != n:

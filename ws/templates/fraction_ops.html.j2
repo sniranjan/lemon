@@ -1,6 +1,6 @@
 {% extends "base.html.j2" %}
 {# Fraction problems with stacked fractions (never slashes). list: 8 problems, 2 columns, room below
-   each to rename the fractions. area: 4 problems, each over a unit square cut into columns (first
+   each to rename the fractions. model (dividing, Pandas): 5 rows, each with fraction bars to count on. area: 4 problems, each over a unit square cut into columns (first
    fraction's denominator) and rows (second's), the two fractions shaded with crossing stripes. #}
 {% set layout = sheet.items[0].layout %}
 {% macro num(o) %}<span class="opnd">{% if o.whole or not o.num %}<span class="whole">{{ o.whole }}</span>{% endif %}{% if o.num %}<span class="fr"><span>{{ o.num }}</span><span class="bar"></span><span>{{ o.den }}</span></span>{% endif %}</span>{% endmacro %}
@@ -21,6 +21,17 @@
 .work { margin-top: auto; width: 88%; border-bottom: 2px dashed #c9c9ce; height: 1px; }
 .area .card { justify-content: space-around; padding-top: 16px; }
 .area .ans { height: 82px; }
+{% if layout == "model" %}
+/* dividing (Pandas math): one problem a row with whole bars cut into divisor-sized pieces */
+.model { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+.model .card { flex-direction: row; align-items: center; justify-content: flex-start; gap: 26px; padding: 8px 22px 8px 34px; }
+.model .eqn { min-width: 320px; }
+.bars { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.pbar { display: flex; height: 28px; border: 3px solid var(--ink); border-radius: 5px; overflow: hidden; }
+.pbar i { flex: 1; border-left: 2px solid var(--ink); background: #fff; }
+.pbar i:first-child { border-left: 0; }
+.pbar i.on { background: repeating-linear-gradient(45deg, #fff 0 4px, var(--accent) 4px 7px); }
+{% endif %}
 {% endblock %}
 {% block body %}
     <div class="problems {{ layout }}">
@@ -44,6 +55,13 @@
           <rect x="0" y="0" width="{{ S }}" height="{{ S }}" fill="none" stroke="#1d1d1f" stroke-width="4"/>
         </svg>
         {{ eqn(i) }}
+{% elif layout == "model" %}
+        {{ eqn(i) }}
+        <div class="bars">
+{% for bar in range(i.bar.bars) %}
+          <div class="pbar">{% for k in range(i.bar.pieces) %}<i{% if bar * i.bar.pieces + k < i.bar.shaded %} class="on"{% endif %}></i>{% endfor %}</div>
+{% endfor %}
+        </div>
 {% else %}
         {{ eqn(i) }}
         <div class="work"></div>

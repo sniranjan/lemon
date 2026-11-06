@@ -11,3 +11,6 @@ dist/
 apps/web/public/pictures/
 apps/web/src/data/ladder.json
 .claude/worktrees/
+
+# secrets
+.env

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pandas · Math · page 121</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.plane { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.plane .card { position: relative; min-height: 0; border-radius: 22px; }
+.top { flex: 1; display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
+svg.grid text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+.lists { flex: 1; display: flex; flex-direction: column; gap: 18px; }
+.lists h2 { margin: 0 0 4px; font-size: 22px; line-height: 1.15; color: var(--accent); }
+.row { display: flex; align-items: center; gap: 4px; font-size: 24px; font-weight: 700; white-space: nowrap; }
+.row .L { width: 22px; }
+.box { display: inline-block; width: 38px; height: 40px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
+.dists { display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 12px 22px; }
+.drow { display: flex; align-items: center; gap: 10px; font-size: 24px; }
+.drow .box { width: 60px; }
+.qn { font-size: 13px; font-weight: 700; color: #8a8a90; width: 14px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Pandas · Math</div>
+      <div class="title-row"><h1>Coordinate plane</h1><span class="pill">Pandas · 121</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Read x first, across, then y, up or down: (3, −2) means 3 right and 2 down from the center.</div>
+  <main class="body">
+    <div class="plane">
+      <div class="card top">
+        <svg class="grid" width="502" height="506" viewBox="0 0 502 506">
+          <line x1="26" x2="26" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="472" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="64" x2="64" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="434" y2="434" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="102" x2="102" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="396" y2="396" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="140" x2="140" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="358" y2="358" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="178" x2="178" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="320" y2="320" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="216" x2="216" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="282" y2="282" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="254" x2="254" y1="16" y2="472" stroke="#1d1d1f" stroke-width="3.5"/>
+          <line x1="26" x2="482" y1="244" y2="244" stroke="#1d1d1f" stroke-width="3.5"/>
+          <line x1="292" x2="292" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="206" y2="206" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="330" x2="330" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="168" y2="168" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="368" x2="368" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="130" y2="130" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="406" x2="406" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="92" y2="92" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="444" x2="444" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="54" y2="54" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="482" x2="482" y1="16" y2="472" stroke="#9a9aa0" stroke-width="1.2"/>
+          <line x1="26" x2="482" y1="16" y2="16" stroke="#9a9aa0" stroke-width="1.2"/>
+          <text class="pt" x="26" y="268" text-anchor="middle" style="font-size: 22px">−6</text>
+          <text class="pt" x="248" y="480" text-anchor="end" style="font-size: 22px">−6</text>
+          <text class="pt" x="64" y="268" text-anchor="middle" style="font-size: 22px">−5</text>
+          <text class="pt" x="248" y="442" text-anchor="end" style="font-size: 22px">−5</text>
+          <text class="pt" x="102" y="268" text-anchor="middle" style="font-size: 22px">−4</text>
+          <text class="pt" x="248" y="404" text-anchor="end" style="font-size: 22px">−4</text>
+          <text class="pt" x="140" y="268" text-anchor="middle" style="font-size: 22px">−3</text>
+          <text class="pt" x="248" y="366" text-anchor="end" style="font-size: 22px">−3</text>
+          <text class="pt" x="178" y="268" text-anchor="middle" style="font-size: 22px">−2</text>
+          <text class="pt" x="248" y="328" text-anchor="end" style="font-size: 22px">−2</text>
+          <text class="pt" x="216" y="268" text-anchor="middle" style="font-size: 22px">−1</text>
+          <text class="pt" x="248" y="290" text-anchor="end" style="font-size: 22px">−1</text>
+          <text class="pt" x="292" y="268" text-anchor="middle" style="font-size: 22px">1</text>
+          <text class="pt" x="248" y="214" text-anchor="end" style="font-size: 22px">1</text>
+          <text class="pt" x="330" y="268" text-anchor="middle" style="font-size: 22px">2</text>
+          <text class="pt" x="248" y="176" text-anchor="end" style="font-size: 22px">2</text>
+          <text class="pt" x="368" y="268" text-anchor="middle" style="font-size: 22px">3</text>
+          <text class="pt" x="248" y="138" text-anchor="end" style="font-size: 22px">3</text>
+          <text class="pt" x="406" y="268" text-anchor="middle" style="font-size: 22px">4</text>
+          <text class="pt" x="248" y="100" text-anchor="end" style="font-size: 22px">4</text>
+          <text class="pt" x="444" y="268" text-anchor="middle" style="font-size: 22px">5</text>
+          <text class="pt" x="248" y="62" text-anchor="end" style="font-size: 22px">5</text>
+          <text class="pt" x="482" y="268" text-anchor="middle" style="font-size: 22px">6</text>
+          <text class="pt" x="248" y="24" text-anchor="end" style="font-size: 22px">6</text>
+          <text class="pt" x="490" y="252" style="font-size: 24px; font-style: italic">x</text>
+          <text class="pt" x="262" y="36" style="font-size: 24px; font-style: italic">y</text>
+          <circle cx="292" cy="434" r="7" fill="#B4410C" stroke="#1d1d1f" stroke-width="2"/>
+          <text class="pt" x="301" y="426" style="font-size: 24px; fill: #B4410C">A</text>
+          <circle cx="140" cy="320" r="7" fill="#B4410C" stroke="#1d1d1f" stroke-width="2"/>
+          <text class="pt" x="149" y="312" style="font-size: 24px; fill: #B4410C">B</text>
+          <circle cx="444" cy="54" r="7" fill="#B4410C" stroke="#1d1d1f" stroke-width="2"/>
+          <text class="pt" x="453" y="46" style="font-size: 24px; fill: #B4410C">C</text>
+          <circle cx="26" cy="130" r="7" fill="#B4410C" stroke="#1d1d1f" stroke-width="2"/>
+          <text class="pt" x="35" y="122" style="font-size: 24px; fill: #B4410C">D</text>
+        </svg>
+        <div class="lists">
+          <div><h2>Write the point</h2>
+            <div class="row"><span class="L">A</span><span>(</span><span class="box"></span><span>,</span><span class="box"></span><span>)</span></div>
+            <div class="row"><span class="L">B</span><span>(</span><span class="box"></span><span>,</span><span class="box"></span><span>)</span></div>
+            <div class="row"><span class="L">C</span><span>(</span><span class="box"></span><span>,</span><span class="box"></span><span>)</span></div>
+            <div class="row"><span class="L">D</span><span>(</span><span class="box"></span><span>,</span><span class="box"></span><span>)</span></div>
+          </div>
+          <div><h2>Plot the point</h2>
+            <div class="row"><span class="L">E</span><span>(−2, 1)</span></div>
+            <div class="row"><span class="L">F</span><span>(3, −1)</span></div>
+            <div class="row"><span class="L">G</span><span>(0, −6)</span></div>
+            <div class="row"><span class="L">H</span><span>(1, 5)</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card dists">
+        <div class="drow"><span class="qn" data-audience="parent">1</span><span>How far is (3, −4) from (3, 1)?</span><span class="box"></span><span>units</span></div>
+        <div class="drow"><span class="qn" data-audience="parent">2</span><span>How far is (−2, −1) from (5, −1)?</span><span class="box"></span><span>units</span></div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Pandas · Math · page 121</footer>
+</div>
+</body>
+</html>

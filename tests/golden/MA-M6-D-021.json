@@ -1,0 +1,135 @@
+{
+  "id": "MA-M6-D-021",
+  "subject": "math",
+  "level": "M6",
+  "section": "D",
+  "part": 3,
+  "sheet_type": "coordinate_grid",
+  "page_number": 121,
+  "variant": 1,
+  "seed": 5558298002469674241,
+  "title": "Coordinate plane",
+  "parent_tip": "Read x first, across, then y, up or down: (3, −2) means 3 right and 2 down from the center.",
+  "items": [
+    {
+      "kind": "read",
+      "label": "A",
+      "x": 1,
+      "y": -5,
+      "px": 292,
+      "py": 434,
+      "n": 1,
+      "answer": "A (1, −5)"
+    },
+    {
+      "kind": "read",
+      "label": "B",
+      "x": -3,
+      "y": -2,
+      "px": 140,
+      "py": 320,
+      "n": 2,
+      "answer": "B (−3, −2)"
+    },
+    {
+      "kind": "read",
+      "label": "C",
+      "x": 5,
+      "y": 5,
+      "px": 444,
+      "py": 54,
+      "n": 3,
+      "answer": "C (5, 5)"
+    },
+    {
+      "kind": "read",
+      "label": "D",
+      "x": -6,
+      "y": 3,
+      "px": 26,
+      "py": 130,
+      "n": 4,
+      "answer": "D (−6, 3)"
+    },
+    {
+      "kind": "plot",
+      "label": "E",
+      "x": -2,
+      "y": 1,
+      "px": 178,
+      "py": 206,
+      "n": 5,
+      "answer": "E plotted at (−2, 1)"
+    },
+    {
+      "kind": "plot",
+      "label": "F",
+      "x": 3,
+      "y": -1,
+      "px": 368,
+      "py": 282,
+      "n": 6,
+      "answer": "F plotted at (3, −1)"
+    },
+    {
+      "kind": "plot",
+      "label": "G",
+      "x": 0,
+      "y": -6,
+      "px": 254,
+      "py": 472,
+      "n": 7,
+      "answer": "G plotted at (0, −6)"
+    },
+    {
+      "kind": "plot",
+      "label": "H",
+      "x": 1,
+      "y": 5,
+      "px": 292,
+      "py": 54,
+      "n": 8,
+      "answer": "H plotted at (1, 5)"
+    },
+    {
+      "kind": "distance",
+      "p1": [
+        3,
+        -4
+      ],
+      "p2": [
+        3,
+        1
+      ],
+      "n": 9,
+      "answer": "5 units"
+    },
+    {
+      "kind": "distance",
+      "p1": [
+        -2,
+        -1
+      ],
+      "p2": [
+        5,
+        -1
+      ],
+      "n": 10,
+      "answer": "7 units"
+    }
+  ],
+  "answer_key": [
+    "A (1, −5)",
+    "B (−3, −2)",
+    "C (5, 5)",
+    "D (−6, 3)",
+    "E plotted at (−2, 1)",
+    "F plotted at (3, −1)",
+    "G plotted at (0, −6)",
+    "H plotted at (1, 5)",
+    "5 units",
+    "7 units"
+  ],
+  "new_words": [],
+  "review_words": []
+}
