@@ -9,7 +9,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
-from . import longreads, registry, trace_font
+from . import algebra, longreads, registry, trace_font
 from .sheet_types import _rational
 from .models import Level, Sheet
 from .syllabus import ROOT
@@ -29,6 +29,7 @@ _env = Environment(loader=FileSystemLoader(TEMPLATES), undefined=StrictUndefined
 _env.globals["trace"] = trace_font.svg       # dotted letters to trace (letter_trace, word_trace)
 _env.globals["trace_row"] = trace_font.row
 _env.globals["split_targets"] = longreads.split_targets   # Owls Reading: bold words to work out
+_env.filters["alg"] = algebra.html_expr   # Whales math: ASCII algebra → HTML (ws/algebra.py)
 _env.filters["frac_parts"] = _rational.parts      # "2 1/2" -> whole, num, den for stacked fractions
 _env.filters["minus"] = _rational.show            # "-3" -> "−3" (the true minus sign)
 _env.filters["pretty"] = _rational.pretty         # "3*n+4" -> "3n + 4"

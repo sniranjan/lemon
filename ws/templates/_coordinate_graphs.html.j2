@@ -1,0 +1,25 @@
+{# Whales math: small grids from −6 to 6, one line or inequality each (ws/sheet_types/_lines.py). Only
+   5 and −5 are labeled on each axis, at the 28px floor; the child counts the squares from there. #}
+{% set GR, GC, GM = 6, 20, 30 %}
+{% set GO = GM + GR * GC %}
+{% set GW = GM * 2 + 2 * GR * GC %}
+    <p class="ask">{% if sheet.items | selectattr("sign", "equalto", "=") | list | length == sheet.items | length %}Graph each line.{% else %}Graph each inequality. Shade the answers.{% endif %}</p>
+    <div class="graphs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <span class="eqn">{{ i.eq | alg }}</span>
+        <svg class="small" width="{{ GW }}" height="{{ GW - 10 }}" viewBox="0 0 {{ GW }} {{ GW - 10 }}">
+{% for k in range(-GR, GR + 1) %}
+          <line x1="{{ GO + k * GC }}" x2="{{ GO + k * GC }}" y1="{{ GM - 10 }}" y2="{{ GM - 10 + 2 * GR * GC }}" stroke="{{ '#1d1d1f' if k == 0 else '#b4b4ba' }}" stroke-width="{{ 3 if k == 0 else 1 }}"/>
+          <line x1="{{ GM }}" x2="{{ GM + 2 * GR * GC }}" y1="{{ GO - 10 - k * GC }}" y2="{{ GO - 10 - k * GC }}" stroke="{{ '#1d1d1f' if k == 0 else '#b4b4ba' }}" stroke-width="{{ 3 if k == 0 else 1 }}"/>
+{% endfor %}
+{% for k in [-5, 5] %}
+          <text x="{{ GO + k * GC }}" y="{{ GO - 10 + 30 }}" text-anchor="middle" style="font-size: 28px">{{ k | string | minus }}</text>
+          <text x="{{ GO - 6 }}" y="{{ GO - 10 - k * GC + 9 }}" text-anchor="end" style="font-size: 28px">{{ k | string | minus }}</text>
+{% endfor %}
+          <text x="{{ GM + 2 * GR * GC + 4 }}" y="{{ GO - 18 }}" style="font-size: 28px; font-style: italic">x</text>
+          <text x="{{ GO + 8 }}" y="{{ GM + 10 }}" style="font-size: 28px; font-style: italic">y</text>
+        </svg>
+      </div>
+{% endfor %}
+    </div>

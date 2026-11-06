@@ -1,0 +1,107 @@
+{
+  "id": "MA-M9-A-021",
+  "subject": "math",
+  "level": "M9",
+  "section": "A",
+  "part": 3,
+  "sheet_type": "exponent_rules",
+  "page_number": 21,
+  "variant": 1,
+  "seed": 3000199476079421133,
+  "title": "Simplify radicals",
+  "parent_tip": "Look for the biggest perfect square inside: 72 is 36 times 2, so the square root of 72 is 6 root 2. Letters are never negative here.",
+  "items": [
+    {
+      "n": 1,
+      "kind": "simplify_sqrt",
+      "data": {
+        "index": 2,
+        "k": 20
+      },
+      "q": "R(2|20)",
+      "answer": "2R(2|5)"
+    },
+    {
+      "n": 2,
+      "kind": "simplify_sqrt",
+      "data": {
+        "index": 2,
+        "k": 147
+      },
+      "q": "R(2|147)",
+      "answer": "7R(2|3)"
+    },
+    {
+      "n": 3,
+      "kind": "simplify_cbrt",
+      "data": {
+        "index": 3,
+        "k": 24
+      },
+      "q": "R(3|24)",
+      "answer": "2R(3|3)"
+    },
+    {
+      "n": 4,
+      "kind": "root_product",
+      "data": {
+        "u": 27,
+        "v": 15
+      },
+      "q": "R(2|27) * R(2|15)",
+      "answer": "9R(2|5)"
+    },
+    {
+      "n": 5,
+      "kind": "root_vars",
+      "data": {
+        "k": 8,
+        "e": 7
+      },
+      "q": "R(2|8x^7)",
+      "answer": "2x^3R(2|2x)"
+    },
+    {
+      "n": 6,
+      "kind": "simplify_sqrt",
+      "data": {
+        "index": 2,
+        "k": 150
+      },
+      "q": "R(2|150)",
+      "answer": "5R(2|6)"
+    },
+    {
+      "n": 7,
+      "kind": "root_vars",
+      "data": {
+        "k": 45,
+        "e": 2
+      },
+      "q": "R(2|45x^2)",
+      "answer": "3xR(2|5)"
+    },
+    {
+      "n": 8,
+      "kind": "simplify_cbrt",
+      "data": {
+        "index": 3,
+        "k": 128
+      },
+      "q": "R(3|128)",
+      "answer": "4R(3|2)"
+    }
+  ],
+  "answer_key": [
+    "1) 2√5",
+    "2) 7√3",
+    "3) 2∛3",
+    "4) 9√5",
+    "5) 2x³√(2x)",
+    "6) 5√6",
+    "7) 3x√5",
+    "8) 4∛2"
+  ],
+  "new_words": [],
+  "review_words": []
+}

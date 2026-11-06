@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg with context %}
+{# Eight polynomials to factor, two columns of cards: the polynomial, then "=" and a long line under it. #}
+{% block style %}
+{{ alg.styles() }}
+.ex { font-size: 34px; }
+.grid { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px 14px; }
+.grid .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 6px 18px 10px 32px; border-radius: 22px; }
+.card .qn { position: absolute; top: 10px; left: 14px; }
+.ans { display: flex; align-items: flex-end; }
+{% endblock %}
+{% block body %}
+    <p class="ask">Factor completely.</p>
+    <div class="grid">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span><span class="ex">{{ i.q | alg }}</span><span class="ans"><span class="eq">=</span><span class="line"></span></span></div>
+{% endfor %}
+    </div>
+{% endblock %}
