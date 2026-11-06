@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 
-from ..content import stories, vocab_by_word
+from ..content import phrases, stories, vocab_by_word
 from ..models import Issue, Sheet
 from ..syllabus import level_rank
 from ..registry import GenContext, SheetContent, SheetType, register
@@ -24,11 +24,15 @@ def article(entry) -> str:
 
 
 def pick_frames(rng, words: list, story_data: dict) -> list[str]:
-    """One frame per word, from its category's frames (or the defaults), no frame twice if avoidable."""
+    """One frame per word, from its category's frames (or the defaults), no frame twice if avoidable.
+    Plural nouns (`plural` in content/phrases/english.yaml) never go in "... is ..." frames."""
+    plural = set(phrases().get("plural", []))
     used: set[str] = set()
     chosen = []
     for entry in words:
         options = story_data.get("frames_by_category", {}).get(entry.category) or story_data["frames"]
+        if entry.word in plural:
+            options = [f for f in options if " is " not in f] or options
         fresh = [f for f in options if f not in used] or options
         frame = rng.choice(fresh)
         used.add(frame)

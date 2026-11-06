@@ -263,3 +263,16 @@ def test_action_words_get_action_story_frames():
     for seed in range(10):
         (frame,) = pick_frames(random.Random(seed), [bank["jump"]], data)
         assert frame in data["frames_by_category"]["actions"] and "{a}" not in frame
+
+
+def test_plural_words_skip_is_story_frames():
+    """No "Here is my bubbles." / "This is some noodles.": plural nouns avoid "... is ..." frames."""
+    import random
+
+    from ws.content import stories, vocab_by_word
+    from ws.sheet_types.word_story import pick_frames
+
+    bank, data = vocab_by_word(), stories()
+    for seed in range(20):
+        for frame in pick_frames(random.Random(seed), [bank["bubbles"], bank["noodles"], bank["grapes"]], data):
+            assert " is " not in frame
