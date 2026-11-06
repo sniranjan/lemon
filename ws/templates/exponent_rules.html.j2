@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg with context %}
+{# Eight expressions to simplify, two columns of cards: the expression, then "=" and a long line under it
+   (a fraction keeps its line beside it). #}
+{% block style %}
+{{ alg.styles() }}
+.hint { position: absolute; top: 4px; right: 18px; font-size: 28px; color: var(--accent); white-space: nowrap; }
+.grid { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px 14px; }
+.grid .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 6px 20px 10px 14px; border-radius: 22px; }
+.grid .card.side { flex-direction: row; align-items: center; }
+.card .qn { position: absolute; top: 8px; left: 12px; }
+.card .ex { padding-left: 18px; }
+.card .ans { display: flex; align-items: flex-end; padding-left: 18px; }
+.card.side .ans { flex: 1; padding-left: 0; }
+{% endblock %}
+{% block body %}
+    <p class="ask">{% if sheet.items[0].kind in ["simplify_sqrt", "simplify_cbrt", "root_product", "root_vars"] %}Simplify. Letters are positive.{% elif sheet.items[0].kind in ["product", "quotient", "power"] %}Simplify. Use positive exponents.{% else %}Simplify or rewrite.{% endif %}</p>
+    <div class="grid">
+{% for i in sheet.items %}
+      <div class="card{% if i.top is defined %} side{% endif %}"><span class="qn" data-audience="parent">{{ i.n }}</span><span class="ex">{{ alg.expr(i) }}</span>{% if i.kind == "to_root" %}<span class="hint">as a root</span>{% elif i.kind == "to_power" %}<span class="hint">as a power</span>{% endif %}<span class="ans"><span class="eq">=</span><span class="line"></span></span></div>
+{% endfor %}
+    </div>
+{% endblock %}

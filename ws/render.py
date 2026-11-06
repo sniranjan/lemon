@@ -9,7 +9,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
-from . import registry, trace_font
+from . import algebra, registry, trace_font
 from .models import Level, Sheet
 from .syllabus import ROOT
 
@@ -27,6 +27,7 @@ _env = Environment(loader=FileSystemLoader(TEMPLATES), undefined=StrictUndefined
                    autoescape=True, trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
 _env.globals["trace"] = trace_font.svg       # dotted letters to trace (letter_trace, word_trace)
 _env.globals["trace_row"] = trace_font.row
+_env.filters["alg"] = algebra.html_expr   # Whales math: ASCII algebra → HTML (ws/algebra.py)
 
 
 def write_html(sheet: Sheet, level: Level, path: Path) -> None:
