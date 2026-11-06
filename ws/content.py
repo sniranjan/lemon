@@ -123,6 +123,13 @@ def wordparts(level: str) -> dict:
 
 
 @lru_cache(maxsize=None)
+def figurative(level: str) -> tuple[dict, ...]:
+    """Hand-checked similes, metaphors, idioms, adages and proverbs: content/figurative/<level>.yaml."""
+    path = CONTENT_DIR / "figurative" / f"{level}.yaml"
+    return tuple(yaml.safe_load(path.read_text()) or []) if path.exists() else ()
+
+
+@lru_cache(maxsize=None)
 def story_problems() -> tuple[dict, ...]:
     """Story problem frames for math word problems (see the file's header)."""
     frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "story_problems.yaml").read_text()))
@@ -144,5 +151,6 @@ def math_frames(name: str) -> tuple[dict, ...]:
 
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories, story_problems, grammar, passages, level_passages, wordparts, math_frames):
+              line_stories, story_problems, grammar, passages, level_passages, wordparts, math_frames,
+              figurative):
         f.cache_clear()

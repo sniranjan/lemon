@@ -1,0 +1,34 @@
+{
+  "id": "EN-R5-A-001",
+  "subject": "english",
+  "level": "R5",
+  "section": "A",
+  "part": null,
+  "sheet_type": "read_then_answer",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 6454365673666061540,
+  "title": "How Sea Otters Stay Warm",
+  "parent_tip": "Read the article together first. Then ask: what surprised you?",
+  "items": [
+    {
+      "kind": "passage",
+      "role": "read",
+      "passage": "a01-sea-otter-coats",
+      "set": 0,
+      "heading": "How Sea Otters Stay Warm",
+      "paragraphs": [
+        "Sea otters live in the chilly coastal waters of the northern Pacific Ocean. Most sea mammals, such as whales and seals, are protected from the cold by a thick layer of fat called blubber. Sea otters have almost no blubber at all. Instead, they depend on their remarkable fur.",
+        "A sea otter's fur is thicker than the fur of any other animal on Earth. On a single square inch of its skin, an otter can have as many as one million hairs. That is more hairs than most people have on their entire head. The fur grows in two layers. Long outer hairs keep the water away, while the soft, short hairs underneath trap a layer of air next to the skin. That trapped air works like a warm blanket.",
+        "The coat only works when it is clean, so sea otters spend hours every day grooming. They rub, scrub, and comb their fur with their paws. They even roll over and over in the water and blow air into their fur to fluff it up. A dirty, matted coat would let cold water reach the skin.",
+        "Staying warm also takes a lot of energy. To keep their bodies burning like little furnaces, sea otters eat about a quarter of their own weight in food every day. They dive for crabs, clams, sea urchins, and other creatures. A sea otter often floats on its back and uses its belly as a table. Sometimes it cracks open a hard shell by banging it against a rock balanced on its chest.",
+        "When it is time to rest, a sea otter may wrap itself in long strands of kelp, a kind of seaweed. The kelp keeps the sleeping otter from drifting away while it floats."
+      ],
+      "numbered": true,
+      "text": "article"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

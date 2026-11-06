@@ -17,6 +17,7 @@ SYLLABUS_DIR = ROOT / "syllabus"
 
 # Levels in teaching order (earliest first). "≤ current level" means "not later in this list".
 LEVEL_ORDER = ["7A", "6A", "5A", "4A", "3A", "2A", "R3"]
+LEVEL_ORDER += ["R5"]   # Otters Reading (kept on its own line: other R levels are added beside it)
 
 
 def level_rank(level: str) -> int:

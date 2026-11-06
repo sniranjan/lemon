@@ -26,6 +26,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
     # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
     "passage_questions", "word_builder", "full_sentence_answer",
+    # Otters Reading (R5): two-page spreads, clue words, figurative language, paragraph summaries
+    "read_then_answer", "clue_words", "figurative_language", "paragraph_summary",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     # Whales math (M9, Algebra 1): exponents and radicals, writing lines, inequalities on a number line, polynomials,

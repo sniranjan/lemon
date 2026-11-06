@@ -1,0 +1,72 @@
+# Otters Reading, section D "Like a Picture": every simile, metaphor, idiom, adage, proverb, personification
+# and hyperbole printed in bold, each checked by hand (L.5.5a, L.5.5b). `phrase` is exactly as it is printed
+# in bold in its passage (content/passages/R5/D.yaml); `meaning` is the right answer to "What does "..." mean?".
+# Kinds: simile (compares with like or as), metaphor (says one thing is another), idiom (a saying whose words
+# don't mean what they say), adage / proverb (an old saying that gives advice or a truth), personification
+# (a thing acts like a person), hyperbole (a huge exaggeration). Screened against content/banned.yaml.
+
+# part 1: similes and metaphors
+- { phrase: as quiet as a mouse, kind: simile, meaning: very quiet }
+- { phrase: like a frozen statue, kind: simile, meaning: standing perfectly still }
+- { phrase: a blanket of fog, kind: metaphor, meaning: thick fog covering everything }
+- { phrase: the stars were diamonds, kind: metaphor, meaning: the stars were bright and sparkling }
+- { phrase: like tiny parachutes, kind: simile, meaning: falling slowly and gently }
+- { phrase: Amara was a rocket, kind: metaphor, meaning: Amara moved very fast }
+- { phrase: the backyard was a frosted cake, kind: metaphor, meaning: the yard was covered in smooth white snow }
+- { phrase: as light as a feather, kind: simile, meaning: very light }
+- { phrase: as steady as a rock, kind: simile, meaning: very steady and still }
+- { phrase: "Grandpa's hands were sandpaper", kind: metaphor, meaning: "Grandpa's hands were rough" }
+- { phrase: "Grandpa's workshop was a treasure chest", kind: metaphor, meaning: the workshop was full of interesting things }
+- { phrase: sang like a bell, kind: simile, meaning: made a clear ringing sound }
+- { phrase: glow like little lanterns, kind: simile, meaning: shine softly in the dark }
+- { phrase: a sea of blinking lights, kind: metaphor, meaning: very many flashing lights }
+- { phrase: as gently as a bubble, kind: simile, meaning: very gently }
+- { phrase: a tiny flashlight with wings, kind: metaphor, meaning: a small flying insect that makes light }
+- { phrase: The soccer field was an oven, kind: metaphor, meaning: the field was very hot }
+- { phrase: buzzed like a hive of bees, kind: simile, meaning: "made a busy, excited noise" }
+- { phrase: ran like the wind, kind: simile, meaning: ran very fast }
+- { phrase: the goalie was a brick wall, kind: metaphor, meaning: the goalie stopped every shot }
+
+# part 2: idioms, adages and proverbs
+- { phrase: butterflies in her stomach, kind: idiom, meaning: a nervous feeling }
+- { phrase: break the ice, kind: idiom, meaning: help people start to feel comfortable }
+- { phrase: Practice makes perfect, kind: adage, meaning: doing something often makes you better }
+- { phrase: stole the show, kind: idiom, meaning: got the most attention and praise }
+- { phrase: rain or shine, kind: idiom, meaning: no matter what the weather is }
+- { phrase: a piece of cake, kind: idiom, meaning: very easy }
+- { phrase: The early bird catches the worm, kind: proverb, meaning: people who start early get the best chances }
+- { phrase: Many hands make light work, kind: proverb, meaning: work is easier when many people help }
+- { phrase: spill the beans, kind: idiom, meaning: tell a secret }
+- { phrase: Hold your horses, kind: idiom, meaning: wait and be patient }
+- { phrase: in the nick of time, kind: idiom, meaning: just in time }
+- { phrase: on cloud nine, kind: idiom, meaning: very happy }
+- { phrase: bite off more than you can chew, kind: idiom, meaning: try to do more than you can handle }
+- { phrase: Back to the drawing board, kind: idiom, meaning: start over with a new plan }
+- { phrase: Two heads are better than one, kind: proverb, meaning: two people can solve problems better }
+- { phrase: Better late than never, kind: adage, meaning: doing it late beats never doing it }
+- { phrase: in the same boat, kind: idiom, meaning: in the same situation }
+- { phrase: Look before you leap, kind: proverb, meaning: think carefully before you act }
+- { phrase: A picture is worth a thousand words, kind: adage, meaning: a picture can show a lot at once }
+- { phrase: Actions speak louder than words, kind: proverb, meaning: what you do matters more than what you say }
+
+# part 3: all kinds
+- { phrase: under the weather, kind: idiom, meaning: feeling sick }
+- { phrase: the trees danced in the wind, kind: personification, meaning: the trees swayed in the wind }
+- { phrase: the wind grabbed his hat, kind: personification, meaning: the wind blew his hat off }
+- { phrase: "I've told you a million times", kind: hyperbole, meaning: "I've told you many times" }
+- { phrase: alarm clock screamed, kind: personification, meaning: the alarm clock rang very loudly }
+- { phrase: the backpack weighed a ton, kind: hyperbole, meaning: the backpack was very heavy }
+- { phrase: the hallway was a river of students, kind: metaphor, meaning: many students moved together down the hall }
+- { phrase: I could eat a horse, kind: hyperbole, meaning: "I am very, very hungry" }
+- { phrase: as tall as mountains, kind: simile, meaning: "very, very tall" }
+- { phrase: raining cats and dogs, kind: idiom, meaning: raining very hard }
+- { phrase: the sky begins to grumble, kind: personification, meaning: thunder starts to rumble }
+- { phrase: the windows shiver, kind: personification, meaning: the windows shake }
+- { phrase: as flat as a pancake, kind: simile, meaning: completely flat }
+- { phrase: Keep your chin up, kind: idiom, meaning: "stay hopeful and don't give up" }
+- { phrase: "If at first you don't succeed, try, try again", kind: proverb, meaning: keep trying even when you fail }
+- { phrase: the kite was a dragon dancing in the sky, kind: metaphor, meaning: the kite swooped and twisted in the sky }
+- { phrase: as gentle as a lamb, kind: simile, meaning: very gentle and kind }
+- { phrase: sticks to her like glue, kind: simile, meaning: stays very close to her }
+- { phrase: "trunk is a nose, a hand, and a straw", kind: metaphor, meaning: the trunk does many different jobs }
+- { phrase: flap like giant fans, kind: simile, meaning: wave back and forth to make a breeze }

@@ -1,0 +1,624 @@
+# Otters Reading, section D "Like a Picture" (pages 131–160): figurative language (L.5.5a, L.5.5b, RL.5.4).
+# Part 1 (131–140) similes and metaphors; part 2 (141–150) idioms, adages and proverbs; part 3 (151–160) all
+# kinds. Original passages (ours). Schema: ws/passages.py. Each passage serves 2 pages; each page (question
+# set) prints its `words` in bold: phrases copied exactly from the text AND listed in content/figurative/R5.yaml.
+# 3 questions a page: 2 multiple choice + 1 written. 'What does "<phrase>" mean?' must answer the listed
+# meaning; 'Is "<phrase>" a simile or a metaphor?' (or 'What kind of ...') must answer the listed kind.
+
+# --- part 1: similes and metaphors -------------------------------------------------------------
+
+- id: d01-night-at-the-lake
+  title: A Night at the Lake
+  kind: story
+  text: |
+    On the last night of summer camp, Rosa and her cabinmates hiked down to the lake to watch the sky.
+    A blanket of fog had rolled across the water earlier in the evening, but now it was slowly drifting
+    away toward the distant hills.
+
+    "Look up," whispered their counselor, Ms. Patel. Overhead, the stars were diamonds scattered across
+    black velvet. Rosa had never seen so many in her whole life. She tried to find the star pictures they had
+    learned about that week.
+
+    A loon called from somewhere far out on the lake. Everyone stayed as quiet as a mouse, hoping to
+    hear it again. Rosa stood like a frozen statue, barely breathing. Finally the strange, wavering call
+    floated back across the dark water, and the girls grinned at one another.
+  pages:
+    - focus: similes and metaphors
+      words: [as quiet as a mouse, like a frozen statue]
+      questions:
+        - ask: What does "as quiet as a mouse" mean?
+          choices: [very quiet, very small, very scared]
+          evidence: Everyone stayed as quiet as a mouse
+        - ask: Is "like a frozen statue" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: Rosa stood like a frozen statue
+        - ask: Why does the writer say Rosa stood "like a frozen statue"?
+          sample: The writer wants to show that Rosa stood perfectly still so she could hear the loon.
+          evidence: Rosa stood like a frozen statue, barely breathing.
+    - focus: similes and metaphors
+      words: [a blanket of fog, the stars were diamonds]
+      questions:
+        - ask: What does "the stars were diamonds" mean?
+          choices: [the stars were bright and sparkling, the stars were for sale at a shop, the stars were falling to the ground]
+          evidence: the stars were diamonds scattered across black velvet
+        - ask: Is "a blanket of fog" a simile or a metaphor?
+          choices: [metaphor, simile, idiom]
+          evidence: A blanket of fog had rolled across the water
+        - ask: How is the fog like a blanket? Explain.
+          sample: The fog covered the lake the way a blanket covers a bed.
+          evidence: A blanket of fog had rolled across the water earlier in the evening
+
+- id: d02-the-snow-fort
+  title: The Snow Fort
+  kind: story
+  text: |
+    When Malik opened the curtains, the backyard was a frosted cake. Snow covered every bush, every fence
+    post, and the top of the old picnic table. More flakes were still falling like tiny parachutes,
+    drifting down without a sound.
+
+    School was canceled, so Malik and his little sister, Amara, pulled on their boots and coats as fast as
+    they could. Amara was a rocket, zooming out the door before Malik had even found his second mitten.
+
+    Together they built a snow fort with thick walls and a tiny window. The fresh snow was as light as a
+    feather, so it was hard to pack at first. After an hour of patient work, though, the walls were strong.
+    When Mom called them inside for hot cocoa, their cheeks were rosy and their fingers tingled with cold.
+  pages:
+    - focus: similes and metaphors
+      words: [like tiny parachutes, Amara was a rocket]
+      questions:
+        - ask: What does "Amara was a rocket" mean?
+          choices: [Amara moved very fast, Amara flew into the sky, Amara was very loud]
+          evidence: zooming out the door before Malik had even found his second mitten
+        - ask: Is "like tiny parachutes" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: More flakes were still falling like tiny parachutes
+        - ask: Why does the writer compare the snowflakes to tiny parachutes?
+          sample: Parachutes float down slowly and quietly, just like the snowflakes did.
+          evidence: drifting down without a sound
+    - focus: similes and metaphors
+      words: [the backyard was a frosted cake, as light as a feather]
+      questions:
+        - ask: What does "the backyard was a frosted cake" mean?
+          choices: [the yard was covered in smooth white snow, someone baked a big cake in the backyard, the yard smelled sweet like frosting]
+          evidence: Snow covered every bush, every fence post
+        - ask: Is "as light as a feather" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: The fresh snow was as light as a feather
+        - ask: Rewrite "as light as a feather" in plain words.
+          sample: The fresh snow was very light and fluffy.
+          evidence: so it was hard to pack at first
+
+- id: d03-grandpas-workshop
+  title: "Grandpa's Workshop"
+  kind: story
+  text: |
+    Grandpa's workshop was a treasure chest. Shelves held jars of buttons, bolts, and bright marbles, and
+    every drawer seemed to hide a surprise. On Saturday, Lena helped him build a birdhouse for the backyard.
+
+    Grandpa's hands were sandpaper, rough from many years of building things, but they moved gently as he
+    showed her how to measure each board. "Measure twice, cut once," he said. Lena held the boards as
+    steady as a rock while Grandpa carefully sawed them.
+
+    When the pieces were ready, Lena hammered in the nails. Her first few bent sideways, and she frowned.
+    Grandpa smiled and showed her how to tap lightly first. Soon the hammer sang like a bell with every
+    tap. By the afternoon the birdhouse stood on its post, and a curious sparrow was already peeking
+    inside its new home.
+  pages:
+    - focus: similes and metaphors
+      words: [as steady as a rock, "Grandpa's hands were sandpaper"]
+      questions:
+        - ask: What does "Grandpa's hands were sandpaper" mean?
+          choices: ["Grandpa's hands were rough", "Grandpa's hands were made of paper", "Grandpa's hands were dirty"]
+          evidence: rough from many years of building things
+        - ask: Is "as steady as a rock" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: Lena held the boards as steady as a rock
+        - ask: Why did Lena need to hold the boards "as steady as a rock"?
+          sample: She had to keep the boards very still so Grandpa could saw them carefully.
+          evidence: Lena held the boards as steady as a rock while Grandpa carefully sawed them.
+    - focus: similes and metaphors
+      words: ["Grandpa's workshop was a treasure chest", sang like a bell]
+      questions:
+        - ask: What does "Grandpa's workshop was a treasure chest" mean?
+          choices: [the workshop was full of interesting things, the workshop was full of gold coins, the workshop was locked up tight]
+          evidence: every drawer seemed to hide a surprise
+        - ask: What does "sang like a bell" mean?
+          choices: [made a clear ringing sound, played a song on the radio, broke into pieces]
+          evidence: Soon the hammer sang like a bell with every tap.
+        - ask: Is "sang like a bell" a simile or a metaphor? How do you know?
+          sample: It is a simile, because it uses the word "like" to compare the hammer to a bell.
+          evidence: Soon the hammer sang like a bell with every tap.
+
+- id: d04-summer-fireflies
+  title: Summer Fireflies
+  kind: article
+  text: |
+    On warm summer evenings, fireflies rise from the grass and glow like little lanterns. Even though
+    people call them flies, fireflies are actually a kind of beetle. Their light comes from a special part
+    of the body near the tail. There, chemicals mix to make a cool, yellow-green glow.
+
+    Fireflies flash to send messages. Each kind has its own pattern of blinks, almost like a secret code.
+    The pattern helps fireflies find others of their own kind in the dark. On a busy night, a whole
+    meadow becomes a sea of blinking lights.
+
+    If you catch a firefly in your hands, hold it as gently as a bubble, and let it go after a moment. A
+    firefly is a tiny flashlight with wings, and it belongs outside, sparkling in the summer night.
+  pages:
+    - focus: similes and metaphors
+      words: [glow like little lanterns, a sea of blinking lights]
+      questions:
+        - ask: What does "a sea of blinking lights" mean?
+          choices: [very many flashing lights, lights shining on the ocean, a few lights far away]
+          evidence: a whole meadow becomes a sea of blinking lights
+        - ask: Is "glow like little lanterns" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: fireflies rise from the grass and glow like little lanterns
+        - ask: How are fireflies like little lanterns? Explain.
+          sample: Fireflies give off a soft light in the dark, just like small lanterns do.
+          evidence: to make a cool, yellow-green glow
+    - focus: similes and metaphors
+      words: [as gently as a bubble, a tiny flashlight with wings]
+      questions:
+        - ask: What does "as gently as a bubble" mean?
+          choices: [very gently, very quickly, with soapy hands]
+          evidence: hold it as gently as a bubble, and let it go after a moment
+        - ask: Is "a tiny flashlight with wings" a simile or a metaphor?
+          choices: [metaphor, simile, idiom]
+          evidence: A firefly is a tiny flashlight with wings
+        - ask: Why does the writer call a firefly "a tiny flashlight with wings"?
+          sample: A firefly makes its own light and can fly, so it is like a small flying flashlight.
+          evidence: A firefly is a tiny flashlight with wings, and it belongs outside
+
+- id: d05-the-tied-game
+  title: The Tied Game
+  kind: story
+  text: |
+    The soccer field was an oven that Saturday afternoon. Sweat dripped down Keisha's forehead as her
+    team, the Comets, lined up for the second half. The score was tied, and the crowd buzzed like a hive of
+    bees.
+
+    When the whistle blew, Keisha ran like the wind toward the goal. She dribbled past two defenders and
+    took a hard shot, but the goalie was a brick wall. He stopped every shot the Comets tried,
+    one after another.
+
+    When the final whistle blew, the score was still tied. Both exhausted teams lined up to shake hands,
+    and the tall goalie grinned at Keisha. "Those were incredible shots," he said. Keisha laughed and
+    told him that he had made the most amazing saves she had ever seen. Afterward, everyone shared cold
+    orange slices together in the shade.
+  pages:
+    - focus: similes and metaphors
+      words: [The soccer field was an oven, buzzed like a hive of bees]
+      questions:
+        - ask: What does "The soccer field was an oven" mean?
+          choices: [the field was very hot, the field smelled like bread, the field was full of ovens]
+          evidence: Sweat dripped down Keisha's forehead
+        - ask: Is "buzzed like a hive of bees" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: the crowd buzzed like a hive of bees
+        - ask: What does the crowd sound like? Explain the simile.
+          sample: The crowd made a busy, excited noise, like many bees humming together.
+          evidence: The score was tied, and the crowd buzzed like a hive of bees.
+    - focus: similes and metaphors
+      words: [ran like the wind, the goalie was a brick wall]
+      questions:
+        - ask: What does "ran like the wind" mean?
+          choices: [ran very fast, ran in circles, ran out of breath]
+          evidence: Keisha ran like the wind toward the goal
+        - ask: What does "the goalie was a brick wall" mean?
+          choices: [the goalie stopped every shot, the goalie was made of bricks, the goalie stood near a wall]
+          evidence: He stopped every shot the Comets tried
+        - ask: Is "the goalie was a brick wall" a simile or a metaphor? Why?
+          sample: It is a metaphor, because it says the goalie was a wall without using like or as.
+          evidence: the goalie was a brick wall
+
+# --- part 2: idioms, adages and proverbs ----------------------------------------------------------
+
+- id: d06-the-class-play
+  title: The Class Play
+  kind: story
+  text: |
+    Two weeks before the class play, Hana still had butterflies in her stomach every time she thought
+    about the stage. She had the biggest part in the play, and she worried that she would forget her lines in front of
+    the whole school.
+
+    Her teacher, Mr. Okafor, noticed how nervous she seemed. On the first day of practice, he asked
+    everyone to tell a joke to break the ice. Soon the whole class was laughing, and Hana felt her
+    shoulders relax.
+
+    Every evening after that, Hana read her lines to her dog, her dad, and even the bathroom mirror.
+    "Practice makes perfect," her dad reminded her with a wink. On the night of the play, Hana said every
+    line clearly, and her funny dance in the last scene stole the show.
+  pages:
+    - focus: idioms
+      words: [butterflies in her stomach, break the ice]
+      questions:
+        - ask: What does "butterflies in her stomach" mean?
+          choices: [a nervous feeling, a stomachache from lunch, a love of insects]
+          evidence: she worried that she would forget her lines
+        - ask: What does "break the ice" mean?
+          choices: [help people start to feel comfortable, crack the thick ice on a frozen pond, put ice cubes in a cold drink]
+          evidence: Soon the whole class was laughing, and Hana felt her shoulders relax.
+        - ask: How did Mr. Okafor help the class "break the ice"?
+          sample: He asked everyone to tell a joke, so the class laughed and relaxed.
+          evidence: he asked everyone to tell a joke to break the ice
+    - focus: sayings
+      words: [Practice makes perfect, stole the show]
+      questions:
+        - ask: What does "Practice makes perfect" mean?
+          choices: [doing something often makes you better, a perfect person never practices, practice is boring]
+          evidence: Hana read her lines to her dog, her dad, and even the bathroom mirror
+        - ask: What does "stole the show" mean?
+          choices: [got the most attention and praise, took something from the stage, left before the end]
+          evidence: her funny dance in the last scene stole the show
+        - ask: How did Hana show that "practice makes perfect"?
+          sample: Hana practiced her lines every evening, and on the night of the play she said every line clearly.
+          evidence: Hana said every line clearly
+
+- id: d07-market-morning
+  title: Market Morning
+  kind: story
+  text: |
+    Every Saturday, rain or shine, Diego and his grandmother sell vegetables at the farmers market. They
+    leave the house before sunrise, because Grandma always says, "The early bird catches the worm." The
+    first shoppers of the day usually buy the freshest tomatoes and the sweetest corn. Diego yawns, but he never complains.
+
+    Setting up the stand used to take forever. Grandma had to unload every crate, unfold the table, and
+    hang the bright sign by herself. Then Diego's cousins started coming along to help. "Many hands make
+    light work," Grandma said happily as the stand went up in ten minutes.
+
+    Diego's favorite job is making change for customers. At first, counting coins quickly felt hard, but
+    now it is a piece of cake. Grandma says he is the best helper a market could ever have.
+  pages:
+    - focus: idioms
+      words: [rain or shine, a piece of cake]
+      questions:
+        - ask: What does "rain or shine" mean?
+          choices: [no matter what the weather is, only on rainy and cloudy days, only on warm and sunny days]
+          evidence: Every Saturday, rain or shine
+        - ask: What does "a piece of cake" mean?
+          choices: [very easy, very sweet, very small]
+          evidence: At first, counting coins quickly felt hard, but
+        - ask: What was once hard for Diego but is now "a piece of cake"?
+          sample: Counting coins quickly to make change for customers is now easy for Diego.
+          evidence: counting coins quickly felt hard, but now it is a piece of cake
+    - focus: proverbs
+      words: [The early bird catches the worm, Many hands make light work]
+      questions:
+        - ask: What does "The early bird catches the worm" mean?
+          choices: [people who start early get the best chances, birds eat worms in the morning, you should eat breakfast early]
+          evidence: The first shoppers of the day usually buy the freshest tomatoes
+        - ask: What does "Many hands make light work" mean?
+          choices: [work is easier when many people help, hands feel lighter after work, lights are easy to carry]
+          evidence: the stand went up in ten minutes
+        - ask: How does setting up the stand show "Many hands make light work"?
+          sample: When Diego's cousins helped, the stand went up in ten minutes instead of taking forever.
+          evidence: Grandma said happily as the stand went up in ten minutes
+
+- id: d08-the-surprise-party
+  title: The Surprise Party
+  kind: story
+  text: |
+    Maya and her brother Sam spent a whole week planning a surprise party for their mom's birthday. Sam
+    was so excited that Maya worried he would spill the beans. Every time Mom asked what they were
+    whispering about, Sam giggled and ran out of the room.
+
+    On the big day, Sam wanted to hang the balloons before lunch. "Hold your horses," Maya told him. "If
+    Mom sees them, the surprise will be ruined." So they waited until Mom left to buy groceries, and then
+    they decorated the living room as fast as they could.
+
+    They finished in the nick of time. Just as the last streamer went up, the car pulled into the driveway.
+    When Mom opened the door and everyone shouted "Surprise!" she was on cloud nine. She hugged them both
+    and said it was her best birthday ever.
+  pages:
+    - focus: idioms
+      words: [spill the beans, Hold your horses]
+      questions:
+        - ask: What does "spill the beans" mean?
+          choices: [tell a secret, make a mess with food, plant a garden]
+          evidence: Maya worried he would spill the beans
+        - ask: What does "Hold your horses" mean?
+          choices: [wait and be patient, take care of your pets, hold on tight]
+          evidence: So they waited until Mom left to buy groceries
+        - ask: Why did Maya tell Sam to "hold your horses"?
+          sample: She wanted him to wait, because Mom would see the balloons and the surprise would be ruined.
+          evidence: If Mom sees them, the surprise will be ruined.
+    - focus: idioms
+      words: [in the nick of time, on cloud nine]
+      questions:
+        - ask: What does "in the nick of time" mean?
+          choices: [just in time, a long time ago, much too late]
+          evidence: Just as the last streamer went up, the car pulled into the driveway.
+        - ask: What does "on cloud nine" mean?
+          choices: [very happy, very high up, very sleepy]
+          evidence: She hugged them both and said it was her best birthday ever.
+        - ask: How do you know Mom was "on cloud nine"? Use a detail.
+          sample: Mom hugged them both and said it was her best birthday ever.
+          evidence: She hugged them both and said it was her best birthday ever.
+
+- id: d09-the-solar-oven
+  title: The Solar Oven
+  kind: story
+  text: |
+    For the science fair, Omar planned to build a model volcano, a solar oven, and a weather station all
+    by himself. His older sister shook her head. "Don't bite off more than you can chew," she warned.
+    "Pick one project and do it well."
+
+    Omar chose the solar oven, but his first try failed. The cardboard box got warm, yet the marshmallow
+    inside never melted. "Back to the drawing board," he sighed, and he asked his friend Lucas for help.
+    Two heads are better than one, and Lucas suggested lining the box with shiny foil.
+
+    The second oven worked beautifully. Omar finished his poster the night before the fair, which was much
+    later than he had planned. Better late than never, though! The judges loved the gooey, golden
+    marshmallow, and Lucas and Omar celebrated together.
+  pages:
+    - focus: idioms
+      words: [bite off more than you can chew, Back to the drawing board]
+      questions:
+        - ask: What does "bite off more than you can chew" mean?
+          choices: [try to do more than you can handle, eat your food much too fast, take a very small bite of food]
+          evidence: "Pick one project and do it well."
+        - ask: What does "Back to the drawing board" mean?
+          choices: [start over with a new plan, go and draw a picture, put the drawing board away]
+          evidence: but his first try failed
+        - ask: Why did Omar's sister tell him not to bite off more than he can chew?
+          sample: Omar planned to build three projects by himself, which was too much to do well.
+          evidence: Omar planned to build a model volcano, a solar oven, and a weather station all
+    - focus: sayings
+      words: [Two heads are better than one, Better late than never]
+      questions:
+        - ask: What does "Two heads are better than one" mean?
+          choices: [two people can solve problems better, two hats are better than wearing one, it is better to work all alone]
+          evidence: Lucas suggested lining the box with shiny foil
+        - ask: What does "Better late than never" mean?
+          choices: [doing it late beats never doing it, being late is always fine to do, you should never finish anything late]
+          evidence: which was much later than he had planned
+        - ask: How did working with Lucas help Omar?
+          sample: Lucas suggested lining the box with shiny foil, and the second oven worked.
+          evidence: Lucas suggested lining the box with shiny foil
+
+- id: d10-the-tree-house-plan
+  title: The Tree House Plan
+  kind: story
+  text: |
+    Jamal and his neighbor Theo both wanted to build a tree house in the enormous maple behind Jamal's
+    house, but neither of them knew how. "We're
+    in the same boat," Theo said with a shrug. Jamal wanted to start nailing boards together immediately,
+    but his grandfather stopped him. "Look before you leap," Grandpa said. "First, draw a plan."
+
+    The boys sketched their tree house on a large sheet of paper, carefully adding a ladder, a window,
+    and a little porch. When they showed it to Grandpa, he smiled. "A picture is worth a thousand words," he said. "Now
+    I know exactly what you want to build."
+
+    All summer, Grandpa helped them measure, saw, and hammer. Theo had promised to help every day, and he did. He
+    arrived each morning carrying his heavy toolbox, even on the hottest afternoons. "Actions speak louder than words,"
+    Grandpa told him proudly.
+  pages:
+    - focus: idioms and proverbs
+      words: [in the same boat, Look before you leap]
+      questions:
+        - ask: What does "in the same boat" mean?
+          choices: [in the same situation, sailing together, sitting very close]
+          evidence: but neither of them knew how
+        - ask: What does "Look before you leap" mean?
+          choices: [think carefully before you act, jump as high as you can, look at the view from above]
+          evidence: "First, draw a plan."
+        - ask: What did Grandpa want the boys to do before they built?
+          sample: Grandpa wanted them to draw a plan before they started building.
+          evidence: "First, draw a plan."
+    - focus: sayings
+      words: [A picture is worth a thousand words, Actions speak louder than words]
+      questions:
+        - ask: What does "A picture is worth a thousand words" mean?
+          choices: [a picture can show a lot at once, pictures cost a lot of money, words are better than pictures]
+          evidence: Now I know exactly what you want to build.
+        - ask: What does "Actions speak louder than words" mean?
+          choices: [what you do matters more than what you say, people should always speak very loudly, busy actions make a lot of loud noise]
+          evidence: Theo had promised to help every day, and he did.
+        - ask: How did Theo show that "Actions speak louder than words"?
+          sample: Theo promised to help every day, and then he really came each morning with his toolbox.
+          evidence: He arrived each morning carrying his heavy toolbox
+
+# --- part 3: all kinds ---------------------------------------------------------------------------
+
+- id: d11-the-windy-afternoon
+  title: The Windy Afternoon
+  kind: story
+  text: |
+    On Tuesday morning, Nora woke up feeling under the weather, so she stayed home from school with a
+    scratchy throat and a stuffy nose. By the afternoon she felt much better, and her mother let her sit
+    on the front porch, wrapped in a soft, colorful quilt.
+
+    Outside, the trees danced in the wind, waving their branches at every passing car. Leaves raced each
+    other down the sidewalk and swirled around the mailbox. When Nora's little brother came home from school, the wind grabbed his hat
+    and tossed it into the bushes.
+
+    "Wear your hood!" Mom called. "I've told you a million times!" Nora laughed, because her forgetful brother
+    never remembered. She sipped a mug of warm tea while her fingers, as cold as ice from the chilly
+    breeze, slowly warmed up again.
+  pages:
+    - focus: all kinds
+      words: [under the weather, the trees danced in the wind]
+      questions:
+        - ask: What does "under the weather" mean?
+          choices: [feeling sick, standing in the rain, watching the clouds]
+          evidence: so she stayed home from school with a scratchy throat
+        - ask: What kind of figurative language is "the trees danced in the wind"?
+          choices: [personification, simile, hyperbole]
+          evidence: the trees danced in the wind, waving their branches
+        - ask: What were the trees really doing when they "danced in the wind"?
+          sample: The wind was blowing the trees, so their branches swayed back and forth.
+          evidence: waving their branches at every passing car
+    - focus: all kinds
+      words: [the wind grabbed his hat, "I've told you a million times"]
+      questions:
+        - ask: What does "the wind grabbed his hat" mean?
+          choices: [the wind blew his hat off, a person took his hat, his hat was too big]
+          evidence: the wind grabbed his hat and tossed it into the bushes
+        - ask: What kind of figurative language is "I've told you a million times"?
+          choices: [hyperbole, simile, personification]
+          evidence: "I've told you a million times!"
+        - ask: Why does Mom say "I've told you a million times"?
+          sample: Mom has reminded him to wear his hood many times, and he keeps forgetting.
+          evidence: her forgetful brother never remembered
+
+- id: d12-first-day-backpack
+  title: The First-Day Backpack
+  kind: story
+  text: |
+    On the first day of school, Ben's alarm clock screamed at six o'clock. He jumped out of bed and
+    packed his new backpack with notebooks, markers, a lunch box, and three library books. When he lifted
+    it, the backpack weighed a ton.
+
+    At school, the hallway was a river of students, all flowing toward their classrooms. Ben's teacher,
+    Mrs. Lin, was as busy as a bee, greeting families, finding name tags, and handing out supplies. By
+    lunchtime his stomach was growling. "I'm so hungry I could eat a horse," he told his friend Ava. Ava laughed and
+    shared her crackers with him.
+
+    After school, Ben walked home slowly with his heavy backpack. He was tired, but he could hardly wait
+    to tell his parents all about his new class and his new friends.
+  pages:
+    - focus: all kinds
+      words: [alarm clock screamed, the backpack weighed a ton]
+      questions:
+        - ask: What does "the backpack weighed a ton" mean?
+          choices: [the backpack was very heavy, the backpack was on a scale, the backpack was empty]
+          evidence: three library books
+        - ask: What kind of figurative language is "alarm clock screamed"?
+          choices: [personification, simile, hyperbole]
+          evidence: Ben's alarm clock screamed at six o'clock
+        - ask: What did the alarm clock really do when it "screamed"?
+          sample: The alarm clock rang very loudly to wake Ben up.
+          evidence: Ben's alarm clock screamed at six o'clock. He jumped out of bed
+    - focus: all kinds
+      words: [the hallway was a river of students, I could eat a horse]
+      questions:
+        - ask: What does "the hallway was a river of students" mean?
+          choices: [many students moved together down the hall, the hallway was flooded with water, the students swam to their classrooms]
+          evidence: all flowing toward their classrooms
+        - ask: What kind of figurative language is "I could eat a horse"?
+          choices: [hyperbole, metaphor, personification]
+          evidence: "I'm so hungry I could eat a horse,"
+        - ask: What does Ben really mean when he says "I could eat a horse"?
+          sample: Ben means that he is very, very hungry.
+          evidence: By lunchtime his stomach was growling.
+
+- id: d13-thunderstorms
+  title: When Storms Roll In
+  kind: article
+  text: |
+    On a hot summer afternoon, dark clouds can pile up as tall as mountains. Soon the sky begins to
+    grumble, and before long it is raining cats and dogs.
+
+    Lightning is electricity that jumps between clouds or from a cloud to the ground. It heats the air
+    around it so quickly that the air expands with a boom. That boom is thunder. Because light travels much
+    faster than sound, you always see the flash before you hear the rumble.
+
+    Thunderstorms may seem fierce, but they are an important part of nature. Their heavy rain fills rivers
+    and ponds, and it gives thirsty plants a long drink. When a storm rolls in, the best place to watch it
+    is from inside, snug and dry, while the windows shiver with every clap of thunder.
+  pages:
+    - focus: all kinds
+      words: [as tall as mountains, raining cats and dogs]
+      questions:
+        - ask: What does "raining cats and dogs" mean?
+          choices: [raining very hard, animals falling from the sky, a light and gentle rain]
+          evidence: Their heavy rain fills rivers and ponds
+        - ask: Is "as tall as mountains" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: dark clouds can pile up as tall as mountains
+        - ask: Why does the writer say the clouds are "as tall as mountains"?
+          sample: The writer wants to show that the storm clouds pile up very, very high.
+          evidence: dark clouds can pile up as tall as mountains
+    - focus: all kinds
+      words: [the sky begins to grumble, the windows shiver]
+      questions:
+        - ask: What does "the sky begins to grumble" mean?
+          choices: [thunder starts to rumble, the sky turns bright blue, people start to complain]
+          evidence: Soon the sky begins to grumble
+        - ask: What kind of figurative language is "the windows shiver"?
+          choices: [personification, simile, hyperbole]
+          evidence: while the windows shiver with every clap of thunder
+        - ask: What makes the windows "shiver" during a storm?
+          sample: The loud boom of thunder makes the windows shake.
+          evidence: while the windows shiver with every clap of thunder
+
+- id: d14-the-kite-contest
+  title: The Kite Contest
+  kind: story
+  text: |
+    At the spring kite contest, Lucia's homemade kite crashed three times in a row. The first time it spun
+    in dizzy circles, and the second time it dove straight into the grass. The third time, it landed in a puddle,
+    and the paper went as flat as a pancake.
+
+    Lucia felt like giving up, but her uncle patted her shoulder. "Keep your chin up," he said. "If at first
+    you don't succeed, try, try again." Together they carefully dried the wooden frame, attached a longer tail
+    for balance, and patched the torn paper with tape.
+
+    On the fourth try, a strong breeze lifted the kite high above the park. Its long red tail twisted and
+    curled until the kite was a dragon dancing in the sky. Lucia didn't win first prize, but she earned
+    something better: she discovered how to repair her own kite.
+  pages:
+    - focus: all kinds
+      words: [as flat as a pancake, Keep your chin up]
+      questions:
+        - ask: What does "Keep your chin up" mean?
+          choices: [stay hopeful and don't give up, look up high at the sky, stand up very tall and straight]
+          evidence: Lucia felt like giving up, but her uncle patted her shoulder.
+        - ask: Is "as flat as a pancake" a simile or a metaphor?
+          choices: [simile, metaphor, idiom]
+          evidence: the paper went as flat as a pancake
+        - ask: Rewrite "the paper went as flat as a pancake" in plain words.
+          sample: The wet paper of the kite went completely flat.
+          evidence: it landed in a puddle, and the paper went as flat as a pancake
+    - focus: all kinds
+      words: ["If at first you don't succeed, try, try again", the kite was a dragon dancing in the sky]
+      questions:
+        - ask: What does "the kite was a dragon dancing in the sky" mean?
+          choices: [the kite swooped and twisted in the sky, a dragon flew over the park, the kite was shaped like a dragon]
+          evidence: Its long red tail twisted and curled
+        - ask: "What does \"If at first you don't succeed, try, try again\" mean?"
+          choices: [keep trying even when you fail, give up after you try one time, you should only try new things once]
+          evidence: On the fourth try, a strong breeze lifted the kite high above the park.
+        - ask: How did Lucia follow her uncle's advice?
+          sample: Lucia fixed her kite with her uncle and tried a fourth time, and it flew.
+          evidence: On the fourth try, a strong breeze lifted the kite high above the park.
+
+- id: d15-gentle-giants
+  title: Gentle Giants
+  kind: article
+  text: |
+    Elephants are the largest animals that live on land. Yet a mother elephant can be as gentle as a lamb
+    with her baby, who sticks to her like glue. Elephants live in close family groups called herds. The
+    oldest female usually leads the way to food and water.
+
+    An elephant's trunk is a nose, a hand, and a straw all in one. With it, an elephant can smell food from
+    far away. It can pick up a single peanut, or suck up water and squirt it into its mouth. On hot days,
+    an elephant's big ears flap like giant fans. This helps the animal cool down.
+
+    Elephants also have excellent memories. They can remember the paths to faraway water holes. They
+    can even recognize old friends after many years apart, and they greet them with happy rumbles.
+  pages:
+    - focus: all kinds
+      words: [as gentle as a lamb, sticks to her like glue]
+      questions:
+        - ask: What does "sticks to her like glue" mean?
+          choices: [stays very close to her, is covered in glue, is stuck in the mud]
+          evidence: with her baby, who sticks to her like glue
+        - ask: What does "as gentle as a lamb" mean?
+          choices: [very gentle and kind, small and woolly, very loud]
+          evidence: a mother elephant can be as gentle as a lamb with her baby
+        - ask: Why is it surprising that an elephant is "as gentle as a lamb"?
+          sample: It is surprising because elephants are the largest land animals, but they can be very gentle.
+          evidence: Elephants are the largest animals that live on land
+    - focus: all kinds
+      words: ["trunk is a nose, a hand, and a straw", flap like giant fans]
+      questions:
+        - ask: What does "flap like giant fans" mean?
+          choices: [wave back and forth to make a breeze, make a loud noise like a fan, fold up small like paper fans]
+          evidence: This helps the animal cool down.
+        - ask: "Is \"trunk is a nose, a hand, and a straw\" a simile or a metaphor?"
+          choices: [metaphor, simile, idiom]
+          evidence: "An elephant's trunk is a nose, a hand, and a straw all in one."
+        - ask: Give two ways an elephant uses its trunk.
+          sample: An elephant uses its trunk to pick up a single peanut and to suck up water to drink.
+          evidence: pick up a single peanut, or suck up water and squirt it into its mouth

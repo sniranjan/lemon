@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Otters · Reading · page 1</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #0B7A75;
+  --tint: #E6F4F3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+h1 { font-size: 28px; }   /* passage titles are longer than other sheet titles: keep them on one line */
+/* the instruction sits on the card's top border, like a label, so it takes no height of its own */
+.read-wrap { flex: none; position: relative; margin-top: 6px; }
+.read-wrap .how { position: absolute; z-index: 1; top: -13px; left: 22px; background: #fff; padding: 0 10px;
+                  font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent); }
+.read { padding: 16px 26px 8px; border-radius: 22px; }
+.read p { font-size: 20px; line-height: 1.32; margin: 0 0 5px; text-indent: 1.4em; }
+.qs { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; gap: 6px; margin-top: 8px; }
+.q .ask { font-size: 20px; font-weight: 700; line-height: 1.3; display: flex; gap: 10px; }
+.q .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff;
+          display: inline-flex; align-items: center; justify-content: center; font-size: 20px; }
+.q .choices { display: flex; flex-wrap: wrap; column-gap: 26px; row-gap: 2px; margin: 4px 0 0 40px; font-size: 20px; }
+.q .choice { display: flex; align-items: center; gap: 8px; }
+.q .letter { flex: none; width: 29px; height: 29px; border: 2px solid var(--ink); border-radius: 50%;
+             display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+.q .line { height: 40px; margin-left: 40px; border-bottom: 2px solid #8a8a90; display: flex; align-items: flex-end; padding-bottom: 3px; }
+.q .starter { font-size: 20px; color: #4a4a50; }
+
+.read p b { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* numbered paragraphs: the number sits in the card's left padding */
+/* a little tighter than Foxes: grade 5 passages are longer */
+.read { padding: 12px 24px 8px; }
+.read p { line-height: 1.26; margin-bottom: 4px; }
+.read.numbered { padding-left: 46px; }
+.read.numbered p { position: relative; text-indent: 0; }
+.read .pn { position: absolute; left: -32px; top: 0; color: var(--accent); font-size: 20px; font-weight: 700; text-indent: 0; }
+.q .choices.stack { flex-direction: column; flex-wrap: nowrap; row-gap: 4px; }
+/* the questions box is a .card (no border) so the layout check catches questions running into the footer */
+.qs.card { border: none; border-radius: 0; gap: 4px; }
+.q .line { height: 38px; }
+
+.tip { margin-top: 14px; }
+.body { margin-top: 16px; }
+/* the paragraph numbers hang in the page margin, so the text runs the full width */
+.article.card { flex: 1; min-height: 0; position: relative; overflow: visible; border: none; border-radius: 0; border-top: 3px solid var(--ink); padding: 18px 0 0 0; }
+.article .how { position: absolute; top: -13px; left: 22px; background: #fff; padding: 0 10px;
+                font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent); }
+.article p { font-size: 20px; line-height: 1.25; margin: 0 0 3px; position: relative; }
+.article .pn { position: absolute; left: -34px; top: 0; color: var(--accent); font-size: 20px; font-weight: 700; text-indent: 0; }
+.back { flex: none; font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent);
+        border-top: 3px solid var(--ink); padding-top: 6px; }
+.qs.spread { justify-content: space-evenly; margin-top: 6px; }
+.qs.spread .q .line { height: 40px; }
+.qs.spread .q .ask { line-height: 1.25; }
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Otters · Reading</div>
+      <div class="title-row"><h1>How Sea Otters Stay Warm</h1><span class="pill">Otters · 1</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Read the article together first. Then ask: what surprised you?</div>
+  <main class="body">
+    <section class="card article">
+      <div class="how">Read the article. The questions are on the next page.</div>
+      <p><span class="pn">1</span>Sea otters live in the chilly coastal waters of the northern Pacific Ocean. Most sea mammals, such as whales and seals, are protected from the cold by a thick layer of fat called blubber. Sea otters have almost no blubber at all. Instead, they depend on their remarkable fur.</p>
+      <p><span class="pn">2</span>A sea otter&#39;s fur is thicker than the fur of any other animal on Earth. On a single square inch of its skin, an otter can have as many as one million hairs. That is more hairs than most people have on their entire head. The fur grows in two layers. Long outer hairs keep the water away, while the soft, short hairs underneath trap a layer of air next to the skin. That trapped air works like a warm blanket.</p>
+      <p><span class="pn">3</span>The coat only works when it is clean, so sea otters spend hours every day grooming. They rub, scrub, and comb their fur with their paws. They even roll over and over in the water and blow air into their fur to fluff it up. A dirty, matted coat would let cold water reach the skin.</p>
+      <p><span class="pn">4</span>Staying warm also takes a lot of energy. To keep their bodies burning like little furnaces, sea otters eat about a quarter of their own weight in food every day. They dive for crabs, clams, sea urchins, and other creatures. A sea otter often floats on its back and uses its belly as a table. Sometimes it cracks open a hard shell by banging it against a rock balanced on its chest.</p>
+      <p><span class="pn">5</span>When it is time to rest, a sea otter may wrap itself in long strands of kelp, a kind of seaweed. The kelp keeps the sleeping otter from drifting away while it floats.</p>
+    </section>
+
+  </main>
+  <footer class="foot" data-audience="parent">Otters · Reading · page 1</footer>
+</div>
+</body>
+</html>

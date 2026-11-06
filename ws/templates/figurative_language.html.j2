@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+{% import "_reading.html.j2" as rd %}
+{% block style %}
+{{ rd.style() }}
+/* meanings are phrases, often one a row: a little tighter so they fit under the passage */
+.q .choices { row-gap: 0; margin-top: 2px; }
+.q .letter { width: 27px; height: 27px; }
+.q .line { height: 36px; }
+.qs.card { gap: 0; margin-top: 4px; }
+{% endblock %}
+{% block body %}
+{{ rd.passage(sheet.items[0], "What do the bold phrases really mean?", "Look at new bold phrases.") }}
+    <div class="card qs">
+{% for q in sheet.items[1:] %}
+{{ rd.question(q) }}
+{% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html.j2" %}
+{% import "_reading.html.j2" as rd %}
+{% block style %}
+{{ rd.spread_style() }}
+{% endblock %}
+{% block body %}
+{% if sheet.items[0].role == "read" %}
+{{ rd.reading_page(sheet.items[0]) }}
+{% else %}
+{{ rd.questions_page(sheet.items[0], sheet.items[1:]) }}
+{% endif %}
+{% endblock %}
