@@ -88,6 +88,20 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `full_sentence_answer` (planner `passages` in `ws/passages.py`); child text 20px (`min_child_px` for R levels);
   answers PDF lists one line per answer (level rule `answers: by_line`). All 200 pages verify with 0 errors and
   0 warnings; booklets per section + `foxes-reading-level.pdf` (202 pages) + answers. `daily_pages: 2` (ours).
+- **Owls Reading (R4, our own level, grade 4 reading for age 7, 200 pages)** (2026-11-06): `syllabus/english/R4.yaml`:
+  A Chapter Stories 1–60 (5 original stories × 6 chapters, ~250 words each; RL.4.3) · B Word Detective 61–100 (two bold
+  words a page, meaning from context; L.4.4a) · C True Facts 101–140 (articles with headings and a figure drawn from data:
+  steps, cycle, table, bars, time line; RI.4.7) · D Two Texts 141–170 (two texts on one topic, 11 pairs firsthand + article;
+  RI.4.9, RI.4.6) · E The Big Idea 171–200 (stories and articles in turn, the big idea / lesson in one sentence; RL.4.2,
+  RI.4.2; part 1 prints sentence starters). Standards checked on thecorestandards.org. 100 original reads in
+  `content/passages/R4/` (Flesch-Kincaid 3.51–5.45 on body text, each of two texts scored separately), schema, planner
+  `long_reads` and checks in `ws/longreads.py`; draft record `syllabus/drafts/R4-reads.md` from `scripts/r4_drafts.py`
+  (approved by the orchestrator under the user's delegation); `scripts/r4_fit.py <section>` renders a section's pages
+  without touching the manifest and reports free space. A, C and D are two-page spreads: `long_read_page` (the read alone)
+  then `look_back_questions` (5 questions); B and E print text and questions on one page (`word_detective`,
+  `big_idea_summary`, each read serves 2 pages). Tests `tests/test_owls_reading.py`. All 200 pages verify with 0 errors and
+  0 warnings; booklets per section + `owls-reading-level.pdf` (202 pages) and `owls-reading-level-answers.pdf` (34 pages).
+  Free preview pages 1, 2, 61, 171: `ws preview owls` builds `out/previews/owls.pdf` (10 pages with Owls Math; not uploaded).
 - **Pandas Math (M6, our own level, grade 6 work for age 9, 200 pages)** (2026-11-06): `syllabus/math/M6.yaml`:
   A Dividing Fractions 1–30 (6.NS.1) · B Ratios and Rates 31–70 (6.RP.1, 6.RP.2, 6.RP.3a/b/d) · C Percents 71–100
   (6.RP.3c) · D Below Zero 101–130 (6.NS.5–8) · E Letters for Numbers 131–170 (6.EE.1, 6.EE.2a/c) · F One-Step
@@ -127,7 +141,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **MA M6 (Pandas Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **EN R4 (Owls Reading)**, **MA M6 (Pandas Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:

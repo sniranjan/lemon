@@ -1,0 +1,54 @@
+{
+  "id": "EN-R4-A-001",
+  "subject": "english",
+  "level": "R4",
+  "section": "A",
+  "part": null,
+  "sheet_type": "long_read_page",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 1787753178558269859,
+  "title": "A Box in the Attic",
+  "parent_tip": "Before turning the page, ask for a two-sentence retelling.",
+  "items": [
+    {
+      "kind": "read",
+      "read": "a01-lighthouse-1",
+      "set": "read",
+      "again": false,
+      "type": "story",
+      "heading": "A Box in the Attic",
+      "blocks": [
+        {
+          "p": "Nia spent the first week of summer at her grandmother's cottage by the sea. On the third day, a storm rolled in, and rain drummed on the roof all morning. Gran handed her a flashlight. \"Why don't you explore the attic?\" she suggested. \"Nobody has sorted it in years.\""
+        },
+        {
+          "p": "The attic was dusty and smelled like old paper. Nia found a rocking horse with a missing ear, a trunk full of wool sweaters, and a stack of photographs tied with string. In the far corner, under a folded sail, sat a small wooden box with a brass latch."
+        },
+        {
+          "p": "Inside the box was a heavy iron key. A paper tag hung from it on a faded ribbon. In careful, curly handwriting, someone had written: \"For the keeper who comes next.\""
+        },
+        {
+          "p": "Nia carried the box downstairs. Gran was stirring a pot of vegetable soup, but she stopped when she saw the key. For a long moment she did not say anything at all."
+        },
+        {
+          "p": "\"Where did you find that?\" she finally asked in a quiet voice."
+        },
+        {
+          "p": "\"Under the old sail,\" Nia answered. \"What does it open?\""
+        },
+        {
+          "p": "Gran wiped her hands on her apron and looked out the window. Far across the bay, the old lighthouse stood on its rocky point, gray and silent in the rain. Nobody had climbed its stairs for twenty years."
+        },
+        {
+          "p": "\"That key belonged to my father,\" Gran said. \"He was the last lighthouse keeper on this coast.\" She smiled a little, but her eyes were shiny. \"I thought it was lost forever.\""
+        }
+      ],
+      "story": "The Lighthouse Key",
+      "chapter": 1
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

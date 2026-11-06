@@ -44,3 +44,807 @@
         - ask: Which words helped you know what reluctant means?
           sample: "\"He did not want to take it away from the bees\" showed me that reluctant means not wanting to."
           evidence: He did not want to take it away from the bees
+
+- id: b02-tide-pool
+  kind: story
+  title: The Tide Pool
+  text: |
+    Rosa and her uncle walked along the beach at low tide. Rocky pools of water had been left behind by
+    the sea. "Be cautious here," Uncle Ben said. "That means be careful, because the rocks are slippery."
+
+    Rosa stepped slowly from rock to rock, and in one pool she noticed a glimmer near the bottom. It was a
+    small flash of light, like sunshine bouncing off glass. It came from a shiny purple shell.
+
+    Then a tiny crab peeked out from underneath a smooth gray stone. It was timid, not bold at all. As soon
+    as Rosa's shadow moved, it hurried back into its hiding place.
+
+    Rosa was curious about everything in the pool. She wanted to know how each creature found its food. Uncle Ben laughed. "You ask more
+    questions than a scientist!"
+  pages:
+    - focus: definition, restatement
+      targets: [cautious, glimmer]
+      questions:
+        - ask: What does cautious mean?
+          choices: [careful to stay safe, in a big hurry, very loud and silly]
+          evidence: That means be careful
+        - ask: What does glimmer mean?
+          choices: [a small flash of light, a deep hole in a rock, a loud splash]
+          evidence: It was a small flash of light
+        - ask: Which words helped you know what cautious means?
+          sample: The words "That means be careful" told me that cautious means careful.
+          evidence: That means be careful
+    - focus: contrast, example
+      targets: [timid, curious]
+      questions:
+        - ask: What does timid mean?
+          choices: [shy and easily scared, brave and strong, hungry and grumpy]
+          evidence: It was timid, not bold at all.
+        - ask: What does curious mean?
+          choices: [wanting to know about things, sleepy and bored, ready to go home]
+          evidence: She wanted to know how each creature found its food.
+        - ask: Which words helped you know what timid means?
+          sample: The words "not bold at all" told me that timid means shy.
+          evidence: It was timid, not bold at all.
+
+- id: b03-pyramids
+  kind: article
+  title: The Pyramids of Egypt
+  text: |
+    The pyramids of Egypt are ancient. They were built about 4,500 years ago, which makes them very,
+    very old. Workers built them for the kings of Egypt.
+
+    The pyramids are made of huge stone blocks. Some of the blocks weigh more than two cars! Because the
+    stone is so sturdy, the pyramids are still standing today. Strong, solid walls do not crumble easily.
+
+    Building a pyramid took many years. Wood was scarce in the desert, so there was not much of it to
+    use. Workers had to bring it from other lands by boat.
+
+    Today, visitors from all over the world come to see the pyramids. When the sun sets, the sand turns
+    gold and the pyramids seem to vanish into the dark sky. Soon you cannot see them at all.
+  pages:
+    - focus: definition, restatement
+      targets: [ancient, sturdy]
+      questions:
+        - ask: What does ancient mean?
+          choices: [very old, brand new, very small]
+          evidence: which makes them very, very old
+        - ask: What does sturdy mean?
+          choices: [strong and solid, soft and fluffy, tall and thin]
+          evidence: Strong, solid walls do not crumble easily.
+        - ask: Which words helped you know what ancient means?
+          sample: The words "which makes them very, very old" told me that ancient means very old.
+          evidence: which makes them very, very old
+    - focus: restatement, example
+      targets: [scarce, vanish]
+      questions:
+        - ask: What does scarce mean?
+          choices: [hard to find, easy to carry, very heavy]
+          evidence: there was not much of it to use
+        - ask: What does vanish mean?
+          choices: [to disappear from sight, to grow taller, to turn bright gold]
+          evidence: Soon you cannot see them at all.
+        - ask: Which words helped you know what vanish means?
+          sample: The words "Soon you cannot see them at all" showed me that vanish means disappear.
+          evidence: Soon you cannot see them at all.
+
+- id: b04-long-hike
+  kind: story
+  title: The Long Hike
+  text: |
+    Jada and her dad hiked up Bear Hill on a hot summer afternoon, and by the time they reached the top,
+    Jada was exhausted. She was so tired that she flopped down on a log and could not take one more step.
+
+    Her dad shared his trail mix with her, and then a friendly hiker named Mrs. Park offered Jada her last
+    cold apple. "You need it more than I do," she said. Jada decided that Mrs. Park was very generous,
+    because she gave away something she wanted too.
+
+    From the top of the hill, they could see a gigantic rock shaped like a whale. It was not small at all.
+    It was as big as a house!
+
+    On the way down, the path was steep and narrow, and Jada felt nervous. Her stomach felt jumpy, and her
+    hands were sweaty. Dad held her hand, and together they went down step by step until they finally
+    reached the parking lot.
+  pages:
+    - focus: restatement, example
+      targets: [exhausted, generous]
+      questions:
+        - ask: What does exhausted mean?
+          choices: [very tired, very happy, very hungry]
+          evidence: She was so tired that she flopped down on a log
+        - ask: What does generous mean?
+          choices: [happy to give and share, careful with money, fast at climbing hills]
+          evidence: she gave away something she wanted too
+        - ask: Which words helped you know what exhausted means?
+          sample: The words "She was so tired that she flopped down on a log" told me exhausted means very tired.
+          evidence: She was so tired that she flopped down on a log
+    - focus: contrast, example
+      targets: [gigantic, nervous]
+      questions:
+        - ask: What does gigantic mean?
+          choices: [very large, very smooth, very old]
+          evidence: It was as big as a house!
+        - ask: What does nervous mean?
+          choices: [worried and a little afraid, angry and loud, calm and sleepy]
+          evidence: Her stomach felt jumpy, and her hands were sweaty.
+        - ask: Which words helped you know what nervous means?
+          sample: The words "Her stomach felt jumpy, and her hands were sweaty" showed me nervous means worried.
+          evidence: Her stomach felt jumpy, and her hands were sweaty.
+
+- id: b05-woodchuck
+  kind: article
+  title: A Long Winter Sleep
+  text: |
+    In summer, food is plentiful for the woodchuck. There are lots and lots of plants, clover, and
+    berries to eat, so the woodchuck eats and eats until it is round and fat.
+
+    When cold weather arrives, plants stop growing and food becomes difficult to find. So the woodchuck
+    goes into its burrow. A burrow is a hole or tunnel that an animal digs in the ground. Deep inside, the
+    woodchuck curls up in a tight ball.
+
+    Then the woodchuck begins to hibernate. To hibernate means to sleep very deeply through the whole
+    winter. Its heart beats slowly, its breathing slows down, and its body temperature drops. It survives
+    on the fat it stored during the summer.
+
+    In spring, the woodchuck finally wakes up. At first it is sluggish. It moves slowly, like someone who
+    just got out of bed. Before long, it is hungry and ready to eat again.
+  pages:
+    - focus: restatement, definition
+      targets: [plentiful, burrow]
+      questions:
+        - ask: What does plentiful mean?
+          choices: [more than enough, almost gone, too cold to eat]
+          evidence: There are lots and lots of plants, clover, and berries to eat
+        - ask: What does burrow mean?
+          choices: [a hole or tunnel in the ground, a nest high in a tree, a pile of dry leaves]
+          evidence: A burrow is a hole or tunnel that an animal digs in the ground.
+        - ask: Which words helped you know what plentiful means?
+          sample: The words "There are lots and lots of plants" told me that plentiful means more than enough.
+          evidence: There are lots and lots of plants, clover, and berries to eat
+    - focus: definition, example
+      targets: [hibernate, sluggish]
+      questions:
+        - ask: What does hibernate mean?
+          choices: [to sleep deeply all winter, to dig a new home, to look for berries]
+          evidence: To hibernate means to sleep very deeply through the whole winter.
+        - ask: What does sluggish mean?
+          choices: [slow and sleepy, quick and hungry, round and fat]
+          evidence: It moves slowly, like someone who just got out of bed.
+        - ask: Which words helped you know what sluggish means?
+          sample: The words "It moves slowly, like someone who just got out of bed" told me sluggish means slow.
+          evidence: It moves slowly, like someone who just got out of bed.
+
+- id: b06-new-classroom
+  kind: story
+  title: The New Classroom
+  text: |
+    On the first day at her new school, Mei stood outside Room 12 and did not go in right away. She would
+    hesitate, then take a step, then stop again, because she was not sure she wanted to open the door.
+
+    Inside the classroom, a boy named Luis was grumpy. He frowned and crossed his arms because he had lost
+    his favorite pencil. But the teacher, Mr. Abbott, was cheerful. He smiled, hummed a song, and welcomed
+    every student with a joke.
+
+    Mei noticed Luis's pencil underneath a desk and handed it to him. His frown turned into a grin.
+    "Thanks!" he said. "Do you want to sit with me?"
+
+    By lunchtime, Mei felt confident. She was sure of herself now, so she raised her hand to answer a
+    question about volcanoes. Her new school did not feel so different anymore.
+  pages:
+    - focus: example, example
+      targets: [hesitate, grumpy]
+      questions:
+        - ask: What does hesitate mean?
+          choices: [to stop because you are unsure, to run very fast, to knock loudly]
+          evidence: she was not sure she wanted to open the door
+        - ask: What does grumpy mean?
+          choices: [in a bad mood, very sleepy, very funny]
+          evidence: He frowned and crossed his arms
+        - ask: Which words helped you know what grumpy means?
+          sample: The words "He frowned and crossed his arms" showed me that grumpy means in a bad mood.
+          evidence: He frowned and crossed his arms
+    - focus: contrast, restatement
+      targets: [cheerful, confident]
+      questions:
+        - ask: What does cheerful mean?
+          choices: [happy and friendly, quiet and shy, tired and slow]
+          evidence: He smiled, hummed a song, and welcomed every student with a joke.
+        - ask: What does confident mean?
+          choices: [sure of yourself, lost and confused, sorry for a mistake]
+          evidence: She was sure of herself now
+        - ask: Which words helped you know what confident means?
+          sample: The words "She was sure of herself now" told me that confident means sure of yourself.
+          evidence: She was sure of herself now
+
+- id: b07-camels
+  kind: article
+  title: Camels in the Desert
+  text: |
+    The desert is an arid place. It is very dry, and rain may not fall for months. Shade is rare in the
+    desert, too. A camel may walk all day and never find a single tree. Yet camels manage to live there
+    quite comfortably.
+
+    Many people think a camel's hump is full of water. It is not! The hump stores fat. When food is hard
+    to find, the camel's body uses the fat for energy.
+
+    Camels can endure heat that would make other animals sick. They can put up with hot days and travel
+    for a long time without water. When a camel finds water, it can drink about 30 gallons in just a few
+    minutes.
+
+    Camels also conserve water. They save it in clever ways. For example, they sweat very little, so less
+    water leaves their bodies.
+  pages:
+    - focus: definition, example
+      targets: [arid, rare]
+      questions:
+        - ask: What does arid mean?
+          choices: [very dry, very windy, very crowded]
+          evidence: It is very dry, and rain may not fall for months.
+        - ask: What does rare mean?
+          choices: [not often found, very hot, easy to see]
+          evidence: A camel may walk all day and never find a single tree.
+        - ask: Which words helped you know what arid means?
+          sample: The words "It is very dry, and rain may not fall for months" told me arid means very dry.
+          evidence: It is very dry, and rain may not fall for months.
+    - focus: restatement, example
+      targets: [endure, conserve]
+      questions:
+        - ask: What does endure mean?
+          choices: [to put up with something hard, to hide from something, to drink a lot quickly]
+          evidence: They can put up with hot days
+        - ask: What does conserve mean?
+          choices: [to save and not waste, to share with friends, to spill on the ground]
+          evidence: They save it in clever ways.
+        - ask: Which words helped you know what conserve means?
+          sample: The words "They save it in clever ways" told me that conserve means to save.
+          evidence: They save it in clever ways.
+
+- id: b08-workshop
+  kind: story
+  title: Grandpa's Workshop
+  text: |
+    Grandpa loved to tinker in his workshop. He liked to fix and change things just to see how they
+    worked. Today he was attempting to make an antique radio play music again, even though it had been silent for
+    many years.
+
+    The workshop was cluttered. Tools, wires, jars of screws, and boxes of old parts covered every table.
+    Leo had to move a pile of books to find a stool.
+
+    "Can I help?" Leo asked, and Grandpa handed him a tiny screwdriver. The screws were incredibly small, and Leo
+    kept dropping them accidentally. He wanted to give up, but Grandpa was patient. He did not rush or get
+    upset. He calmly said, "Try again, slowly."
+
+    Eventually the radio crackled, and a cheerful melody began to play. "We did it!" Grandpa said with a
+    proud grin. "Next week, let's repair the old kitchen clock. It needs to be fixed too."
+  pages:
+    - focus: definition, example
+      targets: [tinker, cluttered]
+      questions:
+        - ask: What does tinker mean?
+          choices: [to fix and try things out, to sleep in a chair, to sweep the floor]
+          evidence: He liked to fix and change things just to see how they worked.
+        - ask: What does cluttered mean?
+          choices: [messy and full of things, empty and clean, dark and cold]
+          evidence: Tools, wires, jars of screws, and boxes of old parts covered every table.
+        - ask: Which words helped you know what cluttered means?
+          sample: The words "boxes of old parts covered every table" told me that cluttered means messy.
+          evidence: Tools, wires, jars of screws, and boxes of old parts covered every table.
+    - focus: restatement, restatement
+      targets: [patient, repair]
+      questions:
+        - ask: What does patient mean?
+          choices: [calm when things go slowly, in a hurry, very strong]
+          evidence: He did not rush or get upset.
+        - ask: What does repair mean?
+          choices: [to fix, to paint, to sell]
+          evidence: It needs to be fixed too.
+        - ask: Which words helped you know what patient means?
+          sample: The words "He did not rush or get upset" told me that patient means calm.
+          evidence: He did not rush or get upset.
+
+- id: b09-owls-at-night
+  kind: article
+  title: Owls at Night
+  text: |
+    Owls are nocturnal birds, which means they sleep during the day and are awake at night. While you are
+    asleep in your bed, an owl may be flying silently over your house.
+
+    Owls have keen eyesight. Their eyes are so sharp that they can see clearly in very dim light. Their
+    hearing is even more amazing. Some owls can locate a mouse hiding under the snow just by listening
+    carefully.
+
+    An owl's flight is almost silent. Soft, fringed edges on its feathers muffle the sound of its wings.
+    To muffle a sound means to make it quieter. Mice and other small animals usually cannot hear the owl
+    approaching.
+
+    When an owl spots its dinner, it will swoop down. It dives quickly from the branch to the ground. Then
+    it flies back up to its favorite perch and enjoys its meal.
+  pages:
+    - focus: definition, restatement
+      targets: [nocturnal, keen]
+      questions:
+        - ask: What does nocturnal mean?
+          choices: [awake at night, able to swim, very small]
+          evidence: they sleep during the day and are awake at night
+        - ask: What does keen mean?
+          choices: [sharp and strong, sleepy and slow, soft and fluffy]
+          evidence: Their eyes are so sharp
+        - ask: Which words helped you know what nocturnal means?
+          sample: The words "they sleep during the day and are awake at night" told me what nocturnal means.
+          evidence: they sleep during the day and are awake at night
+    - focus: definition, restatement
+      targets: [muffle, swoop]
+      questions:
+        - ask: What does muffle mean?
+          choices: [to make a sound quieter, to make a sound louder, to sing a song]
+          evidence: To muffle a sound means to make it quieter.
+        - ask: What does swoop mean?
+          choices: [to dive down fast, to walk slowly, to hide in a hole]
+          evidence: It dives quickly from the branch to the ground.
+        - ask: Which words helped you know what swoop means?
+          sample: The words "It dives quickly from the branch to the ground" told me that swoop means dive.
+          evidence: It dives quickly from the branch to the ground.
+
+- id: b10-pepper
+  kind: story
+  title: Pepper Comes Home
+  text: |
+    One rainy morning, Sam's puppy, Pepper, slipped out through the open gate. Pepper liked to wander. He
+    would walk here and there without going anywhere special, sniffing every bush along the way.
+
+    When Sam discovered the open gate, he became frantic. He ran up and down the street, shouting Pepper's
+    name. He was so worried and rushed that he completely forgot to put on his raincoat.
+
+    Several neighbors came outside to help. Mrs. Lopez checked her vegetable garden, and Mr. Chen looked
+    under the porch steps. At last, a girl from down the block called out that she had found Pepper
+    sleeping under her slide.
+
+    Pepper was soggy. His fur was soaked and dripping from the rain. Sam did not mind one bit, and he
+    hugged the wet puppy tightly. He felt so relieved, as if a heavy weight had been lifted off his chest.
+  pages:
+    - focus: definition, example
+      targets: [wander, frantic]
+      questions:
+        - ask: What does wander mean?
+          choices: [to walk around with no plan, to sleep all day, to bark loudly]
+          evidence: He would walk here and there without going anywhere special
+        - ask: What does frantic mean?
+          choices: [very worried and rushed, calm and quiet, happy and silly]
+          evidence: He was so worried and rushed that he completely forgot to put on his raincoat.
+        - ask: Which words helped you know what wander means?
+          sample: The words "walk here and there without going anywhere special" told me what wander means.
+          evidence: He would walk here and there without going anywhere special
+    - focus: restatement, example
+      targets: [soggy, relieved]
+      questions:
+        - ask: What does soggy mean?
+          choices: [soaked and wet, warm and dry, dirty and muddy]
+          evidence: His fur was soaked and dripping from the rain.
+        - ask: What does relieved mean?
+          choices: [glad a worry is over, sad and lonely, angry and upset]
+          evidence: as if a heavy weight had been lifted off his chest
+        - ask: Which words helped you know what relieved means?
+          sample: The words "as if a heavy weight had been lifted off his chest" told me Sam was glad.
+          evidence: as if a heavy weight had been lifted off his chest
+
+- id: b11-honey
+  kind: article
+  title: Busy in the Hive
+  text: |
+    Honeybees work hard to make honey. First, they visit flowers to collect nectar. Nectar is a sweet
+    liquid inside flowers. A bee sucks it up with its long tongue and carries it home in a special
+    stomach.
+
+    Home for honeybees is a hive. A hive is the place where thousands of bees live and work together.
+    Inside, the bees build rows of six-sided wax rooms called cells.
+
+    Honeybees cooperate to finish the job. One bee does not work alone. Instead, the bees pass the nectar
+    from one to another, and many bees fan their wings over it.
+
+    Little by little, the bees transform the nectar into honey. The fanning dries it out, and it changes
+    into something thick and sticky. Then the bees seal each cell with a cap of wax to keep the honey for
+    winter.
+  pages:
+    - focus: definition, definition
+      targets: [nectar, hive]
+      questions:
+        - ask: What does nectar mean?
+          choices: [a sweet liquid in flowers, a kind of bee, the yellow part of a leaf]
+          evidence: Nectar is a sweet liquid inside flowers.
+        - ask: What does hive mean?
+          choices: [a home where bees live, a sweet treat, a flower garden]
+          evidence: A hive is the place where thousands of bees live and work together.
+        - ask: Which words helped you know what nectar means?
+          sample: The words "Nectar is a sweet liquid inside flowers" told me what nectar means.
+          evidence: Nectar is a sweet liquid inside flowers.
+    - focus: contrast, restatement
+      targets: [cooperate, transform]
+      questions:
+        - ask: What does cooperate mean?
+          choices: [to work together, to work alone, to stop working]
+          evidence: One bee does not work alone.
+        - ask: What does transform mean?
+          choices: [to change into something else, to carry far away, to keep the same]
+          evidence: it changes into something thick and sticky
+        - ask: Which words helped you know what cooperate means?
+          sample: The words "One bee does not work alone" told me that cooperate means to work together.
+          evidence: One bee does not work alone.
+
+- id: b12-talent-show
+  kind: story
+  title: The Talent Show
+  text: |
+    Nora and her brother Kai planned to sing a duet at the school talent show. Every night for two weeks,
+    they would rehearse. They practiced the song again and again in the living room, while their
+    grandmother listened from the sofa.
+
+    At first, they made plenty of mistakes. Kai forgot the words, and Nora sang much too fast. But by the
+    final practice, their singing was flawless. There was not one single mistake.
+
+    On the night of the performance, the gym was completely full. Parents, teachers, and students sat in
+    long rows of folding chairs. Nora peeked at the audience, all the people who had come to watch and
+    listen.
+
+    When the song ended, there was loud applause. Everyone clapped their hands and cheered. Kai bowed so
+    low that he almost tipped over, and the whole room laughed along with him.
+  pages:
+    - focus: restatement, restatement
+      targets: [rehearse, flawless]
+      questions:
+        - ask: What does rehearse mean?
+          choices: [to practice, to forget, to listen]
+          evidence: They practiced the song again and again
+        - ask: What does flawless mean?
+          choices: [with no mistakes, very loud, too fast]
+          evidence: There was not one single mistake.
+        - ask: Which words helped you know what flawless means?
+          sample: The words "There was not one single mistake" told me that flawless means with no mistakes.
+          evidence: There was not one single mistake.
+    - focus: definition, example
+      targets: [audience, applause]
+      questions:
+        - ask: What does audience mean?
+          choices: [people who watch a show, people who sing in a show, the chairs in a gym]
+          evidence: all the people who had come to watch and listen
+        - ask: What does applause mean?
+          choices: [clapping and cheering, a quiet whisper, a long song]
+          evidence: Everyone clapped their hands and cheered.
+        - ask: Which words helped you know what audience means?
+          sample: The words "all the people who had come to watch and listen" told me what audience means.
+          evidence: all the people who had come to watch and listen
+
+- id: b13-rainforest
+  kind: article
+  title: Inside a Rainforest
+  text: |
+    A rainforest is a forest that gets rain almost every day. The air is humid, which means it is warm
+    and full of water. Your clothes might feel damp just from standing there.
+
+    The tops of the tallest trees form the canopy. The canopy is like a green roof high above the ground.
+    Monkeys, birds, and sloths live up there, and some of them hardly ever come down.
+
+    Below the canopy, the plants are dense. They grow so close together that it is hard to walk between
+    them. Vines twist around the tree trunks, and giant leaves block the light.
+
+    Rainforests are home to many species. A species is one kind of living thing, such as one kind of frog
+    or one kind of flower. Scientists find new ones every year.
+  pages:
+    - focus: definition, example
+      targets: [humid, canopy]
+      questions:
+        - ask: What does humid mean?
+          choices: [warm and damp, cold and icy, dry and dusty]
+          evidence: which means it is warm and full of water
+        - ask: What does canopy mean?
+          choices: [the tops of the tallest trees, the roots under the ground, a river in the forest]
+          evidence: The tops of the tallest trees form the canopy.
+        - ask: Which words helped you know what canopy means?
+          sample: The words "like a green roof high above the ground" told me what canopy means.
+          evidence: The canopy is like a green roof high above the ground.
+    - focus: example, definition
+      targets: [dense, species]
+      questions:
+        - ask: What does dense mean?
+          choices: [crowded close together, far apart, very short]
+          evidence: They grow so close together that it is hard to walk between them.
+        - ask: What does species mean?
+          choices: [one kind of living thing, a very tall tree, a kind of weather]
+          evidence: A species is one kind of living thing
+        - ask: Which words helped you know what dense means?
+          sample: The words "They grow so close together" told me that dense means crowded.
+          evidence: They grow so close together that it is hard to walk between them.
+
+- id: b14-sandcastle
+  kind: story
+  title: The Sandcastle
+  text: |
+    Ivy spent the entire morning building a sandcastle with four towers and a bridge. Then a big wave
+    rolled in, and the towers began to collapse. They fell down into a lumpy pile of wet sand.
+
+    Ivy was frustrated. She stomped her foot and kicked a shell, because nothing had gone the way she had
+    planned.
+
+    Her cousin Ray sat down beside her. "Let's build it again, farther from the water," he said. Ivy took
+    a deep breath. Now she was determined. She would not quit until the castle was finished.
+
+    This time they built a wall of sand to protect the castle from the waves. They patted every tower
+    until it was firm. In the afternoon, people walking along the beach stopped to admire the castle. They
+    looked at it for a long time and said how wonderful it was.
+  pages:
+    - focus: restatement, example
+      targets: [collapse, frustrated]
+      questions:
+        - ask: What does collapse mean?
+          choices: [to fall down, to grow taller, to wash clean]
+          evidence: They fell down into a lumpy pile of wet sand.
+        - ask: What does frustrated mean?
+          choices: [upset when things go wrong, proud of a job, sleepy after playing]
+          evidence: She stomped her foot and kicked a shell
+        - ask: Which words helped you know what collapse means?
+          sample: The words "They fell down into a lumpy pile of wet sand" told me that collapse means fall down.
+          evidence: They fell down into a lumpy pile of wet sand.
+    - focus: restatement, example
+      targets: [determined, admire]
+      questions:
+        - ask: What does determined mean?
+          choices: [not willing to give up, ready to go home, afraid of the waves]
+          evidence: She would not quit until the castle was finished.
+        - ask: What does admire mean?
+          choices: [to look at with delight, to knock down, to walk past quickly]
+          evidence: They looked at it for a long time and said how wonderful it was.
+        - ask: Which words helped you know what determined means?
+          sample: The words "She would not quit until the castle was finished" told me what determined means.
+          evidence: She would not quit until the castle was finished.
+
+- id: b15-seeds
+  kind: article
+  title: Seeds on the Move
+  text: |
+    Plants cannot walk anywhere, but their seeds can still travel surprisingly far. Plants disperse their
+    seeds, or spread them out to new places. That way, the young plants have room to grow.
+
+    Some seeds drift on the wind. A dandelion seed has a fluffy top like a tiny parachute. It floats
+    slowly through the air, sometimes for miles, before it lands.
+
+    Other seeds cling to animals. Burrs have tiny hooks that hold on tight to fur or socks. A dog may
+    carry them far away before they finally drop off.
+
+    Coconuts can even float across the ocean to faraway beaches. When a seed lands in a good spot with
+    soil, sunlight, and water, it will sprout. A tiny root and a little green stem appear, and a new plant
+    begins to grow.
+  pages:
+    - focus: definition, example
+      targets: [disperse, drift]
+      questions:
+        - ask: What does disperse mean?
+          choices: [to spread out, to grow tall, to keep close]
+          evidence: or spread them out to new places
+        - ask: What does drift mean?
+          choices: [to float slowly, to sink fast, to stay still]
+          evidence: It floats slowly through the air
+        - ask: Which words helped you know what disperse means?
+          sample: The words "or spread them out to new places" told me that disperse means spread out.
+          evidence: or spread them out to new places
+    - focus: example, restatement
+      targets: [cling, sprout]
+      questions:
+        - ask: What does cling mean?
+          choices: [to hold on tight, to fall off, to float away]
+          evidence: tiny hooks that hold on tight to fur or socks
+        - ask: What does sprout mean?
+          choices: [to start to grow, to dry up, to roll away]
+          evidence: a new plant begins to grow
+        - ask: Which words helped you know what cling means?
+          sample: The words "tiny hooks that hold on tight to fur or socks" told me that cling means hold on.
+          evidence: tiny hooks that hold on tight to fur or socks
+
+- id: b16-moving-day
+  kind: story
+  title: Moving Day
+  text: |
+    On moving day, Omar took one last glance at his old bedroom. He looked quickly at the empty walls,
+    then followed his mother outside to the car.
+
+    The old apartment had been cramped. Omar shared a tiny room with his two brothers, and there was
+    barely space for their beds. Their toys were stacked in boxes under the window.
+
+    The new house was spacious. It had big rooms, a long hallway, and a backyard with plenty of space to
+    run. Omar even had his own bedroom with a cozy window seat.
+
+    That night, everything felt unfamiliar. The sounds were new, and the hallway was not one he knew.
+    Omar lay awake for a long time. Then his little brother knocked on the door, holding a pillow. "Can I
+    sleep in here tonight?" he asked. Omar smiled and moved over.
+  pages:
+    - focus: restatement, example
+      targets: [glance, cramped]
+      questions:
+        - ask: What does glance mean?
+          choices: [a quick look, a long nap, a loud shout]
+          evidence: He looked quickly at the empty walls
+        - ask: What does cramped mean?
+          choices: [too small and crowded, big and empty, bright and sunny]
+          evidence: there was barely space for their beds
+        - ask: Which words helped you know what cramped means?
+          sample: The words "there was barely space for their beds" told me that cramped means too small.
+          evidence: there was barely space for their beds
+    - focus: example, example
+      targets: [spacious, unfamiliar]
+      questions:
+        - ask: What does spacious mean?
+          choices: [big with lots of room, small and tight, old and dusty]
+          evidence: It had big rooms, a long hallway, and a backyard with plenty of space to run.
+        - ask: What does unfamiliar mean?
+          choices: [new and not known, loud and busy, warm and cozy]
+          evidence: the hallway was not one he knew
+        - ask: Which words helped you know what unfamiliar means?
+          sample: The words "The sounds were new, and the hallway was not one he knew" told me.
+          evidence: The sounds were new, and the hallway was not one he knew.
+
+- id: b17-emperor-penguins
+  kind: article
+  title: Penguins on the Ice
+  text: |
+    Emperor penguins are the largest penguins in the world. They live in Antarctica, one of the coldest
+    places on Earth. The winters there are
+    frigid. The air is so icy cold that the sea freezes for miles.
+
+    To stay warm, the penguins huddle. Thousands of them crowd close together in a tight group. They take
+    turns moving from the windy outside edge to the warm middle.
+
+    Penguins also have bodies that insulate them from the cold. Thick layers of fat and tightly packed
+    feathers keep heat in and chilly air out, like a warm winter coat.
+
+    On land, emperor penguins waddle. They rock from side to side on their short legs. But in the water,
+    they are fast, graceful swimmers. They can dive deep under the ice to catch fish and squid.
+  pages:
+    - focus: restatement, example
+      targets: [frigid, huddle]
+      questions:
+        - ask: What does frigid mean?
+          choices: [very cold, very windy, very dark]
+          evidence: The air is so icy cold that the sea freezes for miles.
+        - ask: What does huddle mean?
+          choices: [to crowd close together, to swim far away, to slide on the ice]
+          evidence: Thousands of them crowd close together in a tight group.
+        - ask: Which words helped you know what frigid means?
+          sample: The words "The air is so icy cold" told me that frigid means very cold.
+          evidence: The air is so icy cold that the sea freezes for miles.
+    - focus: example, restatement
+      targets: [insulate, waddle]
+      questions:
+        - ask: What does insulate mean?
+          choices: [to keep heat in, to make wet, to cool down fast]
+          evidence: keep heat in and chilly air out
+        - ask: What does waddle mean?
+          choices: [to walk rocking side to side, to swim very fast, to stand very still]
+          evidence: They rock from side to side on their short legs.
+        - ask: Which words helped you know what waddle means?
+          sample: The words "They rock from side to side on their short legs" told me what waddle means.
+          evidence: They rock from side to side on their short legs.
+
+- id: b18-kite-festival
+  kind: story
+  title: The Kite Festival
+  text: |
+    Every spring, the town held a kite festival in the big park beside the river. Ali's kite was shaped
+    like a dragon with vivid colors. Its bright red, orange, and green stripes stood out against the sky.
+
+    At first, the wind was calm. The air was so still that not even the leaves moved, and Ali's kite lay
+    flat and quiet on the grass.
+
+    Then the afternoon breeze picked up. Ali ran across the field as fast as he could, and his dragon
+    began to soar. It rose high above the trees and glided through the sky like an eagle.
+
+    Suddenly, a girl's butterfly kite drifted too close, and the two strings got tangled. They were
+    twisted and knotted together in a big mess. Ali and the girl laughed as they worked together to
+    loosen the knots. By the end of the festival, they had become friends and were flying their kites
+    side by side.
+  pages:
+    - focus: example, restatement
+      targets: [vivid, calm]
+      questions:
+        - ask: What does vivid mean?
+          choices: [bright and strong, pale and faded, dark and gloomy]
+          evidence: Its bright red, orange, and green stripes stood out against the sky.
+        - ask: What does calm mean?
+          choices: [still and quiet, strong and wild, cold and wet]
+          evidence: The air was so still that not even the leaves moved
+        - ask: Which words helped you know what vivid means?
+          sample: The words "bright red, orange, and green stripes" told me that vivid means bright.
+          evidence: Its bright red, orange, and green stripes stood out against the sky.
+    - focus: example, restatement
+      targets: [soar, tangled]
+      questions:
+        - ask: What does soar mean?
+          choices: [to fly high, to fall down, to roll on the grass]
+          evidence: It rose high above the trees
+        - ask: What does tangled mean?
+          choices: [twisted together in a mess, cut in half, tied neatly in a bow]
+          evidence: They were twisted and knotted together in a big mess.
+        - ask: Which words helped you know what tangled means?
+          sample: The words "twisted and knotted together in a big mess" told me what tangled means.
+          evidence: They were twisted and knotted together in a big mess.
+
+- id: b19-moon
+  kind: article
+  title: Our Moon
+  text: |
+    The moon is Earth's closest neighbor in space. It travels in an orbit around Earth. An orbit is a
+    path that goes around and around something. The moon takes about a month to travel around Earth once.
+
+    The moon does not make its own light. Instead, it reflects light from the sun. Sunlight bounces off
+    the moon, the way light bounces off a mirror.
+
+    If you look through a telescope, you can see that the moon's surface is covered with
+    craters. A crater is a
+    bowl-shaped hole. Most of the moon's craters were made long ago when rocks from outer space crashed into
+    it.
+
+    The moon has no air and no wind. Because of this, the footprints left by astronauts many years ago are still there
+    today. Nothing blows them away, so nothing can erase them.
+  pages:
+    - focus: definition, restatement
+      targets: [orbit, reflects]
+      questions:
+        - ask: What does orbit mean?
+          choices: [a path around something, a hole on the moon, a kind of star]
+          evidence: An orbit is a path that goes around and around something.
+        - ask: What does reflects mean?
+          choices: [bounces back, makes on its own, hides away]
+          evidence: Sunlight bounces off the moon
+        - ask: Which words helped you know what reflects means?
+          sample: The words "Sunlight bounces off the moon" told me that reflects means bounces back.
+          evidence: Sunlight bounces off the moon
+    - focus: definition, restatement
+      targets: [crater, erase]
+      questions:
+        - ask: What does crater mean?
+          choices: [a bowl-shaped hole, a tall mountain, a rocky path]
+          evidence: A crater is a bowl-shaped hole.
+        - ask: What does erase mean?
+          choices: [to wipe away, to draw again, to make deeper]
+          evidence: Nothing blows them away
+        - ask: Which words helped you know what crater means?
+          sample: The words "A crater is a bowl-shaped hole" told me what crater means.
+          evidence: A crater is a bowl-shaped hole.
+
+- id: b20-library-helper
+  kind: story
+  title: The Library Helper
+  text: |
+    Every Saturday, Ms. Rivera worked at the town library as a volunteer. She did not get paid. She
+    helped because she loved books and wanted others to love them too.
+
+    This week, Ana came along to help. The children's shelves were a mess, so Ms. Rivera asked her to
+    organize them. Ana put the books in order by the authors' last names, from A to Z.
+
+    Later, a little boy asked for a good book about animals. Ana remembered a funny one about a goat who
+    wanted to be a dancer. "I recommend this one," she said. "I think you should read it. It made me
+    laugh."
+
+    The boy came back an hour later with a huge smile. "It was the best book ever!" he said. Ms. Rivera
+    said she was grateful for Ana's help. She was thankful that Ana had given up her Saturday morning.
+  pages:
+    - focus: definition, example
+      targets: [volunteer, organize]
+      questions:
+        - ask: What does volunteer mean?
+          choices: [someone who helps without pay, someone who writes books, someone who lives at the library]
+          evidence: She did not get paid.
+        - ask: What does organize mean?
+          choices: [to put in order, to read aloud, to throw away]
+          evidence: Ana put the books in order
+        - ask: Which words helped you know what volunteer means?
+          sample: The words "She did not get paid" told me a volunteer helps without pay.
+          evidence: She did not get paid.
+    - focus: restatement, restatement
+      targets: [recommend, grateful]
+      questions:
+        - ask: What does recommend mean?
+          choices: [to say something is good to try, to borrow a book, to laugh out loud]
+          evidence: I think you should read it.
+        - ask: What does grateful mean?
+          choices: [thankful, worried, surprised]
+          evidence: She was thankful that Ana had given up her Saturday morning.
+        - ask: Which words helped you know what recommend means?
+          sample: The words "I think you should read it" told me what recommend means.
+          evidence: I think you should read it.

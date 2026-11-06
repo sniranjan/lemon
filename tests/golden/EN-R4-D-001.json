@@ -1,0 +1,53 @@
+{
+  "id": "EN-R4-D-001",
+  "subject": "english",
+  "level": "R4",
+  "section": "D",
+  "part": null,
+  "sheet_type": "long_read_page",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 9583179557421956898,
+  "title": "Monarch Butterflies",
+  "parent_tip": "Your child reads it silently, then aloud. Keep this page out.",
+  "items": [
+    {
+      "kind": "read",
+      "read": "d01-monarchs",
+      "set": "read",
+      "again": false,
+      "type": "article",
+      "heading": "Monarch Butterflies",
+      "blocks": [],
+      "texts": [
+        {
+          "title": "The Long Trip South",
+          "type": "article",
+          "blocks": [
+            {
+              "p": "Every fall, millions of monarch butterflies leave the northern United States and Canada. They fly south to the mountains of central Mexico. Some of them travel nearly 3,000 miles! None of these butterflies has ever made the trip before, yet each one finds its way. Scientists think that monarchs use the sun to help them steer."
+            },
+            {
+              "p": "In Mexico, the monarchs spend the winter in cool fir forests high in the mountains. They crowd together on the branches to stay warm. When spring comes, they start flying north again. They lay eggs on milkweed plants along the way, and their children and grandchildren finish the trip."
+            }
+          ]
+        },
+        {
+          "title": "A Morning in the Butterfly Forest",
+          "type": "journal",
+          "blocks": [
+            {
+              "p": "January 14. Today my father and I hiked up a steep trail in the mountains of central Mexico. The air was so cold that I could see my breath. At first, the fir trees looked very strange to me. Their branches were covered with brown, droopy clumps that looked like dry leaves."
+            },
+            {
+              "p": "Then the sun came out. Suddenly the brown clumps began to open and glow orange. They were butterflies, thousands and thousands of monarchs! A few floated gently down and landed on my sleeve. The forest was so quiet that I could hear the soft whisper of their wings. I will remember that magical morning for the rest of my life."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}
