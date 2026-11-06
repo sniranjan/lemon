@@ -1,0 +1,71 @@
+{
+  "id": "MA-M3-B-002",
+  "subject": "math",
+  "level": "M3",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 32,
+  "variant": 1,
+  "seed": 13463350846782461090,
+  "title": "Times tables",
+  "parent_tip": "Each dot picture is rows of dots. 3 times 5 is 3 rows of 5. Count by 5s down the rows.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "*",
+      "b": 9,
+      "c": 18,
+      "blank": "c",
+      "rows": 2,
+      "cols": 9,
+      "layout": "arrays",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "*",
+      "b": 2,
+      "c": 20,
+      "blank": "c",
+      "rows": 10,
+      "cols": 2,
+      "layout": "arrays",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "*",
+      "b": 2,
+      "c": 14,
+      "blank": "c",
+      "rows": 7,
+      "cols": 2,
+      "layout": "arrays",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "*",
+      "b": 6,
+      "c": 12,
+      "blank": "c",
+      "rows": 2,
+      "cols": 6,
+      "layout": "arrays",
+      "n": 4
+    }
+  ],
+  "answer_key": [
+    18,
+    20,
+    14,
+    12
+  ],
+  "new_words": [],
+  "review_words": []
+}

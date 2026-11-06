@@ -1,6 +1,6 @@
 {% extends "base.html.j2" %}
 {% set layout = sheet.items[0].layout %}
-{% macro sign(op) %}{% if op == "-" %}&minus;{% else %}+{% endif %}{% endmacro %}
+{% macro sign(op) %}{% if op == "-" %}&minus;{% elif op == "*" %}&times;{% elif op == "/" %}&divide;{% else %}+{% endif %}{% endmacro %}
 {% macro slot(f, part) %}{% if f.blank == part %}<span class="ans"></span>{% else %}<span class="num">{{ f[part] }}</span>{% endif %}{% endmacro %}
 {% macro line(f) %}<div class="eqn">{{ slot(f, "a") }}<span class="op">{{ sign(f.op) }}</span>{{ slot(f, "b") }}<span class="op">=</span>{{ slot(f, "c") }}</div>{% endmacro %}
 {% block style %}
@@ -40,9 +40,68 @@
 .fam-facts .eqn { font-size: 36px; gap: 8px; position: relative; padding-left: 18px; }
 .fam-facts .eqn .ans { width: 62px; height: 52px; }
 .fam-facts .qn { top: -4px; left: 0; }
+{% if layout in ("skip", "arrays", "pairs") %}
+
+.skip { grid-template-columns: 1fr 1fr; grid-template-rows: auto repeat(4, 1fr); gap: 14px 22px; }
+.skip .wide { grid-column: 1 / 3; flex-direction: column; gap: 10px; padding: 18px 20px 20px; }
+.skip-label { font-size: 28px; font-weight: 700; }
+.skip-track { display: flex; gap: 8px; }
+.skip-track .cell { width: 58px; height: 58px; font-size: 28px; }
+
+.arrays { grid-template-columns: 1fr; grid-template-rows: repeat(4, 1fr); gap: 14px; }
+.arrays .card { justify-content: space-between; padding: 0 36px 0 40px; }
+.dots { display: grid; gap: 4px; }
+.dots i { width: 12px; height: 12px; border-radius: 50%; background: var(--ink); }
+.dots-wrap { width: 260px; display: flex; justify-content: center; }
+.arrays .eqn { font-size: 46px; }
+
+.pairs { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); gap: 12px; }
+.pairs .card { justify-content: space-around; padding: 0 20px; }
+.pairs .eqn { font-size: 42px; gap: 10px; }
+.pairs .ans { width: 78px; height: 60px; }
+{% endif %}
+{% if layout in ("horizontal", "vertical") and sheet.items[0].op in ("*", "/") %}
+
+.horizontal .eqn { font-size: 44px; gap: 10px; }
+.horizontal .ans { width: 80px; }
+{% endif %}
 {% endblock %}
 {% block body %}
-{% if layout == "families" %}
+{% if layout == "skip" %}
+{% set track = sheet.items[0] %}
+    <div class="facts skip">
+      <div class="card wide">
+        <div class="skip-label">Count by {{ track.step }}s</div>
+        <div class="skip-track">
+{% for t in track.cells %}
+          <div class="cell{% if loop.first %} start{% elif loop.index0 in track.blanks %} empty{% endif %}">{% if loop.index0 not in track.blanks %}{{ t }}{% endif %}</div>
+{% endfor %}
+        </div>
+      </div>
+{% for f in sheet.items[1:] %}
+      <div class="card"><span class="qn" data-audience="parent">{{ f.n }}</span>{{ line(f) }}</div>
+{% endfor %}
+    </div>
+{% elif layout == "arrays" %}
+    <div class="facts arrays">
+{% for f in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ f.n }}</span>
+        <div class="dots-wrap"><div class="dots" style="grid-template-columns: repeat({{ f.cols }}, 12px)">{% for _ in range(f.rows * f.cols) %}<i></i>{% endfor %}</div></div>
+        {{ line(f) }}
+      </div>
+{% endfor %}
+    </div>
+{% elif layout == "pairs" %}
+    <div class="facts pairs">
+{% for p in sheet.items %}
+      <div class="card">
+{% for f in p.facts %}
+        <div class="eqn"><span class="qn" data-audience="parent" style="position: static; margin-right: 4px;">{{ f.n }}</span>{{ slot(f, "a") }}<span class="op">{{ sign(f.op) }}</span>{{ slot(f, "b") }}<span class="op">=</span>{{ slot(f, "c") }}</div>
+{% endfor %}
+      </div>
+{% endfor %}
+    </div>
+{% elif layout == "families" %}
     <div class="facts families">
 {% for fam in sheet.items %}
       <div class="card">

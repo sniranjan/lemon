@@ -94,7 +94,17 @@ def line_stories() -> tuple[tuple[str, str], ...]:
     return tuple((d["from"], d["to"]) for d in data)
 
 
+@lru_cache(maxsize=None)
+def story_problems() -> tuple[dict, ...]:
+    """Story problem frames for math word problems (see the file's header)."""
+    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "story_problems.yaml").read_text()))
+    ids = [f["id"] for f in frames]
+    if len(set(ids)) != len(ids):
+        raise ValueError("story_problems.yaml: frame ids must be unique")
+    return frames
+
+
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories):
+              line_stories, story_problems):
         f.cache_clear()

@@ -1,4 +1,5 @@
-"""Cubs math (M2-D…H): vertical column adding and taking away, with carry / borrow boxes.
+"""Vertical column adding and taking away, with carry / borrow boxes: Cubs math (M2-D…H, two- and
+three-digit) and Foxes math (M3-A, three-digit with up to two trades).
 
 Rules (merged level → section → part):
 - `op`: add | sub | mixed (mixed: half the problems each way).
@@ -7,7 +8,13 @@ Rules (merged level → section → part):
 - `regroup`: none (no column carries or borrows), all (every problem regroups), mixed (some do,
   some don't). `max_regroups` (default 1): how many columns may regroup in one problem, so
   borrowing across a zero (402 − 158) never turns up.
-- `problems`: problems per page (default 6; 4 for three-digit pages).
+- `problems`: problems per page (default 6; 4 for three-digit pages; 9 in a compact 3 × 3 grid).
+- `title` (optional): the sheet title; otherwise it comes from `op` ("Adding", "Taking away", …).
+Foxes adds two optional rules (Cubs pages don't use them, and are unchanged by them):
+- `regroup_counts`: exact numbers of regrouping columns a problem may have, e.g. [1, 2] or [0, 1, 2];
+  every count is on every page (when the page has room). Set `max_regroups` to the largest.
+- `across_zero`: at least this many taking-away problems trade through a 0 in the tens of the top
+  number (402 − 168: the ones need a ten, but there are no tens, so a hundred is broken first).
 
 Regrouping parts show small dashed boxes above the columns: one above each column a carry can
 land in (adding), or one above every digit of the top number (taking away, for the new digit
@@ -49,6 +56,29 @@ def regroups(op: str, numbers: list[int]) -> int:
     return count
 
 
+def across_zero(op: str, numbers: list[int]) -> bool:
+    """Taking away where the ones need a ten and the top number has 0 tens (402 − 168)."""
+    a, b = numbers[0], numbers[1]
+    return op == "sub" and a >= 100 and digit(a, 1) == 0 and digit(a, 0) < digit(b, 0)
+
+
+def _counts(rules: dict, ops: list[str], rng) -> list[tuple[int | None, bool]]:
+    """Foxes: (regroup count, through a zero?) for each problem. Without `regroup_counts`: no rule."""
+    if "regroup_counts" not in rules:
+        return [(None, False)] * len(ops)
+    wanted = rules["regroup_counts"]
+    ks = [wanted[i % len(wanted)] for i in range(len(ops))]
+    rng.shuffle(ks)
+    zeros = rules.get("across_zero", 0)
+    subs = [i for i, op in enumerate(ops) if op == "sub"]
+    if zeros and (len(subs) < zeros or 2 not in wanted):
+        raise ValueError("column_arithmetic: across_zero needs taking-away problems and 2 in regroup_counts")
+    out = [(k, False) for k in ks]
+    for i in subs[:zeros]:
+        out[i] = (2, True)
+    return out
+
+
 def _ops(rules: dict, n: int, rng) -> list[str]:
     op = rules["op"]
     if op not in OPS:
@@ -72,8 +102,10 @@ def _wants(rules: dict, n: int, rng) -> list[bool]:
     return wants
 
 
-def problem_ok(rules: dict, op: str, numbers: list[int], must_regroup: bool | None) -> str | None:
-    """Why this problem breaks the part's rules, or None. `must_regroup` None = either is fine."""
+def problem_ok(rules: dict, op: str, numbers: list[int], must_regroup: bool | None,
+               count: int | None = None) -> str | None:
+    """Why this problem breaks the part's rules, or None. `must_regroup` None = either is fine;
+    `count` asks for exactly that many regrouping columns."""
     lo_a, hi_a = rules["a"]
     lo_b, hi_b = rules["b"]
     if not lo_a <= numbers[0] <= hi_a:
@@ -96,6 +128,10 @@ def problem_ok(rules: dict, op: str, numbers: list[int], must_regroup: bool | No
         return "doesn't regroup, but this part is about regrouping"
     if must_regroup is False and r > 0:
         return "regroups, but this part has no regrouping"
+    if count is not None and r != count:
+        return f"regroups in {r} columns, not {count}"
+    if "regroup_counts" in rules and r not in rules["regroup_counts"]:
+        return f"regroups in {r} columns; this part uses {rules['regroup_counts']}"
     return None
 
 
@@ -113,15 +149,21 @@ class ColumnArithmetic(SheetType):
         r, rng = ctx.rules, ctx.rng
         n = r.get("problems", 6)
         ops, wants = _ops(r, n, rng), _wants(r, n, rng)
+        counts = _counts(r, ops, rng)
         boxes = r.get("regroup", "none") != "none"
         cols = columns(r)
         items, seen = [], set()
-        for op, want in zip(ops, wants):
+        for op, want, (count, zero) in zip(ops, wants, counts):
             k = r.get("addends", 2) if op == "add" else 2
+            if count is not None:
+                want = None   # the exact count decides
             for _ in range(MAX_TRIES):
                 numbers = [rng.randint(*r["a"])] + [rng.randint(*r["b"]) for _ in range(k - 1)]
+                if zero:   # 0 tens on top, and ones that need a ten
+                    numbers[0] = numbers[0] // 100 * 100 + rng.randint(0, 8)
                 key = (op, tuple(numbers))
-                if key not in seen and problem_ok(r, op, numbers, want) is None:
+                if key not in seen and problem_ok(r, op, numbers, want, count) is None \
+                        and (not zero or across_zero(op, numbers)):
                     break
             else:
                 raise ValueError(f"column_arithmetic: can't find a {op} problem with these rules: {r}")
@@ -131,6 +173,7 @@ class ColumnArithmetic(SheetType):
         title = {"add": "Adding", "sub": "Taking away", "mixed": "Add and take away"}[r["op"]]
         if r.get("addends", 2) == 3:
             title = "Adding three numbers"
+        title = r.get("title", title)
         return SheetContent(title=title, parent_tip=ctx.tip(self.tip_key(r)), items=items,
                             answer_key=[answer(i["op"], i["numbers"]) for i in items])
 
@@ -176,6 +219,15 @@ class ColumnArithmetic(SheetType):
             issues.append(error(sheet, "a mixed page needs problems with and without regrouping"))
         if r["op"] == "mixed" and len({i["op"] for i in sheet.items}) < 2:
             issues.append(error(sheet, "a mixed page needs both adding and taking away"))
+        if "regroup_counts" in r:
+            seen_counts = {regroups(i["op"], i["numbers"]) for i in sheet.items}
+            missing = [k for k in r["regroup_counts"] if k not in seen_counts]
+            if missing and len(r["regroup_counts"]) <= n:
+                issues.append(error(sheet, f"no problem regrouping in {missing} columns; every page needs each of "
+                                           f"{r['regroup_counts']}"))
+        zeros = sum(across_zero(i["op"], i["numbers"]) for i in sheet.items)
+        if zeros < r.get("across_zero", 0):
+            issues.append(error(sheet, f"{zeros} problems trade through a zero; this part needs {r['across_zero']}"))
         if sheet.answer_key != answers:
             issues.append(error(sheet, f"answer key {sheet.answer_key} doesn't match the problems {answers}"))
         return issues

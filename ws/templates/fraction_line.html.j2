@@ -1,0 +1,52 @@
+{% extends "base.html.j2" %}
+{# Number lines from 0 to 1. Positions come from whole numbers only: tick k of den sits at
+   X0 + LEN * k / den, so equal parts are exactly equal. #}
+{% set X0, LEN, Y = 34, 500, 30 %}
+{% macro frac(num, den, x, size=28) %}<text x="{{ x }}" y="{{ Y + 44 }}" text-anchor="middle" style="font-size: {{ size }}px">{{ num }}</text><line x1="{{ x - 13 }}" x2="{{ x + 13 }}" y1="{{ Y + 52 }}" y2="{{ Y + 52 }}" stroke="#1d1d1f" stroke-width="2.5"/><text x="{{ x }}" y="{{ Y + 78 }}" text-anchor="middle" style="font-size: {{ size }}px">{{ den }}</text>{% endmacro %}
+{% block style %}
+.lines { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat({{ sheet.items | length }}, 1fr); gap: 12px; }
+.lines .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 26px 0 14px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+.side { width: 96px; display: flex; flex-direction: column; align-items: center; }
+.stack { display: flex; flex-direction: column; align-items: center; font-size: 40px; font-weight: 700; line-height: 1.05; color: var(--accent); }
+.stack .bar { width: 44px; border-top: 4px solid var(--accent); margin: 3px 0; }
+.box { width: 50px; height: 44px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
+.side .bar { width: 60px; border-top: 4px solid var(--ink); margin: 5px 0; }
+.hole { fill: #fff; stroke: #1d1d1f; stroke-width: 2; stroke-dasharray: 4 3; }
+{% endblock %}
+{% block body %}
+    <div class="lines">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <svg class="nl" width="{{ X0 * 2 + LEN }}" height="122" viewBox="0 0 {{ X0 * 2 + LEN }} 122">
+          <line x1="{{ X0 }}" x2="{{ X0 + LEN }}" y1="{{ Y }}" y2="{{ Y }}" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+{% for k in i.ticks %}
+{% set x = (X0 + LEN * k / i.den) | round(2) %}
+{% set end = loop.first or loop.last %}
+          <line x1="{{ x }}" x2="{{ x }}" y1="{{ Y - (16 if end else 12) }}" y2="{{ Y + (16 if end else 12) }}" stroke="#1d1d1f" stroke-width="{{ 4 if end else 3 }}"/>
+{% if end %}
+          <text x="{{ x }}" y="{{ Y + 62 }}" text-anchor="middle" style="font-size: 30px">{{ k // i.den }}</text>
+{% elif i.task == "fill" %}
+{% if k in i.blanks %}
+          <rect class="hole" x="{{ x - 17 }}" y="{{ Y + 19 }}" width="34" height="32" rx="5"/><line x1="{{ x - 15 }}" x2="{{ x + 15 }}" y1="{{ Y + 55 }}" y2="{{ Y + 55 }}" stroke="#1d1d1f" stroke-width="2.5"/><rect class="hole" x="{{ x - 17 }}" y="{{ Y + 59 }}" width="34" height="30" rx="5"/>
+{% else %}
+          {{ frac(k, i.den, x) }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% if i.task == "name" %}
+          <circle cx="{{ (X0 + LEN * i.num / i.den) | round(2) }}" cy="{{ Y }}" r="10" fill="{{ theme.accent }}" stroke="#1d1d1f" stroke-width="2.5"/>
+{% endif %}
+        </svg>
+        <div class="side">
+{% if i.task == "name" %}
+          <div class="box"></div><div class="bar"></div><div class="box"></div>
+{% elif i.task == "mark" %}
+          <div class="stack"><span>{{ i.num }}</span><span class="bar"></span><span>{{ i.den }}</span></div>
+{% endif %}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

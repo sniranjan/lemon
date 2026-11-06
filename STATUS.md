@@ -30,6 +30,16 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
   (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
   Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
+- **Foxes Math (M3, our own level, grade 3 work, 200 pages)** (2026-11-06): `syllabus/math/M3.yaml`:
+  A Big Adding & Taking Away 1–30 (3.NBT.2) · B Times Tables 2, 5, 10 31–60 · C Times Tables 3 and 4 61–90 ·
+  D Times Tables 6 to 9 91–140 (3.OA.1/4/5/7) · E Sharing Facts 141–170 (3.OA.2/4/6/7) · F Fractions on a Line
+  171–190 (3.NF.1–2; denominators 2, 3, 4, 6, 8 only) · G Story Problems 191–200 (3.OA.3, 3.OA.8). New sheet types
+  `fraction_line`, `story_problem` (33 frames in `content/math/story_problems.yaml`, copy in test fixtures); Cubs'
+  `column_arithmetic` serves section A too (new optional rules `regroup_counts`, `across_zero`, `title`, 9 a page;
+  Cubs output unchanged); `fact_drill` gained × and ÷ (`skip`, `arrays`, `pairs`, × ÷ `families`) with Puppies output
+  byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
+  section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
+  ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -58,7 +68,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 

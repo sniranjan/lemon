@@ -3,7 +3,7 @@
    own column on the left. Regrouping parts get dashed boxes above the columns: adding, one above
    each column a carry can land in; taking away, one above each digit of the top number. #}
 {% set n = sheet.items | length %}
-{% set per_row = 3 if n == 6 else 2 %}
+{% set per_row = 3 if n in (6, 9) else 2 %}
 {% block style %}
 .problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat({{ per_row }}, 1fr); grid-auto-rows: 1fr; gap: 24px; }
 .problems .card { min-height: 0; display: flex; align-items: center; justify-content: center; padding: 12px; }
@@ -13,6 +13,17 @@
 .carry { width: 40px; height: 38px; border: 2px dashed var(--accent); border-radius: 8px; margin-bottom: 4px; }
 .rule { grid-column: 1 / -1; justify-self: stretch; height: 0; border-top: 4px solid var(--ink); margin: 6px 0 10px; }
 .ans { width: 44px; height: 60px; border: 3px solid var(--ink); border-radius: 10px; }
+{% if n == 9 %}
+/* 9 problems (Foxes): a compact 3 × 3 grid */
+.problems { gap: 16px 20px; }
+.problems .card { padding: 6px; border-radius: 22px; }
+.sum { grid-template-columns: 36px repeat(var(--cols), 44px); }
+.d { font-size: 44px; line-height: 50px; height: 50px; }
+.sign { font-size: 42px; line-height: 50px; }
+.carry { width: 30px; height: 28px; border-radius: 7px; }
+.rule { margin: 4px 0 8px; }
+.ans { width: 40px; height: 50px; border-radius: 9px; }
+{% endif %}
 {% endblock %}
 {% block body %}
     <div class="problems">

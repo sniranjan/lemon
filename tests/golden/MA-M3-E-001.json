@@ -1,0 +1,175 @@
+{
+  "id": "MA-M3-E-001",
+  "subject": "math",
+  "level": "M3",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 11362666971709945675,
+  "title": "Sharing",
+  "parent_tip": "Sharing is the times table backwards. For 20 shared by 4, ask: 4 times what is 20?",
+  "items": [
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 8,
+          "op": "*",
+          "b": 2,
+          "c": 16,
+          "blank": "a",
+          "n": 1
+        },
+        {
+          "kind": "fact",
+          "a": 16,
+          "op": "/",
+          "b": 2,
+          "c": 8,
+          "blank": "c",
+          "n": 2
+        }
+      ],
+      "layout": "pairs"
+    },
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 2,
+          "op": "*",
+          "b": 10,
+          "c": 20,
+          "blank": "a",
+          "n": 3
+        },
+        {
+          "kind": "fact",
+          "a": 20,
+          "op": "/",
+          "b": 10,
+          "c": 2,
+          "blank": "c",
+          "n": 4
+        }
+      ],
+      "layout": "pairs"
+    },
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 6,
+          "op": "*",
+          "b": 5,
+          "c": 30,
+          "blank": "a",
+          "n": 5
+        },
+        {
+          "kind": "fact",
+          "a": 30,
+          "op": "/",
+          "b": 5,
+          "c": 6,
+          "blank": "c",
+          "n": 6
+        }
+      ],
+      "layout": "pairs"
+    },
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 6,
+          "op": "*",
+          "b": 2,
+          "c": 12,
+          "blank": "a",
+          "n": 7
+        },
+        {
+          "kind": "fact",
+          "a": 12,
+          "op": "/",
+          "b": 2,
+          "c": 6,
+          "blank": "c",
+          "n": 8
+        }
+      ],
+      "layout": "pairs"
+    },
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 1,
+          "op": "*",
+          "b": 5,
+          "c": 5,
+          "blank": "a",
+          "n": 9
+        },
+        {
+          "kind": "fact",
+          "a": 5,
+          "op": "/",
+          "b": 5,
+          "c": 1,
+          "blank": "c",
+          "n": 10
+        }
+      ],
+      "layout": "pairs"
+    },
+    {
+      "kind": "pair",
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 4,
+          "op": "*",
+          "b": 2,
+          "c": 8,
+          "blank": "a",
+          "n": 11
+        },
+        {
+          "kind": "fact",
+          "a": 8,
+          "op": "/",
+          "b": 2,
+          "c": 4,
+          "blank": "c",
+          "n": 12
+        }
+      ],
+      "layout": "pairs"
+    }
+  ],
+  "answer_key": [
+    8,
+    8,
+    2,
+    2,
+    6,
+    6,
+    6,
+    6,
+    1,
+    1,
+    4,
+    4
+  ],
+  "new_words": [],
+  "review_words": []
+}
