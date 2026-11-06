@@ -11,6 +11,9 @@
 {% set plots = sheet.items | selectattr("kind", "equalto", "plot") | list %}
 {% set dists = sheet.items | selectattr("kind", "equalto", "distance") | list %}
 {% block style %}
+{% if sheet.items[0].kind == "graph" %}
+{% include "_coordinate_graphs_style.html.j2" %}
+{% else %}
 .plane { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
 .plane .card { position: relative; min-height: 0; border-radius: 22px; }
 .top { flex: 1; display: flex; align-items: center; gap: 12px; padding: 10px 12px; }
@@ -25,8 +28,12 @@ svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-line
 .drow { display: flex; align-items: center; gap: 10px; font-size: 24px; }
 .drow .box { width: 60px; }
 .qn { font-size: 13px; font-weight: 700; color: #8a8a90; width: 14px; }
+{% endif %}
 {% endblock %}
 {% block body %}
+{% if sheet.items[0].kind == "graph" %}
+{% include "_coordinate_graphs.html.j2" %}
+{% else %}
     <div class="plane">
       <div class="card top">
         <svg class="grid" width="{{ W }}" height="{{ H }}" viewBox="0 0 {{ W }} {{ H }}">
@@ -66,4 +73,5 @@ svg.grid .pt { paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-line
       </div>
 {% endif %}
     </div>
+{% endif %}
 {% endblock %}

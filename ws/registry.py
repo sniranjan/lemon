@@ -28,8 +28,9 @@ CATALOGUE: frozenset[str] = frozenset({
     "passage_questions", "word_builder", "full_sentence_answer",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
-    # Whales math (M9, Algebra 1): exponents and radicals, lines and inequalities, polynomials, factoring, quadratics
-    "exponent_rules", "slope_intercept", "inequality_graph", "polynomial_ops", "polynomial_factoring",
+    # Whales math (M9, Algebra 1): exponents and radicals, writing lines, inequalities on a number line, polynomials,
+    # factoring, quadratics (graphing lines and inequalities extends coordinate_grid)
+    "exponent_rules", "slope_intercept", "inequality_line", "polynomial_ops", "polynomial_factoring",
     "quadratic_solve",
     # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
     "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",

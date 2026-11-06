@@ -9,6 +9,9 @@ Rules (merged level → section → part):
 - `axis_points`: how many `plot` points sit on an axis (one coordinate 0); the rest are inside a
   quadrant. Read points are always inside a quadrant, one in each quadrant first.
 - `title`: the sheet title.
+- `graphs` (Whales math): a page of small grids instead, one line or linear inequality on each to graph
+  (`slopes`, `intercept`, `signs`, `standard_form_from`; see ws/sheet_types/_lines.py). The points
+  rules above are not used then.
 Every point stores its grid position in pixels (`px`, `py`) as well as its coordinates; the
 template draws read points at that position and verify checks it against the coordinates, so
 a point can't be drawn in the wrong place.
@@ -18,6 +21,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
+from . import _lines
 from ._common import error
 from ._rational import show
 
@@ -62,6 +66,10 @@ class CoordinateGrid(SheetType):
     def generate(self, ctx: GenContext) -> SheetContent:
         r = ctx.rules
         rng = ctx.rng
+        if "graphs" in r:
+            items = _lines.choose_graphs(rng, r, ctx.spec.progress)
+            return SheetContent(title=r["title"], parent_tip=ctx.tip(self.name), items=items,
+                                answer_key=[i["answer"] for i in items])
         R = r.get("range", 6)
         n_read, n_plot, n_dist = r["read"], r["plot"], r.get("distance", 0)
         used: set[tuple[int, int]] = set()
@@ -119,6 +127,8 @@ class CoordinateGrid(SheetType):
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if "graphs" in r:
+            return _lines.verify_graphs(sheet, r)
         R = r.get("range", 6)
         items = sheet.items
         issues: list[Issue] = []

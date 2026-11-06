@@ -238,6 +238,7 @@ def pretty(s: str) -> str:
         simple = body.isdigit() or (len(body) == 1 and body.isalpha())
         return _ROOT_SIGN[int(m.group(1))] + (body if simple else f"({body})")
     s = _RADICAL.sub(root, s)
+    s = re.sub(r"F\((\d+)\|(\d+)\)", r"(\1/\2)", s)
     s = re.sub(r"\^\((-?\d+)/(\d+)\)", lambda m: m.group(1).translate(SUP) + "⁄" + m.group(2).translate(SUP), s)
     s = re.sub(r"\^(-?\d+)", lambda m: m.group(1).translate(SUP), s)
     return s.replace("-", MINUS).replace("*", "·")
@@ -255,6 +256,8 @@ def html_expr(s: str) -> str:
                lambda m: f'<span class="rexp">{m.group(1)}/{m.group(2)}</span>', s)
     s = re.sub(r"\^(-?\d+)", lambda m: m.group(1).translate(SUP), s)
     s = s.replace("-", MINUS).replace("*", "·")
+    s = re.sub(r"F\((\d+)\|(\d+)\)",
+               r'<span class="frac sm"><span class="top">\1</span><span class="bottom">\2</span></span>', s)
     s = s.replace("R(", "\x00(")
     s = re.sub(r"\x00\((\d)\|([^()|]*(?:\([^()]*\)[^()|]*)*)\)",
                lambda m: ('<span class="rad">' + (f'<span class="idx">{m.group(1)}</span>' if m.group(1) != "2" else "")
