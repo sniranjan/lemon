@@ -126,7 +126,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
   );
 }
 
-/** Big "pill-pop" buttons (ink border + offset shadow, like the header's Early access) for the floating row. */
+/** Big "pill-pop" buttons (ink border + offset shadow, like the header's Shop levels) for the floating row. */
 const FLOAT = "pill-pop justify-center rounded-full px-4 py-1.5 text-[0.95rem]";
 
 function PreviewButton({ level, hasPreview, floating }: { level: Level; hasPreview: boolean; floating?: boolean }) {
