@@ -26,6 +26,7 @@ KNOWN_BAD = {
     "Here is my door.", "Here is my sink.", "Here is my bathtub.", "Here is my bus.", "I have a rocket.",
     "I can cook.", "I can wash.", "I wash my foot.", "I see a sun.", "This is a sun.", "a yellow sun",
     "I like my yellow key.", "my broom", "my hose", "I eat green grapes.",
+    "Look at the sun.",
 }
 
 
@@ -63,6 +64,14 @@ def test_no_my_or_have_for_things_a_child_cannot_have(word):
                                            ("mom", "I hug my mom."), ("nose", "I touch my nose.")])
 def test_my_and_have_for_toys_pets_family_body(word, sentence):
     assert sentence in story_sentences(vocab_by_word()[word], stories(), phrases())
+
+
+def test_never_look_at_the_sun():
+    sentences = story_sentences(vocab_by_word()["sun"], stories(), phrases())
+    assert "Look at the sun." not in sentences and "I see the sun." in sentences
+    data = phrases()
+    look = {render("Look at the {thing}.", f, _known(), data) for f in fillings("Look at the {thing}.", data, _known())}
+    assert "Look at the sun." not in look and "Look at the moon." in look
 
 
 def test_wild_animals_keep_see_look_this():
@@ -117,6 +126,9 @@ def problems(text: str, data: dict, free: bool = False) -> list[str]:
     t = text.rstrip(".")
     if text in KNOWN_BAD or t in KNOWN_BAD:
         found.append("known bad")
+    for m in re.finditer(r"\b[Ll]ook at (?:the |my )?(\w+)", t):
+        if m.group(1) in ("sun",):
+            found.append(f"look at the {m.group(1)}")
     colors = data["picture_colors"]   # a color named with a pictured noun must match its picture
     for m in re.finditer(r"\b(red|blue|yellow|green|pink|purple) (\w+)\b|\bThe (\w+) is (red|blue|yellow|green|pink|purple)\b", t):
         color, noun = (m.group(1), m.group(2)) if m.group(1) else (m.group(4), m.group(3))

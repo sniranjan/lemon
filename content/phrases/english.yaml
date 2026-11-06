@@ -169,6 +169,10 @@ eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pea
 # ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.
 the_only: [sun, moon]
 
+# Never told to look at: "Look at the sun." is unsafe advice for a child. "I see the sun." and
+# "The sun is hot." are fine. Applies to every "Look at ..." frame (phrases, sentences, stories).
+dont_look_at: [sun]
+
 # Things that go together, for "mom and dad" phrases (both words are pictured).
 pairs:
   - [mom, dad]
