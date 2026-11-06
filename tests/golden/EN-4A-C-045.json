@@ -83,7 +83,7 @@
     },
     {
       "kind": "sentence",
-      "text": "I see the panda eat.",
+      "text": "I see the ladybug crawl.",
       "runs": [
         [
           "I",
@@ -110,7 +110,7 @@
           false
         ],
         [
-          "panda",
+          "ladybug",
           true
         ],
         [
@@ -118,7 +118,7 @@
           false
         ],
         [
-          "eat",
+          "crawl",
           true
         ],
         [
@@ -128,28 +128,29 @@
       ],
       "frame": "I see the {animal} {action}.",
       "slots": {
-        "animal": "panda",
-        "action": "eat"
+        "animal": "ladybug",
+        "action": "crawl"
       },
-      "word": "panda",
+      "word": "ladybug",
       "words": [
-        "panda",
-        "eat"
+        "ladybug",
+        "crawl"
       ],
       "pictures": [
-        "panda"
+        "ladybug"
       ],
       "trace_lines": [
-        "I see the panda eat."
+        "I see the",
+        "ladybug crawl."
       ],
-      "trace_size": 59
+      "trace_size": 64
     }
   ],
   "answer_key": null,
   "new_words": [],
   "review_words": [
     "cookie",
-    "panda",
-    "eat"
+    "ladybug",
+    "crawl"
   ]
 }
