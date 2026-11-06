@@ -71,6 +71,16 @@ full_sentence_answer:
   - "Show how each answer reuses the question's words. Spelling can wobble."
   - "Say each answer aloud first, then write it: capital letter, period."
   - "Ask your child to point to the sentence that helps with each answer."
+passage_spread_read:
+  # Pandas Reading reading page: one short line, so the whole passage fits the page
+  - "Your child reads it silently, then aloud. Just listen."
+  - "Ask: what is this mostly about? Then turn to the questions."
+  - "Take turns reading a paragraph each. Say each paragraph's point."
+passage_spread:
+  # Pandas Reading questions page
+  - "Find the paragraph that proves each answer before writing."
+  - "Written answers: answer, a quote, then why the quote fits."
+  - "Read the questions together, then go back to the text for each."
 letter_team:
   - "Say the team's sound together (sh says shhh). Read each word slowly, sliding through the sounds, then let your child trace or write the team."
   - "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try."

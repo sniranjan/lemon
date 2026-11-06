@@ -1,0 +1,561 @@
+# Pandas Reading, section E "Short Written Answers" (pages 171–200): answers of 3–4 sentences that
+# make a claim, quote the text and explain the evidence (W.6.9, RL.6.1, RI.6.1, W.6.1). Original
+# stories and nonfiction (ours), well-established facts only. Schema and checks: ws/spreads.py.
+
+- id: e01-grandpas-bicycle
+  title: Grandpa's Blue Bicycle
+  genre: story
+  text: |
+    The bicycle had been leaning against the back wall of Grandpa's garage for as long as Lucia
+    could remember. Its blue paint was faded and chipped, both tires were completely flat, and the
+    chain was orange with rust. One Saturday in June, Lucia carefully pulled away the dusty tarp
+    and asked Grandpa whether she could repair it.
+
+    Grandpa laughed softly and shook his head. "That bicycle is older than your mother," he said.
+    "I rode it to school every day when I was your age. But it has not moved in thirty years."
+
+    "Then it has had a long vacation," Lucia replied. "Will you teach me how to fix it?"
+
+    For the next three weeks, they worked together every afternoon in the shady garage. Grandpa
+    demonstrated how to locate the tiny holes in the inner tubes by dipping them in a bucket of
+    water and watching for bubbles. Lucia scrubbed the chain with an old toothbrush until the metal
+    shone again. Then she sanded the frame and painted it a bright, careful blue, matching the
+    color in Grandpa's old photograph.
+
+    Some afternoons were frustrating, especially when the brakes refused to grip and Lucia had to
+    adjust the cables again and again. Once she dropped a tiny bolt into the grass and spent twenty
+    minutes searching for it. Grandpa never took the tools from her hands. "Slow is fine," he told
+    her patiently. "A bicycle remembers how it was treated."
+
+    Finally, on a warm evening in July, Lucia wheeled the bicycle out to the street. The tires were
+    firm, the chain clicked smoothly, and the bell produced a clear, cheerful ring. She pedaled to
+    the corner and back while Grandpa watched from the porch.
+
+    When she returned, his eyes were shining. "It looks exactly the way it did when it was new," he
+    said quietly. Lucia grinned and rang the bell again. She had not only repaired an old bicycle,
+    but she had also brought back a piece of her grandfather's history.
+  pages:
+    - focus: claim and evidence about characters
+      questions:
+        - kind: paragraph
+          ask: Why does Lucia want to fix the bike? Use evidence. (3–4 sentences)
+          sample: >-
+            Lucia wants to fix the bike because it is part of her grandfather's past. Grandpa tells
+            her, "I rode it to school every day when I was your age." She even paints it to match "the
+            color in Grandpa's old photograph." This shows she wants to bring back something that
+            matters to him.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: I rode it to school every day when I was your age.
+        - kind: paragraph
+          ask: How does Grandpa help Lucia? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Grandpa helps Lucia by teaching her but letting her do the work herself. He shows her how to
+            find the holes in the tubes, but he "never took the tools from her hands." When she gets
+            frustrated, he tells her "Slow is fine." This helps her learn and feel proud of the bike.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: Grandpa never took the tools from her hands.
+    - focus: lesson and title
+      look_for: what Lucia learns while she works
+      questions:
+        - kind: paragraph
+          ask: What lesson does Lucia learn? Support it with evidence. (3–4 sentences)
+          sample: >-
+            Lucia learns that careful, patient work is worth it. Fixing the brakes was hard, and she
+            had to "adjust the cables again and again." Grandpa reminds her, "Slow is fine." Because
+            she keeps going, the bike works perfectly in the end.
+          rubric: clear lesson; one exact quote or close detail from the text; explains how the evidence supports the lesson; 3–4 complete sentences
+          evidence: adjust the cables again and again
+        - kind: paragraph
+          ask: Is the title a good fit for the story? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Yes, the title is a good fit because the whole story is about the bike. It belonged to
+            Grandpa, and Lucia paints it "a bright, careful blue" like it used to be. At the end,
+            Grandpa says, "It looks exactly the way it did when it was new." The title shows that the
+            bike is special to both of them.
+          rubric: clear yes or no; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: a bright, careful blue
+
+- id: e02-the-mural
+  title: Two Ideas, One Wall
+  genre: story
+  text: |
+    Ms. Delgado's sixth-grade class had permission to paint a mural on the long wall beside the
+    school garden. She divided the students into teams, and Amara and Kenji were chosen to design
+    the main picture together. They had been friends since kindergarten, so everyone expected the
+    planning to be easy.
+
+    It was not easy at all. Amara wanted to paint an ocean full of turtles, jellyfish and swaying
+    seaweed. "The ocean is the most beautiful place on Earth," she insisted. Kenji wanted a city
+    skyline at sunset, with bridges, trains and glowing windows. "Our town is a city," he argued.
+    "The mural should show where we actually live."
+
+    For two days, neither friend would change a single line of their sketch. They ate lunch at
+    separate tables, and the empty wall seemed to be waiting for them. Ms. Delgado noticed the
+    problem but did not choose for them. Instead, she asked each of them to explain what they loved
+    most about the other person's drawing.
+
+    Amara studied Kenji's sketch for a long time. "I like how the windows glow," she admitted. "It
+    feels warm, like people are home." Kenji looked at her ocean. "I like how everything is moving,"
+    he said. "Even the seaweed looks alive."
+
+    That evening, Kenji had an idea, and he called Amara right away. What if the city stood beside
+    a harbor, and the water below the bridges became the ocean? The glowing windows could reflect on
+    the waves, and the turtles could swim under the boats.
+
+    The next morning, they combined their sketches on one large sheet of paper. The class voted for
+    the new design, and the whole school helped paint it over three weeks. When it was finished,
+    visitors often stopped to point at the turtles swimming beneath the bright city. Amara and Kenji
+    agreed that the mural was better than either of their first ideas.
+  pages:
+    - focus: conflict and resolution
+      questions:
+        - kind: paragraph
+          ask: Why do Amara and Kenji disagree at first? Use evidence. (3–4 sentences)
+          sample: >-
+            Amara and Kenji disagree because each one loves a different idea for the mural. Amara says,
+            "The ocean is the most beautiful place on Earth." Kenji wants a city because "The mural
+            should show where we actually live." Each friend thinks their own idea is the right one.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: The mural should show where we actually live.
+        - kind: paragraph
+          ask: How does Ms. Delgado help? Use evidence. (3–4 sentences)
+          sample: >-
+            Ms. Delgado helps by making them look at each other's work in a kind way. She "did not
+            choose for them" and asked what they loved about the other drawing. Amara says, "I like how
+            the windows glow," and Kenji likes her moving ocean. Seeing the good in both ideas helps
+            Kenji think of a way to combine them.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: Ms. Delgado noticed the problem but did not choose for them.
+    - focus: lesson and author's craft
+      look_for: how the friends' feelings change
+      questions:
+        - kind: paragraph
+          ask: What lesson do the friends learn? Support it with evidence. (3–4 sentences)
+          sample: >-
+            The friends learn that two ideas can work better together than apart. At first they "ate
+            lunch at separate tables." After they combine the city and the ocean, they agree the mural
+            "was better than either of their first ideas." Listening to each other made the mural
+            better and fixed their friendship.
+          rubric: clear lesson; one exact quote or close detail from the text; explains how the evidence supports the lesson; 3–4 complete sentences
+          evidence: the mural was better than either of their first ideas
+        - kind: paragraph
+          ask: How does the author show the mural is a success? Use evidence. (3–4 sentences)
+          sample: >-
+            The author shows the mural is a success through how people react to it. First, "The class
+            voted for the new design." Later, visitors "often stopped to point at the turtles." These
+            details show that many people enjoy the mural, not just Amara and Kenji.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: visitors often stopped to point at the turtles swimming beneath the bright city
+
+- id: e03-weather-journal
+  title: The Weather Journal
+  genre: story
+  text: |
+    On the first day of summer vacation, Ravi's aunt gave him a small notebook with a green cover
+    and an old barometer, an instrument that measures air pressure. "Write down the weather every
+    morning for a month," she suggested. "Then see what the sky teaches you."
+
+    At first, Ravi thought the project would be boring. Every morning, he recorded the temperature,
+    the direction of the wind and the shape of the clouds. He also wrote down the number on the
+    barometer. For the first week, the weather was sunny and calm, and his notes looked almost
+    identical from one day to the next.
+
+    By the third week, Ravi began to notice patterns. When the barometer number dropped, cloudy
+    weather usually followed within a day. Puffy white clouds meant a pleasant afternoon, but tall
+    clouds that grew upward like towers often brought rain. He started looking forward to his
+    morning observations and even drew small pictures beside his notes.
+
+    On the twenty-sixth morning, Ravi noticed three changes at once. The barometer had fallen
+    faster than ever before, the wind had shifted to come from the south, and tall clouds were
+    building in the west. He studied his journal carefully. Every clue pointed in the same
+    direction.
+
+    "There is going to be a storm this afternoon," he announced at breakfast. His older sister
+    laughed, because the sky above the house was still bright blue. But his father looked at the
+    journal and nodded slowly. Together, they carried the patio chairs into the garage and covered
+    the young tomato plants.
+
+    Around four o'clock, the sky turned dark gray. Thunder rumbled in the distance, and heavy rain
+    poured down for almost an hour. From the dry kitchen, Ravi watched the water stream down the
+    windows. His sister turned to him and grinned. "Okay," she said. "What is the weather going to
+    be tomorrow?"
+  pages:
+    - focus: claim and evidence about events
+      questions:
+        - kind: paragraph
+          ask: How is Ravi able to predict the storm? Use evidence. (3–4 sentences)
+          sample: >-
+            Ravi predicts the storm because he learned the weather's patterns from his journal. He
+            noticed that "When the barometer number dropped, cloudy weather usually followed within a
+            day." On the day of the storm, the barometer fell fast and tall clouds were building. All
+            his clues pointed to rain, so he knew a storm was coming.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: When the barometer number dropped, cloudy weather usually followed within a day.
+        - kind: paragraph
+          ask: How do Ravi's feelings change? Use evidence. (3–4 sentences)
+          sample: >-
+            Ravi's feelings change from bored to excited. At first, he "thought the project would be
+            boring." Later, he "started looking forward to his morning observations" and drew pictures
+            in it. Noticing patterns made the journal interesting to him.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: He started looking forward to his morning observations
+    - focus: character and title
+      look_for: how Ravi's family reacts to him
+      questions:
+        - kind: paragraph
+          ask: How does Ravi's sister change her mind? Explain with evidence. (3–4 sentences)
+          sample: >-
+            At first, Ravi's sister does not believe him, but later she trusts him. When he predicts
+            the storm, she "laughed, because the sky above the house was still bright blue." After the
+            rain comes, she asks him, "What is the weather going to be tomorrow?" Her question shows
+            she now thinks he can really predict the weather.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: What is the weather going to be tomorrow?
+        - kind: paragraph
+          ask: Is the title a good fit for the story? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Yes, the title is a good fit because the journal is the key to the story. Ravi writes in it
+            every morning for a month. On the day of the storm, "He studied his journal carefully"
+            before making his prediction. Without the journal, he would not have known the storm was
+            coming.
+          rubric: clear yes or no; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: He studied his journal carefully.
+
+- id: e04-lemonade-stand
+  title: Lemonade for the Library
+  genre: story
+  text: |
+    The public library on Maple Street needed new books for its children's room, and the librarian
+    had posted a sign asking for help. Hana and her cousin Marcus decided to run a lemonade stand
+    to raise money. Neither of them had ever sold anything before, and Hana felt nervous about
+    talking to strangers.
+
+    On Saturday morning, they set up a folding table at the end of Marcus's driveway. They had a
+    big pitcher of lemonade, a stack of paper cups and a sign that said "Lemonade, 50 cents." Then
+    they waited. For the first hour, only two people stopped, and one of them made a sour face
+    after the first sip.
+
+    Marcus tasted the lemonade himself and winced. "We forgot to add enough sugar," he said. They
+    hurried inside, stirred in more sugar and added ice. Hana tasted the new batch and smiled.
+    Now it was sweet, cold and refreshing.
+
+    Next, Hana looked at their sign. It did not explain why they were selling lemonade at all.
+    She grabbed a marker and added a second line in large letters: "All money goes to new books
+    for the library!" She also took a deep breath and began greeting people as they walked by.
+
+    The change was remarkable. Neighbors who had walked past earlier came back to buy a cup.
+    A woman with a stroller paid for two cups and put an extra dollar in the jar. A man on a
+    bicycle said the library had helped him learn to read when he was a boy. By the afternoon,
+    there was a short line at the table.
+
+    When they counted the money that evening, they had collected forty-two dollars. On Monday,
+    they carried the jar to the library together. The librarian thanked them and promised that the
+    children's room would soon have a shelf of brand-new books. Hana felt proud, and she was
+    already planning their next stand.
+  pages:
+    - focus: cause and effect with evidence
+      questions:
+        - kind: paragraph
+          ask: Why do more people buy lemonade later? Use evidence. (3–4 sentences)
+          sample: >-
+            More people buy lemonade later because Hana and Marcus fixed two problems. They made the
+            lemonade "sweet, cold and refreshing" by adding sugar and ice. Hana also wrote "All money
+            goes to new books for the library!" on the sign. People liked the better taste and wanted
+            to help the library.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: All money goes to new books for the library!
+        - kind: paragraph
+          ask: What lesson do Hana and Marcus learn? Support it with evidence. (3–4 sentences)
+          sample: >-
+            Hana and Marcus learn that when something goes wrong, you can fix it and try again. At
+            first, "only two people stopped," and the lemonade was too sour. Instead of giving up, they
+            "stirred in more sugar and added ice" and changed the sign. Their changes helped them raise
+            forty-two dollars.
+          rubric: clear lesson; one exact quote or close detail from the text; explains how the evidence supports the lesson; 3–4 complete sentences
+          evidence: stirred in more sugar and added ice
+    - focus: character change and title
+      look_for: clues about how Hana feels
+      questions:
+        - kind: paragraph
+          ask: How does Hana change? Use evidence. (3–4 sentences)
+          sample: >-
+            Hana changes from nervous to proud and confident. At the start, she "felt nervous about
+            talking to strangers." Later, she "took a deep breath and began greeting people," and at the
+            end she "felt proud." Helping the library made her brave enough to talk to new people.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: Hana felt nervous about talking to strangers
+        - kind: paragraph
+          ask: Is the title a good fit for the story? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Yes, the title is a good fit because the lemonade is sold to help the library. The sign says
+            "All money goes to new books for the library!" At the end, they carry the money "to the
+            library together." The title tells the main purpose of the whole stand.
+          rubric: clear yes or no; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: they carried the jar to the library together
+
+- id: e05-printing-press
+  title: Books for Everyone
+  genre: nonfiction
+  text: |
+    For most of history, every book in Europe had to be copied by hand. This was slow work. Skilled writers called
+    scribes copied each page with a pen and ink, letter by letter. A single long book could take
+    months or even years to finish. Because of all this labor, books were rare and expensive, and
+    only a small number of people owned any at all.
+
+    Printing was not a completely new idea. Long before Europe had presses, printers in China and Korea had carved
+    whole pages into wooden blocks, and they had also made movable type. In Europe, however, a new
+    method around the year 1450 changed things quickly.
+
+    A German craftsman named Johannes Gutenberg developed a system of movable metal type. Each
+    small piece of metal carried a single letter. A printer arranged the letters into words and
+    lines, covered them with ink, and pressed paper onto them with a heavy press. After printing
+    one page many times, the printer could rearrange the same letters for the next page. The
+    letters could be used again and again.
+
+    This invention made printing much faster. It was a big step. A printing shop could produce hundreds of copies of
+    a book in the time a scribe needed to copy just one. Within about fifty years, printing shops
+    had opened in many cities across Europe.
+
+    As books became cheaper, more families could afford them, and more people learned to read.
+    Scientists could share their discoveries with others in faraway cities, and readers could
+    compare ideas from many different authors. Maps, stories, newspapers and schoolbooks spread
+    farther than ever before.
+
+    Today, most of us read words on paper and screens every day without thinking about it. That
+    ordinary habit is possible partly because of the printing press, which helped turn books from
+    rare treasures into everyday objects.
+  pages:
+    - focus: claim and evidence from an article
+      questions:
+        - kind: paragraph
+          ask: Why were books rare? Use evidence. (3–4 sentences)
+          sample: >-
+            Books were rare because making them took a very long time. Scribes copied every page
+            "letter by letter," and one book "could take months or even years to finish." Because so
+            much work went into each one, books cost a lot, and few people could own them.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: A single long book could take months or even years to finish.
+        - kind: paragraph
+          ask: Which change mattered most, and why? Use evidence. (3–4 sentences)
+          sample: >-
+            I think the most important change was that more people learned to read. The article says
+            that "more families could afford them, and more people learned to read." When people can
+            read, they can learn anything from books on their own. That helped ideas and discoveries
+            spread to many more people.
+          rubric: clear choice; one exact quote or close detail from the text; explains how the evidence supports the choice; 3–4 complete sentences
+          evidence: more people learned to read
+    - focus: how the author develops the idea
+      look_for: how printing changed people's lives
+      questions:
+        - kind: paragraph
+          ask: How does the author show printing was faster? Use evidence. (3–4 sentences)
+          sample: >-
+            The author compares the printing shop to a scribe. A shop could make "hundreds of copies of
+            a book in the time a scribe needed to copy just one." The author also explains that the
+            same letters could be used again for the next page. These details show printing saved a
+            huge amount of time.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: hundreds of copies of a book in the time a scribe needed to copy just one
+        - kind: paragraph
+          ask: Is "Books for Everyone" a good title? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Yes, the title is a good fit because the article explains how books stopped being rare.
+            At first, "only a small number of people owned any at all." After printing, books became
+            cheaper and "more families could afford them." The title sums up this big change.
+          rubric: clear yes or no; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: more families could afford them
+
+- id: e06-sea-turtles
+  title: The Long Way Home
+  genre: nonfiction
+  text: |
+    On a warm summer night, a tiny sea turtle digs its way out of the sand. Dozens of brothers and
+    sisters climb out of the same nest beside it. Together, the hatchlings scramble across the
+    beach toward the water, guided by the brighter horizon over the open sea.
+
+    Once they reach the ocean, young sea turtles begin a remarkable journey. Many travel thousands
+    of miles through the open ocean, and they may not return to land for many years. Yet when a
+    female turtle is grown and ready to lay eggs, she often returns to the same stretch of coast
+    where she hatched long ago.
+
+    How does she find her way back across such a huge ocean? Scientists have studied this question
+    for many years. Many of them think sea turtles can sense Earth's magnetic field, the invisible
+    force that makes a compass needle point north. The field is slightly different from place to
+    place, so each part of the coast may have its own magnetic signal.
+
+    In experiments, young turtles placed in water with changed magnetic fields swam in different
+    directions, as if they were reading a map. Scientists believe that hatchlings might remember
+    the signal of their home beach and use it years later to guide them back. Turtles may also use
+    other clues, such as smells, when they get close to shore.
+
+    People can help these travelers in simple ways. Bright lights from buildings near the beach can
+    confuse hatchlings, leading them away from the water. For this reason, some beach towns ask
+    residents to turn off outdoor lights during nesting season. Volunteers also mark nests so that
+    people walking on the beach do not step on them.
+
+    There is still a lot to learn about sea turtles. However, each nest on a quiet beach is a
+    reminder of an amazing journey that may continue for many years.
+  pages:
+    - focus: claim and evidence from an article
+      questions:
+        - kind: paragraph
+          ask: How do scientists think sea turtles find home? Use evidence. (3–4 sentences)
+          sample: >-
+            Scientists think sea turtles find home by sensing Earth's magnetic field. The article says
+            "each part of the coast may have its own magnetic signal." Turtles might remember the signal
+            of their home beach and follow it back. This works like a map that turtles can feel.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: each part of the coast may have its own magnetic signal
+        - kind: paragraph
+          ask: How does the author show the trip is amazing? Use evidence. (3–4 sentences)
+          sample: >-
+            The author shows the journey is remarkable by describing how far the turtles go. Many
+            "travel thousands of miles through the open ocean," and they may stay away for years. Even
+            so, a female often returns to "the same stretch of coast where she hatched long ago."
+            Finding one small beach after so long is amazing.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: Many travel thousands of miles through the open ocean
+    - focus: evidence and the author's purpose
+      look_for: ways people can help sea turtles
+      questions:
+        - kind: paragraph
+          ask: Why do towns turn off lights? Use evidence. (3–4 sentences)
+          sample: >-
+            Some beach towns turn off lights to protect the hatchlings. The article explains that
+            "Bright lights from buildings near the beach can confuse hatchlings." The young turtles use
+            the brighter horizon over the sea to find the water. If the lights are off, they can head
+            the right way.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: Bright lights from buildings near the beach can confuse hatchlings
+        - kind: paragraph
+          ask: Is "The Long Way Home" a good title? Explain with evidence. (3–4 sentences)
+          sample: >-
+            Yes, the title is a good fit because the article is about turtles traveling far to return
+            home. Female turtles often come back to "the same stretch of coast where she hatched long
+            ago." To get there, many have traveled thousands of miles. The title shows how long and
+            amazing the trip is.
+          rubric: clear yes or no; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: the same stretch of coast where she hatched long ago
+
+- id: e07-wind-power
+  title: Catching the Wind
+  genre: nonfiction
+  text: |
+    You cannot see the wind, but you can see what it does. It bends trees, pushes sailboats across
+    lakes and carries kites high into the sky. Wind is simply moving air, and moving air carries
+    energy. For centuries, people have built machines to catch that energy and put it to work.
+    Some of these machines are very old, and some are quite new.
+
+    Windmills were among the earliest of these machines. A traditional windmill had large sails,
+    often made of cloth stretched over wooden frames. When the wind pushed the sails, they turned
+    a long shaft inside the building. The turning shaft moved heavy stones that ground grain into
+    flour, so farmers no longer had to grind it slowly by hand.
+
+    Windmills could do other jobs too. In the Netherlands, much of the land is low and wet, and
+    people used many windmills to pump water off their fields. Farmers in other countries used
+    smaller windmills to pull water up from deep underground for their animals and crops.
+
+    Modern wind turbines work on a similar idea, but they produce electricity instead of flour.
+    Most turbines have three long, narrow blades mounted on a very tall tower. The towers are tall
+    because the wind is usually stronger and steadier high above the ground. When the blades spin,
+    they turn a shaft connected to a generator, a machine that changes motion into electricity.
+
+    Engineers often build groups of turbines, called wind farms, on open plains, hilltops or even
+    out in the ocean, where the wind blows often. Wind turbines do not burn any fuel, and the wind
+    will never run out.
+
+    From grinding grain to lighting homes, people have found many ways to use the wind. The
+    machines have changed over time, but the main idea has stayed the same: let the moving air do
+    the work.
+  pages:
+    - focus: compare and support a claim
+      questions:
+        - kind: paragraph
+          ask: How are windmills and wind turbines alike? Use evidence. (3–4 sentences)
+          sample: >-
+            Windmills and wind turbines are alike because both use wind to turn a shaft. In a
+            windmill, the sails "turned a long shaft inside the building." In a turbine, the blades
+            "turn a shaft connected to a generator." Both machines change the push of the wind into
+            useful work.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: they turn a shaft connected to a generator
+        - kind: paragraph
+          ask: Which invention mattered more, and why? Use evidence. (3–4 sentences)
+          sample: >-
+            I think the windmill mattered more to people long ago. It ground grain into flour, "so
+            farmers no longer had to grind it slowly by hand." Windmills also pumped water off fields
+            and brought water up for animals and crops. These jobs helped people grow and make food.
+          rubric: clear choice; one exact quote or close detail from the text; explains how the evidence supports the choice; 3–4 complete sentences
+          evidence: so farmers no longer had to grind it slowly by hand
+    - focus: reasons and the author's main idea
+      look_for: where and why turbines are built
+      questions:
+        - kind: paragraph
+          ask: Why are wind turbines built on tall towers? Use evidence. (3–4 sentences)
+          sample: >-
+            Wind turbines are built on tall towers to catch the best wind. The article says "the wind
+            is usually stronger and steadier high above the ground." Stronger wind spins the blades
+            faster and more often. That means the turbine can make more electricity.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: the wind is usually stronger and steadier high above the ground
+        - kind: paragraph
+          ask: How does the author show wind is useful? Use evidence. (3–4 sentences)
+          sample: >-
+            The author shows that wind is useful by giving many examples of its work. Windmills ground
+            grain and pumped "water off their fields." Turbines now "produce electricity instead of
+            flour." The examples show that wind has helped people for centuries.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: but they produce electricity instead of flour
+
+- id: e08-early-maps
+  title: Drawing the World
+  genre: nonfiction
+  text: |
+    Today, a map of almost any place on Earth is easy to find. For thousands of years, however,
+    making a map was slow, difficult work. It took a long time. Early mapmakers could not fly above the land or look at
+    photographs from space. Instead, they had to piece the world together from what people saw and
+    described.
+
+    Some of the oldest known maps were scratched into clay tablets thousands of years ago. These
+    early maps usually showed only a small area, such as a city, a river or a few nearby fields.
+    For most people, the rest of the world was a mystery. No one had seen it all.
+
+    Over time, mapmakers began to collect information from travelers. Merchants described the
+    roads they followed, and sailors reported the shapes of coastlines and the locations of
+    harbors. Mapmakers combined these reports into larger maps. Because travelers sometimes made
+    mistakes, the maps often had errors, such as rivers in the wrong place or islands that were
+    much too large.
+
+    Ancient Greek thinkers made important progress. Many of them understood that Earth is round,
+    and some imagined dividing it with lines running north and south and east and west. A scholar
+    named Ptolemy, who lived almost two thousand years ago, used a grid like this to describe the
+    locations of thousands of places. His ideas helped later mapmakers draw more accurate maps.
+
+    When information was missing, mapmakers often left blank spaces or decorated the edges with
+    drawings. As explorers sailed farther and measuring tools improved, those blank spaces slowly
+    filled in. Each new voyage added details, and each new map was a little more accurate than the
+    one before.
+
+    Modern maps rely on satellites and computers, but they still build on the same careful work.
+    Every map we use today began with people who wanted to understand the world around them.
+  pages:
+    - focus: claim and evidence from an article
+      questions:
+        - kind: paragraph
+          ask: How did mapmakers learn? Use evidence. (3–4 sentences)
+          sample: >-
+            Early mapmakers learned about faraway places from travelers. Merchants told about their
+            roads, and "sailors reported the shapes of coastlines and the locations of harbors." The
+            mapmakers then combined these reports into bigger maps. They had to rely on others because
+            they could not see the whole world themselves.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: sailors reported the shapes of coastlines and the locations of harbors
+        - kind: paragraph
+          ask: How did maps get better? Use evidence. (3–4 sentences)
+          sample: >-
+            The author shows that maps improved by describing how they changed. The oldest maps showed
+            "only a small area," but later maps covered much more. As explorers traveled and tools got
+            better, "those blank spaces slowly filled in." Each map became more accurate than the one
+            before it.
+          rubric: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences
+          evidence: those blank spaces slowly filled in

@@ -26,6 +26,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
     # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
     "passage_questions", "word_builder", "full_sentence_answer",
+    # Pandas Reading (R6): two-page passages (a reading page, then its questions page)
+    "passage_spread",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)

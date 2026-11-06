@@ -1,0 +1,55 @@
+{
+  "id": "EN-R6-A-001",
+  "subject": "english",
+  "level": "R6",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 10432891644097132150,
+  "title": "Engineers of the Pond",
+  "parent_tip": "Ask: what is this mostly about? Then turn to the questions.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "a01-beaver-engineers",
+      "set": 0,
+      "side": "read",
+      "genre": "nonfiction",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [
+        {
+          "n": 1,
+          "text": "A beaver dam can look like a messy pile of sticks, but it is really a carefully built structure. The North American beaver is the largest rodent on its continent, and it is also a builder. Beavers are among the few animals that change the land around them on purpose, and the ponds they make become homes for many other living things.",
+          "cont": false
+        },
+        {
+          "n": 2,
+          "text": "A beaver begins a dam by pushing branches and sticks into the bottom of a stream. Then it packs the spaces with mud, stones and plants. The beaver carries mud in its front paws, held against its chest, and presses it into place. As the water rises, the beaver keeps adding to the top and sides. Some dams are taller than a grown person and longer than a soccer field.",
+          "cont": false
+        },
+        {
+          "n": 3,
+          "text": "Why go to all this trouble? A beaver is a clumsy walker on land but a strong swimmer. Deep water keeps it safe from wolves, bears and other hunters. Behind the dam, the beaver builds a lodge, a dome of sticks and mud with underwater doorways. Inside, a dry room sits above the waterline, where the beaver family rests and raises its young.",
+          "cont": false
+        },
+        {
+          "n": 4,
+          "text": "Beavers also need deep water for their winter food. In the fall, they push branches into the mud at the bottom of the pond. When ice covers the surface, the beavers swim out of the lodge and eat the bark from this underwater pantry.",
+          "cont": false
+        },
+        {
+          "n": 5,
+          "text": "The pond helps far more than beavers. Ducks nest along its edges, and frogs lay eggs in the calm, shallow water. Fish find shelter among the sunken branches. Because the dam slows the stream, mud and soil settle to the bottom instead of washing away. The water spreads out and soaks into the ground, so nearby land stays green during dry summers.",
+          "cont": false
+        }
+      ],
+      "turn": true
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

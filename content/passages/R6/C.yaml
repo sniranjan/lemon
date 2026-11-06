@@ -1,0 +1,842 @@
+# Pandas Reading, section C "Why Was It Written?" (pages 101–140): the author's purpose and point
+# of view, how word choice shows them, and reasons versus opinions (RI.6.6, RL.6.6, RI.6.8). Original
+# essays, letters, guides, articles and stories (ours); fictional authors and narrators. Schema: ws/spreads.py.
+
+- id: c01-school-garden
+  title: Let's Grow a Garden
+  genre: nonfiction
+  text: |
+    Behind our school there is a sunny patch of grass that nobody uses. Every day at recess, I walk
+    past it and imagine rows of tomatoes, beans and sunflowers. I believe our school should turn
+    that empty space into a garden, and I am sure every student would benefit from it.
+
+    First, a garden is a wonderful outdoor classroom. In science, we read about how seeds sprout and
+    how plants need sunlight and water. In a garden, we could watch it happen with our own eyes. We
+    could measure how tall the bean plants grow each week and make graphs in math class. Lessons are
+    easier to remember when students can touch, smell and observe the living things they study.
+
+    Second, a garden teaches responsibility. Plants need care every single day. Classes could take
+    turns watering, pulling weeds and checking for hungry insects. When students see that their hard
+    work makes something grow, they feel proud. My cousin's school started a garden two years ago,
+    and she says it is the best part of her week.
+
+    Third, a garden helps students try new foods. Many kids say they dislike vegetables, but they are
+    often more curious about food they grew themselves. Picking a sweet pea pod straight from the
+    vine is far more exciting than finding peas on a lunch tray. A garden could make healthy eating
+    feel like an adventure instead of a chore.
+
+    Some people worry that a garden costs too much money or takes too much time. These are fair
+    concerns, but there are simple answers. Seeds are cheap, and local families could donate tools
+    and soil. During the summer, volunteers could sign up to water the plants for one week each.
+
+    Our school already has the sunny space, the eager students and the caring teachers. All we need
+    is a plan. I am asking the principal and the parent group to meet with our class this month.
+    Together, we can turn a forgotten patch of grass into a place where students and plants grow
+    side by side.
+  pages:
+    - focus: author's purpose and word choice
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to persuade the school to start a garden
+            - to explain how seeds sprout and grow
+            - to tell a story about her cousin's school
+            - to teach readers how to pull weeds
+          evidence: I believe our school should turn that empty space into a garden
+        - kind: quote
+          ask: Which words show how the author feels about gardens?
+          choices:
+            - First, a garden is a wonderful outdoor classroom.
+            - Plants need care every single day.
+            - During the summer, volunteers could sign up
+            - Classes could take turns watering
+          evidence: First, a garden is a wonderful outdoor classroom.
+        - kind: paragraph
+          ask: Reasons or only opinions? Answer in 3–4 sentences.
+          sample: >-
+            The author gives reasons, not only opinions. One reason is that students could "measure how
+            tall the bean plants grow each week" in math class. She also explains that "Seeds are cheap"
+            to answer people who worry about money. These reasons make her opinion stronger.
+          rubric: says she gives reasons; quotes one reason from the text; explains how it supports her view.
+          evidence: Seeds are cheap, and local families could donate tools and soil.
+    - focus: what the author wants readers to do
+      look_for: how the author answers people who disagree
+      questions:
+        - kind: mc
+          ask: What does the author want readers to do?
+          choices:
+            - meet with her class to plan a school garden
+            - raise money to buy a new playground
+            - visit her cousin's school garden
+            - stop buying peas for the lunch tray
+          evidence: I am asking the principal and the parent group to meet with our class this month.
+        - kind: mc
+          ask: How does the author answer people who worry in paragraph 5?
+          choices:
+            - She calls the worries fair and gives simple answers.
+            - She says the worries are silly and not worth hearing.
+            - She agrees the garden would take too much time.
+            - She does not mention anyone who disagrees.
+          evidence: These are fair concerns, but there are simple answers.
+        - kind: write
+          ask: How would this text be different if it were written to inform instead of persuade?
+          sample: >-
+            It would just describe what school gardens are like. It would not use words like "wonderful"
+            or ask the principal to meet.
+          evidence: I am asking the principal and the parent group to meet with our class this month.
+
+- id: c02-park-cleanup
+  title: Dear Neighbors
+  genre: nonfiction
+  text: |
+    Dear Neighbors on Willow Lane,
+
+    My name is Sam Rivera, and I live in the blue house at the end of our street. Like many of you,
+    I treasure Willow Park. I learned to ride a bike on its winding paths, and I have spent hundreds
+    of happy afternoons on its swings. That is why I am writing to invite you to a park cleanup.
+
+    Lately, our wonderful park has started to look neglected. Plastic bags are tangled in the bushes
+    beside the pond, and bottles and wrappers collect underneath the benches. The flower beds, which
+    used to be colorful, are now crowded with weeds. Last week, I noticed a duck tugging at a piece
+    of string near the water. It made me sad to see our beautiful park treated so carelessly.
+
+    Fortunately, we can solve this problem together. The cleanup will take place on Saturday, October
+    12, from nine in the morning until noon. We will gather beside the enormous oak tree near the
+    playground. My family will provide gloves, trash bags and grabber sticks for everyone, so you
+    only need to bring yourself and a water bottle.
+
+    Volunteers of every age are welcome to participate. Younger children can collect litter on the grass with a
+    grown-up nearby. Older kids and adults can pull weeds, rake the paths and carry the full bags to
+    the curb. Mr. Patel from the corner house has generously offered to bring lemonade for all the
+    helpers.
+
+    Some of you might think that one morning cannot make much difference. However, many hands make
+    work light. If twenty neighbors each spend three hours, that adds up to sixty hours of care for
+    our park. Afterward, the ducks will have a cleaner pond, and our children will have a safer
+    place to play.
+
+    Please come and help, even if you can only stay for an hour. Our park has given us so much
+    happiness over the years. Now it is our turn to give something back.
+
+    Your neighbor,
+    Sam Rivera
+  pages:
+    - focus: purpose and point of view in a letter
+      questions:
+        - kind: mc
+          ask: What is Sam's main purpose in writing this letter?
+          choices:
+            - to persuade neighbors to help clean up the park
+            - to explain how ducks build nests by a pond
+            - to tell neighbors that the park will close
+            - to describe how he learned to ride a bike
+          evidence: That is why I am writing to invite you to a park cleanup.
+        - kind: quote
+          ask: Which words show how Sam feels about the park's mess?
+          choices:
+            - It made me sad to see our beautiful park treated so carelessly.
+            - The cleanup will take place on Saturday
+            - Volunteers of every age are welcome to participate.
+            - Older kids and adults can pull weeds
+          evidence: It made me sad to see our beautiful park treated so carelessly.
+        - kind: write
+          ask: What does Sam want readers to do? Give one detail.
+          sample: >-
+            He wants them to come to the cleanup on Saturday morning. He says his family will provide
+            gloves and bags for everyone.
+          evidence: My family will provide gloves, trash bags and grabber sticks for everyone
+    - focus: how a letter mixes facts and persuasion
+      look_for: facts that inform and words that persuade
+      questions:
+        - kind: organizer
+          ask: Sort details from the letter into facts and persuading words.
+          heads: [Facts, Persuading words]
+          samples:
+            - Saturday, October 12, nine until noon, by the oak tree
+            - '"Our park has given us so much," "many hands make work light"'
+          evidence: from nine in the morning until noon
+        - kind: mc
+          ask: Why does Sam mention the duck in paragraph 3?
+          choices:
+            - to make readers feel that the mess is a real problem
+            - to show that ducks like to play with string
+            - to explain where the cleanup will start
+            - to prove that he feeds the ducks every day
+          evidence: Last week, I noticed a duck tugging at a piece
+        - kind: write
+          ask: In paragraph 6, what doubt does Sam answer?
+          sample: >-
+            He answers people who think one morning cannot make a difference. He shows that twenty
+            neighbors could give sixty hours of care.
+          evidence: Some of you might think that one morning cannot make much difference.
+
+- id: c03-bird-feeder
+  title: Build a Bird Feeder
+  genre: nonfiction
+  text: |
+    Few hobbies are as delightful as watching wild birds up close. With a simple homemade feeder,
+    you can invite chickadees, sparrows and finches to visit right outside your window. This guide
+    explains how to build one from an empty milk carton, using materials you probably already have
+    at home.
+
+    Before you begin, gather your supplies. You will need a clean, empty half-gallon milk carton, a
+    pair of scissors, two pencils, a long piece of sturdy string and a small bag of birdseed. The
+    carton's sides are surprisingly stiff, so ask an adult to help whenever you need to use the
+    scissors.
+
+    First, rinse the carton carefully with warm water and let it dry completely. Leftover milk can
+    turn sour and spoil the seed. Next, use a pencil to draw a square window on two opposite sides
+    of the carton, about two inches above the bottom. The bottom edge of each window keeps the seed
+    from spilling out, so do not draw the windows too low.
+
+    Now ask your adult helper to cut out the windows. Below each window, poke a small hole with the
+    tip of a pencil, then push the pencil all the way through to the other side. The pencil becomes
+    a perch where birds can rest comfortably while they eat.
+
+    To hang the feeder, poke a hole through the top of the carton and thread the string through it.
+    Tie a strong knot. Then pour birdseed into the bottom until it reaches just below the windows.
+
+    Choosing the right location is important. Hang your feeder from a sturdy branch about five feet
+    above the ground, within a short flight of trees or bushes where birds can rest and shelter. If
+    you choose a branch that you can see from a window, you will enjoy a perfect view.
+
+    Be patient, because birds may take several days to discover your gift. Refill the seed regularly,
+    and replace the carton if it becomes soggy after heavy rain. Before long, your backyard will
+    become a busy, chattering restaurant for your feathered neighbors.
+  pages:
+    - focus: purpose of a how-to text
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to teach readers how to build a bird feeder
+            - to persuade readers to stop drinking milk
+            - to tell a story about a family of finches
+            - to explain why birds fly south in the fall
+          evidence: This guide explains how to build one from an empty milk carton
+        - kind: quote
+          ask: Which words show how the author feels about bird watching?
+          choices:
+            - Few hobbies are as delightful as watching wild birds up close.
+            - Tie a strong knot.
+            - Choosing the right location is important.
+            - Leftover milk can turn sour and spoil the seed.
+          evidence: Few hobbies are as delightful as watching wild birds up close.
+        - kind: write
+          ask: Why does the author explain why to rinse the carton?
+          sample: >-
+            So readers understand the step matters. Leftover milk would turn sour and spoil the seed.
+          evidence: Leftover milk can turn sour and spoil the seed.
+    - focus: how word choice shapes a guide
+      look_for: words that make the project sound fun
+      questions:
+        - kind: mc
+          ask: Why does the author call the backyard a "restaurant"?
+          choices:
+            - to make the finished feeder sound lively and fun
+            - to tell readers to sell birdseed to neighbors
+            - to warn readers that birds are very noisy
+            - to explain that birds eat only at mealtimes
+          evidence: your backyard will become a busy, chattering restaurant for your feathered neighbors
+        - kind: mc
+          ask: Which word in paragraph 3 shows the order of the steps?
+          choices:
+            - Next
+            - carefully
+            - square
+            - bottom
+          evidence: Next, use a pencil to draw a square window
+        - kind: write
+          ask: How would this guide change if it were written to persuade?
+          sample: >-
+            It would give reasons why everyone should feed birds instead of steps, and it would ask
+            readers to start.
+          evidence: This guide explains how to build one from an empty milk carton
+
+- id: c04-deep-end
+  title: The Deep End
+  genre: story
+  text: |
+    I was ten years old, and I still could not swim. Every summer my family visited the community
+    pool, and every summer I stayed in the shallow end, gripping the edge while my little brother
+    splashed past me. When Mom signed me up for lessons, I was certain it would be the most
+    embarrassing week of my life.
+
+    On the first morning, I discovered that everyone else in my group was about six. They bounced
+    in the water like corks. I towered over them, and I was positive
+    that every parent on the bleachers was staring at me and wondering why such a tall girl needed
+    beginner lessons.
+
+    Our instructor, Coach Dana, never seemed to notice my embarrassment. She taught me to float on
+    my back while she held one hand under my shoulders. "Relax your neck, Priya, and let the water
+    carry you," she said calmly. On the third day, she quietly moved her hand away, and I floated by
+    myself for almost ten seconds.
+
+    On Friday, Coach Dana announced that each of us would swim across the width of the deep end. My
+    stomach twisted into knots. The water looked endless, and the bottom seemed miles away. When my
+    turn came, I pushed off the wall, kicked furiously and paddled with all my strength.
+
+    Halfway across, I was convinced I was sinking. I heard shouting, and I imagined that the little
+    kids were laughing at my clumsy splashing. Somehow I kept going until I touched the far
+    wall.
+
+    When I pulled off my goggles, I realized the truth. The six-year-olds were jumping up and down,
+    chanting my name. The shouting I had heard was cheering. Coach Dana told me my strokes were
+    strong and steady, and that my head had stayed above the surface the entire time.
+
+    Later, Mom admitted that the parents on the bleachers had mostly been reading or watching their
+    own children. Nobody had been staring at me at all. I learned two things that week: how to swim,
+    and that my worries often tell a louder story than the truth.
+  pages:
+    - focus: narrator's view and what really happened
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to tell an experience and entertain readers
+            - to persuade readers to take swimming lessons
+            - to explain the rules of the community pool
+            - to teach readers how to float on their backs
+          evidence: I learned two things that week
+        - kind: quote
+          ask: Which words show what Priya believed during her swim?
+          choices:
+            - Halfway across, I was convinced I was sinking.
+            - The shouting I had heard was cheering.
+            - I pushed off the wall
+            - she quietly moved her hand away
+          evidence: Halfway across, I was convinced I was sinking.
+        - kind: paragraph
+          ask: What did Priya think vs. what happened? 3–4 sentences.
+          sample: >-
+            Priya thought the little kids were laughing at her clumsy splashing. Really, "The shouting I
+            had heard was cheering." She also thought she was sinking, but her head stayed above the
+            water. Her worries made things seem much worse than they were.
+          rubric: names what Priya believed; quotes what really happened; explains the difference.
+          evidence: The shouting I had heard was cheering.
+    - focus: how a narrator's feelings shape a story
+      look_for: how Priya's feelings change
+      questions:
+        - kind: organizer
+          ask: How does Priya feel at the start and at the end?
+          heads: [Start, End]
+          samples:
+            - embarrassed and sure everyone is staring at her
+            - proud and surprised that the kids were cheering
+          evidence: Nobody had been staring at me at all.
+        - kind: mc
+          ask: What does "my worries often tell a louder story" mean?
+          choices:
+            - Her fears made things seem worse than they were.
+            - She talks too loudly when she is nervous.
+            - She likes to tell stories about the pool.
+            - The pool was the loudest place in town.
+          evidence: my worries often tell a louder story than the truth
+        - kind: write
+          ask: Why is the story told by Priya instead of Coach Dana?
+          sample: >-
+            So readers feel Priya's nerves and are surprised with her when the shouting turns out to be
+            cheering.
+          evidence: When I pulled off my goggles, I realized the truth.
+
+- id: c05-kids-cook
+  title: Every Kid Should Cook
+  genre: nonfiction
+  text: |
+    Most kids can ride a bike, play video games and sing dozens of songs. Yet many of them cannot
+    make a sandwich or scramble an egg. I strongly believe that every kid should learn
+    to cook a few simple meals. Cooking is not just a chore for grown-ups. It is a useful
+    skill that makes kids more confident and more helpful.
+
+    First, cooking turns everyday math into something useful. When you double a recipe for pancakes,
+    you have to multiply every ingredient. When you measure half a cup of flour or set a timer for
+    twelve minutes, you are using fractions and time without even noticing. I understood fractions
+    much better after baking muffins with my grandfather.
+
+    Second, cooking builds independence. A kid who can prepare a bowl of oatmeal or a vegetable
+    omelet does not have to wait for someone else to make breakfast. On busy mornings, that is a
+    real help to the whole family. Following directions step by
+    step, cleaning the counter and putting ingredients away also teach responsibility.
+
+    Third, cooking brings families together. In my house, Sunday dinner is a team project. My sister
+    washes the vegetables, my dad stirs the sauce, and I set the table and toss the salad. We talk
+    and laugh while we work, and the meal tastes better because we made it together. Even my little brother helps by
+    folding the napkins.
+
+    Some adults worry that kitchens are too dangerous for children. It is true that stoves are hot
+    and some tools are sharp. However, kids can begin with safe tasks, such as mixing batter, washing
+    fruit or spreading butter on toast, while an adult handles the stove. With practice and a watchful
+    grown-up nearby, they can slowly take on bigger jobs.
+
+    Learning to cook does not require fancy equipment or expensive ingredients. It only requires a
+    patient teacher and a willing student. If every family taught their children just three simple
+    recipes, a whole generation would grow up ready to feed themselves and the people they love.
+    Let's get kids into the kitchen!
+  pages:
+    - focus: opinions, reasons and examples
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to persuade readers that kids should learn to cook
+            - to teach readers a recipe for vegetable omelets
+            - to describe a Sunday dinner with her grandfather
+            - to warn readers that kitchens are dangerous
+          evidence: I strongly believe that every kid should learn to cook a few simple meals.
+        - kind: quote
+          ask: Which words show the author's opinion most strongly?
+          choices:
+            - I strongly believe that every kid should learn to cook a few simple meals.
+            - My sister washes the vegetables
+            - you have to multiply every ingredient
+            - It is true that stoves are hot and some tools are sharp.
+          evidence: I strongly believe that every kid should learn to cook a few simple meals.
+        - kind: write
+          ask: Does the author give reasons or only opinions? Give one example.
+          sample: >-
+            She gives reasons. For example, doubling a pancake recipe means you have to multiply every
+            ingredient, so cooking uses math.
+          evidence: When you double a recipe for pancakes, you have to multiply every ingredient.
+    - focus: answering the other side
+      look_for: how the author answers adults who worry
+      questions:
+        - kind: mc
+          ask: What does the author admit in paragraph 5?
+          choices:
+            - Stoves are hot and some tools are sharp.
+            - Kids should never use the stove.
+            - Cooking is too hard for most children.
+            - Expensive ingredients make better meals.
+          evidence: It is true that stoves are hot and some tools are sharp.
+        - kind: write
+          ask: Why does the author mention safe tasks like washing fruit?
+          sample: >-
+            To show worried adults that kids can start cooking safely while a grown-up handles the
+            stove.
+          evidence: while an adult handles the stove
+        - kind: paragraph
+          ask: If written to inform, how would it change? 3–4 sentences.
+          sample: >-
+            An informing text would explain facts about kids and cooking without taking a side. It would
+            not say "I strongly believe" or end with "Let's get kids into the kitchen!" It might simply
+            describe which kitchen jobs are safe for different ages. Readers would learn, but nobody
+            would ask them to do anything.
+          rubric: names the change in purpose; quotes opinion words from the text; explains what would replace them.
+          evidence: Let's get kids into the kitchen!
+
+- id: c06-flight-museum
+  title: Welcome, Young Flyers
+  genre: nonfiction
+  text: |
+    Good morning, everyone, and welcome to Up in the Air, the newest exhibit at the Riverbend Science
+    Museum! My name is Ms. Kimura, and I will be your guide today. For thousands of years, people
+    watched birds glide across the sky and dreamed of joining them. In this exhibit, you will
+    discover how that dream finally came true and learn the science that keeps airplanes aloft.
+
+    Our first room is all about birds, the original experts of flight. Look closely at the skeleton
+    in the glass case. Many birds have hollow bones that are strong but remarkably light. Their wings
+    are shaped to create lift as air flows over them. Early inventors studied birds carefully,
+    hoping to copy their secrets.
+
+    In the next room, you will find a model of a hot-air balloon. In 1783, a balloon built by two
+    French brothers, the Montgolfiers, carried people into the sky for the first time. Hot air is
+    lighter than the cooler air around it, so the balloon rose gently above the countryside. However,
+    its passengers could not steer, so they drifted wherever the wind carried them.
+
+    My favorite room is the third one, where a full-size copy of the Wright brothers' airplane hangs
+    from the ceiling. In December 1903, Orville and Wilbur Wright made the first successful flight in
+    a powered airplane near Kitty Hawk, North Carolina. That first flight lasted only about twelve
+    seconds, but I think it was the most exciting twelve seconds in history.
+
+    Before you leave, stop at the Four Forces station. There, you can learn how lift, weight, thrust
+    and drag work together to keep an airplane flying. Then visit our paper airplane workshop and
+    test your own designs. Try changing the shape of the wings and watch what happens!
+
+    Please remember to walk, not run, and keep your hands off any model with a red rope around it.
+    Most importantly, ask lots of questions. Every great inventor started out curious, just like you.
+    Now, let's take off!
+  pages:
+    - focus: purpose and point of view of a speaker
+      questions:
+        - kind: mc
+          ask: What is Ms. Kimura's main purpose?
+          choices:
+            - to welcome visitors and tell them about the exhibit
+            - to persuade visitors to become airplane pilots
+            - to tell a made-up story about a hot-air balloon
+            - to teach visitors how to build a real airplane
+          evidence: In this exhibit, you will discover how that dream finally came true
+        - kind: quote
+          ask: Which words show how Ms. Kimura feels about the exhibit?
+          choices:
+            - My favorite room is the third one
+            - Look closely at the skeleton in the glass case.
+            - In the next room, you will find a model of a hot-air balloon.
+            - Before you leave, stop at the Four Forces station.
+          evidence: My favorite room is the third one
+        - kind: organizer
+          ask: Find one fact and one opinion in paragraph 4.
+          heads: [Fact, Opinion]
+          samples:
+            - The Wright brothers flew a powered airplane in December 1903.
+            - It was the most exciting twelve seconds in history.
+          evidence: I think it was the most exciting twelve seconds in history
+    - focus: what the speaker wants visitors to do
+      look_for: what Ms. Kimura asks visitors to do
+      questions:
+        - kind: mc
+          ask: What does Ms. Kimura want visitors to do most of all?
+          choices:
+            - ask lots of questions
+            - run to the paper airplane workshop
+            - touch every model in the exhibit
+            - read about balloons before they come
+          evidence: Most importantly, ask lots of questions.
+        - kind: write
+          ask: Why does she say inventors started out curious like you?
+          sample: >-
+            To make visitors feel that they could become inventors too if they stay curious.
+          evidence: Every great inventor started out curious, just like you.
+        - kind: paragraph
+          ask: Inform or entertain? Explain in 3–4 sentences.
+          sample: >-
+            The text is mainly meant to inform visitors. Ms. Kimura gives facts, such as the first flight
+            "lasted only about twelve seconds." She also makes the tour fun with exciting words like
+            "let's take off!" The fun parts help visitors enjoy learning.
+          rubric: names the main purpose; quotes a fact from the text; explains how the lively words help.
+          evidence: That first flight lasted only about twelve seconds
+
+- id: c07-patient-heron
+  title: The Patient Heron
+  genre: story
+  text: |
+    Early this morning, Grandpa and I hiked down to the marsh behind Cedar Pond before sunrise. The
+    air was cool and misty. Grandpa wanted to show
+    me a great blue heron that has been fishing there all spring.
+
+    At first, I was honestly disappointed. The heron was standing perfectly still in the shallow
+    water, and it stayed that way for what felt like forever. It was taller than my little sister,
+    with gray-blue feathers, long skinny legs and a sharp yellow bill. I whispered to Grandpa that it
+    looked like a lawn ornament, and he chuckled quietly.
+
+    "Keep watching," he murmured. "Herons are the most patient hunters in the marsh." I lifted my
+    binoculars and tried to be patient too, although my toes were getting cold inside my sneakers.
+
+    Then, in a flash, the heron struck. Its neck shot forward like a spring, and its bill speared
+    the water. When it lifted its head, a small silver fish was wriggling in its beak. The heron
+    flipped the fish around and swallowed it headfirst in one gulp. I was so astonished that I nearly
+    dropped my binoculars into the mud.
+
+    Over the next hour, we watched the heron catch three more fish. Each time, it waited without
+    moving a single feather before striking. I began to understand that its stillness was not
+    laziness at all. It was a clever strategy, because fish do not notice a creature that looks like
+    a tall reed.
+
+    Finally, the heron spread its enormous wings and lifted off. It flew low over the water with its
+    neck folded into an S shape and its long legs trailing behind it. Grandpa says that is how you
+    can tell a heron from a crane, which flies with its neck stretched straight out.
+
+    Tonight I drew the heron in my nature journal, standing in the misty water. Underneath the
+    picture, I wrote one word: patient. Next weekend, I will go back to see if I can be as patient as my
+    new favorite bird.
+  pages:
+    - focus: how the narrator's view changes
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to tell about an experience watching a heron
+            - to persuade readers to buy binoculars
+            - to teach readers how to catch fish
+            - to explain how to draw birds in a journal
+          evidence: Grandpa wanted to show me a great blue heron
+        - kind: quote
+          ask: Which words show the narrator's first view of the heron?
+          choices:
+            - At first, I was honestly disappointed.
+            - I began to understand that its stillness was not laziness
+            - the heron spread its enormous wings and lifted off
+            - "Underneath the picture, I wrote one word: patient."
+          evidence: At first, I was honestly disappointed.
+        - kind: paragraph
+          ask: How does the narrator's view change? Use 3–4 sentences.
+          sample: >-
+            At first, the narrator thinks the heron is boring and looks "like a lawn ornament." Then the
+            heron catches a fish in a flash. The narrator realizes its stillness is "a clever strategy"
+            and not laziness. By the end, the heron is the narrator's new favorite bird.
+          rubric: names the first view and the later view; quotes the text; explains what changed it.
+          evidence: I began to understand that its stillness was not laziness at all.
+    - focus: facts inside a personal story
+      look_for: facts about herons inside the story
+      questions:
+        - kind: organizer
+          ask: Find one fact about herons and one feeling of the narrator.
+          heads: [Heron fact, Narrator's feeling]
+          samples:
+            - A heron flies with its neck folded into an S shape.
+            - astonished when the heron catches a fish
+          evidence: neck folded into an S shape
+        - kind: mc
+          ask: Why does Grandpa say "Keep watching"?
+          choices:
+            - He knows the heron is waiting to catch a fish.
+            - He wants the narrator to look for a crane.
+            - He thinks the heron is about to fly away.
+            - He is tired and wants to go home soon.
+          evidence: Herons are the most patient hunters in the marsh.
+        - kind: write
+          ask: Why does the narrator write the word "patient" in the journal?
+          sample: >-
+            Because the heron waited without moving before it caught fish, and the narrator wants to be
+            patient like it.
+          evidence: "Underneath the picture, I wrote one word: patient."
+
+- id: c08-mary-anning
+  title: The Fossil Hunter
+  genre: nonfiction
+  text: |
+    Two hundred years ago, the cliffs near the small town of Lyme Regis, on the southern coast of
+    England, held a secret. Buried in the crumbling rock were the bones of creatures that had lived
+    long before humans. The person who uncovered many of them was not a famous professor. She was a
+    young woman named Mary Anning. Her remarkable discoveries helped change how people understood
+    the history of life on Earth.
+
+    Mary Anning was born in 1799. Her family did not have much money, so they earned extra income by
+    collecting fossils from the beach and selling them to visitors. Mary learned to search the cliffs
+    with her father as a child, often after winter storms had washed away loose rock and uncovered
+    new treasures.
+
+    When Mary was about twelve years old, her brother Joseph found the skull of a strange creature.
+    Mary later uncovered the rest of its skeleton. It was an ichthyosaur, a sea reptile with a long
+    snout and a body shaped somewhat like a dolphin's. The discovery caused great excitement. Mary
+    did not stop there. In 1823, she found a nearly complete skeleton of a plesiosaur, an ocean
+    reptile with a small head, a very long neck and four flippers. At first, some experts doubted
+    that such an odd animal could be real. After careful study, they agreed that the fossil was
+    genuine.
+
+    Despite her brilliant work, Mary was often treated unfairly. Wealthy collectors bought her
+    fossils, and some of them received the credit for describing them. The Geological Society of
+    London, an important group of scientists, did not allow women to join, so Mary could never become
+    a member. Still, many scientists visited her small shop to ask for her advice, because she knew
+    the fossils better than almost anyone.
+
+    Mary Anning lived until 1847. Today, she is honored as one of the most important fossil hunters
+    in history. Her story reminds us that curiosity, patience and hard work matter far more than
+    wealth or fame.
+  pages:
+    - focus: purpose and point of view in a biography
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to inform readers about Mary Anning's discoveries
+            - to persuade readers to sell fossils to visitors
+            - to tell a made-up story about a sea reptile
+            - to teach readers how to climb steep cliffs
+          evidence: Her remarkable discoveries helped change how people understood the history of life
+        - kind: quote
+          ask: Which words show that the author admires Mary Anning?
+          choices:
+            - Despite her brilliant work
+            - Mary Anning was born in 1799.
+            - Mary later uncovered the rest of its skeleton.
+            - Mary Anning lived until 1847.
+          evidence: Despite her brilliant work
+        - kind: organizer
+          ask: Sort details from paragraph 4 into facts and opinions.
+          heads: [Fact, Opinion]
+          samples:
+            - The Geological Society did not allow women to join.
+            - Her work was brilliant and she was treated unfairly.
+          evidence: did not allow women to join
+    - focus: how word choice shows the author's view
+      look_for: how the author feels about Mary's treatment
+      questions:
+        - kind: mc
+          ask: What does the word "unfairly" in paragraph 4 show?
+          choices:
+            - The author thinks Mary deserved more respect.
+            - The author thinks the scientists were right.
+            - The author thinks Mary sold fossils too cheaply.
+            - The author thinks Mary should have stayed home.
+          evidence: Despite her brilliant work, Mary was often treated unfairly.
+        - kind: write
+          ask: What does the author want readers to learn from her?
+          sample: >-
+            That curiosity, patience and hard work matter more than being rich or famous.
+          evidence: curiosity, patience and hard work matter far more than wealth or fame
+        - kind: paragraph
+          ask: How does the author view Mary's treatment? 3–4 sentences.
+          sample: >-
+            The author thinks Mary was treated unfairly. The author explains that "Wealthy collectors
+            bought her fossils" and sometimes got the credit. The Geological Society also "did not allow
+            women to join." Calling her work "brilliant" shows the author believes she deserved respect.
+          rubric: states the author's view; quotes details from paragraph 4; explains how the words show it.
+          evidence: Mary was often treated unfairly
+
+- id: c09-reading-buddies
+  title: Reading Buddies
+  genre: nonfiction
+  text: |
+    Good afternoon, students and teachers. My name is Theo Mensah, and I am the fifth-grade
+    representative on our student council. Today I would like to propose a new program for our
+    school called Reading Buddies. I believe it could become one of the most meaningful traditions
+    at Lakeside Elementary.
+
+    Here is how it would work. Once a week, during the last twenty minutes of the day, each fifth
+    grader would be paired with a kindergartner. The older student would read aloud from a picture
+    book, and then the younger student would choose a page to read or describe. Over time, the
+    buddies would get to know each other and build a real friendship.
+
+    Reading Buddies would help our youngest students in several ways. Kindergartners are just
+    learning that letters make sounds and that sounds make words. When they hear an older student
+    read with expression, they discover that books can be exciting. They also receive extra attention
+    and encouragement, which teachers with large classes cannot always give.
+
+    The program would help the older students too. Reading aloud to an audience improves fluency and
+    confidence. Explaining a story to a five-year-old requires patience and creative thinking. Most
+    importantly, fifth graders would learn what it feels like to be a role model.
+
+    I know some of you are wondering whether we have time for this, since our schedule is already
+    busy. However, our librarian, Ms. Ortega, has offered to lend us books, and the kindergarten
+    teachers have told me they would welcome the help. Twenty minutes a week is a small investment
+    for such a big reward.
+
+    I remember being a nervous kindergartner myself. An older student named Grace used to read
+    dinosaur books with me during indoor recess, and I still remember how special that made me feel.
+    I want every kindergartner at our school to have a Grace of their own.
+
+    Please support Reading Buddies when the council meets next week. Together, we can make our school
+    a place where readers help readers grow.
+  pages:
+    - focus: purpose and point of view in a speech
+      questions:
+        - kind: mc
+          ask: What is Theo's main purpose in this speech?
+          choices:
+            - to persuade the school to start Reading Buddies
+            - to explain how kindergartners learn letters
+            - to tell a story about a girl named Grace
+            - to describe the books in the school library
+          evidence: Today I would like to propose a new program for our school called Reading Buddies.
+        - kind: quote
+          ask: Which words show how strongly Theo feels about the idea?
+          choices:
+            - it could become one of the most meaningful traditions
+            - Here is how it would work.
+            - each fifth grader would be paired with a kindergartner
+            - our schedule is already busy
+          evidence: it could become one of the most meaningful traditions
+        - kind: write
+          ask: Why does Theo tell the story about Grace in paragraph 6?
+          sample: >-
+            To show from his own life how special a reading buddy can make a young child feel.
+          evidence: I still remember how special that made me feel
+    - focus: reasons that support a claim
+      look_for: reasons Theo gives for each group
+      questions:
+        - kind: organizer
+          ask: How would Reading Buddies help each group?
+          heads: [Kindergartners, Fifth graders]
+          samples:
+            - They learn that books are exciting and get extra attention.
+            - They gain confidence and learn to be role models.
+          evidence: Reading aloud to an audience improves fluency and confidence.
+        - kind: mc
+          ask: What does Theo want listeners to do?
+          choices:
+            - support Reading Buddies at next week's meeting
+            - lend their own books to the library
+            - read dinosaur books during indoor recess
+            - stay twenty minutes after school each day
+          evidence: Please support Reading Buddies when the council meets next week.
+        - kind: write
+          ask: Does Theo give reasons or only opinions? Give one example.
+          sample: >-
+            He gives reasons. The librarian will lend books and the kindergarten teachers want the help,
+            so the plan can work.
+          evidence: our librarian, Ms. Ortega, has offered to lend us books
+
+- id: c10-city-lights
+  title: Where Did the Stars Go?
+  genre: nonfiction
+  text: |
+    On a clear night far from any town, a person can see a few thousand stars without a telescope,
+    along with the faint, glowing band of the Milky Way. In a brightly lit city, the same sky might
+    show only a handful of stars. The stars have not disappeared. They are simply hidden by a
+    problem that scientists call light pollution.
+
+    Light pollution is artificial light that shines where it is not needed. Streetlights,
+    glowing signs and brightly lit buildings all send light into the air. Much of that
+    light travels sideways or upward instead of down toward the ground. Tiny bits of dust and water
+    in the air scatter it, creating a hazy glow over cities called skyglow.
+
+    Skyglow does more than hide the stars. Many animals depend on natural darkness. Baby sea turtles
+    hatch on beaches at night and find the ocean by crawling toward the brighter horizon over the
+    water. Bright lights on shore can confuse them and lead them the wrong way. Some birds that
+    migrate at night can also become confused by the glow of large cities.
+
+    The encouraging news is that light pollution is one of the easiest environmental problems to
+    fix. Unlike trash in the ocean, it disappears the moment a light is switched off or redesigned.
+    Towns and neighborhoods can make a big difference with a few practical changes. First, outdoor lights can be shielded, which means they are covered on top so they shine only
+    downward, where people need them. Second, towns can choose lights that are no brighter than
+    necessary and use warmer colors, which scatter less in the sky. Third, lights on timers or motion
+    sensors can turn off automatically when nobody is around.
+
+    Some communities have already made these changes, and visitors travel to them to enjoy the
+    view. Even busy towns can keep their streets safe while giving the night
+    sky back to people and animals. Perhaps someday you will look up from your own backyard and see
+    the Milky Way.
+  pages:
+    - focus: purpose and point of view in an article
+      questions:
+        - kind: mc
+          ask: What is the author's main purpose?
+          choices:
+            - to explain light pollution and how towns can reduce it
+            - to tell a story about a family watching sea turtles
+            - to teach readers how to build a telescope
+            - to persuade readers to move far away from cities
+          evidence: Towns and neighborhoods can make a big difference with a few practical changes.
+        - kind: quote
+          ask: Which words show that the author feels hopeful?
+          choices:
+            - one of the easiest environmental problems to fix
+            - Skyglow does more than hide the stars.
+            - Many animals depend on natural darkness.
+            - Much of that light travels sideways or upward
+          evidence: one of the easiest environmental problems to fix
+        - kind: paragraph
+          ask: If it were persuasive, how would it change? 3–4 sentences.
+          sample: >-
+            A persuasive text would take a strong side and tell readers what they must do. Instead of
+            calmly explaining that lights "can be shielded," it might demand that every town change its
+            lights right away. It would use stronger opinion words. This article mostly explains and
+            lets readers decide.
+          rubric: names the article's purpose; quotes the text; explains how a persuasive version would sound.
+          evidence: outdoor lights can be shielded
+    - focus: causes, effects and the author's solutions
+      look_for: causes and effects of skyglow
+      questions:
+        - kind: organizer
+          ask: Fill in one cause and one effect of skyglow.
+          heads: [Cause, Effect]
+          samples:
+            - Lights shine sideways or upward, and dust in the air scatters it.
+            - Stars are hidden, and baby sea turtles can go the wrong way.
+          evidence: Bright lights on shore can confuse them and lead them the wrong way.
+        - kind: mc
+          ask: Why does the author compare light to trash in the ocean?
+          choices:
+            - to show that light pollution is easier to fix
+            - to show that light and trash are made of the same stuff
+            - to explain how sea turtles find the ocean
+            - to prove that trash causes skyglow over cities
+          evidence: Unlike trash in the ocean, it disappears the moment a light is switched off
+        - kind: write
+          ask: Does the author give reasons or only opinions? Give one example.
+          sample: >-
+            She gives reasons. She explains that shielded lights shine only downward, where people need
+            them.
+          evidence: they are covered on top so they shine only downward, where people need them

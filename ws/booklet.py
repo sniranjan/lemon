@@ -194,7 +194,8 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
             answered = [s for s in group if s.answer_key]
             if answered:
                 if level.rules.get("answers") == "by_line":
-                    pages = _answer_pages_by_line(_answer_rows(answered, by_line=True))
+                    pages = _answer_pages_by_line(_answer_rows(answered, by_line=True),
+                                                  level.rules.get("answers_height", 760))
                 else:
                     pages = _answer_pages([{"id": s.id, "page": s.page_number, "answers": ", ".join(map(str, s.answer_key))}
                                            for s in answered])

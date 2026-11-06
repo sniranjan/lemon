@@ -88,6 +88,19 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `full_sentence_answer` (planner `passages` in `ws/passages.py`); child text 20px (`min_child_px` for R levels);
   answers PDF lists one line per answer (level rule `answers: by_line`). All 200 pages verify with 0 errors and
   0 warnings; booklets per section + `foxes-reading-level.pdf` (202 pages) + answers. `daily_pages: 2` (ours).
+- **Pandas Reading (R6, our own level, grade 6 reading for age 9, 200 pages)** (2026-11-06): `syllabus/english/R6.yaml`:
+  A Central Idea 1–50 (RI.6.2, objective summaries) · B Reading Between the Lines 51–100 (inference with cited
+  evidence, RL.6.1 / RI.6.1) · C Why Was It Written? 101–140 (purpose and point of view, RI.6.6, RL.6.6, RI.6.8) ·
+  D How It's Built 141–170 (cause/effect, compare/contrast, problem/solution; how a paragraph fits, RI.6.5) ·
+  E Short Written Answers 171–200 (two 3–4-sentence answers with a quote, W.6.9, W.6.1). 52 original passages
+  (`content/passages/R6/`, 305–354 words, Flesch-Kincaid 5.5–7.5; 37 nonfiction, 15 stories), each read on one
+  or two two-page spreads. New sheet type `passage_spread` (`ws/spreads.py`): page 1 the passage (numbered
+  paragraphs; a Letter page holds ~300 words at the 20px floor, so the end continues at the top of page 2, split at a
+  sentence), page 2 the questions: `mc` (A–D), `quote` (exact text choices), `write`, `paragraph` (sample + rubric in
+  the key), `organizer` (Cause / Effect boxes). Planner: `plan_passages` with rule `spread: true` (Foxes unchanged).
+  Draft record `syllabus/drafts/R6-passages.md` from `scripts/r6_drafts.py` (approved by the orchestrator under the
+  user's delegation). Verify 0 errors, 0 warnings; booklets per section + `pandas-reading-level.pdf` (202 pages) and
+  `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1, 52, 102, 172.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,

@@ -28,6 +28,7 @@ from .content import wordparts
 from .models import Level
 from .plan import LevelPlan, PagePlan
 from .readability import fk_grade, words
+from .spreads import spread_queue
 
 BLANK = "___"
 MAX_ASK = 60       # characters: one line at 20px
@@ -216,7 +217,23 @@ def plan_passages(level: Level, variant: int = 1) -> LevelPlan:
     for page in range(1, level.pages + 1):
         spec = resolve_page(level, page)
         rules = spec.rules
-        if "passages" in rules:
+        if "passages" in rules and rules.get("spread"):
+            # two-page spreads (Pandas Reading on, ws/spreads.py): a reading page, then its questions page
+            code = rules["passages"]
+            first = (page - level.section(spec.section).pages[0]) % 2 == 0
+            if first:
+                if code not in queues:
+                    queues[code] = spread_queue(level.level, code)
+                if not queues[code]:
+                    plan.waiting[page] = f"content/passages/{level.level}/{code}.yaml needs more passages"
+                    continue
+                pid, k = queues[code].pop(0)
+                plan.pages[page] = PagePlan(page=page, extra={"passage": pid, "set": k, "side": "read"})
+            elif page - 1 in plan.pages:
+                plan.pages[page] = PagePlan(page=page, extra={**plan.pages[page - 1].extra, "side": "questions"})
+            else:
+                plan.waiting[page] = f"content/passages/{level.level}/{code}.yaml needs more passages"
+        elif "passages" in rules:
             code = rules["passages"]
             if code not in queues:
                 queues[code] = [(p.id, k) for p in section_passages(level.level, code) for k in range(len(p.pages))]

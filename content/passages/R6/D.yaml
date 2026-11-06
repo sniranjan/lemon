@@ -1,0 +1,643 @@
+# Pandas Reading, section D "How It's Built" (pages 141–170): how an article is built (cause and
+# effect, compare and contrast, problem and solution) and how one paragraph fits it (RI.6.5, RI.6.3).
+# Original nonfiction (ours), well-established facts only. Schema and checks: ws/spreads.py.
+
+- id: d01-why-seasons
+  title: Why We Have Seasons
+  genre: nonfiction
+  text: |
+    Many people guess that summer comes when Earth moves closer to the Sun. It is a sensible
+    idea, but it is not correct. In fact, Earth is closest to the Sun in early January, when the
+    northern half of the planet is having winter. The real cause of the seasons is a tilt.
+
+    Earth spins around an imaginary line called its axis, which runs from the North Pole to the
+    South Pole. This axis is not straight up and down. It leans at an angle of about 23 degrees,
+    and it keeps pointing in the same direction in space as Earth travels around the Sun each year.
+
+    Because of this tilt, each half of Earth leans toward the Sun for part of the year and away
+    from it for another part. When the northern half leans toward the Sun, sunlight strikes it
+    more directly. Direct rays pack their energy into a smaller area, so the ground and air warm up
+    quickly. As a result, the northern half has summer.
+
+    The tilt also changes how long the days are. A place that leans toward the Sun spends more
+    hours in daylight and fewer hours in darkness. Long days give the land more time to soak up
+    heat, and short nights give it less time to cool off. That is why summer evenings stay bright
+    so late.
+
+    Six months later, Earth has moved to the other side of its path. Now the northern half leans
+    away from the Sun. Sunlight arrives at a low slant and spreads out over a larger area, so each
+    patch of ground receives less energy. Days grow short, nights grow long, and winter sets in.
+
+    The two halves of Earth always have opposite seasons. When children in Canada are building
+    snowmen in December, children in Australia may be swimming at the beach. The same tilt causes
+    both, which shows how a single cause can lead to very different effects in different places. Near the equator, sunlight stays fairly
+    direct all year, so the seasons there change very little.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - cause and effect
+            - compare and contrast
+            - problem and solution
+            - time order
+          evidence: The real cause of the seasons is a tilt.
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - As a result, the northern half has summer.
+            - This axis is not straight up and down.
+            - Now the northern half leans away from the Sun.
+            - Earth spins around an imaginary line called its axis
+          evidence: As a result, the northern half has summer.
+        - kind: organizer
+          ask: Fill in one cause and its effect from paragraph 3.
+          heads: [Cause, Effect]
+          samples:
+            - The northern half of Earth leans toward the Sun.
+            - Sunlight is more direct, so the northern half has summer.
+          evidence: When the northern half leans toward the Sun, sunlight strikes it more directly.
+    - focus: how each paragraph fits
+      look_for: what each paragraph adds to the cause
+      questions:
+        - kind: write
+          ask: How does paragraph 1 fit the structure of the whole article?
+          sample: >-
+            It clears up a wrong idea, that distance from the Sun causes the seasons, before the
+            article explains the real cause, the tilt.
+          evidence: The real cause of the seasons is a tilt.
+        - kind: mc
+          ask: According to the article, what causes the seasons?
+          choices:
+            - the tilt of Earth's axis
+            - Earth moving closer to the Sun
+            - the Sun growing hotter in summer
+            - clouds blocking sunlight in winter
+          evidence: The real cause of the seasons is a tilt.
+        - kind: organizer
+          ask: Fill in what happens when each half of Earth is tilted each way.
+          heads: [Tilted toward Sun, Tilted away]
+          samples:
+            - Direct sunlight and long days make it summer.
+            - Slanted sunlight and short days make it winter.
+          evidence: Days grow short, nights grow long, and winter sets in.
+
+- id: d02-carving-canyons
+  title: How Canyons Are Carved
+  genre: nonfiction
+  text: |
+    A canyon is a deep, narrow valley with steep rock walls. Standing at the edge of one, you
+    might think it was made in a single great event. In fact, most canyons form very slowly. They
+    are the effect of water and wind working on rock for millions of years.
+
+    The main cause is usually a river. Flowing water carries sand, pebbles and even boulders along
+    with it. As these pieces tumble downstream, they scrape against the riverbed like sandpaper.
+    Over a long time, this scraping wears the bottom of the river lower and lower, so the river
+    slowly cuts down into the land.
+
+    The speed of the water matters too. A river that flows down a steep slope moves fast and
+    carries more rock, so it cuts more quickly. During heavy rains or melting snow, the river
+    swells and rushes even harder. A single flood can move more rock than many quiet months.
+
+    Water shapes canyon walls in another way. Rain seeps into tiny cracks in the rock. When the
+    temperature drops below freezing, the water turns to ice and expands, pushing the crack wider.
+    After this happens again and again, chunks of rock break loose and fall to the canyon floor,
+    where the river carries them away. As a result, the canyon grows wider as well as deeper.
+
+    In dry places, wind adds to the work. Strong gusts pick up grains of sand and blow them against
+    the rock. Because softer layers wear away faster than harder ones, the walls become carved into
+    ledges, arches and odd shapes. Wind cannot dig a canyon by itself, but it helps shape the walls
+    that water has already uncovered.
+
+    The Grand Canyon in Arizona shows what these causes can do together. The Colorado River has
+    been cutting it for millions of years, and today it is about a mile deep. Its striped walls
+    reveal layers of rock that formed long ago, one on top of another. Every visitor who looks down
+    is seeing the slow effect of moving water.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - cause and effect
+            - compare and contrast
+            - problem and solution
+            - time order
+          evidence: They are the effect of water and wind working on rock for millions of years.
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - As a result, the canyon grows wider as well as deeper.
+            - A canyon is a deep, narrow valley with steep rock walls.
+            - In dry places, wind adds to the work.
+            - Rain seeps into tiny cracks in the rock.
+          evidence: As a result, the canyon grows wider as well as deeper.
+        - kind: organizer
+          ask: Fill in the cause and effect from paragraph 4.
+          heads: [Cause, Effect]
+          samples:
+            - Water in cracks freezes and pushes the rock apart.
+            - Chunks break off, so the canyon gets wider.
+          evidence: chunks of rock break loose and fall to the canyon floor
+    - focus: how each paragraph fits
+      look_for: the different causes that shape a canyon
+      questions:
+        - kind: write
+          ask: What does paragraph 3 add to the article?
+          sample: >-
+            It adds that fast water and floods cut rock more quickly, so the speed of a river is
+            another cause.
+          evidence: A single flood can move more rock than many quiet months.
+        - kind: mc
+          ask: Why do canyon walls form ledges and odd shapes?
+          choices:
+            - Softer rock layers wear away faster than harder ones.
+            - Rivers flow uphill in dry places.
+            - Ice keeps the walls from breaking.
+            - Visitors carve the rock over time.
+          evidence: Because softer layers wear away faster than harder ones
+        - kind: organizer
+          ask: Fill in how water and wind each help shape a canyon.
+          heads: [Water, Wind]
+          samples:
+            - Rivers scrape the bottom deeper, and ice splits the walls.
+            - Blowing sand wears soft rock into ledges and arches.
+          evidence: Strong gusts pick up grains of sand and blow them against the rock.
+
+- id: d03-winter-sleep
+  title: The Long Winter Sleep
+  genre: nonfiction
+  text: |
+    When the weather turns cold, some animals disappear for months. They have not gone far. Many
+    are curled up in burrows, caves or hollow logs, in a deep, sleeplike state called hibernation.
+    To understand why they do this, it helps to look at what winter does to their food.
+
+    In summer, food is easy to find. Insects buzz through the air, and plants are full of leaves,
+    seeds and berries. When winter arrives, insects vanish, plants stop growing, and snow covers
+    the ground. Because there is so little to eat, an active animal could use up more energy
+    searching for food than it could ever find.
+
+    Hibernation lets an animal save energy instead. A hibernating animal's body temperature drops,
+    sometimes close to freezing. Its heart beats far more slowly, and it may take only a few
+    breaths a minute. As a result, its body burns very little fuel, and it can go for months
+    without eating. Its body becomes cool and still, almost like a machine set to its lowest power.
+
+    Getting ready takes time. In late summer and fall, a groundhog eats and eats, building up a
+    thick layer of fat. During hibernation, its body slowly uses this stored fat for energy. That
+    is why a groundhog wakes up in spring much thinner than it was in the fall.
+
+    Not every animal prepares the same way. Chipmunks fill their burrows with seeds and nuts, then
+    wake every few days to snack before drifting back to sleep. Many bats hibernate in caves
+    because the insects they eat are gone in winter. In each case, the cause is the same: food
+    runs short in the cold months.
+
+    When spring warms the land, plants sprout and insects return. Food becomes plentiful again, so
+    the animals' bodies warm up and they come out to eat. Their hearts speed up, their breathing quickens, and they hurry off to
+    find a meal. Hibernation is one effect of a hard
+    season, and it shows how a change in the world can cause a change in an animal's behavior.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - cause and effect
+            - compare and contrast
+            - problem and solution
+            - time order
+          evidence: "In each case, the cause is the same: food runs short in the cold months."
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - That is why a groundhog wakes up in spring much thinner
+            - They have not gone far.
+            - In summer, food is easy to find.
+            - When spring warms the land, plants sprout and insects return.
+          evidence: That is why a groundhog wakes up in spring much thinner
+        - kind: organizer
+          ask: Fill in the main cause and effect in the article.
+          heads: [Cause, Effect]
+          samples:
+            - Food runs short in winter.
+            - Some animals hibernate to save energy until spring.
+          evidence: food runs short in the cold months
+    - focus: how each paragraph fits
+      look_for: how each paragraph links to food
+      questions:
+        - kind: write
+          ask: How does paragraph 2 fit the structure of the whole article?
+          sample: >-
+            It gives the cause: in winter there is so little food that searching for it would use
+            up too much energy.
+          evidence: Because there is so little to eat
+        - kind: mc
+          ask: Why is a groundhog thinner in spring?
+          choices:
+            - Its body used up its stored fat while it slept.
+            - It ran around all winter looking for food.
+            - It ate only seeds and nuts in the fall.
+            - It lost its fur in the cold.
+          evidence: its body slowly uses this stored fat for energy
+        - kind: organizer
+          ask: Fill in how groundhogs and chipmunks get ready for winter.
+          heads: [Groundhogs, Chipmunks]
+          samples:
+            - They eat a lot in the fall and build up fat.
+            - They fill their burrows with seeds and nuts to snack on.
+          evidence: Chipmunks fill their burrows with seeds and nuts
+
+- id: d04-frogs-toads
+  title: Frogs and Toads
+  genre: nonfiction
+  text: |
+    Frogs and toads look so alike that many people mix them up. Both are amphibians, animals that
+    usually begin life in water and later live on land. In fact, scientists consider toads to be
+    one kind of frog. Still, the animals most people call toads differ from other frogs in several
+    important and noticeable ways.
+
+    The first difference is their skin. A frog's skin is smooth and moist, and it often looks a
+    little slippery and shiny. A toad's skin, however, is dry and covered in bumps. Because of its thicker skin,
+    a toad can live farther from water, in gardens, fields and woods. Most frogs stay close to
+    ponds and streams so their skin does not dry out.
+
+    Their legs differ too. Frogs have long, powerful back legs, which allow them to make enormous
+    leaps to escape danger. Toads have shorter, stubbier legs, so they usually walk or take small,
+    careful hops. If you see an animal bounding into a pond with a splash, it is probably a frog.
+
+    The two animals also protect themselves in different ways. A frog usually depends on speed,
+    jumping away the moment it senses trouble. A toad, on the other hand, has special glands behind
+    its eyes that produce a bitter liquid. Most animals that try to eat a toad quickly spit it out
+    and learn to leave toads alone.
+
+    Even their eggs look different. Frogs usually lay their eggs in rounded clumps that float
+    together like jelly. Toads lay their eggs in long strings, like beads on a necklace, which are
+    often wrapped around underwater plants.
+
+    In many other ways, frogs and toads are alike. Both hatch as tadpoles that swim with tails and
+    breathe through gills, and both gradually grow legs and lose their tails as they develop into
+    adults.
+    Both catch insects with a quick, sticky tongue. Similarly, both help gardens and farms by
+    eating huge numbers of bugs. Whether it leaps or hops, each one is a useful neighbor.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - compare and contrast
+            - cause and effect
+            - problem and solution
+            - time order
+          evidence: In many other ways, frogs and toads are alike.
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - A toad's skin, however, is dry and covered in bumps.
+            - Most animals that try to eat a toad quickly spit it out
+            - Frogs usually lay their eggs in rounded clumps
+            - it is probably a frog
+          evidence: A toad's skin, however, is dry and covered in bumps.
+        - kind: organizer
+          ask: Fill in one fact about frogs, toads and both.
+          heads: [Frogs, Toads, Both]
+          samples:
+            - smooth, moist skin and long legs for leaping
+            - dry, bumpy skin and short legs for hopping
+            - start as tadpoles and eat insects
+          evidence: Both hatch as tadpoles that swim with tails and breathe through gills
+    - focus: how each paragraph fits
+      look_for: how each paragraph compares the two
+      questions:
+        - kind: write
+          ask: What does paragraph 6 add to the article?
+          sample: >-
+            It tells how frogs and toads are alike, after the other paragraphs explain how they
+            are different.
+          evidence: In many other ways, frogs and toads are alike.
+        - kind: mc
+          ask: Why can a toad live farther from water than most frogs?
+          choices:
+            - Its skin is thicker and drier.
+            - It has longer back legs.
+            - It lays its eggs in strings.
+            - It eats fewer insects.
+          evidence: Because of its thicker skin, a toad can live farther from water
+        - kind: organizer
+          ask: Fill in how frogs and toads stay safe from hungry animals.
+          heads: [Frogs, Toads]
+          samples:
+            - They leap away quickly.
+            - They make a bitter liquid, so animals spit them out.
+          evidence: A frog usually depends on speed
+
+- id: d05-two-poles
+  title: The Two Poles
+  genre: nonfiction
+  text: |
+    At the top and bottom of our planet lie two of the coldest places on Earth: the Arctic in the
+    north and Antarctica in the south. Both are covered in ice and snow for much of the year. Yet
+    when you look closely, these two icy regions are surprisingly different.
+
+    The biggest difference is what lies under the ice. The Arctic is mostly a frozen ocean,
+    surrounded by the northern edges of North America, Europe and Asia. In contrast, Antarctica is
+    a continent, a huge mass of land. Its rock is buried under an ice sheet that is more than two
+    miles thick in places. Scientists say this ice holds most of the fresh water on our planet.
+
+    Antarctica is also much colder than the Arctic. The Arctic Ocean holds some warmth beneath its
+    floating ice, which keeps the air from getting quite as cold. Antarctica has no ocean under it,
+    and its thick ice lifts much of it high above the sea. The lowest temperatures ever measured on
+    Earth were recorded there.
+
+    The animals of the two regions are different as well. Polar bears, walruses and arctic foxes
+    live in the Arctic. Antarctica has no polar bears at all. Instead, it is home to penguins,
+    which find their food in the icy sea along its coasts.
+
+    People have also lived differently in each place. Groups such as the Inuit have made their
+    homes in the Arctic for thousands of years, hunting, fishing and traveling across the ice.
+    Antarctica, on the other hand, has no towns and no native people. The only people there are
+    scientists and helpers who stay at research stations for a while and then go home.
+
+    Still, the two regions share some surprising things. In both places, the summer sun stays up
+    all day and night for weeks, and in winter it may not rise at all. Seals swim in the cold
+    waters of both. Like two sides of a coin, the Arctic and Antarctica are alike and different at
+    the same time.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - compare and contrast
+            - cause and effect
+            - problem and solution
+            - time order
+          evidence: these two icy regions are surprisingly different
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - In contrast, Antarctica is a continent
+            - Polar bears, walruses and arctic foxes live in the Arctic.
+            - The lowest temperatures ever measured on Earth were recorded there.
+            - Groups such as the Inuit have made their homes in the Arctic
+          evidence: In contrast, Antarctica is a continent
+        - kind: organizer
+          ask: Fill in one fact about each region and one they share.
+          heads: [Arctic, Antarctica, Both]
+          samples:
+            - a frozen ocean where polar bears live
+            - a continent of land where penguins live
+            - icy and cold, with seals in the water
+          evidence: Seals swim in the cold waters of both.
+    - focus: how each paragraph fits
+      look_for: what each paragraph compares
+      questions:
+        - kind: write
+          ask: How does paragraph 5 fit the structure of the whole article?
+          sample: >-
+            It compares people in the two places: native people have lived in the Arctic for
+            thousands of years, but only visiting scientists live in Antarctica.
+          evidence: Antarctica, on the other hand, has no towns and no native people.
+        - kind: mc
+          ask: Which animal lives in the Arctic but not in Antarctica?
+          choices:
+            - polar bear
+            - penguin
+            - seal
+            - tadpole
+          evidence: Antarctica has no polar bears at all.
+        - kind: organizer
+          ask: Fill in what lies under the ice in each region.
+          heads: [Arctic, Antarctica]
+          samples:
+            - a frozen ocean
+            - land, buried under very thick ice
+          evidence: The Arctic is mostly a frozen ocean
+
+- id: d06-earth-moon
+  title: Earth and Its Moon
+  genre: nonfiction
+  text: |
+    On a clear night, the Moon looks like a close neighbor, and compared with other objects in
+    space, it really is. It travels
+    around Earth about once a month. Both Earth and the Moon are made mostly of rock, and both
+    formed billions of years ago. However, the two worlds are very different places.
+
+    First, they differ in size. The Moon is only about one-fourth as wide as Earth. Because it is
+    so much smaller, its gravity is much weaker. On the Moon, a person would weigh only about
+    one-sixth as much as on Earth and could leap far higher than at home. Astronauts who visited the Moon found that they could bounce
+    along easily, even in their heavy suits.
+
+    Earth is wrapped in a blanket of air that we breathe. The Moon, in contrast, has almost no air
+    at all. Without air, there is no wind, no clouds and no weather of any kind, and there is also no sound, because sound
+    needs air to travel. An astronaut on the Moon must wear a space suit that supplies air for
+    breathing.
+
+    Earth's air also works like a blanket that keeps its temperatures fairly steady
+    from day to night. The Moon has no such blanket, so its
+    surface swings between extremes. In sunlight the ground grows hotter than boiling water, while
+    in shadow it grows colder than any place on Earth.
+
+    Water makes another big difference. Oceans cover most of Earth's surface, and rivers and rain
+    shape its land. The Moon has no liquid water on its surface, though scientists have found ice
+    hidden in dark craters near its poles. Earth is full of living things, from tiny insects to
+    enormous whales, while the Moon has no life that scientists know of.
+
+    Both worlds have mountains, valleys and craters made when space rocks crashed into them. On
+    Earth, wind, water and growing plants gradually wear craters away until
+    they almost disappear. On the Moon, nothing wears them
+    down, so they last for billions of years. Unlike footprints on a sandy beach, the footprints
+    astronauts left there decades ago are probably still there.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - compare and contrast
+            - cause and effect
+            - problem and solution
+            - time order
+          evidence: However, the two worlds are very different places.
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - The Moon, in contrast, has almost no air at all.
+            - It travels around Earth about once a month.
+            - Water makes another big difference.
+            - First, they differ in size.
+          evidence: The Moon, in contrast, has almost no air at all.
+        - kind: organizer
+          ask: Fill in one fact about Earth, the Moon and both.
+          heads: [Earth, Moon, Both]
+          samples:
+            - has air, oceans and life
+            - has almost no air and weak gravity
+            - made of rock, with mountains and craters
+          evidence: Both worlds have mountains, valleys and craters
+    - focus: how each paragraph fits
+      look_for: what each paragraph compares
+      questions:
+        - kind: write
+          ask: What does paragraph 6 add to the article?
+          sample: >-
+            It shows that both worlds have craters, but craters last much longer on the Moon
+            because nothing wears them down.
+          evidence: On the Moon, nothing wears them down, so they last for billions of years.
+        - kind: mc
+          ask: Why is there no sound on the Moon?
+          choices:
+            - Sound needs air to travel, and the Moon has almost none.
+            - The Moon is too far from Earth.
+            - The ground on the Moon is too hot.
+            - Astronauts wear space suits.
+          evidence: because sound needs air to travel
+        - kind: organizer
+          ask: Fill in what the temperature is like on Earth and the Moon.
+          heads: [Earth, Moon]
+          samples:
+            - Air keeps it fairly steady.
+            - Hotter than boiling water in sunlight and colder than Earth in shadow.
+          evidence: its surface swings between extremes
+
+- id: d07-water-for-rome
+  title: Water for Rome
+  genre: nonfiction
+  text: |
+    About two thousand years ago, Rome was one of the largest cities in the world. Hundreds of
+    thousands of people lived there, crowded close together. All of them needed water for drinking,
+    cooking and washing. This created a serious problem, because the local river and wells could
+    not supply enough clean water for so many people.
+
+    The Romans' solution was the aqueduct, a channel that carried water from faraway springs into
+    the city. Engineers looked for clean sources in the hills, sometimes many miles away. Some of these channels stretched for dozens of miles
+    across the countryside. Then
+    they planned a path for the water to follow all the way to Rome.
+
+    The trickiest part was moving water without pumps. The Romans solved this by using gravity.
+    They built each channel so that it sloped downhill very gently, dropping only a little over a
+    long distance. If the slope was too steep, the rushing water could wear the channel away. If it
+    was too flat, the water would stop flowing.
+
+    Hills and valleys stood in the way. To cross a valley, builders raised the channel on tall
+    stone bridges supported by rows of arches. To get through a hill, they dug tunnels. In fact,
+    most of an aqueduct's length ran underground, where the water stayed cool and clean.
+
+    When the water reached the city, it flowed into large tanks and then through pipes to public
+    fountains, baths and some homes. Ordinary families filled their jugs at neighborhood fountains.
+    Fresh water flowed through the fountains day and night, so the city stayed cleaner and healthier.
+    Over several centuries, the Romans built eleven major aqueducts to serve their city.
+
+    The idea worked so well that the Romans built aqueducts in many other cities, from Spain to
+    North Africa. Some still stand today. A famous aqueduct bridge in southern France, nearly two
+    thousand years old, still rises high above a river. These structures show how careful planning
+    can solve a problem that seemed impossible.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - problem and solution
+            - cause and effect
+            - compare and contrast
+            - time order
+          evidence: The Romans' solution was the aqueduct
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - The Romans solved this by using gravity.
+            - Hills and valleys stood in the way.
+            - Some still stand today.
+            - Rome was one of the largest cities in the world.
+          evidence: The Romans solved this by using gravity.
+        - kind: organizer
+          ask: Fill in the main problem and solution in the article.
+          heads: [Problem, Solution]
+          samples:
+            - Rome did not have enough clean water for all its people.
+            - Aqueducts carried clean water from springs in the hills.
+          evidence: could not supply enough clean water for so many people
+    - focus: how each paragraph fits
+      look_for: each smaller problem and how it was solved
+      questions:
+        - kind: write
+          ask: How does paragraph 4 fit the structure of the whole article?
+          sample: >-
+            It gives another problem, hills and valleys in the way, and its solution: arched
+            bridges and tunnels.
+          evidence: To get through a hill, they dug tunnels.
+        - kind: mc
+          ask: What problem did arched stone bridges solve?
+          choices:
+            - how to carry water across a valley
+            - how to keep the water cool
+            - how to pump water uphill
+            - how to find clean springs
+          evidence: To cross a valley, builders raised the channel on tall stone bridges
+        - kind: organizer
+          ask: Fill in the problem and solution from paragraph 3.
+          heads: [Problem, Solution]
+          samples:
+            - The Romans had no pumps to move the water.
+            - They let gravity move it down a gentle slope.
+          evidence: The trickiest part was moving water without pumps.
+
+- id: d08-hillside-steps
+  title: Steps on the Hillside
+  genre: nonfiction
+  text: |
+    In many parts of the world, farmers live in places with steep hills and mountains. Flat land
+    is hard to find, but people still need to grow food. Planting crops on a slope creates a
+    problem. When heavy rain falls, water races downhill, carrying away the loose soil that plants
+    need to grow. Without some kind of protection, a hillside field can lose much of its best soil in
+    just a few stormy seasons.
+
+    Losing soil is a serious problem for a farmer. The top layer of soil holds most of the
+    nutrients that crops need. Once rain washes it away, the land left behind is poor and rocky.
+    It can take hundreds of years for nature to build that layer again.
+
+    Long ago, farmers found a clever solution called terrace farming. They cut the hillside into a
+    series of flat steps, like a giant staircase. Each step is a narrow field held in place by a
+    wall of stone or packed earth. Building terraces takes enormous effort, since every wall must
+    be fitted carefully so that it will not collapse.
+
+    Terraces solve the problem by slowing the water down. Instead of rushing straight down the
+    slope, rain soaks into each flat field. Any extra water trickles gently over the edge to the
+    next step below. Because the water moves slowly, the soil stays where it belongs.
+
+    The flat fields also make farming easier. Farmers can walk, plant and harvest without sliding
+    down the hill. In wet regions, terraces can be flooded to grow rice, which needs standing
+    water. In dry regions, they help catch every drop of rain. Because the steps are level, farmers can
+    also use the water more carefully, guiding it from one field to the next.
+
+    People in many places have built terraces for centuries. In the mountains of the Philippines,
+    rice terraces carved long ago still climb the green slopes. In the Andes of South America, the
+    Inca built stone terraces to grow corn and potatoes. Today, farmers around the world still use
+    this old idea to protect their soil.
+  pages:
+    - focus: the structure of the article
+      questions:
+        - kind: mc
+          ask: How is this article mostly organized?
+          choices:
+            - problem and solution
+            - cause and effect
+            - compare and contrast
+            - time order
+          evidence: Long ago, farmers found a clever solution called terrace farming.
+        - kind: quote
+          ask: Which signal words show the structure?
+          choices:
+            - Terraces solve the problem by slowing the water down.
+            - The flat fields also make farming easier.
+            - Each step is a narrow field held in place by a wall
+            - In dry regions, they help catch every drop of rain.
+          evidence: Terraces solve the problem by slowing the water down.
+        - kind: organizer
+          ask: Fill in the problem and solution in the article.
+          heads: [Problem, Solution]
+          samples:
+            - Rain washes soil off steep hillside farms.
+            - Flat terrace steps slow the water so the soil stays.
+          evidence: Because the water moves slowly, the soil stays where it belongs.
