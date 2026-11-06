@@ -8,10 +8,21 @@ type Order = {
   level: { slug: string; name: string; title: string; age: number };
   email: string | null;
   purchasedAt: string;
+  expiresAt: string | null;
   files: { name: string; size: number; url: string }[];
 };
 
-type State = { kind: "loading" } | { kind: "pending" } | { kind: "error"; message: string } | { kind: "ready"; order: Order; token: string };
+type State =
+  | { kind: "loading" }
+  | { kind: "pending" }
+  | { kind: "expired" }
+  | { kind: "error"; message: string }
+  | { kind: "ready"; order: Order; token: string };
+
+/** "2026-11-13 14:41:14" (UTC, from D1) → "November 13, 2026". */
+function longDate(sqlUtc: string): string {
+  return new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(new Date(`${sqlUtc.replace(" ", "T")}Z`));
+}
 
 /** "chicks-reading-level.pdf" → "Reading: the whole level". */
 function fileLabel(name: string): string {
@@ -57,9 +68,15 @@ export function OrderPage() {
         return;
       }
       const r = await fetch(`/api/orders/${token}`);
-      const d = (await r.json().catch(() => ({}))) as Order | { ok: false; error?: string };
+      const d = (await r.json().catch(() => ({}))) as Order | { ok: false; expired?: boolean; error?: string };
       if (!stop) {
-        setState(d.ok ? { kind: "ready", order: d, token } : { kind: "error", message: d.error ?? "We couldn't find that order." });
+        setState(
+          d.ok
+            ? { kind: "ready", order: d, token }
+            : d.expired
+              ? { kind: "expired" }
+              : { kind: "error", message: d.error ?? "We couldn't find that order." },
+        );
       }
     }
     load();
@@ -76,6 +93,21 @@ export function OrderPage() {
             <Loader2 className="size-6 animate-spin text-coral" />
             {state.kind === "pending" ? "Confirming your payment…" : "Finding your order…"}
           </div>
+        ) : state.kind === "expired" ? (
+          <>
+            <p className="font-hand text-2xl text-coral">sorry!</p>
+            <h1 className="text-3xl font-bold">This link has expired</h1>
+            <p className="mt-3 text-lg text-ink/80">
+              Download links work for 7 days after purchase. If you need your files again, email{" "}
+              <a className="font-bold text-coral underline underline-offset-2" href="mailto:hello@paperlessons.com">
+                hello@paperlessons.com
+              </a>{" "}
+              from the address you bought with.
+            </p>
+            <Button asChild variant="coral" size="pill" className="mt-6">
+              <a href="/">Back to paperlessons</a>
+            </Button>
+          </>
         ) : state.kind === "error" ? (
           <>
             <h1 className="text-3xl font-bold">Hmm, something's missing</h1>
@@ -130,9 +162,12 @@ function Ready({ order }: { order: Order }) {
       )}
 
       <div className="mt-8 rounded-xl bg-sun/30 p-4 text-ink/80">
-        <p className="font-bold text-ink">Keep this page</p>
+        <p className="font-bold text-ink">
+          {order.expiresAt ? `This link works until ${longDate(order.expiresAt)}` : "Download your files now"}
+        </p>
         <p className="mt-1">
-          Bookmark this address to download again any time. Anyone with the link can download, so keep it to yourself.
+          Download and save your files now: after 7 days this link expires.
+          {order.email ? ` We've also emailed it to ${order.email}.` : ""} Please don't share it.
         </p>
       </div>
     </>

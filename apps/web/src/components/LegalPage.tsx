@@ -50,8 +50,9 @@ function Refunds() {
 
       <H>If something is actually broken</H>
       <p>
-        If a file won't download, won't open, or is missing pages, email <Mail /> with your order link and we'll fix
-        it or send you a working file. That's a fix, not a refund. If you were charged twice for the same level by
+        If a file won't download, won't open, or is missing pages, email <Mail /> within the 7 days your download
+        link works and we'll fix it or send you a working file. An expired link isn't a reason for a refund either:
+        please save your files when you buy. That's a fix, not a refund. If you were charged twice for the same level by
         mistake, tell us and we'll refund the duplicate charge.
       </p>
 
@@ -84,8 +85,9 @@ function Terms() {
       <H>What you buy</H>
       <p>
         A level is a set of printable PDF files (the pages, plus answer keys for grown-ups). After payment you get a
-        private download page. Keep its link to download again later. Anyone with that link can download your files,
-        so don't share it.
+        private download link, on the page you return to and by email. <strong>The link works for 7 days after
+        purchase and then expires</strong>, so download and save your files within that time. The link is for you
+        alone: don't share it.
       </p>
 
       <H>Prices and payment</H>
@@ -161,7 +163,8 @@ function Privacy() {
         </li>
         <li>
           <strong>Orders:</strong> your email address, the level you bought, the amount, and how many times your files
-          were downloaded. Card details go straight to Stripe; we never see them.
+          were downloaded. We use your email to send you your download link (one email per order). Card details go
+          straight to Stripe; we never see them.
         </li>
         <li>
           <strong>Free previews:</strong> which preview was downloaded and the country it was downloaded from (no

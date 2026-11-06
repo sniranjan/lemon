@@ -8,6 +8,7 @@
 //   npx wrangler secret put STRIPE_WEBHOOK_SECRET
 import { Hono } from "hono";
 import ladder from "../src/data/ladder.json";
+import { sendOrderEmail } from "./email";
 import { createCheckoutSession, getCheckoutSession, newToken, pricesByLookupKey, verifyWebhook, type CheckoutSession } from "./stripe";
 
 export type ShopEnv = {
@@ -15,6 +16,7 @@ export type ShopEnv = {
   FILES: R2Bucket;
   STRIPE_SECRET_KEY?: string;
   STRIPE_WEBHOOK_SECRET?: string;
+  EMAIL?: SendEmail;
 };
 
 const LEVELS = new Map(ladder.map((l) => [l.slug, l]));
@@ -118,18 +120,33 @@ shop.post("/api/checkout", async (c) => {
   }
 });
 
-/** Store a paid session as an order (idempotent) and return its download token. */
-async function recordOrder(db: D1Database, s: CheckoutSession): Promise<string | null> {
+/**
+ * Store a paid session as an order (idempotent) and return its download token. The first time an order is
+ * stored, the buyer gets an email with the download link, which expires 7 days after purchase.
+ */
+async function recordOrder(env: ShopEnv, s: CheckoutSession, origin: string): Promise<string | null> {
   const level = s.metadata?.level;
   // "no_payment_required" = a 100%-off promotion code, which is still a real order.
   if (s.payment_status === "unpaid" || s.status !== "complete" || !level || !LEVELS.has(level)) return null;
-  await db
-    .prepare(
-      "INSERT INTO orders (session_id, token, level, email, amount_cents, currency) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(session_id) DO NOTHING",
-    )
-    .bind(s.id, newToken(), level, s.customer_details?.email?.toLowerCase() ?? null, s.amount_total ?? 0, s.currency ?? "")
+  const email = s.customer_details?.email?.toLowerCase() ?? null;
+  const inserted = await env.DB.prepare(
+    "INSERT INTO orders (session_id, token, level, email, amount_cents, currency, expires_at) VALUES (?, ?, ?, ?, ?, ?, datetime('now', '+7 days')) ON CONFLICT(session_id) DO NOTHING",
+  )
+    .bind(s.id, newToken(), level, email, s.amount_total ?? 0, s.currency ?? "")
     .run();
-  const row = await db.prepare("SELECT token FROM orders WHERE session_id = ?").bind(s.id).first<{ token: string }>();
+  const row = await env.DB.prepare("SELECT token, expires_at FROM orders WHERE session_id = ?")
+    .bind(s.id)
+    .first<{ token: string; expires_at: string }>();
+  if (row && email && inserted.meta.changes > 0) {
+    const l = LEVELS.get(level)!;
+    await sendOrderEmail(env.EMAIL, {
+      to: email,
+      levelName: l.name,
+      levelTitle: l.title,
+      url: `${origin}/orders/${row.token}`,
+      expiresAt: row.expires_at,
+    });
+  }
   return row?.token ?? null;
 }
 
@@ -142,7 +159,7 @@ shop.post("/api/stripe/webhook", async (c) => {
   }
   const event = JSON.parse(raw) as { type: string; data: { object: CheckoutSession } };
   if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
-    await recordOrder(c.env.DB, event.data.object);
+    await recordOrder(c.env, event.data.object, new URL(c.req.url).origin);
   }
   return c.json({ received: true });
 });
@@ -155,7 +172,7 @@ shop.get("/api/orders/session/:sid", async (c) => {
   if (row) return c.json({ ok: true, token: row.token });
   if (!checkoutOn(c.env)) return c.json({ ok: false, error: "Not found" }, 404);
   try {
-    const token = await recordOrder(c.env.DB, await getCheckoutSession(c.env.STRIPE_SECRET_KEY!, sid));
+    const token = await recordOrder(c.env, await getCheckoutSession(c.env.STRIPE_SECRET_KEY!, sid), new URL(c.req.url).origin);
     if (token) return c.json({ ok: true, token });
     return c.json({ ok: false, pending: true, error: "We're still confirming your payment." }, 202);
   } catch {
@@ -163,17 +180,25 @@ shop.get("/api/orders/session/:sid", async (c) => {
   }
 });
 
-type OrderRow = { level: string; email: string | null; created_at: string };
+type OrderRow = { level: string; email: string | null; created_at: string; expires_at: string | null; expired: number };
 
 async function orderFor(db: D1Database, token: string) {
   if (!TOKEN.test(token)) return null;
-  return db.prepare("SELECT level, email, created_at FROM orders WHERE token = ?").bind(token).first<OrderRow>();
+  return db
+    .prepare(
+      "SELECT level, email, created_at, expires_at, (expires_at IS NOT NULL AND expires_at <= datetime('now')) AS expired FROM orders WHERE token = ?",
+    )
+    .bind(token)
+    .first<OrderRow>();
 }
+
+const EXPIRED = { ok: false, expired: true, error: "This download link has expired." } as const;
 
 shop.get("/api/orders/:token", async (c) => {
   const token = c.req.param("token");
   const order = await orderFor(c.env.DB, token);
   if (!order) return c.json({ ok: false, error: "We couldn't find that order." }, 404);
+  if (order.expired) return c.json(EXPIRED, 410, { "cache-control": "private, no-store" });
   const level = LEVELS.get(order.level)!;
   const files = await levelFiles(c.env.FILES, order.level);
   return c.json(
@@ -182,6 +207,7 @@ shop.get("/api/orders/:token", async (c) => {
       level: { slug: level.slug, name: level.name, title: level.title, age: level.age },
       email: order.email,
       purchasedAt: order.created_at,
+      expiresAt: order.expires_at,
       files: files.map((f) => ({ ...f, url: `/api/orders/${token}/files/${f.name}` })),
     },
     200,
@@ -193,6 +219,7 @@ shop.get("/api/orders/:token/files/:file", async (c) => {
   const { token, file } = c.req.param();
   const order = await orderFor(c.env.DB, token);
   if (!order || !FILE.test(file)) return c.json({ ok: false, error: "Not found" }, 404);
+  if (order.expired) return c.json(EXPIRED, 410);
   const obj = await c.env.FILES.get(`levels/${order.level}/${file}`);
   if (!obj) return c.json({ ok: false, error: "Not found" }, 404);
   c.executionCtx.waitUntil(c.env.DB.prepare("UPDATE orders SET downloads = downloads + 1 WHERE token = ?").bind(token).run());

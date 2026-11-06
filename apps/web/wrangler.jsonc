@@ -10,6 +10,8 @@
     { "pattern": "paperlessons.com", "custom_domain": true },
     { "pattern": "www.paperlessons.com", "custom_domain": true }
   ],
+  // Order emails (worker/email.ts), sent by Cloudflare from hello@paperlessons.com.
+  "send_email": [{ "name": "EMAIL", "allowed_sender_addresses": ["hello@paperlessons.com"] }],
   "r2_buckets": [{ "binding": "FILES", "bucket_name": "paperlessons-files" }],
   "d1_databases": [
     { "binding": "DB", "database_name": "paperlessons", "database_id": "1eb142f3-efb7-48ab-b90e-c301b58c5969", "migrations_dir": "migrations" }

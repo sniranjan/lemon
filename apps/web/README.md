@@ -65,7 +65,10 @@ Preview PDFs must not show internal level codes or anything referencing other pr
   The webhook signing secret goes straight from Stripe into `wrangler secret put`; nothing is printed.
   Turn on email receipts in the Stripe dashboard (Settings → Customer emails).
 - **Flow:** Buy → Stripe's hosted checkout → `/thanks?session_id=…` → `/orders/<token>`, a private page
-  with the download links (bookmarkable; the token is the only key). Orders are in D1 `orders`.
+  with the download links. The same link is emailed to the buyer once (worker/email.ts, Cloudflare
+  `send_email` from hello@paperlessons.com). **Links expire 7 days after purchase** (`orders.expires_at`);
+  after that the page says the link has expired. To give a buyer more time:
+  `npx wrangler d1 execute paperlessons --remote --command "UPDATE orders SET expires_at = datetime('now','+7 days') WHERE email = '…'"`
 - **Local testing:** put test values in `.dev.vars` (git-ignored); `stripe listen --forward-to
   localhost:5173/api/stripe/webhook` prints a webhook secret for local use.
 
