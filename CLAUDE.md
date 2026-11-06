@@ -527,7 +527,8 @@ app much later. This repo is a monorepo: the generator stays at the root (Python
 - **Content runs two school grades ahead, by definition:** school grade = age on Sept 1 − 5 (preschool at
   3 = −2, Pre-K at 4 = −1); each level has one on-pace `age` and `content_grade` = school grade + 2
   (Cubs age 5 → grade 2, Foxes 6 → 3 … Whales 12 → 9). Ages 3–5 have two levels a year; the second one
-  reaches the target. Every syllabus section carries `standards:` (Common Core codes it teaches), checked
+  reaches the target. Every syllabus section carries `standards:` (Common Core codes it teaches; Chicks is
+  Pre-K work, which has no Common Core codes, so its sections may leave it empty), checked
   against `content_grade`, and reading passages get a readability floor. The audit and the plan for
   Foxes → Whales are in `syllabus/PLAN-upper-levels.md`.
   Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may

@@ -38,6 +38,20 @@ def _check_tiling(ranges: list[PageRange], start: int, end: int, what: str) -> N
         raise ValueError(f"{what}: ranges end at page {expected - 1}, expected {end}")
 
 
+_STANDARD = re.compile(
+    r"(K|[1-8])\.[A-Z][A-Za-z]*\.\d+[a-z]?"                     # math K–8: K.CC.1, 3.OA.7, 4.NBT.5
+    r"|(RL|RI|RF|W|SL|L)\.(K|[1-8]|9-10|11-12)\.\d+[a-z]?"      # ELA: RL.3.2, L.K.5c, RL.9-10.5
+    r"|[NAFGS]-[A-Z]{2,4}\.[A-Z]?\.?\d+[a-z]?"                 # high-school math: A-REI.4, N-RN.1
+)
+
+
+def _check_standards(v: list[str]) -> list[str]:
+    for code in v:
+        if not _STANDARD.fullmatch(code):
+            raise ValueError(f"standards: {code!r} doesn't look like a Common Core code")
+    return v
+
+
 class Part(_Strict):
     part: int
     pages: PageRange
@@ -45,11 +59,18 @@ class Part(_Strict):
     sheet_types: list[str] | None = None
     rules: dict[str, Any] = Field(default_factory=dict)
     source: Source | None = None
+    standards: list[str] = Field(default_factory=list)   # extra codes for this part only
 
     @field_validator("pages")
     @classmethod
     def _valid_pages(cls, v: PageRange) -> PageRange:
         return _check_range(v)
+
+
+    @field_validator("standards")
+    @classmethod
+    def _valid_standards(cls, v: list[str]) -> list[str]:
+        return _check_standards(v)
 
 
 class Section(_Strict):
@@ -62,6 +83,14 @@ class Section(_Strict):
     sct_minutes_per_page: tuple[float, float] | None = None
     parts: list[Part] = Field(default_factory=list)
     source: Source | None = None
+    # Common Core codes this section teaches (CLAUDE.md §15), e.g. [K.CC.1, K.NBT.1]. Chicks is Pre-K
+    # work, which has no Common Core codes, so its sections may leave this empty.
+    standards: list[str] = Field(default_factory=list)
+
+    @field_validator("standards")
+    @classmethod
+    def _valid_standards(cls, v: list[str]) -> list[str]:
+        return _check_standards(v)
 
     @field_validator("pages")
     @classmethod
