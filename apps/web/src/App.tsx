@@ -3,9 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Library } from "@/components/Library";
+import { OrderPage } from "@/components/OrderPage";
 import { SheetPreview } from "@/components/SheetPreview";
 import { Waitlist } from "@/components/Waitlist";
 import { LEVELS } from "@/data/levels";
+
+/** Order pages: Stripe returns to /thanks, and each order lives at /orders/<token>. */
+const isOrderPage = () => location.pathname === "/thanks" || location.pathname.startsWith("/orders/");
 
 const bySlug = (s: string) => LEVELS.find((l) => l.slug === s)!;
 
@@ -13,14 +17,20 @@ export default function App() {
   return (
     <div className="min-h-screen overflow-x-clip">
       <Nav />
-      <main>
-        <Hero />
-        <HowItWorks />
-        <Library />
-        <Subjects />
-        <EarlyAccess />
-        <Faq />
-      </main>
+      {isOrderPage() ? (
+        <main>
+          <OrderPage />
+        </main>
+      ) : (
+        <main>
+          <Hero />
+          <HowItWorks />
+          <Library />
+          <Subjects />
+          <EarlyAccess />
+          <Faq />
+        </main>
+      )}
       <Footer />
     </div>
   );
@@ -32,10 +42,14 @@ function Nav() {
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo />
         <nav className="flex items-center gap-1 text-[0.95rem] font-extrabold sm:gap-2">
-          <a href="#how" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">How it works</a>
-          <a href="#library" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">Library</a>
+          <a href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">
+            How it works
+          </a>
+          <a href="/#library" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">
+            Library
+          </a>
           <Button asChild variant="sun" size="pill-sm">
-            <a href="#early">Early access</a>
+            <a href="/#early">Early access</a>
           </Button>
         </nav>
       </div>
@@ -61,8 +75,8 @@ function Hero() {
             one page at a time.
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink/80">
-            Printable reading and math sheets that run about two grades ahead of school, from first
-            words and counting to fractions and algebra. A few pages a day, one small step at a time.
+            Printable reading and math sheets that run about two grades ahead of school, from first words and counting
+            to fractions and algebra. A few pages a day, one small step at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="coral" size="pill">
@@ -78,7 +92,10 @@ function Hero() {
 
         {/* A small fan of sheets. */}
         <div className="relative mx-auto h-[400px] w-full max-w-[440px]" aria-hidden="true">
-          <SheetPreview level={bySlug("owls")} className="float absolute left-0 top-10 h-[300px] w-[230px] [--r:-8deg]" />
+          <SheetPreview
+            level={bySlug("owls")}
+            className="float absolute left-0 top-10 h-[300px] w-[230px] [--r:-8deg]"
+          />
           <SheetPreview
             level={bySlug("ducklings")}
             className="float absolute right-0 top-0 h-[300px] w-[230px] [--r:7deg] [animation-delay:-2s]"
@@ -163,7 +180,9 @@ function Subjects() {
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
         {SUBJECTS.map((s) => (
           <div key={s.title} className="sticker bg-white p-6">
-            <span className={`grid size-12 place-items-center rounded-full border-[3px] border-ink text-white ${s.color}`}>
+            <span
+              className={`grid size-12 place-items-center rounded-full border-[3px] border-ink text-white ${s.color}`}
+            >
               <s.icon className="size-6" />
             </span>
             <h3 className="mt-4 text-2xl font-bold">{s.title}</h3>
@@ -183,8 +202,8 @@ function EarlyAccess() {
         <p className="font-hand text-2xl text-sun">coming soon</p>
         <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Download, print, play.</h2>
         <p className="mt-4 max-w-xl text-lg text-white/90">
-          Whole levels as printable PDFs are on their way, and printed sets shipped to your door
-          after that. Leave your email and we'll tell you the moment they're ready.
+          Whole levels as printable PDFs are on their way, and printed sets shipped to your door after that. Leave your
+          email and we'll tell you the moment they're ready.
         </p>
         <div className="mt-8">
           <Waitlist />

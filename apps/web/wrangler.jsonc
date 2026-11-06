@@ -10,6 +10,8 @@
     { "pattern": "paperlessons.com", "custom_domain": true },
     { "pattern": "www.paperlessons.com", "custom_domain": true }
   ],
+  // Price of one whole level (both strands, plus answer keys). Stripe secrets: see worker/shop.ts.
+  "vars": { "LEVEL_PRICE_CENTS": "1900", "CURRENCY": "usd" },
   "r2_buckets": [{ "binding": "FILES", "bucket_name": "paperlessons-files" }],
   "d1_databases": [
     { "binding": "DB", "database_name": "paperlessons", "database_id": "1eb142f3-efb7-48ab-b90e-c301b58c5969", "migrations_dir": "migrations" }

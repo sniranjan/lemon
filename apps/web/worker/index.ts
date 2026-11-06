@@ -1,6 +1,7 @@
 import { Hono } from "hono";
+import shop, { type ShopEnv } from "./shop";
 
-type Env = { DB: D1Database; FILES: R2Bucket; ASSETS: Fetcher };
+type Env = ShopEnv & { ASSETS: Fetcher };
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -64,6 +65,9 @@ app.get("/api/previews/:slug", async (c) => {
     },
   });
 });
+
+// Checkout, orders and downloads (worker/shop.ts).
+app.route("/", shop);
 
 app.all("/api/*", (c) => c.json({ ok: false, error: "Not found" }, 404));
 

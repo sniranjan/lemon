@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { Download, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { Download, Loader2, ShoppingBag, Sparkles } from "lucide-react";
+import { formatPrice, startCheckout, useCatalog, type Catalog } from "@/lib/catalog";
 import { gradeLabel, LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
 import { SheetPreview } from "@/components/SheetPreview";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -14,20 +15,8 @@ const BG: Record<Level["color"], string> = {
   leaf: "bg-leaf",
 };
 
-/** Which levels have a free preview PDF uploaded to R2 (asked once from the Worker). */
-function usePreviews() {
-  const [available, setAvailable] = useState<Set<string>>(new Set());
-  useEffect(() => {
-    fetch("/api/previews")
-      .then((r) => (r.ok ? (r.json() as Promise<{ previews: string[] }>) : { previews: [] }))
-      .then((d: { previews: string[] }) => setAvailable(new Set(d.previews)))
-      .catch(() => {});
-  }, []);
-  return available;
-}
-
 export function Library() {
-  const available = usePreviews();
+  const catalog = useCatalog();
   return (
     <section id="library" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
@@ -38,7 +27,7 @@ export function Library() {
         </SectionHeading>
         <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {LEVELS.map((level, i) => (
-            <LevelCard key={level.slug} level={level} index={i} hasPreview={available.has(level.slug)} />
+            <LevelCard key={level.slug} level={level} index={i} catalog={catalog} />
           ))}
         </div>
       </div>
@@ -46,8 +35,10 @@ export function Library() {
   );
 }
 
-function LevelCard({ level, index, hasPreview }: { level: Level; index: number; hasPreview: boolean }) {
+function LevelCard({ level, index, catalog }: { level: Level; index: number; catalog: Catalog }) {
   const [open, setOpen] = useState(false);
+  const hasPreview = catalog.previews.includes(level.slug);
+  const forSale = catalog.forSale.includes(level.slug);
   const ready = level.status === "ready";
   return (
     <article
@@ -79,10 +70,13 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
           BG[level.color],
         )}
       >
-        <h3 className="text-3xl font-bold leading-none">{level.name}</h3>
-        <div className="mt-1.5 flex items-center justify-between gap-2">
-          <p className="text-sm font-bold opacity-80">Age {level.age}</p>
+        <div className="flex items-baseline justify-between gap-2">
+          <h3 className="text-3xl font-bold leading-none">{level.name}</h3>
+          <p className="shrink-0 text-sm font-extrabold opacity-80">Age {level.age}</p>
+        </div>
+        <div className="mt-2 flex items-center gap-2">
           <PreviewButton level={level} hasPreview={hasPreview} />
+          {forSale && <BuyButton level={level} price={formatPrice(catalog.priceCents, catalog.currency)} />}
         </div>
 
         <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 peek:opacity-0">
@@ -117,15 +111,54 @@ function PreviewButton({ level, hasPreview }: { level: Level; hasPreview: boolea
       <a
         href={`/api/previews/${level.slug}`}
         onClick={(e) => e.stopPropagation()}
-        className="inline-flex shrink-0 items-center gap-1.5 rounded-full border-2 border-ink bg-white px-3 py-1.5 text-sm font-extrabold transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-ink bg-white px-2.5 py-1.5 text-[0.8rem] font-extrabold transition-transform hover:-translate-y-0.5 active:translate-y-0"
       >
         <Download className="size-4" /> Free preview
       </a>
     );
   }
   return (
-    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-dashed border-ink/60 bg-white/50 px-3 py-1.5 text-xs font-extrabold text-ink/70">
+    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-dashed border-ink/60 bg-white/50 px-2.5 py-1.5 text-xs font-extrabold text-ink/70">
       <Sparkles className="size-3.5" /> Preview soon
     </span>
+  );
+}
+
+function BuyButton({ level, price }: { level: Level; price: string }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  return (
+    <>
+      <button
+        type="button"
+        disabled={busy}
+        onClick={async (e) => {
+          e.stopPropagation();
+          setBusy(true);
+          setError(await startCheckout(level.slug));
+          setBusy(false);
+        }}
+        aria-label={`Buy the whole ${level.name} level for ${price}`}
+        className="inline-flex shrink-0 items-center gap-1 rounded-full border-2 border-ink bg-ink px-2.5 py-1.5 text-[0.8rem] font-extrabold text-white transition-transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70"
+      >
+        {busy ? <Loader2 className="size-4 animate-spin" /> : <ShoppingBag className="size-4" />} Buy {price}
+      </button>
+      {error && <ErrorToast message={error} onClose={() => setError(null)} />}
+    </>
+  );
+}
+
+function ErrorToast({ message, onClose }: { message: string; onClose: () => void }) {
+  return (
+    <div
+      onClick={(e) => {
+        e.stopPropagation();
+        onClose();
+      }}
+      role="alert"
+      className="absolute inset-x-3 -top-14 z-20 rounded-xl border-2 border-ink bg-white px-3 py-2 text-sm font-bold shadow"
+    >
+      {message}
+    </div>
   );
 }
