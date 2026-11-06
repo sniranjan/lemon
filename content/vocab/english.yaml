@@ -75,7 +75,7 @@
 - { word: bunny,   picture: bunny,   category: animals,  level: 7A, sentences: ["The bunny hops."] }
 - { word: yellow,  picture: yellow,  category: colors,   level: 7A, needs_color: true, sentences: ["The sun is yellow."] }
 - { word: boots,   picture: boots,   category: clothes,  level: 7A, mass: true, sentences: ["I wear my rain boots."] }
-- { word: grapes,  picture: grapes,  category: food,     level: 7A, mass: true, sentences: ["I eat green grapes."] }
+- { word: grapes,  picture: grapes,  category: food,     level: 7A, mass: true, sentences: ["I eat purple grapes."] }
 - { word: green,   picture: green,   category: colors,   level: 7A, needs_color: true, sentences: ["The grass is green."] }
 - { word: mouse,   picture: mouse,   category: animals,  level: 7A, sentences: ["The mouse is small."] }
 - { word: balloon, picture: balloon, category: toys,     level: 7A, sentences: ["My balloon is red."] }
@@ -164,7 +164,7 @@
 - { word: acorn,   picture: acorn,   category: nature,   level: 7A, sentences: ["The squirrel has an acorn."] }
 - { word: noodles, picture: noodles, category: food,     level: 7A, mass: true, sentences: ["I slurp my noodles."] }
 - { word: donkey,  picture: donkey,  category: animals,  level: 7A, sentences: ["The donkey says hee-haw."] }
-- { word: black,   picture: black,   category: colors,   level: 7A, needs_color: true, sentences: ["The cat is black."] }
+- { word: black,   picture: black,   category: colors,   level: 7A, needs_color: true, sentences: ["Dad has black shoes."] }
 - { word: bathtub, picture: bathtub, category: home,     level: 7A, sentences: ["I sit in the bathtub."] }
 - { word: roll,    picture: roll,    category: actions,  level: 7A, sentences: ["I roll the ball."] }
 - { word: pumpkin, picture: pumpkin, category: food,     level: 7A, sentences: ["The pumpkin is big and orange."] }

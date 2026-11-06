@@ -136,10 +136,38 @@ can_do:
   splash: [duck, dog, seal, whale]
 
 # Actions the child (3–4) can't truthfully say "I can ___" about: he likes to read, but can't yet.
-child_cannot: [read]
+child_cannot: [read, cook]   # he helps cook; "I like to cook." stays
 # Actions only some people do in these phrases ("Mom can read.", "Dad can read."); others: everyone.
 people_can:
   read: [mom, dad]
+  crawl: []          # babies and animals crawl; "Grandpa can crawl." reads as a joke
+  roll: []           # "Mom can roll." needs an object
+
+# Things a child can truthfully call "my ..." / say "I have a ..." about (hand-checked): his toys,
+# clothes, small things of his own at home, pets, a bike, and food or drink he is given. Body and family
+# words have their own "my" frames. Not here: wild and farm animals ("I have a koala."), big vehicles
+# ("my bus"), the house itself ("my door", "my sink", "my sofa"), grown-up tools ("my broom", "my hose",
+# "my key"), playground things ("my swing", "my slide"), baby things ("my diaper", "my bib", "my crib").
+ownable:
+  toys:     [ball, kite, balloon, blocks, drum, doll, puppet, bubbles, tent,
+             teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box]   # box: his own box of treasures
+  clothes:  [shoe, hat, sock, coat, shirt, pants, boots, dress, scarf, belt,
+             jacket, mitten, skirt, cap, sweater, pajamas, shorts]
+  home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket]
+  pets:     [cat, dog, fish, bunny, bird, turtle, puppy, kitten]
+  vehicles: [bike, scooter]
+  food:     [milk, juice, soup]     # plus everything in `eatable`
+
+# What a 3-year-old really eats as served, with its article: "I eat an apple.", "I eat some rice.",
+# "I eat peas." (hand-checked). Not here: drinks and soup (you don't "eat" them), things eaten cooked
+# into something else or not on their own (lemon, potato, pumpkin, tomato), and whole dishes that
+# would need "some" (a cake, a pizza).
+eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pear, corn, rice, cherry,
+          noodles, peach, muffin, toast, pancake, yogurt, peas]
+
+# Only one of each in the sky: "the sun", never "a sun". These nouns never fill a frame with `{a}`
+# ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.
+the_only: [sun, moon]
 
 # Things that go together, for "mom and dad" phrases (both words are pictured).
 pairs:
@@ -169,15 +197,15 @@ pairs:
   - [bucket, ball]
   - [teddy, doll]
 
-# Slot kinds: which words may fill a slot. `categories` and `words` add words; `except` removes them;
+# Slot kinds: which words may fill a slot. `categories`, `words` and `lists` (names of word lists above;
+# a list may be grouped by heading) add words; `except` removes them;
 # `colored: true` keeps only words in picture_colors; `people: true` marks a subject that can do any
 # action; `subject: true` marks an animal subject checked against can_do.
 slots:
   thing:   { categories: [food, toys, animals, nature, home, vehicles, clothes] }
   colored: { colored: true }
-  colored_mine: { categories: [toys, clothes, home], colored: true }   # "my red hat"
-  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny, puppy, kitten],
-             except: [oven, fridge, window, pot] }   # "Here is my oven." isn't something a child says
+  colored_mine: { lists: [ownable, eatable], colored: true }   # "my red hat"
+  mine:    { categories: [body, family], lists: [ownable, eatable] }   # "Here is my cup." (not "my door")
   animal:  { categories: [animals], subject: true }
   person:  { words: [mom, dad, grandma, grandpa], people: true }
   size:    { words: [big, little] }
@@ -185,10 +213,10 @@ slots:
   temp:    { words: [hot, cold] }
   temp_thing: { described_by: temperatures }
   temp_food: { categories: [food], described_by: temperatures }   # "I like hot soup."
-  action:  { categories: [actions], except: [wash] }          # "wash" needs an object: "I wash my hand."
+  action:  { categories: [actions], except: [wash, ride] }    # these need an object: "I wash my hand.", "I ride my bike."
   color:   { categories: [colors] }
-  eatable: { categories: [food], except: [milk, juice, soup] }  # "I eat ..." (not drinks)
-  washable: { words: [hand, foot, hair, face] }
+  eatable: { lists: [eatable] }                                # "I eat ..."
+  washable: { words: [hand, hair, face] }                      # not "I wash my foot.
   family:  { categories: [family] }
 
 # Frame groups. A section part lists the groups its pages use (`phrase_groups`), one new idea per part.
