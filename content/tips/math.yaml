@@ -75,6 +75,21 @@ fraction_line:
 story_problem:
   - "Read each story together, then ask: equal groups or sharing? Draw dots in the empty space if it helps."
   - "Let your child say the number sentence first, then write the answer in the box."
+# Otters math (fraction_ops, decimal_place_value, decimal_column,
+# decimal_ops, order_of_operations, box_volume). The syllabus gives most pages their own tips; these are the fallback.
+fraction_ops:
+  - "Make the bottom numbers the same first, then add or take away the top numbers. Simplify the answer."
+  - "Times the top numbers, then the bottom numbers, then simplify."
+decimal_place_value:
+  - "Read each decimal by its places, then compare the biggest places first."
+decimal_column:
+  - "Line up the decimal points first, then work from the right just like whole numbers."
+decimal_ops:
+  - "Work it out as whole numbers first, then count the decimal places to put the point back."
+order_of_operations:
+  - "Do the parentheses first, then brackets. Times and share come before plus and take away."
+box_volume:
+  - "Volume is length times width times height: how many unit cubes fill the box."
 # Owls math (long_multiplication, division_house, factor_pairs, fraction_bars). Parts usually override these.
 long_multiplication:
   - "Start with the ones, on the right. Write one digit in each box and carry the tens to the little box over the next column."
@@ -88,3 +103,18 @@ factor_pairs:
 fraction_bars:
   - "Same size bars, different pieces. Count the shaded parts on each bar together."
   - "When the bottom numbers match, add or take away the tops; the bottom stays the same."
+# Pandas math (M6). Parts carry their own tips in syllabus/math/M6.yaml; these are fallbacks.
+ratio_table:
+  - "Every column of a ratio table is the same ratio, grown by the same number on both rows."
+rational_story:
+  - "Read each problem twice, decide what is being asked, then write the answer with its unit."
+percent_problem:
+  - "Percent means out of 100. Find 10% or 1% first, then scale up."
+signed_numbers:
+  - "Numbers to the left of 0 are below zero. The further right, the bigger the number."
+coordinate_grid:
+  - "Read x first, across, then y, up or down."
+expression_eval:
+  - "Put each number in place of its letter, then work it out in order: brackets, powers, times and divide, add and take away."
+equation_solve:
+  - "Undo what is done to the letter: take away to undo adding, divide to undo times. Then check by putting the answer back."

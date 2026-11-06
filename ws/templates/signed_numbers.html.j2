@@ -1,0 +1,67 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as mac %}
+{# Numbers below zero. Lines: a tick at every whole number from lo to hi, labels on the even
+   numbers (0 is bold); tick k sits at X0 + LEN * (k - lo) / (hi - lo). Facts: two columns of
+   short questions; an `order` question takes a whole row. #}
+{% set lines = sheet.items[0].kind == "line" %}
+{% set X0, LEN, Y = 30, 480, 46 %}
+{% macro xpos(i, v) %}{{ (X0 + LEN * ((v | float) - i.lo) / (i.hi - i.lo)) | round(2) }}{% endmacro %}
+{% block style %}
+.probs { flex: 1; min-height: 0; display: grid; gap: 14px 18px; grid-auto-rows: 1fr;
+         grid-template-columns: {{ "1fr" if lines else "1fr 1fr" }}; }
+.probs .card { position: relative; min-height: 0; display: flex; align-items: center; gap: 12px; padding: 6px 12px 6px 30px; border-radius: 22px; }
+.probs .card.wide { grid-column: 1 / -1; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+svg.nl { flex: none; }
+.side { width: 90px; flex: none; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 32px; font-weight: 700; }
+.fact { display: flex; flex-wrap: nowrap; white-space: nowrap; align-items: center; gap: 8px; font-size: 26px; font-weight: 700; line-height: 1.2; }
+.fact.say { font-weight: 400; font-size: 24px; }
+.fact.say b { font-weight: 700; }
+.box { display: inline-block; width: 66px; height: 48px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; flex: none; }
+.box.sm { width: 52px; }
+.lt { font-size: 24px; color: var(--muted); }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card{% if i.task in ('order', 'context') %} wide{% endif %}"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if lines %}
+        <svg class="nl" width="{{ X0 * 2 + LEN }}" height="96" viewBox="0 0 {{ X0 * 2 + LEN }} 96">
+          <line x1="{{ X0 - 14 }}" x2="{{ X0 + LEN + 14 }}" y1="{{ Y }}" y2="{{ Y }}" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M{{ X0 - 22 }} {{ Y }} l12 -9 v18 z M{{ X0 + LEN + 22 }} {{ Y }} l-12 -9 v18 z" fill="#1d1d1f"/>
+{% for k in range(i.lo, i.hi + 1) %}
+{% set x = xpos(i, k) %}
+          <line x1="{{ x }}" x2="{{ x }}" y1="{{ Y - (13 if k % 2 == 0 else 9) }}" y2="{{ Y + (13 if k % 2 == 0 else 9) }}" stroke="#1d1d1f" stroke-width="{{ 3 if k == 0 else 2.5 }}"/>
+{% if k % 2 == 0 %}
+          <text x="{{ x }}" y="{{ Y + 42 }}" text-anchor="middle" style="font-size: 22px">{{ k | string | minus }}</text>
+{% endif %}
+{% endfor %}
+{% if i.task in ("name", "opposite") %}
+          <circle cx="{{ xpos(i, i.value) }}" cy="{{ Y }}" r="9" fill="{{ theme.accent }}" stroke="#1d1d1f" stroke-width="2.5"/>
+{% endif %}
+{% if i.task == "opposite" %}
+          <text x="{{ xpos(i, i.value) }}" y="{{ Y - 20 }}" text-anchor="middle" style="font-size: 24px; fill: {{ theme.accent }}">{{ i.value | minus }}</text>
+{% endif %}
+        </svg>
+        <div class="side">
+{% if i.task == "name" %}<span class="box"></span>
+{% elif i.task == "mark" %}<span>{{ i.value | minus }}</span>
+{% else %}<span class="lt">opposite</span>
+{% endif %}
+        </div>
+{% elif i.task == "context" %}
+        <div class="fact say"><span><b>{{ i.text }}</b></span><span class="box"></span></div>
+{% elif i.task == "opposite" %}
+        <div class="fact"><span>opposite of {{ i.value | minus }} =</span><span class="box"></span></div>
+{% elif i.task == "compare" %}
+        <div class="fact"><span>{{ i["values"][0] | minus }}</span><span class="box sm"></span><span>{{ i["values"][1] | minus }}</span></div>
+{% elif i.task == "abs" %}
+        <div class="fact"><span>|{{ i.value | minus }}| =</span><span class="box"></span></div>
+{% elif i.task == "order" %}
+        <div class="fact"><span>{{ i["values"] | map("minus") | join(",&nbsp; " | safe) }}</span>{{ mac.arrow(44) }}{% for _ in i["values"] %}<span class="box sm"></span>{% if not loop.last %}<span>&lt;</span>{% endif %}{% endfor %}</div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

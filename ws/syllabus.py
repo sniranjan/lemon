@@ -16,7 +16,7 @@ SYLLABUS_DIR = ROOT / "syllabus"
 
 
 # Levels in teaching order (earliest first). "≤ current level" means "not later in this list".
-LEVEL_ORDER = ["7A", "6A", "5A", "4A", "3A", "2A"]
+LEVEL_ORDER = ["7A", "6A", "5A", "4A", "3A", "2A", "R3"]
 
 
 def level_rank(level: str) -> int:

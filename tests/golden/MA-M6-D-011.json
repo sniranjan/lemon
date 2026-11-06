@@ -1,0 +1,128 @@
+{
+  "id": "MA-M6-D-011",
+  "subject": "math",
+  "level": "M6",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "signed_numbers",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 13701432388349441307,
+  "title": "Compare and order",
+  "parent_tip": "Absolute value is the distance from 0, so it is never negative: |−6| = 6. Below zero means a minus sign.",
+  "items": [
+    {
+      "kind": "fact",
+      "n": 1,
+      "task": "compare",
+      "values": [
+        "10",
+        "-11"
+      ],
+      "answer": ">"
+    },
+    {
+      "kind": "fact",
+      "n": 2,
+      "task": "abs",
+      "value": "-11",
+      "answer": "11"
+    },
+    {
+      "kind": "fact",
+      "n": 3,
+      "task": "compare",
+      "values": [
+        "-8",
+        "-6"
+      ],
+      "answer": "<"
+    },
+    {
+      "kind": "fact",
+      "n": 4,
+      "task": "opposite",
+      "value": "-1",
+      "answer": "1"
+    },
+    {
+      "kind": "fact",
+      "n": 5,
+      "task": "compare",
+      "values": [
+        "-11",
+        "9"
+      ],
+      "answer": "<"
+    },
+    {
+      "kind": "fact",
+      "n": 6,
+      "task": "abs",
+      "value": "-10",
+      "answer": "10"
+    },
+    {
+      "kind": "fact",
+      "n": 7,
+      "task": "compare",
+      "values": [
+        "11",
+        "-0.5"
+      ],
+      "answer": ">"
+    },
+    {
+      "kind": "fact",
+      "n": 8,
+      "task": "opposite",
+      "value": "2",
+      "answer": "−2"
+    },
+    {
+      "kind": "fact",
+      "n": 9,
+      "task": "context",
+      "context": 5,
+      "value": "-6",
+      "text": "a loss of 6 yards in a football game",
+      "answer": "−6"
+    },
+    {
+      "kind": "fact",
+      "n": 10,
+      "task": "context",
+      "context": 6,
+      "value": "-4",
+      "text": "4 floors below the ground floor",
+      "answer": "−4"
+    },
+    {
+      "kind": "fact",
+      "n": 11,
+      "task": "order",
+      "values": [
+        "0.5",
+        "-3",
+        "11.5",
+        "-8.5"
+      ],
+      "answer": "−8.5 < −3 < 0.5 < 11.5"
+    }
+  ],
+  "answer_key": [
+    ">",
+    "11",
+    "<",
+    "1",
+    "<",
+    "10",
+    ">",
+    "−2",
+    "−6",
+    "−4",
+    "−8.5 < −3 < 0.5 < 11.5"
+  ],
+  "new_words": [],
+  "review_words": []
+}

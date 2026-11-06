@@ -1,0 +1,89 @@
+{
+  "id": "MA-M5-D-001",
+  "subject": "math",
+  "level": "M5",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "decimal_place_value",
+  "page_number": 121,
+  "variant": 1,
+  "seed": 1559930726071406118,
+  "title": "Decimal places",
+  "parent_tip": "To round to the tenth, look at the hundredths digit. 5 or more rounds up; 4 or less stays.",
+  "items": [
+    {
+      "task": "compare",
+      "a": "8.051",
+      "b": "8.58",
+      "n": 1
+    },
+    {
+      "task": "compare",
+      "a": "6.75",
+      "b": "6.739",
+      "n": 2
+    },
+    {
+      "task": "compare",
+      "a": "9.2",
+      "b": "9.20",
+      "n": 3
+    },
+    {
+      "task": "compare",
+      "a": "15.55",
+      "b": "15.815",
+      "n": 4
+    },
+    {
+      "task": "round",
+      "x": "61.128",
+      "place": "tenth",
+      "n": 5
+    },
+    {
+      "task": "round",
+      "x": "56.505",
+      "place": "hundredth",
+      "n": 6
+    },
+    {
+      "task": "round",
+      "x": "4.278",
+      "place": "whole",
+      "n": 7
+    },
+    {
+      "task": "value",
+      "x": "839.25",
+      "digit": 5,
+      "n": 8
+    },
+    {
+      "task": "value",
+      "x": "742.91",
+      "digit": 4,
+      "n": 9
+    },
+    {
+      "task": "value",
+      "x": "521.694",
+      "digit": 4,
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    "<",
+    ">",
+    "=",
+    "<",
+    "61.1",
+    "56.51",
+    "4",
+    "0.05",
+    "0.9",
+    "0.6"
+  ],
+  "new_words": [],
+  "review_words": []
+}
