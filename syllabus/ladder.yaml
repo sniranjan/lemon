@@ -61,7 +61,7 @@
 
 - slug: foxes
   public_name: Foxes
-  public_title: Short stories and times tables
+  public_title: Fables, characters and times tables
   content_grade: "3"
   age: 6
   strands: { english: R3, math: M3 }
@@ -82,14 +82,14 @@
 
 - slug: pandas
   public_name: Pandas
-  public_title: Main idea and inference, ratios and fractions
+  public_title: Central ideas and inference, ratios and percents
   content_grade: "6"
   age: 9
   strands: { english: R6, math: M6 }
 
 - slug: penguins
   public_name: Penguins
-  public_title: Summaries, negative numbers, percents and expressions
+  public_title: Arguments, negative numbers and two-step equations
   content_grade: "7"
   age: 10
   strands: { english: R7, math: M7 }

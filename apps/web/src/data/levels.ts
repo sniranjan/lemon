@@ -95,7 +95,7 @@ const LOOK: Record<string, Look> = {
   foxes: {
     mascot: "/brand/fox.svg",
     color: "coral",
-    blurb: "Short stories with questions to answer, and learning the times tables by heart.",
+    blurb: "Fables and what makes characters tick, plus learning the times tables by heart.",
     preview: { kind: "facts", subject: "math", lines: ["3 × 4 =", "6 × 7 =", "8 × 9 =", "7 × 8 ="] },
   },
   owls: {
@@ -113,14 +113,14 @@ const LOOK: Record<string, Look> = {
   pandas: {
     mascot: "/brand/panda.svg",
     color: "leaf",
-    blurb: "Finding the main idea and reading between the lines, plus ratios and fraction math.",
+    blurb: "Central ideas and reading between the lines, plus ratios, percents and fraction math.",
     preview: { kind: "facts", subject: "math", lines: ["3 : 5 = 12 : ?", "⅔ × ¾ =", "1½ ÷ ⅜ =", "40% of 75 ="] },
   },
   penguins: {
     mascot: "/brand/penguin.svg",
     color: "teal",
-    blurb: "Summarizing in their own words, plus negative numbers, percents and first expressions.",
-    preview: { kind: "facts", subject: "math", lines: ["−4 + 9 =", "−3 × −6 =", "25% of 80 =", "3a + 2a ="] },
+    blurb: "Weighing claims and evidence, plus negative numbers, percent change and two-step equations.",
+    preview: { kind: "facts", subject: "math", lines: ["−4 + 9 =", "−3 × −6 =", "3x + 5 = 20", "x = ?"] },
   },
   lions: {
     mascot: "/pictures/lion.svg",
