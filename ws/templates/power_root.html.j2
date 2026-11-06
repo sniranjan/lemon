@@ -1,0 +1,45 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg %}
+{% macro num(v) %}{% if v is string %}<i>{{ v }}</i>{% elif v < 0 %}({{ v | string | replace("-", "−") }}){% else %}{{ v }}{% endif %}{% endmacro %}
+{% macro pw(b, e) %}{{ num(b) }}<sup>{{ e | string | replace("-", "−") }}</sup>{% endmacro %}
+{% macro radical(v, index="") %}<span class="rad">{% if index %}<sup class="idx">{{ index }}</sup>{% endif %}√<span class="under">{{ v | string | replace("-", "−") }}</span></span>{% endmacro %}
+{% block style %}
+{{ alg.math_style() }}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ (sheet.items | length + 1) // 2 }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; align-items: center; padding: 0 18px 0 36px; border-radius: 22px; }
+.prob { font-size: 32px; font-weight: 700; line-height: 1.3; white-space: nowrap; }
+.prob sup { font-size: 21px; vertical-align: 15px; line-height: 0; margin-left: 1px; }
+.prob sup.idx { margin: 0 -3px 0 0; vertical-align: 17px; }
+.prob .ansbox.small { vertical-align: 10px; margin-left: 1px; }
+.rad .under { display: inline-block; line-height: 1.05; border-top: 3px solid var(--ink); padding: 1px 3px 0 2px; }
+.prob .mid { margin: 0 6px; }
+.prob.words { font-size: 28px; white-space: normal; }
+.prob.words .ansbox.small { vertical-align: middle; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if i.task in ["power", "zero_negative"] %}
+        <div class="prob">{{ pw(i.base, i.exp) }} = <span class="ansbox"></span></div>
+{% elif i.task == "square_root" %}
+        <div class="prob">{{ radical(i.value) }} = <span class="ansbox"></span></div>
+{% elif i.task == "cube_root" %}
+        <div class="prob">{{ radical(i.value, 3) }} = <span class="ansbox"></span></div>
+{% elif i.task == "product" or i.task == "rule_value" %}
+        <div class="prob">{{ pw(i.base, i.exp) }}<span class="mid">·</span>{{ pw(i.base, i.exp2) }} = {% if i.task == "product" %}{{ num(i.base) }}<span class="ansbox small"></span>{% else %}<span class="ansbox"></span>{% endif %}</div>
+{% elif i.task == "quotient" %}
+        <div class="prob">{{ pw(i.base, i.exp) }}<span class="mid">÷</span>{{ pw(i.base, i.exp2) }} = {{ num(i.base) }}<span class="ansbox small"></span></div>
+{% elif i.task == "power_of_power" %}
+        <div class="prob">({{ pw(i.base, i.exp) }})<sup>{{ i.exp2 }}</sup> = {{ num(i.base) }}<span class="ansbox small"></span></div>
+{% elif i.task == "solve_square" %}
+        <div class="prob words"><i>{{ i.letter }}</i><sup>2</sup> = {{ i.value }}<br><i>{{ i.letter }}</i> = <span class="ansbox small"></span> or <i>{{ i.letter }}</i> = <span class="ansbox small"></span></div>
+{% elif i.task == "solve_cube" %}
+        <div class="prob words"><i>{{ i.letter }}</i><sup>3</sup> = {{ i.value | string | replace("-", "−") }}<br><i>{{ i.letter }}</i> = <span class="ansbox"></span></div>
+{% elif i.task == "between" %}
+        <div class="prob words">{{ radical(i.value) }} is between<br><span class="ansbox small"></span> and <span class="ansbox small"></span></div>
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

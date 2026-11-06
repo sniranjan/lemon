@@ -118,7 +118,17 @@ def story_problems() -> tuple[dict, ...]:
     return frames
 
 
+@lru_cache(maxsize=None)
+def system_stories() -> tuple[dict, ...]:
+    """Story frames for two equations at once (Lions math; see content/math/systems.yaml)."""
+    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "systems.yaml").read_text()))
+    ids = [f["id"] for f in frames]
+    if len(set(ids)) != len(ids):
+        raise ValueError("systems.yaml: frame ids must be unique")
+    return frames
+
+
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories, story_problems, grammar, passages):
+              line_stories, story_problems, grammar, passages, system_stories):
         f.cache_clear()

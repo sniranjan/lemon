@@ -1,0 +1,306 @@
+subject: math
+level: M8
+title: Exponents, Scientific Notation, Linear Equations, Lines, Systems and Right Triangles
+# Our own level (source: ours): Lions math, grade 8 work for age 11 (syllabus/PLAN-upper-levels.md).
+# It assumes grade 7 work (signed numbers, two-step equations, like terms) from the level before.
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Variable letters avoid a, m and r: "2a", "m8", "r5" would read as internal codes (content/banned.yaml).
+preview_pages: [11, 61, 131, 181]   # exponent rules, letters on both sides, graph a line, Pythagorean triples
+aims:
+  - Use the rules of integer exponents, and find square and cube roots of perfect squares and cubes
+  - Write very large and very small numbers in scientific notation, and multiply and divide them
+  - Solve linear equations with letters on both sides and brackets, and spot equations with no solution or every solution
+  - Find the slope of a line from two points, a table or a graph, and graph and write y = mx + b
+  - Solve two equations at once by graphing, substitution and elimination, including short story problems
+  - Use the Pythagorean theorem and its converse to find sides of right triangles and distances on a grid
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [4, 8]   # source: ours (6 to 8 problems a page, with room to show the steps)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# in its module (ws/sheet_types/*.py).
+rules:
+  letters: [x, x, x, n, y, k, t, w]   # the unknown's letter, picked per page
+sections:
+  - code: A
+    name: Integer Exponents, Square and Cube Roots
+    public_name: Exponents and Square Roots
+    pages: [1, 30]
+    sheet_types: [power_root]
+    standards: [8.EE.1, 8.EE.2]
+    source: ours
+    rules:
+      problems: 8
+      bases: [2, 12]           # whole-number bases for powers and rules
+      max_value: 10000         # largest power worked out by hand
+      squares: [1, 15]         # √ of 1² … 15²
+      cubes: [1, 10]           # ∛ of 1³ … 10³
+      tips:
+        power_root:
+          - "Say each power as a times sentence: 2 to the 5th is 2 times 2 times 2 times 2 times 2. Write the factors out if it helps."
+          - "A square root asks: what number times itself makes this? A cube root asks the same with three equal factors."
+    parts:
+      - part: 1
+        pages: [1, 10]
+        rules:
+          title: Powers and roots
+          tasks: [power, power, square_root, cube_root]
+          negative_bases: false
+      - part: 2
+        pages: [11, 20]
+        rules:
+          title: Exponent rules
+          tasks: [product, quotient, power_of_power, zero_negative]
+          exponents: [-4, 9]
+          tips:
+            power_root:
+              - "Same base, multiplying: add the exponents. Same base, dividing: take them away. A power of a power: multiply them."
+              - "Any number (not 0) to the power 0 is 1. A negative exponent means one over: 2 to the −3 is 1 over 2 cubed, which is 1/8."
+      - part: 3
+        pages: [21, 30]
+        rules:
+          title: Mixed practice
+          tasks: [solve_square, solve_cube, rule_value, between, product, zero_negative, power, quotient]
+          exponents: [-4, 9]
+          negative_bases: true
+          tips:
+            power_root:
+              - "x squared is 49 has two answers, 7 and −7, because both times themselves make 49. A cube has just one answer."
+              - "For a root that isn't whole, find the perfect squares on each side: 36 < 40 < 49, so the square root of 40 is between 6 and 7."
+        standards: [8.NS.2]
+
+  - code: B
+    name: Scientific Notation
+    public_name: Very Big and Very Small
+    pages: [31, 50]
+    sheet_types: [sci_notation]
+    standards: [8.EE.3, 8.EE.4]
+    source: ours
+    rules:
+      digits: [1, 3]           # significant digits in a coefficient (2.45 has 3)
+      tips:
+        sci_notation:
+          - "Scientific notation is a number from 1 to just under 10, times a power of ten. Count how many places the decimal point moves."
+          - "Big numbers get a positive power of ten, small numbers (less than 1) a negative one."
+    parts:
+      - part: 1
+        pages: [31, 40]
+        rules:
+          title: Scientific notation
+          problems: 8
+          tasks: [to_sci, to_standard, to_sci, to_standard]
+          exponents: [-6, 9]
+      - part: 2
+        pages: [41, 50]
+        rules:
+          title: Times and divide
+          problems: 6
+          tasks: [multiply, divide, multiply, divide, times_bigger, times_bigger]
+          exponents: [-8, 12]
+          tips:
+            sci_notation:
+              - "Multiply the front numbers and add the powers of ten. Dividing: divide the front numbers and take away the powers."
+              - "If the front number ends up 10 or more (like 24), move the point one place and add 1 to the power: 2.4 times 10 to the 7th."
+              - "How many times bigger? Divide the big number by the small one, then write the answer in scientific notation."
+
+  - code: C
+    name: Multi-Step Linear Equations in One Variable
+    public_name: Multi-Step Equations
+    pages: [51, 100]
+    sheet_types: [multi_step_equation]
+    standards: [8.EE.7, 8.EE.7b]
+    source: ours
+    rules:
+      title: Solve each equation
+      problems: 6
+      solutions: [-12, 12]
+      max_number: 99           # no number on the page bigger than this (before solving)
+      tips:
+        multi_step_equation:
+          - "Tidy each side first, then get the letter on one side and the numbers on the other. Whatever you do to one side, do to the other."
+          - "Check each answer by putting it back into the first equation: both sides should come out the same."
+    parts:
+      - part: 1
+        pages: [51, 60]
+        rules:
+          forms: [like_terms, like_terms, two_step]
+      - part: 2
+        pages: [61, 70]
+        rules:
+          forms: [both_sides]
+          tips:
+            multi_step_equation:
+              - "Letters on both sides: take away the smaller letter term from both sides first, so the letter is on one side only."
+              - "Check each answer by putting it back into the first equation: both sides should come out the same."
+      - part: 3
+        pages: [71, 80]
+        rules:
+          forms: [distribute, distribute_like, distribute_right]
+          tips:
+            multi_step_equation:
+              - "Open the brackets first: 3(x − 4) is 3 times x and 3 times −4, so 3x − 12. Then tidy and solve."
+              - "Watch the sign in front of a bracket: −2(x + 5) is −2x − 10."
+      - part: 4
+        pages: [81, 90]
+        rules:
+          forms: [distribute_both, both_sides, fraction_coef, distribute]
+          fraction_solutions: 2    # answers like 5/2 on each page
+          tips:
+            multi_step_equation:
+              - "Some answers are fractions now, like x = 5/2. A fraction answer is fine: leave it as a fraction in lowest terms."
+              - "With a fraction in front of the letter, multiply both sides by the bottom number first to clear it."
+      - part: 5
+        pages: [91, 100]
+        rules:
+          forms: [both_sides, distribute_right, distribute_both, like_terms]
+          special: 2               # one equation with no solution and one true for every number
+          tips:
+            multi_step_equation:
+              - "If the letters cancel out, look at what is left. 5 = 5 is always true (every number works). 5 = 3 is never true (no solution)."
+              - "Tidy each side first, then solve. Two equations on each page are special: no solution, or every number works."
+        standards: [8.EE.7a]
+
+  - code: D
+    name: Slope and Linear Functions
+    public_name: Lines and Slope
+    pages: [101, 150]
+    sheet_types: [slope_graph]
+    standards: [8.EE.5, 8.EE.6, 8.F.1, 8.F.3, 8.F.4]
+    source: ours
+    rules:
+      grid: 6                  # the grid runs from −6 to 6 on both axes
+      slopes: ["-3", "-2", "-3/2", "-1", "-2/3", "-1/2", "-1/3", "0", "1/3", "1/2", "2/3", "1", "3/2", "2", "3"]
+      intercepts: [-4, 4]
+      points: [-6, 6]
+      tips:
+        slope_graph:
+          - "Slope is rise over run: how far up (or down) the line goes for each step to the right."
+          - "Lines going up to the right have a positive slope, lines going down have a negative slope, flat lines have slope 0."
+    parts:
+      - part: 1
+        pages: [101, 110]
+        rules:
+          title: Slope from two points
+          mixes: [[points]]
+      - part: 2
+        pages: [111, 120]
+        rules:
+          title: Find the slope
+          mixes: [[read_slope], [table]]
+          tips:
+            slope_graph:
+              - "On a graph, start at one dot and count up or down to the other, then right. Write rise over run and simplify."
+              - "In a table, see how much y changes each time x goes up. Divide the change in y by the change in x."
+      - part: 3
+        pages: [121, 130]
+        rules:
+          title: y = mx + b
+          mixes: [[read_mb], [write_graph]]
+          tips:
+            slope_graph:
+              - "In y = mx + b, the number in front of x is the slope and b is where the line crosses the y-axis."
+              - "To write the equation of a graph, find where it crosses the y-axis (b), then count rise over run (m)."
+      - part: 4
+        pages: [131, 140]
+        rules:
+          title: Graph the line
+          mixes: [[draw_line]]
+          tips:
+            slope_graph:
+              - "Put a dot at b on the y-axis. From there, count the run to the right and the rise up (or down) for the next dot. Join them with a ruler."
+              - "A fraction slope like 2/3 means up 2, right 3. Check the line with one more point from the equation."
+      - part: 5
+        pages: [141, 150]
+        rules:
+          title: Write the equation
+          mixes: [[from_points, from_table], [write_graph, draw_line]]
+          tips:
+            slope_graph:
+              - "Find the slope first. Then put one point into y = mx + b to find b."
+              - "In a table, look for the y-value when x is 0: that is b. The change in y for each step in x is m."
+        standards: [8.F.2]
+
+  - code: E
+    name: Systems of Two Linear Equations
+    public_name: Two Equations at Once
+    pages: [151, 180]
+    sheet_types: [linear_system]
+    standards: [8.EE.8, 8.EE.8a, 8.EE.8b]
+    source: ours
+    rules:
+      grid: 6
+      solutions: [-5, 5]       # x and y of every answer
+      max_number: 60
+      tips:
+        linear_system:
+          - "The answer is one pair of numbers (x, y) that makes both equations true. Check it in both equations."
+    parts:
+      - part: 1
+        pages: [151, 160]
+        rules:
+          title: Where the lines meet
+          problems: 4
+          tasks: [graph_read, graph_read, graph_draw, graph_draw]
+          tips:
+            linear_system:
+              - "Each line shows every pair that works for one equation. Where the two lines cross works for both: that point is the answer."
+              - "Graph each line from its y-intercept and slope with a ruler, then read the crossing point. Check it in both equations."
+      - part: 2
+        pages: [161, 170]
+        rules:
+          title: Solve by substitution
+          problems: 4
+          tasks: [substitution]
+          tips:
+            linear_system:
+              - "One equation already says what y is. Put that into the other equation in place of y, solve for x, then find y."
+              - "Write the answer as a point (x, y) and check it in both equations."
+      - part: 3
+        pages: [171, 180]
+        rules:
+          title: Solve by elimination
+          problems: 4
+          tasks: [elimination, elimination, inspect, story]
+          tips:
+            linear_system:
+              - "Add or take away the equations so one letter cancels. You may need to multiply one equation first."
+              - "Some pairs have no answer (parallel lines) or every answer (the same line). Look at the slopes before solving."
+              - "For the story, choose a letter for each unknown, write two equations from the sentences, then solve."
+        standards: [8.EE.8c]
+
+  - code: F
+    name: The Pythagorean Theorem and Its Converse
+    public_name: Right Triangles
+    pages: [181, 200]
+    sheet_types: [pythagorean]
+    standards: [8.G.6, 8.G.7, 8.G.8]
+    source: ours
+    rules:
+      tips:
+        pythagorean:
+          - "In a right triangle, the two short sides squared and added make the longest side squared: a² + b² = c²."
+          - "The longest side (the hypotenuse) is always across from the square corner."
+    parts:
+      - part: 1
+        pages: [181, 190]
+        rules:
+          title: Find the missing side
+          problems: 6
+          mixes: [[hypotenuse, leg, hypotenuse, leg, is_right, is_right]]
+          triples: true          # whole-number sides only (3-4-5, 5-12-13, 8-15-17 … and their multiples)
+          max_side: 50
+          tips:
+            pythagorean:
+              - "Square the two short sides and add them; the square root is the long side. For a short side, take away instead."
+              - "To test a triangle, square the two short sides and add. If that equals the long side squared, it has a right angle."
+      - part: 2
+        pages: [191, 200]
+        rules:
+          title: Roots and distances
+          mixes: [[hypotenuse, leg, hypotenuse, leg, hypotenuse, leg], [distance, distance, distance, distance]]
+          triples: false         # answers are square roots, to one decimal place
+          max_side: 20
+          grid: 6
+          tips:
+            pythagorean:
+              - "When the answer isn't whole, write the square root, then round it to one decimal place: √65 ≈ 8.1."
+              - "For two points, draw a right triangle: count across and up, then use a² + b² = c² for the distance."

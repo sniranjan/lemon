@@ -1,0 +1,38 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg %}
+{% macro slope_box() %}<div class="ans">slope = <span class="ansbox"></span></div>{% endmacro %}
+{% macro eq_line() %}<div class="ans"><i>y</i> = <span class="line"></span></div>{% endmacro %}
+{% block style %}
+{{ alg.math_style() }}
+{% set n = sheet.items | length %}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ n // 2 }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-around; padding: 10px 14px 10px 26px; border-radius: 22px; }
+.q { font-size: 28px; font-weight: 700; white-space: nowrap; }
+.ans { font-size: 26px; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.ans .line { display: inline-block; width: 190px; border-bottom: 3px solid var(--ink); height: 30px; }
+.ans.two { gap: 6px; font-size: 24px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% if i.task in ["points", "from_points"] %}
+        <div class="q">{{ alg.point(i.p1) }} and {{ alg.point(i.p2) }}</div>
+        {% if i.task == "points" %}{{ slope_box() }}{% else %}{{ eq_line() }}{% endif %}
+{% elif i.task in ["table", "from_table"] %}
+        {{ alg.xy_table(i.xs, i.ys) }}
+        {% if i.task == "table" %}{{ slope_box() }}{% else %}{{ eq_line() }}{% endif %}
+{% elif i.task == "read_mb" %}
+        <div class="q">{{ alg.mathi(i.tokens) }}</div>
+        <div class="ans two"><i>m</i> = <span class="ansbox"></span> <span style="width: 14px"></span> <i>b</i> = <span class="ansbox"></span></div>
+{% elif i.task == "draw_line" %}
+        <div class="q">{{ alg.mathi(i.tokens) }}</div>
+        {{ alg.grid(i.grid, 20) }}
+{% else %}
+        {{ alg.grid(i.grid, 20, [i.ends], i.dots) }}
+        {% if i.task == "read_slope" %}{{ slope_box() }}{% else %}{{ eq_line() }}{% endif %}
+{% endif %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

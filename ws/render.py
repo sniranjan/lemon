@@ -85,6 +85,8 @@ MIN_TIP_PX = 16
 def min_child_px(level: str, subject: str | None = None) -> int:
     if subject == "math" and level == "4A":
         return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
+    if subject == "math" and level == "M8":
+        return 20   # Lions Math (age 11): graphs and equations need the 20px floor (§8, 4A+)
     return 20 if level in {"4A", "3A", "2A"} else 28
 
 
