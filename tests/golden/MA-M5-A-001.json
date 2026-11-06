@@ -1,0 +1,59 @@
+{
+  "id": "MA-M5-A-001",
+  "subject": "math",
+  "level": "M5",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "division_house",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 11501456682528973766,
+  "title": "Dividing by tens",
+  "parent_tip": "Dividing by 30 is like dividing by 3, ten times smaller. For 240 shared by 30, think: 24 shared by 3 is 8.",
+  "items": [
+    {
+      "kind": "divide",
+      "dividend": 400,
+      "divisor": 50,
+      "quotient": 8,
+      "remainder": 0,
+      "start": 2,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 296,
+      "divisor": 30,
+      "quotient": 9,
+      "remainder": 26,
+      "start": 2,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 490,
+      "divisor": 70,
+      "quotient": 7,
+      "remainder": 0,
+      "start": 2,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 189,
+      "divisor": 30,
+      "quotient": 6,
+      "remainder": 9,
+      "start": 2,
+      "r_box": true
+    }
+  ],
+  "answer_key": [
+    "8 R 0",
+    "9 R 26",
+    "7 R 0",
+    "6 R 9"
+  ],
+  "new_words": [],
+  "review_words": []
+}

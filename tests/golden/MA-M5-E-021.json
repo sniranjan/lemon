@@ -1,0 +1,99 @@
+{
+  "id": "MA-M5-E-021",
+  "subject": "math",
+  "level": "M5",
+  "section": "E",
+  "part": 3,
+  "sheet_type": "decimal_ops",
+  "page_number": 181,
+  "variant": 1,
+  "seed": 9861160935185437261,
+  "title": "Decimal by decimal",
+  "parent_tip": "0.3 times 0.4: 3 times 4 is 12, and there are two decimal places in all, so 0.12.",
+  "items": [
+    {
+      "kind": "divide_decimal",
+      "op": "÷",
+      "a": "4.2",
+      "b": "0.6",
+      "n": 1
+    },
+    {
+      "kind": "times_decimal",
+      "op": "×",
+      "a": "5.6",
+      "b": "0.7",
+      "n": 2
+    },
+    {
+      "kind": "divide_decimal",
+      "op": "÷",
+      "a": "0.15",
+      "b": "0.5",
+      "n": 3
+    },
+    {
+      "kind": "divide_decimal",
+      "op": "÷",
+      "a": "1.8",
+      "b": "0.3",
+      "n": 4
+    },
+    {
+      "kind": "times_decimal",
+      "op": "×",
+      "a": "7.1",
+      "b": "0.3",
+      "n": 5
+    },
+    {
+      "kind": "divide_decimal",
+      "op": "÷",
+      "a": "1.5",
+      "b": "0.3",
+      "n": 6
+    },
+    {
+      "kind": "divide_decimal",
+      "op": "÷",
+      "a": "2.2",
+      "b": "1.1",
+      "n": 7
+    },
+    {
+      "kind": "times_decimal",
+      "op": "×",
+      "a": "5.7",
+      "b": "0.6",
+      "n": 8
+    },
+    {
+      "kind": "times_decimal",
+      "op": "×",
+      "a": "0.9",
+      "b": "0.6",
+      "n": 9
+    },
+    {
+      "kind": "times_decimal",
+      "op": "×",
+      "a": "9.3",
+      "b": "0.6",
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    "7",
+    "3.92",
+    "0.3",
+    "6",
+    "2.13",
+    "5",
+    "2",
+    "3.42",
+    "0.54",
+    "5.58"
+  ],
+  "new_words": [],
+  "review_words": []
+}

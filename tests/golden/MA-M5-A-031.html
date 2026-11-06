@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Otters · Math · page 31</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 20px 24px; }
+.problems .card { min-height: 0; display: flex; justify-content: center; padding: 14px 10px 12px; border-radius: 24px; }
+.div { display: grid; grid-template-columns: 50px repeat(var(--digits), 44px) 84px; grid-template-rows: auto auto 1fr; align-items: end; }
+.q { width: 38px; height: 46px; border: 3px solid var(--ink); border-radius: 9px; justify-self: center; margin-bottom: 6px; }
+.rem { display: flex; align-items: center; gap: 6px; padding-left: 10px; margin-bottom: 6px; font-size: 30px; font-weight: 700; }
+.rem .q { margin: 0; }
+.divisor { font-size: 46px; font-weight: 700; line-height: 56px; text-align: right; padding-right: 10px; }
+.house { grid-column: 2 / span var(--digits); display: grid; grid-template-columns: repeat(var(--digits), 44px);
+         border-top: 4px solid var(--ink); border-left: 4px solid var(--ink); border-top-left-radius: 4px 0; margin-left: -4px;
+         border-bottom-left-radius: 22px 56px; }
+.house span { padding-left: 4px; font-size: 46px; font-weight: 700; line-height: 56px; text-align: center; }
+.work { grid-column: 2 / span var(--digits); align-self: stretch; margin-top: 8px; min-height: 0;
+        background-image: linear-gradient(to right, #c4c4ca 1.5px, transparent 1.5px), linear-gradient(to bottom, #c4c4ca 1.5px, transparent 1.5px);
+        background-size: 44px 34px; border-right: 1.5px solid #c4c4ca; border-bottom: 1.5px solid #c4c4ca; }
+/* two-digit divisors (Otters): a wider divisor column, narrower digit columns so 4 digits still fit */
+.div.wide { grid-template-columns: 68px repeat(var(--digits), 40px) 74px; }
+.div.wide .house { grid-template-columns: repeat(var(--digits), 40px); }
+.div.wide .work { background-size: 40px 34px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Otters · Math</div>
+      <div class="title-row"><h1>Four-digit numbers</h1><span class="pill">Otters · 31</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> If the divisor doesn&#39;t fit after you bring a digit down, write 0 on top before bringing down the next digit.</div>
+  <main class="body">
+    <div class="problems">
+      <div class="card"><div class="div wide" style="--digits: 4">
+        <span></span><span></span><span class="q"></span><span class="q"></span><span class="q"></span><span><span class="rem">R <span class="q"></span></span></span>
+        <span class="divisor">24</span><div class="house"><span>5</span><span>3</span><span>5</span><span>2</span></div><span></span>
+        <span></span><div class="work"></div><span></span>
+      </div></div>
+      <div class="card"><div class="div wide" style="--digits: 4">
+        <span></span><span></span><span class="q"></span><span class="q"></span><span class="q"></span><span><span class="rem">R <span class="q"></span></span></span>
+        <span class="divisor">41</span><div class="house"><span>9</span><span>4</span><span>3</span><span>6</span></div><span></span>
+        <span></span><div class="work"></div><span></span>
+      </div></div>
+      <div class="card"><div class="div wide" style="--digits: 4">
+        <span></span><span></span><span class="q"></span><span class="q"></span><span class="q"></span><span><span class="rem">R <span class="q"></span></span></span>
+        <span class="divisor">80</span><div class="house"><span>9</span><span>4</span><span>9</span><span>8</span></div><span></span>
+        <span></span><div class="work"></div><span></span>
+      </div></div>
+      <div class="card"><div class="div wide" style="--digits: 4">
+        <span></span><span></span><span class="q"></span><span class="q"></span><span class="q"></span><span><span class="rem">R <span class="q"></span></span></span>
+        <span class="divisor">97</span><div class="house"><span>9</span><span>7</span><span>9</span><span>7</span></div><span></span>
+        <span></span><div class="work"></div><span></span>
+      </div></div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Otters · Math · page 31</footer>
+</div>
+</body>
+</html>

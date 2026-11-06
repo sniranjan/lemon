@@ -5,7 +5,9 @@ The number to share sits under the roof, the divisor on the left; the child writ
 boxes on the roof and works the divide, multiply, take away, bring down steps in squared space below.
 
 Rules (merged level → section → part):
-- `dividend`, `divisor`, `quotient`: [lo, hi] ranges. The divisor range is a rule, not fixed to one digit.
+- `dividend`, `divisor`, `quotient`: [lo, hi] ranges. The divisor range is a rule, not fixed to one digit
+  (Otters math, 5.NBT.6, uses two-digit divisors). `divisor_multiple_of` (optional, Otters): divisors are
+  multiples of this (10: dividing by 20, 30 … 90).
 - `remainder`: none (every problem divides evenly), all (every problem has one), mixed (both on every page).
   Parts with remainders show an "R" box after the answer boxes.
 - `small_first`: at least this many problems whose first digit is smaller than the divisor (156 ÷ 4),
@@ -46,6 +48,8 @@ def answer_text(item: dict) -> str:
 
 
 def problem_ok(r: dict, dividend: int, divisor: int, quotient: int, remainder: int) -> str | None:
+    if r.get("divisor_multiple_of") and divisor % r["divisor_multiple_of"]:
+        return f"divisor {divisor} isn't a multiple of {r['divisor_multiple_of']}"
     for name, value in (("dividend", dividend), ("divisor", divisor), ("quotient", quotient)):
         lo, hi = r[name]
         if not lo <= value <= hi:
@@ -86,6 +90,8 @@ class DivisionHouse(SheetType):
             for _ in range(MAX_TRIES):
                 # divisor first, then an answer that fits: every divisor turns up, not just the small ones
                 d = rng.randint(*r["divisor"])
+                if r.get("divisor_multiple_of"):   # Otters: dividing by tens (no extra RNG call, so Owls is unchanged)
+                    d -= d % r["divisor_multiple_of"]
                 rem = rng.randint(1, d - 1) if want_rem else 0
                 q_lo = max(r["quotient"][0], -(-(r["dividend"][0] - rem) // d))
                 q_hi = min(r["quotient"][1], (r["dividend"][1] - rem) // d)

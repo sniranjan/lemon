@@ -28,6 +28,9 @@ CATALOGUE: frozenset[str] = frozenset({
     "passage_questions", "word_builder", "full_sentence_answer",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
+    "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
+    "order_of_operations", "box_volume",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",

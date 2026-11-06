@@ -22,13 +22,19 @@
 /* two big problems a page: square work cells */
 .work { background-size: 44px 44px; }
 {% endif %}
+{% if sheet.items | selectattr("divisor", "ge", 10) | list %}
+/* two-digit divisors (Otters): a wider divisor column, narrower digit columns so 4 digits still fit */
+.div.wide { grid-template-columns: 68px repeat(var(--digits), 40px) 74px; }
+.div.wide .house { grid-template-columns: repeat(var(--digits), 40px); }
+.div.wide .work { background-size: 40px 34px; }
+{% endif %}
 {% endblock %}
 {% block body %}
     <div class="problems">
 {% for item in sheet.items %}
 {% set s = item.dividend | string %}
 {% set digits = s | length %}
-      <div class="card"><div class="div" style="--digits: {{ digits }}">
+      <div class="card"><div class="div{% if item.divisor >= 10 %} wide{% endif %}" style="--digits: {{ digits }}">
         <span></span>{% for c in range(digits) %}{% if c >= item.start %}<span class="q"></span>{% else %}<span></span>{% endif %}{% endfor %}<span>{% if item.r_box %}<span class="rem">R <span class="q"></span></span>{% endif %}</span>
         <span class="divisor">{{ item.divisor }}</span><div class="house">{% for ch in s %}<span>{{ ch }}</span>{% endfor %}</div><span></span>
         <span></span><div class="work"></div><span></span>

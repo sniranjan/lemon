@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+{# One fact a line, left; the rest of each line is room to work it out as whole numbers. #}
+{% block style %}
+.facts { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr; grid-template-rows: repeat({{ sheet.items | length }}, 1fr); gap: 9px; }
+.facts .card { position: relative; min-height: 0; display: flex; align-items: center; padding: 0 20px 0 40px; border-radius: 16px; }
+.qn { position: absolute; top: 50%; transform: translateY(-50%); left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eqn { display: flex; align-items: center; gap: 14px; font-size: 36px; font-weight: 700; line-height: 1; }
+.op { color: var(--accent); }
+.ans { display: inline-block; width: 170px; height: 42px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+{% endblock %}
+{% block body %}
+    <div class="facts">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="eqn"><span>{{ i.a }}</span><span class="op">{{ i.op }}</span><span>{{ i.b }}</span><span class="op">=</span><span class="ans"></span></div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
