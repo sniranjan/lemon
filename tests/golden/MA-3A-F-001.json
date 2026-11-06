@@ -1,0 +1,99 @@
+{
+  "id": "MA-3A-F-001",
+  "subject": "math",
+  "level": "3A",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "add_facts",
+  "page_number": 181,
+  "variant": 1,
+  "seed": 11414749694256740580,
+  "title": "Add 1, 2 or 3",
+  "parent_tip": "Read each line together. Hold up fingers for the number you add and count on, one finger at a time.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 3,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "+",
+      "b": 3,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 1,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "+",
+      "b": 1,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 3,
+      "op": "+",
+      "b": 2,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "+",
+      "b": 1,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "+",
+      "b": 3,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 2,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 11,
+      "op": "+",
+      "b": 2,
+      "bridge": false
+    },
+    {
+      "kind": "fact",
+      "a": 12,
+      "op": "+",
+      "b": 3,
+      "bridge": false
+    }
+  ],
+  "answer_key": [
+    4,
+    9,
+    2,
+    7,
+    5,
+    8,
+    10,
+    3,
+    13,
+    15
+  ],
+  "new_words": [],
+  "review_words": []
+}

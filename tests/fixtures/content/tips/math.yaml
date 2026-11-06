@@ -13,3 +13,11 @@ dots_to_number:
 number_sequence:
   - "Read each row together from the first number. When you reach an empty box, let your child say the missing number."
   - "Touch each box as you count along. Pause at the empty boxes and let your child fill them in out loud."
+next_number:
+  - "Read each number together, then ask: what comes next? Let your child say it and write it in the box."
+  - "Count on from the number out loud. The next number you say goes in the empty box."
+  - "If your child is stuck, count up together from a smaller number until you reach it."
+add_facts:
+  - "Say the first number, then count on: one more, two more. The last number you say is the answer."
+  - "Read each line together. Hold up fingers for the number you add and count on, one finger at a time."
+  - "Let your child read the fact out loud before writing. Counting on from the first number is the quick way."
