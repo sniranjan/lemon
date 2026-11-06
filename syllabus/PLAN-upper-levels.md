@@ -86,6 +86,55 @@ Status: **draft, waiting for approval.** Nothing below is built yet. Once approv
 | | | E Two Equations at Once: simple systems | 151–180 |
 | | | F Right Triangles: the Pythagorean theorem | 181–200 |
 
+## Audit: is every level really two grades ahead? (checked against Common Core, Nov 2026)
+
+**Rule:** school grade = age on Sept 1 − 5 (a 6-year-old is in grade 1). Target = school grade + 2.
+Preschool counts as grade −2 (age 3) and Pre-K as −1 (age 4), so the target is K at 3, grade 1 at 4 and
+grade 2 at 5. Codes were checked on the published standards text (thecorestandards.org).
+
+**Problem 1: two-year age bands.** A level with one `content_grade` is two ahead only for the younger
+child in a band like "6–7"; for a 7-year-old it's one ahead. Fix: label each level with the one age
+a child on pace does it (Foxes 6, Owls 7 … Lions 11). Then 12-year-olds (grade 7, target 9) need a
+13th level (Algebra 1 and grade 9 reading), or the site says "ages 3 to 11".
+
+| Level | On-pace age | School grade | Target | What the strands reach today | Gap |
+|---|---|---|---|---|---|
+| Chicks | 3 | preschool | K | Pre-K: counting to 10, picture words | −1 (starting level, ramps from zero) |
+| Ducklings | 3 | preschool | K | K: numbers to 50 (K.CC.1); phrases spoken, not read | ≈ 0 (reading slightly under) |
+| Bunnies | 4 | Pre-K | 1 | K: writing numbers (K.CC.3), letters and first sounds | **−1** |
+| Kittens | 4 | Pre-K | 1 | K–1: numbers to 120 (1.NBT.1), +1 to +3, digraphs (RF.1.3a), rhymes (RF.K.2a) | ≈ −0.5 |
+| Puppies | 5 | K | 2 | 1: adding facts only (1.OA.6); long vowels, syllables (RF.1.3, RF.2.3) | **−1**. The live title says "subtracting", which this level doesn't teach |
+| Cubs | 5 | K | 2 | 1–2: subtraction facts (2.OA.2); parts of speech, reading aloud | **−1**. The live title says "two-digit adding and subtracting" (2.NBT.5), which this level doesn't teach |
+| Foxes → Lions | 6 → 11 | 1 → 6 | 3 → 8 | Math sections all match their grade (every code verified) | 0 |
+
+**Problem 2: a grade 2 math hole.** Nothing before Foxes teaches 2-digit adding and subtracting
+with regrouping or place value to 1000 (2.NBT.1–7), yet Foxes opens with 3-digit regrouping (3.NBT.2).
+Fix: compress the early math so Puppies = adding + subtraction facts within 20 (2.OA.2) and Cubs = two-digit and
+three-digit adding/subtracting with place value (2.NBT.1–7). Same idea for reading: Bunnies and Puppies
+each take on the next step's phonics.
+
+**Problem 3: some planned reading sections sit below their grade.** The math is all on grade; these
+reading sections aren't, so they are re-aimed:
+
+| Level | Planned | Standard it really is | Re-aimed to |
+|---|---|---|---|
+| Foxes | A Story Time (who/what/where) | RL.2.1 (grade 2) | Characters' traits and motives (RL.3.3) |
+| Foxes | C First, Next, Last | RL.1.2 / RL.2.2 (grades 1–2) | Fables: recount and find the lesson (RL.3.2) |
+| Pandas | A Main Idea and Support | RI.3.2 / RI.4.2 (grades 3–4) | Central idea + an objective summary (RI.6.2) |
+| Penguins | A Summaries in Your Own Words | RI.4.2 (grade 4) | Two central ideas and how they develop (RI.7.2) |
+| Otters | D similes/metaphors | L.4.5a (grade 4) | Interpreting figurative language (L.5.5a) |
+| Penguins | C Word Roots | L.4.4b (grade 4) also has roots | Keep, with a grade 7 word list (L.7.4b) |
+
+Topic names alone don't make reading harder; the text has to be harder too.
+
+**Making it "definitely", not just planned:**
+- Every section in the syllabus YAML gets `standards: [3.OA.7, …]`. `ws verify` fails if a
+  non-review section's standards are below the level's `content_grade`.
+- Every reading passage must score a Flesch-Kincaid grade ≥ `content_grade` (and not far above it).
+  `ws verify` checks this for each passage.
+- The `content_grade` and grade chips on the site come from those tags, so the site can't claim more
+  than the sheets teach.
+
 ## New sheet types (built level by level, not all at once)
 
 - **Reading:** `passage_questions` (multiple choice + short answer; most reading pages),
