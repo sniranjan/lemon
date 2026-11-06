@@ -177,6 +177,14 @@ def create_image(ig: str, token: str, url: str, **extra: str) -> str:
         raise
 
 
+def slide_alts(alt: str, n: int) -> list[str]:
+    """Split carousel alt text written as "Slide 1: ..." paragraphs into one alt per slide (else repeat it)."""
+    parts = dict(re.findall(r"^Slide (\d+):\s*(.+?)(?=^Slide \d+:|\Z)", alt, re.S | re.M))
+    if len(parts) == n and all(str(i) in parts for i in range(1, n + 1)):
+        return [" ".join(parts[str(i)].split()) for i in range(1, n + 1)]
+    return [alt] * n
+
+
 def publish(ig: str, token: str, urls: list[str], caption: str, alt: str, story: bool) -> dict:
     if story:
         container = create_image(ig, token, urls[0], media_type="STORIES")
@@ -184,8 +192,8 @@ def publish(ig: str, token: str, urls: list[str], caption: str, alt: str, story:
         container = create_image(ig, token, urls[0], caption=caption, alt_text=alt or None)
     else:
         children = []
-        for url in urls:
-            child = create_image(ig, token, url, is_carousel_item="true", alt_text=alt or None)
+        for url, child_alt in zip(urls, slide_alts(alt, len(urls))):
+            child = create_image(ig, token, url, is_carousel_item="true", alt_text=child_alt or None)
             wait_ready(child, token)
             children.append(child)
         container = graph("POST", f"{ig}/media", token, media_type="CAROUSEL",

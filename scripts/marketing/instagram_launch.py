@@ -19,6 +19,7 @@ import json
 import re
 import struct
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -172,10 +173,8 @@ PENCIL = f"""<svg viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg">
 # Feed posts
 
 
-def post_hello() -> str:
-    c2 = page_png("chicks", 2)
-    d3 = page_png("ducklings", 3)
-    c6 = page_png("chicks", 6)
+def post_hello(left=("chicks", 6), middle=("ducklings", 3), right=("chicks", 2)) -> str:
+    c6, d3, c2 = page_png(*left), page_png(*middle), page_png(*right)
     body = f"""
 <div class="blob" style="left:-120px;top:150px;width:360px;height:360px;background:{SUN};opacity:.45"></div>
 <div class="blob" style="right:-150px;top:-90px;width:440px;height:440px;background:{SKY};opacity:.22"></div>
@@ -236,20 +235,21 @@ def level_road() -> str:
     return html(body, W, H, SKY)
 
 
-def level_cards(levels: list[dict], heading: str, sub: str, idx: int, total: int) -> str:
+def level_cards(levels: list[dict], heading: str, sub: str, idx: int, total: int, all_ready: bool = False) -> str:
     n = len(levels)
     card_h, gap = 196, 34 if n == 4 else 52
     stack_h = n * card_h + (n - 1) * gap
     top0 = 320 + (1190 - 320 - stack_h) // 2
     step = 80 // (n - 1)
     cards = ""
-    note = "keep climbing!" if idx < total else "Free previews for Chicks &amp; Ducklings: link in bio"
+    last = "Every level has a free preview: link in bio" if all_ready else "Free previews for Chicks &amp; Ducklings: link in bio"
+    note = "keep climbing!" if idx < total else last
     # Bottom card = lowest level; climbing up and to the right.
     for i, lv in enumerate(levels):
         y = top0 + (n - 1 - i) * (card_h + gap)
         x = 86 + i * step
         num = LADDER.index(next(r for r in LADDER if r["slug"] == lv["slug"])) + 1
-        status = ('<span class="chip">Free preview</span>' if lv["ready"]
+        status = ('<span class="chip">Free preview</span>' if lv["ready"] or all_ready
                   else '<span class="chip dashed">Coming soon</span>')
         cards += f"""
 <div class="abs sticker" style="left:{x}px;top:{y}px;width:854px;height:{card_h}px;background:{lv['color']};
@@ -275,7 +275,7 @@ def level_cards(levels: list[dict], heading: str, sub: str, idx: int, total: int
     return html(body, W, H, CREAM)
 
 
-def post_levels() -> list[str]:
+def post_levels(all_ready: bool = False) -> list[str]:
     groups = [
         (["chicks", "ducklings", "bunnies", "kittens"], "Ages 3 &amp; 4", "first words, counting, letters"),
         (["puppies", "cubs", "foxes"], "Ages 5 &amp; 6", "spelling, reading aloud, times tables"),
@@ -284,7 +284,7 @@ def post_levels() -> list[str]:
     ]
     slides = [level_road()]
     for i, (slugs, head, sub) in enumerate(groups, start=2):
-        slides.append(level_cards([BY_SLUG[s] for s in slugs], head, sub, i, len(groups) + 1))
+        slides.append(level_cards([BY_SLUG[s] for s in slugs], head, sub, i, len(groups) + 1, all_ready))
     return slides
 
 
@@ -336,8 +336,7 @@ def post_how() -> str:
     return html(body, W, H, SUN)
 
 
-def post_two_grades() -> str:
-    rows = [("whales", 12), ("pandas", 9), ("foxes", 6), ("chicks", 3)]
+def post_two_grades(rows=(("whales", 12), ("pandas", 9), ("foxes", 6), ("chicks", 3))) -> str:
     out = ""
     y = 506
     for i, (slug, age) in enumerate(rows):
@@ -595,7 +594,135 @@ def check_text(where: str, text: str, pats: list[re.Pattern]) -> None:
             raise SystemExit(f"banned text {m.group(0)!r} in {where}")
 
 
+# ---------------------------------------------------------------------------------------------
+# Set 2 (fresh 9-post grid, 2026-11-06). Posts 01, 02, 07, 08 use the launch layouts above; the other five are
+# post.yaml folders rendered by ig_post.py. `instagram_launch.py set2` renders these four + set2-grid-preview.png
+# (posts not rendered yet show as a grey "to render" tile).
+
+SET2 = ["set2-01-hello", "set2-02-thirteen-levels", "set2-03-ages-3-4", "set2-04-ages-5-6", "set2-05-ages-7-8",
+        "set2-06-ages-9-12", "set2-07-two-grades-ahead", "set2-08-how-it-works", "set2-09-try-free"]
+
+SET2_CAPTIONS = {
+    "set2-01-hello": {
+        "files": ["post.png"],
+        "caption": """Hello! We're paperlessons 📄✏️
+
+Little lessons, one page at a time. We make printable reading and math worksheets for ages 3 to 12, from first picture words and counting all the way up to fractions and algebra.
+
+Every level is one PDF: print it at home, sit down together, and do a few pages a day. That's it.
+
+Free previews at the link in bio. Say hi and tell us how old your little learner is 👋""",
+        "tags": f"{TAGS_BASE} #printables #learnathome #earlyreading #earlymath #preschoolmom #homeschoolresources #paperlessons",
+        "alt": "Cream background with the paperlessons logo, the words \"Little lessons, one page at a time.\" and \"Printable reading & math, ages 3–12\". Three real worksheet pages peek up from the bottom: a sound-parts page with a crab, a page of little phrases like \"some yellow cheese\", and a page with mom and dad. A chick and a duck sit beside them.",
+    },
+    "set2-02-thirteen-levels": {
+        "files": ["slide-1.png", "slide-2.png", "slide-3.png", "slide-4.png", "slide-5.png"],
+        "caption": """Thirteen levels, one big climb 🐥🦆🐰🐱🐶🐻🦊🦉🦦🐼🐧🦁🐳
+
+From Chicks at age 3 to Whales at age 12. Every level has reading and math, the work runs about two grades ahead of school, and every level has a free preview to print and try.
+
+Swipe to see each level's age and grade.
+
+Not sure where to start? Pick the level that feels a little easy. Link in bio.""",
+        "tags": f"{TAGS_BASE} #readingpractice #mathpractice #homeschooling #homeschoolcurriculum #printables #paperlessons",
+        "alt": """Slide 1: Thirteen animal mascots on a winding road up a hill, from Chicks at the bottom to Whales at the top, titled "Thirteen levels, one big climb", with a label "13 levels, ages 3 to 12".
+
+Slide 2: "Ages 3 & 4". Level cards: Chicks, age 3, Pre-K work. Ducklings, age 3, K work. Bunnies, age 4, K–1 work. Kittens, age 4, grade 1 work. Each has a "Free preview" label.
+
+Slide 3: "Ages 5 & 6". Puppies, age 5, grade 1–2 work. Cubs, age 5, grade 2 work. Foxes, age 6, grade 3 work. Each has a "Free preview" label.
+
+Slide 4: "Ages 7 to 9". Owls, age 7, grade 4 work. Otters, age 8, grade 5 work. Pandas, age 9, grade 6 work. Each has a "Free preview" label.
+
+Slide 5: "Ages 10 to 12". Penguins, age 10, grade 7 work. Lions, age 11, grade 8 work. Whales, age 12, grade 9 work. Each has a "Free preview" label, and "Every level has a free preview: link in bio".""",
+    },
+    "set2-07-two-grades-ahead": {
+        "files": ["post.png"],
+        "caption": """Age 6? Grade 3 work. 🦊
+
+Every paperlessons level runs about two grades ahead of school, in small, steady steps. Age 3 starts with Pre-K work, age 9 does grade 6 work, and age 12 does grade 9 work.
+
+It's never a race. Start where it feels easy, do a few pages a day, and move up when three pages in a row feel comfortable.
+
+See all thirteen levels at the link in bio.""",
+        "tags": f"{TAGS_BASE} #readingpractice #mathpractice #homeschooling #afterschoolactivities #printables #paperlessons",
+        "alt": "Cream background with the headline \"Age 6? Grade 3 work.\" and the line \"Every level runs about two grades ahead of school, one small step at a time.\" Below, four cards climb like a ladder: Age 12 to Grade 9 work with a whale, Age 9 to Grade 6 work with a panda, Age 6 to Grade 3 work with a fox, Age 3 to Pre-K work with a chick.",
+    },
+    "set2-08-how-it-works": {
+        "files": ["post.png"],
+        "caption": """How it works, in three little steps:
+
+1️⃣ Pick a level. Start with the animal that fits. Little ones begin with Chicks; older kids jump in higher up.
+2️⃣ Get the whole level. One PDF with every page in order. Print it all, or a week at a time. Black and white is fine.
+3️⃣ A little every day. A few pages, about ten minutes, then off to play.
+
+Free previews at the link in bio.""",
+        "tags": f"{TAGS_BASE} #dailyroutine #learnathome #homeschoolmom #printables #worksheetsforkids #paperlessons",
+        "alt": "Yellow background titled \"How it works\" with three numbered cards: 1, Pick a level, with a sprout icon; 2, Get the whole level, one PDF, every page in order, with a printer icon; 3, A little every day, a few pages, about ten minutes, with a sun icon. The paperlessons logo and paperlessons.com sit at the bottom.",
+    },
+}
+
+
+def set2_grid_preview() -> str:
+    tiles = ""
+    for slug in SET2[::-1]:
+        folder = POSTS / slug
+        first = folder / ("post.png" if (folder / "post.png").exists() else "slide-1.png")
+        if not first.exists():  # not rendered yet (its levels' previews aren't built)
+            tiles += (f'<div style="aspect-ratio:3/4;background:#eee;display:flex;align-items:center;justify-content:center;'
+                      f'font:800 30px Nunito;color:#888;text-align:center">{slug}<br>(to render)</div>')
+            continue
+        tiles += f'<div style="aspect-ratio:3/4;background:url({data_uri(first)}) center/cover"></div>'
+    body = f"""
+<div style="padding:44px 40px 30px;display:flex;align-items:center;gap:40px">
+  <img src="{AVATAR}" style="width:190px;height:190px;border-radius:50%;border:2px solid #ddd" alt="">
+  <div style="font-family:Nunito;color:#111">
+    <div style="font-size:40px;font-weight:900">paper.lessons</div>
+    <div style="font-size:30px;font-weight:800;margin-top:8px">Paper Lessons - Printable Worksheets for Kids</div>
+    <div style="font-size:27px;font-weight:400;margin-top:6px;color:#737373">Education</div>
+    <div style="font-size:27px;font-weight:400;margin-top:4px;line-height:1.35;max-width:790px">Printable reading &amp; math for ages 3&ndash;12 ✏️ About two grades ahead of school. A few pages a day. Free previews ↓</div>
+    <div style="font-size:28px;font-weight:800;margin-top:6px;color:#00376b">paperlessons.com/ig</div>
+  </div></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">{tiles}</div>
+"""
+    return html(body, 1080, 1780, "#fff")
+
+
+def main_set2() -> None:
+    jobs = [
+        ("set2-01-hello", post_hello(left=("bunnies", 3), middle=("ducklings", 3), right=("chicks", 2))),
+        ("set2-07-two-grades-ahead", post_two_grades()),
+        ("set2-08-how-it-works", post_how()),
+    ]
+    pats = banned_patterns()
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+
+        def render(path: Path, content: str, w: int, h: int) -> None:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            pg = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=1)
+            pg.set_content(content)
+            pg.evaluate("document.fonts.ready")
+            pg.wait_for_timeout(150)
+            check_text(str(path.relative_to(ROOT)), pg.inner_text("body"), pats)
+            pg.screenshot(path=str(path))
+            pg.close()
+            assert png_size(path) == (w, h), (path, png_size(path))
+            print(path.relative_to(ROOT))
+
+        for slug, content in jobs:
+            render(POSTS / slug / "post.png", content, W, H)
+        for i, page in enumerate(post_levels(all_ready=True), start=1):
+            render(POSTS / "set2-02-thirteen-levels" / f"slide-{i}.png", page, W, H)
+        CAPTIONS.update(SET2_CAPTIONS)
+        for slug in SET2_CAPTIONS:
+            check_text(f"{slug}/caption.md", write_caption(slug), pats)
+        render(POSTS / "set2-grid-preview.png", set2_grid_preview(), 1080, 1780)
+        browser.close()
+
+
 def main() -> None:
+    if sys.argv[1:] == ["set2"]:
+        return main_set2()
     jobs: list[tuple[Path, str, int, int]] = []
     for slug, maker in [("01-hello", post_hello), ("03-a-real-page", post_real_page), ("04-how-it-works", post_how),
                         ("05-two-grades-ahead", post_two_grades), ("06-free-previews", post_previews)]:
