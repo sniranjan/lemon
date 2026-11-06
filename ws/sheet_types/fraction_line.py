@@ -11,7 +11,8 @@ one task (rules, merged level → section → part):
 When a page has as many lines as denominators, each denominator is on it exactly once.
 
 Only whole numbers are stored (ticks, numerators); the template turns them into pixel positions,
-so verify can check every mark exactly. Answers are written "num/den" ("dot on 3/4" for marks).
+so verify can check every mark exactly. One answer per line: "num/den", "dot on 3/4" for a mark,
+"1/6 and 5/6" for the empty labels of a fill line.
 """
 
 from __future__ import annotations
@@ -28,7 +29,7 @@ FILL_BLANKS = 2
 def answers_for(item: dict) -> list[str]:
     den = item["den"]
     if item["task"] == "fill":
-        return [f"{k}/{den}" for k in item["blanks"]]
+        return [" and ".join(f"{k}/{den}" for k in item["blanks"])]
     frac = f"{item['num']}/{den}"
     return [f"dot on {frac}"] if item["task"] == "mark" else [frac]
 

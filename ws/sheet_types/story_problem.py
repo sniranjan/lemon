@@ -3,7 +3,7 @@
 Frames live in content/math/story_problems.yaml (see its header): a sentence with number slots,
 ranges for the numbers, and the answer as a small expression. The generator fills the numbers in;
 verify fills the frame in again from the stored numbers, recomputes every answer and checks that
-the story stays true to life (whole answers above 0, nothing used up that isn't there, all
+the story stays true to life (whole answers of 2 or more, so units stay plural, nothing used up that isn't there, all
 numbers within `max_value`). Rules (merged level → section → part):
 - `problems`: problems per page (default 3).
 - `ops`: one-step signs every page shows ("*" and "/": a times story and a sharing story).
@@ -72,7 +72,7 @@ def fill(frame: dict, picks: dict[str, int], max_value: int) -> tuple[dict[str, 
             return None
     except ValueError:
         return None
-    if answer < 1 or any(v > max_value or v < 1 for v in [*values.values(), answer]):
+    if answer < 2 or any(v > max_value or v < 1 for v in [*values.values(), answer]):
         return None
     return values, answer
 
