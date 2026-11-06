@@ -24,6 +24,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Puppies Reading (3A): spelling patterns, word endings, syllables, sentence copying
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
+    # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
+    "passage_questions", "word_builder", "full_sentence_answer",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
