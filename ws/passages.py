@@ -254,8 +254,9 @@ def plan_passages(level: Level, variant: int = 1) -> LevelPlan:
     for page in range(1, level.pages + 1):
         spec = resolve_page(level, page)
         rules = spec.rules
-        if "passages" in rules and rules.get("spread"):
-            # two-page spreads (Pandas Reading on, ws/spreads.py): a reading page, then its questions page
+        if "passages" in rules and rules.get("spread") and spec.sheet_type == "passage_spread":
+            # two-page spreads (Pandas Reading on, ws/spreads.py): a reading page, then its questions page.
+            # Otters Reading also uses `spread` with its own read_then_answer pages (handled below).
             code = rules["passages"]
             first = (page - level.section(spec.section).pages[0]) % 2 == 0
             if first:
