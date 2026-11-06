@@ -12,6 +12,7 @@ from ws.syllabus import all_levels, load_level
 
 EN7A, MA6A, ZI = load_level("english", "7A"), load_level("math", "6A"), load_level("pencil", "ZI")
 MA5A = load_level("math", "5A")
+ZII = load_level("pencil", "ZII")
 
 # (level, page, sheet type override) → one golden file per sheet type
 GOLDEN_PAGES = [
@@ -27,6 +28,10 @@ GOLDEN_PAGES = [
     (MA5A, 200, None),   # number_read with tens bars, up to 100
     (ZI, 11, None),      # colouring, two shapes
     (ZI, 100, None),     # line_path, mixed curves
+    (ZII, 5, None),      # line_path, shape to shape
+    (ZII, 42, None),     # line_path, story pairs on vertical arcs
+    (ZII, 72, None),     # line_path, vertical zigzag
+    (ZII, 92, None),     # line_path, corners and S-curves
 ]
 
 
@@ -46,7 +51,7 @@ def test_golden(level, page, sheet_type, out_dir, fixture_content, golden):
     golden(f"{sheet.id}.json", sheet.model_dump_json(indent=2) + "\n")
 
 
-@pytest.mark.parametrize("level", [MA6A, MA5A, ZI], ids=lambda l: l.level)
+@pytest.mark.parametrize("level", [MA6A, MA5A, ZI, ZII], ids=lambda l: l.level)
 def test_whole_level_passes_type_checks(level, fixture_content):
     plan = gen.build_plan(level)
     for page in range(1, level.pages + 1):
@@ -96,6 +101,65 @@ def test_line_paths_flow_and_directions(fixture_content):
     assert seen == {"horizontal", "vertical", "diagonal"}
 
 
+def test_ZII_paths_never_turn_back_and_progress(fixture_content):
+    from ws.sheet_types.line_path import sample_path
+
+    plan = gen.build_plan(ZII)
+    sheets = {p: gen.build_sheet(ZII, p, plan) for p in range(1, 101)}
+    kinds = set()
+    for page, sheet in sheets.items():
+        assert len({i["direction"] for i in sheet.items}) == 1, sheet.id   # one direction per sheet
+        for item in sheet.items:
+            kinds.add(item.get("path_kind"))
+            pts = sample_path(item["d"])
+            axis = 1 if item["direction"] == "vertical" else 0
+            assert all(b[axis] >= a[axis] - 1e-6 for a, b in zip(pts, pts[1:])), sheet.id
+            assert "dot" in item if page <= 60 else "dot" not in item
+            if page <= 30:
+                assert "shape" in item and "target" not in item
+            elif page <= 60:
+                assert item["picture"] != item["target"]
+    assert {"straight", "arc", "wave", "zigzag", "steps", "bumps", "s_curve"} <= kinds
+    lanes = [sheets[p].items[0]["lane"] for p in range(1, 101)]
+    assert lanes == sorted(lanes, reverse=True) and lanes[0] == 52 and lanes[-1] < 40
+    span = lambda s: abs(s.items[0]["end"][0] - s.items[0]["start"][0]) + abs(s.items[0]["end"][1] - s.items[0]["start"][1])
+    assert span(sheets[10]) > span(sheets[1]) and span(sheets[70]) > span(sheets[61])
+
+
+def test_line_path_verify_catches_backward_and_crowded_lanes(fixture_content):
+    import copy
+
+    plan = gen.build_plan(ZII)
+    lp = registry.get("line_path")
+    sheet = gen.build_sheet(ZII, 61, plan)          # horizontal zigzags
+    bad = copy.deepcopy(sheet)
+    (x0, y0), (x1, y1) = sheet.items[0]["start"], sheet.items[0]["end"]
+    bad.items[0]["d"] = f"M{x0:.1f} {y0:.1f} L{x0 + 200:.1f} {y0 - 40:.1f} L{x0 + 150:.1f} {y0 + 40:.1f} L{x1:.1f} {y1:.1f}"
+    assert any("turns back (left)" in i.message for i in lp.verify(bad))
+    flat_left = copy.deepcopy(gen.build_sheet(ZII, 92, plan))   # vertical lanes
+    item = flat_left.items[0]
+    assert item["direction"] == "vertical"
+    (vx, vy) = item["start"]
+    item["d"] = f"M{vx:.1f} {vy:.1f} L{vx:.1f} {vy + 100:.1f} L{vx - 80:.1f} {vy + 100:.1f} L{vx - 80:.1f} {vy + 300:.1f}"
+    assert any("flat to the left" in i.message for i in lp.verify(flat_left))
+    crowded = copy.deepcopy(sheet)
+    crowded.items[1]["d"] = crowded.items[0]["d"]
+    crowded.items[1]["start"], crowded.items[1]["end"] = crowded.items[0]["start"], crowded.items[0]["end"]
+    assert any("too close together" in i.message for i in lp.verify(crowded))
+    near_edge = copy.deepcopy(sheet)
+    near_edge.items[0]["d"] = f"M{x0:.1f} 5.0 L{x1:.1f} 5.0"
+    assert any("too close to the page edge" in i.message for i in lp.verify(near_edge))
+
+
+def test_story_pairs_use_existing_pictures():
+    from ws.content import line_stories, picture_path
+
+    pairs = line_stories()
+    assert len(pairs) >= 20 and len(set(pairs)) == len(pairs)
+    for a, b in pairs:
+        assert a != b and picture_path(a).exists() and picture_path(b).exists(), (a, b)
+
+
 def test_select_pages_continues_and_completes(out_dir, fixture_content):
     assert gen.select_pages(MA6A, section="A", count=5) == [1, 2, 3, 4, 5]
     gen.generate_pages(MA6A, [1, 2, 3, 4, 5])
@@ -110,6 +174,7 @@ def test_select_pages_continues_and_completes(out_dir, fixture_content):
 WORST_CASES = [
     (EN7A, [4], "word_picture_sentence"), (EN7A, [101, 141, 142, 143], None),
     (MA6A, [75, 81, 131, 132, 190], None), (MA5A, [91, 100, 130, 181, 200], None), (ZI, [1, 11, 30, 42, 50, 90, 100], None),
+    (ZII, [10, 20, 30, 31, 50, 60, 70, 80, 90, 100], None),
 ]
 
 
@@ -123,7 +188,7 @@ def test_worst_case_pages_render_cleanly(level, pages, sheet_type, out_dir, fixt
         assert r.problems == [], (r.html.name, r.problems)
 
 
-@pytest.mark.parametrize("level", [MA6A, ZI, EN7A], ids=lambda l: l.level)
+@pytest.mark.parametrize("level", [MA6A, ZI, ZII, EN7A], ids=lambda l: l.level)
 def test_no_duplicate_sheets_in_level(level, fixture_content):
     plan = gen.build_plan(level)
     seen = {}

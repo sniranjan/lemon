@@ -1,0 +1,90 @@
+{
+  "id": "ZII-B-012",
+  "subject": "pencil",
+  "level": "ZII",
+  "section": "B",
+  "part": 2,
+  "sheet_type": "line_path",
+  "page_number": 42,
+  "variant": 1,
+  "seed": 17635410300278382417,
+  "title": "Off they go",
+  "parent_tip": "Name both pictures and ask where each one wants to go. Start at the dot and draw slowly to the end.",
+  "items": [
+    {
+      "kind": "path",
+      "d": "M143.1 52.0 Q39.9 263.2 143.1 474.4",
+      "start": [
+        143.1,
+        52
+      ],
+      "end": [
+        143.1,
+        474.4
+      ],
+      "picture": "baby",
+      "target": "bed",
+      "lane": 44,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "arc",
+      "join": "round",
+      "dot": [
+        119.2,
+        108.5
+      ]
+    },
+    {
+      "kind": "path",
+      "d": "M377.8 52.0 Q274.6 263.2 377.8 474.4",
+      "start": [
+        377.8,
+        52
+      ],
+      "end": [
+        377.8,
+        474.4
+      ],
+      "picture": "bee",
+      "target": "flower",
+      "lane": 44,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "arc",
+      "join": "round",
+      "dot": [
+        353.9,
+        108.5
+      ]
+    },
+    {
+      "kind": "path",
+      "d": "M612.5 52.0 Q509.2 263.2 612.5 474.4",
+      "start": [
+        612.5,
+        52
+      ],
+      "end": [
+        612.5,
+        474.4
+      ],
+      "picture": "bird",
+      "target": "tree",
+      "lane": 44,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "arc",
+      "join": "round",
+      "dot": [
+        588.6,
+        108.5
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

@@ -60,6 +60,13 @@ def line_targets() -> tuple[str, ...]:
     return tuple(yaml.safe_load((CONTENT_DIR / "pencil" / "line_targets.yaml").read_text()))
 
 
+@lru_cache(maxsize=None)
+def line_stories() -> tuple[tuple[str, str], ...]:
+    """(start picture, end picture) pairs that make a little story: the bee goes to the flower."""
+    data = yaml.safe_load((CONTENT_DIR / "pencil" / "line_stories.yaml").read_text())
+    return tuple((d["from"], d["to"]) for d in data)
+
+
 def clear_caches() -> None:
-    for f in (vocab, tips, licenses, stories, math_objects, line_targets):
+    for f in (vocab, tips, licenses, stories, math_objects, line_targets, line_stories):
         f.cache_clear()

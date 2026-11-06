@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ducklings · Pencil skills · page 5</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #6B4FBB;
+  --tint: #EFEBFA;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.canvas { flex: 1; min-height: 0; display: flex; }
+.canvas svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Ducklings · Pencil skills</div>
+      <div class="title-row"><h1>Shape to shape</h1><span class="pill">Ducklings · 5</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Name each shape together (circle, star, heart). Start at the dot and stay inside the lane all the way to its twin.</div>
+  <main class="body">
+    <div class="canvas">
+      <svg viewBox="0 0 704 680" preserveAspectRatio="xMidYMid meet">
+        <path d="M52.0 170.0 L492.0 170.0" fill="none" stroke="#1d1d1f" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M52.0 170.0 L492.0 170.0" fill="none" stroke="var(--tint)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="52" cy="170.0" r="44" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+        <svg x="24" y="142.0" width="56" height="56" viewBox="-4 -4 108 108"><path d="M50 6 L84 42 L50 94 L16 42 Z" fill="var(--tint)" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+        <circle cx="113.0" cy="170.0" r="11" fill="#1d1d1f"/>
+        <circle cx="492.0" cy="170.0" r="44" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+        <svg x="464.0" y="142.0" width="56" height="56" viewBox="-4 -4 108 108"><path d="M50 6 L84 42 L50 94 L16 42 Z" fill="var(--tint)" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+        <path d="M52.0 510.0 L492.0 510.0" fill="none" stroke="#1d1d1f" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M52.0 510.0 L492.0 510.0" fill="none" stroke="var(--tint)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="52" cy="510.0" r="44" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+        <svg x="24" y="482.0" width="56" height="56" viewBox="-4 -4 108 108"><path d="M50 8 A42 42 0 1 1 49.9 8 Z" fill="var(--tint)" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+        <circle cx="113.0" cy="510.0" r="11" fill="#1d1d1f"/>
+        <circle cx="492.0" cy="510.0" r="44" fill="#fff" stroke="#1d1d1f" stroke-width="3"/>
+        <svg x="464.0" y="482.0" width="56" height="56" viewBox="-4 -4 108 108"><path d="M50 8 A42 42 0 1 1 49.9 8 Z" fill="var(--tint)" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+      </svg>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Ducklings · Pencil skills · page 5</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Fixed story pairs for tests (both pictures exist in assets/pictures/).
+- { from: bee,    to: flower }
+- { from: mouse,  to: cheese }
+- { from: monkey, to: banana }
+- { from: bunny,  to: carrot }
+- { from: dog,    to: ball }
+- { from: bird,   to: tree }
+- { from: key,    to: door }
+- { from: baby,   to: bed }

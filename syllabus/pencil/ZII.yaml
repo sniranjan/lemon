@@ -1,0 +1,71 @@
+subject: pencil
+level: ZII
+title: Pencil skills 2
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [5, 38, 66, 92]   # this strand's pages in the level's free preview (ws preview)
+aims:
+  - Draw a line from one shape or picture to another, along longer and narrower lanes
+  - Draw zigzags, right-angle corners and S-curves without lifting or turning back
+pages: 100
+daily_pages: 5
+sct_minutes_per_page: null
+# Section names and part counts follow the chart; the rules inside each part are ours.
+# Every lane starts at a dot. In A the dot sits beside a shape and the lane ends at the same
+# shape; in B it sits beside a picture and ends at a picture it goes with (bee → flower,
+# content/pencil/line_stories.yaml); in C and D it ends at a small picture as in ZI.
+# Lines run left→right or top→bottom and never turn back: zigzags and corners may move up or
+# down while moving right, but never left (verify samples the whole lane to check this).
+# lane_px narrows across the level (ZI ended at 52); length_frac grows within each part.
+rules:
+  flow: [left_to_right, top_to_bottom]
+  start_marker: dot
+  end_marker: picture
+  arrows: false
+  child_text: false
+  length_frac: [0.6, 0.9]
+sections:
+  - code: A
+    name: Shapes & Pictures
+    public_name: Shape to Shape
+    pages: [1, 30]
+    sheet_types: [line_path]
+    source: ours
+    rules: { start_marker: shape, end_marker: shape }
+    parts:
+      - { part: 1, pages: [1, 10],  rules: { path: straight, directions: [horizontal], paths_per_sheet: 2, lane_px: 52 } }
+      - { part: 2, pages: [11, 20], rules: { path: straight, directions: [horizontal, vertical], paths_per_sheet: 3, lane_px: 48 } }
+      - { part: 3, pages: [21, 30], rules: { path: arc, humps: 1, directions: [horizontal, vertical], paths_per_sheet: 3, lane_px: 48 } }
+
+  - code: B
+    name: Shapes & Pictures (Stories)
+    public_name: Story Paths
+    pages: [31, 60]
+    sheet_types: [line_path]
+    source: ours
+    rules: { start_marker: picture, end_marker: picture, length_frac: [0.7, 1.0] }
+    parts:
+      - { part: 1, pages: [31, 40], rules: { path: straight, directions: [horizontal, vertical], paths_per_sheet: 3, lane_px: 44 } }
+      - { part: 2, pages: [41, 50], rules: { path: arc, humps: 1, directions: [horizontal, vertical], paths_per_sheet: 3, lane_px: 44 } }
+      - { part: 3, pages: [51, 60], rules: { path: wave, humps: 2, directions: [horizontal, vertical], paths_per_sheet: 2, lane_px: 40 } }
+
+  - code: C
+    name: Back & Forth
+    public_name: Zigzag Paths
+    pages: [61, 80]
+    sheet_types: [line_path]
+    source: ours
+    rules: { path: zigzag, length_frac: [0.7, 1.0] }
+    parts:
+      - { part: 1, pages: [61, 70], rules: { turns: 3, directions: [horizontal], paths_per_sheet: 2, lane_px: 40 } }
+      - { part: 2, pages: [71, 80], rules: { turns: [4, 5], directions: [horizontal, vertical], paths_per_sheet: 2, lane_px: 36 } }
+
+  - code: D
+    name: Corners & Curves
+    public_name: Twists and Turns
+    pages: [81, 100]
+    sheet_types: [line_path]
+    source: ours
+    rules: { length_frac: [0.8, 1.0] }
+    parts:
+      - { part: 1, pages: [81, 90],  rules: { path: mixed, kinds: [steps, bumps], steps: 2, bumps: [1, 2], directions: [horizontal, vertical], paths_per_sheet: 2, lane_px: 36 } }
+      - { part: 2, pages: [91, 100], rules: { path: mixed, kinds: [steps, bumps, s_curve], steps: [2, 3], bumps: 2, bends: [1, 3], directions: [horizontal, vertical], paths_per_sheet: 2, lane_px: 32 } }

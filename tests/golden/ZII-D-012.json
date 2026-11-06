@@ -1,0 +1,56 @@
+{
+  "id": "ZII-D-012",
+  "subject": "pencil",
+  "level": "ZII",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "line_path",
+  "page_number": 92,
+  "variant": 1,
+  "seed": 16409964818255609521,
+  "title": "Corners and curves",
+  "parent_tip": "Run a finger along the path first and say \"turn\" at every corner. Then draw it slowly from the dot to the picture.",
+  "items": [
+    {
+      "kind": "path",
+      "d": "M88.0 27.0 C88.0 109.4 264.0 109.4 264.0 191.7 C264.0 274.1 88.0 274.1 88.0 356.4 C88.0 438.8 264.0 438.8 264.0 521.2",
+      "start": [
+        88.0,
+        27.0
+      ],
+      "end": [
+        264.0,
+        521.2
+      ],
+      "target": "cat",
+      "lane": 32,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "s_curve",
+      "join": "round"
+    },
+    {
+      "kind": "path",
+      "d": "M440.0 27.0 C440.0 150.5 616.0 150.5 616.0 274.1 C616.0 397.6 440.0 397.6 440.0 521.2",
+      "start": [
+        440.0,
+        27.0
+      ],
+      "end": [
+        440.0,
+        521.2
+      ],
+      "target": "apple",
+      "lane": 32,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "s_curve",
+      "join": "round"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}
