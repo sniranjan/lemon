@@ -52,7 +52,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
       }}
       tabIndex={0}
       aria-label={`${level.name}: ${level.blurb}`}
-      className="card-rise sticker group relative h-[472px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
+      className="card-rise sticker group relative h-[450px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
       style={{ animationDelay: `${index * 70}ms` }}
     >
       {/* The sheet, tucked into the pocket. */}
@@ -80,19 +80,22 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
         </div>
 
         <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 peek:opacity-0">
-          <img src={level.mascot} alt="" className="mascot-bob size-16 shrink-0 rounded-full border-[3px] border-ink bg-white p-1.5" />
-          <div className="flex flex-wrap gap-1.5">
-            <span className="rounded-full border-2 border-ink bg-ink px-2.5 py-0.5 text-xs font-extrabold text-white">
-              {gradeLabel(level.grade)}
-            </span>
+          <div className="flex shrink-0 flex-col items-center gap-1">
+            <img src={level.mascot} alt="" className="mascot-bob size-16 rounded-full border-[3px] border-ink bg-white p-1.5" />
             <span
               title={Object.entries(level.pages)
                 .map(([s, n]) => `${n} ${SUBJECT_LABEL[s as keyof typeof SUBJECT_LABEL].toLowerCase()}`)
                 .join(" + ")}
-              className="rounded-full border-2 border-ink bg-sun px-2.5 py-0.5 text-xs font-extrabold"
+              className="text-xs font-extrabold whitespace-nowrap"
             >
               {level.totalPages} pages
             </span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            <span className="rounded-full border-2 border-ink bg-ink px-2.5 py-0.5 text-xs font-extrabold text-white">
+              {gradeLabel(level.grade)}
+            </span>
+
             {level.subjects.map((s) => (
               <span
                 key={s}
