@@ -64,17 +64,57 @@ picture_colors:
   grapes: purple
   pillow: purple
   doll: purple
+  # Ducklings word batch 1 (checked on the drawn pictures)
+  jacket: green
+  mitten: blue
+  skirt: pink
+  bag: red
+  bucket: red
+  sofa: blue
+  comb: blue
+  brush: purple
+  chick: yellow
+  whale: blue
+  crab: red
+
+# big / little: nouns each is true of, in real life and in the picture (the picture is drawn large or
+# small to match). Hand-checked like the colors: no "a little whale", no "a big bee". No mass or plural nouns.
+sizes:
+  big: [dog, bear, horse, cow, lion, whale, tree, truck, bus, train, tractor, plane, boat, ball, cake,
+        teddy, box, pig, sheep, goat, balloon]
+  little: [mouse, bee, bird, chick, kitten, puppy, snail, crab, frog, duck, fish, egg, cookie, key, rock,
+           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat]
+
+# hot / cold: only things that really are (and whose pictures don't say otherwise; the soup steams).
+temperatures:
+  hot: [sun, soup]
+  cold: [snow, snowman, milk, juice]
 
 # Who can do each action ("The dog can run."). People (the `person` slot and "I") can do all of these.
+# A sentence with an animal doing an action shows the animal only (the action pictures show a child).
 can_do:
-  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep]
-  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse]
-  swim: [fish, duck, frog, turtle, dog]
-  eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion]
-  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby]
-  sit: [dog, cat, monkey, bunny]
+  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten]
+  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten]
+  swim: [fish, duck, frog, turtle, dog, whale]
+  eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion,
+        puppy, kitten, chick, crab, snail, whale]
+  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten]
+  sit: [dog, cat, monkey, bunny, puppy, kitten]
   clap: []
   wash: []
+  # Ducklings word batch 1
+  hop: [bunny, frog, bird]
+  sing: [bird]
+  dance: []
+  nap: [cat, dog, bear, pig, lion, baby, puppy, kitten]
+  dig: [dog, bunny, puppy, crab]
+  walk: [dog, cat, horse, cow, pig, sheep, goat, duck, bear, lion, mouse, turtle, monkey, puppy, kitten, chick, crab]
+  kick: [horse]
+  wave: []
+  read: []
+  draw: []
+  climb: [monkey, cat, bear, goat, mouse, kitten, snail]
+  hide: [cat, mouse, bunny, turtle, kitten, crab, snail]
 
 # Things that go together, for "mom and dad" phrases (both words are pictured).
 pairs:
@@ -98,6 +138,11 @@ pairs:
   - [eye, ear]
   - [apple, pear]
   - [bowl, spoon]
+  - [brush, comb]
+  - [fork, spoon]
+  - [hat, mitten]
+  - [bucket, ball]
+  - [teddy, doll]
 
 # Slot kinds: which words may fill a slot. `categories` and `words` add words; `except` removes them;
 # `colored: true` keeps only words in picture_colors; `people: true` marks a subject that can do any
@@ -106,13 +151,18 @@ slots:
   thing:   { categories: [food, toys, animals, nature, home, vehicles, clothes] }
   colored: { colored: true }
   colored_mine: { categories: [toys, clothes, home], colored: true }   # "my red hat"
-  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny] }
+  mine:    { categories: [toys, clothes, home, body, family], words: [dog, cat, fish, bunny, puppy, kitten] }
   animal:  { categories: [animals], subject: true }
   person:  { words: [mom, dad, grandma, grandpa], people: true }
+  size:    { words: [big, little] }
+  sized:   { described_by: sizes }      # nouns in the `sizes` table
+  temp:    { words: [hot, cold] }
+  temp_thing: { described_by: temperatures }
+  temp_food: { categories: [food], described_by: temperatures }   # "I like hot soup."
   action:  { categories: [actions], except: [wash] }          # "wash" needs an object: "I wash my hand."
   color:   { categories: [colors] }
   eatable: { categories: [food], except: [milk, juice, soup] }  # "I eat ..." (not drinks)
-  washable: { words: [hand, foot, hair] }
+  washable: { words: [hand, foot, hair, face] }
   family:  { categories: [family] }
 
 # Frame groups. A section part lists the groups its pages use (`phrase_groups`), one new idea per part.
@@ -126,3 +176,4 @@ sentence_groups:        # 6A-C: short sentences, recited three times
   colors: ["I see {a} {color} {colored}.", "The {colored} is {color}.", "I like my {color} {colored_mine}."]
   can: ["The {animal} can {action}.", "I can {action}.", "{person} can {action}."]
   daily: ["I like to {action}.", "I eat {a} {eatable}.", "I wash my {washable}.", "I love my {family}."]
+  describe: ["The {sized} is {size}.", "I see {a} {size} {sized}.", "The {temp_thing} is {temp}.", "I like {temp} {temp_food}."]

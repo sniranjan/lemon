@@ -1,0 +1,181 @@
+{
+  "id": "EN-6A-C-043",
+  "subject": "english",
+  "level": "6A",
+  "section": "C",
+  "part": 5,
+  "sheet_type": "sentence_recite",
+  "page_number": 143,
+  "variant": 1,
+  "seed": 7942393589140956978,
+  "title": "Say it three times",
+  "parent_tip": "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "The soup is hot.",
+      "runs": [
+        [
+          "The",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "soup",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "is",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "hot",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "The {temp_thing} is {temp}.",
+      "slots": {
+        "temp_thing": "soup",
+        "temp": "hot"
+      },
+      "word": "soup",
+      "words": [
+        "soup",
+        "hot"
+      ],
+      "pictures": [
+        "soup"
+      ],
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "I like cold milk.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "like",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "cold",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "milk",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I like {temp} {temp_food}.",
+      "slots": {
+        "temp": "cold",
+        "temp_food": "milk"
+      },
+      "word": "milk",
+      "words": [
+        "cold",
+        "milk"
+      ],
+      "pictures": [
+        "milk"
+      ],
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "The snow is cold.",
+      "runs": [
+        [
+          "The",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "snow",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "is",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "cold",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "The {temp_thing} is {temp}.",
+      "slots": {
+        "temp_thing": "snow",
+        "temp": "cold"
+      },
+      "word": "snow",
+      "words": [
+        "snow",
+        "cold"
+      ],
+      "pictures": [
+        "snow"
+      ],
+      "times": 3
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "hot"
+  ],
+  "review_words": [
+    "cold",
+    "milk",
+    "snow",
+    "soup"
+  ]
+}

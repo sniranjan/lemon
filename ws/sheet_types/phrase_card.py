@@ -28,6 +28,8 @@ def phrase_items(ctx: GenContext, kind: str) -> tuple[list[dict], list[str], lis
         items.append({"kind": kind, "text": p["text"], "runs": runs, "frame": p["frame"], "slots": p["slots"],
                       "word": p["pictures"][0] if p["pictures"] else p["words"][0],
                       "words": p["words"], "pictures": p["pictures"]})
+        if p.get("picture_size"):
+            items[-1]["picture_size"] = p["picture_size"]
     return items, list(entry.new_words), list(entry.review_words)
 
 
@@ -52,6 +54,11 @@ def check_phrase_items(sheet: Sheet, kind: str, limit_rule: str) -> list[Issue]:
     missing = [w for w in sheet.new_words if w not in on_page]
     if missing:
         issues.append(error(sheet, f"new word(s) {missing} are not used on the page"))
+    bank = vocab_by_word()
+    pictured = {p for i in items for p in i["pictures"]}
+    unpictured = [w for w in sheet.new_words if w in bank and bank[w].picture and w not in pictured]
+    if unpictured:
+        issues.append(error(sheet, f"new word(s) {unpictured} are used but their picture isn't shown"))
     return issues
 
 

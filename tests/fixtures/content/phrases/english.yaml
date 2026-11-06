@@ -21,3 +21,4 @@ sentence_groups:
   colors: ["Here is my {mine}."]
   can: ["Look at the {thing}."]
   daily: ["I like the {thing}."]
+  describe: ["I like my {mine}."]

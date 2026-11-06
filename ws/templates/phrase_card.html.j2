@@ -8,12 +8,16 @@
 /* long pairs ("grandma and grandpa") wrap to two lines, never three */
 .stack .phrase { flex: 1; min-width: 0; font-size: 58px; line-height: 1.1; }
 .stack .phrase b { font-weight: 700; }
+/* big / little: the noun's picture fills its box, or sits small at the bottom of it */
+.stack .pics.sized { align-items: flex-end; }
+.stack .pics img.size-big { width: 230px; }
+.stack .pics img.size-little { width: 80px; }
 {% endblock %}
 {% block body %}
     <div class="stack">
 {% for item in sheet.items if item.kind == "phrase" %}
       <div class="card">
-        <div class="pics{% if item.pictures | length > 1 %} two{% endif %}">{% for p in item.pictures %}<img src="{{ root }}/assets/pictures/{{ p }}.svg" alt="">{% endfor %}</div>
+        <div class="pics{% if item.pictures | length > 1 %} two{% endif %}{% if item.get("picture_size") %} sized{% endif %}">{% for p in item.pictures %}<img src="{{ root }}/assets/pictures/{{ p }}.svg" alt=""{% if item.get("picture_size") %} class="size-{{ item.get("picture_size") }}"{% endif %}>{% endfor %}</div>
         <div class="phrase">{% for text, bold in item.runs %}{% if bold %}<b>{{ text }}</b>{% else %}{{ text }}{% endif %}{% endfor %}</div>
       </div>
 {% endfor %}

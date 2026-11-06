@@ -64,6 +64,10 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
 /* long pairs ("grandma and grandpa") wrap to two lines, never three */
 .stack .phrase { flex: 1; min-width: 0; font-size: 58px; line-height: 1.1; }
 .stack .phrase b { font-weight: 700; }
+/* big / little: the noun's picture fills its box, or sits small at the bottom of it */
+.stack .pics.sized { align-items: flex-end; }
+.stack .pics img.size-big { width: 230px; }
+.stack .pics img.size-little { width: 80px; }
 </style>
 </head>
 <body>

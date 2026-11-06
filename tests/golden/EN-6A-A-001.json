@@ -13,16 +13,6 @@
   "items": [
     {
       "kind": "grid",
-      "word": "dog",
-      "picture": "dog"
-    },
-    {
-      "kind": "grid",
-      "word": "cat",
-      "picture": "cat"
-    },
-    {
-      "kind": "grid",
       "word": "ball",
       "picture": "ball"
     },
@@ -30,14 +20,24 @@
       "kind": "grid",
       "word": "apple",
       "picture": "apple"
+    },
+    {
+      "kind": "grid",
+      "word": "rainbow",
+      "picture": "rainbow"
+    },
+    {
+      "kind": "grid",
+      "word": "fish",
+      "picture": "fish"
     }
   ],
   "answer_key": null,
   "new_words": [],
   "review_words": [
-    "dog",
-    "cat",
     "ball",
-    "apple"
+    "apple",
+    "rainbow",
+    "fish"
   ]
 }
