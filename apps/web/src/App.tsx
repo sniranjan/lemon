@@ -2,6 +2,7 @@ import { ArrowDown, BookOpen, Calculator, Pencil, Printer, Sprout, Sun } from "l
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { SectionHeading } from "@/components/SectionHeading";
+import { LegalLinks, LegalPage, isLegalPath } from "@/components/LegalPage";
 import { Library } from "@/components/Library";
 import { OrderPage } from "@/components/OrderPage";
 import { SheetPreview } from "@/components/SheetPreview";
@@ -20,6 +21,10 @@ export default function App() {
       {isOrderPage() ? (
         <main>
           <OrderPage />
+        </main>
+      ) : isLegalPath(location.pathname) ? (
+        <main>
+          <LegalPage path={location.pathname} />
         </main>
       ) : (
         <main>
@@ -227,6 +232,10 @@ const FAQ = [
     a: "About ten minutes for little ones, 15 to 20 for older kids. Short and happy beats long and tired.",
   },
   {
+    q: "Can I get a refund?",
+    a: "No. Levels are instant digital downloads, so all sales are final. That's why every level has a free preview: try it with your child first. If a file doesn't work, email hello@paperlessons.com and we'll fix it.",
+  },
+  {
     q: "What if a level feels too hard?",
     a: "Go back a few pages and repeat them. Doing the same step again until it feels easy is how the next step becomes easy too.",
   },
@@ -260,6 +269,7 @@ function Footer() {
     <footer className="border-t-[3px] border-ink bg-white px-4 py-10 sm:px-6">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <Logo />
+        <LegalLinks />
         <p className="text-sm font-semibold text-ink/60">
           © {new Date().getFullYear()} paperlessons · Made with care for little learners
         </p>
