@@ -50,7 +50,7 @@ don't look alike.
 | 22 | crib | home | The baby sleeps in a crib. | crib with bars |
 | 23 | brown | colors (`needs_color`) | The bear is brown. | brown crayon (`kind: color_swatch`) |
 | 24 | camel | animals | The camel has a hump. | camel, one hump, side view |
-| 25 | push | actions | I push the swing. | child pushing a swing |
+| 25 | pour | actions | I pour the milk. | child pouring milk from a jug into a cup |
 | 26 | feather | nature | The feather is soft. | single feather |
 | 27 | bib | clothes | The baby wears a bib. | bib with ties |
 | 28 | cherry | food | A cherry is small. | two cherries on a stem |
