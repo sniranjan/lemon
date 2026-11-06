@@ -1,0 +1,129 @@
+{
+  "id": "MA-M7-E-001",
+  "subject": "math",
+  "level": "M7",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "expression_eval",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 4312642817495436668,
+  "title": "Collect like terms",
+  "parent_tip": "x on its own means 1x, and −x means −1x. A term keeps the sign in front of it.",
+  "items": [
+    {
+      "kind": "tidy",
+      "n": 1,
+      "task": "combine",
+      "src": "-3*p + 3 - 4*p + 5",
+      "show": [
+        "−3p + 3 − 4p + 5"
+      ],
+      "answer": "−7p + 8"
+    },
+    {
+      "kind": "tidy",
+      "n": 2,
+      "task": "combine",
+      "src": "-6*n - 9*p + 3*p + 4*n",
+      "show": [
+        "−6n − 9p + 3p + 4n"
+      ],
+      "answer": "−2n − 6p"
+    },
+    {
+      "kind": "tidy",
+      "n": 3,
+      "task": "combine",
+      "src": "4 - 6*p + 2 + 2*p",
+      "show": [
+        "4 − 6p + 2 + 2p"
+      ],
+      "answer": "−4p + 6"
+    },
+    {
+      "kind": "tidy",
+      "n": 4,
+      "task": "combine",
+      "src": "2*p - 6*p + 7*t + 4*t",
+      "show": [
+        "2p − 6p + 7t + 4t"
+      ],
+      "answer": "−4p + 11t"
+    },
+    {
+      "kind": "tidy",
+      "n": 5,
+      "task": "combine",
+      "src": "p - 4*p + 2 - 6",
+      "show": [
+        "p − 4p + 2 − 6"
+      ],
+      "answer": "−3p − 4"
+    },
+    {
+      "kind": "tidy",
+      "n": 6,
+      "task": "combine",
+      "src": "2*t - 6*p + 5*p + 3*t",
+      "show": [
+        "2t − 6p + 5p + 3t"
+      ],
+      "answer": "−p + 5t"
+    },
+    {
+      "kind": "tidy",
+      "n": 7,
+      "task": "combine",
+      "src": "9*x + 1 - 8 + 5*x",
+      "show": [
+        "9x + 1 − 8 + 5x"
+      ],
+      "answer": "14x − 7"
+    },
+    {
+      "kind": "tidy",
+      "n": 8,
+      "task": "combine",
+      "src": "9*k - 7*t - 9*k + 9*t",
+      "show": [
+        "9k − 7t − 9k + 9t"
+      ],
+      "answer": "2t"
+    },
+    {
+      "kind": "tidy",
+      "n": 9,
+      "task": "combine",
+      "src": "7 + 7*p - 8*p - 6",
+      "show": [
+        "7 + 7p − 8p − 6"
+      ],
+      "answer": "−p + 1"
+    },
+    {
+      "kind": "tidy",
+      "n": 10,
+      "task": "combine",
+      "src": "8*y - 6*x + 9*x - 2*y",
+      "show": [
+        "8y − 6x + 9x − 2y"
+      ],
+      "answer": "3x + 6y"
+    }
+  ],
+  "answer_key": [
+    "−7p + 8",
+    "−2n − 6p",
+    "−4p + 6",
+    "−4p + 11t",
+    "−3p − 4",
+    "−p + 5t",
+    "14x − 7",
+    "2t",
+    "−p + 1",
+    "3x + 6y"
+  ],
+  "new_words": [],
+  "review_words": []
+}

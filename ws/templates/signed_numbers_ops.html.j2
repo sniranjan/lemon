@@ -1,0 +1,89 @@
+{% extends "base.html.j2" %}
+{% from "_math_text.html.j2" import mt, mt_css %}
+{% set layout = sheet.items[0].layout %}
+{# number line −10…10: tick k at X0 + STEP * (k + 10) #}
+{% set X0, STEP, Y = 22, 30, 18 %}
+{% block style %}
+{{ mt_css() }}
+.items { flex: 1; min-height: 0; display: grid; gap: 12px 20px; }
+.items .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eqn { display: flex; align-items: center; gap: 12px; font-size: 40px; font-weight: 700; line-height: 1.1; white-space: nowrap; }
+.eq { color: var(--accent); }
+.ans { display: inline-block; width: 92px; height: 60px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; flex: none; }
+.ans.small { width: 74px; }
+.ans.wide { width: 210px; }
+.grid .eqn { font-size: 34px; gap: 10px; }
+.grid .ans { width: 80px; height: 54px; }
+.grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ (sheet.items | length + 1) // 2 }}, 1fr); grid-auto-flow: column; }
+.grid.decimal { grid-template-columns: 1fr; grid-template-rows: repeat(8, 1fr); gap: 10px; }
+.grid.decimal .eqn { font-size: 40px; gap: 14px; }
+.grid.decimal .ans { width: 120px; height: 56px; }
+.grid.fraction { grid-template-rows: repeat(5, 1fr); }
+.grid.fraction .eqn { font-size: 36px; gap: 8px; }
+.grid.fraction .ans { width: 76px; height: 76px; }
+.dist { font-size: 22px; font-weight: 700; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.dist .eqn { font-size: 30px; }
+.line { grid-template-columns: 1fr; grid-template-rows: repeat(6, 1fr); gap: 10px; }
+.line .card { flex-direction: column; gap: 0; padding: 2px 0 0; }
+.line .eqn { font-size: 32px; }
+.line .ans { height: 46px; width: 78px; }
+svg.nl { flex: none; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; font-size: 20px; }
+.pattern { grid-template-columns: 1.05fr 1fr; grid-template-rows: repeat(6, 1fr); grid-auto-flow: column; }
+.pattern .ladder { grid-row: 1 / 7; flex-direction: column; justify-content: space-evenly; padding: 18px 10px; background: var(--tint); }
+.ladder .eqn { font-size: 36px; gap: 10px; }
+.ladder .shown { color: #1d1d1f; }
+.ladder .ans { width: 76px; height: 50px; }
+.pattern .facts .eqn { font-size: 32px; gap: 8px; }
+.pattern .facts .ans { width: 76px; height: 50px; }
+.chain { grid-template-columns: 1fr; grid-template-rows: repeat(8, 1fr); gap: 10px; }
+.chain .eqn { font-size: 36px; gap: 12px; }
+.chain .ans { width: 92px; height: 54px; }
+.convert { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); grid-auto-flow: column; }
+.convert .card { flex-direction: column; justify-content: space-between; align-items: stretch; padding: 10px 16px 10px 34px; }
+.convert .eqn { font-size: 42px; justify-content: flex-start; }
+.convert .work { font-size: 20px; color: #6b6b70; align-self: flex-end; display: flex; align-items: center; gap: 10px; font-weight: 700; }
+{% endblock %}
+{% macro numline() %}
+        <svg class="nl" width="{{ X0 * 2 + STEP * 20 }}" height="50" viewBox="0 0 {{ X0 * 2 + STEP * 20 }} 50">
+          <line x1="{{ X0 - 12 }}" x2="{{ X0 + STEP * 20 + 12 }}" y1="{{ Y }}" y2="{{ Y }}" stroke="#1d1d1f" stroke-width="3"/>
+{% for k in range(-10, 11) %}
+          <line x1="{{ X0 + STEP * (k + 10) }}" x2="{{ X0 + STEP * (k + 10) }}" y1="{{ Y - (10 if k % 5 == 0 else 6) }}" y2="{{ Y + (10 if k % 5 == 0 else 6) }}" stroke="#1d1d1f" stroke-width="{{ 3 if k == 0 else 2 }}"/>
+{% if k % 2 == 0 %}
+          <text x="{{ X0 + STEP * (k + 10) }}" y="{{ Y + 30 }}" text-anchor="middle">{{ "−" ~ (-k) if k < 0 else k }}</text>
+{% endif %}
+{% endfor %}
+        </svg>
+{% endmacro %}
+{% block body %}
+    <div class="items {{ layout }} {{ sheet.items[0].numbers }}">
+{% for i in sheet.items %}
+{% if i.kind == "pattern" %}
+      <div class="card ladder"><span class="qn" data-audience="parent">{{ i.n }}</span>
+{% for row in i.rows %}
+        <div class="eqn"><span>{{ row.a | replace("-", "−") }}</span><span class="eq">×</span><span>({{ i.b | replace("-", "−") }})</span><span class="eq">=</span>{% if row.blank %}<span class="ans"></span>{% else %}<span class="shown">{{ row.answer }}</span>{% endif %}</div>
+{% endfor %}
+      </div>
+{% elif i.kind == "distance" %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="dist"><span>How far apart?</span><div class="eqn"><span>{{ mt(i.show[0]) }}</span><span class="eq">and</span><span>{{ mt(i.show[1]) }}</span><span class="ans"></span></div></div>
+      </div>
+{% elif i.kind == "convert" %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="eqn"><span>{{ mt(i.show) }}</span></div>
+        <div class="work"><span>as a decimal</span><span class="ans wide"></span></div>
+      </div>
+{% elif i.kind == "line" %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="eqn"><span>{{ mt(i.show) }}</span><span class="eq">=</span>{% if i.opposite is defined %}<span>{{ i.operands[0] | replace("-", "−") }}</span><span class="eq">+</span><span class="ans small"></span><span class="eq">=</span>{% endif %}<span class="ans"></span></div>
+        {{ numline() }}
+      </div>
+{% else %}
+      <div class="card{{ ' facts' if layout == 'pattern' else '' }}"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="eqn"><span>{{ mt(i.show) }}</span><span class="eq">=</span><span class="ans"></span></div>
+      </div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

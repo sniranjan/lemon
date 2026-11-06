@@ -40,6 +40,9 @@ CATALOGUE: frozenset[str] = frozenset({
     "ratio_table", "rational_story", "percent_problem", "signed_numbers",
     "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
+    # Penguins math (M7) extends the Pandas types: signed_numbers (operations), rational_story
+    # (signed, percent and two-step stories), ratio_table (proportional), expression_eval (tidy),
+    # equation_solve (two_step)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
 })
@@ -88,6 +91,10 @@ class SheetType:
 
     def verify(self, sheet: Sheet) -> list[Issue]:
         return []
+
+    def template_for(self, sheet: Sheet) -> str:
+        """The template for this sheet (a type with several modes may print some with another)."""
+        return self.template
 
 
 _REGISTRY: dict[str, type[SheetType]] = {}

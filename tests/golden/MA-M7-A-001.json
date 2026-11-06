@@ -1,0 +1,127 @@
+{
+  "id": "MA-M7-A-001",
+  "subject": "math",
+  "level": "M7",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "signed_numbers",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 13617545767709383723,
+  "title": "Adding on a line",
+  "parent_tip": "Start at the first number. Adding a positive number moves right; adding a negative number moves left. Draw the jump.",
+  "items": [
+    {
+      "kind": "line",
+      "n": 1,
+      "operands": [
+        "-3",
+        "8"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "−3 + 8"
+      ],
+      "answer": "5",
+      "layout": "line",
+      "numbers": "integer"
+    },
+    {
+      "kind": "line",
+      "n": 2,
+      "operands": [
+        "-1",
+        "-2"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "−1 + (−2)"
+      ],
+      "answer": "−3",
+      "layout": "line",
+      "numbers": "integer"
+    },
+    {
+      "kind": "line",
+      "n": 3,
+      "operands": [
+        "-3",
+        "-7"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "−3 + (−7)"
+      ],
+      "answer": "−10",
+      "layout": "line",
+      "numbers": "integer"
+    },
+    {
+      "kind": "line",
+      "n": 4,
+      "operands": [
+        "-9",
+        "8"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "−9 + 8"
+      ],
+      "answer": "−1",
+      "layout": "line",
+      "numbers": "integer"
+    },
+    {
+      "kind": "line",
+      "n": 5,
+      "operands": [
+        "-4",
+        "-5"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "−4 + (−5)"
+      ],
+      "answer": "−9",
+      "layout": "line",
+      "numbers": "integer"
+    },
+    {
+      "kind": "line",
+      "n": 6,
+      "operands": [
+        "5",
+        "-2"
+      ],
+      "ops": [
+        "+"
+      ],
+      "show": [
+        "5 + (−2)"
+      ],
+      "answer": "3",
+      "layout": "line",
+      "numbers": "integer"
+    }
+  ],
+  "answer_key": [
+    "5",
+    "−3",
+    "−10",
+    "−1",
+    "−9",
+    "3"
+  ],
+  "new_words": [],
+  "review_words": []
+}
