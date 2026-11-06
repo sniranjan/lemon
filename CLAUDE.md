@@ -289,7 +289,8 @@ the other lanes on the sheet.
 pictures, using hand-checked tables in `content/phrases/english.yaml`: `picture_colors` (the color a
 picture is drawn in), `sizes` (nouns that really are big / little; the noun's picture is then drawn
 large or small, item field `picture_size`), `temperatures` (things that really are hot / cold) and
-`can_do` (which animals can do an action). Describing words (big, little, hot, cold) have no picture
+`can_do` (which animals can do an action), `child_cannot` (no "I can read" for a 3-year-old) and
+`people_can` (only these people do it: "Mom can read."). Describing words (big, little, hot, cold) have no picture
 of their own (`picture` left out in the word bank). An animal doing an action ("The mouse can eat.")
 shows the animal only, since the action pictures show a child; a person doing it shows both. A
 page's new word is used in one of its phrases, and its picture is shown there. Word Hunt grids

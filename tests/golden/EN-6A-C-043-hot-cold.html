@@ -75,13 +75,16 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
 .recite.three .right { gap: 14px; }
 .recite.three .sentence { font-size: 46px; }
 .recite.three .times span { width: 48px; height: 48px; }
-/* big / little: the noun's picture fills its box, or sits small at the bottom of it */
-.recite .pics.sized { width: 200px; height: 200px; justify-content: center; align-items: flex-end; }
-.recite .pics img.size-big { width: 200px; height: 200px; }
+/* big / little: the noun's picture is drawn much larger than normal (the card drops its top and
+   bottom padding to make room), or small at the bottom of the same box */
+.recite .card.big { padding-top: 0; padding-bottom: 0; }
+.recite .pics.sized { width: 280px; height: 100%; max-height: 280px; justify-content: center; align-items: flex-end; }
+.recite .pics img.size-big { width: 280px; height: 100%; object-fit: contain; object-position: bottom; }
 .recite .pics img.size-little { width: 72px; height: 72px; }
-.recite.three .pics.sized { width: 190px; height: 190px; }
-.recite.three .pics img.size-big { width: 190px; height: 190px; }
-.recite.three .pics img.size-little { width: 64px; height: 64px; }
+.recite.three .card.big { flex-grow: 1.3; }
+.recite.three .pics.sized { width: 230px; max-height: 230px; }
+.recite.three .pics img.size-big { width: 230px; }
+.recite.three .pics img.size-little { width: 60px; height: 60px; }
 </style>
 </head>
 <body>

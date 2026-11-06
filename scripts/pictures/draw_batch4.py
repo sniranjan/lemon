@@ -181,18 +181,25 @@ PICS = {
           + limb("M24 84 L10 54 L30 24", SKIN, 7) + limb("M76 84 L90 54 L70 24", SKIN, 7)
           + head(50, 52, 24)
           + palm(36, 26, -50, s=0.8) + palm(64, 26, 50, s=0.8),
+    # knee and finger redrawn 2026-11-06 (first versions read as an arm and as a rude gesture)
     "knee": line("M4 94 L96 94", 3)
-          + line("M40 22 L34 14 M50 16 L50 6 M62 20 L68 12", 3, GRAY)
-          + p("M8 58 L30 52 L52 40 L58 54 L36 70 L14 78 Z", SKIN)
-          + p("M4 56 L26 50 L32 70 L10 78 Z", BLUE)
-          + p("M46 42 L58 54 L76 84 L64 88 Z", SKIN)
-          + c(52, 40, 12, SKIN)
-          + p("M62 84 L80 82 C90 82 96 86 96 92 L60 92 Z", RED),
-    "finger": p("M44 10 C44 4 56 4 56 10 L56 50 L44 50 Z", SKIN)
-            + p("M30 50 C30 44 36 42 40 44 L70 44 C76 44 78 48 78 54 L78 76 C78 88 68 94 56 94 C42 94 30 88 30 76 Z", SKIN)
-            + line("M44 56 L70 56 M44 66 L70 66", 2.5)
-            + p("M30 60 C22 58 20 68 26 72 L40 72 C44 70 44 62 40 60 Z", SKIN)
-            + line("M47 16 L53 16", 2) + line("M22 18 L14 12 M78 18 L86 12 M20 34 L10 34 M80 34 L90 34", 3, GRAY),
+          + line("M64 22 L64 14 M80 30 L86 24 M48 28 L43 22", 3, GRAY)
+          + p("M8 52 C8 44 32 44 32 52 L36 92 L6 92 Z", RED)
+          + head(20, 32, 14)
+          + limb("M34 86 L64 46", SKIN, 18) + limb("M26 84 L42 72", BLUE, 18)
+          + limb("M64 46 L80 88", SKIN, 16) + e(86, 90, 11, 6, RED)
+          + c(64, 44, 15, SKIN)
+          + f'<g transform="rotate(-35 64 44)">{r(55, 40, 18, 9, WHEAT, 3)}'
+          + '<rect x="61" y="42" width="6" height="5" rx="1" fill="#EBD5A8"/></g>'
+          + limb("M24 56 L50 72 L72 72", SKIN, 7) + c(74, 72, 5, SKIN),
+    "finger": r(2, 40, 18, 42, BLUE, 4)
+            + p("M16 44 C16 38 22 36 28 36 L52 36 C58 36 62 40 62 46 L62 72 C62 80 56 84 48 84 L28 84 "
+                "C20 84 16 80 16 72 Z", SKIN)
+            + r(44, 34, 46, 14, SKIN, 7) + line("M80 37 C84 37 86 39 86 41", 2)
+            + r(46, 48, 18, 11, SKIN, 5.5) + r(44, 59, 18, 11, SKIN, 5.5) + r(40, 70, 18, 11, SKIN, 5.5)
+            + p("M22 50 C30 46 44 46 54 49 C60 51 60 59 54 59 C44 60 32 60 24 62 Z", SKIN)
+            + line("M50 50 C54 50 56 52 56 54", 2)
+            + line("M94 33 L98 30 M95 41 L99 41 M94 49 L98 52", 2.5, GRAY),
     "tummy": head(50, 16, 12)
            + limb("M30 32 L22 50 L28 64") + limb("M70 32 L78 50 L72 64")
            + p("M28 76 L72 76 L74 98 L26 98 Z", BLUE)
