@@ -56,6 +56,25 @@ app.get("/api/previews/:slug", async (c) => {
   });
 });
 
+// Images for social posts (scripts/marketing/ig_publish.py uploads them to R2 as social/<hash>.jpg).
+// Instagram's API only takes media by public URL, so it fetches them from here. Names are content
+// hashes, so the files never change and can be cached forever.
+const SOCIAL_MEDIA = /^[a-f0-9]{16}\.jpg$/;
+
+app.get("/media/social/:name", async (c) => {
+  const name = c.req.param("name");
+  if (!SOCIAL_MEDIA.test(name)) return c.notFound();
+  const obj = await c.env.FILES.get(`social/${name}`);
+  if (!obj) return c.notFound();
+  return new Response(obj.body, {
+    headers: {
+      "content-type": "image/jpeg",
+      "cache-control": "public, max-age=31536000, immutable",
+      etag: obj.httpEtag,
+    },
+  });
+});
+
 // Checkout, orders and downloads (worker/shop.ts).
 app.route("/", shop);
 
