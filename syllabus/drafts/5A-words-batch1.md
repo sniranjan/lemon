@@ -27,10 +27,10 @@ Recommended vocabulary target: **23 words**, the 23 marked *needed*. The chart's
 this level's pages use. Letters and sounds are the point here, and "fewer words, learned well" is the
 rule we chose. Each new word is new once and comes back at least twice more. This is checked by
 `tests/test_bunnies_reading.py::test_new_words_fill_every_page`: with these words all 200 pages are
-planned and every new word is seen 3 or more times. The 8 *optional* words would improve pages that are
-already built (a true first-sound word for i, o, u, v and y). Those pages would change once they're added.
+planned and every new word is seen 3 or more times. The 6 *optional* words would improve pages that are
+already built (a true first-sound word for i, o, v and y). Those pages would change once they're added.
 
-## Proposed words (31: 23 needed + 8 optional)
+## Proposed words (29: 23 needed + 6 optional)
 
 | # | Word | Category | How used | Picture needed | Unlocks |
 |---|---|---|---|---|---|
@@ -44,7 +44,7 @@ already built (a true first-sound word for i, o, u, v and y). Those pages would 
 | 8 | bug | animals | sound part b + ug (with rug, hug); word trace | friendly green beetle | needed: 135 |
 | 9 | mat | home | sound part m + at; word trace | striped doormat | needed: 136 |
 | 10 | net | toys | sound part n + et; word trace | butterfly net | needed: 137 |
-| 11 | fin | animals | sound part f + in; word trace | a fish with its fin marked (hard to show, see note) | needed: 138 |
+| 11 | bun | food | sound part b + un (with sun, run); word trace | round bread roll | needed: 138 |
 | 12 | top | toys | sound part t + op; word trace | spinning top toy | needed: 139 |
 | 13 | mug | home | sound part m + ug; word trace | mug with a heart, no steam | needed: 140 |
 | 14 | pan | home | sound part p + an (with van, fan); word trace | frying pan (empty) | needed: 141 |
@@ -58,20 +58,18 @@ already built (a true first-sound word for i, o, u, v and y). Those pages would 
 | 22 | jam | food | sound part j + am; word trace | jar of jam | needed: 149 |
 | 23 | tub | home | sound part t + ub; word trace | small round wash tub | needed: 150 |
 | 24 | igloo | home | trace word (i) | snow igloo | optional: i pages (now pig, fish) |
-| 25 | insect | animals | trace word (i) | hard to show one picture for it, see note | optional: i pages |
-| 26 | otter | animals | trace word (o) | otter floating on its back | optional: o pages (now octopus + dog) |
-| 27 | ox | animals | trace word (o), sound part? (no onset: trace only) | ox with small horns | optional: o pages |
-| 28 | uncle | family | trace word (u) | smiling man waving | optional: u pages (now sun, jump) |
-| 29 | vest | clothes | trace word (v); sound part v + est (with nest) | puffy vest | optional: v pages (now van + oven) |
-| 30 | vase | home | trace word (v) | vase with one flower | optional: v pages |
-| 31 | yarn | toys | trace word (y) | ball of yarn | optional: y pages (now yawn, yogurt) |
+| 25 | otter | animals | trace word (o) | otter floating on its back | optional: o pages (now octopus + dog) |
+| 26 | ox | animals | trace word (o) | ox with small horns | optional: o pages |
+| 27 | vest | clothes | trace word (v); sound part v + est (with nest) | puffy vest | optional: v pages (now van + oven) |
+| 28 | vase | home | trace word (v) | vase with one flower | optional: v pages |
+| 29 | yarn | toys | trace word (y) | ball of yarn | optional: y pages (now yawn, yogurt) |
 
 Notes for the user:
-- **fin (#11):** a fin alone is hard to picture clearly. A swap with an easy picture is **bun**
-  (b + un, rhymes with sun and run): a round bread roll. I recommend **bun** instead of fin.
-- **insect (#25):** "insect" is a whole category. We already have bee, ant and ladybug, so there's no
-  single clear picture for it. I suggest dropping it unless you like it.
-- **umbrella** would be the classic u word, but it has 8 letters (our limit is 7), so it's left out.
-  "uncle" is the closest picturable u word, though a picture can't really show "uncle". Optional.
+- **bun (#11)** replaces "fin", which is hard to picture on its own.
+- **u and i** have no good first-sound word that is concrete, drawable and 7 letters or fewer: umbrella
+  has 8 letters, and insect and uncle can't be shown in one clear picture. Those pages keep using words
+  with the short vowel inside (sun, jump; pig, fish). Only igloo is offered for i.
+- The optional words change pages that are already built (the i, o, v and y letter pages and some
+  reviews). If you approve them later, those pages are regenerated.
 - New sound-piece words are introduced in this order (one a page, 131–150): the table order 4–23.
   Each one sits next to its rhyming mates.

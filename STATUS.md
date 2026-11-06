@@ -63,7 +63,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
   **165 of 200 pages build from approved words**; 35 wait for new words (verify warns: z 52–53, q 66–67 and
   156, Sound Pieces 131–150, Word Trails 191–200). Draft for approval: `syllabus/drafts/5A-words-batch1.md`
-  (23 needed words + 8 optional; vocab_target 23). After approval: add the words (level 5A, in table order)
+  (23 needed words + 6 optional; vocab_target 23). After approval: add the words (level 5A, in table order)
   and to `letter_words` / `rimes` in `content/sounds/english.yaml`; every page then builds.
   Booklets render (`bunnies-reading-level.pdf`: 167 pages today).
 
