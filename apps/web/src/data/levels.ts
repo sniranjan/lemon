@@ -29,6 +29,8 @@ export type Level = Look & {
   age: number;           // the one age a child on pace does this level
   grade: string;          // US school grade the work matches, e.g. "3", "K–1", "Pre-K"
   subjects: Subject[];
+  pages: Partial<Record<Subject, number>>;   // pages per subject in the whole level
+  totalPages: number;
   status: "ready" | "soon";
 };
 
@@ -66,7 +68,7 @@ const LOOK: Record<string, Look> = {
     mascot: "/pictures/duck.svg",
     color: "sky",
     blurb: "Short phrases to say out loud, numbers all the way to 100, and steadier pencil lines.",
-    preview: { kind: "phrase", phrase: "a red ball", picture: "ball" },
+    preview: { kind: "phrase", phrase: "a blue ball", picture: "ball" },
   },
   bunnies: {
     mascot: "/pictures/bunny.svg",
@@ -119,7 +121,7 @@ const LOOK: Record<string, Look> = {
   penguins: {
     mascot: "/brand/penguin.svg",
     color: "teal",
-    blurb: "Weighing claims and evidence, plus negative numbers, percent change and two-step equations.",
+    blurb: "Claims and evidence, plus negative numbers, percents and two-step equations.",
     preview: { kind: "facts", subject: "math", lines: ["−4 + 9 =", "−3 × −6 =", "3x + 5 = 20", "x = ?"] },
   },
   lions: {
@@ -152,6 +154,8 @@ export const LEVELS: Level[] = ladder.map((r) => {
     age: r.age,
     grade: r.grade,
     subjects: r.subjects as Subject[],
+    pages: r.pages as Partial<Record<Subject, number>>,
+    totalPages: Object.values(r.pages as Record<string, number>).reduce((a, b) => a + b, 0),
     status: r.ready ? "ready" : "soon",
   };
 });

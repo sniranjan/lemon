@@ -52,7 +52,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
       }}
       tabIndex={0}
       aria-label={`${level.name}: ${level.blurb}`}
-      className="card-rise sticker group relative h-[440px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
+      className="card-rise sticker group relative h-[472px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
       style={{ animationDelay: `${index * 70}ms` }}
     >
       {/* The sheet, tucked into the pocket. */}
@@ -85,8 +85,20 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
             <span className="rounded-full border-2 border-ink bg-ink px-2.5 py-0.5 text-xs font-extrabold text-white">
               {gradeLabel(level.grade)}
             </span>
+            <span
+              title={Object.entries(level.pages)
+                .map(([s, n]) => `${n} ${SUBJECT_LABEL[s as keyof typeof SUBJECT_LABEL].toLowerCase()}`)
+                .join(" + ")}
+              className="rounded-full border-2 border-ink bg-sun px-2.5 py-0.5 text-xs font-extrabold"
+            >
+              {level.totalPages} pages
+            </span>
             {level.subjects.map((s) => (
-              <span key={s} className="rounded-full border-2 border-ink bg-white px-2.5 py-0.5 text-xs font-extrabold">
+              <span
+                key={s}
+                title={`${level.pages[s]} pages of ${SUBJECT_LABEL[s].toLowerCase()}`}
+                className="rounded-full border-2 border-ink bg-white px-2.5 py-0.5 text-xs font-extrabold"
+              >
                 {SUBJECT_LABEL[s]}
               </span>
             ))}

@@ -10,6 +10,12 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const syllabus = path.resolve(here, "../../../syllabus");
 const rungs = parse(readFileSync(path.join(syllabus, "ladder.yaml"), "utf8"));
 const SUBJECT = { english: "reading", math: "math", pencil: "pencil" };
+// Pages per strand: from its syllabus file once it exists, otherwise the planned size.
+const PLANNED_PAGES = { english: 200, math: 200, pencil: 100 };
+function strandPages(subject, code) {
+  const file = path.join(syllabus, subject, `${code}.yaml`);
+  return existsSync(file) ? Number(parse(readFileSync(file, "utf8")).pages) : PLANNED_PAGES[subject];
+}
 
 const ladder = rungs.map((r) => ({
   slug: r.slug,
@@ -18,6 +24,7 @@ const ladder = rungs.map((r) => ({
   age: Number(r.age),
   grade: String(r.content_grade),
   subjects: Object.keys(r.strands).map((s) => SUBJECT[s]),
+  pages: Object.fromEntries(Object.entries(r.strands).map(([s, code]) => [SUBJECT[s], strandPages(s, code)])),
   ready: Object.entries(r.strands).every(([s, code]) => existsSync(path.join(syllabus, s, `${code}.yaml`))),
 }));
 

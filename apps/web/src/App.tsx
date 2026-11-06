@@ -129,7 +129,7 @@ const STEPS = [
     icon: Printer,
     color: "bg-sky",
     title: "Get the whole level",
-    text: "One PDF with every page in order. Print it all at once, or a week's worth at a time. Black and white is fine.",
+    text: "Hundreds of pages in one PDF, every page in order. Print it all at once, or a week's worth at a time. Black and white is fine.",
   },
   {
     icon: Sun,
@@ -233,6 +233,10 @@ const FAQ = [
   {
     q: "How long does a day take?",
     a: "About ten minutes for little ones, 15 to 20 for older kids. Short and happy beats long and tired.",
+  },
+  {
+    q: "How many pages is a level?",
+    a: "Every level has 200 pages of reading and 200 pages of math, and the first two levels add 100 pages of pencil warm-ups (so 400 to 500 pages), plus answer keys for grown-ups. At a few pages a day, one level lasts a few months.",
   },
   {
     q: "Can I get a refund?",
