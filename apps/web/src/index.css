@@ -7,7 +7,16 @@
 @import "@fontsource/fredoka/700.css";
 @import "@fontsource/gochi-hand/400.css";
 
+/* Dark mode only via an explicit .dark class (never set), so shadcn's dark: styles stay off. */
 @custom-variant dark (&:is(.dark *));
+
+/* "peek": a level card is open (mouse hover, keyboard focus, or tapped on touch screens). */
+@custom-variant peek {
+  @media (hover: hover) {
+    &:is(.group:hover *) { @slot; }
+  }
+  &:is(.group:focus-visible *, .group[data-open="true"] *) { @slot; }
+}
 
 /* Bright, kid-friendly palette. Each color is used as a fill with ink text on top, so contrast holds. */
 :root {
@@ -88,9 +97,22 @@
   h1, h2, h3 { @apply font-display; }
 }
 
-/* Chunky "sticker" shadow used on cards and buttons. */
+/* Chunky "sticker" look shared by cards and buttons. */
 @utility pop {
   box-shadow: 4px 4px 0 0 var(--ink);
+}
+@utility sticker {
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-xl);
+  box-shadow: 4px 4px 0 0 var(--ink);
+}
+@utility pill-pop {
+  border: 3px solid var(--ink);
+  font-weight: 800;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  &:hover { transform: translateY(-2px); }
+  &:active { transform: translateY(2px); box-shadow: 0 0 0 0 var(--ink); }
 }
 
 /* Motion: gentle, and switched off for people who prefer less. */
@@ -102,7 +124,8 @@
 .card-rise { animation: card-rise 600ms cubic-bezier(.2, .9, .3, 1) both; }
 .mascot-bob { animation: bob 3.2s ease-in-out infinite; }
 .float { animation: float 6s ease-in-out infinite; }
-.group:hover .path-draw, .group[data-open="true"] .path-draw { animation: draw 1.6s ease-out both; }
+@media (hover: hover) { .group:hover .path-draw { animation: draw 1.6s ease-out both; } }
+.group[data-open="true"] .path-draw, .group:focus-visible .path-draw { animation: draw 1.6s ease-out both; }
 
 @media (prefers-reduced-motion: reduce) {
   .card-rise, .mascot-bob, .float, .path-draw { animation: none !important; }

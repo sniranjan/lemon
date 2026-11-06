@@ -1,6 +1,8 @@
 import type { Level, Preview } from "@/data/levels";
-import { SUBJECT_LABEL } from "@/data/levels";
 import { cn } from "@/lib/utils";
+
+// Short labels: the mini-sheet header is narrow.
+const SHORT_LABEL = { reading: "Reading", numbers: "Numbers", pencil: "Pencil" } as const;
 
 const NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 
@@ -18,10 +20,10 @@ export function SheetPreview({ level, className }: { level: Level; className?: s
       )}
     >
       <div className="flex items-baseline justify-between gap-2 border-b-2 pb-1" style={{ borderColor: `var(--${level.color})` }}>
-        <span className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-ink/60">
-          {level.name} · {SUBJECT_LABEL[level.subjects[0]]}
+        <span className="truncate text-[9px] font-extrabold uppercase tracking-[0.12em] text-ink/60">
+          {level.name} · {SHORT_LABEL[level.subjects[0]]}
         </span>
-        <span className="text-[9px] text-ink/50">Name ______</span>
+        <span className="shrink-0 text-[9px] text-ink/50">Name ______</span>
       </div>
       <div className="flex flex-1 flex-col justify-start gap-2 pt-3">
         <Body preview={level.preview} />

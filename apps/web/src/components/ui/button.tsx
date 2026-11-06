@@ -18,6 +18,10 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // paperlessons "sticker" pills: ink border, hard shadow, little lift on hover.
+        coral: "pill-pop bg-coral text-white font-extrabold",
+        sun: "pill-pop bg-sun text-ink font-extrabold",
+        paper: "pill-pop bg-white text-ink font-extrabold",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -28,6 +32,8 @@ const buttonVariants = cva(
         "icon-xs": "size-6 rounded-md [&_svg:not([class*='size-'])]:size-3",
         "icon-sm": "size-8",
         "icon-lg": "size-10",
+        pill: "h-auto rounded-full px-7 py-3.5 text-lg",
+        "pill-sm": "h-auto rounded-full px-4 py-1.5 text-[0.95rem]",
       },
     },
     defaultVariants: {

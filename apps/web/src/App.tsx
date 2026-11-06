@@ -1,5 +1,7 @@
 import { ArrowDown, BookOpen, Calculator, Pencil, Printer, Sprout, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
+import { SectionHeading } from "@/components/SectionHeading";
 import { Library } from "@/components/Library";
 import { SheetPreview } from "@/components/SheetPreview";
 import { Waitlist } from "@/components/Waitlist";
@@ -32,12 +34,9 @@ function Nav() {
         <nav className="flex items-center gap-1 text-[0.95rem] font-extrabold sm:gap-2">
           <a href="#how" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">How it works</a>
           <a href="#library" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">Library</a>
-          <a
-            href="#early"
-            className="whitespace-nowrap rounded-full border-[3px] border-ink bg-sun px-4 py-1.5 pop transition-transform hover:-translate-y-0.5"
-          >
-            Early access
-          </a>
+          <Button asChild variant="sun" size="pill-sm">
+            <a href="#early">Early access</a>
+          </Button>
         </nav>
       </div>
     </header>
@@ -47,38 +46,37 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
-      <Doodles />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-10 top-24 size-40 rounded-full bg-sun/40" />
+        <div className="absolute -right-16 top-10 size-56 rounded-full bg-sky/20" />
+      </div>
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1 text-sm font-extrabold">
-            <Sun className="size-4 text-coral" /> For ages 3 to 6
+            <Sun className="size-4 text-coral" /> For ages 3 and up
           </p>
           <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.1rem]">
-            Little <span className="font-hand inline-block -rotate-2 text-[1.08em] text-coral">lessons</span>,
+            Little <span className="inline-block -rotate-2 font-hand text-[1.08em] text-coral">lessons</span>,
             <br />
             one page at a time.
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink/80">
-            Printable practice sheets for reading, numbers and pencil skills. Five pages a day,
-            about ten minutes, with you right beside them.
+            Printable practice sheets for reading, numbers and pencil skills. A few pages a day,
+            about ten minutes, one small step at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#library"
-              className="inline-flex items-center gap-2 rounded-full border-[3px] border-ink bg-coral px-7 py-3.5 text-lg font-extrabold text-white pop transition-transform hover:-translate-y-0.5"
-            >
-              Peek at the library <ArrowDown className="size-5" />
-            </a>
-            <a
-              href="#early"
-              className="inline-flex items-center gap-2 rounded-full border-[3px] border-ink bg-white px-7 py-3.5 text-lg font-extrabold pop transition-transform hover:-translate-y-0.5"
-            >
-              Get early access
-            </a>
+            <Button asChild variant="coral" size="pill">
+              <a href="#library">
+                Peek at the library <ArrowDown className="size-5" />
+              </a>
+            </Button>
+            <Button asChild variant="paper" size="pill">
+              <a href="#early">Get early access</a>
+            </Button>
           </div>
         </div>
 
-        {/* A small fan of real-looking sheets. */}
+        {/* A small fan of sheets. */}
         <div className="relative mx-auto h-[400px] w-full max-w-[440px]" aria-hidden="true">
           <SheetPreview level={bySlug("tadpoles")} className="float absolute left-0 top-10 h-[300px] w-[230px] [--r:-8deg]" />
           <SheetPreview
@@ -95,34 +93,24 @@ function Hero() {
   );
 }
 
-function Doodles() {
-  return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-0 overflow-hidden">
-      <div className="absolute -left-10 top-24 size-40 rounded-full bg-sun/40" />
-      <div className="absolute -right-16 top-10 size-56 rounded-full bg-sky/20" />
-      <div className="absolute bottom-0 left-1/3 size-28 rounded-full bg-leaf/25" />
-    </div>
-  );
-}
-
 const STEPS = [
   {
     icon: Sprout,
     color: "bg-leaf",
     title: "Pick a level",
-    text: "Start with the animal that fits. Most three-year-olds begin with Tadpoles and Chicks.",
+    text: "Start with the animal that fits. Little ones begin with Tadpoles and Chicks; older kids jump in higher up.",
   },
   {
     icon: Printer,
     color: "bg-sky",
-    title: "Print five pages",
-    text: "One page is one small step. Big pictures, big letters, and it all works in black and white.",
+    title: "Get the whole level",
+    text: "One PDF with every page in order. Print it all at once, or a week's worth at a time. Black and white is fine.",
   },
   {
     icon: Sun,
     color: "bg-sun",
-    title: "Do them together",
-    text: "Ten cozy minutes a day. When three sheets in a row feel easy, it's time for the next step.",
+    title: "A little every day",
+    text: "A few pages, about ten minutes. When three pages in a row feel easy, they're ready for the next step.",
   },
 ];
 
@@ -130,14 +118,11 @@ function HowItWorks() {
   return (
     <section id="how" className="scroll-mt-24 border-y-[3px] border-ink bg-white px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="text-center">
-          <p className="font-hand text-2xl text-coral">how it works</p>
-          <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Small steps, every day</h2>
-        </div>
+        <SectionHeading eyebrow="how it works" title="Small steps, every day" />
         <ol className="mt-12 grid gap-6 md:grid-cols-3">
           {STEPS.map((s, i) => (
-            <li key={s.title} className="relative rounded-xl border-[3px] border-ink bg-cream p-6 pop">
-              <span className="absolute -top-4 right-5 font-hand text-5xl text-ink/15">{i + 1}</span>
+            <li key={s.title} className="sticker relative bg-cream p-6">
+              <span className="absolute right-5 top-3 font-hand text-5xl text-ink/15">{i + 1}</span>
               <span className={`grid size-14 place-items-center rounded-2xl border-[3px] border-ink ${s.color}`}>
                 <s.icon className="size-7" />
               </span>
@@ -177,7 +162,7 @@ function Subjects() {
     <section className="border-y-[3px] border-ink bg-sun/30 px-4 py-20 sm:px-6">
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
         {SUBJECTS.map((s) => (
-          <div key={s.title} className="rounded-xl border-[3px] border-ink bg-white p-6 pop">
+          <div key={s.title} className="sticker bg-white p-6">
             <span className={`grid size-12 place-items-center rounded-full border-[3px] border-ink text-white ${s.color}`}>
               <s.icon className="size-6" />
             </span>
@@ -193,7 +178,7 @@ function Subjects() {
 function EarlyAccess() {
   return (
     <section id="early" className="scroll-mt-24 px-4 py-20 sm:px-6">
-      <div className="relative mx-auto max-w-3xl rounded-xl border-[3px] border-ink bg-teal p-8 text-white pop sm:p-12">
+      <div className="sticker relative mx-auto max-w-3xl bg-teal p-8 text-white sm:p-12">
         <img src="/pictures/star.svg" alt="" className="mascot-bob absolute -right-5 -top-7 size-16" />
         <p className="font-hand text-2xl text-sun">coming soon</p>
         <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Download, print, play.</h2>
@@ -212,7 +197,7 @@ function EarlyAccess() {
 const FAQ = [
   {
     q: "What age is this for?",
-    a: "Mostly 3 to 6. Start where your child feels confident. Easy is good: it builds the habit.",
+    a: "Children from age 3 and up. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
   },
   {
     q: "Do I need a color printer?",
@@ -220,7 +205,7 @@ const FAQ = [
   },
   {
     q: "How long does a day take?",
-    a: "About five pages, roughly ten minutes. Short and happy beats long and tired.",
+    a: "About ten minutes. Short and happy beats long and tired.",
   },
   {
     q: "What if a level feels too hard?",
@@ -232,7 +217,7 @@ function Faq() {
   return (
     <section className="px-4 pb-24 sm:px-6">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center text-4xl font-bold">Questions grown-ups ask</h2>
+        <SectionHeading eyebrow="good questions" title="Questions grown-ups ask" />
         <div className="mt-10 flex flex-col gap-4">
           {FAQ.map((f) => (
             <details key={f.q} className="group rounded-xl border-[3px] border-ink bg-white p-5 open:pop">

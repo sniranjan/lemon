@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Download, Sparkles } from "lucide-react";
 import { LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
 import { SheetPreview } from "@/components/SheetPreview";
+import { SectionHeading } from "@/components/SectionHeading";
 import { cn } from "@/lib/utils";
 
 const BG: Record<Level["color"], string> = {
@@ -30,15 +31,11 @@ export function Library() {
   return (
     <section id="library" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-hand text-2xl text-coral">the library</p>
-          <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Eight little levels, one big climb</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Each level is a stack of sheets that grows one small step at a time.
-            <span className="hidden sm:inline"> Hover a level to peek at a sheet.</span>
-            <span className="sm:hidden"> Tap a level to peek at a sheet.</span>
-          </p>
-        </div>
+        <SectionHeading eyebrow="the library" title="Little levels, one big climb">
+          Each level is a stack of sheets that grows one small step at a time.
+          <span className="hidden sm:inline"> Hover a level to peek at a sheet.</span>
+          <span className="sm:hidden"> Tap a level to peek at a sheet.</span>
+        </SectionHeading>
         <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {LEVELS.map((level, i) => (
             <LevelCard key={level.slug} level={level} index={i} hasPreview={available.has(level.slug)} />
@@ -64,12 +61,12 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
       }}
       tabIndex={0}
       aria-label={`${level.name}: ${level.blurb}`}
-      className="card-rise group relative h-[440px] cursor-pointer overflow-hidden rounded-xl border-[3px] border-ink bg-cream pop outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
+      className="card-rise sticker group relative h-[440px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
       style={{ animationDelay: `${index * 70}ms` }}
     >
       {/* The sheet, tucked into the pocket. */}
       <div
-        className="absolute inset-x-5 top-5 h-[318px] origin-bottom -rotate-2 transition-transform duration-500 ease-[cubic-bezier(.2,.9,.3,1.2)] group-hover:rotate-0 group-hover:scale-[1.02] group-focus-within:rotate-0 group-data-[open=true]:rotate-0 motion-reduce:transition-none"
+        className="absolute inset-x-5 top-5 h-[318px] origin-bottom -rotate-2 transition-transform duration-500 ease-[cubic-bezier(.2,.9,.3,1.2)] peek:rotate-0 peek:scale-[1.02] motion-reduce:transition-none"
       >
         <SheetPreview level={level} className="h-full" />
       </div>
@@ -78,7 +75,7 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
       <div
         className={cn(
           "absolute inset-x-0 bottom-0 z-10 h-[64%] rounded-t-[1.75rem] border-t-[3px] border-ink p-5 text-ink transition-transform duration-500 ease-[cubic-bezier(.2,.9,.3,1.1)]",
-          "group-hover:translate-y-[calc(100%-92px)] group-focus-within:translate-y-[calc(100%-92px)] group-data-[open=true]:translate-y-[calc(100%-92px)] motion-reduce:transition-none",
+          "peek:translate-y-[calc(100%-92px)] motion-reduce:transition-none",
           BG[level.color],
         )}
       >
@@ -88,7 +85,7 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
           <PreviewButton level={level} hasPreview={hasPreview} />
         </div>
 
-        <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 group-hover:opacity-0 group-focus-within:opacity-0 group-data-[open=true]:opacity-0">
+        <div className="mt-3 flex items-end gap-3 transition-opacity duration-300 peek:opacity-0">
           <img src={level.mascot} alt="" className="mascot-bob size-16 shrink-0 rounded-full border-[3px] border-ink bg-white p-1.5" />
           <div className="flex flex-wrap gap-1.5">
             {level.subjects.map((s) => (
@@ -103,7 +100,7 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
             )}
           </div>
         </div>
-        <p className="mt-3 text-[0.95rem] font-semibold leading-snug transition-opacity duration-300 group-hover:opacity-0 group-focus-within:opacity-0 group-data-[open=true]:opacity-0">
+        <p className="mt-3 text-[0.95rem] font-semibold leading-snug transition-opacity duration-300 peek:opacity-0">
           {level.blurb}
         </p>
       </div>
