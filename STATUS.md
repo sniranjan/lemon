@@ -134,6 +134,21 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Draft record `syllabus/drafts/R6-passages.md` from `scripts/r6_drafts.py` (approved by the orchestrator under the
   user's delegation). Verify 0 errors, 0 warnings; booklets per section + `pandas-reading-level.pdf` (202 pages) and
   `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1–2 and 171–172 (two whole spreads); `ws preview pandas` builds `out/previews/pandas.pdf` (10 pages, with Pandas Math; not uploaded).
+- **Lions Reading (R8, our own level, grade 8 reading for age 11, 200 pages)** (2026-11-06): `syllabus/english/R8.yaml`:
+  A Close Reading 1–50 (figurative and connotative meaning, tone, analogies, allusions to well-known myths and tales;
+  RL.8.4, L.8.4a, L.8.5a/c) · B Weighing Arguments 51–100 (claims, relevant/irrelevant and sufficient evidence, point of
+  view and how the writer answers the other side; RI.8.8, RI.8.6) · C Growing Characters 101–150 (one original story,
+  "The Tower Clock", in 20 installments; theme and character development, dialogue that drives decisions; RL.8.2,
+  RL.8.3) · D Explain Why 151–200 (4–5-sentence evidence paragraphs; part 1 plans in Claim / Evidence / Reasoning boxes;
+  RL.8.1, RI.8.1, W.8.1, W.8.9). Codes checked on thecorestandards.org. 59 original texts (`content/passages/R8/`,
+  220–347 words, Flesch-Kincaid 7.68–9.36), all on Pandas' `passage_spread` (no new sheet type): optional `story`/`part`
+  and rules `needs_story`, `paragraph_sentences`, `max_rubric` added, Pandas output byte-identical. A Letter page holds
+  ~220–250 words of grade 8 text at 20px, so texts are shorter than the plan's "~600 words"; the story runs ~6,500 words.
+  Draft records `syllabus/drafts/R8-passages.md`, `R8-story.md` from `scripts/r8_drafts.py` (approved by the orchestrator
+  under the user's delegation). Tests `tests/test_lions_reading.py`. Verify 0 errors, 0 warnings; booklets per section +
+  `lions-reading-level.pdf` (202 pages) and `lions-reading-level-answers.pdf` (32 pages); no internal codes in PDF text.
+  Preview pages 1–2 and 151–152 (two whole spreads); `ws preview lions` builds `out/previews/lions.pdf` (10 pages, with
+  Lions Math; not uploaded).
 - **Lions Math (M8, our own level, grade 8 work for age 11, 200 pages)** (2026-11-06): `syllabus/math/M8.yaml`:
   A Exponents and Square Roots 1–30 (8.EE.1–2, 8.NS.2) · B Very Big and Very Small 31–50 (8.EE.3–4) · C Multi-Step
   Equations 51–100 (8.EE.7a–b) · D Lines and Slope 101–150 (8.EE.5–6, 8.F.1–4) · E Two Equations at Once 151–180
@@ -144,8 +159,8 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   system story frames `content/math/systems.yaml` (copy in test fixtures). Letters a, m, r never used (2a, m8, r5
   would read as codes). Child text ≥ 20px (`min_child_px`). Tests `tests/test_math_M8.py`. All 200 pages verify with
   0 errors and 0 warnings; booklets per section + `lions-math-level.pdf` (202 pages) and
-  `lions-math-level-answers.pdf` (16 pages); no internal codes in PDF text. Free preview pages 11, 61, 131, 181 wait
-  for Lions Reading.
+  `lions-math-level-answers.pdf` (16 pages); no internal codes in PDF text. Free preview pages 11, 61, 131, 181 are in
+  `ws preview lions` with Lions Reading.
 - **Pandas Math (M6, our own level, grade 6 work for age 9, 200 pages)** (2026-11-06): `syllabus/math/M6.yaml`:
   A Dividing Fractions 1–30 (6.NS.1) · B Ratios and Rates 31–70 (6.RP.1, 6.RP.2, 6.RP.3a/b/d) · C Percents 71–100
   (6.RP.3c) · D Below Zero 101–130 (6.NS.5–8) · E Letters for Numbers 131–170 (6.EE.1, 6.EE.2a/c) · F One-Step

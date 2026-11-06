@@ -1,0 +1,1194 @@
+# Lions Reading, section B "Weighing Arguments" (pages 51–100): claims, reasons, relevant and irrelevant
+# evidence (RI.8.8), the author's point of view and how it answers other views (RI.8.6). Original texts (ours).
+# Schema and checks: ws/spreads.py (two-page spreads). Each argument serves two spreads.
+
+- id: b01-the-first-bell
+  title: The First Bell
+  genre: nonfiction
+  text: |
+    Every weekday at 7:15, the buses pull away from the corner of Elm and Fourth carrying students who
+    are, by their own report, barely awake. Our school should move the first bell from 7:45 to 8:30,
+    because students who start later are more alert, arrive on time more often, and learn more in their
+    morning classes.
+
+    First, later mornings would make students more alert. In a survey of our sixth graders last month,
+    nearly two thirds said they feel sleepy during first period at least three days a week. Ms. Alvarez,
+    who teaches first-period science, has noticed that her students ask far fewer questions before eight
+    than they do after lunch.
+
+    Second, a later start would reduce late arrivals. The front office keeps a record of every tardy
+    slip, and last year more than half of them were written before eight. When the school opened an hour
+    late for two weeks during the road repairs in March, the office wrote only a handful of slips.
+
+    My cousin, who lives in another state, says her school serves pancakes every Friday morning. Third,
+    alert students simply learn more. During those same two weeks in March, the average score on
+    first-period math quizzes rose by several points, even though the quizzes covered new and fairly
+    difficult material.
+
+    Some parents worry that a later start would push sports and clubs into the evening and leave less
+    time for homework. That concern is reasonable, and the new schedule would require careful planning.
+    However, the club leaders we interviewed said they could meet during a longer lunch period instead,
+    and a 45-minute change would still end the school day before four o'clock. A plan that helps every
+    student every single morning is certainly worth a little extra planning, and the principal should
+    present it to families before the spring.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is the writer's main claim?
+      choices:
+      - School should start at 8:30.
+      - Buses should leave earlier.
+      - Clubs should meet at night.
+      - Quizzes should be easier.
+      evidence: Our school should move the first bell from 7:45 to 8:30
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - My cousin, who lives in another state, says her school serves pancakes every Friday morning.
+      - the office wrote only a handful of slips.
+      - the average score on first-period math quizzes rose
+      - nearly two thirds said they feel sleepy during first period
+      evidence: My cousin, who lives in another state, says her school serves pancakes every Friday morning.
+    - kind: mc
+      ask: Which reason is backed by the school's own records?
+      choices:
+      - Fewer late arrivals
+      - More alert students
+      - Longer lunch periods
+      - Earlier bus rides
+      evidence: The front office keeps a record of every tardy slip
+    - kind: write
+      ask: Why is the March evidence stronger than one opinion?
+      sample: It comes from real school records of tardy slips and quiz scores, not just one person's impression.
+      evidence: When the school opened an hour late for two weeks
+  - focus: point of view
+    look_for: how the writer treats the other side
+    questions:
+    - kind: mc
+      ask: What is the writer's main purpose?
+      choices:
+      - to persuade the school
+      - to tell a funny story
+      - to explain bus routes
+      - to praise the clubs
+      evidence: A plan that helps every student every single morning is certainly worth a little extra planning
+    - kind: quote
+      ask: Which sentence shows the writer respects the other side?
+      choices:
+      - That concern is reasonable, and the new schedule would require careful planning.
+      - Second, a later start would reduce late arrivals.
+      - First, later mornings would make students more alert.
+      - Third, alert students simply learn more.
+      evidence: That concern is reasonable, and the new schedule would require careful planning.
+    - kind: organizer
+      ask: How does the writer answer the parents' worry?
+      heads:
+      - Counterclaim
+      - Response
+      samples:
+      - A later start would push clubs into the evening and leave less time for homework.
+      - Clubs could meet at a longer lunch, and the day would still end before four.
+      evidence: the club leaders we interviewed said they could meet during a longer lunch period instead
+    - kind: mc
+      ask: What could a parent who disagrees still argue?
+      choices:
+      - Not every club fits at lunch.
+      - Students are sleepy early.
+      - The office keeps records.
+      - Quizzes cover new material.
+      evidence: they could meet during a longer lunch period instead
+
+- id: b02-phones-in-lockers
+  title: Phones in Lockers?
+  genre: nonfiction
+  text: |
+    Should phones stay in lockers from the first bell to the last? Our class held a debate on the
+    question, and two students agreed to argue opposite sides in writing for this issue of the
+    newsletter, each responding directly to the other.
+
+    Maya argues that phones belong in lockers all day. She points out that a phone buzzing in a pocket
+    pulls attention away from the lesson, even when nobody answers it. In a class survey she conducted,
+    most of our sixth graders admitted they check their phones during lessons at least once a day.
+    Maya's grandmother still keeps a phone with a curly cord on her kitchen wall. Maya also observed the
+    cafeteria for a week and counted the tables where nobody was talking because everyone was staring at
+    a screen.
+
+    Jonah answers that a complete ban goes too far. He agrees that phones should be silent during
+    lessons, but he argues that students need them at the end of the day to arrange rides and to check
+    changes to practice schedules. Last spring, when the soccer field flooded, the coach sent a message
+    at two o'clock, and the students who had their phones knew immediately where to go.
+
+    Maya replies that the front office could announce schedule changes, as it did for years before
+    phones existed. She adds that students could collect their phones from their lockers during the last
+    five minutes of the day, which would solve the ride problem without any trouble at all.
+
+    Jonah responds that the office cannot possibly call two hundred families in five minutes, and that
+    lunch conversations are a choice students should learn to make themselves. Both writers agree on one
+    point: silence in class matters. Their real disagreement is about whether the lunch period belongs
+    to the school or to the students themselves.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is Maya's claim?
+      choices:
+      - Phones stay in lockers all day
+      - Phones are fine at lunch
+      - The office should call parents
+      - Phones help arrange rides
+      evidence: Maya argues that phones belong in lockers all day.
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for Maya's claim?
+      choices:
+      - Maya's grandmother still keeps a phone with a curly cord on her kitchen wall.
+      - pulls attention away from the lesson
+      - counted the tables where nobody was talking
+      - most of our sixth graders admitted they check their phones
+      evidence: Maya's grandmother still keeps a phone with a curly cord on her kitchen wall.
+    - kind: mc
+      ask: What evidence does Jonah give for his view?
+      choices:
+      - A flooded field last spring
+      - A class survey
+      - A week in the cafeteria
+      - A count of lunch tables
+      evidence: Last spring, when the soccer field flooded
+    - kind: write
+      ask: Is Jonah's one example enough to prove his point? Why?
+      sample: Not fully. The flooded field shows phones can help, but it is a single event, not proof that students need phones every day.
+      evidence: the coach sent a message at two o'clock
+  - focus: point of view
+    look_for: how each writer answers the other
+    questions:
+    - kind: mc
+      ask: How does Maya answer Jonah's point about rides?
+      choices:
+      - Students could get phones in the last five minutes.
+      - Students should walk home instead of calling.
+      - Coaches should stop sending messages.
+      - Rides are not the school's problem.
+      evidence: students could collect their phones from their lockers during the last five minutes of the day
+    - kind: quote
+      ask: Which sentence shows a point both writers agree on?
+      choices:
+      - 'Both writers agree on one point: silence in class matters.'
+      - Jonah answers that a complete ban goes too far.
+      - Maya argues that phones belong in lockers all day.
+      - the office cannot possibly call two hundred families
+      evidence: 'Both writers agree on one point: silence in class matters.'
+    - kind: organizer
+      ask: Show one point Maya makes and how Jonah answers it.
+      heads:
+      - Maya's point
+      - Jonah's answer
+      samples:
+      - The office could announce schedule changes, as it did before phones.
+      - The office cannot call two hundred families in five minutes.
+      evidence: the office cannot possibly call two hundred families in five minutes
+
+- id: b03-compost-letter
+  title: A Letter About Compost
+  genre: nonfiction
+  text: |
+    Dear Principal Haddad, I am writing on behalf of the Green Team to ask you to start a composting
+    program in our cafeteria. Composting would shrink the amount of trash our school throws away, give
+    our garden free fertilizer, and teach students habits they can use at home.
+
+    Our first reason is the amount of waste. For one week in October, the Green Team weighed the
+    cafeteria trash after every lunch. On average, more than half of it was food scraps, such as apple
+    cores, banana peels and leftover rice, which could all have been composted instead of hauled away.
+
+    Our second reason is the school garden. Mr. Brennan, who supervises the garden club, spends a
+    considerable part of the club budget each spring buying bags of soil. Earthworms can eat roughly
+    half their own weight in food every day. During a three-week trial run in one classroom, students
+    filled a small bin with scraps, and by the end it had already begun turning into dark, crumbly
+    compost.
+
+    Our third reason is that habits spread. After the trial, the students in that classroom were
+    surveyed, and many reported that their families had started separating food scraps at home. A
+    program in the cafeteria would carry that lesson to hundreds of students instead of twenty-five.
+
+    Some teachers have told us they worry that compost bins will smell and attract insects. We
+    understand the concern, and we looked into it carefully. The trial bin had a tight lid, and the
+    custodian, Mrs. Ortiz, reported no smell and no insects during the three weeks. We also propose that
+    Green Team volunteers empty the bins every afternoon so that nothing sits overnight.
+
+    We would be glad to present our measurements and the results of the trial at the next staff meeting.
+    Thank you for considering our proposal.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What does the Green Team want?
+      choices:
+      - A cafeteria compost program
+      - A bigger school garden
+      - More trash bins at lunch
+      - Earthworms in every class
+      evidence: start a composting program in our cafeteria
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Earthworms can eat roughly half their own weight in food every day.
+      - more than half of it was food scraps
+      - it had already begun turning into dark, crumbly compost
+      - their families had started separating food scraps at home
+      evidence: Earthworms can eat roughly half their own weight in food every day.
+    - kind: mc
+      ask: What evidence supports the first reason?
+      choices:
+      - Trash weighed for a week
+      - A survey of families
+      - A teacher's opinion
+      - A fun fact about worms
+      evidence: the Green Team weighed the cafeteria trash after every lunch
+    - kind: write
+      ask: How do the trial-run results make the letter stronger?
+      sample: They show the plan already worked in one classroom, where the bin made compost with no smell or insects.
+      evidence: reported no smell and no insects during the three weeks
+  - focus: point of view
+    look_for: how the writer answers worried teachers
+    questions:
+    - kind: mc
+      ask: How does the writer treat the teachers' worry?
+      choices:
+      - takes it seriously
+      - laughs at it
+      - ignores it
+      - gives up the plan
+      evidence: We understand the concern, and we looked into it carefully.
+    - kind: quote
+      ask: Which sentence answers the worry with evidence?
+      choices:
+      - The trial bin had a tight lid, and the custodian, Mrs. Ortiz, reported no smell and no insects during the three weeks.
+      - We understand the concern, and we looked into it carefully.
+      - Our third reason is that habits spread.
+      - Thank you for considering our proposal.
+      evidence: The trial bin had a tight lid
+    - kind: organizer
+      ask: Show how the letter answers the other side.
+      heads:
+      - Counterclaim
+      - Response
+      - Evidence
+      samples:
+      - Compost bins will smell and attract insects.
+      - Use a tight lid and empty the bins every afternoon.
+      - The custodian found no smell or insects in the trial.
+      evidence: Some teachers have told us they worry that compost bins will smell and attract insects.
+    - kind: mc
+      ask: Why does the writer offer to present at a meeting?
+      choices:
+      - to persuade the teachers
+      - to complain about trash
+      - to ask for a garden job
+      - to thank the custodian
+      evidence: We would be glad to present our measurements and the results of the trial at the next staff meeting.
+
+- id: b04-no-class-pets
+  title: No Class Pets
+  genre: nonfiction
+  text: |
+    Good morning, everyone. The student council has asked whether every classroom should adopt a class
+    pet next year, and I am here to argue that it should not, because pets distract students, cost more
+    than most classrooms can afford, and spend long weekends alone.
+
+    Consider the distraction first. Last year our homeroom kept a hamster named Pepper, and our teacher,
+    Mr. Lindqvist, kept a tally of how often lessons stopped because someone was watching the cage
+    instead of the board. By December, the tally had reached more than forty interruptions. I have had a
+    goldfish named Captain since I was six, and he is the best listener in my family.
+
+    Next, consider the cost. Our homeroom spent nearly all of its supply money on food, bedding and a
+    new water bottle for Pepper, which meant we had to share markers for the rest of the year. A
+    classroom that wants a pet should ask itself whether that money could buy books or art supplies
+    instead.
+
+    Finally, think about weekends and vacations. Someone has to take the animal home or come to school
+    to feed it, and in our homeroom that job usually fell to the same two families, who grew tired of
+    the responsibility long before June.
+
+    Some people claim that class pets teach responsibility and make school feel friendlier. That
+    argument is simply silly. Anyone who has actually watched a crowd of students tapping on a glass
+    cage knows that pets teach chaos, not responsibility, and the people who repeat this idea have
+    obviously never cleaned a cage on a Friday afternoon.
+
+    So when the council votes next week, I urge you to vote no. Let us keep our classrooms focused on
+    learning and leave the animals at home, where they belong and where families can give them the
+    steady attention every animal deserves.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What does the speaker want the council to do?
+      choices:
+      - Vote no on class pets
+      - Buy a new hamster
+      - Clean cages on Fridays
+      - Share markers fairly
+      evidence: I urge you to vote no
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - I have had a goldfish named Captain since I was six, and he is the best listener in my family.
+      - the tally had reached more than forty interruptions
+      - Our homeroom spent nearly all of its supply money on food
+      - that job usually fell to the same two families
+      evidence: I have had a goldfish named Captain since I was six, and he is the best listener in my family.
+    - kind: mc
+      ask: What is the main weakness of the speaker's evidence?
+      choices:
+      - It all comes from one homeroom.
+      - It comes from a big study.
+      - It has no numbers at all.
+      - It is only about goldfish.
+      evidence: Last year our homeroom kept a hamster named Pepper
+    - kind: write
+      ask: Name one reason in the speech and its evidence.
+      sample: Pets cost too much. The homeroom spent nearly all its supply money on Pepper and had to share markers.
+      evidence: Our homeroom spent nearly all of its supply money on food, bedding and a new water bottle for Pepper
+  - focus: point of view
+    look_for: words used to dismiss the other side
+    questions:
+    - kind: quote
+      ask: Which sentence uses loaded words about the other side?
+      choices:
+      - That argument is simply silly.
+      - Consider the distraction first.
+      - Finally, think about weekends and vacations.
+      - Next, consider the cost.
+      evidence: That argument is simply silly.
+    - kind: mc
+      ask: How does the speaker answer the other side?
+      choices:
+      - by mocking it
+      - with a survey
+      - with a fair example
+      - by agreeing with it
+      evidence: the people who repeat this idea have obviously never cleaned a cage on a Friday afternoon
+    - kind: write
+      ask: Is the speaker's answer to the other side convincing? Why?
+      sample: No. The speaker calls the idea silly and insults people instead of showing that pets do not teach responsibility.
+      evidence: That argument is simply silly.
+    - kind: mc
+      ask: What could a pet supporter say back?
+      choices:
+      - Pets make school friendlier.
+      - Pets never distract anyone.
+      - Hamster food costs nothing.
+      - Weekends are too short.
+      evidence: make school feel friendlier
+
+- id: b05-plant-a-garden
+  title: Plant a Garden
+  genre: nonfiction
+  text: |
+    To the Editor: For six years, the empty lot on Hawthorne Street has collected nothing but weeds and
+    broken bottles. The town council will soon decide what to build there, and I believe the best choice
+    is a community garden, because a garden would feed families, bring neighbors together, and give
+    students a place to learn outdoors.
+
+    A garden would produce real food. Last summer my family grew tomatoes, beans and squash in four
+    small boxes behind our apartment, and we kept a notebook of every harvest. By September we had
+    picked more than sixty pounds of vegetables, enough to share with three neighbors. Forty boxes on
+    Hawthorne Street could supply far more than that.
+
+    A garden would also connect people. When our building organized a single planting day in May,
+    residents who had lived on the same floor for years introduced themselves for the first time. Almost
+    everyone I know agrees that gardens are wonderful. Mrs. Pham, who manages our building, noticed that
+    neighbors began greeting each other in the hallway and trading recipes that summer.
+
+    Finally, a garden would be an outdoor classroom. The science teachers at the nearby middle school
+    have said they would bring classes to measure plant growth and study soil, which they cannot easily
+    do on the school's paved yard.
+
+    Some residents would prefer a skate area, and their reasons deserve attention. Young people need
+    active places to gather, and the nearest skate park is across town. However, the lot is directly
+    beside a row of houses, and a skate area would bring noise late into the evening. A garden is quiet,
+    and it could include a few benches and a small open lawn where children could play during the day.
+
+    I urge the council to choose the garden, and I hope it will also look for a better spot for the
+    skate area that so many students clearly want.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is the writer's claim?
+      choices:
+      - The lot should be a garden.
+      - The lot should be for skating.
+      - The lot should stay empty.
+      - The lot should be a lawn.
+      evidence: the best choice is a community garden
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Almost everyone I know agrees that gardens are wonderful.
+      - we had picked more than sixty pounds of vegetables
+      - neighbors began greeting each other in the hallway
+      - they would bring classes to measure plant growth
+      evidence: Almost everyone I know agrees that gardens are wonderful.
+    - kind: mc
+      ask: Why is the sixty-pound harvest limited evidence?
+      choices:
+      - It comes from one family's four boxes.
+      - It was measured in the middle of winter.
+      - It was grown on the Hawthorne Street lot.
+      - It comes from a survey of the whole town.
+      evidence: my family grew tomatoes, beans and squash in four small boxes
+    - kind: write
+      ask: What evidence supports the idea of an outdoor classroom?
+      sample: Science teachers at the nearby middle school said they would bring classes to measure plant growth and study soil.
+      evidence: they would bring classes to measure plant growth and study soil
+  - focus: point of view
+    look_for: how the writer treats the skate idea
+    questions:
+    - kind: mc
+      ask: How does the writer treat people who want skating?
+      choices:
+      - with respect and reasons
+      - with insults and jokes
+      - by ignoring them
+      - by fully agreeing
+      evidence: their reasons deserve attention
+    - kind: quote
+      ask: Which words answer the skate-area side?
+      choices:
+      - a skate area would bring noise late into the evening
+      - the nearest skate park is across town
+      - Young people need active places to gather
+      - A garden would produce real food.
+      evidence: a skate area would bring noise late into the evening
+    - kind: organizer
+      ask: Show how the writer answers the other side.
+      heads:
+      - Counterclaim
+      - Response
+      samples:
+      - Young people need a place to skate, and the nearest park is far away.
+      - Skating beside houses would be noisy; a garden is quiet and can have a lawn.
+      evidence: A garden is quiet, and it could include a few benches and a small open lawn
+    - kind: mc
+      ask: What is the writer's purpose?
+      choices:
+      - to persuade the council
+      - to describe a skate park
+      - to sell vegetables
+      - to thank Mrs. Pham
+      evidence: I urge the council to choose the garden
+
+- id: b06-a-place-to-skate
+  title: A Place to Skate
+  genre: nonfiction
+  text: |
+    The student council proposes that the empty lot on Hawthorne Street become a skate area. We are
+    sending it to the town council because the lot is the only open space near our school. Students need
+    a safe place to be active in the afternoons.
+
+    Our first reason is that students have nowhere nearby to skate. In a survey of our sixth graders,
+    nearly half said they ride a skateboard or scooter at least once a week, and most of them practice
+    in parking lots or on the sidewalk outside the library. Mr. Reyes, the librarian, has told us that
+    he asks skaters to move away from the entrance almost every afternoon.
+
+    Our second reason is that the lot is close and easy to supervise. It sits two blocks from the school
+    and across the street from the community center, whose staff have said they could watch the area
+    from their front windows until closing time.
+
+    The first skateboards were made by attaching roller skate wheels to wooden planks. Our third reason
+    is that a skate area would give students a positive way to spend their free time. The director of
+    the community center says that her active afternoon programs are always the first to fill up. Every
+    season, many students end up on a waiting list.
+
+    Some adults want a community garden on the lot instead. With respect, a garden is a boring, outdated
+    idea that only a few retired neighbors would ever bother to visit. Students deserve a space built
+    for them, not another patch of dirt and tomato plants that sits empty most of the week.
+
+    We ask the town council to approve the skate area and to include benches, lights that switch off at
+    eight o'clock, and a small fence along the sidewalk. We would be happy to help design it.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What does the student council propose?
+      choices:
+      - A skate area on the lot
+      - A garden on the lot
+      - A bigger library
+      - New sidewalks
+      evidence: the empty lot on Hawthorne Street become a skate area
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - The first skateboards were made by attaching roller skate wheels to wooden planks.
+      - nearly half said they ride a skateboard or scooter
+      - he asks skaters to move away from the entrance
+      - they could watch the area from their front windows
+      evidence: The first skateboards were made by attaching roller skate wheels to wooden planks.
+    - kind: mc
+      ask: Which detail shows the lot is easy to supervise?
+      choices:
+      - Center staff can watch it.
+      - Half of students skate.
+      - Skaters crowd the library.
+      - Programs fill up fast.
+      evidence: they could watch the area from their front windows
+    - kind: organizer
+      ask: Pick one reason and the evidence for it.
+      heads:
+      - Claim
+      - Reason
+      - Evidence
+      samples:
+      - The lot should become a skate area.
+      - Students have nowhere nearby to skate.
+      - Nearly half of sixth graders skate, mostly in parking lots.
+      evidence: most of them practice in parking lots or on the sidewalk outside the library
+  - focus: point of view
+    look_for: words used about the garden idea
+    questions:
+    - kind: quote
+      ask: Which words are loaded language about the garden?
+      choices:
+      - a garden is a boring, outdated idea
+      - the lot is close and easy to supervise
+      - students have nowhere nearby to skate
+      - We would be happy to help design it.
+      evidence: a garden is a boring, outdated idea
+    - kind: mc
+      ask: Why is the answer to the garden side weak?
+      choices:
+      - It insults the idea without giving evidence.
+      - It uses too many survey numbers.
+      - It agrees with the garden supporters.
+      - It quotes the community center director.
+      evidence: only a few retired neighbors would ever bother to visit
+    - kind: write
+      ask: How could the council answer the garden side more fairly?
+      sample: It could admit a garden has value, then use evidence such as the survey to show more students would use a skate area.
+      evidence: Some adults want a community garden on the lot instead.
+    - kind: mc
+      ask: Who is the proposal mainly written for?
+      choices:
+      - the town council
+      - retired neighbors
+      - the librarian
+      - skateboard makers
+      evidence: We ask the town council to approve the skate area
+
+- id: b07-bring-your-bottle
+  title: Bring Your Bottle
+  genre: nonfiction
+  text: |
+    Starting this spring, our school can become a place where nobody throws away a single plastic
+    bottle. The Green Club is asking every student and teacher to back one simple rule. From now on,
+    only reusable water bottles should be allowed in our building, because disposable bottles create
+    mountains of trash, waste money, and teach a careless habit.
+
+    Look at the numbers. For two weeks, club members counted the plastic bottles in the recycling and
+    trash bins after school, and they found an average of more than three hundred bottles every single
+    day. Mrs. Kowalski, the head custodian, says the bins by the gym are full before lunch. She has to
+    empty them twice as often as any others in the building.
+
+    Think about the money, too. The vending machine in the main hallway charges two dollars for each
+    bottle of water. A student who buys one bottle every school day spends a lot of money over a year,
+    while a reusable bottle can be filled for free at any of the six filling stations the school
+    installed last fall.
+
+    Reusable bottles come in dozens of bright colors and fun patterns. Most important of all, a rule
+    like this would teach a lasting lesson. When the club tried a one-week reusable challenge in two
+    homerooms, students reported that they had started bringing their own bottles to sports practice and
+    weekend activities as well.
+
+    Some students complain that they forget their bottles or that reusable bottles are too expensive to
+    replace. Those are just lazy excuses. Anyone who truly cares about the planet can remember one
+    bottle a day, and people who refuse to change are simply choosing convenience over responsibility.
+
+    Join the movement. Sign the petition at the club table outside the cafeteria this week, and tell
+    your friends to bring their bottles on Monday.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What rule does the flyer want?
+      choices:
+      - Only reusable bottles
+      - More bottled water
+      - More trash bins
+      - No vending machines
+      evidence: only reusable water bottles should be allowed in our building
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Reusable bottles come in dozens of bright colors and fun patterns.
+      - more than three hundred bottles every single day
+      - charges two dollars for each bottle of water
+      - She has to empty them twice as often as any others
+      evidence: Reusable bottles come in dozens of bright colors and fun patterns.
+    - kind: mc
+      ask: Which detail is vague instead of exact?
+      choices:
+      - a lot of money over a year
+      - two dollars for each bottle
+      - six filling stations
+      - three hundred bottles
+      evidence: spends a lot of money over a year
+    - kind: write
+      ask: Is a one-week trial in two homerooms enough proof? Why?
+      sample: It is some evidence, but it is small and short. A longer trial with more classes would be more convincing.
+      evidence: a one-week reusable challenge in two homerooms
+  - focus: point of view
+    look_for: loaded words aimed at people who disagree
+    questions:
+    - kind: quote
+      ask: Which sentence uses loaded words instead of evidence?
+      choices:
+      - Those are just lazy excuses.
+      - Look at the numbers.
+      - Think about the money, too.
+      - She has to empty them twice as often as any others
+      evidence: Those are just lazy excuses.
+    - kind: mc
+      ask: What does "mountains of trash" suggest?
+      choices:
+      - a huge, alarming amount
+      - trash piled on a hill
+      - a small amount
+      - trash that is clean
+      evidence: disposable bottles create mountains of trash
+    - kind: write
+      ask: Is the answer to students who forget bottles convincing?
+      sample: No. It calls their worries lazy excuses and never says what to do if a bottle is forgotten or lost.
+      evidence: Those are just lazy excuses.
+    - kind: mc
+      ask: Why does the flyer end with "Join the movement"?
+      choices:
+      - to get readers to act
+      - to explain the numbers
+      - to thank the custodian
+      - to describe a trial
+      evidence: Join the movement.
+
+- id: b08-keep-weekend-work
+  title: Keep Weekend Homework
+  genre: nonfiction
+  text: |
+    This month the parent association suggested that our school declare every weekend homework-free. The
+    idea sounds generous, and I understand why it is popular. However, I believe it would be a mistake,
+    because a strict ban would crowd more work into school nights, take away the choice that many
+    students depend on, and make long projects harder to complete well.
+
+    Start with school nights. Teachers have a fixed amount of material to cover, so assignments that
+    disappear from weekends would have to land somewhere else. When the seventh grade tried a
+    homework-free weekend trial last spring, the science teachers reported that weeknight assignments
+    grew longer to make up the difference, and several students told us that Tuesday became their
+    hardest night of the week.
+
+    Next, consider choice. Many of our classmates have practices, lessons or family chores on
+    weeknights. For them, the weekend is the only time they can work slowly and carefully. In a survey
+    of our sixth graders, about a third said they prefer to finish most of their homework on Saturday or
+    Sunday. My little brother, who is in second grade, gets no homework at all and spends his weekends
+    building cardboard castles.
+
+    Finally, long projects need time. Ms. Okonkwo, who teaches history, has noticed that the best
+    research projects come from students who spread the work over two weekends. Projects squeezed into a
+    few rushed evenings are rarely as good.
+
+    Supporters of the ban say that students need time to rest and to be with their families, and they
+    are right that weekends matter. Yet a rule is not the only way to protect that time. Teachers could
+    agree to assign no more than one hour of weekend work and never to make a weekend assignment due on
+    Monday morning. That compromise would protect family time without punishing the students who need
+    weekends most.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is the writer's claim?
+      choices:
+      - Weekends should not be homework-free.
+      - Weekends should be homework-free.
+      - Teachers should assign more work.
+      - Projects should be done in one night.
+      evidence: I believe it would be a mistake
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - My little brother, who is in second grade, gets no homework at all and spends his weekends building cardboard castles.
+      - weeknight assignments grew longer
+      - they prefer to finish most of their homework on Saturday
+      - students who spread the work over two weekends
+      evidence: My little brother, who is in second grade, gets no homework at all and spends his weekends building cardboard castles.
+    - kind: mc
+      ask: Which reason is supported by a trial run?
+      choices:
+      - Weeknights get harder.
+      - Students like choice.
+      - Projects need time.
+      - Families need rest.
+      evidence: When the seventh grade tried a homework-free weekend trial last spring
+    - kind: write
+      ask: What kind of evidence supports the third reason?
+      sample: A teacher's observation. Ms. Okonkwo has noticed that the best projects are spread over two weekends.
+      evidence: Ms. Okonkwo, who teaches history, has noticed
+  - focus: point of view
+    look_for: how the writer treats supporters of the ban
+    questions:
+    - kind: mc
+      ask: How does the writer treat supporters of the ban?
+      choices:
+      - admits they have a fair point
+      - calls them lazy
+      - ignores them
+      - agrees with the ban
+      evidence: they are right that weekends matter
+    - kind: quote
+      ask: Which sentence offers a compromise?
+      choices:
+      - Teachers could agree to assign no more than one hour of weekend work
+      - Yet a rule is not the only way to protect that time.
+      - Finally, long projects need time.
+      - Start with school nights.
+      evidence: Teachers could agree to assign no more than one hour of weekend work
+    - kind: organizer
+      ask: Show how the writer answers the other side.
+      heads:
+      - Counterclaim
+      - Response
+      samples:
+      - Students need weekend time to rest and be with family.
+      - Limit weekend work to one hour and never make it due Monday.
+      evidence: never to make a weekend assignment due on Monday morning
+    - kind: mc
+      ask: Why does the writer say the idea "sounds generous"?
+      choices:
+      - to be fair before disagreeing
+      - to praise the parents' money
+      - to show the ban is costly
+      - to make fun of the idea
+      evidence: The idea sounds generous, and I understand why it is popular.
+
+- id: b09-uniforms-or-not
+  title: Uniforms or Not?
+  genre: nonfiction
+  text: |
+    Our school will soon decide whether to require uniforms next fall. Two members of the debate club,
+    Talia and Marcus, agreed to argue opposite sides of the question in alternating paragraphs, each
+    answering the points the other had just made.
+
+    Talia argues that uniforms would save families time and money. She surveyed our sixth graders, and
+    more than half said that choosing clothes is the most stressful part of their morning. She also
+    compared prices and found that five uniform shirts cost less than many single shirts sold at the
+    mall. Uniforms were common in schools long before anyone in our class was born.
+
+    Marcus answers that uniforms would take away an important form of self-expression. He points out
+    that students already follow a dress code, so the real question is whether every student should look
+    identical. When the art teacher, Mrs. Delgado, asked her classes to design their own school shirts,
+    she was impressed by how much students cared about showing who they were through color and style.
+
+    Talia responds that uniforms would also reduce teasing about clothing. The school counselor, Mr.
+    Abara, has told the debate club that several complaints each month involve comments about what
+    someone is wearing. Talia adds that students could still express themselves through their shoes,
+    their backpacks and the clubs they choose to join.
+
+    Marcus replies that teasing would not disappear, because students who want to tease someone would
+    simply find a different target. He suggests that a lesson on respect would address the problem more
+    directly than a new rule. He also notes that families would still need to buy regular clothes for
+    weekends, so the savings might be smaller than Talia expects.
+
+    Both students agree that the morning rush is real and that teasing is a genuine problem. They
+    disagree about whether a uniform is the right solution.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is Talia's claim?
+      choices:
+      - Uniforms save time and money
+      - Uniforms limit expression
+      - Dress codes should end
+      - Shoes should match
+      evidence: Talia argues that uniforms would save families time and money.
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for Talia's side?
+      choices:
+      - Uniforms were common in schools long before anyone in our class was born.
+      - the most stressful part of their morning
+      - five uniform shirts cost less than many single shirts
+      - several complaints each month involve comments
+      evidence: Uniforms were common in schools long before anyone in our class was born.
+    - kind: mc
+      ask: What evidence does Marcus use first?
+      choices:
+      - an art teacher's observation
+      - a price comparison
+      - a counselor's report
+      - a class survey
+      evidence: When the art teacher, Mrs. Delgado, asked her classes
+    - kind: write
+      ask: Is one art project enough to prove Marcus's point? Why?
+      sample: Not completely. It shows students care about style, but one project in one class is a small amount of evidence.
+      evidence: asked her classes to design their own school shirts
+  - focus: point of view
+    look_for: how each student answers the other
+    questions:
+    - kind: mc
+      ask: How does Marcus answer the point about teasing?
+      choices:
+      - Teasers would just pick a new target.
+      - Teasing never happens at our school.
+      - Uniforms would cause more teasing.
+      - The counselor is wrong about it.
+      evidence: students who want to tease someone would simply find a different target
+    - kind: quote
+      ask: Which words show Talia answering Marcus?
+      choices:
+      - students could still express themselves through their shoes
+      - He suggests that a lesson on respect would address the problem
+      - the savings might be smaller than Talia expects
+      - Our school will soon decide whether to require uniforms
+      evidence: students could still express themselves through their shoes
+    - kind: organizer
+      ask: Show one point Talia makes and how Marcus answers it.
+      heads:
+      - Talia's point
+      - Marcus's answer
+      samples:
+      - Uniforms would save families money.
+      - Families still need weekend clothes, so savings may be smaller.
+      evidence: families would still need to buy regular clothes for weekends
+
+- id: b10-library-hours
+  title: Later Library Hours
+  genre: nonfiction
+  text: |
+    Dear Principal Oyelaran, I am writing to ask that our school library stay open until five o'clock on
+    weekdays instead of closing at three-thirty. A later closing time would give students a quiet place
+    to study, access to computers they may not have at home, and more time with books.
+
+    First, many students need a quiet place to work. In a survey that the library club gave our sixth
+    graders, about forty percent said they have no calm spot at home to do homework in the afternoon.
+    Several described sharing a small table with younger brothers and sisters while the television is
+    on.
+
+    Second, the library has resources that some families do not. Ms. Fairbanks, our librarian, keeps a
+    sign-in sheet for the computers, and she has noticed that the same students arrive every day at
+    lunch to finish typing assignments. Those students often leave with their work half done because the
+    lunch period is only twenty-five minutes long.
+
+    Third, a later closing time would mean more reading. During the two weeks before winter break, when
+    the library stayed open until five for a book fair, Ms. Fairbanks checked out nearly twice as many
+    books as usual. Our library building was originally a firehouse, and the brass pole is still on
+    display near the reference shelves.
+
+    I know that staying open later would cost money, because someone would have to supervise the room.
+    That is a fair objection. However, the parent association has offered to organize trained volunteers
+    for two afternoons a week, and several eighth graders have said they would help shelve books as part
+    of their service hours. A trial of one semester would show whether enough students use the extra
+    time to justify the cost.
+
+    Thank you for considering this request. The library is already the heart of our school, and I hope
+    you will let it stay open a little longer every day.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What does the writer ask the principal to do?
+      choices:
+      - Keep the library open later
+      - Close the library at lunch
+      - Buy a computer for each home
+      - Hold a book fair every month
+      evidence: our school library stay open until five o'clock on weekdays
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Our library building was originally a firehouse, and the brass pole is still on display near the reference shelves.
+      - about forty percent said they have no calm spot at home
+      - the same students arrive every day at lunch
+      - checked out nearly twice as many books as usual
+      evidence: Our library building was originally a firehouse
+    - kind: mc
+      ask: What evidence supports the third reason?
+      choices:
+      - a two-week book fair
+      - a computer sign-in sheet
+      - a survey on quiet spots
+      - the library's history
+      evidence: when the library stayed open until five for a book fair
+    - kind: write
+      ask: Why is the book fair evidence only partly convincing?
+      sample: A book fair is a special event, so students might not borrow as many books on ordinary late afternoons.
+      evidence: for a book fair
+  - focus: point of view
+    look_for: how the writer handles the cost
+    questions:
+    - kind: quote
+      ask: Which sentence admits the other side has a point?
+      choices:
+      - That is a fair objection.
+      - Thank you for considering this request.
+      - Third, a later closing time would mean more reading.
+      - First, many students need a quiet place to work.
+      evidence: That is a fair objection.
+    - kind: mc
+      ask: How does the writer answer the cost problem?
+      choices:
+      - Volunteers and eighth graders could help.
+      - Students could pay a fee to stay late.
+      - The principal should ignore the cost.
+      - The library could close at lunch instead.
+      evidence: the parent association has offered to organize trained volunteers
+    - kind: mc
+      ask: Why does the writer suggest a one-semester trial?
+      choices:
+      - to test the idea first
+      - to save the brass pole
+      - to end the book fair
+      - to hire more teachers
+      evidence: A trial of one semester would show whether enough students use the extra time
+    - kind: write
+      ask: What does "the heart of our school" suggest?
+      sample: It suggests the library is the most important and loved place in the school, which makes the request feel warm.
+      evidence: The library is already the heart of our school
+
+- id: b11-save-our-summer
+  title: Save Our Summer
+  genre: nonfiction
+  text: |
+    Good afternoon, fellow students. The school board is considering a year-round calendar, which would
+    replace our long summer vacation with several shorter breaks spread across the year. I am here to
+    argue against it, because summer gives families time together, gives students time for camps and
+    jobs, and gives everyone a real rest.
+
+    My first reason is family time. In a survey of our sixth graders, more than half said their family
+    takes its longest trip of the year in July or August, often to visit grandparents who live far away.
+    Short breaks of two or three weeks would make those long visits much harder to plan.
+
+    My second reason is summer programs. The community center runs a six-week day camp, and its director
+    told our class that the camp hires about twenty older students as junior counselors every year.
+    Under a year-round calendar, those programs would have to shrink or disappear, because no break
+    would be long enough to hold them.
+
+    Summer has always been my favorite season, especially the week when the strawberries ripen. My third
+    reason is rest. Students work hard for nine months, and a long break gives them the chance to
+    explore hobbies, read for fun and come back in the fall feeling ready to learn.
+
+    Supporters of the year-round plan say that students forget what they learned over a long summer and
+    spend weeks reviewing in September. That claim is nothing but a tired excuse invented by people who
+    want to keep us in classrooms forever. Everyone knows that summer is when kids actually learn the
+    most important lessons, and no chart of test scores can measure that.
+
+    So I ask you to sign our letter to the school board before Friday. Tell them that summer is worth
+    keeping, and that our families, our camps and our communities depend on it.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is the speaker's claim?
+      choices:
+      - Keep the long summer break.
+      - Switch to year-round school.
+      - Make camps shorter.
+      - Start school in July.
+      evidence: I am here to argue against it
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Summer has always been my favorite season, especially the week when the strawberries ripen.
+      - more than half said their family takes its longest trip
+      - hires about twenty older students as junior counselors
+      - no break would be long enough to hold them
+      evidence: Summer has always been my favorite season, especially the week when the strawberries ripen.
+    - kind: mc
+      ask: Which reason is given without any evidence?
+      choices:
+      - Students need a real rest.
+      - Families travel in summer.
+      - Camps need long breaks.
+      - Camps hire older students.
+      evidence: My third reason is rest.
+    - kind: write
+      ask: Why is the camp director's statement useful evidence?
+      sample: The director runs the camp, so she knows how many students it hires and why it needs a long break.
+      evidence: its director told our class that the camp hires about twenty older students
+  - focus: point of view
+    look_for: words used about the other side
+    questions:
+    - kind: quote
+      ask: Which words are loaded language about the other side?
+      choices:
+      - That claim is nothing but a tired excuse
+      - My first reason is family time.
+      - My second reason is summer programs.
+      - Students work hard for nine months
+      evidence: That claim is nothing but a tired excuse
+    - kind: mc
+      ask: How does the speaker answer the "forgetting" claim?
+      choices:
+      - by dismissing it with loaded words
+      - by sharing test-score data
+      - by agreeing to shorter breaks
+      - by quoting a teacher's study
+      evidence: invented by people who want to keep us in classrooms forever
+    - kind: write
+      ask: What evidence could make the speaker's answer stronger?
+      sample: Records or a teacher's report showing how much review students actually need each September.
+      evidence: spend weeks reviewing in September
+    - kind: mc
+      ask: Who is the audience for this speech?
+      choices:
+      - fellow students
+      - camp counselors
+      - grandparents
+      - teachers only
+      evidence: Good afternoon, fellow students.
+
+- id: b12-plan-the-menu
+  title: Students Plan the Menu
+  genre: nonfiction
+  text: |
+    The student council proposes that a committee of students help plan the cafeteria lunch menu one
+    week of every month. We believe this change would reduce wasted food, increase the number of
+    students who buy lunch, and teach students how a real budget works.
+
+    Our first reason is food waste. For five days in February, council members recorded which items were
+    left on trays after lunch. The two meals that students had requested in a suggestion box were almost
+    completely eaten, while a vegetable casserole that nobody had asked for came back nearly untouched.
+
+    Our second reason is participation. The cafeteria manager, Mr. Castellano, shared his records with
+    us, and they show that sales rise on days when the menu includes a student favorite. In a survey of
+    our sixth graders, more than half said they would buy lunch more often if students had a voice in
+    choosing meals. Our school has the largest cafeteria in the district, with room for four hundred
+    students.
+
+    Our third reason is learning. The committee would work with Mr. Castellano to stay within the
+    cafeteria's budget and its menu guidelines, which means members would practice comparing prices,
+    planning quantities and making trade-offs. Ms. Ibrahim, who teaches math, has offered to connect the
+    project to her unit on percentages.
+
+    Some staff members worry that students would choose only pizza and desserts. We take that concern
+    seriously. Every menu the committee proposes would still have to meet the same rules the cafeteria
+    follows now, and Mr. Castellano would have the final approval. In our trial planning session, the
+    students actually suggested a build-your-own salad bar and a bean and rice bowl alongside their
+    favorites.
+
+    We ask the principal to approve a three-month trial beginning in the spring. At the end, the council
+    will report on waste, sales and student opinions so that everyone can judge the results.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What does the student council propose?
+      choices:
+      - Students help plan the menu
+      - Pizza every single day
+      - A bigger cafeteria
+      - No more casseroles
+      evidence: a committee of students help plan the cafeteria lunch menu
+    - kind: quote
+      ask: Which sentence is NOT relevant evidence for the claim?
+      choices:
+      - Our school has the largest cafeteria in the district, with room for four hundred students.
+      - came back nearly untouched
+      - more than half said they would buy lunch more often
+      - connect the project to her unit on percentages
+      evidence: Our school has the largest cafeteria in the district, with room for four hundred students.
+    - kind: mc
+      ask: Which evidence comes from the school's own records?
+      choices:
+      - cafeteria sales
+      - a math teacher's offer
+      - a survey of students
+      - the cafeteria's size
+      evidence: The cafeteria manager, Mr. Castellano, shared his records with us
+    - kind: write
+      ask: What did the tray study show about student choices?
+      sample: Meals students had asked for were almost all eaten, but a casserole nobody requested was barely touched.
+      evidence: came back nearly untouched
+  - focus: point of view
+    look_for: how the council answers the staff's worry
+    questions:
+    - kind: quote
+      ask: Which words give evidence against the staff's worry?
+      choices:
+      - the students actually suggested a build-your-own salad bar
+      - We take that concern seriously.
+      - Our third reason is learning.
+      - We ask the principal to approve a three-month trial
+      evidence: the students actually suggested a build-your-own salad bar
+    - kind: mc
+      ask: What is the council's tone toward the staff?
+      choices:
+      - respectful
+      - mocking
+      - angry
+      - bored
+      evidence: We take that concern seriously.
+    - kind: organizer
+      ask: Show how the council answers the other side.
+      heads:
+      - Counterclaim
+      - Response
+      - Evidence
+      samples:
+      - Students would choose only pizza and desserts.
+      - Menus must follow the same rules, and the manager approves them.
+      - In the trial, students chose a salad bar and a bean bowl.
+      evidence: Mr. Castellano would have the final approval
+
+- id: b13-trip-or-supplies
+  title: Field Trip or Paint?
+  genre: nonfiction
+  text: |
+    This year, our grade has a choice to make with the money raised at the fall bake sale. We can spend
+    it on the usual spring field trip to the science center, or we can buy new supplies for the art
+    room. Two students, Imani and Rafael, agreed to argue each side in turn.
+
+    Imani argues that the money should buy art supplies, because they would last for years and help
+    every student, not just one grade on one day. She points out that the art room's paint sets are so
+    old that several colors have dried into hard, cracked blocks. Mrs. Abernathy, the art teacher, keeps
+    a list of broken supplies, and it now fills two pages.
+
+    Rafael answers that the field trip offers something a classroom cannot. He reminds readers that last
+    year's trip included a planetarium show and a workshop where students built small circuits, and that
+    many students still talk about it. In a survey of our sixth graders, more than two thirds named the
+    field trip as their favorite day of the previous year.
+
+    Imani replies that memories are valuable, but that supplies would serve far more students. She notes
+    that the art room is used by every grade, about four hundred students in all, while the trip serves
+    only our grade of ninety. Imani's older sister says the art room smelled like fresh paint when she
+    was a student here.
+
+    Rafael responds that a favorite day is not a small thing, because a single exciting experience can
+    spark an interest that lasts a lifetime. He suggests a compromise: the grade could take a shorter,
+    less expensive trip and spend the remaining money on the most urgent art supplies.
+
+    Both students agree that the art room needs help. They disagree about whether one memorable day is
+    worth more than years of fresh paint and brushes.
+  pages:
+  - focus: claims and evidence
+    questions:
+    - kind: mc
+      ask: What is Imani's claim?
+      choices:
+      - Buy new art supplies
+      - Take the field trip
+      - Hold another bake sale
+      - Visit the art museum
+      evidence: Imani argues that the money should buy art supplies
+    - kind: quote
+      ask: Which detail is NOT relevant evidence for Imani's claim?
+      choices:
+      - Imani's older sister says the art room smelled like fresh paint when she was a student here.
+      - several colors have dried into hard, cracked blocks
+      - it now fills two pages
+      - about four hundred students in all
+      evidence: Imani's older sister says the art room smelled like fresh paint when she was a student here.
+    - kind: organizer
+      ask: Give one piece of evidence for each side.
+      heads:
+      - Imani's evidence
+      - Rafael's evidence
+      samples:
+      - The art teacher's list of broken supplies fills two pages.
+      - Two thirds of sixth graders named the trip their favorite day.
+      evidence: keeps a list of broken supplies, and it now fills two pages

@@ -1,0 +1,57 @@
+{
+  "id": "EN-R8-C-001",
+  "subject": "english",
+  "level": "R8",
+  "section": "C",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 14303890615845991914,
+  "title": "Alder Bay",
+  "parent_tip": "Ask what Theo wants right now, and what is in his way.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "c01-alder-bay",
+      "set": 0,
+      "side": "read",
+      "genre": "story",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [
+        {
+          "n": 1,
+          "text": "Theo Marsh stepped off the bus in Alder Bay with his phone in one hand and his suitcase in the other, and within thirty seconds he had decided that the town was too small, too quiet, and considerably too far from everything that mattered. The lake glittered beyond a row of faded shops, and a single gull watched him from a lamppost as if it, too, wondered why he had come.",
+          "cont": false
+        },
+        {
+          "n": 2,
+          "text": "His parents had arranged the visit months earlier, before they knew about the robot contest. Back home, his three closest friends were already designing the arm and the sensors, sending him photographs every hour, while he would spend the entire summer with a great-aunt he had met exactly twice.",
+          "cont": false
+        },
+        {
+          "n": 3,
+          "text": "Hazel Marsh was waiting on the sidewalk, a small woman in her seventies with silver hair pinned back and a canvas apron covered in pockets. \"You're taller than your photographs,\" she remarked, studying him with frank curiosity. \"Your mother warned me you'd be glued to that screen. I told her I've repaired stranger attachments.\"",
+          "cont": false
+        },
+        {
+          "n": 4,
+          "text": "The sign above her door read Marsh Clock & Radio Repair in peeling gold letters. Inside, the shop was dim and narrow, and every wall was crowded with clocks: tall ones in wooden cases, round ones with brass faces, cuckoo clocks with carved birds frozen beside their tiny doors. Each one ticked at its own slightly different pace, so the room seemed to murmur, as though a hundred patient people were whispering at once.",
+          "cont": false
+        },
+        {
+          "n": 5,
+          "text": "Theo glanced at his phone, which displayed the exact time without any noise at all. \"Why do you need so many?\" he asked, unable to keep the impatience out of his voice.",
+          "cont": false
+        }
+      ],
+      "turn": true,
+      "story": "The Tower Clock",
+      "part": 1
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

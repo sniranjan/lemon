@@ -1,0 +1,61 @@
+{
+  "id": "EN-R8-D-002",
+  "subject": "english",
+  "level": "R8",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "passage_spread",
+  "page_number": 152,
+  "variant": 1,
+  "seed": 6342153665295833383,
+  "title": "The Blue Ribbon",
+  "parent_tip": "Read the answer back: does each quote match the passage exactly?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "d01-the-blue-ribbon",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 151,
+      "continued": []
+    },
+    {
+      "kind": "quote",
+      "n": 1,
+      "ask": "Which words best show that Nico gave something up?",
+      "choices": [
+        "pretending to study a display of pickled vegetables",
+        "A woman pinned a shiny blue ribbon to her apron",
+        "Nico quietly emptied the coins from his savings jar",
+        "the crowd applauded politely"
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "organizer",
+      "n": 2,
+      "ask": "Plan your answer to question 3.",
+      "heads": [
+        "Claim",
+        "Evidence",
+        "Reasoning"
+      ],
+      "lines": 3
+    },
+    {
+      "kind": "paragraph",
+      "n": 3,
+      "ask": "Explain why Marisol gives the ribbon to Nico. Use two details from the story.",
+      "lines": 7
+    }
+  ],
+  "answer_key": [
+    "1. C (Nico quietly emptied the coins from his savings jar)",
+    "2. Claim: Marisol gives Nico the ribbon because his help made her win. · Evidence: Nico \"emptied the coins from his savings jar\"; she says \"half of this belongs to you.\" · Reasoning: He spent his own money on the walnuts, so she feels he earned part of the prize.",
+    "3. Sample: Marisol gives Nico the ribbon because she believes his help earned it. On the last morning, Nico \"emptied the coins from his savings jar\" to buy the walnuts she had forgotten. Later she tells him that \"half of this belongs to you.\" These details show that she sees the win as something they did together. Giving him the ribbon is her way of thanking him for his sacrifice. Full answer: Claim about Marisol's motive; two quotes (Nico's help, her words); explains her gratitude."
+  ],
+  "new_words": [],
+  "review_words": []
+}

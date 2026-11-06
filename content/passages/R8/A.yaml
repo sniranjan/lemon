@@ -1,0 +1,914 @@
+# Lions Reading, section A "Close Reading" (pages 1–50): short excerpts read closely for the meaning
+# of words and phrases (figurative and connotative) and the effect of word choice on tone (RL.8.4,
+# RL.8.1, L.8.4a, L.8.5). Original texts (ours). Schema and checks: ws/spreads.py (two-page spreads).
+# Each excerpt serves two spreads: set 1 asks about words and phrases, set 2 about craft and tone.
+
+- id: a01-the-audition
+  title: The Audition
+  genre: story
+  text: |
+    Priya arrived twenty minutes early on the morning of the
+    audition, which she told herself was discipline and which was, in truth, nervousness wearing an
+    elaborate disguise.
+
+    The cello lay inside its case like a sleeping animal, its varnish catching the gray light from the
+    window. For three months she had practiced the same sixteen measures of a difficult sonata, until
+    the notes no longer resembled music but a staircase she climbed every evening, counting each step
+    so that she would not stumble.
+
+    Mr. Okafor appeared in the doorway holding a coffee mug and a clipboard. He was a tall man who
+    moved deliberately, as if the entire world were a narrow hallway crowded with instruments he might
+    accidentally bump. "You're early," he observed, and it was not a question.
+
+    "I wanted to warm up," Priya answered, but her voice emerged thinner than she intended, a reed
+    instead of a bow.
+
+    When she began, the first phrase faltered. Her bow skidded across the lowest string with a sound
+    like a door complaining on its hinges, and embarrassment crept up her neck. She stopped, breathed,
+    and started again.
+
+    This time she abandoned the counting. She allowed the melody to lean forward the way it seemed to
+    want to, slightly faster during the climb and gentler at the summit, and for eight measures she
+    forgot the clipboard entirely.
+
+    When the final note faded, the room was quiet enough to hear the radiator ticking. Mr. Okafor set
+    down his mug. "That second time," he said slowly, "you stopped performing and started listening."
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "nervousness wearing an elaborate disguise" suggest?
+          choices:
+            - Her early arrival is really caused by worry.
+            - She dressed up in a costume to play.
+            - She is trying to trick her teacher.
+            - She arrives early every single day.
+          evidence: nervousness wearing an elaborate disguise
+        - kind: mc
+          ask: In paragraph 2, why is the music compared to a staircase?
+          choices:
+            - Practice made it feel like a careful chore.
+            - The sonata gets louder as it goes on.
+            - Priya practices on the stairs at home.
+            - The music had become too easy for her.
+          evidence: counting each step so that she would not stumble
+        - kind: quote
+          ask: Which sentence best shows that Priya's playing changes?
+          choices:
+            - This time she abandoned the counting.
+            - When she began, the first phrase faltered.
+            - She stopped, breathed, and started again.
+            - Mr. Okafor set down his mug.
+          evidence: This time she abandoned the counting.
+        - kind: write
+          ask: What does "a reed instead of a bow" mean here?
+          sample: Her voice came out thin and weak instead of full and strong, because she was nervous.
+          evidence: her voice emerged thinner than she intended
+    - focus: craft and tone
+      look_for: words that show how Priya feels
+      questions:
+        - kind: mc
+          ask: Which word best describes the tone of paragraphs 1–5?
+          choices: [tense, cheerful, angry, bored]
+          evidence: embarrassment crept up her neck
+        - kind: mc
+          ask: Why does the author say the bow sounded like "a door complaining"?
+          choices:
+            - to show the note sounded harsh and wrong
+            - to show the room had a squeaky door
+            - to show Priya was angry at her cello
+            - to show the music was soft and calm
+          evidence: a sound like a door complaining on its hinges
+        - kind: quote
+          ask: Which sentence shows that the scene becomes calmer?
+          choices:
+            - When the final note faded, the room was quiet enough to hear the radiator ticking.
+            - When she began, the first phrase faltered.
+            - She stopped, breathed, and started again.
+            - "\"You're early,\" he observed, and it was not a question."
+          evidence: the room was quiet enough to hear the radiator ticking
+        - kind: write
+          ask: What does "stopped performing and started listening" mean?
+          sample: It means she stopped worrying about being judged and paid attention to the music itself.
+          evidence: you stopped performing and started listening
+
+- id: a02-before-the-ovens
+  title: Before the Ovens Wake
+  genre: story
+  text: |
+    At four in the morning, the bakery on Calloway Street was a dark box of silence, and Mateo Reyes unlocked the back door with fingers that still felt half asleep. His aunt Lucia was already inside, tying her apron with the brisk efficiency of someone who had performed the same ritual for twenty-two years.
+
+    The ovens groaned awake one by one, exhaling warm breath into the cold kitchen. Mateo measured flour into a steel bowl while Lucia hummed an old song, a melody so worn and familiar that it seemed stitched into the walls themselves.
+
+    Kneading was the part Mateo dreaded. The dough resisted him at first, stubborn and sticky, clinging to his knuckles like a toddler refusing to let go of a toy. Every morning, he told his aunt, he felt like Sisyphus, the king in the Greek myth who pushes a boulder up a hill only to watch it roll back down, so that he must push it again forever. Lucia laughed, dusting flour from her hands. "Sisyphus never got to eat his boulder," she pointed out, "and nobody ever lined up outside his door at seven o'clock."
+
+    By six, the windows had begun to glow, and the first loaves emerged with crusts the color of autumn leaves. The kitchen, which had felt so grim and gray an hour earlier, now smelled like cinnamon and possibility.
+
+    Mateo tore the end off a warm roll and considered it. Perhaps, he decided, a task that repeats forever is only a punishment if nothing good ever comes of it.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "The ovens groaned awake" suggest?
+          choices:
+            - They started slowly and noisily.
+            - They were broken and useless.
+            - They were too hot to touch.
+            - They woke Mateo from his sleep.
+          evidence: The ovens groaned awake one by one
+        - kind: mc
+          ask: In paragraph 1, what does "ritual" most likely mean?
+          choices:
+            - a routine done the same way
+            - a rare and special party
+            - a secret recipe for bread
+            - a rule written for workers
+          evidence: performed the same ritual for twenty-two years
+        - kind: quote
+          ask: Which sentence best shows the dough is hard to work?
+          choices:
+            - The dough resisted him at first, stubborn and sticky, clinging to his knuckles like a toddler refusing to let go of a toy.
+            - Lucia laughed, dusting flour from her hands.
+            - Mateo tore the end off a warm roll and considered it.
+            - The ovens groaned awake one by one, exhaling warm breath into the cold kitchen.
+          evidence: The dough resisted him at first, stubborn and sticky
+        - kind: write
+          ask: What does "smelled like cinnamon and possibility" mean?
+          sample: The kitchen smelled sweet, and the morning now felt hopeful, as if good things could happen.
+          evidence: now smelled like cinnamon and possibility
+    - focus: craft and tone
+      look_for: words that show how Mateo feels about work
+      questions:
+        - kind: mc
+          ask: What does the Sisyphus allusion show about Mateo?
+          choices:
+            - He feels his work never ends.
+            - He thinks kneading is easy.
+            - He wants to climb a hill.
+            - He is proud of his strength.
+          evidence: so that he must push it again forever
+        - kind: mc
+          ask: What point does Lucia make about Sisyphus?
+          choices:
+            - Their work, unlike his, is enjoyed.
+            - Sisyphus was a famous baker.
+            - Boulders are heavier than dough.
+            - Mateo should work more slowly.
+          evidence: Sisyphus never got to eat his boulder
+        - kind: mc
+          ask: How does the mood change by paragraph 4?
+          choices:
+            - from gloomy to warm and hopeful
+            - from cheerful to tense
+            - from calm to angry
+            - from excited to bored
+          evidence: which had felt so grim and gray an hour earlier, now smelled like cinnamon and possibility
+        - kind: write
+          ask: What does Mateo realize about repeated tasks?
+          sample: He realizes that doing the same work again and again is worth it when it makes something good that people enjoy.
+          evidence: a task that repeats forever is only a punishment if nothing good ever comes of it
+
+- id: a03-first-snow
+  title: First Snow
+  genre: story
+  text: |
+    I went to bed on Tuesday in an ordinary town and woke on Wednesday in a completely different one. Overnight, the first snowfall of the year had quietly erased every sidewalk, mailbox, and parked car. In their place stood soft, rounded shapes that looked like furniture draped in sheets.
+
+    My little sister Hana pressed her nose against the window until the glass fogged. "Everything is gone," she whispered, as though the snow might overhear her and take the rest of the neighborhood too.
+
+    Standing on the porch, I felt a little like Rip Van Winkle, the man in the old tale who naps under a tree, wakes twenty years later, and wanders into a village he no longer recognizes. The street I had walked a thousand times was suddenly unfamiliar, and even the noisy maple tree on the corner had been hushed into silence.
+
+    Hana, of course, had no time for reflection. She launched herself off the bottom step and landed in a drift that swallowed her up to the knees. Her shriek of joy was so loud that it bounced off every roof on the block.
+
+    Our neighbor Mr. Abernathy, shoveling his driveway with grim determination, paused to wave his mitten at us. "Lovely weather for penguins," he called, though his rosy cheeks and broad smile suggested that he did not entirely mean the complaint.
+
+    By noon, footprints had stitched the white blanket together again, and the town slowly became ours once more.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "erased" suggest about the snow?
+          choices:
+            - It covered things completely.
+            - It melted everything away.
+            - It made the town dirty.
+            - It fell for only a minute.
+          evidence: quietly erased every sidewalk, mailbox, and parked car
+        - kind: mc
+          ask: What does "a drift that swallowed her" mean?
+          choices:
+            - She sank deep into the snow.
+            - She ate a mouthful of snow.
+            - She lost her boot in the snow.
+            - She hid behind a pile of snow.
+          evidence: landed in a drift that swallowed her up to the knees
+        - kind: mc
+          ask: What does Mr. Abernathy mean by "weather for penguins"?
+          choices:
+            - It is very cold outside.
+            - Penguins live on his street.
+            - He wants a pet penguin.
+            - It is warm and sunny.
+          evidence: Lovely weather for penguins
+        - kind: write
+          ask: What does "stitched the white blanket together" mean?
+          sample: People's footprints crossed the snow and joined the streets again, so the town felt lived in.
+          evidence: footprints had stitched the white blanket together again
+    - focus: craft and tone
+      look_for: words that make the town seem new
+      questions:
+        - kind: mc
+          ask: Why does the narrator mention Rip Van Winkle?
+          choices:
+            - The street seems strange and new.
+            - The narrator slept twenty years.
+            - The narrator dislikes old tales.
+            - A man was napping in the snow.
+          evidence: wanders into a village he no longer recognizes
+        - kind: mc
+          ask: Which word best describes Hana's mood?
+          choices: [joyful, nervous, bored, grumpy]
+          evidence: Her shriek of joy was so loud
+        - kind: quote
+          ask: Which part shows the narrator sees home differently?
+          choices:
+            - The street I had walked a thousand times was suddenly unfamiliar
+            - She launched herself off the bottom step
+            - paused to wave his mitten at us
+            - My little sister Hana pressed her nose against the window
+          evidence: The street I had walked a thousand times was suddenly unfamiliar
+        - kind: write
+          ask: What does Hana's whisper show about how she sees snow?
+          sample: She talks as if the snow is alive and could listen and take more of the town, which shows her amazement.
+          evidence: as though the snow might overhear her
+
+- id: a04-reaching-too-high
+  title: Reaching Too High
+  genre: story
+  text: |
+    Amara Osei had spent six weeks convinced that the team's robot needed one more feature. The original design was modest: a squat, sturdy machine on four wheels that could scoop foam blocks and deposit them in a bin. It worked reliably and unglamorously, like a dependable old pickup truck.
+
+    But Amara wanted more. She added a telescoping arm that could stretch to the highest shelf on the competition field, where blocks were worth triple points, and she named the robot Icarus, after the boy in the Greek myth who flew on wings made of feathers and wax.
+
+    Her teammate Jun studied the new arm skeptically. "You do remember what happened to Icarus," he said, "when he ignored his father's warning and flew too close to the sun?" Amara waved the question away, insisting that the wax in her version was really sturdy aluminum.
+
+    On competition morning, the gymnasium buzzed like a hive. In the first round, Icarus rolled forward, raised its gleaming arm toward the top shelf, and then, at its full height, began to wobble. The entire robot tipped sideways and toppled onto the mat with a clatter that silenced the bleachers.
+
+    Amara felt her face burn. Jun, to his credit, said nothing clever at all. He simply helped her lift the robot upright, and together they lowered the arm two notches before the next round.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "reliably and unglamorously" tell you?
+          choices:
+            - It worked well but was plain.
+            - It was flashy but often broke.
+            - It was too slow to be useful.
+            - It looked shiny and brand new.
+          evidence: It worked reliably and unglamorously
+        - kind: mc
+          ask: In paragraph 3, what does "skeptically" mean?
+          choices: [with doubt, with joy, with anger, with boredom]
+          evidence: Her teammate Jun studied the new arm skeptically.
+        - kind: mc
+          ask: What does "the gymnasium buzzed like a hive" mean?
+          choices:
+            - It was noisy and busy.
+            - It was full of real bees.
+            - It was quiet and empty.
+            - It was hot and stuffy.
+          evidence: the gymnasium buzzed like a hive
+        - kind: write
+          ask: What does "Amara felt her face burn" show?
+          sample: It shows she was embarrassed when her robot fell over in front of everyone.
+          evidence: Amara felt her face burn.
+    - focus: craft and tone
+      look_for: the myth the robot is named after
+      questions:
+        - kind: mc
+          ask: Why is "Icarus" a fitting name for the robot?
+          choices:
+            - Like Icarus, it reached too high.
+            - It could fly above the field.
+            - It was made of feathers and wax.
+            - Jun's father helped to build it.
+          evidence: flew too close to the sun
+        - kind: mc
+          ask: What does the pickup truck comparison suggest?
+          choices:
+            - The first robot was plain but trusty.
+            - The first robot was fast and stylish.
+            - The first robot was huge and clumsy.
+            - The first robot was old and broken.
+          evidence: like a dependable old pickup truck
+        - kind: quote
+          ask: Which sentence shows that Jun is kind to Amara?
+          choices:
+            - Jun, to his credit, said nothing clever at all.
+            - Her teammate Jun studied the new arm skeptically.
+            - Amara felt her face burn.
+            - But Amara wanted more.
+          evidence: Jun, to his credit, said nothing clever at all.
+        - kind: write
+          ask: What does lowering the arm "two notches" suggest?
+          sample: It suggests that aiming a little lower can be wiser than reaching too high and falling.
+          evidence: together they lowered the arm two notches
+
+- id: a05-the-sewing-room
+  title: The Sewing Room
+  genre: story
+  text: |
+    Grandma Mei's sewing room was barely larger than a closet, yet Lin always thought it held more color than the rest of the house combined. Spools of thread lined the shelves like a rainbow that had been carefully rolled up and stored for later, and a tin of mismatched buttons rattled whenever anyone closed the door.
+
+    Lin had volunteered to help finish a quilt for her cousin's new baby, imagining an afternoon of quick, satisfying progress. Instead, Grandma Mei handed her a needle, a single square of fabric, and an expression that made it clear nobody would be hurrying.
+
+    Lin's first stitches raced across the cloth, long and crooked, like the footprints of someone running late for a bus. Grandma Mei examined them without comment, then gently pulled them out, one by one, until the square was bare again.
+
+    "You sew like the hare," she said, smiling at Lin's dismay, "dashing ahead and then stopping to fix everything. I sew like the tortoise, slow and steady, and I only have to do it once." Her own stitches were tiny and even, marching across the seam in perfect, obedient rows.
+
+    By evening, Lin's fingertips ached and her square was only half finished, but the stitches she had made were small and straight. When she held the fabric up to the lamp, the light did not slip through a single gap.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: Why compare the spools to a rolled-up rainbow?
+          choices:
+            - The threads are many colors.
+            - The room is full of sunlight.
+            - The spools are very old.
+            - The threads are all gray.
+          evidence: like a rainbow that had been carefully rolled up
+        - kind: mc
+          ask: In paragraph 4, what does "dismay" most likely mean?
+          choices: [disappointment, delight, boredom, hunger]
+          evidence: smiling at Lin's dismay
+        - kind: mc
+          ask: What do "obedient rows" suggest about the stitches?
+          choices:
+            - They are neat and orderly.
+            - They are loose and messy.
+            - They are bright and colorful.
+            - They are large and uneven.
+          evidence: marching across the seam in perfect, obedient rows
+        - kind: write
+          ask: What does "like the footprints of someone running late" show?
+          sample: It shows Lin's stitches were rushed, long and uneven, because she was hurrying.
+          evidence: like the footprints of someone running late for a bus
+    - focus: craft and tone
+      look_for: words that compare fast and slow work
+      questions:
+        - kind: mc
+          ask: Why does Grandma Mei mention the tortoise and the hare?
+          choices:
+            - Slow, careful work wins.
+            - Lin likes animal stories.
+            - Rabbits run faster than turtles.
+            - Lin should sew a turtle.
+          evidence: I sew like the tortoise, slow and steady, and I only have to do it once.
+        - kind: mc
+          ask: What is Grandma Mei's tone in paragraph 4?
+          choices: [gently teasing, harsh, worried, bored]
+          evidence: smiling at Lin's dismay
+        - kind: quote
+          ask: Which sentence shows that Lin's work has improved?
+          choices:
+            - When she held the fabric up to the lamp, the light did not slip through a single gap.
+            - Lin's first stitches raced across the cloth, long and crooked
+            - Grandma Mei examined them without comment
+            - Lin had volunteered to help finish a quilt for her cousin's new baby
+          evidence: the light did not slip through a single gap
+        - kind: write
+          ask: Why does the story end with light that "did not slip through"?
+          sample: It shows Lin's stitches are tight with no gaps, proving that her slow, careful work paid off.
+          evidence: the light did not slip through a single gap
+
+- id: a06-the-wolf-arrives
+  title: The Wolf Arrives
+  genre: nonfiction
+  text: |
+    For most of July, the weather forecast in our town behaved like the boy who cried wolf in the old fable. Every afternoon it promised thunderstorms, and every afternoon the sky stayed a flat, indifferent blue, until my family stopped believing the warnings altogether. So when the radio announced another storm on the last Thursday of the month, my father did not even glance up from his crossword.
+
+    I noticed the change first from the porch swing. The air grew heavy and still, as if the whole neighborhood were holding its breath, and the leaves on the oak tree flipped over to show their pale undersides. Somewhere to the west, a low rumble rolled across the hills like furniture being dragged across an attic floor.
+
+    Then the rain arrived, not gradually but all at once, a gray curtain sweeping down the street. Lightning stitched the clouds together for an instant, and the thunder that followed was so loud that I felt it in the boards beneath my feet.
+
+    My father appeared in the doorway, pencil still in hand, and watched the gutters overflow with something close to respect. "Well," he admitted, "I suppose the wolf finally showed up."
+
+    We stayed on the porch, safely under the roof, until the storm moved east and the air smelled clean and green, like a garden that had just been rinsed.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "holding its breath" suggest?
+          choices:
+            - Everything felt still and waiting.
+            - People could not breathe well.
+            - The neighbors were swimming.
+            - The whole street was asleep.
+          evidence: as if the whole neighborhood were holding its breath
+        - kind: mc
+          ask: In paragraph 1, what does "indifferent" mean?
+          choices: [not caring, very angry, quickly changing, deeply worried]
+          evidence: the sky stayed a flat, indifferent blue
+        - kind: mc
+          ask: What does "a gray curtain" describe?
+          choices:
+            - a thick wall of rain
+            - a cloth on the window
+            - the dark sky at night
+            - fog over the hills
+          evidence: Then the rain arrived, not gradually but all at once, a gray curtain sweeping down the street.
+        - kind: write
+          ask: Why compare thunder to furniture being dragged?
+          sample: The far-off thunder was a low, heavy scraping rumble, like something big being pulled across a floor upstairs.
+          evidence: a low rumble rolled across the hills like furniture being dragged across an attic floor
+    - focus: craft and tone
+      look_for: the old fable the forecast is compared to
+      questions:
+        - kind: mc
+          ask: Why compare the forecast to the boy who cried wolf?
+          choices:
+            - It warned often and was wrong.
+            - It always predicted sun.
+            - A young boy read it aloud.
+            - It warned about real wolves.
+          evidence: Every afternoon it promised thunderstorms, and every afternoon the sky stayed a flat, indifferent blue
+        - kind: mc
+          ask: What does "the wolf finally showed up" mean?
+          choices:
+            - The storm really came.
+            - A wolf was in the yard.
+            - The crossword was done.
+            - The storm was very small.
+          evidence: I suppose the wolf finally showed up
+        - kind: quote
+          ask: Which part shows the mood is calm at the end?
+          choices:
+            - the air smelled clean and green, like a garden that had just been rinsed
+            - Then the rain arrived, not gradually but all at once
+            - The air grew heavy and still
+            - I noticed the change first from the porch swing.
+          evidence: the air smelled clean and green, like a garden that had just been rinsed
+        - kind: write
+          ask: How does the father's attitude change?
+          sample: At first he ignores the forecast, but by the end he watches the storm with something close to respect.
+          evidence: watched the gutters overflow with something close to respect
+
+- id: a07-lake-at-sunrise
+  title: Lake at Sunrise
+  genre: story
+  text: |
+    My uncle Farid believes that a lake at sunrise is like a library before the doors open: the same place everyone visits later, but quieter, and somehow more yours. That is why, on the third morning of our vacation, he knocked on my cabin door while the sky was still the color of weak tea.
+
+    We carried the canoe down to the water together. Our sneakers squeaked on the wet grass. The lake lay perfectly flat, a sheet of polished glass that reflected the pines so precisely that I could not tell where the real trees ended and their upside-down twins began.
+
+    Uncle Farid paddled in the stern with long, unhurried strokes, and I tried to imitate him from the bow. My paddle splashed clumsily at first, scattering the reflection into a thousand trembling pieces. Gradually, though, I found the rhythm, and the canoe began to glide instead of lurch.
+
+    Halfway across, the sun lifted itself over the ridge. Gold spilled across the water as if someone had tipped a giant pitcher of honey, and a heron standing in the shallows unfolded its wings and departed with enormous, dignified flaps.
+
+    "Worth losing an hour of sleep?" my uncle asked, resting his paddle across his knees. I wanted to answer with something clever, but the morning had borrowed all my words, so I simply nodded.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "the color of weak tea" say about the sky?
+          choices:
+            - It was pale and dim.
+            - It was bright blue.
+            - It was stormy and black.
+            - It was glowing orange.
+          evidence: the sky was still the color of weak tea
+        - kind: mc
+          ask: Which word has the most negative connotation?
+          choices: [lurch, glide, unhurried, dignified]
+          evidence: the canoe began to glide instead of lurch
+        - kind: mc
+          ask: In paragraph 2, what does "precisely" mean?
+          choices: [exactly, loudly, slowly, rarely]
+          evidence: reflected the pines so precisely that I could not tell where the real trees ended
+        - kind: write
+          ask: What does "the morning had borrowed all my words" mean?
+          sample: The narrator was so amazed by the beautiful morning that she could not think of anything to say.
+          evidence: the morning had borrowed all my words, so I simply nodded
+    - focus: craft and tone
+      look_for: comparisons that describe the lake
+      questions:
+        - kind: mc
+          ask: What does the library analogy suggest about the lake?
+          choices:
+            - It feels calm and private early.
+            - It is full of books to read.
+            - It is closed to all visitors.
+            - It is noisy in the morning.
+          evidence: the same place everyone visits later, but quieter, and somehow more yours
+        - kind: mc
+          ask: Why compare the sunlight to "a pitcher of honey"?
+          choices:
+            - The light looked golden.
+            - The water tasted sweet.
+            - A bear came to the lake.
+            - The sun was very hot.
+          evidence: Gold spilled across the water as if someone had tipped a giant pitcher of honey
+        - kind: mc
+          ask: Which words best describe the mood of paragraph 4?
+          choices: [peaceful and awed, tense and worried, silly and playful, dull and gloomy]
+          evidence: departed with enormous, dignified flaps
+        - kind: write
+          ask: What are the trees' "upside-down twins"?
+          sample: They are the reflections of the pine trees in the flat water, which look exactly like the real trees turned over.
+          evidence: where the real trees ended and their upside-down twins began
+
+- id: a08-the-navy-jacket
+  title: The Navy Jacket
+  genre: story
+  text: |
+    Kofi Mensah prided himself on being organized. His pencils lived in labeled pouches, his homework traveled in color-coded folders, and his locker was so tidy that his friend Dani called it a museum exhibit. His single weakness, like the one unprotected spot on the heel of the Greek hero Achilles, was his jacket.
+
+    He lost it constantly. It slipped off chair backs, hid under bleachers, and vanished from the cafeteria with the stealth of a cat burglar. By October, the school secretary, Mrs. Delgado, greeted him at the lost-and-found box with a knowing smile before he had even opened his mouth.
+
+    On Friday, Kofi spotted a navy jacket draped over a bench by the gym and grabbed it with relief. It was only at home, reaching into the pocket, that he discovered a stranger's harmonica, three peppermints, and a note that read, in careful handwriting, "If found, please return to Wes, who never loses anything."
+
+    Kofi groaned. The most organized boy in sixth grade had accidentally walked off with somebody else's jacket, and its owner was apparently the one person more careful than he was.
+
+    On Monday morning he returned it to the office, where Mrs. Delgado held up a second navy jacket. "Wes brought this in," she said, her eyes twinkling. "He found it by the gym on Friday."
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "a museum exhibit" suggest about the locker?
+          choices:
+            - It was neat and arranged.
+            - It was old and dusty.
+            - It was full of paintings.
+            - It was locked all day.
+          evidence: his locker was so tidy that his friend Dani called it a museum exhibit
+        - kind: mc
+          ask: In paragraph 2, what does "stealth" mean?
+          choices: [quiet secrecy, loud noise, great speed, bright color]
+          evidence: vanished from the cafeteria with the stealth of a cat burglar
+        - kind: mc
+          ask: Why is Wes's note ironic by the end?
+          choices:
+            - Wes also mixed up jackets.
+            - Wes writes very neatly.
+            - Wes plays the harmonica.
+            - Wes likes peppermints.
+          evidence: who never loses anything
+        - kind: write
+          ask: What does Mrs. Delgado's "knowing smile" suggest?
+          sample: It suggests she already knew Kofi had come to look for his lost jacket again.
+          evidence: greeted him at the lost-and-found box with a knowing smile before he had even opened his mouth
+    - focus: craft and tone
+      look_for: words that show Kofi's one weakness
+      questions:
+        - kind: mc
+          ask: What does the allusion to Achilles tell you?
+          choices:
+            - The jacket is his one weak spot.
+            - His heel is sore from running.
+            - The jacket is his favorite thing.
+            - He wants to be a Greek hero.
+          evidence: like the one unprotected spot on the heel of the Greek hero Achilles
+        - kind: mc
+          ask: What is the tone of paragraph 4?
+          choices: [humorous, gloomy, angry, fearful]
+          evidence: its owner was apparently the one person more careful than he was
+        - kind: quote
+          ask: Which sentence reveals the surprise ending?
+          choices:
+            - He found it by the gym on Friday.
+            - Kofi groaned.
+            - He lost it constantly.
+            - Kofi Mensah prided himself on being organized.
+          evidence: He found it by the gym on Friday.
+        - kind: write
+          ask: Why does the author say the jacket "hid" and "vanished"?
+          sample: These words make the jacket seem to sneak away on purpose, which adds humor and makes Kofi seem less to blame.
+          evidence: hid under bleachers, and vanished from the cafeteria
+
+- id: a09-geese-overhead
+  title: Geese Overhead
+  genre: nonfiction
+  text: |
+    Every October, a ragged V of Canada geese passes over the fields behind my school. Every October, I stop whatever I am doing to watch. Their honking drifts down long before the birds themselves appear, a noisy conversation conducted entirely in the sky.
+
+    The journey these birds undertake is nothing short of a Herculean task. The phrase comes from the Greek hero Hercules, who was assigned twelve labors so difficult that no ordinary person could complete them. Some flocks travel more than a thousand miles between their northern nesting grounds and their winter homes. They stop only to rest and feed in lakes and harvested fields.
+
+    Their famous V formation is not simply decoration. Each goose flies slightly behind and to the side of the one in front. It catches a lift from the swirling air that rolls off its neighbor's wingtips, much as a cyclist saves energy by riding close behind another rider. When the leader tires, it drops back, and another goose takes its turn at the point.
+
+    I find something quietly admirable in that arrangement. No single bird carries the burden of the whole journey. Instead, the effort is shared, passed backward and forward like a heavy basket among friends. By the time the flock vanishes over the tree line, I have usually forgotten whatever I was supposed to be doing.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "a noisy conversation" in the sky describe?
+          choices:
+            - the geese honking
+            - people shouting
+            - rolling thunder
+            - a radio playing
+          evidence: Their honking drifts down long before the birds themselves appear
+        - kind: mc
+          ask: What does "ragged" suggest about the V?
+          choices:
+            - It is uneven, not perfect.
+            - It is torn and dirty.
+            - It is very small.
+            - It is perfectly straight.
+          evidence: a ragged V of Canada geese
+        - kind: mc
+          ask: In paragraph 3, what does "formation" mean?
+          choices: [an arrangement, a song, a nest, a meal]
+          evidence: Their famous V formation is not simply decoration.
+        - kind: write
+          ask: Explain "passed backward and forward like a heavy basket."
+          sample: The hard job of leading is shared, with each goose taking a turn, the way friends share carrying something heavy.
+          evidence: the effort is shared, passed backward and forward like a heavy basket among friends
+    - focus: craft and tone
+      look_for: comparisons that explain the journey
+      questions:
+        - kind: mc
+          ask: Why call the journey a "Herculean task"?
+          choices:
+            - It is extremely hard.
+            - It is very short.
+            - A hero leads the flock.
+            - It takes twelve days.
+          evidence: twelve labors so difficult that no ordinary person could complete them
+        - kind: mc
+          ask: What does the cyclist analogy help explain?
+          choices:
+            - how geese save energy
+            - why geese honk so much
+            - where geese build nests
+            - how fast cyclists ride
+          evidence: much as a cyclist saves energy by riding close behind another rider
+        - kind: quote
+          ask: Which sentence best shows the writer admires the geese?
+          choices:
+            - I find something quietly admirable in that arrangement.
+            - Their famous V formation is not simply decoration.
+            - When the leader tires, it drops back
+            - Every October, a ragged V of Canada geese passes over the fields behind my school
+          evidence: I find something quietly admirable in that arrangement.
+        - kind: write
+          ask: What is the writer's tone toward the geese?
+          sample: The tone is admiring and thoughtful; the writer stops everything to watch and praises how the geese share the work.
+          evidence: I find something quietly admirable in that arrangement.
+
+- id: a10-the-costume-trunk
+  title: The Costume Trunk
+  genre: story
+  text: |
+    Fifteen minutes before the curtain rose, the space behind the stage was a whirlwind of half-dressed knights, misplaced crowns, and whispered panic. Rosa Delacruz, the student stage manager, stood at the center of it with a clipboard and a headset, trying to look calmer than she felt.
+
+    The trouble began when someone opened the old costume trunk. Like Pandora in the Greek myth, who lifted the lid of a forbidden box and released every trouble into the world, the sixth grader who unlatched it had no idea what she was starting. Feathers drifted everywhere, a cardboard throne collapsed, and the dragon's tail unraveled across the floor like a runaway ball of yarn.
+
+    Rosa took a long breath and began assigning tasks in a voice that was quiet but firm. Two dancers gathered feathers, and the stagehands propped up the throne with tape. Meanwhile, Mr. Huang, the music teacher, knelt beside the dragon with a needle and thread, muttering cheerfully about the clock.
+
+    With two minutes to spare, Rosa noticed one last item at the bottom of the empty trunk. It was a small, hand-painted sign from some long-ago production that read, "Break a leg, everyone," which is the theater's old way of wishing performers good luck. She propped it against the wall where the whole cast could see it.
+
+    In the myth, she remembered, one thing remained in Pandora's box after all the troubles had escaped, and that thing was hope.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "a whirlwind" suggest about backstage?
+          choices:
+            - It was busy and chaotic.
+            - It was windy and cold.
+            - It was empty and calm.
+            - It was dark and silent.
+          evidence: the space behind the stage was a whirlwind of half-dressed knights
+        - kind: mc
+          ask: What does the idiom "Break a leg" mean?
+          choices: [Good luck., Be careful., Hurry up., Sit down.]
+          evidence: which is the theater's old way of wishing performers good luck
+        - kind: mc
+          ask: In paragraph 3, what does "firm" mean?
+          choices:
+            - steady and sure
+            - soft and unsure
+            - loud and angry
+            - quick and silly
+          evidence: in a voice that was quiet but firm
+        - kind: write
+          ask: Explain "unraveled ... like a runaway ball of yarn."
+          sample: The dragon's tail came apart and spread across the floor, the way a dropped ball of yarn rolls away and unwinds.
+          evidence: the dragon's tail unraveled across the floor like a runaway ball of yarn
+    - focus: craft and tone
+      look_for: the myth about a box that is opened
+      questions:
+        - kind: mc
+          ask: Why compare the trunk to Pandora's box?
+          choices:
+            - Opening it let loose problems.
+            - It held a secret birthday gift.
+            - It was locked with a gold key.
+            - A girl named Pandora owned it.
+          evidence: released every trouble into the world
+        - kind: mc
+          ask: How does the mood change in paragraph 3?
+          choices:
+            - from panic to calm work
+            - from calm to panic
+            - from joy to sadness
+            - from boredom to fear
+          evidence: began assigning tasks in a voice that was quiet but firm
+        - kind: quote
+          ask: Which part shows that Rosa feels nervous?
+          choices:
+            - trying to look calmer than she felt
+            - She propped it against the wall where the whole cast could see it.
+            - The trouble began when someone opened the old costume trunk.
+            - Feathers drifted everywhere
+          evidence: trying to look calmer than she felt
+        - kind: write
+          ask: Why does the story end with hope left in the box?
+          sample: Like the myth, after all the problems the good-luck sign is left at the bottom, giving the cast hope for the show.
+          evidence: one thing remained in Pandora's box after all the troubles had escaped, and that thing was hope
+
+- id: a11-the-midas-touch
+  title: The Midas Touch
+  genre: nonfiction
+  text: |
+    From the window of my grandparents' tenth-floor apartment, the city at night looks nothing like the city at noon. During the day, the streets below are a tangle of delivery trucks, honking taxis, and people hurrying with their heads down. After dark, however, the same streets become rivers of light, and the noise softens into a steady hum, like a refrigerator in another room.
+
+    My grandfather calls the streetlights the Midas touch. In the old Greek story, King Midas wished that everything he touched would turn to gold, and the wish was granted. Under the orange glow of the lamps, ordinary things do seem transformed: puddles shimmer like coins, parked cars gleam, and even the scruffy pigeons on the ledge look faintly golden.
+
+    My grandmother always reminds him of the rest of the story, which is less cheerful. Midas soon discovered that he could not eat golden bread or drink golden water, and he begged to have his gift taken away.
+
+    I think they are both right. The glow is beautiful, but it also washes out the stars, so that only a handful of the brightest ones manage to show through. Some nights I keep a tally of the stars I can find above the rooftops. My record is eleven, a modest number, but each one feels like a small victory against all that gold.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "rivers of light" describe?
+          choices:
+            - streets full of moving lights
+            - streets covered in water
+            - a real river near the city
+            - fireworks over the rooftops
+          evidence: the same streets become rivers of light
+        - kind: mc
+          ask: Why compare the hum to "a refrigerator in another room"?
+          choices:
+            - The noise is low and steady.
+            - The city is cold at night.
+            - The apartment is noisy.
+            - The sound is loud and sharp.
+          evidence: the noise softens into a steady hum
+        - kind: mc
+          ask: In paragraph 4, what does "washes out" mean?
+          choices:
+            - makes hard to see
+            - cleans with water
+            - makes much brighter
+            - moves far away
+          evidence: it also washes out the stars, so that only a handful of the brightest ones manage to show through
+        - kind: write
+          ask: What does "puddles shimmer like coins" mean?
+          sample: The puddles shine with golden light from the lamps, so they look like bright, shiny coins.
+          evidence: puddles shimmer like coins
+    - focus: craft and tone
+      look_for: what the Midas story adds to the view
+      questions:
+        - kind: mc
+          ask: Why does Grandfather call the lights the Midas touch?
+          choices:
+            - They make things look golden.
+            - They turn things into real gold.
+            - He owns all the streetlights.
+            - He wishes he were a king.
+          evidence: ordinary things do seem transformed
+        - kind: mc
+          ask: What point does Grandmother make with the story?
+          choices:
+            - A golden gift can have a downside.
+            - Kings should not eat bread.
+            - Midas was a kind and wise king.
+            - The streetlights are too dim.
+          evidence: Midas soon discovered that he could not eat golden bread
+        - kind: quote
+          ask: Which sentence shows the writer sees both sides?
+          choices:
+            - I think they are both right.
+            - My grandfather calls the streetlights the Midas touch.
+            - My record is eleven, a modest number
+            - Some nights I keep a tally of the stars I can find above the rooftops.
+          evidence: I think they are both right.
+        - kind: write
+          ask: What does "a small victory against all that gold" mean?
+          sample: Every star the writer finds feels like a win, because the golden city lights usually hide the stars.
+          evidence: each one feels like a small victory against all that gold
+
+- id: a12-moving-day
+  title: Moving Day
+  genre: story
+  text: |
+    By seven in the morning on moving day, our apartment had stopped looking like a home and started looking like a warehouse. Cardboard boxes towered in every corner, each one labeled in my mother's confident handwriting, and our voices echoed strangely off walls that no longer had pictures on them.
+
+    The drive to our new house in Millbrook took only four hours, but my little brother Sami treated it like an odyssey. He had just read a children's version of the Greek legend of Odysseus, the hero who spent ten years trying to sail home, blown off course by storms and stranded on strange islands. Every gas station became an island to Sami. Every traffic jam was a storm sent to delay us, and he narrated each one aloud in a dramatic voice.
+
+    I spent most of the trip with my forehead against the window, watching familiar exits disappear behind us. Leaving felt like pulling a bandage off slowly, a little sting with every mile.
+
+    When we finally turned onto Linden Avenue, the new house was smaller than I remembered. It had a crooked mailbox and a porch light that flickered like a nervous eyelid. Then a girl about my age leaned over the fence next door, holding a plate of lemon bars, and asked whether we needed help carrying anything.
+
+    Sami, of course, announced that our odyssey was over. For the first time all day, I did not feel like arguing.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "looking like a warehouse" suggest?
+          choices:
+            - It felt bare and full of boxes.
+            - It felt cozy and warm.
+            - It looked brand new.
+            - It was spotlessly clean.
+          evidence: our apartment had stopped looking like a home and started looking like a warehouse
+        - kind: mc
+          ask: In paragraph 1, what does "confident" mean?
+          choices: [sure and steady, messy and rushed, tiny and faint, silly and playful]
+          evidence: each one labeled in my mother's confident handwriting
+        - kind: mc
+          ask: What does "flickered like a nervous eyelid" suggest?
+          choices:
+            - The light kept blinking.
+            - The light was very bright.
+            - Someone was staring out.
+            - The light was turned off.
+          evidence: a porch light that flickered like a nervous eyelid
+        - kind: write
+          ask: What does "like pulling a bandage off slowly" mean?
+          sample: Leaving was painful a little at a time, and the sad feeling grew with each mile instead of ending quickly.
+          evidence: Leaving felt like pulling a bandage off slowly, a little sting with every mile.
+    - focus: craft and tone
+      look_for: how Sami turns the drive into a story
+      questions:
+        - kind: mc
+          ask: Why does Sami call the drive an odyssey?
+          choices:
+            - He pretends it is a long adventure.
+            - The drive took ten whole years.
+            - They got lost on a real island.
+            - The family traveled by boat.
+          evidence: Every gas station became an island to Sami.
+        - kind: mc
+          ask: How do Sami's and the narrator's moods differ?
+          choices:
+            - He is playful; the narrator is sad.
+            - They are both very excited.
+            - He is angry; the narrator is glad.
+            - They are both bored and sleepy.
+          evidence: watching familiar exits disappear behind us
+        - kind: quote
+          ask: Which sentence shows the narrator's mood begins to lift?
+          choices:
+            - For the first time all day, I did not feel like arguing.
+            - I spent most of the trip with my forehead against the window
+            - the new house was smaller than I remembered
+            - Cardboard boxes towered in every corner
+          evidence: For the first time all day, I did not feel like arguing.
+        - kind: write
+          ask: Why might the author include the girl with lemon bars?
+          sample: She shows the new place can be friendly, which helps the narrator start to feel better about moving.
+          evidence: asked whether we needed help carrying anything
+
+- id: a13-the-tide-pool
+  title: The Tide Pool
+  genre: nonfiction
+  text: |
+    Twice a day, the ocean pulls back from the rocky shore near my aunt's cottage and leaves behind a scattering of tide pools, each one a miniature world in a stone bowl. At low tide I crouch beside the largest one, careful not to step on the slippery green weed, and wait for my eyes to adjust.
+
+    At first the pool seems empty, but patience is the price of admission. Slowly, the residents reveal themselves. A hermit crab drags its borrowed shell across the bottom like a camper hauling a tent. Purple sea urchins bristle in the cracks, and a sea star clings to the rock so stubbornly that it seems to have been glued there.
+
+    The most remarkable creatures are the sea anemones. Out of the water, they resemble lumps of soft green jelly, but underwater they open into flowers with dozens of waving tentacles that catch tiny bits of food drifting past. If a shadow passes over them, some anemones fold shut in an instant, as if a door had been slammed.
+
+    Life in a tide pool is not easy. These animals must survive pounding waves, hours of hot sun, and water that grows saltier as it evaporates. Still, they endure, tide after tide, and every time I visit, the pool seems a little less empty than I first believed.
+  pages:
+    - focus: words and phrases
+      questions:
+        - kind: mc
+          ask: What does "patience is the price of admission" mean?
+          choices:
+            - You must wait to see anything.
+            - You must pay money to visit.
+            - The tide pool is closed today.
+            - Tickets are sold at the shore.
+          evidence: At first the pool seems empty, but patience is the price of admission.
+        - kind: mc
+          ask: Why compare the hermit crab to a camper with a tent?
+          choices:
+            - It drags its home along.
+            - It sleeps outdoors at night.
+            - It likes to go camping.
+            - It moves very quickly.
+          evidence: A hermit crab drags its borrowed shell across the bottom like a camper hauling a tent.
+        - kind: mc
+          ask: In paragraph 4, what does "endure" mean?
+          choices: [keep going, give up, swim away, grow larger]
+          evidence: Still, they endure, tide after tide
+        - kind: write
+          ask: What does "as if a door had been slammed" show?
+          sample: It shows the anemones close very suddenly and completely when a shadow passes over them.
+          evidence: some anemones fold shut in an instant, as if a door had been slammed

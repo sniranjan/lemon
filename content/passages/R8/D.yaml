@@ -1,0 +1,1027 @@
+# Lions Reading, section D "Explain Why" (pages 151–200): evidence-based paragraph answers (RL.8.1, RI.8.1,
+# W.8.1, W.8.9). Original texts (ours). Schema and checks: ws/spreads.py (two-page spreads).
+# Part 1 (d01–d05) plans each paragraph in Claim / Evidence / Reasoning boxes first.
+
+- id: d01-the-blue-ribbon
+  title: The Blue Ribbon
+  genre: story
+  text: |
+    For six weeks Marisol had tested recipes for the county fair's bread contest, filling her family's
+    small kitchen with flour dust and the warm, complicated smell of cinnamon. Her younger cousin Nico,
+    who was only eight, had appointed himself her official assistant. Although he spilled more than he
+    measured, he never once complained about scrubbing the sticky mixing bowls afterward.
+
+    On the final morning, Marisol discovered that she had forgotten to buy walnuts, the ingredient that
+    made her loaf distinctive. She stood in the kitchen with the empty bag in her hand, certain that her
+    chances were ruined. Nico quietly emptied the coins from his savings jar and pedaled to the corner
+    market. He returned breathless, with a crumpled paper bag held above his head like a trophy.
+
+    When the judges announced that Marisol had won first place, the crowd applauded politely. A woman
+    pinned a shiny blue ribbon to her apron and shook her hand. Marisol thanked the judges, but her
+    attention kept drifting toward Nico, who was standing at the edge of the tent, pretending to study a
+    display of pickled vegetables.
+
+    That evening she found him on the porch steps, and she carefully unpinned the ribbon and pressed it
+    into his palm. "Without those walnuts there would have been no winning loaf," she explained as she
+    sat down beside him. "So half of this belongs to you, and I think you should keep the half that
+    shines."
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show that Nico gave something up?
+          choices:
+            - Nico quietly emptied the coins from his savings jar
+            - the crowd applauded politely
+            - A woman pinned a shiny blue ribbon to her apron
+            - pretending to study a display of pickled vegetables
+          evidence: Nico quietly emptied the coins from his savings jar
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - Marisol gives Nico the ribbon because his help made her win.
+            - Nico "emptied the coins from his savings jar"; she says "half of this belongs to you."
+            - He spent his own money on the walnuts, so she feels he earned part of the prize.
+          evidence: half of this belongs to you
+        - kind: paragraph
+          ask: Explain why Marisol gives the ribbon to Nico. Use two details from the story.
+          sample: >-
+            Marisol gives Nico the ribbon because she believes his help earned it. On the last morning,
+            Nico "emptied the coins from his savings jar" to buy the walnuts she had forgotten. Later she
+            tells him that "half of this belongs to you." These details show that she sees the win as
+            something they did together. Giving him the ribbon is her way of thanking him for his
+            sacrifice.
+          rubric: Claim about Marisol's motive; two quotes (Nico's help, her words); explains her gratitude.
+          evidence: Without those walnuts there would have been no winning loaf
+    - focus: theme
+      look_for: what Marisol notices about Nico
+      questions:
+        - kind: quote
+          ask: Which words best show Marisol is thinking of Nico?
+          choices:
+            - her attention kept drifting toward Nico
+            - Marisol thanked the judges
+            - the crowd applauded politely
+            - Marisol had tested recipes for the county fair's bread contest
+          evidence: her attention kept drifting toward Nico
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - The story shows that a success can belong to everyone who helped.
+            - Nico "never once complained"; Marisol says "half of this belongs to you."
+            - His quiet help made the loaf possible, and she honors it by sharing the prize.
+          evidence: he never once complained about scrubbing the sticky mixing bowls
+        - kind: paragraph
+          ask: How does the story show that a success can be shared? Use two details from the story.
+          sample: >-
+            The story shows that a success can belong to everyone who helped make it. Nico "never once
+            complained about scrubbing the sticky mixing bowls" while Marisol practiced. When she wins,
+            she tells him that "half of this belongs to you." The first detail shows his steady, quiet
+            help, and the second shows that Marisol honors it. Together they suggest that a prize means
+            more when it is shared.
+          rubric: Claim about shared success; two quotes (Nico's help, Marisol's words); connects them to the theme.
+          evidence: half of this belongs to you
+
+- id: d02-keepers-of-the-light
+  title: Keepers of the Light
+  genre: nonfiction
+  text: |
+    For centuries, sailors approaching a rocky coast at night depended on fires burning in tall towers.
+    Those early lights were dim and smoky, and they were difficult to see through fog or heavy rain.
+    Keepers had to haul wood or coal up narrow staircases, and even a large fire could be noticed only a
+    few miles out at sea. Captains often had to wait offshore until morning before they could safely
+    enter a harbor.
+
+    In the 1820s, a French scientist named Augustin Fresnel designed a new kind of lens. It was built
+    from rings of carefully shaped glass arranged around a single lamp. Instead of letting light scatter
+    in every direction, the rings bent it into a single powerful beam. As a result, a modest lamp could
+    suddenly be seen more than twenty miles away. Within a few decades, lighthouses along many
+    coastlines had adopted his invention.
+
+    Even with better lenses, the work remained demanding. Keepers trimmed wicks, polished brass, and
+    wound the clockwork that rotated the lamp. They often stayed awake through the entire night so that
+    the beam would never fail.
+
+    During the twentieth century, electric lamps and automatic timers gradually replaced most of these
+    tasks. Today many lighthouses operate without anyone living inside them. Ships now rely mainly on
+    satellite navigation, yet lighthouses still serve as an important backup. Their beams are a steady
+    signal that does not depend on any screen.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: quote
+          ask: Which words best show that early lights were weak?
+          choices:
+            - even a large fire could be noticed only a few miles out at sea
+            - Keepers trimmed wicks, polished brass, and wound the clockwork
+            - Ships now rely mainly on satellite navigation
+            - lighthouses along many coastlines had adopted his invention
+          evidence: even a large fire could be noticed only a few miles out at sea
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - Fresnel's lens mattered because it made the light reach much farther.
+            - The rings "bent it into a single powerful beam"; it could be "seen more than twenty miles away."
+            - Ships saw the warning sooner, so sailors had more time to steer away from rocks.
+          evidence: bent it into a single powerful beam
+        - kind: paragraph
+          ask: Explain why Fresnel's lens was such an important change. Use two details from the text.
+          sample: >-
+            Fresnel's lens was important because it let a lighthouse warn ships from much farther away.
+            Earlier fires could be seen only a few miles out, but his rings of glass "bent it into a
+            single powerful beam." Because of this, a modest lamp "could suddenly be seen more than
+            twenty miles away." A warning that reaches that far gives sailors much more time to steer
+            away from danger.
+          rubric: Claim about why the lens mattered; two quotes (the beam, the distance); explains the benefit to sailors.
+          evidence: could suddenly be seen more than twenty miles away
+    - focus: author's point
+      look_for: how lighthouses are used today
+      questions:
+        - kind: quote
+          ask: Which words best show that lighthouses still matter?
+          choices:
+            - lighthouses still serve as an important backup
+            - many lighthouses operate without anyone living inside them
+            - the work remained demanding
+            - Keepers had to haul wood or coal up narrow staircases
+          evidence: lighthouses still serve as an important backup
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - The author shows that lighthouses are still useful, even with satellites.
+            - They "still serve as an important backup"; the beam "does not depend on any screen."
+            - If a ship's electronics fail, sailors can still find their way by the light.
+          evidence: a steady signal that does not depend on any screen
+        - kind: paragraph
+          ask: How does the author show that lighthouses still matter today? Use two details from the text.
+          sample: >-
+            The author shows that lighthouses still matter because they work even when modern tools fail.
+            Although ships "rely mainly on satellite navigation," lighthouses "still serve as an
+            important backup." The author also calls the beam "a steady signal that does not depend on
+            any screen." These details suggest that a simple light is valuable because it is so
+            dependable.
+          rubric: Claim about the author's point; two quotes (backup, steady signal); explains why dependability matters.
+          evidence: lighthouses still serve as an important backup
+
+- id: d03-the-corner-plot
+  title: The Corner Plot
+  genre: story
+  text: |
+    Every spring, the community garden on Delmar Street held a lottery for its twelve plots, and every
+    spring Owen's name was drawn last, which meant he received the shady corner beside the fence. This
+    year, however, his ticket was the very first one pulled from the coffee can. He immediately claimed
+    the sunniest rectangle of soil in the entire garden.
+
+    Mrs. Alvarez, who had grown tomatoes there for nearly thirty years, drew the shady corner. She was
+    older now and moved slowly, leaning on the wooden rail as she inspected the damp, pale ground where
+    almost nothing ripened before September.
+
+    For two weekends Owen worked his new plot with enthusiasm. Yet he kept noticing Mrs. Alvarez sitting
+    on her folding stool, studying the sunny rows the way someone studies a photograph of a house they
+    used to live in. When he asked her about it, she simply explained that tomatoes were stubborn. They
+    needed at least six hours of sunshine to become sweet, she said.
+
+    The following Saturday, Owen arrived early with a wheelbarrow. He began transplanting his young bean
+    seedlings into the shady corner, since beans tolerated shade far better than tomatoes. When Mrs.
+    Alvarez arrived, he offered her the sunny plot with a shrug, as though the trade were merely
+    practical. She laughed so warmly that the gardeners nearby turned to look.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show Mrs. Alvarez misses the sun?
+          choices:
+            - studying the sunny rows the way someone studies a photograph
+            - She was older now and moved slowly
+            - He immediately claimed the sunniest rectangle of soil
+            - Owen worked his new plot with enthusiasm
+          evidence: studying the sunny rows the way someone studies a photograph
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - Owen trades because the sunny plot means more to Mrs. Alvarez than to him.
+            - She keeps "studying the sunny rows"; tomatoes "needed at least six hours of sunshine."
+            - Her tomatoes need sun but his beans can grow in shade, so the trade helps her most.
+          evidence: needed at least six hours of sunshine to become sweet
+        - kind: paragraph
+          ask: Explain why Owen trades plots with Mrs. Alvarez. Use two details from the story.
+          sample: >-
+            Owen trades plots because he realizes the sunny spot means more to Mrs. Alvarez than to him.
+            He notices her "studying the sunny rows" as if she missed them. She also tells him that
+            tomatoes "needed at least six hours of sunshine to become sweet." Since beans grow well in
+            shade, Owen sees that the trade helps her without costing him much.
+          rubric: Claim about Owen's motive; two quotes (her longing, the tomatoes' needs); explains why he trades.
+          evidence: beans tolerated shade far better than tomatoes
+    - focus: theme
+      look_for: how Owen offers the sunny plot
+      questions:
+        - kind: quote
+          ask: Which words best show Owen plays down his kindness?
+          choices:
+            - he offered her the sunny plot with a shrug
+            - Owen arrived early with a wheelbarrow
+            - Owen's name was drawn last
+            - the gardeners nearby turned to look
+          evidence: he offered her the sunny plot with a shrug
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - The story shows that kindness can be quiet and modest.
+            - He comes "early with a wheelbarrow"; he offers the plot "with a shrug."
+            - He acts before anyone asks and does not want praise for his generous gift.
+          evidence: as though the trade were merely practical
+        - kind: paragraph
+          ask: How does the story show that kindness can be quiet? Use two details from the story.
+          sample: >-
+            The story shows that kindness can be quiet because Owen helps without making a speech about
+            it. He arrives "early with a wheelbarrow" and moves his seedlings before anyone asks him to.
+            Then he offers the plot "with a shrug, as though the trade were merely practical." The shrug
+            shows he does not want praise, even though his gift is generous. Mrs. Alvarez's warm laugh
+            shows that she understands exactly what he has done.
+          rubric: Claim about quiet kindness; two quotes (arriving early, the shrug); explains why he avoids praise.
+          evidence: he offered her the sunny plot with a shrug
+
+- id: d04-the-monarch-journey
+  title: The Monarch Journey
+  genre: nonfiction
+  text: |
+    Each autumn, millions of monarch butterflies in eastern North America begin a remarkable journey.
+    They fly as far as three thousand miles to reach forested mountains in central Mexico. A butterfly
+    weighing less than a paper clip cannot survive a northern winter. In the north, freezing
+    temperatures would leave it unable to fly or feed, so migration is its only reliable way to endure
+    the cold months.
+
+    The mountain forests offer exactly the conditions the monarchs need. The air there is cool enough to
+    slow the butterflies' bodies so they use very little energy. Yet it seldom becomes cold enough to
+    freeze them, and the dense fir trees shelter them from wind and rain. Clustered together on the
+    branches, the butterflies can cover entire trees like orange and black leaves.
+
+    Perhaps the most puzzling part of the journey is that no single butterfly completes the round trip.
+    In spring the monarchs fly north and lay eggs on milkweed, the only plant their caterpillars eat.
+    Then several shorter-lived generations continue the trip northward over the summer.
+
+    The butterflies that fly south in autumn have never seen Mexico. Yet they somehow find the same
+    mountains their great-grandparents left. Scientists believe that monarchs use the position of the
+    sun, along with an inner sense of time, to keep their direction. However, researchers are still
+    investigating exactly how this remarkable navigation works.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: quote
+          ask: Which words best explain why monarchs fly south?
+          choices:
+            - A butterfly weighing less than a paper clip cannot survive a northern winter
+            - the dense fir trees shelter them from wind and rain
+            - no single butterfly completes the round trip
+            - the butterflies can cover entire trees
+          evidence: A butterfly weighing less than a paper clip cannot survive a northern winter
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - Monarchs go to Mexico because its forests let them survive the winter.
+            - The north has "freezing temperatures"; Mexico "seldom becomes cold enough to freeze them."
+            - The forests are cool enough to rest in but not cold enough to stop them flying or feeding.
+          evidence: it seldom becomes cold enough to freeze them
+        - kind: paragraph
+          ask: Explain why monarchs travel to the mountains of Mexico. Use two details from the text.
+          sample: >-
+            Monarchs travel to Mexico because the mountain forests let them survive the winter. In the
+            north, "freezing temperatures would leave it unable to fly or feed." In Mexico the air slows
+            their bodies, yet "it seldom becomes cold enough to freeze them." The forests are cold
+            enough for resting but not cold enough to stop them. That makes migration their only
+            reliable way to live through the cold months.
+          rubric: Claim about the cause; two quotes (northern cold, Mexican forests); explains why the forests work.
+          evidence: migration is its only reliable way to endure the cold months
+    - focus: author's point
+      look_for: words that show what is still unknown
+      questions:
+        - kind: quote
+          ask: Which words best show scientists are still learning?
+          choices:
+            - researchers are still investigating exactly how this remarkable navigation works
+            - In spring the monarchs fly north and lay eggs on milkweed
+            - The mountain forests offer exactly the conditions the monarchs need.
+            - as far as three thousand miles
+          evidence: researchers are still investigating exactly how this remarkable navigation works
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - The author presents the journey as a mystery that nature has not fully explained.
+            - The butterflies "have never seen Mexico"; researchers "are still investigating."
+            - They find a place they have never seen, and even experts cannot fully say how.
+          evidence: have never seen Mexico
+        - kind: paragraph
+          ask: How does the author show that the monarch journey is a mystery? Use two details from the text.
+          sample: >-
+            The author shows that the journey is a mystery by explaining how much the butterflies do
+            without being taught. The monarchs that fly south "have never seen Mexico," yet they find
+            the same mountains. Even scientists "are still investigating exactly how this remarkable
+            navigation works." These details show that the author wants readers to feel wonder at
+            something nature has not fully explained.
+          rubric: Claim about the mystery; two quotes (never seen Mexico, still investigating); explains the wonder.
+          evidence: Perhaps the most puzzling part of the journey
+
+- id: d05-the-rematch
+  title: The Rematch
+  genre: story
+  text: |
+    Jonah had been the strongest player in the Lakeside Chess Club for two years. So when a fifth grader
+    named Wren defeated him in the spring tournament final, the room fell so silent that he could hear
+    the clock on the wall. He shook her hand politely and packed his pieces with careful precision, then
+    walked home without saying a word to anyone.
+
+    That night he replayed the game on his kitchen table, moving the pieces again and again until he
+    located his mistake on the twenty-second move. Wren had offered him a bishop, and he had captured it
+    greedily, never suspecting that the gift was actually a trap that would cost him his queen three
+    moves later.
+
+    At the next club meeting, the other members expected Jonah to demand a rematch immediately. A few of
+    them had already started arranging the chairs around the center table. Instead, he carried his board
+    over to Wren and set up the position from the twenty-second move. Then he asked her how she had
+    learned to see so many moves ahead.
+
+    Wren hesitated, clearly surprised, and then she began to explain, tapping each square as she spoke.
+    By the end of the afternoon they had filled two pages of his notebook with ideas. Jonah realized he
+    had learned more from one defeat than from a whole season of easy victories.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show that Jonah studied his loss?
+          choices:
+            - he located his mistake on the twenty-second move
+            - He shook her hand politely
+            - walked home without saying a word to anyone
+            - arranging the chairs around the center table
+          evidence: he located his mistake on the twenty-second move
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - Jonah asks for help because he cares more about improving than winning.
+            - He replayed the game "again and again"; he asked how she "learned to see so many moves ahead."
+            - He wants to understand her skill, which will make him stronger than a quick rematch.
+          evidence: asked her how she had learned to see so many moves ahead
+        - kind: paragraph
+          ask: Explain why Jonah asks Wren to explain the game instead of demanding a rematch. Use two details.
+          sample: >-
+            Jonah asks Wren for help because he cares more about improving than about winning back his
+            title. At home he replayed the game "until he located his mistake on the twenty-second
+            move." At the club he asked her "how she had learned to see so many moves ahead." These
+            details show that he wants to understand her skill, not simply beat her again. Learning
+            from Wren is a better way to grow stronger than a quick rematch.
+          rubric: Claim about Jonah's motive; two quotes (studying the game, asking Wren); explains his choice.
+          evidence: Instead, he carried his board over to Wren
+    - focus: theme
+      look_for: what Jonah learns by the end
+      questions:
+        - kind: quote
+          ask: Which words best state what Jonah learns?
+          choices:
+            - he had learned more from one defeat than from a whole season of easy victories
+            - Wren hesitated, clearly surprised
+            - he could hear the clock on the wall
+            - Wren had offered him a bishop
+          evidence: he had learned more from one defeat than from a whole season of easy victories
+        - kind: organizer
+          ask: Plan your answer to question 3.
+          heads: [Claim, Evidence, Reasoning]
+          samples:
+            - The story shows that a loss can teach more than a win.
+            - The bishop was "actually a trap"; he "learned more from one defeat."
+            - The trap showed him a weakness that easy wins had hidden from him.
+          evidence: learned more from one defeat
+        - kind: paragraph
+          ask: How does the story show that losing can teach us something? Use two details from the story.
+          sample: >-
+            The story shows that a loss can teach more than a win. Jonah lost because he took a bishop
+            that was "actually a trap that would cost him his queen." By the end, he "had learned more
+            from one defeat than from a whole season of easy victories." The trap showed him a weakness
+            that his easy wins had hidden. Studying it with Wren turned his loss into a lesson.
+          rubric: Claim about the theme; two quotes (the trap, what he learned); explains how the loss taught him.
+          evidence: he had learned more from one defeat than from a whole season of easy victories
+
+- id: d06-free-to-borrow
+  title: Free to Borrow
+  genre: nonfiction
+  text: |
+    In the early 1700s, books in the American colonies were expensive. Most families owned only a few,
+    often an almanac and perhaps one or two well-worn volumes. In 1731, a group of friends in
+    Philadelphia, led by Benjamin Franklin, decided to pool their money. They bought books that every
+    member could borrow, creating what is often called the first subscription library in America.
+
+    Subscription libraries soon spread to many towns, but they shared a serious limit: only people who
+    could afford the membership fee were permitted to borrow. A young apprentice or a family with little
+    money could not use the collection at all.
+
+    During the 1800s, some communities began to believe that knowledge should be available to everyone,
+    regardless of income. In 1833, the small town of Peterborough, New Hampshire, opened a library paid
+    for by the town. It was free to all its residents. Then in 1854, the Boston Public Library opened
+    its doors as one of the first large free city libraries.
+
+    These libraries changed who could read and learn. A curious child, a tired factory worker, or a
+    newcomer to the country could walk in, choose a book, and carry it home without paying anything.
+    Many people who could never have bought books became lifelong readers. Today that idea seems so
+    ordinary that we rarely notice how revolutionary it once was.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: mc
+          ask: What was the main limit of subscription libraries?
+          choices:
+            - Borrowers had to pay a fee.
+            - They owned very few books.
+            - Books could not leave the room.
+            - They were far from any town.
+          evidence: only people who could afford the membership fee were permitted to borrow
+        - kind: quote
+          ask: Which words best show the idea behind free libraries?
+          choices:
+            - knowledge should be available to everyone, regardless of income
+            - books in the American colonies were expensive
+            - the Boston Public Library opened its doors
+            - Most families owned only a few
+          evidence: knowledge should be available to everyone, regardless of income
+        - kind: paragraph
+          ask: Explain why free public libraries were an important change. Use two details from the text.
+          sample: >-
+            Free public libraries were important because they let people read no matter how much money
+            they had. Before them, "only people who could afford the membership fee were permitted to
+            borrow." The new libraries were "free to all its residents," so anyone in town could use
+            them. A child or a worker could now take a book home without paying. Reading became open to
+            everyone instead of a privilege for a few.
+          rubric: Claim about the change; two quotes (the fee, free to all); explains who could now read.
+          evidence: free to all its residents
+    - focus: author's point
+      look_for: words that show the author's view
+      questions:
+        - kind: mc
+          ask: What does "revolutionary" mean in paragraph 4?
+          choices:
+            - bringing a big change
+            - very old and familiar
+            - costly to build
+            - small and unimportant
+          evidence: how revolutionary it once was
+        - kind: quote
+          ask: Which words best show who could use free libraries?
+          choices:
+            - A curious child, a tired factory worker, or a newcomer to the country
+            - Subscription libraries soon spread to many towns
+            - a group of friends in Philadelphia
+            - often an almanac and perhaps one or two well-worn volumes
+          evidence: A curious child, a tired factory worker, or a newcomer to the country
+        - kind: paragraph
+          ask: How does the author show that free libraries were a bold idea? Use two details from the text.
+          sample: >-
+            The author shows that free libraries were bold by comparing them with what came before.
+            Earlier, "a family with little money could not use the collection." Free libraries let
+            anyone "walk in, choose a book, and carry it home without paying anything." The author calls
+            this idea "revolutionary" because it changed who was allowed to learn. We take libraries for
+            granted today, so the author wants readers to see how daring they once were.
+          rubric: Claim about the author's point; two quotes (before and after); explains why the idea was bold.
+          evidence: we rarely notice how revolutionary it once was
+
+- id: d07-the-wall-map
+  title: The Wall Map
+  genre: story
+  text: |
+    Nadia's grandfather had driven a delivery truck across the country for forty years. The enormous
+    paper map on his bedroom wall was covered with tiny pencil marks recording every town where he had
+    stopped for coffee. Lately, though, he walked more slowly and spent long afternoons in his armchair.
+    When the family discussed their summer trip, everyone simply pulled out a phone.
+
+    Nadia noticed that her grandfather stopped talking whenever the conversation turned to routes and
+    arrival times. He would nod politely, fold his hands in his lap, and gaze toward the window, as if
+    he were listening to a radio station that nobody else could hear.
+
+    The next evening, Nadia knocked on his door and asked whether he could help her plan the trip the
+    old way, with the wall map and a pencil. Her grandfather looked at her for a long moment, then
+    reached for his reading glasses with a sudden eagerness that surprised them both.
+
+    For two hours they traced roads with their fingers while he told stories. He described a diner
+    famous for blueberry pancakes, a bridge that sang in the wind, and a canyon that turned copper at
+    sunset. When Nadia finally showed the route to her parents, she announced proudly that their
+    navigator for the summer would be Grandpa. Her parents exchanged a smile, and her grandfather sat up
+    a little straighter in his chair.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show that Grandpa feels left out?
+          choices:
+            - He would nod politely, fold his hands in his lap, and gaze toward the window
+            - he walked more slowly
+            - Nadia knocked on his door
+            - they traced roads with their fingers
+          evidence: He would nod politely, fold his hands in his lap, and gaze toward the window
+        - kind: mc
+          ask: Why does Nadia ask to use the wall map?
+          choices:
+            - to let Grandpa share his skill
+            - Phones cannot show road maps.
+            - She wants to drive a truck.
+            - Her parents told her to.
+          evidence: help her plan the trip the old way, with the wall map and a pencil
+        - kind: paragraph
+          ask: Explain why Nadia asks her grandfather to help plan the trip. Use two details from the story.
+          sample: >-
+            Nadia asks her grandfather for help because she sees that he feels left out of the planning.
+            When the family talked about routes, he would "gaze toward the window" instead of joining in.
+            She also knows his map is "covered with tiny pencil marks" from forty years of driving. By
+            asking him to plan "the old way," she gives him a chance to use what he knows. Her plan shows
+            that she understands his feelings and wants him to feel important again.
+          rubric: Claim about Nadia's motive; two quotes (Grandpa's silence, the map); explains her plan.
+          evidence: asked whether he could help her plan the trip the old way
+    - focus: theme
+      look_for: the stories Grandpa tells
+      questions:
+        - kind: mc
+          ask: Which word best describes Grandpa in paragraph 3?
+          choices: [eager, bored, worried, sleepy]
+          evidence: reached for his reading glasses with a sudden eagerness
+        - kind: quote
+          ask: Which words best show that Grandpa's knowledge matters?
+          choices:
+            - their navigator for the summer would be Grandpa
+            - everyone simply pulled out a phone
+            - spent long afternoons in his armchair
+            - Her grandfather looked at her for a long moment
+          evidence: their navigator for the summer would be Grandpa
+        - kind: paragraph
+          ask: How does the story show that older people have much to share? Use two details from the story.
+          sample: >-
+            The story shows that older people have knowledge worth sharing. Grandpa's stories about "a
+            diner famous for blueberry pancakes" and "a bridge that sang in the wind" are things no phone
+            could tell the family. At the end, Nadia announces that "their navigator for the summer would
+            be Grandpa." This shows that his experience has become important to the whole trip. The
+            author suggests that listening to older people can make life richer.
+          rubric: Claim about the theme; two quotes (his stories, the navigator); explains the value of his experience.
+          evidence: their navigator for the summer would be Grandpa
+
+- id: d08-how-bridges-hold
+  title: How Bridges Hold Up
+  genre: nonfiction
+  text: |
+    Every bridge faces the same basic challenge: it must carry its own heavy weight, along with every
+    car, truck, and person crossing it, without bending or collapsing. Engineers solve this problem by
+    managing two opposing forces. Compression squeezes material together, and tension pulls material
+    apart.
+
+    Stone is extremely strong under compression but cracks easily under tension, which is why ancient
+    builders favored the arch. In an arch, the weight pressing down from above is pushed outward along
+    the curve, so every stone is squeezed tightly against its neighbors. Meanwhile, the sturdy ground at
+    each end pushes back.
+
+    Steel, by contrast, performs well under both forces, and its strength in tension made a different
+    design possible. In a suspension bridge, the road hangs from vertical cables attached to huge main
+    cables. These stretch over tall towers and are anchored firmly in the ground at both ends. Because
+    steel cables can carry tremendous pulling forces, suspension bridges can span more than a mile.
+
+    A truss bridge uses a third strategy, joining straight beams into a pattern of triangles. A triangle
+    cannot change shape unless one of its sides changes length. So the triangles spread the load
+    throughout the frame and keep it remarkably rigid while using comparatively little material. Many
+    railroad bridges built this way have carried heavy trains for more than a century.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: mc
+          ask: What does "compression" mean in paragraph 1?
+          choices:
+            - a force that squeezes
+            - a force that pulls apart
+            - the weight of the road
+            - the length of a bridge
+          evidence: Compression squeezes material together
+        - kind: quote
+          ask: Which words best explain why stone suits an arch?
+          choices:
+            - every stone is squeezed tightly against its neighbors
+            - the road hangs from vertical cables
+            - it must carry its own heavy weight
+            - joining straight beams into a pattern of triangles
+          evidence: every stone is squeezed tightly against its neighbors
+        - kind: paragraph
+          ask: Explain why ancient builders used arches for stone bridges. Use two details from the text.
+          sample: >-
+            Ancient builders used arches because the shape fits the strengths of stone. Stone is
+            "extremely strong under compression but cracks easily under tension." In an arch, the weight
+            is pushed outward so "every stone is squeezed tightly against its neighbors." This means the
+            stones are only pushed together, never pulled apart. The arch keeps stone doing the one job
+            it does best.
+          rubric: Claim about the cause; two quotes (stone's strength, how the arch works); connects them.
+          evidence: ancient builders favored the arch
+    - focus: evaluate a claim
+      look_for: how each design handles the forces
+      questions:
+        - kind: quote
+          ask: Which words best explain why triangles are useful?
+          choices:
+            - A triangle cannot change shape unless one of its sides changes length
+            - the road hangs from vertical cables
+            - Stone is extremely strong under compression
+            - the sturdy ground at each end pushes back
+          evidence: A triangle cannot change shape unless one of its sides changes length
+        - kind: mc
+          ask: Why can suspension bridges be so long?
+          choices:
+            - Steel cables hold huge pulls.
+            - Stones press tightly together.
+            - They are built without towers.
+            - Their roads weigh very little.
+          evidence: steel cables can carry tremendous pulling forces
+        - kind: paragraph
+          ask: How does the author support the claim that triangles make a truss strong? Use two details.
+          sample: >-
+            The author supports the claim by explaining what makes a triangle special. The text says a
+            triangle "cannot change shape unless one of its sides changes length." Because of this, the
+            triangles "spread the load throughout the frame" instead of letting one beam carry it all.
+            The author adds that the frame stays "remarkably rigid while using comparatively little
+            material." These details show that a truss is strong because of its shape, not its weight.
+          rubric: Claim about the support; two quotes (the triangle's shape, how load spreads); explains the strength.
+          evidence: keep it remarkably rigid while using comparatively little material
+
+- id: d09-the-solo
+  title: The Solo
+  genre: story
+  text: |
+    When the choir director posted the cast list for the spring concert, Ellis discovered that she had
+    been chosen to sing the solo. It came in the final song, a slow, soaring melody that every student
+    in the choir secretly hoped to perform. Her best friend Samira, who had auditioned for the same
+    part, congratulated Ellis immediately, but her smile disappeared a little too quickly afterward.
+
+    During rehearsals Ellis struggled with the highest phrase, which climbed to a note she could reach
+    only on her best days. Samira, standing in the second row, sang that phrase effortlessly under her
+    breath. Ellis could hear the note ring clearly while her own voice cracked and wavered. No matter
+    how carefully she breathed, the top note slipped away from her.
+
+    After a particularly frustrating practice, Ellis stayed behind to talk with the director about an
+    idea she had been considering for several days. What if the solo became a duet, she asked, with
+    Samira singing the highest phrase? Ellis could then carry the gentler verses that suited her voice.
+
+    The director agreed to try it at the next rehearsal. When the two voices finally met in the last
+    chorus, the other singers stopped whispering and simply listened. Afterward, Samira hugged Ellis so
+    tightly that her music folder slipped to the floor. Pages scattered across the stage, and both girls
+    laughed as they gathered them up.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show that Samira was disappointed?
+          choices:
+            - her smile disappeared a little too quickly afterward
+            - congratulated Ellis immediately
+            - Samira, standing in the second row
+            - The director agreed to try it at the next rehearsal
+          evidence: her smile disappeared a little too quickly afterward
+        - kind: mc
+          ask: Which part of the song is hard for Ellis?
+          choices:
+            - the highest phrase
+            - the gentler verses
+            - the soft opening
+            - the very first note
+          evidence: Ellis struggled with the highest phrase
+        - kind: paragraph
+          ask: Explain why Ellis asks to turn the solo into a duet. Use two details from the story.
+          sample: >-
+            Ellis asks for a duet because she knows Samira can sing the hardest part better than she can.
+            In rehearsal, Samira "sang that phrase effortlessly under her breath," while Ellis's "own
+            voice cracked and wavered." Ellis also noticed that Samira's "smile disappeared a little too
+            quickly" when the list was posted. These details show that Ellis sees both her friend's
+            talent and her disappointment. A duet lets the song sound its best and lets Samira share the
+            moment.
+          rubric: Claim about Ellis's motive; two quotes (Samira's talent, her disappointment); explains the duet.
+          evidence: What if the solo became a duet
+    - focus: theme
+      look_for: how the duet sounds to others
+      questions:
+        - kind: mc
+          ask: How do the other singers react to the duet?
+          choices:
+            - They stop and listen.
+            - They start to laugh.
+            - They ask for a solo.
+            - They leave the stage.
+          evidence: the other singers stopped whispering and simply listened
+        - kind: quote
+          ask: Which words best show how Samira feels at the end?
+          choices:
+            - Samira hugged Ellis so tightly that her music folder slipped to the floor
+            - Samira, standing in the second row
+            - Ellis stayed behind to talk with the director
+            - had auditioned for the same part
+          evidence: Samira hugged Ellis so tightly that her music folder slipped to the floor
+        - kind: paragraph
+          ask: How does the story show that sharing can make something better? Use two details from the story.
+          sample: >-
+            The story shows that sharing can make something better than doing it alone. Ellis keeps "the
+            gentler verses that suited her voice" and gives Samira the high phrase. When their voices
+            meet, "the other singers stopped whispering and simply listened." Their reaction shows that
+            the duet sounds more beautiful than the solo did. By giving up part of her role, Ellis makes
+            both the song and the friendship stronger.
+          rubric: Claim about the theme; two quotes (sharing the parts, the reaction); explains why sharing helps.
+          evidence: the other singers stopped whispering and simply listened
+
+- id: d10-bees-at-work
+  title: Bees at Work
+  genre: nonfiction
+  text: |
+    When a honeybee lands on a flower to drink its sweet nectar, tiny grains of yellow pollen cling to
+    the fine hairs that cover its body. As the bee travels to the next blossom, some of those grains rub
+    off. This accidental delivery allows the second flower to produce seeds and fruit, a process called
+    pollination.
+
+    Many plants depend on this exchange because they cannot move pollen on their own. Some, such as corn
+    and wheat, rely mostly on the wind. However, many fruits, vegetables, and nuts need visits from bees
+    or other animals to produce a good harvest. Apples, blueberries, cherries, and almonds are all
+    familiar examples of these crops.
+
+    Bees are especially good pollinators because of their habits. A single bee may visit hundreds of
+    flowers in one day. A foraging honeybee tends to visit the same kind of flower again and again
+    during a single trip. As a result, the pollen it carries usually reaches a plant that can actually
+    use it, rather than being wasted on a different species.
+
+    Farmers have recognized this partnership for a long time. Some orchard growers rent hives during the
+    spring bloom so that their trees will be thoroughly pollinated. In return, the bees collect nectar
+    and pollen, which they carry back to the hive and store as food for the colony, so both the plants
+    and the insects benefit.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: mc
+          ask: In paragraph 1, what is pollination?
+          choices:
+            - pollen moving between flowers
+            - bees making honey in a hive
+            - wind blowing seeds away
+            - flowers making sweet nectar
+          evidence: This accidental delivery allows the second flower to produce seeds and fruit
+        - kind: quote
+          ask: Which words best explain why bees waste little pollen?
+          choices:
+            - tends to visit the same kind of flower again and again
+            - Some, such as corn and wheat, rely mostly on the wind
+            - Some orchard growers rent hives during the spring bloom
+            - drink its sweet nectar
+          evidence: tends to visit the same kind of flower again and again
+        - kind: paragraph
+          ask: Explain why honeybees are such good pollinators. Use two details from the text.
+          sample: >-
+            Honeybees are good pollinators because of how their bodies and habits work. Pollen grains
+            "cling to the fine hairs that cover its body," so the bee carries them easily. A honeybee
+            also "tends to visit the same kind of flower again and again" on one trip. That means the
+            pollen usually reaches a plant that can use it instead of being wasted. Both details explain
+            why bees move pollen so well.
+          rubric: Claim about the cause; two quotes (body hairs, flower habits); explains why each helps pollination.
+          evidence: Bees are especially good pollinators because of their habits.
+    - focus: author's point
+      look_for: what the plants and the bees each gain
+      questions:
+        - kind: quote
+          ask: Which words best show that farmers value bees?
+          choices:
+            - Some orchard growers rent hives during the spring bloom
+            - Many plants depend on this exchange
+            - some of those grains rub off
+            - rather than being wasted on a different species
+          evidence: Some orchard growers rent hives during the spring bloom
+        - kind: mc
+          ask: What do bees get from flowers?
+          choices:
+            - nectar and pollen for food
+            - a safe place to sleep
+            - seeds to build a hive
+            - shelter from the wind
+          evidence: store as food for the colony
+        - kind: paragraph
+          ask: How does the author show that bees and plants help each other? Use two details from the text.
+          sample: >-
+            The author shows that bees and plants help each other because each one gains something. Many
+            plants need visits from bees "to produce a good harvest." In return, the bees carry nectar
+            and pollen back to the hive to "store as food for the colony." The author ends by saying that
+            "both the plants and the insects benefit." This shows the relationship is a partnership, not
+            a one-sided favor.
+          rubric: Claim about the partnership; two quotes (what plants gain, what bees gain); explains the exchange.
+          evidence: both the plants and the insects benefit
+
+- id: d11-the-last-box
+  title: The Last Box
+  genre: story
+  text: |
+    By noon on moving day, the apartment echoed strangely. Every rug, picture, and bookshelf that had
+    once absorbed sound was now packed inside the truck parked on the street below. Kai wandered from
+    room to room, checking closets his mother had already checked twice, reluctant to admit that the
+    only task remaining was saying goodbye.
+
+    In the back of his closet he discovered the last box, labeled in his own crooked handwriting from
+    three summers earlier. Inside was the enormous red kite that he and Leo, the boy from the apartment
+    next door, had built from garden stakes and an old shower curtain. The kite had flown magnificently
+    exactly once before tangling in a maple tree.
+
+    Kai carried the box downstairs and found Leo sitting on the front steps, pretending to read a comic
+    book that was upside down. For a moment neither of them spoke, and then Kai set the box on the step
+    between them and explained that the kite needed someone who would remember how to repair it.
+
+    Leo lifted the faded frame carefully, as though it were made of glass. He promised that he would fix
+    the torn corner before Kai's first visit back in the fall. As the truck pulled away, Kai looked
+    through the rear window and saw his friend still standing on the steps, holding the kite above his
+    head like a flag.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: quote
+          ask: Which words best show Kai does not want to leave?
+          choices:
+            - reluctant to admit that the only task remaining was saying goodbye
+            - Kai carried the box downstairs
+            - labeled in his own crooked handwriting
+            - the apartment echoed strangely
+          evidence: reluctant to admit that the only task remaining was saying goodbye
+        - kind: mc
+          ask: Why is Leo's comic book upside down?
+          choices:
+            - He is too sad to read.
+            - He likes reading that way.
+            - The book has no words.
+            - He is reading it to Kai.
+          evidence: pretending to read a comic book that was upside down
+        - kind: paragraph
+          ask: Explain why Kai gives the kite to Leo. Use two details from the story.
+          sample: >-
+            Kai gives Leo the kite because it is a way to keep their friendship going after he moves. The
+            boys built it together "from garden stakes and an old shower curtain." Kai says it "needed
+            someone who would remember how to repair it," and Leo is the only other person who would.
+            Leo then promises to fix it "before Kai's first visit back in the fall." Giving away the kite
+            turns a goodbye into a plan to meet again.
+          rubric: Claim about Kai's motive; two quotes (the kite's past, Kai's words); explains the plan to meet again.
+          evidence: the kite needed someone who would remember how to repair it
+    - focus: author's craft
+      look_for: what Kai sees as the truck leaves
+      questions:
+        - kind: mc
+          ask: What does the echo in paragraph 1 suggest?
+          choices:
+            - Kai's old life is packed away.
+            - The walls are very thin.
+            - The neighbors are noisy.
+            - The rooms were just painted.
+          evidence: had once absorbed sound was now packed inside the truck
+        - kind: quote
+          ask: Which words best show that Leo values the kite?
+          choices:
+            - Leo lifted the faded frame carefully, as though it were made of glass
+            - Leo sitting on the front steps
+            - tangling in a maple tree
+            - Kai looked through the rear window
+          evidence: Leo lifted the faded frame carefully, as though it were made of glass
+        - kind: paragraph
+          ask: How does the author use the kite to show the boys' friendship? Use two details from the story.
+          sample: >-
+            The author uses the kite as a symbol of the boys' friendship. They built it together, and it
+            "had flown magnificently exactly once," like a special shared memory. Leo handles it "as
+            though it were made of glass," which shows how much the friendship means to him. At the end,
+            he holds it "above his head like a flag" as Kai drives away. The kite shows that their
+            friendship will stay strong even when they are apart.
+          rubric: Claim that the kite stands for the friendship; two quotes (Leo's care, the flag); explains the link.
+          evidence: holding the kite above his head like a flag
+
+- id: d12-mapping-by-hand
+  title: Mapping by Hand
+  genre: nonfiction
+  text: |
+    Long before satellites photographed the earth from space, mapmakers had to measure the land by hand.
+    It was a slow process that required patience, mathematics, and a great deal of walking. Early
+    surveyors stretched chains of a fixed length across fields and forests. They counted each length
+    carefully to record the distance between two points.
+
+    Measuring every mile with a chain, however, would have taken lifetimes. So surveyors relied on a
+    clever method called triangulation. First they measured one baseline as precisely as possible. Then
+    they used instruments to measure the angles from each end of that line to a distant landmark, such
+    as a hilltop or a tall tower. With one known side and two known angles, geometry allowed them to
+    calculate the other sides of the triangle without ever walking them.
+
+    Each new triangle shared a side with the one before it, so a chain of triangles could slowly stretch
+    across an entire country. In the 1700s and 1800s, large survey projects in France and in India used
+    this method for decades. They produced maps of remarkable accuracy.
+
+    Mistakes were costly, because a small error in the first measurement could grow larger with every
+    triangle that followed. For that reason, surveyors repeated their observations many times. They also
+    checked their results against new baselines. Many of their maps proved so reliable that they
+    remained in use long after the methods that created them had been replaced.
+  pages:
+    - focus: explain a cause
+      questions:
+        - kind: mc
+          ask: In paragraph 2, what is a baseline?
+          choices:
+            - a line measured very exactly
+            - a line drawn on a finished map
+            - a distant hilltop or tower
+            - a chain used to measure
+          evidence: they measured one baseline as precisely as possible
+        - kind: quote
+          ask: Which words best show that chains alone were too slow?
+          choices:
+            - Measuring every mile with a chain, however, would have taken lifetimes
+            - Early surveyors stretched chains of a fixed length
+            - They produced maps of remarkable accuracy
+            - Each new triangle shared a side with the one before it
+          evidence: Measuring every mile with a chain, however, would have taken lifetimes
+        - kind: paragraph
+          ask: Explain why surveyors used triangulation instead of chains alone. Use two details from the text.
+          sample: >-
+            Surveyors used triangulation because measuring everything with chains would have taken far
+            too long. The text says that measuring every mile this way "would have taken lifetimes." With
+            triangulation, they measured one baseline and some angles, and geometry let them find the
+            other sides "without ever walking them." This saved enormous time while still giving accurate
+            distances. That is why a chain of triangles could "stretch across an entire country."
+          rubric: Claim about the cause; two quotes (chains too slow, no walking needed); explains the time saved.
+          evidence: calculate the other sides of the triangle without ever walking them
+    - focus: evaluate a claim
+      look_for: how surveyors avoided mistakes
+      questions:
+        - kind: quote
+          ask: Which words best show how surveyors checked their work?
+          choices:
+            - surveyors repeated their observations many times
+            - Mistakes were costly
+            - mapmakers had to measure the land by hand
+            - a slow process that required patience
+          evidence: surveyors repeated their observations many times
+        - kind: mc
+          ask: Why were early mistakes so costly?
+          choices:
+            - Errors grew with each triangle.
+            - Chains often broke in fields.
+            - Paper maps cost a lot to print.
+            - Angles could not be measured.
+          evidence: could grow larger with every triangle that followed
+        - kind: paragraph
+          ask: The author says the old maps were reliable. How does the author support this claim? Use two details.
+          sample: >-
+            The author supports the claim by showing how carefully surveyors worked. Because a small
+            error "could grow larger with every triangle that followed," they "repeated their
+            observations many times." They also checked their results against new baselines. The author
+            points out that many maps "remained in use long after the methods that created them had been
+            replaced." This shows that the careful work paid off in maps people trusted for years.
+          rubric: Claim about the support; two quotes (careful checking, maps still used); explains why they were trusted.
+          evidence: Many of their maps proved so reliable
+
+- id: d13-the-old-radio
+  title: The Old Radio
+  genre: story
+  text: |
+    The radio had belonged to Tess's grandmother since before Tess's mother was born. It was a wooden
+    box with a cloth speaker and two brass knobs worn smooth by decades of fingers. When it finally fell
+    silent one rainy afternoon, her grandmother sighed and suggested that perhaps it was simply time to
+    buy a new one.
+
+    Tess, however, could not stop thinking about the way her grandmother always hummed along to the
+    evening music while she cooked. She would tap a wooden spoon against the pot in time, swaying
+    slightly as the stew simmered. So Tess borrowed a library book about old electronics and studied the
+    faded diagram glued inside the back panel. Then she spent three afternoons testing each wire of the
+    unplugged radio with her father's meter.
+
+    Most of her ideas failed, and twice she nearly abandoned the project in frustration. On the fourth
+    afternoon, though, she noticed a tiny connection that had cracked loose. With her father supervising
+    the soldering iron, she carefully reattached it and closed the back panel. Each evening she had
+    reported her progress at dinner, even when there was nothing encouraging to report.
+
+    When her grandmother turned the brass knob that evening, the speaker crackled and hesitated. Then it
+    filled the kitchen with a slow, familiar song. Her grandmother did not say anything at first; she
+    simply picked up her wooden spoon and began to hum.
+  pages:
+    - focus: character motive
+      questions:
+        - kind: mc
+          ask: Which word best describes Tess as she works?
+          choices: [persistent, careless, bored, impatient]
+          evidence: spent three afternoons testing each wire
+        - kind: quote
+          ask: Which words best show why the radio matters to Tess?
+          choices:
+            - her grandmother always hummed along to the evening music while she cooked
+            - a wooden box with a cloth speaker
+            - studied the faded diagram glued inside the back panel
+            - Most of her ideas failed
+          evidence: her grandmother always hummed along to the evening music while she cooked
+        - kind: paragraph
+          ask: Explain why Tess works so hard to fix the radio. Use two details from the story.
+          sample: >-
+            Tess works hard to fix the radio because she wants to bring back something that makes her
+            grandmother happy. She remembers how her grandmother "always hummed along to the evening
+            music while she cooked." Even though "twice she nearly abandoned the project in frustration,"
+            she kept going until she found the loose connection. At the end, her grandmother "picked up
+            her wooden spoon and began to hum." This shows that Tess was really repairing a happy family
+            routine, not just a machine.
+          rubric: Claim about Tess's motive; two quotes (the humming, her effort); explains what she is really fixing.
+          evidence: picked up her wooden spoon and began to hum
