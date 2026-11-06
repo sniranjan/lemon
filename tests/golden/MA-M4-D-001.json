@@ -1,0 +1,59 @@
+{
+  "id": "MA-M4-D-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "division_house",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 8181447780481303717,
+  "title": "Long division",
+  "parent_tip": "Use the squares under the number for the multiply and take-away steps, one digit in each square.",
+  "items": [
+    {
+      "kind": "divide",
+      "dividend": 90,
+      "divisor": 9,
+      "quotient": 10,
+      "remainder": 0,
+      "start": 0,
+      "r_box": false
+    },
+    {
+      "kind": "divide",
+      "dividend": 88,
+      "divisor": 4,
+      "quotient": 22,
+      "remainder": 0,
+      "start": 0,
+      "r_box": false
+    },
+    {
+      "kind": "divide",
+      "dividend": 91,
+      "divisor": 7,
+      "quotient": 13,
+      "remainder": 0,
+      "start": 0,
+      "r_box": false
+    },
+    {
+      "kind": "divide",
+      "dividend": 68,
+      "divisor": 4,
+      "quotient": 17,
+      "remainder": 0,
+      "start": 0,
+      "r_box": false
+    }
+  ],
+  "answer_key": [
+    "10",
+    "22",
+    "13",
+    "17"
+  ],
+  "new_words": [],
+  "review_words": []
+}

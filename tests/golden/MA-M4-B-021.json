@@ -1,0 +1,103 @@
+{
+  "id": "MA-M4-B-021",
+  "subject": "math",
+  "level": "M4",
+  "section": "B",
+  "part": 3,
+  "sheet_type": "long_multiplication",
+  "page_number": 41,
+  "variant": 1,
+  "seed": 2203208652252580894,
+  "title": "Three digits times one",
+  "parent_tip": "If a digit is 0, the answer for that column is just the carried number.",
+  "items": [
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 289,
+      "b": 2,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 887,
+      "b": 8,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 790,
+      "b": 5,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 970,
+      "b": 8,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 652,
+      "b": 7,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "carry",
+      "a": 886,
+      "b": 8,
+      "cols": 4,
+      "partials": [],
+      "carry_cols": [
+        1,
+        2
+      ],
+      "zero_shown": false
+    }
+  ],
+  "answer_key": [
+    "578",
+    "7096",
+    "3950",
+    "7760",
+    "4564",
+    "7088"
+  ],
+  "new_words": [],
+  "review_words": []
+}

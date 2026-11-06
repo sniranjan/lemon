@@ -53,6 +53,17 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
   section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
   ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
+- **Owls Math (M4, our own level, grade 4 work for age 7, 200 pages)** (2026-11-06): `syllabus/math/M4.yaml`:
+  A Warm-up 1–20 (4-digit adding and taking away, 4.NBT.4) · B Multiply by One Digit 21–60 (in parts, then 2-, 3-,
+  4-digit × 1 digit with carry boxes) · C Two-by-Two 61–100 (× tens, then 2-digit × 2-digit in two lines; the line-two
+  0 printed in parts 2–3, written by the child in part 4) (4.NBT.5) · D Long Division 101–150 (division house; even,
+  remainders, first digit too small, 0 inside the answer, 4-digit two a page) (4.NBT.6) · E Factors and Multiples 151–170
+  (factor pairs, count in multiples, circle multiples, prime or composite) (4.OA.4) · F Fraction Friends 171–200 (fraction
+  bars, equivalent fractions incl. tenths → hundredths, like-denominator adding and taking away within one whole)
+  (4.NF.1, 4.NF.3, 4.NF.3a). New sheet types `long_multiplication`, `division_house`, `factor_pairs`, `fraction_bars`;
+  `column_arithmetic` puts 4-digit problems 2 a row (Cubs/Foxes output unchanged). Tests `tests/test_math_M4.py`.
+  All 200 pages verify with 0 errors and 0 warnings; booklets per section + `owls-math-level.pdf` (202 pages) and
+  `owls-math-level-answers.pdf` (14 pages). Child text ≥ 28px. Free preview pages 21, 71, 121, 171 wait for Owls Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -81,7 +92,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
