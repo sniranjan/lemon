@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whales · Math · page 51</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.ask { font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+.qn { font-size: 15px; font-weight: 700; color: #8a8a90; min-width: 22px; }
+.ex { font-size: 40px; font-weight: 700; white-space: nowrap; line-height: 1.2; }
+.rexp { font-size: 28px; position: relative; top: -0.75em; margin-left: 1px; }
+.rad { white-space: nowrap; }
+.rad .idx { font-size: 28px; position: relative; top: -0.7em; margin-right: -9px; }
+.rad .rd { display: inline-block; line-height: 1; border-top: 3px solid var(--ink); padding: 3px 3px 0; margin-left: -2px; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+.frac .top { border-bottom: 3px solid var(--ink); padding: 0 6px; }
+.frac .bottom { padding: 0 6px; }
+.eq { font-size: 40px; font-weight: 700; color: var(--accent); margin: 0 6px; }
+.line { flex: 1; min-width: 36px; border-bottom: 3px solid #9a9aa0; height: 48px; }
+
+.ex { font-size: 36px; }
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr; grid-auto-rows: 1fr; gap: 12px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 4px 20px 4px 34px; border-radius: 22px; }
+.card .qn { position: absolute; top: 10px; left: 14px; }
+.top { display: flex; align-items: center; gap: 24px; }
+.ans { flex: 1; display: flex; align-items: flex-end; }
+.ans .v { font-size: 34px; font-weight: 700; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Whales · Math</div>
+      <div class="title-row"><h1>Solve and graph</h1><span class="pill">Whales · 51</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Open dot for less than or greater than, filled dot for &#39;or equal to&#39;. Shade the side where the answers are.</div>
+  <main class="body">
+    <p class="ask">Solve. Then show the answers on the number line.</p>
+    <div class="probs">
+      <div class="card"><span class="qn" data-audience="parent">1</span>
+        <div class="top"><span class="ex">2x + 7 ≤ 15</span><span class="ans"><span class="v">x</span><span class="line" style="margin-left: 10px"></span></span></div>
+        <svg class="nl" width="624" height="62" viewBox="0 0 624 62">
+          <line x1="8" x2="616" y1="16" y2="16" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M6,16 l10,-7 v14 z M618,16 l-10,-7 v14 z" fill="#1d1d1f"/>
+          <line x1="22" x2="22" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="22" y="56" text-anchor="middle" style="font-size: 28px">−10</text>
+          <line x1="51" x2="51" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="80" x2="80" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="109" x2="109" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="138" x2="138" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="167" x2="167" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="167" y="56" text-anchor="middle" style="font-size: 28px">−5</text>
+          <line x1="196" x2="196" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="225" x2="225" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="254" x2="254" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="283" x2="283" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="312" x2="312" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="312" y="56" text-anchor="middle" style="font-size: 28px">0</text>
+          <line x1="341" x2="341" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="370" x2="370" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="399" x2="399" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="428" x2="428" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="457" x2="457" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="457" y="56" text-anchor="middle" style="font-size: 28px">5</text>
+          <line x1="486" x2="486" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="515" x2="515" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="544" x2="544" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="573" x2="573" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="602" x2="602" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="602" y="56" text-anchor="middle" style="font-size: 28px">10</text>
+        </svg>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">2</span>
+        <div class="top"><span class="ex">−6x − 10 ≤ −28</span><span class="ans"><span class="v">x</span><span class="line" style="margin-left: 10px"></span></span></div>
+        <svg class="nl" width="624" height="62" viewBox="0 0 624 62">
+          <line x1="8" x2="616" y1="16" y2="16" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M6,16 l10,-7 v14 z M618,16 l-10,-7 v14 z" fill="#1d1d1f"/>
+          <line x1="22" x2="22" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="22" y="56" text-anchor="middle" style="font-size: 28px">−10</text>
+          <line x1="51" x2="51" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="80" x2="80" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="109" x2="109" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="138" x2="138" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="167" x2="167" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="167" y="56" text-anchor="middle" style="font-size: 28px">−5</text>
+          <line x1="196" x2="196" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="225" x2="225" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="254" x2="254" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="283" x2="283" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="312" x2="312" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="312" y="56" text-anchor="middle" style="font-size: 28px">0</text>
+          <line x1="341" x2="341" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="370" x2="370" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="399" x2="399" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="428" x2="428" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="457" x2="457" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="457" y="56" text-anchor="middle" style="font-size: 28px">5</text>
+          <line x1="486" x2="486" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="515" x2="515" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="544" x2="544" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="573" x2="573" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="602" x2="602" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="602" y="56" text-anchor="middle" style="font-size: 28px">10</text>
+        </svg>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">3</span>
+        <div class="top"><span class="ex">4x − 16 ≥ 2x + 2</span><span class="ans"><span class="v">x</span><span class="line" style="margin-left: 10px"></span></span></div>
+        <svg class="nl" width="624" height="62" viewBox="0 0 624 62">
+          <line x1="8" x2="616" y1="16" y2="16" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M6,16 l10,-7 v14 z M618,16 l-10,-7 v14 z" fill="#1d1d1f"/>
+          <line x1="22" x2="22" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="22" y="56" text-anchor="middle" style="font-size: 28px">−10</text>
+          <line x1="51" x2="51" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="80" x2="80" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="109" x2="109" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="138" x2="138" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="167" x2="167" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="167" y="56" text-anchor="middle" style="font-size: 28px">−5</text>
+          <line x1="196" x2="196" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="225" x2="225" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="254" x2="254" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="283" x2="283" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="312" x2="312" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="312" y="56" text-anchor="middle" style="font-size: 28px">0</text>
+          <line x1="341" x2="341" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="370" x2="370" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="399" x2="399" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="428" x2="428" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="457" x2="457" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="457" y="56" text-anchor="middle" style="font-size: 28px">5</text>
+          <line x1="486" x2="486" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="515" x2="515" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="544" x2="544" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="573" x2="573" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="602" x2="602" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="602" y="56" text-anchor="middle" style="font-size: 28px">10</text>
+        </svg>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">4</span>
+        <div class="top"><span class="ex">x + 3 &gt; 3x − 1</span><span class="ans"><span class="v">x</span><span class="line" style="margin-left: 10px"></span></span></div>
+        <svg class="nl" width="624" height="62" viewBox="0 0 624 62">
+          <line x1="8" x2="616" y1="16" y2="16" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M6,16 l10,-7 v14 z M618,16 l-10,-7 v14 z" fill="#1d1d1f"/>
+          <line x1="22" x2="22" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="22" y="56" text-anchor="middle" style="font-size: 28px">−10</text>
+          <line x1="51" x2="51" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="80" x2="80" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="109" x2="109" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="138" x2="138" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="167" x2="167" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="167" y="56" text-anchor="middle" style="font-size: 28px">−5</text>
+          <line x1="196" x2="196" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="225" x2="225" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="254" x2="254" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="283" x2="283" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="312" x2="312" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="312" y="56" text-anchor="middle" style="font-size: 28px">0</text>
+          <line x1="341" x2="341" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="370" x2="370" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="399" x2="399" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="428" x2="428" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="457" x2="457" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="457" y="56" text-anchor="middle" style="font-size: 28px">5</text>
+          <line x1="486" x2="486" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="515" x2="515" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="544" x2="544" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="573" x2="573" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="602" x2="602" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="602" y="56" text-anchor="middle" style="font-size: 28px">10</text>
+        </svg>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">5</span>
+        <div class="top"><span class="ex">3(x + 4) ≥ 18</span><span class="ans"><span class="v">x</span><span class="line" style="margin-left: 10px"></span></span></div>
+        <svg class="nl" width="624" height="62" viewBox="0 0 624 62">
+          <line x1="8" x2="616" y1="16" y2="16" stroke="#1d1d1f" stroke-width="3"/>
+          <path d="M6,16 l10,-7 v14 z M618,16 l-10,-7 v14 z" fill="#1d1d1f"/>
+          <line x1="22" x2="22" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="22" y="56" text-anchor="middle" style="font-size: 28px">−10</text>
+          <line x1="51" x2="51" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="80" x2="80" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="109" x2="109" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="138" x2="138" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="167" x2="167" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="167" y="56" text-anchor="middle" style="font-size: 28px">−5</text>
+          <line x1="196" x2="196" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="225" x2="225" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="254" x2="254" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="283" x2="283" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="312" x2="312" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="312" y="56" text-anchor="middle" style="font-size: 28px">0</text>
+          <line x1="341" x2="341" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="370" x2="370" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="399" x2="399" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="428" x2="428" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="457" x2="457" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="457" y="56" text-anchor="middle" style="font-size: 28px">5</text>
+          <line x1="486" x2="486" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="515" x2="515" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="544" x2="544" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="573" x2="573" y1="9" y2="23" stroke="#1d1d1f" stroke-width="2"/>
+          <line x1="602" x2="602" y1="6" y2="26" stroke="#1d1d1f" stroke-width="3"/>
+          <text x="602" y="56" text-anchor="middle" style="font-size: 28px">10</text>
+        </svg>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Whales · Math · page 51</footer>
+</div>
+</body>
+</html>

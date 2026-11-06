@@ -1,0 +1,69 @@
+{
+  "id": "MA-M9-B-021",
+  "subject": "math",
+  "level": "M9",
+  "section": "B",
+  "part": 3,
+  "sheet_type": "inequality_line",
+  "page_number": 51,
+  "variant": 1,
+  "seed": 6586076202799515320,
+  "title": "Solve and graph",
+  "parent_tip": "Open dot for less than or greater than, filled dot for 'or equal to'. Shade the side where the answers are.",
+  "items": [
+    {
+      "n": 1,
+      "kind": "two_step",
+      "lhs": "2x + 7",
+      "sign": "<=",
+      "rhs": "15",
+      "show": "≤",
+      "answer": "x ≤ 4 (closed dot, shade left)"
+    },
+    {
+      "n": 2,
+      "kind": "two_step_negative",
+      "lhs": "-6x - 10",
+      "sign": "<=",
+      "rhs": "-28",
+      "show": "≤",
+      "answer": "x ≥ 3 (closed dot, shade right)"
+    },
+    {
+      "n": 3,
+      "kind": "both_sides",
+      "lhs": "4x - 16",
+      "sign": ">=",
+      "rhs": "2x + 2",
+      "show": "≥",
+      "answer": "x ≥ 9 (closed dot, shade right)"
+    },
+    {
+      "n": 4,
+      "kind": "both_sides_negative",
+      "lhs": "x + 3",
+      "sign": ">",
+      "rhs": "3x - 1",
+      "show": ">",
+      "answer": "x < 2 (open dot, shade left)"
+    },
+    {
+      "n": 5,
+      "kind": "distribute",
+      "lhs": "3(x + 4)",
+      "sign": ">=",
+      "rhs": "18",
+      "show": "≥",
+      "answer": "x ≥ 2 (closed dot, shade right)"
+    }
+  ],
+  "answer_key": [
+    "1) x ≤ 4 (closed dot, shade left)",
+    "2) x ≥ 3 (closed dot, shade right)",
+    "3) x ≥ 9 (closed dot, shade right)",
+    "4) x < 2 (open dot, shade left)",
+    "5) x ≥ 2 (closed dot, shade right)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

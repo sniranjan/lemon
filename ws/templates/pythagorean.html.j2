@@ -1,7 +1,7 @@
 {% extends "base.html.j2" %}
 {# Right triangles: drawn from the two legs only (a across, b up), so the picture matches the numbers.
    The square corner is at the bottom left (or bottom right when flipped). #}
-{% import "_algebra.html.j2" as alg %}
+{% import "_lions_algebra.html.j2" as alg %}
 {% macro triangle(i) %}
 {% set c2 = i.a * i.a + (i.b * i.b if i.b is defined else i.c * i.c - i.a * i.a) %}
 {% set b = (c2 - i.a * i.a) ** 0.5 %}

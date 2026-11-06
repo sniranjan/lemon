@@ -94,7 +94,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   (8.EE.8a–c) · F Right Triangles 181–200 (8.G.6–8). New sheet types `power_root`, `sci_notation`, `pythagorean`;
   multi-step equations are `equation_solve` `mode: multi_step`, lines and systems are `coordinate_grid` `mode: lines` /
   `systems` (Pandas output byte-identical; a `template_for(sheet)` hook in the registry picks the mode's template).
-  Exact helpers `ws/sheet_types/_algebra.py` + `templates/_algebra.html.j2` (tokens, stacked fractions, SVG grid);
+  Exact helpers `ws/sheet_types/_algebra.py` + `templates/_lions_algebra.html.j2` (tokens, stacked fractions, SVG grid);
   system story frames `content/math/systems.yaml` (copy in test fixtures). Letters a, m, r never used (2a, m8, r5
   would read as codes). Child text ≥ 20px (`min_child_px`). Tests `tests/test_math_M8.py`. All 200 pages verify with
   0 errors and 0 warnings; booklets per section + `lions-math-level.pdf` (202 pages) and
@@ -200,6 +200,24 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   new -et, -op, -en, -in). Trace a Sentence: `level_word_first` makes each page's first sentence use a Kittens
   word (ship, pretzel, swan) when one fits. Verify 0 errors (1 warning: color-word pages); booklets:
   three section PDFs + `kittens-reading-level.pdf` (202 pages) + answers for Rhyme Time.
+
+- **Whales Math (M9, our own level, grade 9 / Algebra 1 work for age 12, 200 pages)** (2026-11-06):
+  `syllabus/math/M9.yaml`: A Powers and Roots 1–30 (exponent rules, rational exponents, simplifying radicals;
+  N-RN.A.1–2, part 1 also 8.EE.1 as an on-ramp) · B Lines and Inequalities 31–70 (write y = mx + b from tables,
+  points and situations; graph lines; solve and graph one-variable inequalities; graph two-variable inequalities
+  with shading; A-CED.A.2, F-LE.A.2, F-IF.B.6, F-IF.C.7a, A-REI.D.10, A-REI.B.3, A-REI.D.12) · C Polynomial
+  Operations 71–110 (add/subtract, distribute, FOIL rows, box method; A-APR.A.1) · D Factoring 111–150 (GCF,
+  x² + bx + c, leading 2/3/5, difference of squares; A-SSE.A.2, A-SSE.B.3a) · E Solving Quadratics 151–200
+  (factoring, square roots, the formula with rational then radical answers, choose a method + area story;
+  A-REI.B.4b). Standards checked on thecorestandards.org (written `N-RN.A.1` for the site's `HSN.RN.A.1`).
+  Exact algebra kit `ws/algebra.py` (Poly with a small ASCII parser, Mono with rational exponents, radicals,
+  quadratic roots (p ± q√d)/s checked in Q(√d)); new sheet types `exponent_rules`, `slope_intercept`,
+  `inequality_line`, `polynomial_ops`, `polynomial_factoring`, `quadratic_solve`; graphing lines and inequalities
+  extends Pandas' `coordinate_grid` (rule `graphs`, `ws/sheet_types/_slope_lines.py`; Pandas output byte-identical).
+  Situations in `content/math/algebra_stories.yaml` (copy in test fixtures). Variables are never `a` and the
+  general quadratic formula is never printed (digit + a would read as an internal code). Tests
+  `tests/test_math_M9.py` (19 goldens). Verify 0 errors, 0 warnings; booklets per section + `whales-math-level.pdf`
+  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 wait for Whales Reading.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

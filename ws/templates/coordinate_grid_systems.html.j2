@@ -1,6 +1,6 @@
 {% extends "base.html.j2" %}
 {# Two equations at once (coordinate_grid, mode systems; ws/sheet_types/_systems.py). #}
-{% import "_algebra.html.j2" as alg %}
+{% import "_lions_algebra.html.j2" as alg %}
 {% macro pair(i) %}<div class="pair"><span class="brace"></span><div>{% for e in [i.eq1, i.eq2] %}<div>{{ alg.mathi(e.tokens) }}</div>{% endfor %}</div></div>{% endmacro %}
 {% macro point_ans() %}<div class="ans">( <span class="ansbox small"></span> , <span class="ansbox small"></span> )</div>{% endmacro %}
 {% block style %}

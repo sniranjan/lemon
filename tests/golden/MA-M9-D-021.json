@@ -1,0 +1,75 @@
+{
+  "id": "MA-M9-D-021",
+  "subject": "math",
+  "level": "M9",
+  "section": "D",
+  "part": 3,
+  "sheet_type": "polynomial_factoring",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 2864634133731858796,
+  "title": "Harder trinomials",
+  "parent_tip": "Multiply the first and last numbers, find two that multiply to it and add to the middle, then split the middle term and group.",
+  "items": [
+    {
+      "n": 1,
+      "kind": "lead",
+      "q": "5x^2 - 38x + 21",
+      "answer": "(5x - 3)(x - 7)"
+    },
+    {
+      "n": 2,
+      "kind": "lead",
+      "q": "5x^2 + 3x - 2",
+      "answer": "(5x - 2)(x + 1)"
+    },
+    {
+      "n": 3,
+      "kind": "lead",
+      "q": "5x^2 - 23x - 10",
+      "answer": "(5x + 2)(x - 5)"
+    },
+    {
+      "n": 4,
+      "kind": "monic_gcf",
+      "q": "4x^2 + 32x + 48",
+      "answer": "4(x + 2)(x + 6)"
+    },
+    {
+      "n": 5,
+      "kind": "lead",
+      "q": "2x^2 + 7x - 15",
+      "answer": "(2x - 3)(x + 5)"
+    },
+    {
+      "n": 6,
+      "kind": "lead",
+      "q": "2x^2 + 13x + 15",
+      "answer": "(2x + 3)(x + 5)"
+    },
+    {
+      "n": 7,
+      "kind": "lead",
+      "q": "3x^2 + 23x + 30",
+      "answer": "(3x + 5)(x + 6)"
+    },
+    {
+      "n": 8,
+      "kind": "lead_gcf",
+      "q": "6x^2 - 20x - 16",
+      "answer": "2(3x + 2)(x - 4)"
+    }
+  ],
+  "answer_key": [
+    "1) (5x − 3)(x − 7)",
+    "2) (5x − 2)(x + 1)",
+    "3) (5x + 2)(x − 5)",
+    "4) 4(x + 2)(x + 6)",
+    "5) (2x − 3)(x + 5)",
+    "6) (2x + 3)(x + 5)",
+    "7) (3x + 5)(x + 6)",
+    "8) 2(3x + 2)(x − 4)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

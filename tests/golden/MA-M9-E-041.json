@@ -1,0 +1,130 @@
+{
+  "id": "MA-M9-E-041",
+  "subject": "math",
+  "level": "M9",
+  "section": "E",
+  "part": 5,
+  "sheet_type": "quadratic_solve",
+  "page_number": 191,
+  "variant": 1,
+  "seed": 6577839147691744707,
+  "title": "Choose a method",
+  "parent_tip": "For a length, only the positive answer makes sense. Say why the other one is thrown away.",
+  "items": [
+    {
+      "method": "mixed",
+      "n": 1,
+      "kind": "monic",
+      "lhs": "x^2 + 7x + 6",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        7,
+        6
+      ],
+      "answer": "x = −6 or x = −1"
+    },
+    {
+      "method": "mixed",
+      "n": 2,
+      "kind": "radical",
+      "lhs": "x^2",
+      "rhs": "43",
+      "var": "x",
+      "coeffs": [
+        1,
+        0,
+        -43
+      ],
+      "answer": "x = ±√43"
+    },
+    {
+      "method": "mixed",
+      "n": 3,
+      "kind": "formula_irrational",
+      "lhs": "x^2 + 8x - 2",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        8,
+        -2
+      ],
+      "answer": "x = −4 ± 3√2"
+    },
+    {
+      "method": "mixed",
+      "n": 4,
+      "kind": "shifted",
+      "lhs": "(x + 5)^2",
+      "rhs": "16",
+      "var": "x",
+      "coeffs": [
+        1,
+        10,
+        9
+      ],
+      "answer": "x = −9 or x = −1"
+    },
+    {
+      "method": "mixed",
+      "n": 5,
+      "kind": "formula_rational",
+      "lhs": "x^2 + 2x - 48",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        1,
+        2,
+        -48
+      ],
+      "answer": "x = −8 or x = 6"
+    },
+    {
+      "method": "mixed",
+      "n": 6,
+      "kind": "lead",
+      "lhs": "3x^2 - 8x - 35",
+      "rhs": "0",
+      "var": "x",
+      "coeffs": [
+        3,
+        -8,
+        -35
+      ],
+      "answer": "x = −7/3 or x = 5"
+    },
+    {
+      "method": "mixed",
+      "n": 7,
+      "kind": "area",
+      "lhs": "w^2 + 5w",
+      "rhs": "204",
+      "story": {
+        "id": "garden",
+        "more": 5,
+        "area": 204
+      },
+      "var": "w",
+      "coeffs": [
+        1,
+        5,
+        -204
+      ],
+      "text": "A garden is 5 m longer than it is wide. Its area is 204 square meters. How wide is it?",
+      "answer": "w = 12 m"
+    }
+  ],
+  "answer_key": [
+    "1) x = −6 or x = −1",
+    "2) x = ±√43",
+    "3) x = −4 ± 3√2",
+    "4) x = −9 or x = −1",
+    "5) x = −8 or x = 6",
+    "6) x = −7/3 or x = 5",
+    "7) w = 12 m"
+  ],
+  "new_words": [],
+  "review_words": []
+}

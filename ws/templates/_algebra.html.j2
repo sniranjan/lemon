@@ -1,53 +1,18 @@
-{# Lions math helpers. Tokens: plain strings, or {"f": [n, d]} for a stacked fraction
-   (see ws/sheet_types/_algebra.py). #}
-{% macro math(tokens) %}{% for t in tokens %}{% if t is string %}{{ t }}{% else %}<span class="sf"><span>{{ t.f[0] }}</span><span class="sf-bar"></span><span>{{ t.f[1] }}</span></span>{% endif %}{% endfor %}{% endmacro %}
-
-{# Tokens with the letters in `letters` set in italics (y = 2x − 3). #}
-{% macro mathi(tokens, letters="xy") %}{% for t in tokens %}{% if t is string %}{% for ch in t %}{% if ch in letters %}<i>{{ ch }}</i>{% else %}{{ ch }}{% endif %}{% endfor %}{% else %}<span class="sf"><span>{{ t.f[0] }}</span><span class="sf-bar"></span><span>{{ t.f[1] }}</span></span>{% endif %}{% endfor %}{% endmacro %}
-
-{% macro neg(v) %}{{ v | string | replace("-", "−") }}{% endmacro %}
-
-{# An x/y table (slope and systems sheets). #}
-{% macro xy_table(xs, ys) %}<table class="xy"><tr><th><i>x</i></th>{% for v in xs %}<td>{{ neg(v) }}</td>{% endfor %}</tr><tr><th><i>y</i></th>{% for v in ys %}<td>{{ neg(v) }}</td>{% endfor %}</tr></table>{% endmacro %}
-
-{% macro point(p) %}({{ neg(p[0]) }}, {{ neg(p[1]) }}){% endmacro %}
-
-{% macro math_style() %}
-.sf { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1; font-size: 22px; margin: 0 3px; }
-.sf-bar { align-self: stretch; border-top: 2.5px solid currentColor; margin: 2px 0; }
-.ansbox { display: inline-block; vertical-align: middle; width: 82px; height: 46px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
-.ansbox.wide { width: 130px; }
-.ansbox.small { width: 46px; height: 34px; border-width: 2.5px; border-radius: 8px; }
-.qn { position: absolute; top: 8px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
-table.xy { border-collapse: collapse; font-size: 24px; font-weight: 700; }
-table.xy th, table.xy td { border: 2px solid var(--ink); padding: 2px 10px; text-align: center; min-width: 46px; }
-table.xy th { background: var(--tint); }
-svg.grid text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+{# Shared styles for Whales math (ws/algebra.py markup through the `alg` filter). Child text ≥ 28px:
+   whole-number exponents are Unicode superscripts inside the same text; rational exponents and root
+   indexes are 28px spans on a 40px line. #}
+{% macro styles() %}
+.ask { font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+.qn { font-size: 15px; font-weight: 700; color: #8a8a90; min-width: 22px; }
+.ex { font-size: 40px; font-weight: 700; white-space: nowrap; line-height: 1.2; }
+.rexp { font-size: 28px; position: relative; top: -0.75em; margin-left: 1px; }
+.rad { white-space: nowrap; }
+.rad .idx { font-size: 28px; position: relative; top: -0.7em; margin-right: -9px; }
+.rad .rd { display: inline-block; line-height: 1; border-top: 3px solid var(--ink); padding: 3px 3px 0; margin-left: -2px; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+.frac .top { border-bottom: 3px solid var(--ink); padding: 0 6px; }
+.frac .bottom { padding: 0 6px; }
+.eq { font-size: 40px; font-weight: 700; color: var(--accent); margin: 0 6px; }
+.line { flex: 1; min-width: 36px; border-bottom: 3px solid #9a9aa0; height: 48px; }
 {% endmacro %}
-
-{# A coordinate grid from −R to R on both axes, U px per unit. `lines`: [[x1, y1], [x2, y2]] in grid
-   units; `dots`: [x, y] points to mark. Only the template turns units into pixels. #}
-{% macro grid(R, U, lines=[], dots=[], pad=14) %}
-{% set size = 2 * R * U + 2 * pad %}
-{% set c = pad + R * U %}
-<svg class="grid" width="{{ size }}" height="{{ size }}" viewBox="0 0 {{ size }} {{ size }}">
-{% for k in range(-R, R + 1) %}
-  <line x1="{{ c + k * U }}" x2="{{ c + k * U }}" y1="{{ pad }}" y2="{{ size - pad }}" stroke="#c4c4c9" stroke-width="1"/>
-  <line y1="{{ c + k * U }}" y2="{{ c + k * U }}" x1="{{ pad }}" x2="{{ size - pad }}" stroke="#c4c4c9" stroke-width="1"/>
-{% endfor %}
-  <line x1="{{ pad - 6 }}" x2="{{ size - pad + 6 }}" y1="{{ c }}" y2="{{ c }}" stroke="#1d1d1f" stroke-width="2.5"/>
-  <line y1="{{ pad - 6 }}" y2="{{ size - pad + 6 }}" x1="{{ c }}" x2="{{ c }}" stroke="#1d1d1f" stroke-width="2.5"/>
-{% for k in range(-R + 1, R) if k != 0 and k % 2 == 0 %}
-  <text x="{{ c + k * U }}" y="{{ c + 22 }}" text-anchor="middle" style="font-size: 20px">{{ k | string | replace("-", "−") }}</text>
-  <text x="{{ c - 6 }}" y="{{ c - k * U + 7 }}" text-anchor="end" style="font-size: 20px">{{ k | string | replace("-", "−") }}</text>
-{% endfor %}
-  <text x="{{ size - pad - 4 }}" y="{{ c - 8 }}" text-anchor="end" style="font-size: 22px; font-style: italic">x</text>
-  <text x="{{ c + 9 }}" y="{{ pad + 18 }}" style="font-size: 22px; font-style: italic">y</text>
-{% for ln in lines %}
-  <line x1="{{ (c + ln[0][0] * U) | round(2) }}" y1="{{ (c - ln[0][1] * U) | round(2) }}" x2="{{ (c + ln[1][0] * U) | round(2) }}" y2="{{ (c - ln[1][1] * U) | round(2) }}" stroke="{{ ln[2] if ln | length > 2 else "#B4410C" }}" stroke-width="4" stroke-linecap="round"{% if ln | length > 3 %} stroke-dasharray="{{ ln[3] }}"{% endif %}/>
-{% endfor %}
-{% for d in dots %}
-  <circle cx="{{ c + d[0] * U }}" cy="{{ c - d[1] * U }}" r="6" fill="#1d1d1f"/>
-{% endfor %}
-</svg>
-{% endmacro %}
+{% macro expr(i) %}{% if i.top is defined %}<span class="frac"><span class="top">{{ i.top | alg }}</span><span class="bottom">{{ i.bottom | alg }}</span></span>{% else %}{{ i.q | alg }}{% endif %}{% endmacro %}

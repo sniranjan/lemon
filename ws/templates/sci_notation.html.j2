@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% import "_algebra.html.j2" as alg %}
+{% import "_lions_algebra.html.j2" as alg %}
 {% macro sci(coef, exp) %}{{ coef }} × 10<sup>{{ exp | string | replace("-", "−") }}</sup>{% endmacro %}
 {% block style %}
 {{ alg.math_style() }}

@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% import "_algebra.html.j2" as alg %}
+{% import "_lions_algebra.html.j2" as alg %}
 {% macro num(v) %}{% if v is string %}<i>{{ v }}</i>{% elif v < 0 %}({{ v | string | replace("-", "−") }}){% else %}{{ v }}{% endif %}{% endmacro %}
 {% macro pw(b, e) %}{{ num(b) }}<sup>{{ e | string | replace("-", "−") }}</sup>{% endmacro %}
 {% macro radical(v, index="") %}<span class="rad">{% if index %}<sup class="idx">{{ index }}</sup>{% endif %}√<span class="under">{{ v | string | replace("-", "−") }}</span></span>{% endmacro %}
