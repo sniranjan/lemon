@@ -61,7 +61,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 3A, MA M1, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 216 passed (2026-11-06, with Puppies Math).
+- `uv run pytest`: 242 passed (2026-11-06, with Kittens, Bunnies and Puppies Math).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,

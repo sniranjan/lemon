@@ -204,7 +204,7 @@ sections:
     public_name: Missing Numbers and Families
     pages: [181, 200]
     sheet_types: [fact_drill]
-    standards: [1.OA.4, 1.OA.7, 1.OA.8, 2.OA.2]
+    standards: [1.OA.4, 1.OA.8, 2.OA.2]
     source: ours
     rules:
       ops: ["+", "-"]
