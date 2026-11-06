@@ -1,0 +1,321 @@
+subject: math
+level: M4
+title: Big Multiplying, Long Division, Factors and Fraction Friends
+# Our own level (source: ours): Owls math, grade 4 work for age 7 (syllabus/PLAN-upper-levels.md). It assumes
+# Foxes math (3-digit adding and taking away, the times tables, sharing facts, unit fractions).
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [21, 71, 121, 171]   # multiply in parts, two-by-two, long division, fraction bars
+aims:
+  - Add and take away four-digit numbers in columns with the standard method (4.NBT.4)
+  - Multiply numbers up to four digits by one digit, then two-digit by two-digit numbers, in parts (4.NBT.5)
+  - Divide up to four-digit numbers by one digit, with remainders, in the long division house (4.NBT.6)
+  - Find every factor pair of a number to 100, spot multiples, and tell prime from composite (4.OA.4)
+  - Make equivalent fractions with fraction bars, and add and take away fractions with the same bottom number (4.NF.1, 4.NF.3)
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [3, 6]   # source: ours (6 four-digit problems, 4 long multiplications or divisions a page)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# (ws/sheet_types/*.py).
+sections:
+  - code: A
+    name: Four-Digit Adding and Subtracting
+    public_name: Warm-up
+    pages: [1, 20]
+    sheet_types: [column_arithmetic]
+    standards: [4.NBT.4]
+    source: ours
+    rules:
+      # column_arithmetic (shared with Cubs and Foxes): four-digit numbers, 6 a page in 2 columns,
+      # every problem trades in 1, 2 or 3 columns (each count on every page); answers stay under 10000
+      max_answer: 9999
+      problems: 6
+      regroup: all
+      regroup_counts: [1, 2, 3]
+      max_regroups: 3
+    parts:
+      - part: 1
+        pages: [1, 10]
+        rules:
+          title: Four-digit adding
+          op: add
+          a: [1000, 7999]
+          b: [1000, 4999]
+          tips:
+            column_add_regroup:
+              - "Same steps as three-digit adding, one more column. Start with the ones and carry into the little boxes when a column makes 10 or more."
+              - "Ask your child to say each column out loud: ones, tens, hundreds, thousands. Check each carry together at the end."
+      - part: 2
+        pages: [11, 20]
+        rules:
+          title: Four-digit taking away
+          op: sub
+          a: [2000, 9999]
+          b: [1000, 8999]
+          across_zero: 1
+          tips:
+            column_sub_regroup:
+              - "Start with the ones. If the top digit is too small, trade one from the next column and write the new digits in the little boxes."
+              - "For 5402 take away 1168 there are no tens to trade: trade a hundred for ten tens first, then a ten for ten ones."
+
+  - code: B
+    name: Multiplying 2- to 4-Digit Numbers by One Digit
+    public_name: Multiply by One Digit
+    pages: [21, 60]
+    sheet_types: [long_multiplication]
+    standards: [4.NBT.5]
+    source: ours
+    rules:
+      b: [2, 9]
+    parts:
+      - part: 1
+        pages: [21, 30]
+        rules:
+          # times each place on its own line, then add: 47 × 6 = 42 + 240
+          title: Multiply in parts
+          layout: expanded
+          a: [12, 99]
+          problems: 4
+          tips:
+            long_multiplication:
+              - "Multiply the ones first and write that line. Then multiply the tens: 40 times 6 is 4 times 6 with a zero. Add the two lines."
+              - "Say what each line means: 7 times 6 is 42, 40 times 6 is 240. Then add them to get the answer."
+      - part: 2
+        pages: [31, 40]
+        rules:
+          title: Two digits times one
+          layout: carry
+          a: [12, 99]
+          problems: 6
+          tips:
+            long_multiplication:
+              - "Now it fits on one line. Multiply the ones, write the ones digit, and put the tens in the little box over the next column."
+              - "Multiply the tens, then add the number in the little box. 6 times 4 is 24, and 2 more makes 26."
+      - part: 3
+        pages: [41, 50]
+        rules:
+          title: Three digits times one
+          layout: carry
+          a: [102, 999]
+          problems: 6
+          tips:
+            long_multiplication:
+              - "Ones, then tens, then hundreds. Each time, multiply first and then add the little number carried over."
+              - "If a digit is 0, the answer for that column is just the carried number."
+      - part: 4
+        pages: [51, 60]
+        rules:
+          title: Four digits times one
+          layout: carry
+          a: [1002, 9999]
+          problems: 6
+          tips:
+            long_multiplication:
+              - "One more column than before. Go right to left and keep the carried numbers small and neat in the boxes."
+              - "Before starting, guess the answer: 3000 times 4 is about 12000. Check the answer is close."
+
+  - code: C
+    name: Two-Digit by Two-Digit Multiplication
+    public_name: Two-by-Two
+    pages: [61, 100]
+    sheet_types: [long_multiplication]
+    standards: [4.NBT.5]
+    source: ours
+    parts:
+      - part: 1
+        pages: [61, 70]
+        rules:
+          # times a whole number of tens (23 × 40): the warm-up for the second line of a two-by-two
+          title: Times tens
+          layout: carry
+          a: [12, 99]
+          b: [20, 90]
+          tens_only: true
+          problems: 6
+          tips:
+            long_multiplication:
+              - "Times 40 is times 4, then times 10. Write a 0 in the ones box first, then multiply by 4."
+              - "Point to the zero in 40. It goes straight down into the answer, then multiply by the other digit."
+      - part: 2
+        pages: [71, 80]
+        rules:
+          title: Two-by-two
+          layout: partials
+          a: [11, 49]
+          b: [11, 29]
+          zero_shown: true
+          problems: 4
+          tips:
+            long_multiplication:
+              - "Two lines, then add. Line one is times the ones digit. Line two is times the tens: the 0 is already there for you."
+              - "For 34 times 23: 34 times 3 on the first line, 34 times 20 on the second, then add the lines."
+      - part: 3
+        pages: [81, 90]
+        rules:
+          title: Two-by-two
+          layout: partials
+          a: [12, 99]
+          b: [12, 99]
+          zero_shown: true
+          problems: 4
+          tips:
+            long_multiplication:
+              - "Bigger numbers, same steps. Use the little boxes for carries on each line, and cross them out before the next line."
+              - "Guess first: 48 times 31 is about 50 times 30, so about 1500."
+      - part: 4
+        pages: [91, 100]
+        rules:
+          title: Two-by-two
+          layout: partials
+          a: [12, 99]
+          b: [12, 99]
+          zero_shown: false
+          problems: 4
+          tips:
+            long_multiplication:
+              - "Now your child writes the 0 at the start of the second line. Ask: why does it go there? Because we are multiplying tens."
+              - "Let your child work alone, then check one problem together by guessing: round both numbers to tens."
+
+  - code: D
+    name: Long Division with One-Digit Divisors and Remainders
+    public_name: Long Division
+    pages: [101, 150]
+    sheet_types: [division_house]
+    standards: [4.NBT.6]
+    source: ours
+    rules:
+      divisor: [2, 9]
+      problems: 4
+    parts:
+      - part: 1
+        pages: [101, 110]
+        rules:
+          title: Long division
+          dividend: [20, 99]
+          quotient: [10, 49]
+          remainder: none
+          tips:
+            division_house:
+              - "Divide, multiply, take away, bring down. For 84 shared by 4: how many 4s in 8? Write 2 on top, then bring down the 4."
+              - "Use the squares under the number for the multiply and take-away steps, one digit in each square."
+      - part: 2
+        pages: [111, 120]
+        rules:
+          title: Remainders
+          dividend: [20, 99]
+          quotient: [2, 49]
+          remainder: all
+          tips:
+            division_house:
+              - "Some are left over now. What is left at the end goes in the R box. It must be smaller than the number you divide by."
+              - "Check together: the answer times the divisor, plus the remainder, makes the number you started with."
+      - part: 3
+        pages: [121, 130]
+        rules:
+          title: Three-digit division
+          dividend: [100, 999]
+          quotient: [12, 499]
+          remainder: none
+          small_first: 1
+          tips:
+            division_house:
+              - "If the first digit is too small (1 shared by 4), look at the first two digits together. The answer starts over the second digit."
+              - "Divide, multiply, take away, bring down, then do it again until there is nothing left to bring down."
+      - part: 4
+        pages: [131, 140]
+        rules:
+          title: Three-digit division
+          dividend: [100, 999]
+          quotient: [12, 499]
+          remainder: all
+          zero_in_quotient: 1
+          tips:
+            division_house:
+              - "When a brought-down number is too small to share, write 0 on top and bring down the next digit. Don't skip the 0."
+              - "Check each answer: answer times the divisor, plus what is left over, gives the number in the house."
+      - part: 5
+        pages: [141, 150]
+        rules:
+          title: Four-digit division
+          dividend: [1000, 9999]
+          quotient: [112, 4999]
+          remainder: mixed
+          small_first: 1
+          zero_in_quotient: 1
+          problems: 2   # four-digit work needs about eight lines: two a page, side by side
+          tips:
+            division_house:
+              - "Four digits, the same four steps each time. Some divide evenly and some have a remainder: leave the R box empty when nothing is left."
+              - "Guess first: 4236 shared by 6 is about 4200 shared by 6, so about 700."
+
+  - code: E
+    name: Factors, Multiples, Primes and Composites
+    public_name: Factors and Multiples
+    pages: [151, 170]
+    sheet_types: [factor_pairs]
+    standards: [4.OA.4]
+    source: ours
+    parts:
+      - part: 1
+        pages: [151, 160]
+        rules:
+          title: Factor pairs
+          tasks: [pairs, multiples, pairs, circle]
+          numbers: [6, 60]
+          show_first: true
+          tips:
+            factor_pairs:
+              - "Factor pairs are two numbers that multiply to make the big number. Start with 1 times the number, then try 2, 3, 4 and so on."
+              - "When the pairs start to turn around (4 times 6, then 6 times 4), you have found them all."
+      - part: 2
+        pages: [161, 170]
+        rules:
+          title: Factors and primes
+          tasks: [pairs, prime, circle, pairs]
+          numbers: [12, 100]
+          tips:
+            factor_pairs:
+              - "A prime number has only one factor pair: 1 times itself. A composite number has more. 1 is neither, so it isn't on these pages."
+              - "To spot a multiple of 6, ask: is it in the 6 times table? Count by 6s if you need to."
+
+  - code: F
+    name: Equivalent Fractions and Adding Like Fractions
+    public_name: Fraction Friends
+    pages: [171, 200]
+    sheet_types: [fraction_bars]
+    standards: [4.NF.1, 4.NF.3, 4.NF.3a]
+    source: ours
+    rules:
+      denominators: [2, 3, 4, 5, 6, 8, 10, 12]   # grade 4 fractions use these (and 100; Common Core 4.NF footnote)
+    parts:
+      - part: 1
+        pages: [171, 180]
+        rules:
+          title: Fraction friends
+          tasks: [bars]
+          problems: 4
+          tips:
+            fraction_bars:
+              - "Both bars are the same size. Count the shaded parts on the bottom bar: the same amount is shaded, just cut into more pieces."
+              - "1 out of 2 is shaded, and 2 out of 4 is shaded: same amount, different pieces. That is why they are equal."
+      - part: 2
+        pages: [181, 190]
+        rules:
+          title: Fraction friends
+          tasks: [times, times, divide, times]
+          problems: 8
+          denominators: [2, 3, 4, 5, 6, 8, 10, 12, 100]
+          tips:
+            fraction_bars:
+              - "Whatever you multiply the bottom by, multiply the top by the same. 2/3 = ?/12: 3 times 4 is 12, so 2 times 4 is 8."
+              - "Some go the other way: 6/8 = ?/4. 8 shared by 2 is 4, so 6 shared by 2 is 3."
+      - part: 3
+        pages: [191, 200]
+        rules:
+          title: Add and take away
+          tasks: [add, sub]
+          problems: 6
+          bars: 2   # the first two problems show their bars
+          tips:
+            fraction_bars:
+              - "When the bottom numbers match, add or take away the tops. The bottom stays the same: 2/8 and 3/8 make 5/8."
+              - "Use the bars: count the shaded parts, then the striped ones. The bottom number is how many parts in the whole bar."

@@ -1,0 +1,75 @@
+{
+  "id": "MA-M4-B-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "long_multiplication",
+  "page_number": 21,
+  "variant": 1,
+  "seed": 12760537107905191997,
+  "title": "Multiply in parts",
+  "parent_tip": "Multiply the ones first and write that line. Then multiply the tens: 40 times 6 is 4 times 6 with a zero. Add the two lines.",
+  "items": [
+    {
+      "kind": "times",
+      "layout": "expanded",
+      "a": 55,
+      "b": 8,
+      "cols": 3,
+      "partials": [
+        40,
+        400
+      ],
+      "carry_cols": [],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "expanded",
+      "a": 23,
+      "b": 3,
+      "cols": 3,
+      "partials": [
+        9,
+        60
+      ],
+      "carry_cols": [],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "expanded",
+      "a": 15,
+      "b": 3,
+      "cols": 3,
+      "partials": [
+        15,
+        30
+      ],
+      "carry_cols": [],
+      "zero_shown": false
+    },
+    {
+      "kind": "times",
+      "layout": "expanded",
+      "a": 19,
+      "b": 5,
+      "cols": 3,
+      "partials": [
+        45,
+        50
+      ],
+      "carry_cols": [],
+      "zero_shown": false
+    }
+  ],
+  "answer_key": [
+    "440 (40 + 400)",
+    "69 (9 + 60)",
+    "45 (15 + 30)",
+    "95 (45 + 50)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

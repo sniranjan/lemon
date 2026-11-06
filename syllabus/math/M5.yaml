@@ -23,14 +23,14 @@ sections:
     name: Long Division with Two-Digit Divisors
     public_name: Long Division
     pages: [1, 40]
-    sheet_types: [long_division_2digit]
+    sheet_types: [division_house]   # Owls' long division house, here with two-digit divisors
     standards: [5.NBT.6]
     source: ours
     rules:
       problems: 4
       remainder: mixed
       tips:
-        long_division_2digit:
+        division_house:
           - "Round the divisor to the nearest ten to guess each digit: 38 is about 40. If the guess is too big, try one less."
           - "Each step is divide, multiply, take away, bring down. Say the steps out loud together."
           - "The remainder must be smaller than the divisor. If it isn't, the digit on top can go up by one."
@@ -41,10 +41,10 @@ sections:
           title: Dividing by tens
           divisor: [20, 90]
           divisor_multiple_of: 10
-          dividend_digits: 3
-          quotient_digits: [1]
+          dividend: [100, 999]
+          quotient: [2, 9]
           tips:
-            long_division_2digit:
+            division_house:
               - "Dividing by 30 is like dividing by 3, ten times smaller. For 240 shared by 30, think: 24 shared by 3 is 8."
               - "Write the digit over the last digit of the dividend. Multiply it by the divisor, take away, and the rest is the remainder."
       - part: 2
@@ -52,25 +52,25 @@ sections:
         rules:
           title: Two-digit divisors
           divisor: [11, 49]
-          dividend_digits: 3
-          quotient_digits: [1]
+          dividend: [100, 999]
+          quotient: [2, 9]
       - part: 3
         pages: [21, 30]
         rules:
           title: Two-digit answers
           divisor: [11, 59]
-          dividend_digits: 3
-          quotient_digits: [2]
+          dividend: [100, 999]
+          quotient: [10, 90]
       - part: 4
         pages: [31, 40]
         rules:
           title: Four-digit numbers
           divisor: [11, 99]
-          dividend_digits: 4
-          quotient_digits: [2, 3]
+          dividend: [1000, 9999]
+          quotient: [10, 909]
           zero_in_quotient: 1
           tips:
-            long_division_2digit:
+            division_house:
               - "If the divisor doesn't fit after you bring a digit down, write 0 on top before bringing down the next digit."
               - "Check an answer together: answer times divisor, plus the remainder, gives back the big number."
 

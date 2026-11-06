@@ -26,11 +26,12 @@ CATALOGUE: frozenset[str] = frozenset({
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
-    # Otters math (M5): long division by two-digit numbers, fraction and decimal arithmetic,
-    # parentheses, volume
-    "long_division_2digit", "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
+    # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
+    "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
     "order_of_operations", "box_volume",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
+    # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
+    "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
 })
 
 

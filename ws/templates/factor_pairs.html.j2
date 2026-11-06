@@ -1,0 +1,49 @@
+{% extends "base.html.j2" %}
+{# Factors and multiples: one card per task, stacked. Each card has a short instruction for the child
+   and its boxes or numbers below. #}
+{% block style %}
+.tasks { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.tasks .card { flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 10px 24px; border-radius: 24px; }
+.ask { font-size: 30px; font-weight: 700; line-height: 1.15; }
+.ask b { color: var(--accent); font-size: 38px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+.box { display: inline-block; width: 52px; height: 48px; border: 3px solid var(--ink); border-radius: 9px; vertical-align: middle; }
+.pair { display: flex; align-items: center; gap: 8px; font-size: 34px; font-weight: 700; }
+.pair .given { width: 52px; text-align: center; color: #6b6b70; }
+.mult { display: flex; align-items: center; gap: 10px; font-size: 36px; font-weight: 700; }
+.mult .row { gap: 10px; }
+.circle .row { justify-content: space-between; }
+.circle .num { font-size: 38px; font-weight: 700; min-width: 56px; text-align: center; }
+.prime .row { justify-content: space-around; }
+.pc { display: flex; align-items: center; gap: 18px; }
+.pc .num { font-size: 40px; font-weight: 700; min-width: 50px; text-align: right; }
+.pc .words { display: flex; flex-direction: column; }
+.pc .word { font-size: 28px; line-height: 1.25; }
+{% endblock %}
+{% block body %}
+    <div class="tasks">
+{% for i in sheet.items %}
+{% if i.kind == "pairs" %}
+      <div class="card">
+        <div class="ask">Factor pairs of <b>{{ i.n }}</b></div>
+        <div class="row">{% for p in i.pairs %}<span class="pair">{% if loop.first and i.show_first %}<span class="given">{{ p[0] }}</span>×<span class="given">{{ p[1] }}</span>{% else %}<span class="box"></span>×<span class="box"></span>{% endif %}</span>{% endfor %}</div>
+      </div>
+{% elif i.kind == "multiples" %}
+      <div class="card">
+        <div class="ask">Count in <b>{{ i.base }}</b>s</div>
+        <div class="row mult">{{ i.base }}{% for _ in range(i.count - 1) %}<span class="box"></span>{% endfor %}</div>
+      </div>
+{% elif i.kind == "circle" %}
+      <div class="card circle">
+        <div class="ask">Circle the multiples of <b>{{ i.base }}</b></div>
+        <div class="row">{% for x in i.numbers %}<span class="num">{{ x }}</span>{% endfor %}</div>
+      </div>
+{% else %}
+      <div class="card prime">
+        <div class="ask">Prime or composite? Circle one.</div>
+        <div class="row">{% for x in i.numbers %}<span class="pc"><span class="num">{{ x }}</span><span class="words"><span class="word">prime</span><span class="word">composite</span></span></span>{% endfor %}</div>
+      </div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

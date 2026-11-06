@@ -52,7 +52,7 @@ def test_exact_helpers():
         order_of_operations.evaluate("3 − (5 − 5)")
 
 
-# one golden per sheet type and layout: dividing by tens, four-digit long division, unlike fractions,
+# one golden per sheet type and layout: dividing by tens and four-digit long division (Owls' division house), unlike fractions,
 # mixed numbers, whole times fraction, area model, place value, decimal columns (with and without the
 # printed point), moving the point, decimal by decimal, parentheses, volume
 @pytest.mark.parametrize("page", [1, 31, 41, 81, 91, 101, 121, 131, 151, 161, 181, 191, 192])
@@ -70,10 +70,13 @@ def test_whole_level_passes(fixture_content):
         assert check(sheet) == [], (sheet.id, check(sheet))
         # answers never carry anything that reads like an internal code (R5 is a banned word)
         assert not banned_words(", ".join(map(str, sheet.answer_key))), sheet.answer_key
-        if sheet.sheet_type == "long_division_2digit":
+        if sheet.sheet_type == "division_house":   # Owls' long division house, two-digit divisors here
+            r = resolve_page(M5, page).rules
             for i, a in zip(sheet.items, sheet.answer_key):
-                q, r = divmod(i["dividend"], i["divisor"])
-                assert a == (f"{q} R {r}" if r else str(q))
+                q, rem = divmod(i["dividend"], i["divisor"])
+                assert a == (f"{q} R {rem}" if i["r_box"] else str(q)) and 10 <= i["divisor"] <= 99
+                assert len(str(i["dividend"])) == (4 if page > 30 else 3)
+                assert i["divisor"] % r.get("divisor_multiple_of", 1) == 0
         if sheet.sheet_type == "fraction_ops":
             for a in sheet.answer_key:   # simplest form, mixed numbers when over 1
                 whole, _, frac = a.rpartition(" ") if " " in a else ("", "", a)
@@ -90,12 +93,18 @@ def test_verify_catches_bad_long_division(fixture_content):
     assert any("divisor" in m for m in check(bad))
     bad = copy.deepcopy(sheet)
     bad.items[0]["dividend"] = 123
-    assert any("digits" in m for m in check(bad))
+    assert any("dividend" in m for m in check(bad))
+    tens = gen.build_sheet(M5, 1, plan)   # dividing by tens
+    bad = copy.deepcopy(tens)
+    i = bad.items[0]
+    i["divisor"] = 21
+    i["quotient"], i["remainder"] = divmod(i["dividend"], 21)
+    assert any("multiple of 10" in m for m in check(bad))
     bad = sheet.model_copy(update={"answer_key": ["1"] + sheet.answer_key[1:]})
     assert any("answer key" in m for m in check(bad))
     no_zero = copy.deepcopy(sheet)
     for i in no_zero.items:
-        i["dividend"], i["divisor"] = 1554, 42   # 37, no zero (and repeats)
+        i.update(dividend=1554, divisor=42, quotient=37, remainder=0)   # no zero inside (and repeats)
     assert any("0 inside" in m for m in check(no_zero))
 
 

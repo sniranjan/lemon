@@ -1,0 +1,51 @@
+{
+  "id": "MA-M4-F-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "fraction_bars",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 2696635326295677211,
+  "title": "Fraction friends",
+  "parent_tip": "Both bars are the same size. Count the shaded parts on the bottom bar: the same amount is shaded, just cut into more pieces.",
+  "items": [
+    {
+      "n_": 1,
+      "kind": "bars",
+      "a": 1,
+      "b": 2,
+      "n": 3
+    },
+    {
+      "n_": 2,
+      "kind": "bars",
+      "a": 2,
+      "b": 3,
+      "n": 4
+    },
+    {
+      "n_": 3,
+      "kind": "bars",
+      "a": 2,
+      "b": 4,
+      "n": 3
+    },
+    {
+      "n_": 4,
+      "kind": "bars",
+      "a": 3,
+      "b": 6,
+      "n": 2
+    }
+  ],
+  "answer_key": [
+    "1/2 = 3/6",
+    "2/3 = 8/12",
+    "2/4 = 6/12",
+    "3/6 = 6/12"
+  ],
+  "new_words": [],
+  "review_words": []
+}

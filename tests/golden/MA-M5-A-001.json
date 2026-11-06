@@ -4,7 +4,7 @@
   "level": "M5",
   "section": "A",
   "part": 1,
-  "sheet_type": "long_division_2digit",
+  "sheet_type": "division_house",
   "page_number": 1,
   "variant": 1,
   "seed": 11501456682528973766,
@@ -12,39 +12,47 @@
   "parent_tip": "Dividing by 30 is like dividing by 3, ten times smaller. For 240 shared by 30, think: 24 shared by 3 is 8.",
   "items": [
     {
-      "kind": "division",
+      "kind": "divide",
+      "dividend": 400,
       "divisor": 50,
-      "dividend": 357,
-      "n": 1,
-      "work_rows": 2
+      "quotient": 8,
+      "remainder": 0,
+      "start": 2,
+      "r_box": true
     },
     {
-      "kind": "division",
-      "divisor": 70,
-      "dividend": 420,
-      "n": 2,
-      "work_rows": 2
-    },
-    {
-      "kind": "division",
+      "kind": "divide",
+      "dividend": 296,
       "divisor": 30,
-      "dividend": 161,
-      "n": 3,
-      "work_rows": 2
+      "quotient": 9,
+      "remainder": 26,
+      "start": 2,
+      "r_box": true
     },
     {
-      "kind": "division",
-      "divisor": 50,
-      "dividend": 150,
-      "n": 4,
-      "work_rows": 2
+      "kind": "divide",
+      "dividend": 490,
+      "divisor": 70,
+      "quotient": 7,
+      "remainder": 0,
+      "start": 2,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 189,
+      "divisor": 30,
+      "quotient": 6,
+      "remainder": 9,
+      "start": 2,
+      "r_box": true
     }
   ],
   "answer_key": [
-    "7 R 7",
-    "6",
-    "5 R 11",
-    "3"
+    "8 R 0",
+    "9 R 26",
+    "7 R 0",
+    "6 R 9"
   ],
   "new_words": [],
   "review_words": []

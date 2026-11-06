@@ -58,13 +58,24 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   B Unlike Fractions 41–90 (5.NF.1: related denominators, then unrelated, then mixed numbers) · C Fractions Times
   Fractions 91–120 (5.NF.4: whole × fraction, area model, fraction × fraction) · D Decimals in Columns 121–160
   (5.NBT.3–4, 5.NBT.7: place value page, then add/take away with points lined up) · E Decimals Times and Shared
-  161–190 (5.NBT.2, 5.NBT.7) · F Parentheses and Volume 191–200 (5.OA.1, 5.MD.3–5; pages alternate). New sheet
-  types `long_division_2digit` (named apart from Owls' `long_division`), `fraction_ops`, `decimal_place_value`,
+  161–190 (5.NBT.2, 5.NBT.7) · F Parentheses and Volume 191–200 (5.OA.1, 5.MD.3–5; pages alternate). Section A reuses Owls'
+  `division_house` (new optional rule `divisor_multiple_of`; Owls output unchanged). New sheet types `fraction_ops`, `decimal_place_value`,
   `decimal_column`, `decimal_ops`, `order_of_operations`, `box_volume`; exact helpers in `ws/sheet_types/_exact.py`
   (items store ints / canonical decimal strings; `Fraction` and `Decimal` only for computing). Tests in
   `tests/test_math_M5.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per section +
-  `otters-math-level.pdf` (202 pages) and `otters-math-level-answers.pdf` (10 pages). Answers with a remainder read
+  `otters-math-level.pdf` (202 pages) and `otters-math-level-answers.pdf` (12 pages). Answers with a remainder read
   "36 R 12" (R5 alone is a banned internal code). Free preview pages 21, 61, 131, 192 wait for Otters Reading.
+- **Owls Math (M4, our own level, grade 4 work for age 7, 200 pages)** (2026-11-06): `syllabus/math/M4.yaml`:
+  A Warm-up 1–20 (4-digit adding and taking away, 4.NBT.4) · B Multiply by One Digit 21–60 (in parts, then 2-, 3-,
+  4-digit × 1 digit with carry boxes) · C Two-by-Two 61–100 (× tens, then 2-digit × 2-digit in two lines; the line-two
+  0 printed in parts 2–3, written by the child in part 4) (4.NBT.5) · D Long Division 101–150 (division house; even,
+  remainders, first digit too small, 0 inside the answer, 4-digit two a page) (4.NBT.6) · E Factors and Multiples 151–170
+  (factor pairs, count in multiples, circle multiples, prime or composite) (4.OA.4) · F Fraction Friends 171–200 (fraction
+  bars, equivalent fractions incl. tenths → hundredths, like-denominator adding and taking away within one whole)
+  (4.NF.1, 4.NF.3, 4.NF.3a). New sheet types `long_multiplication`, `division_house`, `factor_pairs`, `fraction_bars`;
+  `column_arithmetic` puts 4-digit problems 2 a row (Cubs/Foxes output unchanged). Tests `tests/test_math_M4.py`.
+  All 200 pages verify with 0 errors and 0 warnings; booklets per section + `owls-math-level.pdf` (202 pages) and
+  `owls-math-level-answers.pdf` (14 pages). Child text ≥ 28px. Free preview pages 21, 71, 121, 171 wait for Owls Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -93,7 +104,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M5 (Otters Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:

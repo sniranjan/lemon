@@ -4,7 +4,7 @@
   "level": "M5",
   "section": "A",
   "part": 4,
-  "sheet_type": "long_division_2digit",
+  "sheet_type": "division_house",
   "page_number": 31,
   "variant": 1,
   "seed": 12328646074961125954,
@@ -12,39 +12,47 @@
   "parent_tip": "If the divisor doesn't fit after you bring a digit down, write 0 on top before bringing down the next digit.",
   "items": [
     {
-      "kind": "division",
-      "divisor": 42,
-      "dividend": 8801,
-      "n": 1,
-      "work_rows": 6
+      "kind": "divide",
+      "dividend": 5352,
+      "divisor": 24,
+      "quotient": 223,
+      "remainder": 0,
+      "start": 1,
+      "r_box": true
     },
     {
-      "kind": "division",
-      "divisor": 76,
-      "dividend": 5320,
-      "n": 2,
-      "work_rows": 6
-    },
-    {
-      "kind": "division",
-      "divisor": 46,
-      "dividend": 1013,
-      "n": 3,
-      "work_rows": 6
-    },
-    {
-      "kind": "division",
+      "kind": "divide",
+      "dividend": 9436,
       "divisor": 41,
-      "dividend": 7421,
-      "n": 4,
-      "work_rows": 6
+      "quotient": 230,
+      "remainder": 6,
+      "start": 1,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 9498,
+      "divisor": 80,
+      "quotient": 118,
+      "remainder": 58,
+      "start": 1,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 9797,
+      "divisor": 97,
+      "quotient": 101,
+      "remainder": 0,
+      "start": 1,
+      "r_box": true
     }
   ],
   "answer_key": [
-    "209 R 23",
-    "70",
-    "22 R 1",
-    "181"
+    "223 R 0",
+    "230 R 6",
+    "118 R 58",
+    "101 R 0"
   ],
   "new_words": [],
   "review_words": []

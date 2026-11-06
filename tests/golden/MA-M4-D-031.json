@@ -1,0 +1,59 @@
+{
+  "id": "MA-M4-D-031",
+  "subject": "math",
+  "level": "M4",
+  "section": "D",
+  "part": 4,
+  "sheet_type": "division_house",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 8757130974571337535,
+  "title": "Three-digit division",
+  "parent_tip": "Check each answer: answer times the divisor, plus what is left over, gives the number in the house.",
+  "items": [
+    {
+      "kind": "divide",
+      "dividend": 829,
+      "divisor": 4,
+      "quotient": 207,
+      "remainder": 1,
+      "start": 0,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 655,
+      "divisor": 6,
+      "quotient": 109,
+      "remainder": 1,
+      "start": 0,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 427,
+      "divisor": 5,
+      "quotient": 85,
+      "remainder": 2,
+      "start": 1,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 651,
+      "divisor": 4,
+      "quotient": 162,
+      "remainder": 3,
+      "start": 0,
+      "r_box": true
+    }
+  ],
+  "answer_key": [
+    "207 R 1",
+    "109 R 1",
+    "85 R 2",
+    "162 R 3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

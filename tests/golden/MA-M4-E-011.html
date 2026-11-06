@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Owls · Math · page 161</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.tasks { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.tasks .card { flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 10px 24px; border-radius: 24px; }
+.ask { font-size: 30px; font-weight: 700; line-height: 1.15; }
+.ask b { color: var(--accent); font-size: 38px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; }
+.box { display: inline-block; width: 52px; height: 48px; border: 3px solid var(--ink); border-radius: 9px; vertical-align: middle; }
+.pair { display: flex; align-items: center; gap: 8px; font-size: 34px; font-weight: 700; }
+.pair .given { width: 52px; text-align: center; color: #6b6b70; }
+.mult { display: flex; align-items: center; gap: 10px; font-size: 36px; font-weight: 700; }
+.mult .row { gap: 10px; }
+.circle .row { justify-content: space-between; }
+.circle .num { font-size: 38px; font-weight: 700; min-width: 56px; text-align: center; }
+.prime .row { justify-content: space-around; }
+.pc { display: flex; align-items: center; gap: 18px; }
+.pc .num { font-size: 40px; font-weight: 700; min-width: 50px; text-align: right; }
+.pc .words { display: flex; flex-direction: column; }
+.pc .word { font-size: 28px; line-height: 1.25; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Owls · Math</div>
+      <div class="title-row"><h1>Factors and primes</h1><span class="pill">Owls · 161</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> A prime number has only one factor pair: 1 times itself. A composite number has more. 1 is neither, so it isn&#39;t on these pages.</div>
+  <main class="body">
+    <div class="tasks">
+      <div class="card">
+        <div class="ask">Factor pairs of <b>88</b></div>
+        <div class="row"><span class="pair"><span class="box"></span>×<span class="box"></span></span><span class="pair"><span class="box"></span>×<span class="box"></span></span><span class="pair"><span class="box"></span>×<span class="box"></span></span><span class="pair"><span class="box"></span>×<span class="box"></span></span></div>
+      </div>
+      <div class="card prime">
+        <div class="ask">Prime or composite? Circle one.</div>
+        <div class="row"><span class="pc"><span class="num">85</span><span class="words"><span class="word">prime</span><span class="word">composite</span></span></span><span class="pc"><span class="num">37</span><span class="words"><span class="word">prime</span><span class="word">composite</span></span></span><span class="pc"><span class="num">81</span><span class="words"><span class="word">prime</span><span class="word">composite</span></span></span></div>
+      </div>
+      <div class="card circle">
+        <div class="ask">Circle the multiples of <b>4</b></div>
+        <div class="row"><span class="num">80</span><span class="num">92</span><span class="num">22</span><span class="num">70</span><span class="num">56</span><span class="num">65</span><span class="num">66</span><span class="num">45</span></div>
+      </div>
+      <div class="card">
+        <div class="ask">Factor pairs of <b>68</b></div>
+        <div class="row"><span class="pair"><span class="box"></span>×<span class="box"></span></span><span class="pair"><span class="box"></span>×<span class="box"></span></span><span class="pair"><span class="box"></span>×<span class="box"></span></span></div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Owls · Math · page 161</footer>
+</div>
+</body>
+</html>
