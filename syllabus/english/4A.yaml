@@ -1,0 +1,115 @@
+subject: english
+level: 4A
+title: Letter teams, rhymes and sentence tracing
+# Public level name: syllabus/ladder.yaml (Kittens). Section public_name is what buyers see (CLAUDE.md §15).
+# Preview pages are built only from approved words (one or two per section).
+preview_pages: [12, 52, 115, 163]
+aims:
+  - Read words with letter teams (double letters, sh, ch, th, wh, ck, blends, ng/nk) and word families
+  - Hear and find rhyming words
+  - Trace short sentences made of words he knows, with a capital letter and a period
+  - "Add 50 new words (our choice: fewer words, learned well; the chart says ~225), each seen at least 3 times"
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [1, 2]
+vocab_target: 50   # one new word on pages 4–8 of each 10-page letter-team unit; source: ours
+rules:
+  min_exposures_per_word: 3
+sections:
+  # Letter Teams: ten 10-page units, one team (or one family of teams) each. Every unit has three parts:
+  # pages 1–3 meet the team in words he already knows (trace the team), pages 4–8 bring one new word a page
+  # with the team (`new_words_per_sheet: 1`, chosen by the planner from the unit's team lists in
+  # content/phonics/english.yaml), pages 9–10 write the team into empty boxes. Each page has 4 word rows.
+  # `team_rows`: rows per team on a page (4 = one team per page; 1 = four different teams; 2 = pairs).
+  - code: A
+    name: Familiar Letter Combinations
+    public_name: Letter Teams
+    pages: [1, 100]
+    sheet_types: [letter_team]
+    standards: [RF.1.3a, RF.1.2b, RF.1.3b, RF.K.3, L.1.1a]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      rows_per_sheet: 4
+      team_task: trace
+    parts:
+      # 1 Double letters at the end: ball, dress, egg
+      - { part: 1,  pages: [1, 3],    name: Double letters, rules: { teams: [ll, ss, ff, zz, gg], team_rows: 1 } }
+      - { part: 2,  pages: [4, 8],    rules: { teams: [ll, ss, ff, zz, gg], team_rows: 1, new_words_per_sheet: 1 } }
+      - { part: 3,  pages: [9, 10],   rules: { teams: [ll, ss, ff, zz, gg], team_rows: 1, team_task: fill } }
+      # 2 sh: fish, shoe
+      - { part: 4,  pages: [11, 13],  name: sh, rules: { teams: [sh], team_rows: 4 } }
+      - { part: 5,  pages: [14, 18],  rules: { teams: [sh], team_rows: 4, new_words_per_sheet: 1 } }
+      - { part: 6,  pages: [19, 20],  rules: { teams: [sh], team_rows: 4, team_task: fill } }
+      # 3 ch and tch: chair, peach, catch
+      - { part: 7,  pages: [21, 23],  name: ch, rules: { teams: [ch, tch], team_rows: 4 } }
+      - { part: 8,  pages: [24, 28],  rules: { teams: [ch, tch], team_rows: 4, new_words_per_sheet: 1 } }
+      - { part: 9,  pages: [29, 30],  rules: { teams: [ch, tch], team_rows: 4, team_task: fill } }
+      # 4 th and wh: teeth, thumb, whale
+      - { part: 10, pages: [31, 33],  name: th and wh, rules: { teams: [th, wh], team_rows: 4 } }
+      - { part: 11, pages: [34, 38],  rules: { teams: [th, wh], team_rows: 4, new_words_per_sheet: 1 } }
+      - { part: 12, pages: [39, 40],  rules: { teams: [th, wh], team_rows: 4, team_task: fill } }
+      # 5 ck: duck, sock
+      - { part: 13, pages: [41, 43],  name: ck, rules: { teams: [ck], team_rows: 4 } }
+      - { part: 14, pages: [44, 48],  rules: { teams: [ck], team_rows: 4, new_words_per_sheet: 1 } }
+      - { part: 15, pages: [49, 50],  rules: { teams: [ck], team_rows: 4, team_task: fill } }
+      # 6 l-blends at the start: clock, plane, sled
+      - { part: 16, pages: [51, 53],  name: l-blends, rules: { teams: [bl, cl, fl, gl, pl, sl], team_rows: 1 } }
+      - { part: 17, pages: [54, 58],  rules: { teams: [bl, cl, fl, gl, pl, sl], team_rows: 1, new_words_per_sheet: 1 } }
+      - { part: 18, pages: [59, 60],  rules: { teams: [bl, cl, fl, gl, pl, sl], team_rows: 1, team_task: fill } }
+      # 7 r-blends at the start: frog, drum, tree
+      - { part: 19, pages: [61, 63],  name: r-blends, rules: { teams: [br, cr, dr, fr, gr, pr, tr], team_rows: 1 } }
+      - { part: 20, pages: [64, 68],  rules: { teams: [br, cr, dr, fr, gr, pr, tr], team_rows: 1, new_words_per_sheet: 1 } }
+      - { part: 21, pages: [69, 70],  rules: { teams: [br, cr, dr, fr, gr, pr, tr], team_rows: 1, team_task: fill } }
+      # 8 s-blends at the start: snail, star, swing
+      - { part: 22, pages: [71, 73],  name: s-blends, rules: { teams: [sn, sp, spl, st, sw, sk, sm], team_rows: 1 } }
+      - { part: 23, pages: [74, 78],  rules: { teams: [sn, sp, spl, st, sw, sk, sm], team_rows: 1, new_words_per_sheet: 1 } }
+      - { part: 24, pages: [79, 80],  rules: { teams: [sn, sp, spl, st, sw, sk, sm], team_rows: 1, team_task: fill } }
+      # 9 teams at the end: sing, sink, hand, lamp, tent, nest, belt
+      - { part: 25, pages: [81, 83],  name: Teams at the end, rules: { teams: [ng, nk, nd, mp, nt, "-st", lt], team_rows: 1 } }
+      - { part: 26, pages: [84, 88],  rules: { teams: [ng, nk, nd, mp, nt, "-st", lt], team_rows: 1, new_words_per_sheet: 1 } }
+      - { part: 27, pages: [89, 90],  rules: { teams: [ng, nk, nd, mp, nt, "-st", lt], team_rows: 1, team_task: fill } }
+      # 10 word families: usually two families a page, two words each (cat, hat / sock, clock); a family whose new word still needs sightings may stand alone
+      - { part: 28, pages: [91, 93],  name: Word families, rules: { teams: &families ["-at", "-an", "-ig", "-ug", "-ed", "-ock", "-uck", "-ick", "-ell", "-ee", "-oon", "-ar", "-un", "-ing", "-ox", "-oat", "-ain", "-ook", "-ide", "-um", "-ap", "-ush", "-eep", "-ice", "-ose", "-ish", "-ake", "-ill", "-all", "-ass", "-amp", "-est", "-ate", "-each", "-ow", "-et", "-op", "-en", "-in"], team_rows: 2 } }
+      - { part: 29, pages: [94, 98],  rules: { teams: *families, team_rows: 2, new_words_per_sheet: 1 } }
+      - { part: 30, pages: [99, 100], rules: { teams: *families, team_rows: 2, team_task: fill } }
+
+  # Rhymes from the hand-checked rhyme groups (content/phonics/english.yaml), words he knows, 4 rows a page.
+  - code: B
+    name: Rhyming Skills
+    public_name: Rhyme Time
+    pages: [101, 140]
+    sheet_types: [rhyme_match]
+    standards: [RF.K.2a, RF.1.2, RF.K.3d]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      rows_per_sheet: 4
+    parts:
+      - { part: 1, pages: [101, 110], name: Rhyme pairs,        rules: { rhyme_task: pair, tips: { rhyme_match: ["Read each pair together and listen to the ends: cat, hat. Then make up a silly word that rhymes with them too!", "Say both words slowly, then say just the ending sound together. Let your child find the matching letters at the end."] } } }   # cat, hat
+      - { part: 2, pages: [111, 120], name: Which one rhymes,   rules: { rhyme_task: pick, choices: 2 } } # cat: hat or sun?
+      - { part: 3, pages: [121, 130], name: Which one rhymes 3, rules: { rhyme_task: pick, choices: 3 } }
+      - { part: 4, pages: [131, 140], name: Odd one out,        rules: { rhyme_task: odd_one, choices: 3 } }
+
+  # Sentences from the same frames as the level before (content/phrases/english.yaml), read, then traced
+  # in gray letters on writing lines. Each 10-page part adds one kind of sentence.
+  - code: C
+    name: Sentence Tracing
+    public_name: Trace a Sentence
+    pages: [141, 200]
+    sheet_types: [sentence_trace]
+    standards: [L.1.1a, RF.1.1a, L.K.2a, L.1.2b, RF.1.4a]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      phrase_kind: sentence
+      phrases_per_sheet: 2
+      max_sentence_words: 6
+      level_word_first: true   # the first sentence on each page uses a Kittens word (ship, pretzel, shark) when one fits
+    parts:
+      - { part: 1, pages: [141, 150], name: This is,  rules: { phrase_groups: [this_is] } }      # This is a cat.
+      - { part: 2, pages: [151, 160], name: Colors,   rules: { phrase_groups: [colors] } }       # The banana is yellow.
+      - { part: 3, pages: [161, 170], name: Who can,  rules: { phrase_groups: [can] } }          # The dog can run.
+      - { part: 4, pages: [171, 180], name: My day,   rules: { phrase_groups: [daily, describe] } }   # I eat a peach. The sun is hot.
+      - { part: 5, pages: [181, 190], name: Longer,   rules: { phrase_groups: [more_can, more_daily] } }  # The big dog can run.
+      - { part: 6, pages: [191, 200], name: All kinds, rules: { phrase_groups: [this_is, colors, can, daily, describe, more_can, more_daily] } }

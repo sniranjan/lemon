@@ -1,0 +1,134 @@
+{
+  "id": "MA-M3-B-001",
+  "subject": "math",
+  "level": "M3",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 31,
+  "variant": 1,
+  "seed": 6314076182977052367,
+  "title": "Times tables",
+  "parent_tip": "Count by the table together first. 4 times 2 means four 2s: say 2, 4, 6, 8.",
+  "items": [
+    {
+      "kind": "track",
+      "step": 2,
+      "cells": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "blanks": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "layout": "skip"
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "*",
+      "b": 2,
+      "c": 2,
+      "blank": "c",
+      "layout": "skip",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "*",
+      "b": 2,
+      "c": 14,
+      "blank": "c",
+      "layout": "skip",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 8,
+      "op": "*",
+      "b": 2,
+      "c": 16,
+      "blank": "c",
+      "layout": "skip",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 5,
+      "op": "*",
+      "b": 2,
+      "c": 10,
+      "blank": "c",
+      "layout": "skip",
+      "n": 4
+    },
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "*",
+      "b": 2,
+      "c": 8,
+      "blank": "c",
+      "layout": "skip",
+      "n": 5
+    },
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "*",
+      "b": 6,
+      "c": 12,
+      "blank": "c",
+      "layout": "skip",
+      "n": 6
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "*",
+      "b": 2,
+      "c": 20,
+      "blank": "c",
+      "layout": "skip",
+      "n": 7
+    },
+    {
+      "kind": "fact",
+      "a": 9,
+      "op": "*",
+      "b": 2,
+      "c": 18,
+      "blank": "c",
+      "layout": "skip",
+      "n": 8
+    }
+  ],
+  "answer_key": [
+    6,
+    8,
+    12,
+    14,
+    2,
+    14,
+    16,
+    10,
+    8,
+    12,
+    20,
+    18
+  ],
+  "new_words": [],
+  "review_words": []
+}

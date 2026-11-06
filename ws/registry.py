@@ -18,11 +18,14 @@ CATALOGUE: frozenset[str] = frozenset({
     "colouring", "line_path",
     "count_and_say", "count_and_point", "number_read", "dots_to_number",
     "number_sequence", "number_trace", "number_write", "next_number", "add_facts",
+    "letter_team", "rhyme_match", "sentence_trace",
     "fact_drill",
     # Cubs math (M2): place value, skip counting, column adding/taking away, story problems
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
     "passage_questions", "word_builder", "full_sentence_answer",
+    # Foxes math (M3): fractions on a number line, times/sharing story problems
+    "fraction_line", "story_problem",
 })
 
 

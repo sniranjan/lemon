@@ -1,0 +1,172 @@
+{
+  "id": "MA-M3-E-004",
+  "subject": "math",
+  "level": "M3",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 144,
+  "variant": 1,
+  "seed": 15052314005544309076,
+  "title": "Sharing",
+  "parent_tip": "Sharing is the times table backwards. For 20 shared by 4, ask: 4 times what is 20?",
+  "items": [
+    {
+      "kind": "family",
+      "numbers": [
+        10,
+        3,
+        30
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 10,
+          "op": "*",
+          "b": 3,
+          "c": 30,
+          "blank": "c",
+          "n": 1
+        },
+        {
+          "kind": "fact",
+          "a": 3,
+          "op": "*",
+          "b": 10,
+          "c": 30,
+          "blank": "c",
+          "n": 2
+        },
+        {
+          "kind": "fact",
+          "a": 30,
+          "op": "/",
+          "b": 3,
+          "c": 10,
+          "blank": "c",
+          "n": 3
+        },
+        {
+          "kind": "fact",
+          "a": 30,
+          "op": "/",
+          "b": 10,
+          "c": 3,
+          "blank": "c",
+          "n": 4
+        }
+      ],
+      "layout": "families"
+    },
+    {
+      "kind": "family",
+      "numbers": [
+        3,
+        5,
+        15
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 3,
+          "op": "*",
+          "b": 5,
+          "c": 15,
+          "blank": "c",
+          "n": 5
+        },
+        {
+          "kind": "fact",
+          "a": 5,
+          "op": "*",
+          "b": 3,
+          "c": 15,
+          "blank": "c",
+          "n": 6
+        },
+        {
+          "kind": "fact",
+          "a": 15,
+          "op": "/",
+          "b": 5,
+          "c": 3,
+          "blank": "c",
+          "n": 7
+        },
+        {
+          "kind": "fact",
+          "a": 15,
+          "op": "/",
+          "b": 3,
+          "c": 5,
+          "blank": "c",
+          "n": 8
+        }
+      ],
+      "layout": "families"
+    },
+    {
+      "kind": "family",
+      "numbers": [
+        5,
+        6,
+        30
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 5,
+          "op": "*",
+          "b": 6,
+          "c": 30,
+          "blank": "c",
+          "n": 9
+        },
+        {
+          "kind": "fact",
+          "a": 6,
+          "op": "*",
+          "b": 5,
+          "c": 30,
+          "blank": "c",
+          "n": 10
+        },
+        {
+          "kind": "fact",
+          "a": 30,
+          "op": "/",
+          "b": 6,
+          "c": 5,
+          "blank": "c",
+          "n": 11
+        },
+        {
+          "kind": "fact",
+          "a": 30,
+          "op": "/",
+          "b": 5,
+          "c": 6,
+          "blank": "c",
+          "n": 12
+        }
+      ],
+      "layout": "families"
+    }
+  ],
+  "answer_key": [
+    30,
+    30,
+    10,
+    3,
+    15,
+    15,
+    3,
+    5,
+    30,
+    30,
+    5,
+    6
+  ],
+  "new_words": [],
+  "review_words": []
+}

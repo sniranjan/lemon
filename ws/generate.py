@@ -7,8 +7,9 @@ import random
 from pathlib import Path
 
 from . import registry
-from .content import phrases, sounds, tips, vocab
+from .content import phonics, phrases, sounds, tips, vocab
 from .models import Level, Sheet
+from .phonics import plan_phonics
 from .plan import LevelPlan, plan_letters, plan_new_words, plan_phrases, plan_review
 from .passages import plan_passages
 from .render import write_html
@@ -26,6 +27,7 @@ def build_plan(level: Level, variant: int = 1) -> LevelPlan:
     if level.subject == "english":
         bank = vocab("english")
         plan = plan_review(level, plan_new_words(level, bank, variant), bank)
+        plan = plan_phonics(level, bank, plan, phonics("english"))
         return plan_phrases(level, bank, plan, phrases("english"))
     return LevelPlan(subject=level.subject, level=level.level, variant=variant)
 
