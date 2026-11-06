@@ -1,0 +1,102 @@
+subject: english
+level: 3A
+title: Spelling patterns, word endings, syllables and copying sentences
+# Public level name: syllabus/ladder.yaml (Puppies, age 5, content grade 1–2). Section public_name is what
+# buyers see (CLAUDE.md §15). The hand-checked tables (pattern words, endings, syllables, sight words)
+# are in content/phonics/english.yaml; copy sentences are the `sentences:` of the level's words.
+preview_pages: [3, 85, 113, 143]
+aims:
+  - Read and spell long vowels (final e, vowel teams), r-controlled vowels, digraphs and diphthongs
+  - Add and take off the endings -s, -es, -ing and -ed
+  - Clap and split two- and three-syllable words
+  - Copy short sentences with a capital letter and an end mark
+  - "Add 70 new words (our choice, as in the levels before: fewer words, learned well; the chart says ~181), each seen at least 3 times"
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [1, 2]
+vocab_target: 70   # one per page in section A; source: ours
+rules:
+  min_exposures_per_word: 3
+  # Review words come only from these earlier levels (plus this level's own words), so other
+  # strands' words joining the word bank never change these sheets.
+  known_levels: [7A, 6A]
+sections:
+  # Each 10-page part brings one spelling pattern family. Every page has one new word with the
+  # pattern, plus three known words with the same family. On the first 5 pages of a part the whole
+  # word is shown next to the gaps; then only the picture and the pattern bank help.
+  - code: A
+    name: Spelling Patterns
+    public_name: Word Patterns
+    pages: [1, 70]
+    sheet_types: [pattern_words]
+    sct_minutes_per_page: [1, 2]
+    standards: [RF.1.3a, RF.1.3b, RF.1.3c, RF.2.3a, RF.2.3b, L.1.2d, L.2.2d]
+    source: ours
+    rules:
+      new_words_per_sheet: 1
+      cards_per_sheet: 4
+      show_word_pages: 5
+    parts:
+      - { part: 1, pages: [1, 10],  name: Letter pairs,    rules: { patterns: [sh, ch, th, wh] } }
+      - { part: 2, pages: [11, 20], name: Magic e,         rules: { patterns: [a_e, i_e, o_e, u_e] } }
+      - { part: 3, pages: [21, 30], name: ai and ay,       rules: { patterns: [ai, ay] } }
+      - { part: 4, pages: [31, 40], name: ee and ea,       rules: { patterns: [ee, ea] } }
+      - { part: 5, pages: [41, 50], name: oa ow igh,       rules: { patterns: [oa, ow_o, igh] } }
+      - { part: 6, pages: [51, 60], name: Bossy r,         rules: { patterns: [ar, or, er, ir, ur] } }
+      - { part: 7, pages: [61, 70], name: ou ow oi oy oo,  rules: { patterns: [ou, ow_ou, oi, oy, oo] } }
+
+  # Endings on known words: add the tail (parts 1–3), then take it off again to find the root word.
+  - code: B
+    name: Take the Tail
+    public_name: Word Endings
+    pages: [71, 110]
+    sheet_types: [word_endings]
+    sct_minutes_per_page: [1, 2]
+    standards: [RF.1.3f, RF.2.3d, L.1.4c]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      cards_per_sheet: 4
+    parts:
+      - { part: 1, pages: [71, 80],   name: One and more,  rules: { endings: [plural], ending_mode: add } }
+      - { part: 2, pages: [81, 90],   name: Adding ing,    rules: { endings: [ing], ending_mode: add } }
+      - { part: 3, pages: [91, 100],  name: Adding ed,     rules: { endings: [ed], ending_mode: add } }
+      - { part: 4, pages: [101, 110], name: Take it off,   rules: { endings: [plural, ing, ed], ending_mode: take_off } }
+
+  # Clap each word, then write one syllable in each box; the last part counts the claps instead.
+  - code: C
+    name: Syllables
+    public_name: Clap the Parts
+    pages: [111, 140]
+    sheet_types: [syllable_split]
+    sct_minutes_per_page: [1, 2]
+    standards: [RF.1.3d, RF.1.3e, RF.2.3c]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      cards_per_sheet: 4
+    parts:
+      - { part: 1, pages: [111, 120], name: Two words in one, rules: { syllable_kinds: [compound], syllable_mode: boxes } }
+      - { part: 2, pages: [121, 130], name: Split the middle, rules: { syllable_kinds: [closed], syllable_mode: boxes } }
+      - { part: 3, pages: [131, 140], name: How many claps,   rules: { syllable_kinds: [one, open, three], syllable_mode: count } }
+
+  # Read a sentence about a picture, then copy it on the writing lines: capital letter first, end mark
+  # last. Sentences grow longer across the parts; part 3 brings asking sentences.
+  - code: D
+    name: Sentence Copying
+    public_name: Copy a Sentence
+    pages: [141, 200]
+    sheet_types: [sentence_copy]
+    sct_minutes_per_page: [1.5, 2.5]
+    standards: [RF.1.1a, RF.1.4, L.1.1a, L.1.1j, L.1.2b]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      sentences_per_sheet: 2
+    parts:
+      - { part: 1, pages: [141, 150], name: Short sentences,  rules: { sentence_words: [3, 5], end_marks: ["."] } }
+      - { part: 2, pages: [151, 160], name: Longer sentences, rules: { sentence_words: [4, 6], end_marks: ["."] } }
+      - { part: 3, pages: [161, 170], name: Asking sentences, rules: { sentence_words: [3, 7], end_marks: ["?"] } }
+      - { part: 4, pages: [171, 180], rules: { sentence_words: [5, 7], end_marks: ["."] } }
+      - { part: 5, pages: [181, 190], rules: { sentence_words: [4, 8], end_marks: [".", "?"] } }
+      - { part: 6, pages: [191, 200], rules: { sentence_words: [5, 8], end_marks: [".", "?"] } }

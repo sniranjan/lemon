@@ -11,7 +11,7 @@ import re
 import pytest
 
 from ws import generate as gen
-from ws.content import phrases, stories, vocab, vocab_by_word
+from ws.content import phonics, phrases, stories, vocab, vocab_by_word
 from ws.phrases import fillings, ownable, render, word_list
 from ws.sheet_types.word_story import frame_options, story_sentences
 from ws.syllabus import load_level
@@ -115,6 +115,27 @@ def all_texts() -> list[tuple[str, str]]:
     return out
 
 
+def puppies_texts() -> list[tuple[str, str]]:
+    """Every copy sentence Puppies Reading can print (all of its words' sentences), and the planned ones."""
+    out = [(f"3A:{e.word}", s) for e in vocab() if e.level == "3A" for s in e.sentences]
+    plan = gen.build_plan(load_level("english", "3A"))
+    out += [(f"3A p{page}", c["text"]) for page, p in plan.pages.items() for c in p.extra.get("cards", []) if "text" in c]
+    return out
+
+
+def with_puppies_facts(data: dict) -> dict:
+    """The phrases file's hand-checked lists plus the Puppies words' facts (content/phonics/english.yaml `sense`)."""
+    extra = phonics()["sense"]
+    merged = dict(data)
+    merged["picture_colors"] = {**data["picture_colors"], **extra["picture_colors"]}
+    merged["can_do"] = {k: list(data["can_do"].get(k, [])) + list(extra["can_do"].get(k, []))
+                        for k in set(data["can_do"]) | set(extra["can_do"])}
+    for name in ("eatable", "plural"):
+        merged[name] = word_list(data, name) + list(extra[name])
+    merged["ownable"] = word_list(data, "ownable") + list(extra["ownable"])
+    return merged
+
+
 def problems(text: str, data: dict, free: bool = False) -> list[str]:
     """Rule breaks in one text. `free` (card sentences, written by hand and read to the child, so not
     built from frames): only the known-bad list and picture colors."""
@@ -171,6 +192,21 @@ def test_scan_every_chicks_and_ducklings_sentence():
     assert len(texts) > 1000
     bad = [(where, text, p) for where, text in texts for p in problems(text, data, free=where.startswith("card:"))]
     assert not bad, "\n".join(f"{w}: {t!r} ({p})" for w, t, p in bad[:40])
+
+
+def test_scan_every_puppies_copy_sentence():
+    """Puppies Reading copy sentences are hand-written and copied, not read to the child: full rules."""
+    data = with_puppies_facts(phrases())
+    texts = puppies_texts()
+    assert len(texts) >= 140
+    bad = [(where, text, p) for where, text in texts for p in problems(text, data)]
+    assert not bad, "\n".join(f"{w}: {t!r} ({p})" for w, t, p in bad[:40])
+
+
+@pytest.mark.parametrize("text", ["I have a shark.", "I eat a lime.", "The shark can run.", "The toad can fly.",
+                                  "I have a jeans.", "Mom has a blue purse."])
+def test_scan_catches_bad_puppies_sentences(text):
+    assert problems(text, with_puppies_facts(phrases()))
 
 
 @pytest.mark.parametrize("text", sorted(KNOWN_BAD))

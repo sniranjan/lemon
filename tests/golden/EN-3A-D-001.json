@@ -1,0 +1,35 @@
+{
+  "id": "EN-3A-D-001",
+  "subject": "english",
+  "level": "3A",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "sentence_copy",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 13561696341712261298,
+  "title": "Read it and copy it",
+  "parent_tip": "Let your child read the sentence to you first. Then copy it one word at a time, looking back at each word.",
+  "items": [
+    {
+      "kind": "copy",
+      "word": "tooth",
+      "picture": "tooth",
+      "text": "This is my tooth.",
+      "rows": 2
+    },
+    {
+      "kind": "copy",
+      "word": "chalk",
+      "picture": "chalk",
+      "text": "I draw with chalk.",
+      "rows": 2
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "tooth",
+    "chalk"
+  ]
+}

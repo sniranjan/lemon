@@ -1,0 +1,68 @@
+{
+  "id": "EN-3A-B-031",
+  "subject": "english",
+  "level": "3A",
+  "section": "B",
+  "part": 4,
+  "sheet_type": "word_endings",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 9759682696431843924,
+  "title": "Take off the ending",
+  "parent_tip": "Act out each word: jump, then jumping! Point to the ending as you say it. Your child writes the whole new word.",
+  "items": [
+    {
+      "kind": "ending",
+      "mode": "take_off",
+      "word": "catch",
+      "picture": "catch",
+      "ending": "ing",
+      "form": "catching",
+      "tail": "ing",
+      "copies": 1
+    },
+    {
+      "kind": "ending",
+      "mode": "take_off",
+      "word": "harp",
+      "picture": "harp",
+      "ending": "plural",
+      "form": "harps",
+      "tail": "s",
+      "copies": 2
+    },
+    {
+      "kind": "ending",
+      "mode": "take_off",
+      "word": "smile",
+      "picture": "smile",
+      "ending": "ed",
+      "form": "smiled",
+      "tail": "ed",
+      "copies": 1
+    },
+    {
+      "kind": "ending",
+      "mode": "take_off",
+      "word": "swim",
+      "picture": "swim",
+      "ending": "ing",
+      "form": "swimming",
+      "tail": "ing",
+      "copies": 1
+    }
+  ],
+  "answer_key": [
+    "catch",
+    "harp",
+    "smile",
+    "swim"
+  ],
+  "new_words": [],
+  "review_words": [
+    "catch",
+    "harp",
+    "smile",
+    "swim"
+  ]
+}

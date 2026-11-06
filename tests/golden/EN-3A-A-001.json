@@ -1,0 +1,162 @@
+{
+  "id": "EN-3A-A-001",
+  "subject": "english",
+  "level": "3A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "pattern_words",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 12103085795875435313,
+  "title": "Read it, then fill it in",
+  "parent_tip": "Say the letter team at the top together. Then name each picture, stretch the word slowly, and let your child write the missing letters.",
+  "items": [
+    {
+      "kind": "bank",
+      "patterns": [
+        "sh",
+        "ch",
+        "th",
+        "wh"
+      ]
+    },
+    {
+      "kind": "pattern",
+      "word": "shark",
+      "picture": "shark",
+      "pattern": "sh",
+      "letters": [
+        [
+          "s",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "r",
+          false
+        ],
+        [
+          "k",
+          false
+        ]
+      ],
+      "show_word": true
+    },
+    {
+      "kind": "pattern",
+      "word": "chair",
+      "picture": "chair",
+      "pattern": "ch",
+      "letters": [
+        [
+          "c",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "i",
+          false
+        ],
+        [
+          "r",
+          false
+        ]
+      ],
+      "show_word": true
+    },
+    {
+      "kind": "pattern",
+      "word": "mouth",
+      "picture": "mouth",
+      "pattern": "th",
+      "letters": [
+        [
+          "m",
+          false
+        ],
+        [
+          "o",
+          false
+        ],
+        [
+          "u",
+          false
+        ],
+        [
+          "t",
+          true
+        ],
+        [
+          "h",
+          true
+        ]
+      ],
+      "show_word": true
+    },
+    {
+      "kind": "pattern",
+      "word": "whistle",
+      "picture": "whistle",
+      "pattern": "wh",
+      "letters": [
+        [
+          "w",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "i",
+          false
+        ],
+        [
+          "s",
+          false
+        ],
+        [
+          "t",
+          false
+        ],
+        [
+          "l",
+          false
+        ],
+        [
+          "e",
+          false
+        ]
+      ],
+      "show_word": true
+    }
+  ],
+  "answer_key": [
+    "shark",
+    "chair",
+    "mouth",
+    "whistle"
+  ],
+  "new_words": [
+    "shark"
+  ],
+  "review_words": [
+    "chair",
+    "mouth",
+    "whistle"
+  ]
+}

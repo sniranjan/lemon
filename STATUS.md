@@ -30,6 +30,16 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
   (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
   Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
+- **Puppies Reading (EN 3A, 200 pages)** (2026-11-06): `syllabus/english/3A.yaml`, A Word Patterns 1–70 (7 parts:
+  letter pairs, magic e, ai/ay, ee/ea, oa/ow/igh, bossy r, ou/ow/oi/oy/oo) · B Word Endings 71–110 (plurals, -ing, -ed,
+  take it off) · C Clap the Parts 111–140 (compound, closed, count 1–3) · D Copy a Sentence 141–200 (3–8 words, asking
+  sentences in part 3), with `standards:` (RF.1.3a–f, RF.2.3a–d, L.1.4c, RF.1.1a, L.1.1a/j, L.1.2b/d, L.2.2d).
+  New sheet types `pattern_words`, `word_endings`, `syllable_split`, `sentence_copy`; planner `plan_spelling`
+  (rule `known_levels: [7A, 6A]` pins the review pool, so other strands' words never change these pages);
+  hand-checked tables in `content/phonics/english.yaml`. 70 new words (one a page in A; batches 3A-1 40 words and
+  3A-2 30 words, `syllabus/drafts/3A-words-batch*.md`, approved under user delegation), 70 pictures
+  (`draw_3A_batch1.py`, `draw_3A_batch2.py`). Verify 0 errors, every word seen ≥ 3 times; booklets per section +
+  `puppies-reading-level.pdf` (202 pages) and `-answers.pdf` (A–C). Free preview pages 3, 85, 113, 143.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,

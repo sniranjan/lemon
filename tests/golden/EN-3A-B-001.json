@@ -1,0 +1,68 @@
+{
+  "id": "EN-3A-B-001",
+  "subject": "english",
+  "level": "3A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "word_endings",
+  "page_number": 71,
+  "variant": 1,
+  "seed": 5895450485893610621,
+  "title": "Add the ending",
+  "parent_tip": "Cover the ending with a finger to find the root word, then lift it. Let your child say and write the answer.",
+  "items": [
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "cube",
+      "picture": "cube",
+      "ending": "plural",
+      "form": "cubes",
+      "tail": "s",
+      "copies": 2
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "bus",
+      "picture": "bus",
+      "ending": "plural",
+      "form": "buses",
+      "tail": "es",
+      "copies": 2
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "flute",
+      "picture": "flute",
+      "ending": "plural",
+      "form": "flutes",
+      "tail": "s",
+      "copies": 2
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "jay",
+      "picture": "jay",
+      "ending": "plural",
+      "form": "jays",
+      "tail": "s",
+      "copies": 2
+    }
+  ],
+  "answer_key": [
+    "cubes",
+    "buses",
+    "flutes",
+    "jays"
+  ],
+  "new_words": [],
+  "review_words": [
+    "cube",
+    "bus",
+    "flute",
+    "jay"
+  ]
+}

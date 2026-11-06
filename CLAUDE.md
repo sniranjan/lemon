@@ -269,6 +269,10 @@ test.** Nothing else in the code should change.
 | `skip_count` | MA M2-C | Tracks counting by 5s/10s/100s from a multiple of the step; first two boxes shown, gaps to write |
 | `column_arithmetic` | MA M2-D…H | Vertical 2-/3-digit add/take away (or 3 addends); dashed carry/borrow boxes only on regrouping parts; verify recomputes answers and regrouping per part (`regroup: none/all/mixed`, `max_regroups`) |
 | `math_story` | MA M2-H | Tiny story problems from `content/math/stories.yaml` with a picture and "☐ ◯ ☐ = ☐" to fill |
+| `pattern_words` | EN 3A-A (Puppies Reading) | Pattern bank on top (sh ch th wh / a_e i_e … / ai ay …), 4 cards: picture + word with the pattern's letters as boxes to fill (the whole word is shown too on the first `show_word_pages` of a part). New word first; review words from `known_levels` + earlier 3A words with the same pattern family (`content/phonics/english.yaml`). Verify: the pattern really occurs at the gaps. Answer key = the words |
+| `word_endings` | EN 3A-B | `add`: "jump + ing = ☐" (plurals show the picture twice), `take_off`: "jumping − ing = ☐". Forms from the hand-checked `endings` table; verify re-derives each from the spelling rules (es, drop e, double) unless listed under `irregular` |
+| `syllable_split` | EN 3A-C | Picture + word; `boxes`: one box per clap to write each syllable, `count`: circle 1, 2 or 3 claps. Splits from the hand-checked `syllables` table (join back into the word, a vowel in each) |
+| `sentence_copy` | EN 3A-D | 2 cards: picture + a sentence (the word's own `sentences:`) + 2 handwriting rows. Verify: known words, sight words and their regular endings only; part's length and end marks (`.` / `?`); sentence-sense scan in `tests/test_sentence_sense.py` |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the

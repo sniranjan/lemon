@@ -1,0 +1,457 @@
+# Puppies Reading (3A) hand-checked phonics tables. Every list here was checked by hand; `ws verify`
+# re-checks each entry (the pattern letters really occur, endings follow the spelling rules, syllables
+# join back into the word and each has a vowel). Only words in these tables appear on Word Patterns,
+# Word Endings and Clap the Parts pages, so words other strands add to the word bank never change them.
+
+# Spelling patterns. `letters` is what the child writes in the gaps; a code ending in `_e` is a magic-e
+# pattern (vowel, one consonant, final e: g-a-t-e). Two codes may share letters with different sounds
+# (ow in snow, ow in cow).
+patterns:
+  sh:    { letters: sh,  sound: "sh as in ship" }
+  ch:    { letters: ch,  sound: "ch as in chin" }
+  th:    { letters: th,  sound: "th as in thumb" }
+  wh:    { letters: wh,  sound: "wh as in whale" }
+  a_e:   { letters: a_e, sound: "long a, magic e" }
+  i_e:   { letters: i_e, sound: "long i, magic e" }
+  o_e:   { letters: o_e, sound: "long o, magic e" }
+  u_e:   { letters: u_e, sound: "long u, magic e" }
+  ai:    { letters: ai,  sound: "long a" }
+  ay:    { letters: ay,  sound: "long a" }
+  ee:    { letters: ee,  sound: "long e" }
+  ea:    { letters: ea,  sound: "long e" }
+  oa:    { letters: oa,  sound: "long o" }
+  ow_o:  { letters: ow,  sound: "long o as in snow" }
+  igh:   { letters: igh, sound: "long i" }
+  ar:    { letters: ar,  sound: "ar as in car" }
+  or:    { letters: or,  sound: "or as in corn" }
+  er:    { letters: er,  sound: "er as in tiger" }
+  ir:    { letters: ir,  sound: "ir as in bird" }
+  ur:    { letters: ur,  sound: "ur as in nurse" }
+  ou:    { letters: ou,  sound: "ou as in house" }
+  ow_ou: { letters: ow,  sound: "ow as in cow" }
+  oi:    { letters: oi,  sound: "oi as in coin" }
+  oy:    { letters: oy,  sound: "oy as in boy" }
+  oo:    { letters: oo,  sound: "oo as in moon" }
+
+# word -> the patterns it shows (by sound, checked by ear: "flower" has ow as in cow, "snow" as in snow).
+# Puppies words first, then known Chicks/Ducklings words that are reviewed on Word Patterns pages.
+pattern_words:
+  # Puppies words (3A)
+  shark: [sh, ar]
+  wheel: [wh, ee]
+  beach: [ch, ea]
+  couch: [ch, ou]
+  tooth: [th, oo]
+  shower: [sh, ow_ou, er]
+  chalk: [ch]
+  cheetah: [ch, ee]
+  throne: [th, o_e]
+  wheat: [wh, ea]
+  gate: [a_e]
+  snake: [a_e]
+  cape: [a_e]
+  vase: [a_e]
+  hive: [i_e]
+  lime: [i_e]
+  rope: [o_e]
+  bone: [o_e]
+  cube: [u_e]
+  flute: [u_e]
+  tail: [ai]
+  nail: [ai]
+  mail: [ai]
+  sail: [ai]
+  braid: [ai]
+  chain: [ch, ai]
+  hay: [ay]
+  tray: [ay]
+  clay: [ay]
+  jay: [ay]
+  seed: [ee]
+  feet: [ee]
+  peel: [ee]
+  eagle: [ea]
+  bean: [ea]
+  beak: [ea]
+  seat: [ea]
+  tea: [ea]
+  leash: [ea, sh]
+  jeans: [ea]
+  road: [oa]
+  toad: [oa]
+  loaf: [oa]
+  goal: [oa]
+  oatmeal: [oa, ea]
+  crow: [ow_o]
+  bow: [ow_o]
+  light: [igh]
+  night: [igh]
+  rowboat: [ow_o, oa]
+  barn: [ar]
+  jar: [ar]
+  yarn: [ar]
+  card: [ar]
+  harp: [ar]
+  horn: [or]
+  fort: [or]
+  girl: [ir]
+  nurse: [ur]
+  purse: [ur]
+  house: [ou]
+  coin: [oi]
+  oil: [oi]
+  boy: [oy]
+  brownie: [ow_ou]
+  pool: [oo]
+  roof: [oo]
+  hoop: [oo]
+  goose: [oo]
+  zoo: [oo]
+  # known words (Chicks and Ducklings)
+  sheep: [sh, ee]
+  fish: [sh]
+  shoe: [sh]
+  shirt: [sh, ir]
+  shell: [sh]
+  brush: [sh]
+  splash: [sh]
+  shovel: [sh]
+  shorts: [sh, or]
+  chair: [ch]
+  cheese: [ch, ee]
+  chin: [ch]
+  chick: [ch]
+  peach: [ch, ea]
+  cherry: [ch, er]
+  teeth: [th, ee]
+  mouth: [th, ou]
+  thumb: [th]
+  bathtub: [th]
+  whale: [wh, a_e]
+  whistle: [wh]
+  cake: [a_e]
+  plate: [a_e]
+  face: [a_e]
+  plane: [a_e]
+  wave: [a_e]
+  kite: [i_e]
+  bike: [i_e]
+  slide: [i_e]
+  smile: [i_e]
+  ride: [i_e]
+  nose: [o_e]
+  hose: [o_e]
+  rain: [ai]
+  snail: [ai]
+  paint: [ai]
+  train: [ai]
+  crayon: [ay]
+  tree: [ee]
+  bee: [ee]
+  knee: [ee]
+  leaf: [ea]
+  peas: [ea]
+  seal: [ea]
+  boat: [oa]
+  goat: [oa]
+  coat: [oa]
+  soap: [oa]
+  toast: [oa]
+  snow: [ow_o]
+  bowl: [ow_o]
+  pillow: [ow_o]
+  window: [ow_o]
+  elbow: [ow_o]
+  car: [ar]
+  star: [ar]
+  cart: [ar]
+  arm: [ar]
+  scarf: [ar]
+  horse: [or]
+  fork: [or]
+  corn: [or]
+  acorn: [or]
+  tiger: [er]
+  sister: [er]
+  brother: [th, er]
+  feather: [th, er]
+  sweater: [er]
+  digger: [er]
+  bird: [ir]
+  skirt: [ir]
+  turtle: [ur]
+  mouse: [ou]
+  cloud: [ou]
+  cow: [ow_ou]
+  owl: [ow_ou]
+  crown: [ow_ou]
+  flower: [ow_ou, er]
+  towel: [ow_ou]
+  moon: [oo]
+  spoon: [oo]
+  broom: [oo]
+  boots: [oo]
+
+# Word endings: base word -> its forms, written out by hand. Verify re-derives each one from the
+# spelling rules (add s / es; drop the final e; double the last letter after one short vowel) and
+# reports any difference that isn't listed under `irregular`. Only countable nouns have `plural`
+# (the picture is shown twice), only actions have `ing` / `ed`, and only regular pasts are listed.
+endings:
+  # nouns (one and more)
+  cat: { plural: cats }
+  dog: { plural: dogs }
+  cup: { plural: cups }
+  sock: { plural: socks }
+  ball: { plural: balls }
+  kite: { plural: kites }
+  duck: { plural: ducks }
+  bird: { plural: birds }
+  cow: { plural: cows }
+  pig: { plural: pigs }
+  bike: { plural: bikes }
+  boat: { plural: boats }
+  car: { plural: cars }
+  tree: { plural: trees }
+  star: { plural: stars }
+  egg: { plural: eggs }
+  apple: { plural: apples }
+  bus: { plural: buses }
+  box: { plural: boxes }
+  fox: { plural: foxes }
+  dress: { plural: dresses }
+  brush: { plural: brushes }
+  peach: { plural: peaches }
+  shark: { plural: sharks }
+  wheel: { plural: wheels }
+  beach: { plural: beaches }
+  couch: { plural: couches }
+  gate: { plural: gates }
+  snake: { plural: snakes }
+  cape: { plural: capes }
+  vase: { plural: vases }
+  hive: { plural: hives }
+  lime: { plural: limes }
+  rope: { plural: ropes }
+  bone: { plural: bones }
+  cube: { plural: cubes }
+  flute: { plural: flutes }
+  tail: { plural: tails }
+  nail: { plural: nails }
+  sail: { plural: sails }
+  braid: { plural: braids }
+  chain: { plural: chains }
+  tray: { plural: trays }
+  jay: { plural: jays }
+  seed: { plural: seeds }
+  bean: { plural: beans }
+  beak: { plural: beaks }
+  seat: { plural: seats }
+  leash: { plural: leashes }
+  eagle: { plural: eagles }
+  toad: { plural: toads }
+  goal: { plural: goals }
+  crow: { plural: crows }
+  bow: { plural: bows }
+  light: { plural: lights }
+  rowboat: { plural: rowboats }
+  barn: { plural: barns }
+  jar: { plural: jars }
+  card: { plural: cards }
+  harp: { plural: harps }
+  horn: { plural: horns }
+  fort: { plural: forts }
+  girl: { plural: girls }
+  nurse: { plural: nurses }
+  purse: { plural: purses }
+  house: { plural: houses }
+  coin: { plural: coins }
+  boy: { plural: boys }
+  brownie: { plural: brownies }
+  pool: { plural: pools }
+  hoop: { plural: hoops }
+  # actions: every one takes -ing; -ed only where the past is regular (not ran, ate, sat, swam ...)
+  run: { ing: running }
+  eat: { ing: eating }
+  sleep: { ing: sleeping }
+  sit: { ing: sitting }
+  swim: { ing: swimming }
+  drink: { ing: drinking }
+  ride: { ing: riding }
+  blow: { ing: blowing }
+  build: { ing: building }
+  sing: { ing: singing }
+  dig: { ing: digging }
+  read: { ing: reading }
+  draw: { ing: drawing }
+  hide: { ing: hiding }
+  throw: { ing: throwing }
+  catch: { ing: catching }
+  jump: { ing: jumping, ed: jumped }
+  wash: { ing: washing, ed: washed }
+  clap: { ing: clapping, ed: clapped }
+  smile: { ing: smiling, ed: smiled }
+  pour: { ing: pouring, ed: poured }
+  cook: { ing: cooking, ed: cooked }
+  roll: { ing: rolling, ed: rolled }
+  paint: { ing: painting, ed: painted }
+  yawn: { ing: yawning, ed: yawned }
+  hop: { ing: hopping, ed: hopped }
+  dance: { ing: dancing, ed: danced }
+  nap: { ing: napping, ed: napped }
+  walk: { ing: walking, ed: walked }
+  kick: { ing: kicking, ed: kicked }
+  wave: { ing: waving, ed: waved }
+  climb: { ing: climbing, ed: climbed }
+  hug: { ing: hugging, ed: hugged }
+  push: { ing: pushing, ed: pushed }
+  crawl: { ing: crawling, ed: crawled }
+  splash: { ing: splashing, ed: splashed }
+
+# Forms the spelling rules get wrong, with the right one (none are used yet; e.g. leaf: { plural: leaves }).
+irregular: {}
+
+# Syllables, split by hand the way they are clapped (dictionary splits for closed syllables:
+# bas-ket, kit-ten; `open`: the first syllable ends in its long vowel or vowel team: ti-ger, ba-by, show-er). `kinds` groups them for
+# the Clap the Parts parts.
+syllables:
+  compound:
+    rainbow: [rain, bow]
+    snowman: [snow, man]
+    popcorn: [pop, corn]
+    bathtub: [bath, tub]
+    pancake: [pan, cake]
+    seesaw: [see, saw]
+    grandma: [grand, ma]
+    grandpa: [grand, pa]
+    rowboat: [row, boat]
+    oatmeal: [oat, meal]
+  closed:
+    basket: [bas, ket]
+    muffin: [muf, fin]
+    kitten: [kit, ten]
+    mitten: [mit, ten]
+    puppet: [pup, pet]
+    pumpkin: [pump, kin]
+    cactus: [cac, tus]
+    dolphin: [dol, phin]
+    hippo: [hip, po]
+    panda: [pan, da]
+    tractor: [trac, tor]
+    puppy: [pup, py]
+    pillow: [pil, low]
+    window: [win, dow]
+    sandal: [san, dal]
+    monkey: [mon, key]
+    donkey: [don, key]
+    parrot: [par, rot]
+    carrot: [car, rot]
+    blanket: [blan, ket]
+    pizza: [piz, za]
+    sister: [sis, ter]
+  open:
+    tiger: [ti, ger]
+    zebra: [ze, bra]
+    robot: [ro, bot]
+    baby: [ba, by]
+    acorn: [a, corn]
+    bagel: [ba, gel]
+    yogurt: [yo, gurt]
+    eagle: [ea, gle]
+    cheetah: [chee, tah]
+    shower: [show, er]
+  three:
+    potato: [po, ta, to]
+    tomato: [to, ma, to]
+    banana: [ba, na, na]
+    octopus: [oc, to, pus]
+    ladybug: [la, dy, bug]
+    pajamas: [pa, ja, mas]
+    family: [fam, i, ly]
+    koala: [ko, a, la]
+  one:
+    shark: [shark]
+    wheel: [wheel]
+    beach: [beach]
+    couch: [couch]
+    tooth: [tooth]
+    chalk: [chalk]
+    throne: [throne]
+    wheat: [wheat]
+    gate: [gate]
+    snake: [snake]
+    cape: [cape]
+    vase: [vase]
+    hive: [hive]
+    lime: [lime]
+    rope: [rope]
+    bone: [bone]
+    cube: [cube]
+    flute: [flute]
+    tail: [tail]
+    nail: [nail]
+    sail: [sail]
+    braid: [braid]
+    chain: [chain]
+    tray: [tray]
+    seed: [seed]
+    peel: [peel]
+    bean: [bean]
+    beak: [beak]
+    seat: [seat]
+    leash: [leash]
+    road: [road]
+    toad: [toad]
+    loaf: [loaf]
+    goal: [goal]
+    crow: [crow]
+    light: [light]
+    barn: [barn]
+    jar: [jar]
+    yarn: [yarn]
+    harp: [harp]
+    horn: [horn]
+    fort: [fort]
+    girl: [girl]
+    nurse: [nurse]
+    purse: [purse]
+    house: [house]
+    coin: [coin]
+    boy: [boy]
+    pool: [pool]
+    roof: [roof]
+    hoop: [hoop]
+    goose: [goose]
+    tea: [tea]
+    hay: [hay]
+    clay: [clay]
+    jay: [jay]
+    feet: [feet]
+    bow: [bow]
+    mail: [mail]
+    oil: [oil]
+    night: [night]
+    jeans: [jeans]
+    zoo: [zoo]
+
+# Sight words allowed in copy sentences besides the word bank and the regular endings of its words
+# (common first- and second-grade sight words).
+sight_words: [a, an, and, the, I, is, it, in, "on", at, to, my, we, you, he, she, they, me, his, her, its,
+              are, was, has, have, can, see, look, like, go, goes, up, down, by, with, for, of, from, here,
+              there, this, that, these, what, where, who, not, "no", do, does, did, get, put, will, all,
+              so, too, one, two, three, four, five, into, out, under, over, our, your, him, us, be, am,
+              said, make, made, help, want, play, please, open, find, fly, long, hold, grow, live, turn, hear,
+              some, like, love]
+
+# Sentence-sense facts about the Puppies words, added to the hand-checked lists in
+# content/phrases/english.yaml when tests/test_sentence_sense.py scans the copy sentences.
+sense:
+  picture_colors: { cape: red, lime: green, jay: blue, peel: yellow, bean: green, jeans: blue, bow: pink,
+                    barn: red, yarn: blue, purse: red }
+  ownable: [cape, coin, hoop, jeans]
+  eatable: [oatmeal, brownie]
+  plural: [jeans, feet]
+  can_do:
+    swim: [shark, goose]
+    run: [cheetah]
+    hop: [toad]
+    fly: [bird, bee, owl, parrot, duck, jay, eagle, crow]

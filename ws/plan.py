@@ -246,3 +246,137 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         plan.pages[page] = PagePlan(page=page, new_words=list(entry.new_words), review_words=review,
                                     extra={"phrases": phrases})
     return plan
+
+
+def plan_spelling(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data: dict) -> LevelPlan:
+    """Plan Puppies Reading (3A) pages from the hand-checked tables in content/phonics/english.yaml.
+
+    Only levels with a `known_levels` rule use it. Each page's cards come from one table, chosen by
+    the page's rules: `patterns` (Word Patterns), `endings` (Word Endings), `syllable_kinds` (Clap the
+    Parts) or `sentence_words` (Copy a Sentence). A card's word must be pictured and known on that page:
+    a word of the `known_levels`, or one of this level's words introduced on an earlier page (the
+    page's own new word is always its first card). Among the rest the planner prefers variety on the
+    page (different patterns, endings, spelling rules, syllable kinds), then this level's words, then
+    words seen least, then word-bank order; the page's seed breaks ties, so a variant differs.
+    Copy sentences are the `sentences:` of this level's words, each used as rarely as possible.
+    """
+    import random
+
+    from .phonics import pattern_span, sentence_tokens, spelling_rule, syllable_table, tail
+    from .syllabus import page_seed
+
+    known_levels = level.rules.get("known_levels")
+    if not known_levels:
+        return plan
+    entries = {w.word: w for w in bank}
+    order = {w.word: i for i, w in enumerate(bank)}
+    earlier = {w.word for w in bank if w.level in known_levels}
+    mine = [w.word for w in bank if w.level == level.level]
+    intro = {w: page for page, p in plan.pages.items() for w in p.new_words}
+    seen: Counter[str] = Counter()
+    text_uses: Counter[str] = Counter()
+    syllables = syllable_table(data)
+    used_sets: set[frozenset] = set()   # word sets of earlier pages: no page repeats another
+
+    def usable(w: str, page: int) -> bool:
+        e = entries.get(w)
+        return bool(e and e.picture) and (w in earlier or (w in intro and intro[w] < page))
+
+    def weight(w: str) -> tuple:
+        # this level's words count as seen two fewer times, so they come back first
+        return ((seen[w] - 2) if w in intro else seen[w], order.get(w, 0))
+
+    for page in range(1, level.pages + 1):
+        spec = resolve_page(level, page)
+        rules = spec.rules
+        kind = next((k for k in ("patterns", "endings", "syllable_kinds", "sentence_words") if k in rules), None)
+        if kind is None:
+            continue
+        entry = plan.pages.get(page)
+        if rules.get("new_words_per_sheet", 0) and entry is None:
+            continue   # the word bank can't introduce this page's new word yet
+        new = list(entry.new_words) if entry else []
+        rng = random.Random(page_seed(level.subject, level.level, spec.section, page, plan.variant))
+        cards: list[dict] = []
+
+        def pick(options: list, key):
+            options = options[:]
+            rng.shuffle(options)
+            word = (lambda o: o) if options and isinstance(options[0], str) else (lambda o: o[0])
+            n = rules.get("cards_per_sheet") or rules["sentences_per_sheet"]
+            if len(cards) == n - 1:   # the last card must not make a page seen before
+                taken = frozenset(c["word"] for c in cards)
+                fresh = [o for o in options if taken | {word(o)} not in used_sets]
+                options = fresh or options
+            return min(options, key=key) if options else None
+
+        def need(n: int, what: str):
+            if n:
+                return
+            raise ValueError(f"{level.level} page {page}: not enough known words for {what}")
+
+        if kind == "patterns":
+            codes = rules["patterns"]
+            covered: set[str] = set()
+            for w in new:
+                code = next((c for c in data["pattern_words"].get(w, []) if c in codes), None)
+                if code is None:
+                    raise ValueError(f"{level.level} page {page}: new word {w!r} has none of the patterns {codes}")
+                cards.append({"word": w, "picture": entries[w].picture, "pattern": code})
+                covered.add(code)
+            pool = [(w, c) for w, cs in data["pattern_words"].items() for c in cs
+                    if c in codes and usable(w, page) and pattern_span(w, c, data)]
+            while len(cards) < rules["cards_per_sheet"]:
+                taken = {c["word"] for c in cards}
+                options = [o for o in pool if o[0] not in taken]
+                need(len(options), f"the patterns {codes}")
+                w, code = pick(options, lambda o: (o[1] in covered, *weight(o[0])))
+                cards.append({"word": w, "picture": entries[w].picture, "pattern": code})
+                covered.add(code)
+        elif kind == "endings":
+            wanted = rules["endings"]
+            pool = [(b, e, f) for b, forms in data["endings"].items() for e, f in (forms or {}).items()
+                    if e in wanted and usable(b, page)]
+            rules_on_page: set[tuple] = set()
+            ends_on_page: list[str] = []
+            while len(cards) < rules["cards_per_sheet"]:
+                taken = {c["word"] for c in cards}
+                options = [o for o in pool if o[0] not in taken]
+                need(len(options), f"the endings {wanted}")
+                b, e, f = pick(options, lambda o: (ends_on_page.count(o[1]),
+                                                   (o[1], spelling_rule(*o)) in rules_on_page, *weight(o[0])))
+                cards.append({"word": b, "picture": entries[b].picture, "ending": e, "form": f,
+                              "tail": tail(b, e, f), "rule": spelling_rule(b, e, f)})
+                rules_on_page.add((e, spelling_rule(b, e, f)))
+                ends_on_page.append(e)
+        elif kind == "syllable_kinds":
+            kinds = rules["syllable_kinds"]
+            pool = [w for w, (k, _) in syllables.items() if k in kinds and usable(w, page)]
+            kinds_on_page: list[str] = []
+            while len(cards) < rules["cards_per_sheet"]:
+                taken = {c["word"] for c in cards}
+                options = [w for w in pool if w not in taken]
+                need(len(options), f"the syllable kinds {kinds}")
+                w = pick(options, lambda w: (kinds_on_page.count(syllables[w][0]), *weight(w)))
+                k, syls = syllables[w]
+                cards.append({"word": w, "picture": entries[w].picture, "syllables": list(syls)})
+                kinds_on_page.append(k)
+        else:
+            lo, hi = rules["sentence_words"]
+            marks = rules.get("end_marks", ["."])
+            pool = [(w, s) for w in mine if usable(w, page) for s in entries[w].sentences
+                    if lo <= len(sentence_tokens(s)) <= hi and s[-1:] in marks]
+            while len(cards) < rules["sentences_per_sheet"]:
+                taken = {c["word"] for c in cards}
+                options = [o for o in pool if o[0] not in taken]
+                need(len(options), f"copy sentences of {lo}–{hi} words ending {marks}")
+                w, s = pick(options, lambda o: (text_uses[o[1]], *weight(o[0])))
+                cards.append({"word": w, "picture": entries[w].picture, "text": s})
+                text_uses[s] += 1
+        words = [c["word"] for c in cards]
+        used_sets.add(frozenset(words))
+        for w in words:
+            seen[w] += 1
+        review = [w for w in dict.fromkeys(words) if w not in new]
+        plan.pages[page] = PagePlan(page=page, new_words=new, review_words=review, extra={"cards": cards})
+    return plan
