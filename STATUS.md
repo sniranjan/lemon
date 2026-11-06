@@ -52,7 +52,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Cubs output unchanged); `fact_drill` gained × and ÷ (`skip`, `arrays`, `pairs`, × ÷ `families`) with Puppies output
   byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
   section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
-  ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
+  ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171: with Foxes Reading built, `ws preview foxes` now builds `out/previews/foxes.pdf` locally (10 pages; not uploaded).
 - **Foxes Reading (R3, our own level, grade 3 reading, 200 pages)** (2026-11-06): `syllabus/english/R3.yaml`:
   A Why They Did It 1–50 (RL.3.3) · B Word Builders 51–90 (un-, re-, -ful, -less, then compound words; L.3.4b,
   RF.3.3a; compounds are the L.2.4d on-ramp) · C Fables and Their Lessons 91–130 (RL.3.2) · D Why Did They? 131–170
