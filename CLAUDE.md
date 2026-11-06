@@ -285,6 +285,16 @@ decrease on left→right lanes (y on top→bottom lanes), so zigzags and corners
 but never back, and top→bottom lanes have no flat leftward strokes. It also checks that every lane and disc stays clear of the page edge and of
 the other lanes on the sheet.
 
+**Phrases and sentences** (`phrase_card`, `sentence_recite`): every phrase must be true to its
+pictures, using hand-checked tables in `content/phrases/english.yaml`: `picture_colors` (the color a
+picture is drawn in), `sizes` (nouns that really are big / little; the noun's picture is then drawn
+large or small, item field `picture_size`), `temperatures` (things that really are hot / cold) and
+`can_do` (which animals can do an action). Describing words (big, little, hot, cold) have no picture
+of their own (`picture` left out in the word bank). An animal doing an action ("The mouse can eat.")
+shows the animal only, since the action pictures show a child; a person doing it shows both. A
+page's new word is used in one of its phrases, and its picture is shown there. Word Hunt grids
+(6A-A, `review_from_levels`) take the previous level's words seen least in that level's plan first.
+
 **"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
 page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.
 The main cards stay at 2 new words. Pages 1–3 have no strip, because no word is old enough yet.
@@ -336,6 +346,9 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
   at the words seen least.
 - `word_picture_sentence`: the sentence is read *to* the child, so it is exempt from the
   known-words check; it must contain the card's word and stay within the section's `max_sentence_words` (6 in 7A).
+- `phrase_card` / `sentence_recite`: every token is known (or in `allowed_words`); the phrase
+  re-renders from its frame; colors, sizes, temperatures and animal actions match the tables;
+  the pictures and `picture_size` are the ones the phrase calls for; new words are used and pictured.
 - `letter_trace`: letters requested exist in the trace font.
 
 **Exposure checks (per section / level run)**

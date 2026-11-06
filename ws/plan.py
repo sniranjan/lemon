@@ -81,6 +81,19 @@ def plan_new_words(level: Level, bank: Sequence[VocabEntry], variant: int = 1) -
     return plan
 
 
+def level_exposures(subject: str, levels: Sequence[str], bank: Sequence[VocabEntry]) -> Counter[str]:
+    """How many pages of each earlier level's plan (variant 1) show each word: new card, strip,
+    grid or story. Built fresh, so the earlier level's own plan objects are never touched."""
+    from .syllabus import load_level
+
+    counts: Counter[str] = Counter()
+    for code in levels:
+        earlier = load_level(subject, code)
+        plan = plan_review(earlier, plan_new_words(earlier, bank), bank)
+        counts.update(w for p in plan.pages.values() for w in p.new_words + p.review_words)
+    return counts
+
+
 def plan_review(level: Level, plan: LevelPlan, bank: Sequence[VocabEntry] = ()) -> LevelPlan:
     """Plan review sections (grids and stories) on top of the word-introduction plan.
 
@@ -88,6 +101,8 @@ def plan_review(level: Level, plan: LevelPlan, bank: Sequence[VocabEntry] = ()) 
     `review_from_sections` (default: every earlier section), choosing the words seen least
     so far (new + strip + earlier reviews), oldest first on ties. That is what lets every
     word reach `min_exposures_per_word` even when the strip missed it.
+    `review_from_levels` pages (6A-A Word Hunt) review an earlier level's words instead, least
+    seen in that level's own plan first, then word-bank order.
     Grid pages take `words_per_sheet` words; story pages one word per sentence, with the
     sentence count cycling through `sentences_per_story` = [lo, hi] (2, 3, 4, 3, 2, ...).
     """
@@ -101,6 +116,7 @@ def plan_review(level: Level, plan: LevelPlan, bank: Sequence[VocabEntry] = ()) 
             seen[w] = seen.get(w, 0) + 1
 
     story_index = 0
+    prior: Counter[str] | None = None   # sightings in the reviewed earlier level(s), for `review_from_levels`
     for page in range(1, level.pages + 1):
         spec = resolve_page(level, page)
         rules = spec.rules
@@ -119,9 +135,11 @@ def plan_review(level: Level, plan: LevelPlan, bank: Sequence[VocabEntry] = ()) 
         from_levels = rules.get("review_from_levels")
         if from_levels:
             earlier = [w.word for w in bank if w.level in from_levels]
+            if prior is None:
+                prior = level_exposures(level.subject, from_levels, bank)
             for i, w in enumerate(earlier):
                 intro.setdefault(w, (i - len(earlier), ""))   # before page 1, in bank order
-                seen.setdefault(w, 0)
+                seen.setdefault(w, prior.get(w, 0))           # least seen in the earlier level first
             pool = earlier
         else:
             pool = [w for w, (p, sec) in intro.items() if p < page and (sources is None or sec in sources)]
@@ -149,7 +167,7 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
     """
     import random
 
-    from .phrases import fillings, pictures_for, render
+    from .phrases import fillings, picture_size, pictures_for, render
     from .syllabus import level_rank, page_seed
 
     rank = level_rank(level.level)
@@ -191,6 +209,9 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
                 words = list(fill.values())
                 text = render(frame, fill, known, data)
                 return (not any(w in todo for w in words) if todo else False,
+                        # the new word's own picture is on its page ("I can hop", not "The bunny can hop.")
+                        any(w in todo and this_level[w].picture and w not in pictures_for(fill, data)
+                            for w in words),
                         -sum(1 for w in words if w in level_new and seen[w] < min_seen and w not in on_page),
                         text_uses[text],
                         any(w in on_page for w in words),
@@ -205,8 +226,11 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
             group, frame, fill = min(shuffled, key=score)
             words = list(fill.values())
             text = render(frame, fill, known, data)
-            phrases.append({"frame": frame, "slots": dict(fill), "text": text,
-                            "words": words, "pictures": pictures_for(fill)})
+            phrase = {"frame": frame, "slots": dict(fill), "text": text,
+                      "words": words, "pictures": pictures_for(fill, data)}
+            if picture_size(fill):
+                phrase["picture_size"] = picture_size(fill)
+            phrases.append(phrase)
             text_uses[text] += 1
             frame_uses[frame] += 1
             frames_on_page.add(frame)

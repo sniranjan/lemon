@@ -1,4 +1,4 @@
-# Status — where we are (updated 2026-11-05)
+# Status — where we are (updated 2026-11-06)
 
 Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksheets`.
 
@@ -21,6 +21,12 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   | 1 | 1–40 | 1–20 | 2026-11-03 | fa361bd |
   | 2 | 41–80 (incl. 6 color words, drawn as crayons) | 21–40 | 2026-11-03 | 1ba6f36 |
   | 3 | 81–120 (incl. 8 action words) | 41–60 | 2026-11-05 | baf79f9 |
+
+  Ducklings Reading (EN 6A) words, `level: 6A`, one new word a page (target 80):
+  | Batch | Words | 6A pages | Approved | Commit |
+  |---|---|---|---|---|
+  | 6A-1 | 40 (12 actions, 5 body, 3 clothes, 5 toys, 5 home, big/little/hot/cold, 6 animals); 36 pictures (`draw_batch4.py`) | 71–100, 141–150 | 2026-11-06 | this branch |
+  | 6A-2 | 40, draft `syllabus/drafts/6A-words-batch2.md` | 151–190 | waiting | |
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): EN 7A pages 1–60,
   101–112, 141–150, plus samples of MA 6A and ZI.
 - `ws verify`: 382 sheets, **0 errors**, 2 expected warnings (color-word pages; the word bank
@@ -30,9 +36,12 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
   picture colors and who-can-do-what in `content/phrases/english.yaml`; planner `plan_phrases`
-  (and `review_from_levels` for 6A-A). Built from the 120 approved words only: pages 1–70,
-  101–140, 191–200 (verify 0 errors, 3 expected warnings). 80 new-word pages (71–100, 141–190) wait for
-  approved 6A words.
+  (and `review_from_levels` for 6A-A).
+  Word batch 1 (2026-11-06): pages 1–150 and 191–200 build (160 of 200; verify 0 errors, 3 expected
+  warnings). big/little/hot/cold use the `sizes` / `temperatures` tables and a `describe` sentence group;
+  Word Hunt takes the least-seen Chicks words first; animal action sentences show the animal only.
+  Pages 151–190 wait for batch 2. The live free preview (pages 3, 33, 103, 131) is now stale for
+  pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
 
 ## Next steps
 1. **Batch 4** (words 121–160, 7A pages 61–80): draft a table (word, category, sentence) and
@@ -41,9 +50,10 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 2. Batch 5 (words 161–200, pages 81–100). That completes 7A-A's word bank.
 3. Then generate all of EN 7A, MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
 4. `ws vocab stats` is a stub (exits 2); implement it when needed.
-5. **6A word batch 1**: draft in `syllabus/drafts/6A-words-batch1.md` (40 words, 80-word target, open
-   questions). Wait for the user's OK; then add words with `level: 6A`, draw pictures, and add `can_do`/slot
-   entries in `content/phrases/english.yaml` so each new word fits a frame (the planner errors if it doesn't).
+5. **6A word batch 2**: draft in `syllabus/drafts/6A-words-batch2.md`. Wait for the user's OK; then add
+   words with `level: 6A`, draw pictures (new `draw_batch5.py`), and add `can_do` / `picture_colors` /
+   `sizes` / `temperatures` / `plural` entries in `content/phrases/english.yaml` so each new word fits a
+   sentence frame (the planner errors if it doesn't).
 
 ## Open questions for the user
 - What should a 7A repeat (`--variant 2`) change? Today it keeps the same words and strip and only

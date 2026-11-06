@@ -193,7 +193,7 @@ class PageSpec(_Strict):
 
 class VocabEntry(_Strict):
     word: str
-    picture: str
+    picture: str | None = None   # None: a describing word (big, hot) shown through its noun's picture
     category: str
     level: str
     sentences: list[str] = Field(default_factory=list)

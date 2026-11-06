@@ -1,0 +1,191 @@
+{
+  "id": "EN-6A-C-041",
+  "subject": "english",
+  "level": "6A",
+  "section": "C",
+  "part": 5,
+  "sheet_type": "sentence_recite",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 13735478250960937017,
+  "title": "Say it three times",
+  "parent_tip": "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "The dog is big.",
+      "runs": [
+        [
+          "The",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "dog",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "is",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "big",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "The {sized} is {size}.",
+      "slots": {
+        "sized": "dog",
+        "size": "big"
+      },
+      "word": "dog",
+      "words": [
+        "dog",
+        "big"
+      ],
+      "pictures": [
+        "dog"
+      ],
+      "picture_size": "big",
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "I see a little mouse.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "see",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "little",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "mouse",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I see {a} {size} {sized}.",
+      "slots": {
+        "size": "little",
+        "sized": "mouse"
+      },
+      "word": "mouse",
+      "words": [
+        "little",
+        "mouse"
+      ],
+      "pictures": [
+        "mouse"
+      ],
+      "picture_size": "little",
+      "times": 3
+    },
+    {
+      "kind": "sentence",
+      "text": "The mouse can eat.",
+      "runs": [
+        [
+          "The",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "mouse",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "can",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "eat",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "The {animal} can {action}.",
+      "slots": {
+        "animal": "mouse",
+        "action": "eat"
+      },
+      "word": "mouse",
+      "words": [
+        "mouse",
+        "eat"
+      ],
+      "pictures": [
+        "mouse"
+      ],
+      "times": 3
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "big"
+  ],
+  "review_words": [
+    "dog",
+    "eat",
+    "little",
+    "mouse"
+  ]
+}

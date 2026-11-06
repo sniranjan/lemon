@@ -191,7 +191,7 @@ def pictures_missing(subject: str = typer.Option(...), level: str = typer.Option
     from .content import licenses, picture_path, vocab
 
     lic = licenses()
-    missing = [w for w in vocab(subject) if w.level == level
+    missing = [w for w in vocab(subject) if w.level == level and w.picture is not None
                and (not picture_path(w.picture).exists() or w.picture not in lic)]
     for w in missing:
         what = "no SVG" if not picture_path(w.picture).exists() else "no licence entry"

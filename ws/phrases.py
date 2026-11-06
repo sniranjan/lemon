@@ -15,7 +15,10 @@ from .models import VocabEntry
 
 SLOT = re.compile(r"\{(\w+)\}")
 TOKEN = re.compile(r"[A-Za-z']+")
-PICTURELESS_KINDS = {"color"}   # slot kinds shown as a word only (the noun's picture carries the color)
+# Describing slot kinds, shown as a word only: the noun's picture carries them. Each names the
+# hand-checked table in content/phrases/english.yaml that says which nouns it is true of.
+PICTURELESS_KINDS = {"color", "size", "temp"}
+DESCRIBED_BY = {"size": "sizes", "temp": "temperatures"}   # adjective -> [nouns it fits]
 
 
 def slot_words(kind: str, data: dict, known: dict[str, VocabEntry]) -> list[str]:
@@ -26,6 +29,9 @@ def slot_words(kind: str, data: dict, known: dict[str, VocabEntry]) -> list[str]
     if spec.get("colored"):
         colors = data["picture_colors"]
         words = [w for w in words if w in colors] if (cats or extra) else [w for w in known if w in colors]
+    if spec.get("described_by"):
+        fits = {n for nouns in data[spec["described_by"]].values() for n in nouns}
+        words = [w for w in words if w in fits] if (cats or extra) else [w for w in known if w in fits]
     return words
 
 
@@ -71,9 +77,12 @@ def fillings(frame: str, data: dict, known: dict[str, VocabEntry]) -> Iterable[d
 def is_true(filling: dict[str, str], frame: str, data: dict) -> bool:
     """The phrase says something true about its pictures."""
     colors = data["picture_colors"]
+    noun = next((w for k, w in filling.items() if k not in PICTURELESS_KINDS), None)
     if "color" in filling:
-        noun = next((w for k, w in filling.items() if k != "color"), None)
         if noun is None or colors.get(noun) != filling["color"]:
+            return False
+    for kind, table in DESCRIBED_BY.items():   # "a big dog", "The soup is hot."
+        if kind in filling and (noun is None or noun not in data.get(table, {}).get(filling[kind], [])):
             return False
     if "action" in filling:
         subject_kind = next((k for k in filling if data["slots"].get(k, {}).get("subject")), None)
@@ -85,8 +94,18 @@ def is_true(filling: dict[str, str], frame: str, data: dict) -> bool:
     return True
 
 
-def pictures_for(filling: dict[str, str]) -> list[str]:
+def pictures_for(filling: dict[str, str], data: dict) -> list[str]:
+    """The pictures shown with a phrase: its nouns and actions, at most two. An animal doing an
+    action ("The mouse can eat.") shows the animal only: the action pictures show a child."""
+    subject = next((w for k, w in filling.items() if data["slots"].get(k, {}).get("subject")), None)
+    if subject is not None:
+        return [subject]
     return [w for k, w in filling.items() if k not in PICTURELESS_KINDS][:2]
+
+
+def picture_size(filling: dict[str, str]) -> str | None:
+    """big / little: the noun's picture is drawn large or small to match."""
+    return filling.get("size")
 
 
 def check_phrase(item: dict, data: dict, known: dict[str, VocabEntry], max_words: int | None) -> list[str]:
@@ -104,4 +123,9 @@ def check_phrase(item: dict, data: dict, known: dict[str, VocabEntry], max_words
         problems.append(f"doesn't match its pictures: {item['text']!r}")
     if render(item["frame"], filling, known, data) != item["text"]:
         problems.append(f"text doesn't match its frame: {item['text']!r}")
+    in_frame_order = {k: filling[k] for k in _slots(item["frame"]) if k in filling}   # the manifest sorts keys
+    if item["pictures"] != pictures_for(in_frame_order, data):
+        problems.append(f"pictures {item['pictures']} don't match the phrase: {item['text']!r}")
+    if item.get("picture_size") != picture_size(filling):
+        problems.append(f"picture should be drawn {picture_size(filling) or 'normal size'}: {item['text']!r}")
     return problems

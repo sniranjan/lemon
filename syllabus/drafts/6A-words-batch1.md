@@ -1,7 +1,23 @@
 # Ducklings reading (6A): word batch 1, draft for approval
 
-**Status: not approved.** Nothing below has been drawn, added to the word bank, or used on a sheet.
-Every 6A sheet generated so far uses only the 120 approved 7A words.
+**Status: approved 2026-11-06** (all five recommendations), and built. What changed:
+- **Target: 80 new words**, one a page on 71–100 and 141–190. These 40 are in `content/vocab/english.yaml`
+  (`level: 6A`, this order): words 1–30 are new on pages 71–100, words 31–40 on pages 141–150.
+- **36 new pictures** (the table said 34; it is 40 − 4 = 36), original, in `assets/pictures/`, drawn by
+  `scripts/pictures/draw_batch4.py`. Jacket is drawn green, not red (the red coat is already a picture).
+  "Hide" peeks over a bush instead of a box, so it can't be confused with "box". "Nap" is on a sofa
+  under a sun; "sleep" stays in bed under the moon.
+- **"and"** stays an allowed function word.
+- **big / little / hot / cold** added with the hand-checked `sizes` and `temperatures` tables in
+  `content/phrases/english.yaml`; the noun's picture is drawn large or small. They arrive in Say a
+  Sentence, so they use a new sentence group `describe` ("The dog is big.", "I see a little mouse.",
+  "The sun is hot.", "I like cold milk.") on pages 141–200.
+- **Word Hunt** grids now take the Chicks words seen least in the Chicks plan first.
+- **Animal action sentences** show the animal only.
+- Ducklings Reading now builds pages 1–150 and 191–200 (160 of 200). Batch 2
+  (`6A-words-batch2.md`) is for pages 151–190.
+
+The rest of this file is the draft as approved.
 
 ## Where things stand
 
