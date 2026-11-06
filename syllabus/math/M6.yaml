@@ -360,7 +360,7 @@ sections:
           tips:
             equation_solve:
               - "The steps are the same with decimals and fractions: take away to undo +, divide to undo ×. Line up decimal points."
-              - "For 2/3 x = 4, divide 4 by 2/3: keep, change, flip, so 4 × 3/2 = 6."
+              - "For 2/3 x = 4, divide 4 by 2/3: 4 × 3/2 = 6. Then check: 2/3 of 6 is 4."
             rational_story:
               - "Use a letter for the number you don't know, write an equation like x + 14 = 52, then solve it."
               - "Ask your child what the unknown is first. Then write the equation on the line before working it out."

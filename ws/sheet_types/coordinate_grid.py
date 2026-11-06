@@ -66,7 +66,7 @@ class CoordinateGrid(SheetType):
         n_read, n_plot, n_dist = r["read"], r["plot"], r.get("distance", 0)
         used: set[tuple[int, int]] = set()
 
-        def point(q: int) -> tuple[int, int]:
+        def point(q: int, read: bool = False) -> tuple[int, int]:
             while True:
                 if q == 0:
                     v = rng.choice([k for k in range(-R, R + 1) if k])
@@ -75,6 +75,8 @@ class CoordinateGrid(SheetType):
                     sx, sy = {1: (1, 1), 2: (-1, 1), 3: (-1, -1), 4: (1, -1)}[q]
                     x, y = sx * rng.randint(1, R), sy * rng.randint(1, R)
                 near = any(abs(x - a) + abs(y - b) < 2 for a, b in used)
+                if read and x == -1:
+                    continue   # its letter would sit on the y-axis labels
                 if (x, y) not in used and not near:
                     used.add((x, y))
                     return x, y
@@ -84,7 +86,7 @@ class CoordinateGrid(SheetType):
         quads = [1, 2, 3, 4]
         rng.shuffle(quads)
         for k in range(n_read):
-            x, y = point(quads[k % 4] if k < 4 else rng.randint(1, 4))
+            x, y = point(quads[k % 4] if k < 4 else rng.randint(1, 4), read=True)
             px, py = pixel(x, y, R)
             items.append({"kind": "read", "label": next(letters), "x": x, "y": y, "px": px, "py": py})
         rng.shuffle(quads)
@@ -142,6 +144,8 @@ class CoordinateGrid(SheetType):
             if [i.get("px"), i.get("py")] != list(pixel(i["x"], i["y"], R)):
                 issues.append(error(sheet, f"{label} is drawn at ({i.get('px')}, {i.get('py')}) px, "
                                            f"not at its coordinates {pixel(i['x'], i['y'], R)}"))
+            if i["kind"] == "read" and i["x"] == -1:
+                issues.append(error(sheet, f"{label}: a point to read at x = −1 hides its letter in the axis labels"))
             if i["kind"] == "read" and quadrant(i["x"], i["y"]) == 0:
                 issues.append(error(sheet, f"{label}: points to read sit inside a quadrant, not on an axis"))
             for j in points:
