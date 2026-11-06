@@ -1,0 +1,63 @@
+# Set 2, post 6. NOT RENDERED YET: needs out/previews/pandas.pdf, penguins.pdf, lions.pdf and whales.pdf.
+# Before rendering, look at the previews (pdftoppm -r 30) and set the page numbers below to good inner pages
+# (page 1 is the preview cover, the last page is the closing page). Then fix the page descriptions in `alt`.
+# Slide 1 is the four mascots only (no pages), so it renders without the previews.
+# Render: uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-06-ages-9-12
+layout: announce
+background: coral
+headline: "Ages 9 to 12"
+subline: "big ideas, equations, algebra"
+chip: "Grade 6 to grade 9 work"
+pages: []
+mascots: [pandas, penguins, lions, whales]
+sticker: ""
+slides:
+  - background: coral
+    headline: "Pandas"
+    subline: "inference, ratios, percents"
+    chip: "Age 9 · Grade 6 work"
+    pages: [{level: pandas, page: 3}, {level: pandas, page: 2}, {level: pandas, page: 6}]
+    mascots: [pandas]
+  - background: coral
+    headline: "Penguins"
+    subline: "arguments, negative numbers"
+    chip: "Age 10 · Grade 7 work"
+    pages: [{level: penguins, page: 3}, {level: penguins, page: 2}, {level: penguins, page: 6}]
+    mascots: [penguins]
+  - background: coral
+    headline: "Lions"
+    subline: "close reading, linear equations"
+    chip: "Age 11 · Grade 8 work"
+    pages: [{level: lions, page: 3}, {level: lions, page: 2}, {level: lions, page: 6}]
+    mascots: [lions]
+  - background: coral
+    headline: "Whales"
+    subline: "author's craft, quadratics"
+    chip: "Age 12 · Grade 9 work"
+    pages: [{level: whales, page: 3}, {level: whales, page: 2}, {level: whales, page: 6}]
+    mascots: [whales]
+    sticker: "Try it free"
+    sticker_sub: "link in bio ↑"
+
+caption: |
+  Ages 9 to 12: Pandas, Penguins, Lions and Whales 🐼🐧🦁🐳
+
+  The top of the climb. Pandas reads for central ideas and works with ratios and percents. Penguins weighs arguments and solves two-step equations. Lions reads closely and graphs linear equations. Whales studies author's craft and takes on polynomials and quadratics.
+
+  Still one printable page at a time, still about two grades ahead of school.
+
+  Swipe through, then print a free preview of any level at the link in bio.
+tags: "#printableworksheets #middleschool #homelearning #homeschooling #readingcomprehension #prealgebra #algebra #mathpractice #printables #paperlessons"
+alt: >-
+  Slide 1: Coral background titled "Ages 9 to 12" with the handwritten line "big ideas, equations, algebra" and a
+  label "Grade 6 to grade 9 work". Four round badges show a panda, a penguin, a lion and a whale, each with its name
+  underneath.
+
+  Slide 2: "Pandas", "inference, ratios, percents", "Age 9, Grade 6 work". Three real pages from Pandas.
+
+  Slide 3: "Penguins", "arguments, negative numbers", "Age 10, Grade 7 work". Three real pages from Penguins.
+
+  Slide 4: "Lions", "close reading, linear equations", "Age 11, Grade 8 work". Three real pages from Lions.
+
+  Slide 5: "Whales", "author's craft, quadratics", "Age 12, Grade 9 work". Three real pages from Whales. A sticker
+  says "Try it free, link in bio".

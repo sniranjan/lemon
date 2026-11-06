@@ -75,7 +75,9 @@ caption: |
   Free previews at the link in bio.
 tags: "#printableworksheets #kidsworksheets ... #paperlessons"   # 8–15 hashtags
 alt: >-
-  Slide 1: ... Slide 2: ...
+  Slide 1: ...
+
+  Slide 2: ...                # one paragraph per slide starting "Slide N:" → each carousel image gets its own alt text
 ```
 
 With pages, mascots peek over the pages; with only mascots/pictures they sit in big round discs; with neither,
