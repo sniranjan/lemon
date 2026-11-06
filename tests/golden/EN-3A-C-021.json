@@ -1,0 +1,87 @@
+{
+  "id": "EN-3A-C-021",
+  "subject": "english",
+  "level": "3A",
+  "section": "C",
+  "part": 3,
+  "sheet_type": "syllable_split",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 8833964453288191826,
+  "title": "Clap and count",
+  "parent_tip": "Put a hand under your chin and say the word: each time your chin drops is one part. Count the parts together.",
+  "items": [
+    {
+      "kind": "syllables",
+      "mode": "count",
+      "word": "jeans",
+      "picture": "jeans",
+      "syllables": [
+        "jeans"
+      ],
+      "choices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "syllables",
+      "mode": "count",
+      "word": "baby",
+      "picture": "baby",
+      "syllables": [
+        "ba",
+        "by"
+      ],
+      "choices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "syllables",
+      "mode": "count",
+      "word": "banana",
+      "picture": "banana",
+      "syllables": [
+        "ba",
+        "na",
+        "na"
+      ],
+      "choices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "syllables",
+      "mode": "count",
+      "word": "roof",
+      "picture": "roof",
+      "syllables": [
+        "roof"
+      ],
+      "choices": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "answer_key": [
+    1,
+    2,
+    3,
+    1
+  ],
+  "new_words": [],
+  "review_words": [
+    "jeans",
+    "baby",
+    "banana",
+    "roof"
+  ]
+}

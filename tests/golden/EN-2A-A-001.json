@@ -1,0 +1,116 @@
+{
+  "id": "EN-2A-A-001",
+  "subject": "english",
+  "level": "2A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "word_puzzle",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 8898937618562968282,
+  "title": "Fill in the letters",
+  "parent_tip": "Point to each letter box as you say the word slowly. Which sound is missing? Let your child write it.",
+  "items": [
+    {
+      "kind": "missing",
+      "word": "foot",
+      "picture": "foot",
+      "letters": [
+        [
+          "f",
+          true
+        ],
+        [
+          "o",
+          false
+        ],
+        [
+          "o",
+          true
+        ],
+        [
+          "t",
+          true
+        ]
+      ]
+    },
+    {
+      "kind": "missing",
+      "word": "cake",
+      "picture": "cake",
+      "letters": [
+        [
+          "c",
+          true
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "k",
+          true
+        ],
+        [
+          "e",
+          true
+        ]
+      ]
+    },
+    {
+      "kind": "missing",
+      "word": "book",
+      "picture": "book",
+      "letters": [
+        [
+          "b",
+          true
+        ],
+        [
+          "o",
+          true
+        ],
+        [
+          "o",
+          false
+        ],
+        [
+          "k",
+          true
+        ]
+      ]
+    },
+    {
+      "kind": "missing",
+      "word": "dog",
+      "picture": "dog",
+      "letters": [
+        [
+          "d",
+          true
+        ],
+        [
+          "o",
+          false
+        ],
+        [
+          "g",
+          true
+        ]
+      ]
+    }
+  ],
+  "answer_key": [
+    "foot",
+    "cake",
+    "book",
+    "dog"
+  ],
+  "new_words": [],
+  "review_words": [
+    "foot",
+    "cake",
+    "book",
+    "dog"
+  ]
+}

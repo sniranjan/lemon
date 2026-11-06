@@ -22,12 +22,15 @@ CATALOGUE: frozenset[str] = frozenset({
     "fact_drill",
     # Cubs math (M2): place value, skip counting, column adding/taking away, story problems
     "place_value", "skip_count", "column_arithmetic", "math_story",
+    # Puppies Reading (3A): spelling patterns, word endings, syllables, sentence copying
+    "pattern_words", "word_endings", "syllable_split", "sentence_copy",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     # Otters math (M5): long division by two-digit numbers, fraction and decimal arithmetic,
     # parentheses, volume
     "long_division_2digit", "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
     "order_of_operations", "box_volume",
+    "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
 })
 
 

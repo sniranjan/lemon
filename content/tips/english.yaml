@@ -21,6 +21,23 @@ sentence_recite:
   - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
   - "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one."
   - "Point to the picture and ask a question the sentence answers. Then say the sentence together and color a circle."
+# Puppies Reading (3A)
+pattern_words:
+  - "Say the letter team at the top together. Then name each picture, stretch the word slowly, and let your child write the missing letters."
+  - "Read each word together, tapping the letter team. Then your child fills the boxes. Praise good tries, even if a letter is off."
+  - "Name the picture, then ask: which letter team makes that sound? Let your child look at the top row and write it in."
+word_endings:
+  - "Read the word, then the ending, then say them together. Let your child write the new word in the box, saying each sound."
+  - "Act out each word: jump, then jumping! Point to the ending as you say it. Your child writes the whole new word."
+  - "Some words change a little: hop gets a second p (hopping), bake drops its e (baking). Say the new word slowly as your child writes it."
+syllable_split:
+  - "Clap each word together, one clap for each part. Then your child writes one part in each box, or circles how many claps."
+  - "Put a hand under your chin and say the word: each time your chin drops is one part. Count the parts together."
+  - "Say the word like a robot, part by part. Let your child clap along, then write or circle the answer."
+sentence_copy:
+  - "Read the sentence together, pointing to each word. Then your child copies it: a capital letter first, a space between words, the end mark last."
+  - "Say each word as your child writes it. Check together: capital at the start? Mark at the end? Cheer for neat spaces."
+  - "Let your child read the sentence to you first. Then copy it one word at a time, looking back at each word."
 letter_trace:
   - "Trace the first big letter with your finger together, saying its name and sound. Then your child traces the dots with a pencil. Praise every try."
   - "Say the letter's sound and let your child find it in each picture word. Trace the dots slowly, from the top line down."
@@ -53,3 +70,21 @@ sentence_trace:
   - "Read the sentence together, pointing to each word. Then your child traces the gray letters, starting with the big capital letter."
   - "Read it once together, then let your child read it alone. Trace slowly on the lines, and point out the period at the end."
   - "Say the sentence, then trace it one word at a time. Leave a finger space between words. Read the traced sentence together at the end."
+# Cubs Reading (2A)
+word_puzzle:
+  - "Say the picture's word together and stretch out its sounds. Your child writes the letters that are missing."
+  - "Point to each letter box as you say the word slowly. Which sound is missing? Let your child write it."
+  - "Let your child name the picture first. If a word is tricky, say it slowly and listen for each sound together."
+word_sort_pick:   # word_sort tips, one list per layout
+  - "Read the new word and its sentence together. Then read each row: which word names a thing, is something you do, or tells what it is like?"
+  - "Naming words name a thing, doing words are something you can do, describing words tell what it is like. Act out the doing words!"
+word_sort_sort:
+  - "Read each word together. Ask: can you touch it, can you do it, or does it tell what something is like? Then check one box."
+  - "Try each word in a little sentence: \"I see a ...\" for naming words, \"I can ...\" for doing words. Praise every good try."
+word_sort_fill:
+  - "Read the sentence with each choice. Which one sounds right? Praise every good try."
+  - "Read the sentence aloud with the blank as \"hmm\", then try both words. Let your child circle the one that fits."
+read_aloud:
+  - "Let your child read the story aloud while you time it. Help with a hard word, then let them go on. Read the questions together."
+  - "Read the story together first if it helps, then let your child read it alone. Talk about the questions; the answers are in the story."
+  - "On the second reading, listen for a smooth, happy voice. Write the time and cheer if it got quicker."

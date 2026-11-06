@@ -91,6 +91,24 @@ def _write_booklet(parts: list[bytes], out: Path, title: str) -> Path:
     return out
 
 
+ANSWER_LINES = 20        # table lines on one answers page
+ANSWER_CHARS = 60        # characters that fit on one line of the answers column
+
+
+def _answer_pages(rows: list[dict]) -> list[list[dict]]:
+    """Split answer rows into pages of at most ANSWER_LINES lines; a long row wraps onto more lines."""
+    pages: list[list[dict]] = [[]]
+    used = 0
+    for row in rows:
+        lines = 1 + len(row["answers"]) // ANSWER_CHARS
+        if pages[-1] and used + lines > ANSWER_LINES:
+            pages.append([])
+            used = 0
+        pages[-1].append(row)
+        used += lines
+    return pages
+
+
 def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletReport:
     level = load_level(subject, level_code)
     theme = THEMES[subject]
@@ -150,7 +168,7 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
             if answered:
                 rows = [{"id": s.id, "page": s.page_number, "answers": ", ".join(map(str, s.answer_key))}
                         for s in answered]
-                answers = doc("booklet/answers.html.j2", f"{booklet_id}-answers", booklet_id, rows=rows)
+                answers = doc("booklet/answers.html.j2", f"{booklet_id}-answers", booklet_id, rows=_answer_pages(rows))
                 report.booklets.append(_write_booklet([answers], level_dir / f"{booklet_id}-answers.pdf",
                                                       f"paperlessons {public_label(level)} answers"))
 

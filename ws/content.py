@@ -59,9 +59,23 @@ def phrases(subject: str = "english") -> dict:
 
 @lru_cache(maxsize=None)
 def phonics(subject: str = "english") -> dict:
-    """Hand-checked letter teams and rhyme groups (Kittens Reading; see the file's header)."""
+    """Hand-checked letter teams and rhyme groups (Kittens Reading) and spelling patterns, endings, syllables, sight words (Puppies Reading)."""
     path = CONTENT_DIR / "phonics" / f"{subject}.yaml"
     return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
+def grammar(subject: str = "english") -> dict:
+    """Word kinds, fill-in sentences and puzzle words for Cubs Reading (content/grammar/<subject>.yaml)."""
+    path = CONTENT_DIR / "grammar" / f"{subject}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
+def passages(subject: str = "english") -> dict:
+    """Read-aloud passages with questions (content/passages/<subject>.yaml)."""
+    path = CONTENT_DIR / "passages" / f"{subject}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {"passages": []}
 
 
 @lru_cache(maxsize=None)
@@ -106,5 +120,5 @@ def story_problems() -> tuple[dict, ...]:
 
 def clear_caches() -> None:
     for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
-              line_stories, story_problems):
+              line_stories, story_problems, grammar, passages):
         f.cache_clear()
