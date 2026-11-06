@@ -29,17 +29,21 @@ Grid (newest top-left), a checkerboard of cream and color:
 03 Ages 3 & 4 (cream)          02 Thirteen levels (sky)  01 Hello (cream)
 ```
 
-**Pin** 02 Thirteen levels and 09 Try any level free (and 01 Hello if a third pin is wanted); pinning is
-app-only (API.md §4).
+**Pinning:** pinned posts jump to the front of the grid, which would break the checkerboard above, so pin
+nothing while set 2 is the whole grid (09 is top-left anyway). Once newer posts push the set down, pin
+02 Thirteen levels and 09 Try any level free (and 01 Hello if wanted) in the app (API.md §4).
 
 **Rendering:**
 - 01, 02, 07, 08 and the grid preview: `uv run python scripts/marketing/instagram_launch.py set2`.
 - 03–06 and 09: `uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-NN-…`.
 - Needs `out/previews/<slug>.pdf` for every level used (copy from the main checkout) and the synced site data
-  (`node apps/web/scripts/sync-pictures.mjs && node apps/web/scripts/sync-ladder.mjs`).
+  (`node apps/web/scripts/sync-pictures.mjs && node apps/web/scripts/sync-ladder.mjs`). In a worktree, also
+  symlink the main checkout's `node_modules` (or `npm install`): the renders load Nunito from
+  `node_modules/@fontsource/nunito`.
 - **05 and 06 are structure only.** Once the Owls, Otters, Pandas, Penguins, Lions and Whales previews are built:
   look at each preview (`pdftoppm -r 30`), set the page numbers in `post.yaml` to good inner pages (page 1 is
-  the cover, the last page is the closing page), fix the page descriptions in `alt`, render, look at every slide,
+  the cover, the last page is the closing page), fix the page descriptions in `alt`, check every caption and
+  subline claim against what the previews actually teach (they were written from the ladder titles), render, look at every slide,
   then re-run `instagram_launch.py set2` to refresh the grid preview. Optionally swap 09's right-hand cover to
   Whales so the fan spans the ladder.
 - Do not publish any of set 2 before every level is on sale (the posts say every level has a free preview).
