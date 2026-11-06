@@ -59,7 +59,7 @@ def plan_new_words(level: Level, bank: Sequence[VocabEntry], variant: int = 1) -
     for page in range(1, level.pages + 1):
         rules = resolve_page(level, page).rules
         n = rules.get("new_words_per_sheet", 0)
-        if not n:
+        if not n or "teams" in rules:   # letter-team pages pick new words by team (ws/phonics.py)
             continue
         if next_word + n > len(words):
             break   # bank exhausted: later pages need more words first
@@ -193,6 +193,9 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         if rules.get("new_words_per_sheet", 0) and entry is None:
             continue   # the word bank can't introduce this page's new words yet
         entry = entry or PagePlan(page=page)
+        for earlier in range(1, page):   # words this level brought on other kinds of page (letter teams)
+            for w in plan.pages[earlier].new_words if earlier in plan.pages else ():
+                known.setdefault(w, this_level[w])
         for w in entry.new_words:
             known[w] = this_level[w]
             level_new.add(w)
@@ -205,7 +208,10 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         frames_on_page: set[str] = set()
         groups_on_page: set[str] = set()
         phrases = []
-        for _ in range(rules["phrases_per_sheet"]):
+        for index in range(rules["phrases_per_sheet"]):
+            # `level_word_first` (Kittens): the page's first sentence uses one of this level's own words
+            want_level_word = rules.get("level_word_first") and index == 0
+
             def score(c):
                 group, frame, fill = c
                 words = list(fill.values())
@@ -215,6 +221,7 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
                         any(w in todo and this_level[w].picture and w not in pictures_for(fill, data)
                             for w in words),
                         -sum(1 for w in words if w in level_new and seen[w] < min_seen and w not in on_page),
+                        bool(want_level_word) and not any(w in this_level for w in words),
                         text_uses[text],
                         any(w in on_page for w in words),
                         group in groups_on_page,

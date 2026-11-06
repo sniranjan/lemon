@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% macro pic(picture, word, parts=None) %}<div class="pic"><img src="{{ root }}/assets/pictures/{{ picture }}.svg" alt=""><div class="word">{% if parts and parts[1] %}{{ parts[0] }}<b>{{ parts[1] }}</b>{% else %}{{ word }}{% endif %}</div></div>{% endmacro %}
+{% block style %}
+.rhymes { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+.rhymes .card { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: space-around; gap: 12px; padding: 4px 16px; }
+.rhymes .pic { display: flex; flex-direction: column; align-items: center; gap: 0; width: 132px; }
+.rhymes .pic img { width: 86px; height: 86px; }
+.rhymes .word { font-size: 34px; font-weight: 700; line-height: 1.1; white-space: nowrap; }
+.rhymes .word b { color: var(--accent); text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; text-decoration-skip-ink: none; }
+/* the word to match, in a tinted box with a heavy border; then the choices to circle */
+.rhymes .prompt { flex: none; background: var(--tint); border: 3px solid var(--ink); border-radius: 20px; padding: 6px 4px; }
+.rhymes .join { flex: none; width: 36px; border-top: 5px dotted var(--ink); }
+.rhymes .choices { flex: 1; display: flex; justify-content: space-around; }
+.rhymes .pair .pic { width: 230px; }
+.rhymes .pair .pic img { width: 96px; height: 96px; }
+.rhymes .pair .word { font-size: 40px; }
+{% endblock %}
+{% block body %}
+    <div class="rhymes">
+{% for item in sheet.items %}
+{% if item.kind == "rhyme_pair" %}
+      <div class="card pair">{{ pic(item.pictures[0], item.words[0], item.parts[0]) }}<div class="join"></div>{{ pic(item.pictures[1], item.words[1], item.parts[1]) }}</div>
+{% elif item.kind == "rhyme_pick" %}
+      <div class="card"><div class="prompt">{{ pic(item.picture, item.prompt) }}</div><div class="join"></div><div class="choices">{% for w in item.choices %}{{ pic(item.pictures[loop.index0], w) }}{% endfor %}</div></div>
+{% else %}
+      <div class="card"><div class="choices">{% for w in item.choices %}{{ pic(item.pictures[loop.index0], w) }}{% endfor %}</div></div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

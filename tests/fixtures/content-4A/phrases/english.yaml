@@ -1,0 +1,278 @@
+# Phrases (6A-B) and sentences (6A-C), built from frames with slots, like the 7A-C stories.
+#
+# A frame is text with slots in braces: "{a} {color} {colored}". Each slot names a slot kind below,
+# which lists the words that may fill it. `{a}` is the article for the next word: a / an, "some"
+# when the noun is `mass: true`, nothing when it is listed under `plural`. Every other token must be in
+# `allowed_words`, so the child only meets words he knows. The planner fills slots with the words
+# seen least so far (CLAUDE.md §5, level-wide planning); a page that introduces a new word must use it.
+#
+# Adding approved 6A words: give them `level: 6A` in content/vocab/english.yaml with a category a
+# slot kind lists (or add the category/word here), and, for a new kind of word (big, little, ...),
+# a new slot kind + frame group. Nothing in the code changes.
+
+# Function words the child sees in phrases and sentences. All but "and" also appear in 7A stories.
+allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
+
+# Nouns that read as plural: no article ("blue pants"), and never in "... is ..." frames.
+plural: [grapes, pants, boots, blocks, teeth, peas, pajamas, shorts,   # Ducklings batch 2: peas, pajamas, shorts
+         bubbles, noodles]                                         # Chicks word batch 4
+
+# The color each picture is drawn in (its main fill, checked by eye on the pictures). Only pictures
+# that are clearly one color are listed, so "a red apple" always matches what the child sees.
+picture_colors:
+  apple: red
+  car: red
+  hat: red
+  coat: red
+  bike: red
+  balloon: red
+  drum: red
+  clock: red
+  van: red
+  scarf: red
+  ball: blue
+  bird: blue
+  sock: blue
+  bowl: blue
+  plane: blue
+  pants: blue
+  dress: blue
+  plate: blue
+  towel: blue
+  swing: blue
+  banana: yellow
+  bus: yellow
+  duck: yellow
+  truck: yellow
+  sun: yellow
+  moon: yellow
+  star: yellow
+  cheese: yellow
+  bee: yellow
+  boots: yellow
+  lamp: yellow
+  key: yellow
+  tree: green
+  frog: green
+  shirt: green
+  pear: green
+  turtle: green
+  tractor: green
+  flower: pink
+  pig: pink
+  soap: pink
+  cup: purple
+  grapes: purple
+  pillow: purple
+  doll: purple
+  # Ducklings word batch 1 (checked on the drawn pictures)
+  jacket: green
+  mitten: blue
+  skirt: pink
+  bag: red
+  bucket: red
+  sofa: blue
+  comb: blue
+  brush: purple
+  chick: yellow
+  whale: blue
+  crab: red
+  # Ducklings word batch 2 (checked on the drawn pictures)
+  wagon: red
+  crayon: red
+  cap: blue
+  sweater: green
+  pajamas: blue
+  shorts: red
+  peas: green
+  grass: green
+  # Chicks word batch 5 (checked on the drawn pictures)
+  ladybug: red
+  cactus: green
+  pickle: green
+  plum: purple
+  octopus: purple
+  crown: yellow
+  bell: yellow
+  potty: blue
+  phone: blue
+  apron: pink
+  # Kittens words (checked on the drawn pictures)
+  glove: green
+  flag: red
+  present: red
+  skate: red
+  grill: red
+  lock: yellow
+  trumpet: yellow
+  snake: green
+  couch: purple
+  dish: pink
+  pocket: blue
+
+# big / little: nouns each is true of, in real life and in the picture (the picture is drawn large or
+# small to match). Hand-checked like the colors: no "a little whale", no "a big bee". No mass or plural nouns.
+sizes:
+  big: [dog, bear, horse, cow, lion, whale, tree, truck, bus, train, tractor, plane, boat, ball, cake,
+        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled, hippo,
+        bull, shark, ship]   # Kittens
+  little: [mouse, bee, bird, chick, kitten, puppy, snail, crab, frog, duck, fish, egg, cookie, key, rock,
+           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen, ladybug, worm,
+           moth]   # Kittens
+
+# hot / cold: only things that really are (and whose pictures don't say otherwise; the soup steams).
+temperatures:
+  hot: [sun, soup, oven, pot]          # the oven glows, the pot steams
+  cold: [snow, snowman, milk, juice, ice, fridge]
+
+# Who can do each action ("The dog can run."). People (the `person` slot and "I") can do all of these.
+# A sentence with an animal doing an action shows the animal only (the action pictures show a child).
+can_do:
+  run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten,
+        zebra, tiger, giraffe, lamb, bull, chicken, skunk]
+  jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten, lamb]
+  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin, hippo, octopus, dolphin, shark, swan]
+  eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion,
+        puppy, kitten, chick, crab, snail, whale, zebra, tiger, giraffe, hen, ant, seal, penguin, lamb,
+        hippo, panda, bull, shark, chicken, snake, swan, skunk, crow]
+  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten, tiger, seal, lamb, panda]
+  sit: [dog, cat, monkey, bunny, puppy, kitten]
+  clap: []
+  wash: []
+  # Ducklings word batch 1
+  hop: [bunny, frog, bird]
+  sing: [bird]
+  dance: []
+  nap: [cat, dog, bear, pig, lion, baby, puppy, kitten, tiger, seal, lamb]
+  dig: [dog, bunny, puppy, crab]
+  walk: [dog, cat, horse, cow, pig, sheep, goat, duck, bear, lion, mouse, turtle, monkey, puppy, kitten, chick, crab,
+         zebra, tiger, giraffe, hen, ant, penguin, lamb, bull, chicken, skunk, crow]
+  kick: [horse]
+  wave: []
+  read: []
+  draw: []
+  climb: [monkey, cat, bear, goat, mouse, kitten, snail, ant, panda, ladybug]
+  hide: [cat, mouse, bunny, turtle, kitten, crab, snail, snake, skunk]
+  # Ducklings word batch 2. hug / push / throw / catch: people only (the pictures show a child).
+  hug: []
+  push: []
+  throw: []
+  catch: []
+  crawl: [ant, turtle, crab, snail, worm, ladybug]
+  splash: [duck, dog, seal, whale, dolphin, hippo]
+  # Chicks word batch 5. paint / build: people only. blow and yawn are not in the `action` slot (below).
+  paint: []
+  build: []
+
+# Actions the child (3–4) can't truthfully say "I can ___" about: he likes to read, but can't yet.
+child_cannot: [read, cook]   # he helps cook; "I like to cook." stays
+# Actions only some people do in these phrases ("Mom can read.", "Dad can read."); others: everyone.
+people_can:
+  read: [mom, dad]
+  crawl: []          # babies and animals crawl; "Grandpa can crawl." reads as a joke
+  roll: []           # "Mom can roll." needs an object
+
+# Things a child can truthfully call "my ..." / say "I have a ..." about (hand-checked): his toys,
+# clothes, small things of his own at home, pets, a bike, and food or drink he is given. Body and family
+# words have their own "my" frames. Not here: wild and farm animals ("I have a koala."), big vehicles
+# ("my bus"), the house itself ("my door", "my sink", "my sofa"), grown-up tools ("my broom", "my hose",
+# "my key"), playground things ("my swing", "my slide"), baby things ("my diaper", "my bib", "my crib").
+ownable:
+  toys:     [ball, kite, balloon, blocks, drum, doll, puppet, bubbles, tent,
+             teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box,   # box: his own box of treasures
+             crown, shovel, whistle, bell,                                  # Chicks batch 5 (not rattle: a baby thing; not seesaw)
+             bat, net, top, wig, map,                                       # Bunnies batch 1
+             sticker, flag, glue, present, trumpet, skate, ring, stamp]     # Kittens (not rake: a grown-up tool)
+  clothes:  [shoe, hat, sock, coat, shirt, pants, boots, dress, scarf, belt,
+             jacket, mitten, skirt, cap, sweater, pajamas, shorts, apron, sandal,
+             watch, pocket, glove, slipper, vest]                            # Kittens
+  home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket,
+             pen, mug, quilt,   # Bunnies batch 1 (not pin, mop, pan, lid, tub: grown-up things)
+             glass, dish]       # Kittens (not couch, shelf, shower: the house)
+  pets:     [cat, dog, fish, bunny, bird, turtle, puppy, kitten]
+  vehicles: [bike, scooter]
+  food:     [milk, juice, soup]     # plus everything in `eatable`
+
+# What a 3-year-old really eats as served, with its article: "I eat an apple.", "I eat some rice.",
+# "I eat peas." (hand-checked). Not here: drinks and soup (you don't "eat" them), things eaten cooked
+# into something else or not on their own (lemon, potato, pumpkin, tomato), and whole dishes that
+# would need "some" (a cake, a pizza).
+eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pear, corn, rice, cherry,
+          noodles, peach, muffin, toast, pancake, yogurt, peas,
+          waffle, bagel, plum, pickle, popcorn,   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
+          bun, nut,                                # Bunnies batch 1. Not jam (eaten on something, like honey)
+          cracker, pretzel]                        # Kittens
+
+# Only one of each in the sky: "the sun", never "a sun". These nouns never fill a frame with `{a}`
+# ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.
+the_only: [sun, moon]
+
+# Never told to look at: "Look at the sun." is unsafe advice for a child. "I see the sun." and
+# "The sun is hot." are fine. Applies to every "Look at ..." frame (phrases, sentences, stories).
+dont_look_at: [sun]
+
+# Things that go together, for "mom and dad" phrases (both words are pictured).
+pairs:
+  - [mom, dad]
+  - [grandma, grandpa]
+  - [sister, brother]
+  - [cup, spoon]
+  - [sun, moon]
+  - [moon, star]
+  - [cat, dog]
+  - [hat, coat]
+  - [shoe, sock]
+  - [bread, cheese]
+  - [table, chair]
+  - [bed, pillow]
+  - [soap, towel]
+  - [cow, pig]
+  - [duck, frog]
+  - [car, bus]
+  - [hand, foot]
+  - [eye, ear]
+  - [apple, pear]
+  - [bowl, spoon]
+  - [brush, comb]
+  - [fork, spoon]
+  - [hat, mitten]
+  - [bucket, ball]
+  - [teddy, doll]
+
+# Slot kinds: which words may fill a slot. `categories`, `words` and `lists` (names of word lists above;
+# a list may be grouped by heading) add words; `except` removes them;
+# `colored: true` keeps only words in picture_colors; `people: true` marks a subject that can do any
+# action; `subject: true` marks an animal subject checked against can_do.
+slots:
+  thing:   { categories: [food, toys, animals, nature, home, vehicles, clothes] }
+  colored: { colored: true }
+  colored_mine: { lists: [ownable, eatable], colored: true }   # "my red hat"
+  mine:    { categories: [body, family], lists: [ownable, eatable] }   # "Here is my cup." (not "my door")
+  animal:  { categories: [animals], subject: true }
+  person:  { words: [mom, dad, grandma, grandpa], people: true }
+  size:    { words: [big, little] }
+  sized:   { described_by: sizes }      # nouns in the `sizes` table
+  temp:    { words: [hot, cold] }
+  temp_thing: { described_by: temperatures }
+  temp_food: { categories: [food], described_by: temperatures }   # "I like hot soup."
+  action:  { categories: [actions], except: [wash, ride, blow, yawn] }    # need an object ("I wash my hand.", "I ride my bike.", "I blow my whistle."); "I like to yawn." is odd
+  color:   { categories: [colors] }
+  eatable: { lists: [eatable] }                                # "I eat ..."
+  washable: { words: [hand, hair, face] }                      # not "I wash my foot.
+  family:  { categories: [family] }
+
+# Frame groups. A section part lists the groups its pages use (`phrase_groups`), one new idea per part.
+phrase_groups:          # 6A-B: 2–3 word phrases, lower case, no period
+  color_thing: ["{a} {color} {colored}"]
+  my_thing: ["my {mine}", "my {color} {colored_mine}"]
+  pair: ["{x} and {y}"]
+  can_do: ["I can {action}", "{person} can {action}"]
+sentence_groups:        # 6A-C: short sentences, recited three times
+  this_is: ["This is {a} {thing}.", "I see {a} {thing}.", "Here is my {mine}.", "Look at the {thing}."]
+  colors: ["I see {a} {color} {colored}.", "The {colored} is {color}.", "I like my {color} {colored_mine}."]
+  can: ["The {animal} can {action}.", "I can {action}.", "{person} can {action}."]
+  daily: ["I like to {action}.", "I eat {a} {eatable}.", "I wash my {washable}.", "I love my {family}."]
+  describe: ["The {sized} is {size}.", "I see {a} {size} {sized}.", "The {temp_thing} is {temp}.", "I like {temp} {temp_food}."]
+  # Kittens Reading (traced sentences): a little longer, still only known words and allowed_words.
+  more_can: ["The {size} {animal} can {action}.", "My {person} can {action}.", "I see the {animal} {action}."]
+  more_daily: ["I like to eat {a} {eatable}.", "Look at my {color} {colored_mine}."]
