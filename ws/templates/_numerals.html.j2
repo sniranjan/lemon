@@ -1,0 +1,5 @@
+{# Dotted numerals to trace: the Andika glyph filled with a dot pattern, so the pencil runs down
+   the middle of each stroke. Each SVG is drawn at 1:1 (width/height = viewBox), so the CSS
+   font-size is the printed size and the layout check measures the real text. #}
+{% macro dot_defs() %}<svg class="defs" width="0" height="0" aria-hidden="true"><defs><pattern id="trace-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ececef"/><circle cx="4" cy="4" r="2.6" fill="#55555a"/></pattern></defs></svg>{% endmacro %}
+{% macro dotted(n, size, width) %}{% set h = (size * 0.8) | round | int %}<svg class="dotted" width="{{ width }}" height="{{ h }}" viewBox="0 0 {{ width }} {{ h }}"><text x="{{ width / 2 }}" y="{{ (size * 0.75) | round | int }}" text-anchor="middle" style="font-size: {{ size }}px">{{ n }}</text></svg>{% endmacro %}

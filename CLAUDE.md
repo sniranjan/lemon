@@ -260,8 +260,8 @@ test.** Nothing else in the code should change.
 | `number_read` | MA 6A-C, 5A-A/E | 4 numeral cards to read aloud, each with a picture of how many: object pictures (6A, `show: pictures`), ten-frames (5A-A up to 30, `show: ten_frames`) or tens bars + ones squares (5A-E, 51–100, `show: rods`) |
 | `dots_to_number` | MA 6A-D | Dot patterns up to 10 with their numerals |
 | `number_sequence` | MA 5A-B/C/D | 4 tracks of 10 consecutive numerals with `gaps` empty boxes to say aloud (first box always shown, gaps never side by side); answer key = the gap numbers |
-| `number_trace` | MA 4A-A | Large dotted numerals to trace |
-| `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
+| `number_trace` | MA 4A-A | Rows of one number: a solid model with that many dots, then 3 large dotted numerals to trace (Andika glyphs filled with a dot pattern; verify checks the glyphs exist in the font). No answer key |
+| `number_write` | MA 4A-B…E | `mode: copy`: a dotted run to trace, then empty boxes to write the same numbers; `mode: fill`: tracks of 10 (two rows of five) with empty boxes to write the missing numbers. Answer key = numbers written |
 | `next_number` | MA 3A-A/B | "Write the number that comes next": two columns of `n → box` (`order: run` or `mixed`; `max` is the largest answer) |
 | `add_facts` | MA 3A-C…F, 2A | Two columns of `a + b = box` facts within the part's range (`op`, `addend`/`second` one number or a list, `min_first`/`max_first`, `new_from`, `rows`); answer key generated, one answer per box. `bridge: N` (+1 only) shows `n → box` above `n + 1 = box`; reusable for subtraction (`op: "-"`) |
 
@@ -363,7 +363,7 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
 **Layout checks (Playwright, after render)**
 - Each sheet renders to exactly **one** Letter page (816×1056 CSS px); nothing overflows
   (`scrollHeight ≤ clientHeight` for the page root and every card).
-- Minimum font sizes: child-facing text ≥ 28px (7A–5A and pencil levels), ≥ 20px (4A+); parent tip ≥ 16px.
+- Minimum font sizes: child-facing text ≥ 28px (7A–5A, math 4A and pencil levels), ≥ 20px (other 4A+); parent tip ≥ 16px.
   Parent-facing parts of a template carry `data-audience="parent"` (header, tip, footer, strip
   label); every other piece of text on the page counts as child-facing.
 - Each sheet prints (Chromium PDF) to exactly one 612×792pt page.

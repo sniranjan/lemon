@@ -1,0 +1,64 @@
+{
+  "id": "MA-4A-B-035",
+  "subject": "math",
+  "level": "4A",
+  "section": "B",
+  "part": 4,
+  "sheet_type": "number_write",
+  "page_number": 75,
+  "variant": 1,
+  "seed": 2530888359716450756,
+  "title": "Trace, then write",
+  "parent_tip": "Trace first, then write. If a number is tricky, trace it once more with your finger.",
+  "items": [
+    {
+      "kind": "copy",
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "kind": "copy",
+      "numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "kind": "copy",
+      "numbers": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "answer_key": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "new_words": [],
+  "review_words": []
+}

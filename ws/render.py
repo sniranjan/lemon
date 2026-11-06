@@ -80,7 +80,9 @@ async ([minChild, minTip]) => {
 MIN_TIP_PX = 16
 
 
-def min_child_px(level: str) -> int:
+def min_child_px(level: str, subject: str | None = None) -> int:
+    if subject == "math" and level == "4A":
+        return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
     return 20 if level in {"4A", "3A", "2A"} else 28
 
 

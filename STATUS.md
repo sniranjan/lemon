@@ -6,6 +6,11 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Milestones 1–3** (CLAUDE.md §13): package, models, syllabus YAML for EN 7A, MA 6A and pencil ZI;
   all 10 sheet types with templates; `ws verify` (content, plan and layout checks, contact sheets);
   PDF booklets with cover, progress log and answer keys.
+- **Math 4A (Bunnies Math)** (2026-11-06): `syllabus/math/4A.yaml`, 200 pages, A Tracing Numbers to 10 1–40 ·
+  B Writing Numbers to 10 41–100 · C Writing Numbers to 20 101–120 · D Writing Numbers to 30 121–140 ·
+  E Writing Numbers to 50 141–200, with `standards:`. New sheet types `number_trace` and `number_write`
+  (`copy` / `fill`); child text ≥ 28px enforced for this strand (`min_child_px("4A", "math")`). All 200 pages
+  verify with 0 errors; booklets `bunnies-math-level.pdf` (202 pages) + `-answers.pdf` (pages 41–200).
 - **Math 5A (Ducklings math)**: `syllabus/math/5A.yaml`, 200 pages, sections A–E with `standards:`.
   `number_read` gained `show: ten_frames | rods` (11–30 as ten-frames, 51–100 as tens bars);
   new `number_sequence` (tracks with gaps to say aloud). All 200 pages verify with 0 errors.

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bunnies · Math · page 145</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.defs { position: absolute; }
+.blocks { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.blocks .card { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 8px 12px; }
+.row { display: flex; gap: 14px; }
+.cell { width: 150px; height: 92px; flex: none;
+        display: flex; align-items: center; justify-content: center; }
+.dotted { display: block; }
+.dotted text { font-family: "Andika"; font-weight: 400; fill: url(#trace-dots); }
+.write { border: 3px solid #8a8a90; border-radius: 14px; background: #fff; }
+.shown { border: 3px solid var(--ink); border-radius: 14px; font-size: 52px; font-weight: 700; line-height: 1; }
+.shown.first { background: var(--tint); border-color: var(--accent); }
+.gap { border: 3px dashed var(--accent); border-radius: 14px; background: #fff; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Bunnies · Math</div>
+      <div class="title-row"><h1>Trace, then write</h1><span class="pill">Bunnies · 145</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Trace first, then write. If a number is tricky, trace it once more with your finger.</div>
+  <main class="body">
+    <svg class="defs" width="0" height="0" aria-hidden="true"><defs><pattern id="trace-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ececef"/><circle cx="4" cy="4" r="2.6" fill="#55555a"/></pattern></defs></svg>
+    <div class="blocks">
+      <div class="card">
+        <div class="row"><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">27</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">28</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">29</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">30</text></svg></div></div>
+        <div class="row"><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div></div>
+      </div>
+      <div class="card">
+        <div class="row"><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">32</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">33</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">34</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">35</text></svg></div></div>
+        <div class="row"><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div></div>
+      </div>
+      <div class="card">
+        <div class="row"><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">24</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">25</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">26</text></svg></div><div class="cell"><svg class="dotted" width="150" height="83" viewBox="0 0 150 83"><text x="75.0" y="78" text-anchor="middle" style="font-size: 104px">27</text></svg></div></div>
+        <div class="row"><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div><div class="cell write"></div></div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Bunnies · Math · page 145</footer>
+</div>
+</body>
+</html>
