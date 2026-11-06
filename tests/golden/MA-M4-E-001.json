@@ -1,0 +1,96 @@
+{
+  "id": "MA-M4-E-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "E",
+  "part": 1,
+  "sheet_type": "factor_pairs",
+  "page_number": 151,
+  "variant": 1,
+  "seed": 16183746398925648287,
+  "title": "Factor pairs",
+  "parent_tip": "When the pairs start to turn around (4 times 6, then 6 times 4), you have found them all.",
+  "items": [
+    {
+      "kind": "pairs",
+      "n": 24,
+      "pairs": [
+        [
+          1,
+          24
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "show_first": true
+    },
+    {
+      "kind": "multiples",
+      "base": 6,
+      "count": 8
+    },
+    {
+      "kind": "pairs",
+      "n": 60,
+      "pairs": [
+        [
+          1,
+          60
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "show_first": true
+    },
+    {
+      "kind": "circle",
+      "base": 4,
+      "numbers": [
+        42,
+        36,
+        53,
+        27,
+        45,
+        52,
+        56,
+        18
+      ]
+    }
+  ],
+  "answer_key": [
+    "24: 1×24 2×12 3×8 4×6",
+    "multiples of 6: 6 12 18 24 30 36 42 48",
+    "60: 1×60 2×30 3×20 4×15 5×12 6×10",
+    "circle 36 52 56"
+  ],
+  "new_words": [],
+  "review_words": []
+}

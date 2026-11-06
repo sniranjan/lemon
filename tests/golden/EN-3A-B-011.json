@@ -1,0 +1,68 @@
+{
+  "id": "EN-3A-B-011",
+  "subject": "english",
+  "level": "3A",
+  "section": "B",
+  "part": 2,
+  "sheet_type": "word_endings",
+  "page_number": 81,
+  "variant": 1,
+  "seed": 9076528393571360758,
+  "title": "Add the ending",
+  "parent_tip": "Act out each word: jump, then jumping! Point to the ending as you say it. Your child writes the whole new word.",
+  "items": [
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "run",
+      "picture": "run",
+      "ending": "ing",
+      "form": "running",
+      "tail": "ing",
+      "copies": 1
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "jump",
+      "picture": "jump",
+      "ending": "ing",
+      "form": "jumping",
+      "tail": "ing",
+      "copies": 1
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "dance",
+      "picture": "dance",
+      "ending": "ing",
+      "form": "dancing",
+      "tail": "ing",
+      "copies": 1
+    },
+    {
+      "kind": "ending",
+      "mode": "add",
+      "word": "eat",
+      "picture": "eat",
+      "ending": "ing",
+      "form": "eating",
+      "tail": "ing",
+      "copies": 1
+    }
+  ],
+  "answer_key": [
+    "running",
+    "jumping",
+    "dancing",
+    "eating"
+  ],
+  "new_words": [],
+  "review_words": [
+    "run",
+    "jump",
+    "dance",
+    "eat"
+  ]
+}

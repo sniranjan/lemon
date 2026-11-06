@@ -1,0 +1,162 @@
+{
+  "id": "EN-3A-A-006",
+  "subject": "english",
+  "level": "3A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "pattern_words",
+  "page_number": 6,
+  "variant": 1,
+  "seed": 12165605084760311933,
+  "title": "Fill in the letters",
+  "parent_tip": "Read each word together, tapping the letter team. Then your child fills the boxes. Praise good tries, even if a letter is off.",
+  "items": [
+    {
+      "kind": "bank",
+      "patterns": [
+        "sh",
+        "ch",
+        "th",
+        "wh"
+      ]
+    },
+    {
+      "kind": "pattern",
+      "word": "shed",
+      "picture": "shed",
+      "pattern": "sh",
+      "letters": [
+        [
+          "s",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "e",
+          false
+        ],
+        [
+          "d",
+          false
+        ]
+      ],
+      "show_word": false
+    },
+    {
+      "kind": "pattern",
+      "word": "chimney",
+      "picture": "chimney",
+      "pattern": "ch",
+      "letters": [
+        [
+          "c",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "i",
+          false
+        ],
+        [
+          "m",
+          false
+        ],
+        [
+          "n",
+          false
+        ],
+        [
+          "e",
+          false
+        ],
+        [
+          "y",
+          false
+        ]
+      ],
+      "show_word": false
+    },
+    {
+      "kind": "pattern",
+      "word": "thread",
+      "picture": "thread",
+      "pattern": "th",
+      "letters": [
+        [
+          "t",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "r",
+          false
+        ],
+        [
+          "e",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "d",
+          false
+        ]
+      ],
+      "show_word": false
+    },
+    {
+      "kind": "pattern",
+      "word": "whale",
+      "picture": "whale",
+      "pattern": "wh",
+      "letters": [
+        [
+          "w",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "l",
+          false
+        ],
+        [
+          "e",
+          false
+        ]
+      ],
+      "show_word": false
+    }
+  ],
+  "answer_key": [
+    "shed",
+    "chimney",
+    "thread",
+    "whale"
+  ],
+  "new_words": [
+    "shed"
+  ],
+  "review_words": [
+    "chimney",
+    "thread",
+    "whale"
+  ]
+}

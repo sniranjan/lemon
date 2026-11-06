@@ -1,0 +1,91 @@
+{
+  "id": "MA-M4-A-001",
+  "subject": "math",
+  "level": "M4",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "column_arithmetic",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 5020638735606665272,
+  "title": "Four-digit adding",
+  "parent_tip": "Same steps as three-digit adding, one more column. Start with the ones and carry into the little boxes when a column makes 10 or more.",
+  "items": [
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        4343,
+        4439
+      ],
+      "cols": 4,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        1663,
+        3299
+      ],
+      "cols": 4,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        3887,
+        4899
+      ],
+      "cols": 4,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        3978,
+        2320
+      ],
+      "cols": 4,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        4969,
+        1889
+      ],
+      "cols": 4,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        2572,
+        4996
+      ],
+      "cols": 4,
+      "boxes": true
+    }
+  ],
+  "answer_key": [
+    8782,
+    4962,
+    8786,
+    6298,
+    6858,
+    7568
+  ],
+  "new_words": [],
+  "review_words": []
+}

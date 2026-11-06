@@ -22,6 +22,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "fact_drill",
     # Cubs math (M2): place value, skip counting, column adding/taking away, story problems
     "place_value", "skip_count", "column_arithmetic", "math_story",
+    # Puppies Reading (3A): spelling patterns, word endings, syllables, sentence copying
+    "pattern_words", "word_endings", "syllable_split", "sentence_copy",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     # Pandas math (M6): dividing fractions, ratios, rates, percents, negatives, the coordinate
@@ -29,6 +31,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "fraction_divide", "ratio_table", "rational_story", "percent_problem", "signed_numbers",
     "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
+    # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars
+    "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
 })
 
 

@@ -28,8 +28,21 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   H Taking Away 7 to 10 151–170 · I Add or Take Away 171–180 · J Missing Numbers and Families 181–200.
   New sheet type `fact_drill` (layouts horizontal / vertical / bridge number tracks / fact-family houses), tests in
   `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
-  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
+  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) built with Puppies Reading (`ws preview puppies`; not uploaded yet).
   Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
+- **Puppies Reading (EN 3A, 200 pages)** (2026-11-06): `syllabus/english/3A.yaml`, A Word Patterns 1–70 (7 parts:
+  letter pairs, magic e, ai/ay, ee/ea, oa/ow/igh, bossy r, ou/ow/oi/oy/oo) · B Word Endings 71–110 (plurals, -ing, -ed,
+  take it off) · C Clap the Parts 111–140 (compound, closed, count 1–3) · D Copy a Sentence 141–200 (3–8 words, asking
+  sentences in part 3), with `standards:` (RF.1.3a–f, RF.2.3a–d, L.1.4c, RF.1.1a, L.1.1a/j, L.1.2b/d, L.2.2d).
+  New sheet types `pattern_words`, `word_endings`, `syllable_split`, `sentence_copy`; planner `plan_spelling`
+  (rule `known_levels: [7A, 6A]` pins the review pool, so other strands' words never change these pages);
+  hand-checked tables in `content/phonics/english.yaml`. 70 new words (one a page in A; batches 3A-1 40 words and
+  3A-2 30 words, `syllabus/drafts/3A-words-batch*.md`, approved under user delegation), 70 pictures
+  (`draw_3A_batch1.py`, `draw_3A_batch2.py`). After Kittens Reading merged, 10 words it owns (shark, wheel, beach,
+  couch, tooth, shower, snake, tray, crow, jar) were swapped for shampoo, teacher, chimney, chest, thread, shed, lake,
+  spray, mower, guitar (batch 3A-3, `draw_3A_batch3.py`); the Puppies tables follow Kittens' in the shared
+  `content/phonics/english.yaml`, and the Puppies code is `ws/spelling.py` (Kittens' is `ws/phonics.py`). Verify 0 errors, every word seen ≥ 3 times; booklets per section +
+  `puppies-reading-level.pdf` (202 pages) and `-answers.pdf` (A–C). Free preview pages 3, 85, 113, 143.
 - **Foxes Math (M3, our own level, grade 3 work, 200 pages)** (2026-11-06): `syllabus/math/M3.yaml`:
   A Big Adding & Taking Away 1–30 (3.NBT.2) · B Times Tables 2, 5, 10 31–60 · C Times Tables 3 and 4 61–90 ·
   D Times Tables 6 to 9 91–140 (3.OA.1/4/5/7) · E Sharing Facts 141–170 (3.OA.2/4/6/7) · F Fractions on a Line
@@ -40,6 +53,17 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
   section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
   ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
+- **Owls Math (M4, our own level, grade 4 work for age 7, 200 pages)** (2026-11-06): `syllabus/math/M4.yaml`:
+  A Warm-up 1–20 (4-digit adding and taking away, 4.NBT.4) · B Multiply by One Digit 21–60 (in parts, then 2-, 3-,
+  4-digit × 1 digit with carry boxes) · C Two-by-Two 61–100 (× tens, then 2-digit × 2-digit in two lines; the line-two
+  0 printed in parts 2–3, written by the child in part 4) (4.NBT.5) · D Long Division 101–150 (division house; even,
+  remainders, first digit too small, 0 inside the answer, 4-digit two a page) (4.NBT.6) · E Factors and Multiples 151–170
+  (factor pairs, count in multiples, circle multiples, prime or composite) (4.OA.4) · F Fraction Friends 171–200 (fraction
+  bars, equivalent fractions incl. tenths → hundredths, like-denominator adding and taking away within one whole)
+  (4.NF.1, 4.NF.3, 4.NF.3a). New sheet types `long_multiplication`, `division_house`, `factor_pairs`, `fraction_bars`;
+  `column_arithmetic` puts 4-digit problems 2 a row (Cubs/Foxes output unchanged). Tests `tests/test_math_M4.py`.
+  All 200 pages verify with 0 errors and 0 warnings; booklets per section + `owls-math-level.pdf` (202 pages) and
+  `owls-math-level-answers.pdf` (14 pages). Child text ≥ 28px. Free preview pages 21, 71, 121, 171 wait for Owls Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -68,7 +92,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
