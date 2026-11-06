@@ -1,0 +1,18 @@
+{# Shared styles for Whales math (ws/algebra.py markup through the `alg` filter). Child text ≥ 28px:
+   whole-number exponents are Unicode superscripts inside the same text; rational exponents and root
+   indexes are 28px spans on a 40px line. #}
+{% macro styles() %}
+.ask { font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+.qn { font-size: 15px; font-weight: 700; color: #8a8a90; min-width: 22px; }
+.ex { font-size: 40px; font-weight: 700; white-space: nowrap; line-height: 1.2; }
+.rexp { font-size: 28px; position: relative; top: -0.75em; margin-left: 1px; }
+.rad { white-space: nowrap; }
+.rad .idx { font-size: 28px; position: relative; top: -0.7em; margin-right: -9px; }
+.rad .rd { display: inline-block; line-height: 1; border-top: 3px solid var(--ink); padding: 3px 3px 0; margin-left: -2px; }
+.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; }
+.frac .top { border-bottom: 3px solid var(--ink); padding: 0 6px; }
+.frac .bottom { padding: 0 6px; }
+.eq { font-size: 40px; font-weight: 700; color: var(--accent); margin: 0 6px; }
+.line { flex: 1; min-width: 36px; border-bottom: 3px solid #9a9aa0; height: 48px; }
+{% endmacro %}
+{% macro expr(i) %}{% if i.top is defined %}<span class="frac"><span class="top">{{ i.top | alg }}</span><span class="bottom">{{ i.bottom | alg }}</span></span>{% else %}{{ i.q | alg }}{% endif %}{% endmacro %}
