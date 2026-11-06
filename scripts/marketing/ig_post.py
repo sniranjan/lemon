@@ -74,8 +74,9 @@ def slide_html(spec: dict) -> str:
     pages = spec.get("pages") or []
     mascots = spec.get("mascots") or []
     pictures = spec.get("pictures") or []
-    if len(pages) > 3 or len(mascots) > 3 or len(pictures) > 3:
-        sys.exit("at most 3 pages, 3 mascots and 3 pictures per slide")
+    parade = not pages and not pictures and len(mascots) > 3  # 4–8 mascots: two rows of named discs
+    if len(pages) > 3 or len(pictures) > 3 or len(mascots) > (8 if parade else 3):
+        sys.exit("at most 3 pages and 3 pictures per slide; 3 mascots (or 4–8 on a slide with nothing else)")
     for m in mascots:
         if m not in L.BY_SLUG:
             sys.exit(f"unknown level {m!r} (use {', '.join(L.BY_SLUG)})")
@@ -111,6 +112,24 @@ def slide_html(spec: dict) -> str:
         for src, (x, yy, r) in zip(imgs, spots):
             art += (f'<img class="abs" src="{src}" style="left:{x}px;top:{yy}px;width:150px;'
                     f'transform:rotate({r}deg);z-index:5" alt="">')
+    elif parade:
+        # two centered rows (first row the longer one), name under each disc, all inside x 90–990
+        rows = [mascots[: (len(mascots) + 1) // 2], mascots[(len(mascots) + 1) // 2:]]
+        gap, label = 60, 64
+        w = min(250, (900 - (len(rows[0]) - 1) * gap) // len(rows[0]))  # 4 mascots: 250px, 7–8: 180px
+        block = 2 * (w + label) + 40
+        y0 = y + 20 + max(0, (1060 - y - 20 - block) // 2)
+        for r, row in enumerate(rows):
+            x0 = (1080 - (len(row) * w + (len(row) - 1) * gap)) // 2
+            for i, slug in enumerate(row):
+                lv = L.BY_SLUG[slug]
+                x, yy = x0 + i * (w + gap), y0 + r * (w + label + 40)
+                rot = [-5, 4, -3, 5][i % 4]
+                art += (f'<div class="abs disc" style="left:{x}px;top:{yy}px;width:{w}px;height:{w}px;'
+                        f'transform:rotate({rot}deg);box-shadow:8px 8px 0 {L.INK}">'
+                        f'<img src="{lv["mascot"]}" alt=""></div>'
+                        f'<div class="abs fred" style="left:{x - 20}px;width:{w + 40}px;top:{yy + w + 14}px;'
+                        f'text-align:center;font-size:40px">{esc(lv["name"])}</div>')
     elif imgs:
         n = len(imgs)
         w = {1: 440, 2: 360, 3: 290}[n]
@@ -130,7 +149,10 @@ def slide_html(spec: dict) -> str:
      transform:rotate(-4deg);border-radius:36px;text-align:center">
   <div class="fred" style="font-size:52px">{esc(spec['sticker'])}</div>
   <div style="font-size:36px;font-weight:900;margin-top:4px">{esc(spec.get('sticker_sub'))}</div></div>"""
-    footer = (f'<div class="abs" style="left:96px;top:1200px;z-index:8">{L.logo(330)}</div>'
+    # the logo's "lessons" is coral, so on coral it sits on a white pill
+    pill = ("background:#fff;border:4px solid " + L.INK + ";border-radius:999px;padding:10px 26px 6px 18px;"
+            if bg_name == "coral" else "")
+    footer = (f'<div class="abs" style="left:96px;top:1200px;z-index:8;{pill}">{L.logo(330)}</div>'
               if (srcs or imgs) else "")
     return L.html(top + art + sticker + footer, L.W, L.H, bg)
 

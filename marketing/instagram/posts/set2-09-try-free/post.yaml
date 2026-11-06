@@ -1,0 +1,30 @@
+# Set 2, post 9 (the newest tile, top-left of the grid). Render:
+#   uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-09-try-free
+# Once the upper levels' previews exist, consider swapping the right-hand cover for whales (page 1) and
+# re-rendering, so the fan spans the whole ladder.
+layout: announce
+background: cream
+headline: "Try any level free"
+subline: "print a few pages and see how they feel"
+chip: "A free preview for every level"
+pages:
+  - {level: chicks, page: 1}
+  - {level: cubs, page: 1}
+  - {level: foxes, page: 1}
+mascots: [chicks, foxes]
+sticker: "Link in bio"
+sticker_sub: "paperlessons.com"
+
+caption: |
+  Try it free 🎁
+
+  Every level, from Chicks at age 3 to Whales at age 12, has a free preview: a handful of real pages from the level to print and try before you buy.
+
+  Print a few pages, sit down together, and see how they feel. When it fits, the whole level is one PDF.
+
+  👉 Free previews at the link in bio.
+tags: "#printableworksheets #kidsworksheets #homelearning #freeprintables #freeworksheets #learnathome #homeschooling #printables #worksheetsforkids #paperlessons"
+alt: >-
+  Cream background titled "Try any level free" with the handwritten line "print a few pages and see how they feel" and
+  a label "A free preview for every level". The covers of three free previews (Chicks, Cubs and Foxes) are fanned
+  out, with a chick and a fox peeking over them. A coral sticker says "Link in bio, paperlessons.com".
