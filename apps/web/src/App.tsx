@@ -271,7 +271,7 @@ function Footer() {
         <Logo />
         <LegalLinks />
         <p className="text-sm font-semibold text-ink/60">
-          © {new Date().getFullYear()} paperlessons · Made with care for little learners
+          © {new Date().getFullYear()} Madras Labs LLC · Made with care for little learners
         </p>
       </div>
     </footer>

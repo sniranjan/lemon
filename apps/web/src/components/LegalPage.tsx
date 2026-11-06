@@ -76,7 +76,8 @@ function Terms() {
     <>
       <H>Who we are</H>
       <p>
-        paperlessons.com is run by Paper Lessons ("we", "us"). These terms apply when you use the site or buy a level.
+        paperlessons.com is a product of Madras Labs LLC ("we", "us"). These terms apply when you use the site or buy
+        a level.
         By buying, you agree to them. Questions: <Mail />.
       </p>
 
@@ -148,7 +149,8 @@ function Privacy() {
   return (
     <>
       <p className="mt-6">
-        This page explains what we collect on paperlessons.com, why, and who else handles it. Questions or requests:{" "}
+        paperlessons.com is a product of Madras Labs LLC ("we", "us"). This page explains what we collect on the site,
+        why, and who else handles it. Questions or requests:{" "}
         <Mail />.
       </p>
 
