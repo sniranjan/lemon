@@ -12,6 +12,7 @@ from .models import Level, Sheet
 from .phonics import plan_phonics
 from .plan import LevelPlan, plan_letters, plan_new_words, plan_phrases, plan_review, plan_spelling
 from .reading import plan_reading
+from .passages import plan_passages
 from .render import write_html
 from .syllabus import ROOT, page_seed, resolve_page, sheet_id
 
@@ -20,6 +21,8 @@ MANIFEST = OUT_DIR / "manifest.jsonl"
 
 
 def build_plan(level: Level, variant: int = 1) -> LevelPlan:
+    if level.subject == "english" and level.rules.get("planner") == "passages":
+        return plan_passages(level, variant)
     if level.subject == "english" and level.rules.get("planner") == "letters":
         return plan_letters(level, vocab("english"), sounds("english"), variant)
     if level.subject == "english":
