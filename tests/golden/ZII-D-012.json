@@ -1,0 +1,56 @@
+{
+  "id": "ZII-D-012",
+  "subject": "pencil",
+  "level": "ZII",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "line_path",
+  "page_number": 92,
+  "variant": 1,
+  "seed": 16409964818255609521,
+  "title": "Corners and curves",
+  "parent_tip": "At each corner, stop, then go the new way. Smooth curves can go a little faster. Praise every finished path.",
+  "items": [
+    {
+      "kind": "path",
+      "d": "M264.0 27.0 L264.0 125.8 L88.0 125.8 L88.0 224.7 L264.0 224.7 L264.0 323.5 L88.0 323.5 L88.0 422.3 L264.0 422.3 L264.0 521.2",
+      "start": [
+        264.0,
+        27.0
+      ],
+      "end": [
+        264.0,
+        521.2
+      ],
+      "target": "cat",
+      "lane": 32,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "bumps",
+      "join": "miter"
+    },
+    {
+      "kind": "path",
+      "d": "M440.0 27.0 C440.0 150.5 616.0 150.5 616.0 274.1 C616.0 397.6 440.0 397.6 440.0 521.2",
+      "start": [
+        440.0,
+        27.0
+      ],
+      "end": [
+        440.0,
+        521.2
+      ],
+      "target": "apple",
+      "lane": 32,
+      "direction": "vertical",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "s_curve",
+      "join": "round"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "ZII-A-005",
+  "subject": "pencil",
+  "level": "ZII",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "line_path",
+  "page_number": 5,
+  "variant": 1,
+  "seed": 3662637847056410822,
+  "title": "Shape to shape",
+  "parent_tip": "Name each shape together (circle, star, heart). Start at the dot and stay inside the lane all the way to its twin.",
+  "items": [
+    {
+      "kind": "path",
+      "d": "M52.0 170.0 L492.0 170.0",
+      "start": [
+        52,
+        170.0
+      ],
+      "end": [
+        492.0,
+        170.0
+      ],
+      "shape": "kite",
+      "shape_path": "M50 6 L84 42 L50 94 L16 42 Z",
+      "lane": 52,
+      "direction": "horizontal",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "straight",
+      "join": "round",
+      "dot": [
+        113.0,
+        170.0
+      ]
+    },
+    {
+      "kind": "path",
+      "d": "M52.0 510.0 L492.0 510.0",
+      "start": [
+        52,
+        510.0
+      ],
+      "end": [
+        492.0,
+        510.0
+      ],
+      "shape": "circle",
+      "shape_path": "M50 8 A42 42 0 1 1 49.9 8 Z",
+      "lane": 52,
+      "direction": "horizontal",
+      "disc": 44,
+      "size": 64,
+      "path_kind": "straight",
+      "join": "round",
+      "dot": [
+        113.0,
+        510.0
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

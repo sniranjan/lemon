@@ -9,6 +9,11 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Math 5A (Ducklings math)**: `syllabus/math/5A.yaml`, 200 pages, sections A–E with `standards:`.
   `number_read` gained `show: ten_frames | rods` (11–30 as ten-frames, 51–100 as tens bars);
   new `number_sequence` (tracks with gaps to say aloud). All 200 pages verify with 0 errors.
+- **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
+  `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
+  `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
+  bumps, S-curves). Lanes go from 52 to 32 px. Verify samples each lane, so it never turns back and
+  stays clear of the page edges and of other lanes. ZI output is unchanged.
 - **Word bank: 120 of ~200 words** in `content/vocab/english.yaml` (file order = introduction order,
   2 new words per page), all with original pictures in `assets/pictures/` and licence entries.
   | Batch | Words | 7A pages | Approved | Commit |

@@ -254,7 +254,7 @@ test.** Nothing else in the code should change.
 | `sound_parts` | EN 5A-B | Word split into onset + rime with picture |
 | `word_trace` | EN 5A-D | Dotted whole words to trace under pictures |
 | `colouring` | ZI-A | Simple outline shape to colour inside |
-| `line_path` | ZI-B/C, ZII-C/D | Draw from a start dot to a small picture to reach ("take the bee to the flower") along a straight/curved/zigzag lane. Lines always run left→right or top→bottom; no arrows or text for the child; lines get longer across each part |
+| `line_path` | ZI-B/C, ZII-A…D | Draw from a start dot along a lane to what's at the end. ZI: straight, then curved lanes to a small picture. ZII-A: from a shape to the same shape. ZII-B: story pairs, picture to picture ("the bee goes to the flower", `content/pencil/line_stories.yaml`). ZII-C: zigzags. ZII-D: right-angle steps and bumps, S-curves. Lines always run left→right or top→bottom and never turn back; no arrows or text for the child; lanes narrow across the level and lines get longer across each part |
 | `count_and_say` | MA 6A-A/B | Rows of N pictures + big numeral + number word; count aloud while pointing |
 | `count_and_point` | MA 6A-B/C | Rows of N pictures + 3 numeral choices to point at |
 | `number_read` | MA 6A-C, 5A-A/E | 4 numeral cards to read aloud, each with a picture of how many: object pictures (6A, `show: pictures`), ten-frames (5A-A up to 30, `show: ten_frames`) or tens bars + ones squares (5A-E, 51–100, `show: rods`) |
@@ -277,7 +277,13 @@ numbers per part); every page shows all of them.
 
 **Line paths**: the start is a dot; the end is a small picture on a white disc centered on
 the lane's end. Lane ends never touch the page edge. One direction per sheet (cycling
-through the part's `directions`).
+through the part's `directions`). With `start_marker: shape` or `picture` (ZII-A/B), the start
+shape or picture sits on its own disc and the dot is on the lane just past that disc. Path kinds:
+`straight`, `arc`, `wave`, `mixed_curves` (ZI); `zigzag` (`turns`), `steps`, `bumps`, `s_curve`
+(`bends`), and `mixed` with a `kinds` list (ZII). Verify samples the whole lane: x must never
+decrease on left→right lanes (y on top→bottom lanes), so zigzags and corners can move up or down
+but never back. It also checks that every lane and disc stays clear of the page edge and of
+the other lanes on the sheet.
 
 **"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
 page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.

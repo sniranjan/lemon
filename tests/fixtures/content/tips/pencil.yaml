@@ -4,3 +4,15 @@ colouring:
 line_path:
   - "Put the pencil on the dot and draw along the path to the picture. Go slowly; staying inside the lane is the goal."
   - "Start at the dot and help the pencil travel to the picture. Praise every finished line."
+line_path_shape:
+  - "Point to the shape by the dot, then find the same shape at the end. Draw slowly from the dot to the matching shape."
+  - "Name each shape together (circle, star, heart). Start at the dot and stay inside the lane all the way to its twin."
+line_path_picture:
+  - "Tell the little story first: the bee goes to the flower. Then help the pencil take each one along its path."
+  - "Name both pictures and ask where each one wants to go. Start at the dot and draw slowly to the end."
+line_path_zigzag:
+  - "Trace the zigzag with a finger first: up, down, up, down. Then draw it slowly, keeping the pencil on the paper."
+  - "Slow down at each point and keep going forward. It's fine to pause at a corner before the next line."
+line_path_corners:
+  - "Run a finger along the path first and say \"turn\" at every corner. Then draw it slowly from the dot to the picture."
+  - "At each corner, stop, then go the new way. Smooth curves can go a little faster. Praise every finished path."

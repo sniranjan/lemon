@@ -1,0 +1,30 @@
+# Story pairs for pencil paths: draw from the first picture to the second, and say the little
+# story together ("the bee goes to the flower"). Both slugs must exist in assets/pictures/.
+- { from: bee,     to: flower }
+- { from: mouse,   to: cheese }
+- { from: monkey,  to: banana }
+- { from: bunny,   to: carrot }
+- { from: horse,   to: carrot }
+- { from: dog,     to: ball }
+- { from: cat,     to: milk }
+- { from: bird,    to: tree }
+- { from: owl,     to: moon }
+- { from: plane,   to: cloud }
+- { from: kite,    to: sun }
+- { from: baby,    to: bed }
+- { from: frog,    to: leaf }
+- { from: bear,    to: fish }
+- { from: pig,     to: corn }
+- { from: tractor, to: corn }
+- { from: key,     to: door }
+- { from: spoon,   to: soup }
+- { from: foot,    to: shoe }
+- { from: snowman, to: hat }
+- { from: pillow,  to: bed }
+- { from: juice,   to: cup }
+- { from: pizza,   to: plate }
+- { from: mom,     to: baby }
+- { from: sister,  to: swing }
+- { from: brother, to: slide }
+- { from: rain,    to: flower }
+- { from: turtle,  to: rock }
