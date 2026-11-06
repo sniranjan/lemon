@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "paperlessons",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": { "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": true },
+  "observability": { "enabled": true },
+  "routes": [
+    // Custom domains: Cloudflare creates and manages the DNS records for these hostnames.
+    { "pattern": "paperlessons.com", "custom_domain": true },
+    { "pattern": "www.paperlessons.com", "custom_domain": true }
+  ],
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "paperlessons-files" }],
+  "d1_databases": [
+    { "binding": "DB", "database_name": "paperlessons", "database_id": "1eb142f3-efb7-48ab-b90e-c301b58c5969", "migrations_dir": "migrations" }
+  ]
+}

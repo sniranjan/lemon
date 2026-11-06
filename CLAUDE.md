@@ -503,3 +503,27 @@ the child sees that +1 means "the next number". Reproduce the *idea* with our ow
 - PDF booklet rendered; contact sheet viewed and nothing looks wrong.
 - `pytest` passes. New sheet types have at least one golden-output test (fixed seed).
 - Reply to the user: what was generated (IDs and page range), where the PDF is, any warnings.
+
+## 15. Website: paperlessons.com (`apps/web/`)
+
+The sheets are sold at **paperlessons.com**: PDF downloads first, printed sets shipped later, an iPad
+app much later. This repo is a monorepo: the generator stays at the root (Python), apps live in
+`apps/` (npm workspaces). See `apps/web/README.md` for commands.
+
+- **Stack (keep it simple):** one Cloudflare Worker (Hono API + React/Vite SPA as static assets),
+  D1 for data, R2 for files (PDFs). Tailwind v4 + shadcn/ui, bright kid-friendly palette.
+- **Nothing public references Kumon**: no name, no comparisons, no level codes. Public level names:
+
+  | Internal | Public | Internal | Public |
+  |---|---|---|---|
+  | pencil ZI | Tadpoles | EN/MA 5A | Bunnies |
+  | pencil ZII | Froglets | EN/MA 4A | Kittens |
+  | EN 7A | Chicks | EN/MA 3A | Puppies |
+  | EN/MA 6A | Ducklings | EN/MA 2A | Cubs |
+
+  Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may
+  stay inside the generator, but anything a buyer sees (sheet headers, page pills, footers, PDF names,
+  covers) must use public names before it is sold or offered as a preview.
+- **Free previews:** one PDF per level in R2 at `previews/<slug>.pdf`; the site picks them up automatically.
+- **Logo:** "paper" (Fredoka, bold, ink) + "lessons" (Gochi Hand, coral) next to a smiling folded-corner
+  sheet. Keep it this simple.

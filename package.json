@@ -1,0 +1,9 @@
+{
+  "name": "paperlessons",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "web:dev": "npm run dev -w apps/web",
+    "web:deploy": "npm run deploy -w apps/web"
+  }
+}

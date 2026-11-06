@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/700.css";
+@import "@fontsource/nunito/800.css";
+@import "@fontsource/fredoka/600.css";
+@import "@fontsource/fredoka/700.css";
+@import "@fontsource/gochi-hand/400.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Bright, kid-friendly palette. Each color is used as a fill with ink text on top, so contrast holds. */
+:root {
+  --ink: #1f2a44;
+  --cream: #fff8ec;
+  --sun: #ffc83d;
+  --coral: #ff6b5e;
+  --teal: #10a99a;
+  --sky: #4d96ff;
+  --grape: #9b5de5;
+  --leaf: #5cc46b;
+
+  --radius: 1.25rem;
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--coral);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sun);
+  --secondary-foreground: var(--ink);
+  --muted: #fdf0d9;
+  --muted-foreground: #5b6378;
+  --accent: #e4f7f4;
+  --accent-foreground: var(--ink);
+  --destructive: #d93025;
+  --border: #1f2a44;
+  --input: #1f2a44;
+  --ring: var(--sky);
+}
+
+@theme inline {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", "Nunito", ui-rounded, sans-serif;
+  --font-hand: "Gochi Hand", "Comic Sans MS", cursive;
+
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-sun: var(--sun);
+  --color-coral: var(--coral);
+  --color-teal: var(--teal);
+  --color-sky: var(--sky);
+  --color-grape: var(--grape);
+  --color-leaf: var(--leaf);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3 { @apply font-display; }
+}
+
+/* Chunky "sticker" shadow used on cards and buttons. */
+@utility pop {
+  box-shadow: 4px 4px 0 0 var(--ink);
+}
+
+/* Motion: gentle, and switched off for people who prefer less. */
+@keyframes card-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-5px) rotate(3deg); } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-10px) rotate(var(--r, 0deg)); } }
+@keyframes draw { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
+
+.card-rise { animation: card-rise 600ms cubic-bezier(.2, .9, .3, 1) both; }
+.mascot-bob { animation: bob 3.2s ease-in-out infinite; }
+.float { animation: float 6s ease-in-out infinite; }
+.group:hover .path-draw, .group[data-open="true"] .path-draw { animation: draw 1.6s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-rise, .mascot-bob, .float, .path-draw { animation: none !important; }
+}
