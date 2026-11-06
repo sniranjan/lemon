@@ -9,43 +9,43 @@
   "variant": 1,
   "seed": 10992916620134458341,
   "title": "Hundreds, tens, ones",
-  "parent_tip": "Count the big squares by hundreds, the bars by tens and the small squares by ones. A zero means none of that kind.",
+  "parent_tip": "Count the big squares by hundreds (each is ten tens), the bars by tens and the small squares by ones. A zero means none of that kind.",
   "items": [
     {
       "kind": "blocks",
-      "n": 708,
+      "n": 400,
       "places": [
-        7,
+        4,
         0,
-        8
+        0
       ],
       "width": 3
     },
     {
       "kind": "blocks",
-      "n": 243,
+      "n": 334,
       "places": [
+        3,
+        3,
+        4
+      ],
+      "width": 3
+    },
+    {
+      "kind": "blocks",
+      "n": 820,
+      "places": [
+        8,
         2,
-        4,
-        3
-      ],
-      "width": 3
-    },
-    {
-      "kind": "blocks",
-      "n": 476,
-      "places": [
-        4,
-        7,
-        6
+        0
       ],
       "width": 3
     }
   ],
   "answer_key": [
-    708,
-    243,
-    476
+    400,
+    334,
+    820
   ],
   "new_words": [],
   "review_words": []

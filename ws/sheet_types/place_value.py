@@ -2,7 +2,8 @@
 
 - `blocks`: base-ten pictures (hundred squares, tens bars, ones) to write as
   "☐ hundreds ☐ tens ☐ ones = ☐". Two-digit pages show 4, three-digit pages 3.
-  Three-digit pages always include a number with a zero digit (706 = 7 hundreds, 0 tens, 6 ones).
+  Three-digit pages always include a round hundred (300 = 3 hundreds, 0 tens, 0 ones; 2.NBT.1b) and
+  a number with one zero digit (706 = 7 hundreds, 0 tens, 6 ones).
 - `expanded`: six lines, cycling through `forms`:
   `parts_to_number` "300 + 40 + 7 = ☐" (zero parts left out), `number_to_parts` "347 = ☐ + ☐ + ☐"
   (no zero digits), `units_to_number` "3 hundreds 4 tens 7 ones = ☐", `name_to_number`
@@ -112,7 +113,8 @@ class PlaceValue(SheetType):
             count = 4 if width == 2 else 3
             while True:
                 numbers = rng.sample(range(lo, hi + 1), count)
-                if width < 3 or any(0 in places(n, 3)[1:] for n in numbers):
+                if width < 3 or (any(n % 100 == 0 for n in numbers)
+                                 and any(0 in places(n, 3)[1:] and n % 100 for n in numbers)):
                     break
             items = [blocks_item(n, width) for n in numbers]
             title = "Tens and ones" if width == 2 else "Hundreds, tens, ones"
@@ -169,8 +171,10 @@ class PlaceValue(SheetType):
                 if i["places"] != places(i["n"], width) or i["width"] != width:
                     issues.append(error(sheet, f"blocks {i['places']} don't show {i['n']}"))
                 answers.append(i["n"])
-            if width == 3 and not any(0 in i["places"][1:] for i in sheet.items):
-                issues.append(error(sheet, "a three-digit blocks page needs a number with a zero"))
+            if width == 3 and not any(i["n"] % 100 == 0 for i in sheet.items):
+                issues.append(error(sheet, "a three-digit blocks page needs a round hundred (2.NBT.1b)"))
+            if width == 3 and not any(0 in i["places"][1:] and i["n"] % 100 for i in sheet.items):
+                issues.append(error(sheet, "a three-digit blocks page needs a number with one zero digit"))
         elif mode == "expanded":
             if len(sheet.items) != LINES:
                 issues.append(error(sheet, f"{len(sheet.items)} lines; expected {LINES}"))

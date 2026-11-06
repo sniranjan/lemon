@@ -45,7 +45,9 @@ sections:
     standards: [2.NBT.1, 2.NBT.1a, 2.NBT.1b, 2.NBT.3, 2.NBT.4]
     source: ours
     parts:
-      - { part: 1, pages: [21, 30], name: Hundred squares, rules: { mode: blocks, min: 100, max: 999 },
+      - { part: 1, pages: [21, 30], name: Hundred squares, rules: { mode: blocks, min: 100, max: 999, tips: { place_value_blocks: [
+          "Ten tens make one hundred: a big square is ten bars side by side. Count squares by hundreds, bars by tens, small squares by ones.",
+          "Count the big squares by hundreds (each is ten tens), the bars by tens and the small squares by ones. A zero means none of that kind." ] } },
           standards: [2.NBT.1, 2.NBT.1a, 2.NBT.1b] }
       - { part: 2, pages: [31, 40], name: Three-digit parts and words,
           rules: { mode: expanded, min: 100, max: 999, forms: [parts_to_number, units_to_number, number_to_parts, name_to_number] },
