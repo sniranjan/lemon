@@ -134,8 +134,8 @@ class LadderLevel(_Strict):
     slug: str
     public_name: str
     public_title: str
-    ages: str
-    content_grade: str                   # US school grade the work matches (about two ahead of the ages)
+    age: int                             # the one age a child on pace does this level
+    content_grade: str                   # US grade the work matches: school grade at `age` + 2
     strands: dict[Subject, str]          # subject -> internal level code
 
     @model_validator(mode="after")

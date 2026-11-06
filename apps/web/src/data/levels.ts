@@ -26,7 +26,7 @@ export type Level = Look & {
   slug: string;
   name: string;
   title: string;
-  ages: string;
+  age: number;           // the one age a child on pace does this level
   grade: string;          // US school grade the work matches, e.g. "3", "K–1", "Pre-K"
   subjects: Subject[];
   status: "ready" | "soon";
@@ -128,6 +128,12 @@ const LOOK: Record<string, Look> = {
     blurb: "Reading closely and explaining why, plus linear equations and exponents.",
     preview: { kind: "facts", subject: "math", lines: ["2x + 3 = 11", "x = ?", "3² + 4² =", "5(x − 2) = 15"] },
   },
+  whales: {
+    mascot: "/brand/whale.svg",
+    color: "sky",
+    blurb: "How authors make their choices, plus polynomials, factoring and first quadratics.",
+    preview: { kind: "facts", subject: "math", lines: ["(x + 3)(x − 2) =", "x² + 5x + 6 = 0", "2³ · 2⁴ =", "x = ?"] },
+  },
 };
 
 /** "Grade 3 work", "K–1 work", "Pre-K work". */
@@ -143,7 +149,7 @@ export const LEVELS: Level[] = ladder.map((r) => {
     slug: r.slug,
     name: r.name,
     title: r.title,
-    ages: r.ages,
+    age: r.age,
     grade: r.grade,
     subjects: r.subjects as Subject[],
     status: r.ready ? "ready" : "soon",

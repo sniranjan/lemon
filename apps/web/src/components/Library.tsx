@@ -31,7 +31,7 @@ export function Library() {
   return (
     <section id="library" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="the library" title="Twelve levels, one big climb">
+        <SectionHeading eyebrow="the library" title="Thirteen levels, one big climb">
           Every level has reading and math, from age 3 to 12, and the work runs about two grades ahead of school.
           <span className="hidden sm:inline"> Hover a level to peek at a sheet.</span>
           <span className="sm:hidden"> Tap a level to peek at a sheet.</span>
@@ -81,7 +81,7 @@ function LevelCard({ level, index, hasPreview }: { level: Level; index: number; 
       >
         <h3 className="text-3xl font-bold leading-none">{level.name}</h3>
         <div className="mt-1.5 flex items-center justify-between gap-2">
-          <p className="text-sm font-bold opacity-80">Ages {level.ages}</p>
+          <p className="text-sm font-bold opacity-80">Age {level.age}</p>
           <PreviewButton level={level} hasPreview={hasPreview} />
         </div>
 

@@ -7,4 +7,4 @@ brands: [disney, lego, barbie, pokemon, mcdonalds, "mcdonald's", coca-cola, coke
 violence: [gun, guns, kill, killed, blood, knife, knives, sword, bomb, war, fight, dead, die, died,
            shoot, hit, hurt, monster, ghost, scary, weapon, poison]
 # Internal level codes: buyers only ever see public level names (CLAUDE.md §15).
-internal_codes: [7A, 6A, 5A, 4A, 3A, 2A, ZI, ZII]
+internal_codes: [7A, 6A, 5A, 4A, 3A, 2A, ZI, ZII, M1, M2, R3, R4, R5, R6, R7, R8, R9, M3, M4, M5, M6, M7, M8, M9]

@@ -1,13 +1,18 @@
-# The public level ladder (CLAUDE.md §15): what parents buy. Ages 3 to about 12.
+# The public level ladder (CLAUDE.md §15): what parents buy. Ages 3 to 12.
 #
-# Every public level = one reading level + one math level (internal syllabus codes), paired by age:
-# children who start at 3 do reading 7A and math 6A together, so reading runs one code ahead.
-# The first two levels also carry pencil warm-ups. Internal codes never appear on anything a buyer sees.
+# Every public level = one reading strand + one math strand (internal syllabus codes). The first two
+# levels also carry pencil warm-ups. Internal codes never appear on anything a buyer sees.
 #
-# Content runs about two school grades ahead of the child's age (content_grade = the US school grade the
-# work matches). Chicks–Cubs follow the existing structure, which is already ahead of school. From Foxes on,
-# each level covers more than one step of that structure to stay two grades ahead; their strand codes are
-# placeholders until we write those syllabi to the content_grade target.
+# Two grades ahead, by definition: school grade = age on Sept 1 − 5 (a 6-year-old is in grade 1;
+# preschool at 3 counts as −2, Pre-K at 4 as −1). `age` is the one age a child on pace does the level,
+# and `content_grade` is the US grade the work matches = school grade + 2. Two levels a year at ages
+# 3–5, then one a year. In each of those early years the second level reaches the target (Ducklings K,
+# Kittens 1, Cubs 2) and the first ramps up to it (Chicks is the on-ramp from zero).
+# Section `standards:` tags in each syllabus file back this up (see syllabus/PLAN-upper-levels.md).
+#
+# Codes: 7A–2A and ZI/ZII follow the existing early structure. M1, M2 (Puppies/Cubs math, compressed so
+# grade 2 math is covered before Foxes) and R3–R9 / M3–M9 (Foxes on, named after the content grade) are
+# our own.
 #
 # strands: subject -> internal level code (a file in syllabus/<subject>/<code>.yaml once it is built).
 # Strands whose syllabus file doesn't exist yet are "coming soon".
@@ -16,82 +21,89 @@
   public_name: Chicks
   public_title: Picture words and counting to 10
   content_grade: "Pre-K"
-  ages: "3–4"
+  age: 3
   strands: { english: 7A, math: 6A, pencil: ZI }
 
 - slug: ducklings
   public_name: Ducklings
   public_title: Little phrases and numbers to 50
   content_grade: "K"
-  ages: "3–4"
+  age: 3
   strands: { english: 6A, math: 5A, pencil: ZII }
 
 - slug: bunnies
   public_name: Bunnies
   public_title: Letters, sounds and writing numbers
   content_grade: "K–1"
-  ages: "4–5"
+  age: 4
   strands: { english: 5A, math: 4A }
 
 - slug: kittens
   public_name: Kittens
   public_title: Letter teams, rhymes and adding 1 to 3
   content_grade: "1"
-  ages: "4–5"
+  age: 4
   strands: { english: 4A, math: 3A }
 
 - slug: puppies
   public_name: Puppies
   public_title: Spelling patterns, adding and subtracting to 20
   content_grade: "1–2"
-  ages: "5"
-  strands: { english: 3A, math: 2A }
+  age: 5
+  strands: { english: 3A, math: M1 }
 
 - slug: cubs
   public_name: Cubs
   public_title: Reading aloud and two-digit adding and subtracting
   content_grade: "2"
-  ages: "5–6"
-  strands: { english: 2A, math: A }
+  age: 5
+  strands: { english: 2A, math: M2 }
 
 - slug: foxes
   public_name: Foxes
   public_title: Short stories and times tables
   content_grade: "3"
-  ages: "6–7"
-  strands: { english: A, math: B }
+  age: 6
+  strands: { english: R3, math: M3 }
 
 - slug: owls
   public_name: Owls
   public_title: Chapter books, long multiplication and division
   content_grade: "4"
-  ages: "7–8"
-  strands: { english: B, math: C }
+  age: 7
+  strands: { english: R4, math: M4 }
 
 - slug: otters
   public_name: Otters
   public_title: Finding details, fractions and decimals
   content_grade: "5"
-  ages: "8–9"
-  strands: { english: C, math: D }
+  age: 8
+  strands: { english: R5, math: M5 }
 
 - slug: pandas
   public_name: Pandas
   public_title: Main idea and inference, ratios and fractions
   content_grade: "6"
-  ages: "9–10"
-  strands: { english: D, math: E }
+  age: 9
+  strands: { english: R6, math: M6 }
 
 - slug: penguins
   public_name: Penguins
   public_title: Summaries, negative numbers, percents and expressions
   content_grade: "7"
-  ages: "10–11"
-  strands: { english: E, math: F }
+  age: 10
+  strands: { english: R7, math: M7 }
 
 - slug: lions
   public_name: Lions
   public_title: Close reading, linear equations and exponents
   content_grade: "8"
-  ages: "11–12"
-  strands: { english: F, math: G }
+  age: 11
+  strands: { english: R8, math: M8 }
+
+- slug: whales
+  public_name: Whales
+  public_title: Author's craft, polynomials and quadratics
+  content_grade: "9"
+  age: 12
+  strands: { english: R9, math: M9 }

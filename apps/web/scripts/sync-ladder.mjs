@@ -15,7 +15,7 @@ const ladder = rungs.map((r) => ({
   slug: r.slug,
   name: r.public_name,
   title: r.public_title,
-  ages: String(r.ages),
+  age: Number(r.age),
   grade: String(r.content_grade),
   subjects: Object.keys(r.strands).map((s) => SUBJECT[s]),
   ready: Object.entries(r.strands).every(([s, code]) => existsSync(path.join(syllabus, s, `${code}.yaml`))),
