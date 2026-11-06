@@ -1,6 +1,9 @@
 # Ducklings reading (6A): word batch 2, draft for approval
 
-**Status: not approved.** Nothing below has been drawn, added to the word bank, or used on a sheet.
+**Status: approved 2026-11-06, with one change: "laugh" (#10) is replaced by "push"** (picture: a child
+pushing the red toy wagon; "I can push." / "Dad can push."; people only, no animal pushes). All 40 words are
+in `content/vocab/english.yaml` (`level: 6A`), drawn by `scripts/pictures/draw_batch5.py`, and used on
+pages 151–190. Ducklings Reading now builds all 200 pages.
 
 ## Where things stand
 
@@ -9,8 +12,8 @@
 | A Word Hunt | 1–30 | built (Chicks words, least seen first) |
 | B Little Phrases | 31–100 | built (batch 1 words 1–30 on 71–100) |
 | C Say a Sentence, parts 1–5 | 101–150 | built (batch 1 words 31–40 on 141–150) |
-| C parts 6–9 (one new word a page) | 151–190 | **waiting for this batch (40 words)** |
-| C part 10 (review, no new words) | 191–200 | built; will change once these words exist |
+| C parts 6–9 (one new word a page) | 151–190 | built from this batch (2026-11-06) |
+| C part 10 (review, no new words) | 191–200 | built (reviews these words) |
 
 This batch completes the 80-word target. Every word lands on a Say a Sentence page, so it must fit a
 sentence frame: "This is a ___." / "Here is my ___." / "Look at the ___." (things), "The ___ is red."
@@ -32,7 +35,7 @@ can, colors match the picture, and only really hot or cold things are called hot
 | 7 | penguin | animals | The penguin can swim. / The penguin can walk. | penguin |
 | 8 | lamb | animals | The lamb can jump. / The lamb is little. | lamb |
 | 9 | hug | actions | I can hug. / Mom can hug. | child hugging a teddy |
-| 10 | laugh | actions | I can laugh. / Dad can laugh. | child laughing, eyes shut, no music notes |
+| 10 | push | actions | I can push. / Dad can push. | child pushing the red toy wagon (was "laugh", changed at approval) |
 | 11 | throw | actions | I can throw. | child throwing a ball overhand |
 | 12 | catch | actions | I can catch. | child catching a ball with both hands |
 | 13 | crawl | actions | The ant can crawl. / I can crawl. | child crawling on hands and knees |
@@ -77,3 +80,9 @@ take "a" or "is".
 3. "laugh" and "throw"/"catch" are hard to show in one still picture. Keep them, or swap for "stand" and
    "push"?
 4. "family" shows three people. OK as one picture, or would you rather have "aunt" / "uncle"?
+
+**Answers (user, 2026-11-06)**
+1. "The oven is hot." and "The pot is hot." are OK. Hot: sun, soup, oven, pot. Cold: snow, snowman, milk, juice, ice, fridge.
+2. Yes: these 40 words must not be reused as new words in Chicks batches 4–5.
+3. Keep throw and catch (the ball is clearly mid-air for throw and in both hands for catch). "laugh" becomes "push".
+4. "family" is one picture of mom, dad and child together.

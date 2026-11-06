@@ -26,12 +26,17 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   | Batch | Words | 6A pages | Approved | Commit |
   |---|---|---|---|---|
   | 6A-1 | 40 (12 actions, 5 body, 3 clothes, 5 toys, 5 home, big/little/hot/cold, 6 animals); 36 pictures (`draw_batch4.py`) | 71–100, 141–150 | 2026-11-06 | this branch |
-  | 6A-2 | 40, draft `syllabus/drafts/6A-words-batch2.md` | 151–190 | waiting | |
+  | 6A-2 | 40 (8 animals, 6 actions incl. "push" for "laugh", 6 food, 3 toys, 5 home, 4 clothes, 5 nature, toe, thumb, family); 40 pictures (`draw_batch5.py`) | 151–190 | 2026-11-06 | this branch |
+
+  **Rule (user, 2026-11-06):** the 80 Ducklings words must not be reused as new words in Chicks batches 4–5.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): EN 7A pages 1–60,
-  101–112, 141–150, plus samples of MA 6A and ZI.
-- `ws verify`: 382 sheets, **0 errors**, 2 expected warnings (color-word pages; the word bank
-  covers 60 of 100 new-word pages, so 7A-B/C sheets will change as words are added).
-- `uv run pytest`: 99 tests pass.
+  101–112, 141–150, plus samples of MA 6A and ZI; **EN 6A (Ducklings Reading) all 200 pages** (2026-11-06).
+- `ws verify` (Chicks, earlier run): 382 sheets, **0 errors**, 2 expected warnings (color-word pages; the word
+  bank covers 60 of 100 new-word pages, so 7A-B/C sheets will change as words are added).
+- `ws verify --subject english --level 6A` (2026-11-06): 200 sheets, **0 errors**, 2 expected warnings
+  (color-word pages; it reviews Chicks words and the Chicks bank has 120 of 200). Adding batch 2 left
+  pages 1–150 unchanged.
+- `uv run pytest`: 151 tests pass.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -40,20 +45,21 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Word batch 1 (2026-11-06): pages 1–150 and 191–200 build (160 of 200; verify 0 errors, 3 expected
   warnings). big/little/hot/cold use the `sizes` / `temperatures` tables and a `describe` sentence group;
   Word Hunt takes the least-seen Chicks words first; animal action sentences show the animal only.
-  Pages 151–190 wait for batch 2. The live free preview (pages 3, 33, 103, 131) is now stale for
+  Word batch 2 (2026-11-06): **Ducklings Reading is complete, 200/200 pages**; verify 0 errors, 2 expected
+  warnings (color-word pages; Chicks word bank incomplete); every new word seen ≥ 3 times (checked on the
+  full level). Booklets: one per section plus `ducklings-reading-level.pdf` (202 pages = cover + 200 + log).
+  The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
 
 ## Next steps
 1. **Batch 4** (words 121–160, 7A pages 61–80): draft a table (word, category, sentence) and
-   **wait for the user's OK before drawing**. After drawing, run `ws pictures sheet`, look at
+   **wait for the user's OK before drawing**. Don't reuse any `level: 6A` word (Ducklings) as a new word. After drawing, run `ws pictures sheet`, look at
    `out/pictures/contact.png`, fix weak pictures, then send the contact sheet and the 7A review sheet.
-2. Batch 5 (words 161–200, pages 81–100). That completes 7A-A's word bank.
+2. Batch 5 (words 161–200, pages 81–100), again without Ducklings words. That completes 7A-A's word bank.
 3. Then generate all of EN 7A, MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
 4. `ws vocab stats` is a stub (exits 2); implement it when needed.
-5. **6A word batch 2**: draft in `syllabus/drafts/6A-words-batch2.md`. Wait for the user's OK; then add
-   words with `level: 6A`, draw pictures (new `draw_batch5.py`), and add `can_do` / `picture_colors` /
-   `sizes` / `temperatures` / `plural` entries in `content/phrases/english.yaml` so each new word fits a
-   sentence frame (the planner errors if it doesn't).
+5. Ducklings Reading is done (200/200). The live free preview may now differ from the rebuilt pages:
+   rebuild with `ws preview` and re-upload only when the user says so.
 
 ## Open questions for the user
 - What should a 7A repeat (`--variant 2`) change? Today it keeps the same words and strip and only
@@ -71,5 +77,6 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 ## Picture workflow
 - `scripts/pictures/draw_batchN.py <out_dir>` wrote each batch's SVGs. They are a record only:
   the SVGs in `assets/pictures/` are the source of truth, so **don't re-run old batch scripts**
-  (later fixes may be overwritten). Copy the helpers into a new `draw_batch4.py` for batch 4.
+  (later fixes may be overwritten). Copy the helpers from the latest `draw_batch5.py` into a new
+  `draw_batch6.py` for the next batch.
 - `scripts/pictures/zoom.py out.png name …` renders chosen pictures large for a close look.
