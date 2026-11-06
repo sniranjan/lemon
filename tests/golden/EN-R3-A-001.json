@@ -1,0 +1,63 @@
+{
+  "id": "EN-R3-A-001",
+  "subject": "english",
+  "level": "R3",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_questions",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 3335711695438063084,
+  "title": "A Kite for Leo",
+  "parent_tip": "Take turns reading sentences. Point back to the story for clues.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "a01-kite-for-leo",
+      "set": 0,
+      "again": false,
+      "heading": "A Kite for Leo",
+      "paragraphs": [
+        "Mia and her little brother Leo went to the park on a windy Saturday. Mia had a beautiful red kite with a long, curly tail, and Leo had a small paper kite that he had made at school.",
+        "Leo ran across the grass, and his kite rose into the sky. Suddenly a powerful gust pulled it into a tall oak tree. The paper tore, and Leo sat down on the grass with tears on his cheeks.",
+        "Mia looked at her own kite. She had waited all week to fly it. She knelt next to Leo and placed the string in his hands. \"You can fly mine,\" she said. \"I will hold the tail until the wind catches it.\"",
+        "Leo smiled and wiped his eyes. All afternoon the red kite danced above the park, and Mia cheered every time it climbed higher."
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "Which word best describes Mia in this story?",
+      "choices": [
+        "lazy",
+        "bossy",
+        "caring"
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "Why did Leo sit down on the grass?",
+      "choices": [
+        "He wanted to rest in the shade.",
+        "His kite tore in a tree.",
+        "He was tired from running."
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Why did Mia give Leo her kite?",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. C (caring)",
+    "2. B (His kite tore in a tree.)",
+    "3. Sample: Mia gave Leo her kite because his kite tore and he was sad."
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -6,7 +6,8 @@ Kept deliberately simple and frozen: verify, the tests and the people writing pa
 these same functions, so a passage's score never depends on which tool measured it.
 - Words: runs of letters/digits, with inner apostrophes or hyphens ("didn't", "well-known" = 1 word).
 - Sentences end at . ! or ? (plus any closing quote) when the next word starts with a capital
-  letter or an opening quote, or at the end of a paragraph. So `"Wait!" said Mia.` is one sentence.
+  letter or an opening quote, or at the end of a paragraph. So `"Wait!" said Mia.` is one sentence,
+  and so is `Mr. Grant waved.` (no break after Mr. / Mrs. / Ms. / Dr.).
 - Syllables: vowel groups, minus a silent final -e / -es / -ed, at least 1; a few exceptions by hand.
 
     uv run python -m ws.readability file.txt      # or the text on stdin
@@ -17,7 +18,7 @@ from __future__ import annotations
 import re
 
 _WORD = re.compile(r"[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*")
-_SENTENCE_END = re.compile(r"[.!?]+[\"”’')]*(?=\s+[\"“'(]?[A-Z0-9]|\s*$)")
+_SENTENCE_END = re.compile(r"(?<!\bMr)(?<!\bMrs)(?<!\bMs)(?<!\bDr)[.!?]+[\"”’')]*(?=\s+[\"“'(]?[A-Z0-9]|\s*$)")
 
 # Words the vowel-group rule miscounts (checked by hand).
 _SYLLABLES = {

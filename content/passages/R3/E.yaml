@@ -1,0 +1,664 @@
+- id: e01-ada-and-the-bees
+  title: Ada and the Bees
+  text: |
+    Ada visited her aunt's farm on a sunny morning in June. Her aunt kept six white beehives at the
+    edge of a field of clover. She gave Ada a hat with a soft net so the bees would not land on her face.
+
+    "Bees fly from flower to flower to drink a sweet juice called nectar," her aunt explained. "They
+    carry it back to the hive and turn it into honey."
+
+    Ada watched the busy bees zoom in and out of a tiny door. Her aunt lifted a wooden frame from the
+    hive. It was covered with golden wax cells full of honey.
+
+    At lunch, Ada spread fresh honey on warm toast. It tasted like flowers and sunshine. "Thank you,
+    bees," she whispered.
+  pages:
+    - focus: details
+      questions:
+        - ask: What did Ada's aunt keep at the edge of the field?
+          starter: Ada's aunt kept
+          sample: Ada's aunt kept six white beehives at the edge of the field.
+          evidence: six white beehives
+        - ask: What did Ada wear on her head?
+          starter: Ada wore
+          sample: Ada wore a hat with a soft net on her head.
+          evidence: a hat with a soft net
+        - ask: What did Ada spread on her toast?
+          starter: Ada spread
+          sample: Ada spread fresh honey on her warm toast.
+          evidence: spread fresh honey on warm toast
+    - focus: reasons
+      questions:
+        - ask: Why did Ada wear a hat with a net?
+          starter: Ada wore a hat with a net so
+          sample: Ada wore a hat with a net so the bees would not land on her face.
+          evidence: so the bees would not land on her face
+        - ask: Why do bees fly from flower to flower?
+          starter: Bees fly from flower to flower to
+          sample: Bees fly from flower to flower to drink a sweet juice called nectar.
+          evidence: drink a sweet juice called nectar
+        - ask: How did Ada feel about the honey?
+          starter: Ada felt
+          sample: Ada felt thankful because she whispered thank you to the bees.
+          evidence: Thank you, bees
+
+- id: e02-kofis-bean-sprouts
+  title: Kofi's Bean Sprouts
+  text: |
+    Kofi and his dad planted bean seeds in a row of small paper cups. Kofi pressed each seed into the
+    soil with his thumb. Then he set the cups on the sunny kitchen windowsill.
+
+    "Seeds need three things to grow," Dad said. "They need water, warmth, and light." Every morning,
+    Kofi gave each cup a little splash of water from a blue watering can.
+
+    For four days, nothing happened. Kofi began to worry that his seeds were broken. On the fifth
+    morning, he saw a curly green sprout poking out of the dirt.
+
+    "It worked!" Kofi shouted. Soon every cup had a tiny plant with two round leaves. Kofi measured
+    them with a ruler each week and wrote the numbers in a notebook.
+  pages:
+    - focus: details
+      questions:
+        - ask: Where did Kofi set the cups?
+          starter: Kofi set the cups
+          sample: Kofi set the cups on the sunny kitchen windowsill.
+          evidence: on the sunny kitchen windowsill
+        - ask: What did Kofi see on the fifth morning?
+          starter: On the fifth morning, Kofi saw
+          sample: On the fifth morning, Kofi saw a curly green sprout in the dirt.
+          evidence: a curly green sprout
+        - ask: What did Kofi use to measure the plants?
+          starter: Kofi measured the plants with
+          sample: Kofi measured the plants with a ruler each week.
+          evidence: measured them with a ruler
+    - focus: reasons
+      questions:
+        - ask: What three things do seeds need to grow?
+          starter: Seeds need
+          sample: Seeds need water, warmth, and light to grow.
+          evidence: They need water, warmth, and light.
+        - ask: Why did Kofi begin to worry?
+          starter: Kofi began to worry because
+          sample: Kofi began to worry because nothing happened for four days.
+          evidence: For four days, nothing happened.
+        - ask: How did Kofi feel when he saw the sprout?
+          starter: Kofi felt
+          sample: Kofi felt excited, so he shouted that it worked.
+          evidence: '"It worked!" Kofi shouted.'
+
+- id: e03-a-snowy-morning
+  title: A Snowy Morning
+  text: |
+    Isla woke up and saw that the world outside her window was white. Snow covered the cars, the
+    fences, and the tall pine tree in the yard. The radio said that school was closed for the day.
+
+    Isla pulled on her warm snow pants, her puffy coat, and her red mittens. She and her neighbor,
+    Mr. Ortiz, built a snowman by the sidewalk. They used two stones for its eyes and a stick for its
+    smile.
+
+    Then Isla noticed small tracks in the snow. They led from the fence to the bird bath. "A rabbit
+    hopped here this morning," Mr. Ortiz told her.
+
+    When her fingers got cold, Isla went inside. Her mother made delicious hot cocoa, and Isla watched the
+    snowflakes drift past the window.
+  pages:
+    - focus: details
+      questions:
+        - ask: What did the snow cover outside Isla's window?
+          starter: The snow covered
+          sample: The snow covered the cars, the fences, and the tall pine tree.
+          evidence: Snow covered the cars, the fences, and the tall pine tree
+        - ask: Who helped Isla build a snowman?
+          starter: Mr. Ortiz helped Isla
+          sample: Mr. Ortiz helped Isla build a snowman by the sidewalk.
+          evidence: her neighbor, Mr. Ortiz
+        - ask: What did they use for the snowman's eyes?
+          starter: They used
+          sample: They used two stones for the snowman's eyes.
+          evidence: two stones for its eyes
+    - focus: reasons
+      questions:
+        - ask: Why did Isla stay home from school?
+          starter: Isla stayed home from school because
+          sample: Isla stayed home from school because school was closed for the snow.
+          evidence: school was closed for the day
+        - ask: What made the small tracks in the snow?
+          starter: The small tracks were made by
+          sample: The small tracks were made by a rabbit that hopped there in the morning.
+          evidence: A rabbit hopped here this morning
+        - ask: Why did Isla go inside?
+          starter: Isla went inside because
+          sample: Isla went inside because her fingers got cold.
+          evidence: When her fingers got cold
+
+- id: e04-bread-with-grandpa
+  title: Bread with Grandpa
+  text: |
+    On Saturday, Hugo baked bread with his grandpa. First, they mixed flour, water, salt, and yeast in
+    a big yellow bowl. Grandpa explained that yeast is a tiny living thing that makes bread rise.
+
+    Next, Hugo pushed and folded the sticky dough on the table. "This is called kneading," Grandpa
+    said. Hugo's arms grew tired, but he kept going until the dough felt smooth and soft.
+
+    They covered the bowl with a clean towel and waited for one hour. When Hugo lifted the towel, the dough
+    had grown twice as big!
+
+    Grandpa baked the loaf in the oven until the top was golden brown. The whole house smelled warm and
+    wonderful. Hugo cut the first slice and proudly shared it with his grandma.
+  pages:
+    - focus: details
+      questions:
+        - ask: What did Hugo and Grandpa mix in the bowl?
+          starter: Hugo and Grandpa mixed
+          sample: Hugo and Grandpa mixed flour, water, salt, and yeast in the bowl.
+          evidence: flour, water, salt, and yeast
+        - ask: How long did they wait for the dough?
+          starter: They waited for
+          sample: They waited for one hour for the dough to rise.
+          evidence: waited for one hour
+        - ask: Who did Hugo share the first slice with?
+          starter: Hugo shared the first slice with
+          sample: Hugo shared the first slice with his grandma.
+          evidence: shared it with his grandma
+    - focus: reasons
+      questions:
+        - ask: Why did the bread dough grow bigger?
+          starter: The dough grew bigger because
+          sample: The dough grew bigger because the yeast makes bread rise.
+          evidence: yeast is a tiny living thing that makes bread rise
+        - ask: Why did Hugo's arms grow tired?
+          starter: Hugo's arms grew tired because
+          sample: Hugo's arms grew tired because he pushed and folded the dough.
+          evidence: pushed and folded the sticky dough
+        - ask: How did the house smell when the bread baked?
+          starter: When the bread baked, the house smelled
+          sample: When the bread baked, the house smelled warm and wonderful.
+          evidence: smelled warm and wonderful
+
+- id: e05-the-striped-lighthouse
+  title: The Striped Lighthouse
+  text: |
+    Lena and her family drove to the coast to visit an old lighthouse. It stood on a rocky hill above
+    the ocean, painted with wide red and white stripes.
+
+    A guide named Ms. Bell led them up a winding staircase. Lena counted every step. There were one
+    hundred and twelve! At the top, a giant glass lamp sat inside a small round room.
+
+    "Long ago, this light helped ships find their way at night," Ms. Bell said. "Sailors could see it
+    from many miles away, so they knew where the rocks were."
+
+    Lena looked out the window at the blue water. She spotted a fishing boat and two seals resting on
+    a rock. Before they left, she bought a postcard of the lighthouse for her best friend.
+  pages:
+    - focus: details
+      questions:
+        - ask: Where did the lighthouse stand?
+          starter: The lighthouse stood
+          sample: The lighthouse stood on a rocky hill above the ocean.
+          evidence: on a rocky hill above the ocean
+        - ask: How many steps did Lena count?
+          starter: Lena counted
+          sample: Lena counted one hundred and twelve steps.
+          evidence: one hundred and twelve
+        - ask: What did Lena see from the window?
+          starter: From the window, Lena saw
+          sample: From the window, Lena saw a fishing boat and two seals on a rock.
+          evidence: a fishing boat and two seals
+    - focus: reasons
+      questions:
+        - ask: Why did sailors need the lighthouse?
+          starter: Sailors needed the lighthouse because
+          sample: Sailors needed the lighthouse because it showed them where the rocks were.
+          evidence: so they knew where the rocks were
+        - ask: What sat inside the small round room?
+          starter: Inside the small round room sat
+          sample: Inside the small round room sat a giant glass lamp.
+          evidence: a giant glass lamp
+        - ask: Who did Lena buy the postcard for?
+          starter: Lena bought the postcard for
+          sample: Lena bought the postcard for her best friend.
+          evidence: for her best friend
+
+- id: e06-recycling-day
+  title: Recycling Day
+  text: |
+    Every Tuesday morning, Max helped his mom sort the recycling before the big green truck arrived.
+    They used three bins in the garage: one for paper, one for cans, and one for plastic bottles.
+
+    Max rinsed each bottle in the sink first. "Dirty bottles can spoil a whole load," Mom explained.
+    Then he flattened the cardboard boxes so they would take up less space.
+
+    Max learned that old cans can be melted and made into new cans. Paper can become new notebooks, and
+    some plastic bottles can even be turned into warm jackets.
+
+    When the truck rumbled down the street, Max ran out and waved to the driver. "See you next Tuesday!" he called.
+    He felt proud that his family was helping the earth.
+  pages:
+    - focus: details
+      questions:
+        - ask: How many bins did Max and his mom use?
+          starter: Max and his mom used
+          sample: Max and his mom used three bins in the garage.
+          evidence: three bins in the garage
+        - ask: What did Max do to each bottle first?
+          starter: Max rinsed
+          sample: Max rinsed each bottle in the sink first.
+          evidence: rinsed each bottle in the sink
+        - ask: What can old cans be made into?
+          starter: Old cans can be made into
+          sample: Old cans can be made into new cans.
+          evidence: made into new cans
+    - focus: reasons
+      questions:
+        - ask: Why did Max flatten the cardboard boxes?
+          starter: Max flattened the boxes so
+          sample: Max flattened the boxes so they would take up less space.
+          evidence: so they would take up less space
+        - ask: Why did Max rinse the bottles?
+          starter: Max rinsed the bottles because
+          sample: Max rinsed the bottles because dirty bottles can spoil a whole load.
+          evidence: Dirty bottles can spoil a whole load
+        - ask: How did Max feel about recycling?
+          starter: Max felt
+          sample: Max felt proud that his family was helping the earth.
+          evidence: He felt proud
+
+- id: e07-pebble-the-fish
+  title: Pebble the Fish
+  text: |
+    Mei's class had a small orange fish named Pebble. He lived in a glass tank on the shelf by the
+    reading corner. Each week, a different student got to be the fish helper.
+
+    When it was finally Mei's turn, her teacher showed her what to do. Mei sprinkled a tiny pinch of
+    flakes on the water every morning. "Fish have small stomachs," Mr. Grant said. "Too much food makes
+    the water cloudy."
+
+    Mei also checked the little thermometer on the side of the tank. Pebble needed his water to stay
+    warm, but not hot.
+
+    On Friday, Mei drew a picture of Pebble swimming past his plastic castle. She hung it beside the
+    tank so the next helper would remember to be gentle and careful.
+  pages:
+    - focus: details
+      questions:
+        - ask: What was the name of the class fish?
+          starter: The class fish was named
+          sample: The class fish was named Pebble.
+          evidence: named Pebble
+        - ask: What did Mei sprinkle on the water?
+          starter: Mei sprinkled
+          sample: Mei sprinkled a tiny pinch of flakes on the water.
+          evidence: a tiny pinch of flakes
+        - ask: Where did Mei hang her picture?
+          starter: Mei hung her picture
+          sample: Mei hung her picture beside the tank.
+          evidence: She hung it beside the tank
+    - focus: reasons
+      questions:
+        - ask: Why did Mei give Pebble only a little food?
+          starter: Mei gave Pebble a little food because
+          sample: Mei gave Pebble a little food because too much food makes the water cloudy.
+          evidence: Too much food makes the water cloudy.
+        - ask: Why did Mei check the thermometer?
+          starter: Mei checked the thermometer because
+          sample: Mei checked the thermometer because Pebble's water needed to stay warm.
+          evidence: needed his water to stay warm
+        - ask: Why did Mei hang the picture by the tank?
+          starter: Mei hung the picture by the tank so
+          sample: Mei hung the picture by the tank so the next helper would be gentle.
+          evidence: so the next helper would remember to be gentle
+
+- id: e08-the-kite-festival
+  title: The Kite Festival
+  text: |
+    Nico and his sister went to the kite festival at the beach. The sky was full of kites shaped like
+    dragons, fish, and even an octopus with long, wavy legs.
+
+    Nico had made his own kite from paper, two thin sticks, and a long tail of ribbon. At first, it
+    bounced on the sand and would not rise. A woman in a green hat gave him some advice. "Run toward
+    the wind, then let the string out slowly," she said.
+
+    Nico tried again. This time his kite climbed higher and higher until it looked like a tiny diamond.
+    His sister clapped and cheered.
+
+    At the end of the day, Nico won a small ribbon for the best homemade kite. He tied it to his
+    kite's tail.
+  pages:
+    - focus: details
+      questions:
+        - ask: What shapes were the kites at the festival?
+          starter: The kites were shaped like
+          sample: The kites were shaped like dragons, fish, and an octopus.
+          evidence: shaped like dragons, fish, and even an octopus
+        - ask: What did Nico use to make his kite?
+          starter: Nico made his kite from
+          sample: Nico made his kite from paper, two thin sticks, and ribbon.
+          evidence: paper, two thin sticks, and a long tail of ribbon
+        - ask: What did Nico win?
+          starter: Nico won
+          sample: Nico won a small ribbon for the best homemade kite.
+          evidence: a small ribbon for the best homemade kite
+    - focus: reasons
+      questions:
+        - ask: What advice did the woman give Nico?
+          starter: The woman told Nico to
+          sample: The woman told Nico to run toward the wind and let the string out slowly.
+          evidence: Run toward the wind, then let the string out slowly
+        - ask: Why did Nico's sister clap?
+          starter: Nico's sister clapped because
+          sample: Nico's sister clapped because his kite climbed high into the sky.
+          evidence: climbed higher and higher
+        - ask: Where did Nico tie his ribbon?
+          starter: Nico tied the ribbon to
+          sample: Nico tied the ribbon to his kite's tail.
+          evidence: He tied it to his kite's tail.
+
+- id: e09-olives-library-card
+  title: Olive's Library Card
+  text: |
+    On her birthday, Olive's dad took her to the library. She was getting her very own library card. The
+    librarian, Mrs. Diaz, typed Olive's name into the computer. Then she handed Olive a shiny blue card.
+
+    "You can borrow up to five books at a time," Mrs. Diaz explained. "Bring them back in three weeks
+    so other children can read them too."
+
+    Olive walked slowly between the tall, quiet shelves of books. She chose a book about whales and a book of riddles. She also picked a story about a girl who builds a robot.
+
+    At home, Olive put her books on a special shelf so she would not lose them. Every night before bed,
+    she read a few pages aloud to her little brother.
+  pages:
+    - focus: details
+      questions:
+        - ask: Who gave Olive her library card?
+          starter: Mrs. Diaz gave Olive
+          sample: Mrs. Diaz gave Olive a shiny blue library card.
+          evidence: handed Olive a shiny blue card
+        - ask: How many books can Olive borrow at a time?
+          starter: Olive can borrow
+          sample: Olive can borrow up to five books at a time.
+          evidence: borrow up to five books at a time
+        - ask: What books did Olive choose?
+          starter: Olive chose
+          sample: Olive chose a whale book, a riddle book, and a robot story.
+          evidence: a book about whales and a book of riddles
+    - focus: reasons
+      questions:
+        - ask: Why must Olive bring the books back?
+          starter: Olive must bring the books back so
+          sample: Olive must bring the books back so other children can read them too.
+          evidence: so other children can read them too
+        - ask: Why did Olive put her books on a shelf?
+          starter: Olive put her books on a shelf so
+          sample: Olive put her books on a shelf so she would not lose them.
+          evidence: so she would not lose them
+        - ask: Who did Olive read to every night?
+          starter: Every night, Olive read to
+          sample: Every night, Olive read to her little brother.
+          evidence: read a few pages aloud to her little brother
+
+- id: e10-the-tide-pools
+  title: The Tide Pools
+  text: |
+    When the tide went out, Paz and her grandmother walked along the rocky shore. Small pools of
+    seawater were left behind between the rocks. Her grandma called them tide pools.
+
+    Paz knelt down on a flat rock and looked closely. A purple sea star clung to the side of a rock. Tiny crabs
+    scurried under the seaweed, and a green sea anemone waved its soft arms in the water.
+
+    "We can look, but we should not take anything home," Grandma said. "These animals need the salty
+    water to stay alive."
+
+    Paz gently touched the sea star with one finger. It felt bumpy and hard. Then she drew everything
+    she saw in her notebook, so she could remember the tide pools all winter long.
+  pages:
+    - focus: details
+      questions:
+        - ask: Who walked with Paz along the shore?
+          starter: Paz walked along the shore with
+          sample: Paz walked along the shore with her grandmother.
+          evidence: Paz and her grandmother walked
+        - ask: What did Paz see on the side of a rock?
+          starter: On the side of a rock, Paz saw
+          sample: On the side of a rock, Paz saw a purple sea star.
+          evidence: A purple sea star clung to the side of a rock.
+        - ask: How did the sea star feel?
+          starter: The sea star felt
+          sample: The sea star felt bumpy and hard.
+          evidence: It felt bumpy and hard.
+    - focus: reasons
+      questions:
+        - ask: Why did Paz leave the animals in the pools?
+          starter: Paz left the animals because
+          sample: Paz left the animals because they need salty water to stay alive.
+          evidence: These animals need the salty water to stay alive.
+        - ask: Where did the tiny crabs go?
+          starter: The tiny crabs scurried
+          sample: The tiny crabs scurried under the seaweed.
+          evidence: Tiny crabs scurried under the seaweed
+        - ask: Why did Paz draw in her notebook?
+          starter: Paz drew in her notebook so
+          sample: Paz drew in her notebook so she could remember the tide pools.
+          evidence: so she could remember the tide pools
+
+- id: e11-the-bird-feeder
+  title: The Bird Feeder
+  text: |
+    Quinn and his mother built a bird feeder from an old milk carton. They cut a window in each side
+    and poked a wooden spoon through the bottom for a perch. Then they filled it with sunflower seeds.
+
+    Quinn hung the feeder on a branch outside the kitchen window. For two days, no birds came. "Birds
+    need time to find a new feeder," his mother said. "Be patient."
+
+    On the third morning, a red cardinal landed on the spoon. Soon chickadees and a blue jay came too.
+    Quinn kept a chart of every bird he saw.
+
+    By the end of the week, he had counted seven different kinds of birds. He used a bird book from
+    the library to learn all their names.
+  pages:
+    - focus: details
+      questions:
+        - ask: What did Quinn use to make the bird feeder?
+          starter: Quinn made the bird feeder from
+          sample: Quinn made the bird feeder from an old milk carton.
+          evidence: an old milk carton
+        - ask: What did they fill the feeder with?
+          starter: They filled the feeder with
+          sample: They filled the feeder with sunflower seeds.
+          evidence: filled it with sunflower seeds
+        - ask: Which bird came to the feeder first?
+          starter: The first bird to come was
+          sample: The first bird to come was a red cardinal.
+          evidence: a red cardinal landed on the spoon
+    - focus: reasons
+      questions:
+        - ask: What was the wooden spoon for?
+          starter: The wooden spoon was
+          sample: The wooden spoon was a perch for the birds to stand on.
+          evidence: for a perch
+        - ask: Why did no birds come at first?
+          starter: No birds came at first because
+          sample: No birds came at first because they needed time to find the feeder.
+          evidence: Birds need time to find a new feeder
+        - ask: How did Quinn learn the birds' names?
+          starter: Quinn learned the birds' names by
+          sample: Quinn learned the birds' names by using a bird book from the library.
+          evidence: a bird book from the library
+
+- id: e12-a-day-at-the-museum
+  title: A Day at the Museum
+  text: |
+    Sara's class took a bus to the science museum. In the first hall, a huge dinosaur skeleton stood
+    with its long neck stretched toward the ceiling. "This dinosaur ate only plants," the guide said.
+    "It was as long as two school buses!"
+
+    Next, the class visited the space room. Sara touched a real rock from the moon. It was dark gray
+    and lighter than she expected.
+
+    Her favorite room was full of buttons and levers. Sara turned a crank, and a small light bulb began
+    to glow. "You are making electricity with your own muscles," her teacher explained.
+
+    On the bus ride home, Sara could not stop talking about her day. She told her friend Jada that she wanted to be
+    a scientist someday.
+  pages:
+    - focus: details
+      questions:
+        - ask: Where did Sara's class go?
+          starter: Sara's class went to
+          sample: Sara's class went to the science museum on a bus.
+          evidence: took a bus to the science museum
+        - ask: What did Sara touch in the space room?
+          starter: In the space room, Sara touched
+          sample: In the space room, Sara touched a real rock from the moon.
+          evidence: a real rock from the moon
+        - ask: What did the dinosaur eat?
+          starter: The dinosaur ate
+          sample: The dinosaur ate only plants.
+          evidence: This dinosaur ate only plants
+    - focus: reasons
+      questions:
+        - ask: How long was the dinosaur?
+          starter: The dinosaur was as long as
+          sample: The dinosaur was as long as two school buses.
+          evidence: as long as two school buses
+        - ask: Why did the light bulb glow?
+          starter: The light bulb glowed because
+          sample: The light bulb glowed because Sara made electricity by turning a crank.
+          evidence: Sara turned a crank
+        - ask: What does Sara want to be someday?
+          starter: Sara wants to be
+          sample: Sara wants to be a scientist someday.
+          evidence: she wanted to be a scientist someday
+
+- id: e13-tariqs-green-bike
+  title: Tariq's Green Bike
+  text: |
+    Tariq got a green bike for his birthday, but he did not know how to ride it yet. His older cousin
+    Amir offered to teach him in the empty school parking lot.
+
+    First, Amir lowered the seat so Tariq's feet could touch the ground. "Push with your feet and
+    glide," Amir said. "Practice your balance before you pedal."
+
+    Tariq glided across the lot again and again. He wobbled and put his feet down many times, but he
+    did not give up.
+
+    After an hour, Tariq lifted his feet onto the pedals and pushed. The bike rolled straight ahead, and he did not fall!
+    Amir ran beside him, cheering. That evening, Tariq rode all the way around the block, wearing his
+    helmet and a huge grin.
+  pages:
+    - focus: details
+      questions:
+        - ask: What color was Tariq's new bike?
+          starter: Tariq's new bike was
+          sample: Tariq's new bike was green.
+          evidence: a green bike
+        - ask: Who offered to teach Tariq?
+          starter: Tariq's older cousin Amir offered
+          sample: Tariq's older cousin Amir offered to teach him.
+          evidence: His older cousin Amir offered to teach him
+        - ask: Where did Tariq practice?
+          starter: Tariq practiced in
+          sample: Tariq practiced in the empty school parking lot.
+          evidence: the empty school parking lot
+    - focus: reasons
+      questions:
+        - ask: Why did Amir lower the seat?
+          starter: Amir lowered the seat so
+          sample: Amir lowered the seat so Tariq's feet could touch the ground.
+          evidence: so Tariq's feet could touch the ground
+        - ask: What did Tariq do each time he wobbled?
+          starter: Each time he wobbled, Tariq
+          sample: Each time he wobbled, Tariq put his feet down and kept trying.
+          evidence: put his feet down many times
+        - ask: How did Tariq feel at the end of the day?
+          starter: At the end of the day, Tariq felt
+          sample: At the end of the day, Tariq felt happy because he wore a huge grin.
+          evidence: a huge grin
+
+- id: e14-veras-pumpkin
+  title: Vera's Pumpkin
+  text: |
+    In the spring, Vera planted one pumpkin seed in the corner of the garden. All summer long, she
+    watered the vine and pulled the weeds around it. The vine grew long. It even crept under the
+    fence.
+
+    By September, a round pumpkin sat among the big leaves. It started out green, but slowly it turned
+    bright orange. Vera checked on it every day after school to see how big it was.
+
+    One cool morning, Dad helped her cut the thick stem. The pumpkin was so heavy that Vera needed a
+    wagon to carry it to the porch.
+
+    Vera and her dad scooped out the slippery seeds. They roasted the seeds with a little salt, and
+    then Vera carved a smiling face into her pumpkin.
+  pages:
+    - focus: details
+      questions:
+        - ask: Where did Vera plant the seed?
+          starter: Vera planted the seed in
+          sample: Vera planted the seed in the corner of the garden.
+          evidence: in the corner of the garden
+        - ask: What color was the pumpkin at first?
+          starter: At first, the pumpkin was
+          sample: At first, the pumpkin was green.
+          evidence: It started out green
+        - ask: What did Vera carve into her pumpkin?
+          starter: Vera carved
+          sample: Vera carved a smiling face into her pumpkin.
+          evidence: a smiling face
+    - focus: reasons
+      questions:
+        - ask: Why did Vera need a wagon?
+          starter: Vera needed a wagon because
+          sample: Vera needed a wagon because the pumpkin was so heavy.
+          evidence: The pumpkin was so heavy
+        - ask: What did Vera do for the vine all summer?
+          starter: All summer, Vera
+          sample: All summer, Vera watered the vine and pulled the weeds.
+          evidence: she watered the vine and pulled the weeds
+        - ask: What did they do with the pumpkin seeds?
+          starter: They roasted the seeds
+          sample: They roasted the seeds with a little salt.
+          evidence: roasted the seeds with a little salt
+
+- id: e15-muffins-for-a-neighbor
+  title: Muffins for a Neighbor
+  text: |
+    A moving truck parked across the street from Wes's house. A boy about his age carried a box up the
+    front steps. Wes wanted to say hello, but he felt shy.
+
+    "Why don't you bring him some of our blueberry muffins?" his dad suggested. Wes put three warm
+    muffins on a plate and walked across the street.
+
+    The boy's name was Elias. He had just moved from a city far away, and he did not know anyone yet.
+    Elias smiled when he saw the muffins. "Blueberry is my favorite!" he said.
+
+    The next day, Wes showed Elias the park at the end of the street. They raced to the big oak tree
+    and took turns on the swings. By dinnertime, they were already making plans for the weekend.
+  pages:
+    - focus: details
+      questions:
+        - ask: What did Wes bring to his new neighbor?
+          starter: Wes brought
+          sample: Wes brought three warm blueberry muffins on a plate.
+          evidence: three warm muffins on a plate
+        - ask: What was the new boy's name?
+          starter: The new boy's name was
+          sample: The new boy's name was Elias.
+          evidence: The boy's name was Elias.
+        - ask: Where did Wes take Elias the next day?
+          starter: Wes took Elias to
+          sample: Wes took Elias to the park at the end of the street.
+          evidence: the park at the end of the street
+    - focus: reasons
+      questions:
+        - ask: How did Wes feel at first?
+          starter: At first, Wes felt
+          sample: At first, Wes felt shy about saying hello.
+          evidence: he felt shy
+        - ask: Why did Elias not know anyone yet?
+          starter: Elias did not know anyone because
+          sample: Elias did not know anyone because he had just moved from far away.
+          evidence: He had just moved from a city far away
+        - ask: Why did Elias smile?
+          starter: Elias smiled because
+          sample: Elias smiled because blueberry muffins are his favorite.
+          evidence: Blueberry is my favorite!

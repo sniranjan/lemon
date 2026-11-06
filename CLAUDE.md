@@ -275,6 +275,9 @@ test.** Nothing else in the code should change.
 | `sentence_trace` | EN 4A-C | Picture + a sentence of known words (the 6A frames and truth rules), read, then traced in gray on writing lines (two lines when long) |
 | `fraction_line` | MA M3 F | 5 number lines 0–1 cut into 2, 3, 4, 6, 8 parts (one of each a page); tasks `name` (write the dotted fraction), `mark` (draw a dot), `fill` (write missing tick labels); `unit_only` in part 1. Only whole numbers stored; verify checks ticks, marks and answers |
 | `story_problem` | MA M3 G | 3 short stories a page from `content/math/story_problems.yaml` (33 frames: equal groups, sharing, two-step); one times, one sharing and one two-step story a page. Verify refills each frame from the stored numbers, recomputes the answer and the true-to-life checks |
+| `passage_questions` | EN R3-A/C/D (Foxes Reading, ours) | An original 120–150-word passage (`content/passages/R3/<section>.yaml`) + 3 questions: 2 circle-A/B/C (options shuffled by seed) + 1 written on 2 lines. A passage serves 2 pages ("Read the story again" on the second). Verify: word count, Flesch-Kincaid grade 2.5–4.5 (`ws/readability.py`), US spelling, every question's `evidence` quote is in the text, key matches |
+| `word_builder` | EN R3-B | 4 words to build (un + kind, care + ful, star + fish with pictures), circle the meaning of 2 (wrong choices: the other word part's meaning and another word's), pick the word that fits 2 sentences (built word vs its hand-checked foil). List: `content/wordparts/R3.yaml` |
+| `full_sentence_answer` | EN R3-E | A 120–140-word passage + 3 questions answered in full sentences on lines; part 1 prints each answer's first words (`starter`); sample answers in the key |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the

@@ -40,3 +40,930 @@
         - ask: How did Leo feel at the end of the story? How do you know?
           sample: Leo felt happy at the end, because he smiled and wiped his eyes.
           evidence: Leo smiled and wiped his eyes.
+- id: a02-the-lost-mitten
+  title: The Lost Mitten
+  text: |
+    On a snowy Monday morning, Omar found a small purple mitten on the sidewalk near his school. It had
+    a tiny button shaped like a star. Omar knew that someone would be missing it.
+
+    At recess, he carried the mitten from class to class. He asked every teacher if a student had lost
+    a purple mitten. Nobody knew who owned it, but Omar did not give up.
+
+    After lunch, he saw a little girl named Lily standing near the fence. She was
+    holding one purple mitten and rubbing her cold fingers together.
+
+    Omar walked over and held out the mitten. "I think this belongs to you," he said. Lily's face lit up
+    as she pulled it on. The next day, she drew Omar a picture of a star to say thank you.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Omar?
+          choices: [determined, careless, grumpy]
+          evidence: Omar did not give up.
+        - ask: What did Omar do at recess?
+          choices: [asked teachers about the mitten, played on the swings, built a snowman]
+          evidence: He asked every teacher if a student had lost
+        - ask: What did Omar do that shows he is helpful?
+          sample: Omar carried the mitten around until he found the girl who lost it.
+          evidence: he carried the mitten from class to class
+    - focus: motives
+      questions:
+        - ask: Why did Omar carry the mitten from class to class?
+          choices: [He knew someone would miss it., He wanted to keep it., His teacher told him to.]
+          evidence: Omar knew that someone would be missing it.
+        - ask: How did Omar know the mitten was Lily's?
+          choices: [She held one purple mitten., She told the teacher., She had her name on it.]
+          evidence: holding one purple mitten
+        - ask: Why did Lily draw Omar a picture of a star?
+          sample: Lily drew the picture to thank Omar for finding her mitten.
+          evidence: she drew Omar a picture of a star to say thank you
+
+- id: a03-graces-garden
+  title: "Grace's Tomato Plants"
+  text: |
+    In the spring, Grace planted six tomato seeds in paper cups on the kitchen window. Every morning
+    before breakfast, she checked the soil with her finger. If it felt dry, she gave each cup a little
+    water.
+
+    For two whole weeks, nothing happened. Her cousin Max laughed and said the seeds were broken. Grace
+    just kept watering and waiting.
+
+    Finally, tiny green leaves poked out of the dirt. Grace moved the plants to the backyard and tied
+    each stem to a stick so the wind would not bend it.
+
+    By the end of summer, the plants were taller than Grace. She picked a basket of shiny red tomatoes.
+    Then she carried half of them next door to Mrs. Ortiz, who had shown her how to plant the seeds in
+    the first place.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Grace?
+          choices: [patient, lazy, bossy]
+          evidence: Grace just kept watering and waiting.
+        - ask: What did Grace do every morning?
+          choices: [checked the soil in each cup, picked tomatoes, walked to school with Max]
+          evidence: she checked the soil with her finger
+        - ask: How did Grace show she is thankful?
+          sample: Grace gave half of her tomatoes to Mrs. Ortiz, who helped her plant the seeds.
+          evidence: she carried half of them next door to Mrs. Ortiz
+    - focus: motives
+      questions:
+        - ask: Why did Grace tie each stem to a stick?
+          choices: [so the wind would not bend it, so it would look pretty, so the birds would stay away]
+          evidence: so the wind would not bend it
+        - ask: What did Max think about the seeds?
+          choices: [He thought they were broken., He thought they were too big., He thought they needed sun.]
+          evidence: said the seeds were broken
+        - ask: Why did Grace give tomatoes to Mrs. Ortiz?
+          sample: Grace gave her tomatoes because Mrs. Ortiz showed her how to plant the seeds.
+          evidence: who had shown her how to plant the seeds
+
+- id: a04-tomas-and-the-broken-vase
+  title: Tomás Tells the Truth
+  text: |
+    Tomás was tossing a soft ball in the living room, even though he remembered the family rule. Balls
+    were only for the backyard. Suddenly the ball bounced off the shelf, and Grandma's blue vase crashed to the floor.
+
+    Nobody else was home. Tomás swept the pieces into a pile and sat on the steps to think. He could
+    hide the pieces, but that would not feel right.
+
+    When Grandma came through the door, Tomás stood up and took a deep breath. "I broke your vase," he
+    said quietly. "I was playing ball inside. I'm sorry."
+
+    Grandma hugged him. "Thank you for telling me the truth," she said. "That matters more than any
+    vase." That weekend, they painted a new flowerpot together, and Tomás picked the brightest blue for
+    the stripes.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Tomás?
+          choices: [honest, sneaky, sleepy]
+          evidence: '"I broke your vase," he said quietly.'
+        - ask: What did Tomás do right after the vase broke?
+          choices: [swept up the pieces, ran outside to play, called his friend]
+          evidence: Tomás swept the pieces into a pile
+        - ask: How did Tomás show that he was sorry?
+          sample: Tomás told Grandma the truth and said he was sorry.
+          evidence: I'm sorry.
+    - focus: motives
+      questions:
+        - ask: Why did Tomás not hide the pieces?
+          choices: [It would not feel right., Grandma was watching., He could not find a bag.]
+          evidence: that would not feel right
+        - ask: Why did the vase break?
+          choices: [Tomás played ball inside., The cat knocked it down., Grandma dropped it.]
+          evidence: I was playing ball inside.
+        - ask: Why was Grandma not upset with Tomás?
+          sample: Grandma was not upset because Tomás told her the truth.
+          evidence: Thank you for telling me the truth
+
+- id: a05-priyas-big-jump
+  title: Priya at the Pool
+  text: |
+    All summer, Priya watched the older kids jump off the diving board at the town pool. Her legs
+    wobbled whenever she thought about it. The water looked so deep.
+
+    One afternoon, Priya decided to try. First she practiced jumping from the edge of the shallow end.
+    Next she jumped near the lifeguard, who gave her a thumbs-up. Every day she moved a little farther
+    toward the deep water.
+
+    By August, Priya climbed the ladder to the diving board. Her heart was pounding. She looked down,
+    counted to three, and jumped.
+
+    When she popped up, her dad was clapping from the side of the pool. Priya swam to the ladder,
+    grinning. "Can I do it again?" she asked. She jumped six more times before it was time to go home.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Priya by the end?
+          choices: [brave, shy, careless]
+          evidence: counted to three, and jumped
+        - ask: How did Priya feel about the diving board at first?
+          choices: [nervous, bored, angry]
+          evidence: Her legs wobbled whenever she thought about it.
+        - ask: What did Priya do to get ready to jump?
+          sample: Priya practiced jumping from the edge and moved closer to the deep water each day.
+          evidence: Every day she moved a little farther
+    - focus: motives
+      questions:
+        - ask: Why did Priya's legs wobble?
+          choices: [The water looked so deep., The water was cold., She was very tired.]
+          evidence: The water looked so deep.
+        - ask: What happened after Priya jumped the first time?
+          choices: [She wanted to jump again., She went home right away., She cried to her dad.]
+          evidence: '"Can I do it again?" she asked.'
+        - ask: Why did Priya practice in small steps?
+          sample: Priya practiced in small steps so she would not be so scared of the deep water.
+          evidence: First she practiced jumping from the edge of the shallow end.
+
+- id: a06-bens-lemonade
+  title: Ben's Lemonade Stand
+  text: |
+    Ben wanted to buy a new book about trains, but he did not have enough money. So he set up a
+    lemonade stand on the corner of his street. He made a big sign with bright letters.
+
+    The first hour was very slow. Only one neighbor stopped by. Ben did not pack up. Instead, he moved
+    his table under a shady tree near the park, where many families walked by.
+
+    Soon there was a line of thirsty people. Ben poured cup after cup. Then a little boy came up holding
+    only a nickel. He looked at the lemonade sadly.
+
+    Ben smiled and filled a cup for him anyway. "Today a nickel is the perfect price," he said. At the
+    end of the day, Ben counted his coins. He had enough for the train book, with some left over.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ben?
+          choices: [kind, greedy, rude]
+          evidence: Ben smiled and filled a cup for him anyway.
+        - ask: What did Ben do when the first hour was slow?
+          choices: [moved his table near the park, closed the stand, went inside to play]
+          evidence: he moved his table under a shady tree near the park
+        - ask: What does Ben do that shows he does not give up?
+          sample: Ben moved his stand to a busier place instead of packing up.
+          evidence: Ben did not pack up.
+    - focus: motives
+      questions:
+        - ask: Why did Ben set up a lemonade stand?
+          choices: [to buy a book about trains, to give his sister money, to make new friends]
+          evidence: Ben wanted to buy a new book about trains
+        - ask: Why did Ben move his table near the park?
+          choices: [Many families walked by there., His mom told him to., It was closer to his house.]
+          evidence: where many families walked by
+        - ask: Why did Ben give the boy lemonade for a nickel?
+          sample: Ben gave the boy lemonade because the boy only had a nickel and looked sad.
+          evidence: He looked at the lemonade sadly.
+
+- id: a07-hanas-new-classmate
+  title: A New Friend for Hana
+  text: |
+    One Tuesday, a new girl named Sofia joined Hana's class. Sofia had just moved from another city.
+    She sat at her desk without talking and stared at her pencil box.
+
+    At lunch, Sofia sat alone at the end of a long table. Hana noticed and remembered her own first day
+    at a new school. She had felt lonely too.
+
+    Hana picked up her tray and walked over. "Can I sit with you?" she asked. Sofia nodded. Hana told
+    her which slide was the fastest and which teacher read the funniest stories.
+
+    At recess, Hana invited Sofia to play jump rope with her friends. By the end of the week, Sofia was
+    laughing and turning the rope herself. On Friday, she saved a seat for Hana at lunch.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Hana?
+          choices: [friendly, shy, selfish]
+          evidence: '"Can I sit with you?" she asked.'
+        - ask: How did Sofia act on her first day?
+          choices: [quiet, loud, silly]
+          evidence: She sat at her desk without talking
+        - ask: What did Hana do at recess to help Sofia?
+          sample: Hana invited Sofia to play jump rope with her friends.
+          evidence: Hana invited Sofia to play jump rope with her friends.
+    - focus: motives
+      questions:
+        - ask: Why did Hana sit with Sofia at lunch?
+          choices: [She remembered feeling lonely., The teacher made her., There were no other seats.]
+          evidence: She had felt lonely too.
+        - ask: Why was Sofia new at school?
+          choices: [She moved from another city., She was sick last year., She skipped a grade.]
+          evidence: Sofia had just moved from another city.
+        - ask: How did Sofia change by the end of the week?
+          sample: By the end of the week, Sofia was laughing and playing with the other girls.
+          evidence: Sofia was laughing and turning the rope herself
+
+- id: a08-jamals-science-fair
+  title: Jamal's Bridge
+  text: |
+    For the science fair, Jamal decided to build a bridge out of craft sticks and glue. His goal was to
+    make it strong enough to hold a heavy dictionary.
+
+    His first bridge sagged in the middle. His second bridge snapped when he set the book on it. Jamal
+    felt frustrated, but he grabbed a notebook and wrote down what went wrong.
+
+    He studied pictures of real bridges in a library book. He noticed that many of them used triangles.
+    So Jamal built a third bridge with triangles along both sides.
+
+    This time, the bridge held the dictionary without bending at all. At the fair, Jamal showed his
+    notebook along with the bridge. "My mistakes taught me the most," he told the judges. They gave him
+    a blue ribbon for careful work.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Jamal?
+          choices: [hardworking, careless, bored]
+          evidence: So Jamal built a third bridge with triangles along both sides.
+        - ask: What happened to Jamal's second bridge?
+          choices: [It snapped., It held the book., It got lost.]
+          evidence: His second bridge snapped
+        - ask: What did Jamal do when his bridges did not work?
+          sample: Jamal wrote down what went wrong and looked at pictures of real bridges.
+          evidence: wrote down what went wrong
+    - focus: motives
+      questions:
+        - ask: Why did Jamal add triangles to his third bridge?
+          choices: [Many real bridges used them., His teacher drew them., They were easy to glue.]
+          evidence: He noticed that many of them used triangles.
+        - ask: Why did Jamal read a library book?
+          choices: [to study pictures of bridges, to learn about trains, to find a story to read]
+          evidence: He studied pictures of real bridges in a library book.
+        - ask: Why did Jamal show his notebook at the fair?
+          sample: Jamal showed his notebook because his mistakes taught him how to build the bridge.
+          evidence: My mistakes taught me the most
+
+- id: a09-lucy-and-the-kitten
+  title: "Lucy's Shy Kitten"
+  text: |
+    Lucy's family adopted a gray kitten named Pepper from the animal shelter. On the first day, Pepper
+    hid under the couch and would not come out, even for a treat.
+
+    Lucy wanted to hold the kitten right away. But her mom explained that Pepper was scared in a new
+    home. So Lucy sat quietly on the rug and read a book out loud in a soft voice.
+
+    She did the same thing the next day and the day after that. She never reached under the couch or
+    made loud noises.
+
+    On the fourth day, Pepper crept out and sniffed Lucy's sock. Lucy stayed very still. Then the kitten
+    climbed into her lap, curled into a ball, and began to purr. Lucy smiled and kept reading, turning
+    each page as gently as she could.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Lucy with the kitten?
+          choices: [gentle, rough, impatient]
+          evidence: She never reached under the couch or made loud noises.
+        - ask: What did Lucy do on the rug each day?
+          choices: [read a book out loud, played with a ball, ate a snack]
+          evidence: read a book out loud in a soft voice
+        - ask: How did Lucy show she was patient?
+          sample: Lucy sat and read quietly every day until the kitten came out by itself.
+          evidence: She did the same thing the next day and the day after that.
+    - focus: motives
+      questions:
+        - ask: Why did Pepper hide under the couch?
+          choices: [Pepper was scared in a new home., Pepper wanted a nap., Pepper lost a toy.]
+          evidence: Pepper was scared in a new home.
+        - ask: Why did Lucy read in a soft voice?
+          choices: [so Pepper would not be afraid, so her mom could sleep, so she could practice]
+          evidence: in a soft voice
+        - ask: What happened because Lucy waited for Pepper?
+          sample: Because Lucy waited, Pepper climbed into her lap and began to purr.
+          evidence: the kitten climbed into her lap
+
+- id: a10-kais-soccer-team
+  title: Kai Passes the Ball
+  text: |
+    Kai was the fastest runner on his soccer team, the Green Hawks. He loved to dribble the ball all
+    the way down the field by himself. Sometimes he scored, but often he lost the ball.
+
+    In the last game of the season, Kai raced toward the goal with two players chasing him. Then he
+    spotted his teammate Nora standing wide open near the net.
+
+    Kai remembered what Coach Lee always said. "A team wins together." Instead of kicking the ball
+    himself, he passed it to Nora. She tapped it straight into the goal.
+
+    The Green Hawks won by one point. Nora ran over and gave Kai a high five. "That was the best pass
+    of the year!" she shouted. Coach Lee said Kai had become a true team player.
+  pages:
+    - focus: traits
+      questions:
+        - ask: What was Kai like at the start of the story?
+          choices: [He liked to play alone., He was very slow., He did not like soccer.]
+          evidence: He loved to dribble the ball all the way down the field by himself.
+        - ask: What word did Coach Lee use for Kai at the end?
+          choices: [a true team player, the fastest runner, a careless player]
+          evidence: Kai had become a true team player
+        - ask: How did Kai change during the story?
+          sample: Kai changed from playing by himself to passing the ball to his team.
+          evidence: Instead of kicking the ball himself, he passed it to Nora.
+    - focus: motives
+      questions:
+        - ask: Why did Kai pass the ball to Nora?
+          choices: [Nora was wide open by the net., Kai was very tired., Nora asked for the ball.]
+          evidence: his teammate Nora standing wide open near the net
+        - ask: What happened after Kai passed the ball?
+          choices: [Nora scored a goal., The game ended in a tie., The ball went out.]
+          evidence: She tapped it straight into the goal.
+        - ask: Why did Kai remember Coach Lee's words?
+          sample: Kai remembered the words because he wanted his team to win together.
+          evidence: A team wins together.
+
+- id: a11-rosas-surprise
+  title: "Rosa's Surprise"
+  text: |
+    Rosa woke up early on Saturday and tiptoed past her parents' bedroom. It was her mom's birthday, and
+    Rosa had a plan. She wanted to make breakfast all by herself.
+
+    In the kitchen, she poured cereal into a bowl. She cut a banana with a butter spreader.
+    She asked her older brother, Luis, to help with the toaster, because she was not allowed to use it
+    alone.
+
+    Rosa set the table with a yellow napkin. She picked a flower from the yard and put it in a cup.
+    Then she wrote a card in her neatest handwriting.
+
+    When Mom came downstairs, she gasped. "Did you do all of this?" she asked. Rosa nodded proudly.
+    After breakfast, Rosa washed the bowl and wiped the counter, so the kitchen looked just as clean as
+    before.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Rosa?
+          choices: [thoughtful, lazy, forgetful]
+          evidence: Rosa had a plan.
+        - ask: What did Rosa do after breakfast?
+          choices: [washed the bowl and wiped up, went back to bed, played outside]
+          evidence: Rosa washed the bowl and wiped the counter
+        - ask: How did Rosa show she follows the rules?
+          sample: Rosa asked her brother to help with the toaster because she could not use it alone.
+          evidence: she was not allowed to use it alone
+    - focus: motives
+      questions:
+        - ask: Why did Rosa wake up early?
+          choices: [to make Mom a birthday breakfast, to watch cartoons, to walk the dog]
+          evidence: It was her mom's birthday
+        - ask: Why did Rosa tiptoe past the bedroom?
+          choices: [She wanted it to be a surprise., Her shoes were wet., She was looking for Luis.]
+          evidence: Rosa woke up early on Saturday and tiptoed past her parents' bedroom.
+        - ask: Why did Rosa ask Luis for help?
+          sample: Rosa asked Luis for help because she was not allowed to use the toaster alone.
+          evidence: because she was not allowed to use it alone
+
+- id: a12-ellis-and-the-library-book
+  title: The Sticky Pages
+  text: |
+    Ellis loved a library book about the ocean. He read it every night. One evening, his
+    little sister spilled apple juice on the cover. The pages stuck together at the corner.
+
+    Ellis felt worried. The book belonged to the library, not to him. He thought about sneaking it into the return box. Then he decided that was not fair.
+
+    The next day, Ellis brought the book to the front desk. He showed the librarian, Mr. Patel, the
+    sticky pages. "I want to help fix it," Ellis said. He had brought three dollars from his piggy bank.
+
+    Mr. Patel smiled. He showed Ellis how to dry the pages with paper towels. "Thank you for being
+    responsible," he said. Then he helped Ellis find two more books about sea animals.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ellis?
+          choices: [responsible, careless, rude]
+          evidence: '"I want to help fix it," Ellis said.'
+        - ask: What did Ellis bring from his piggy bank?
+          choices: [three dollars, a new book, a sticker]
+          evidence: He had brought three dollars from his piggy bank.
+        - ask: How did Ellis show he was honest?
+          sample: Ellis showed the librarian the sticky pages instead of hiding them.
+          evidence: He showed the librarian, Mr. Patel, the sticky pages.
+    - focus: motives
+      questions:
+        - ask: Why was Ellis worried about the book?
+          choices: [It belonged to the library., It was too long to read., He could not find it.]
+          evidence: The book belonged to the library, not to him.
+        - ask: How did the pages get sticky?
+          choices: [His sister spilled juice., Ellis dropped it in the bath., It was left in the rain.]
+          evidence: his little sister spilled apple juice on the cover
+        - ask: Why did Ellis bring money from his piggy bank?
+          sample: Ellis brought money because he wanted to help fix the library book.
+          evidence: I want to help fix it
+
+- id: a13-amiras-art-show
+  title: Amira Shares the Paint
+  text: |
+    Amira's class was painting pictures for the school art show. Each table had one set of paints.
+    Amira sat at a table with three other kids.
+
+    Amira wanted to paint a sunset with lots of orange. But her friend Theo needed orange for his
+    pumpkins. He was almost out. Amira looked at the little jar and then at Theo's picture.
+
+    "You can use the orange first," she said. While she waited, Amira mixed red and yellow together in
+    her tray. To her surprise, she made a new orange that glowed like a real sunset.
+
+    At the art show, many people stopped to look at Amira's painting. Theo pointed at it and told his
+    parents, "She shared her paint with me." Amira felt proud of her picture and even prouder of her
+    choice.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Amira?
+          choices: [generous, selfish, grumpy]
+          evidence: '"You can use the orange first," she said.'
+        - ask: What did Amira want to paint?
+          choices: [a sunset, some pumpkins, a tall tree]
+          evidence: Amira wanted to paint a sunset with lots of orange.
+        - ask: How did Amira solve her problem while she waited?
+          sample: Amira mixed red and yellow paint to make her own orange.
+          evidence: Amira mixed red and yellow together in her tray.
+    - focus: motives
+      questions:
+        - ask: Why did Amira let Theo use the orange first?
+          choices: [Theo was almost out of orange., Amira did not like orange., The teacher asked her to.]
+          evidence: He was almost out.
+        - ask: What happened because Amira mixed colors?
+          choices: [She made a glowing orange., Her painting got muddy., She spilled the paint.]
+          evidence: she made a new orange that glowed like a real sunset
+        - ask: Why did Amira feel even prouder of her choice?
+          sample: Amira felt prouder because she shared her paint and helped Theo.
+          evidence: She shared her paint with me.
+- id: a14-lemonade-stand
+  title: The Lemonade Stand
+  text: |
+    On a hot Saturday morning, Nia set up a lemonade stand at the end of her driveway. She painted a
+    bright yellow sign and stacked paper cups beside a big pitcher of lemonade.
+
+    By noon, Nia had sold twelve cups. Then she saw Mr. Grant, her neighbor. He was slowly walking his dog along the sidewalk. He looked tired and thirsty in the strong summer sun.
+
+    Nia remembered last winter. Mr. Grant had shoveled her family's driveway after a big snowstorm. She poured a tall cup of lemonade and carried it across the street.
+
+    "This one is free," she said with a smile. "Thank you for helping us in the snow."
+
+    Mr. Grant laughed and thanked her. The next day, he brought Nia a basket of fresh lemons from his
+    tree.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Nia?
+          choices: [thankful, selfish, sleepy]
+          evidence: Thank you for helping us in the snow.
+        - ask: What did Nia do before she opened her stand?
+          choices: [She painted a bright sign., She baked cookies., She called her friends.]
+          evidence: She painted a bright yellow sign
+        - ask: How did Nia show she was kind to Mr. Grant?
+          sample: Nia showed she was kind by giving Mr. Grant a free cup of lemonade.
+          evidence: '"This one is free," she said with a smile.'
+    - focus: motives
+      questions:
+        - ask: Why did Nia give Mr. Grant free lemonade?
+          choices: [He had helped her family., He asked her for a cup., She had too much left.]
+          evidence: Mr. Grant had shoveled her family's driveway
+        - ask: What happened because of Nia's kind act?
+          choices: [Mr. Grant brought her lemons., Mr. Grant bought ten cups., Mr. Grant moved away.]
+          evidence: he brought Nia a basket of fresh lemons
+        - ask: Why did Nia think Mr. Grant needed a drink?
+          sample: Nia thought he needed a drink because he looked tired and thirsty in the hot sun.
+          evidence: He looked tired and thirsty in the strong summer sun.
+
+- id: a15-tower-of-blocks
+  title: Sam's Tall Tower
+  text: |
+    Sam wanted to build the tallest block tower in his whole class. During free time, he carefully
+    placed one wooden block on top of another. The tower grew past his knees and then past his
+    belly.
+
+    Suddenly the tower wobbled and crashed onto the rug. Blocks rolled everywhere. A few children
+    giggled, and Sam's cheeks turned pink.
+
+    Sam took a deep breath. He did not give up. He looked at the pile and noticed that the bottom of
+    his tower had been too narrow. This time, he made a wide base with four big blocks side by side.
+
+    Slowly the new tower rose higher and higher. When it finally reached his shoulders, his teacher
+    clapped. "You learned from the first tower," she said. Sam grinned and asked his friends to help
+    him build an even bigger one.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Sam?
+          choices: [determined, lazy, bossy]
+          evidence: He did not give up.
+        - ask: How did Sam feel when the tower crashed?
+          choices: [embarrassed, proud, angry at his friends]
+          evidence: Sam's cheeks turned pink.
+        - ask: What did Sam do after his tower fell?
+          sample: Sam took a deep breath and built a new tower with a wide base.
+          evidence: This time, he made a wide base with four big blocks side by side.
+    - focus: motives
+      questions:
+        - ask: Why did Sam make a wide base the second time?
+          choices: [The first base was too narrow., His teacher told him to., He had run out of blocks.]
+          evidence: the bottom of his tower had been too narrow
+        - ask: What happened because Sam kept trying?
+          choices: [His new tower grew very tall., He went home early., He stopped playing with blocks.]
+          evidence: When it finally reached his shoulders, his teacher clapped.
+        - ask: Why do you think Sam asked his friends to help?
+          sample: Sam asked his friends to help because he wanted to build an even bigger tower together.
+          evidence: asked his friends to help him build an even bigger one
+- id: a16-turtle-puzzle
+  title: A Puzzle for Grandma
+  text: |
+    Ivy wanted to give Grandma something special for her birthday. Grandma loved sea turtles, so Ivy
+    bought a puzzle with three hundred pieces. When it was finished, it would show a turtle swimming
+    above a coral reef.
+
+    The puzzle was much harder than Ivy expected. Most of the pieces were the same shade of blue.
+    After an hour, she had finished only one corner. Her cousin said, "Why not just buy a card instead?"
+
+    Ivy shook her head. Every afternoon she sorted the pieces by shape and tried them one at a time.
+    When she felt stuck, she took a short break and came back.
+
+    After eight days, the turtle was complete. Ivy glued the puzzle onto cardboard and wrapped it with a
+    ribbon. Grandma hung it in her kitchen, right above the table, where everyone could see it.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ivy?
+          choices: [patient, lazy, bossy]
+          evidence: Every afternoon she sorted the pieces by shape and tried them one at a time.
+        - ask: What made the puzzle so hard?
+          choices: [Most pieces were the same blue., It had only ten pieces., Some pieces were missing.]
+          evidence: Most of the pieces were the same shade of blue.
+        - ask: What did Ivy do when she felt stuck?
+          sample: When Ivy felt stuck, she took a short break and came back.
+          evidence: When she felt stuck, she took a short break and came back.
+    - focus: motives
+      questions:
+        - ask: Why did Ivy choose a sea turtle puzzle?
+          choices: [Grandma loved sea turtles., It was the smallest one., Her cousin picked it.]
+          evidence: Grandma loved sea turtles
+        - ask: Why did Ivy keep working instead of buying a card?
+          choices: [She wanted to finish her gift., Cards cost too much., The store was closed.]
+          evidence: Ivy shook her head.
+        - ask: How do you know Grandma liked the gift?
+          sample: Grandma liked the gift because she hung it in her kitchen where everyone could see it.
+          evidence: Grandma hung it in her kitchen
+
+- id: a17-class-play
+  title: The Quiet Tree
+  text: |
+    Mateo's class was putting on a play about a forest. Everyone wanted to be the brave fox or the
+    clever owl. Mateo was very shy, so he asked to be a tree. A tree did not have to say any words.
+
+    On the night of the play, the girl who played the owl suddenly lost her voice. She could only
+    squeak. The teacher looked worried. "Does anyone know the owl's lines?" she asked.
+
+    Mateo's heart pounded. He had practiced every part at home with his grandmother. Slowly, he raised
+    his hand.
+
+    Mateo put on the feathery owl mask and stepped onto the stage. His knees shook, but his voice was
+    clear and strong. When the play ended, the audience cheered loudly. The girl who played the owl
+    gave Mateo a big hug and whispered, "Thank you."
+  pages:
+    - focus: traits
+      questions:
+        - ask: What was Mateo like at the start of the story?
+          choices: [shy, loud, bossy]
+          evidence: Mateo was very shy
+        - ask: How did Mateo know the owl's lines?
+          choices: [He practiced at home., The teacher gave him a note., He made them up.]
+          evidence: He had practiced every part at home with his grandmother.
+        - ask: How did Mateo show he was brave?
+          sample: Mateo showed he was brave by raising his hand and playing the owl.
+          evidence: Slowly, he raised his hand.
+    - focus: motives
+      questions:
+        - ask: Why did Mateo first ask to be a tree?
+          choices: [A tree had no words to say., Trees were his favorite part., The teacher chose him.]
+          evidence: A tree did not have to say any words.
+        - ask: Why did the teacher need someone new?
+          choices: [The owl lost her voice., The fox went home sick., The owl mask broke.]
+          evidence: the girl who played the owl suddenly lost her voice
+        - ask: Why did the girl thank Mateo?
+          sample: The girl thanked Mateo because he played the owl when she lost her voice.
+          evidence: The girl who played the owl gave Mateo a big hug
+- id: a18-grandpas-garden
+  title: Ava Waters the Garden
+  text: |
+    Every summer, Ava stayed with her grandpa for two weeks. Grandpa grew tomatoes, beans, and tall
+    sunflowers in his backyard garden. This year, he had a sore back and could not bend down.
+
+    "Can you take care of the garden for me?" Grandpa asked.
+
+    Ava agreed. Each morning, she woke up early and filled the heavy watering can. She pulled weeds,
+    even when her friends called her to come and play. She wrote notes in a small notebook about how
+    tall each sunflower grew.
+
+    One hot week, the beans began to droop. Ava did not panic. She looked in Grandpa's garden book and
+    learned that beans need more water on hot days. She watered them twice a day.
+
+    By the end of her visit, Grandpa's basket was full of ripe vegetables. "You are a true gardener,"
+    he said proudly.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ava?
+          choices: [responsible, forgetful, grumpy]
+          evidence: Each morning, she woke up early and filled the heavy watering can.
+        - ask: What did Ava write in her notebook?
+          choices: [how tall the sunflowers grew, a list of her friends, a letter to her mom]
+          evidence: She wrote notes in a small notebook about how tall each sunflower grew.
+        - ask: What did Ava do when the beans began to droop?
+          sample: Ava read Grandpa's garden book and watered the beans twice a day.
+          evidence: She watered them twice a day.
+    - focus: motives
+      questions:
+        - ask: Why did Grandpa ask Ava to help?
+          choices: [He had a sore back., He was going on a trip., He did not like gardens.]
+          evidence: he had a sore back and could not bend down
+        - ask: Why did Ava water the beans twice a day?
+          choices: [Beans need more water when hot., Grandpa told her to play., The can was too small.]
+          evidence: beans need more water on hot days
+        - ask: Why did Grandpa call Ava a true gardener?
+          sample: Grandpa called her a true gardener because she took good care of the garden.
+          evidence: '"You are a true gardener," he said proudly.'
+- id: a19-new-student
+  title: A Seat for Ravi
+  text: |
+    Ravi was a new student at Maple Street School. On his first day, he carried his lunch tray around
+    the busy lunchroom. Every table seemed full, and he did not know anyone's name.
+
+    Ellie saw Ravi standing alone by the window. She remembered her own first day last year, when
+    she had felt nervous and lonely. She quickly moved her backpack off the empty chair beside her.
+
+    "You can sit here," Ellie called, waving her hand.
+
+    Ravi smiled and sat down. Ellie asked about his old town.
+    Ravi told her about the river near his house. They both liked to draw animals. They traded
+    doodles on their napkins.
+
+    After lunch, Ellie took Ravi to meet her friends at recess. By the end of the week, Ravi knew
+    everyone in his class, and he always saved a seat for Ellie.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ellie?
+          choices: [friendly, rude, shy]
+          evidence: '"You can sit here," Ellie called, waving her hand.'
+        - ask: How did Ravi feel when he walked into the cafeteria?
+          choices: [lonely, excited, angry]
+          evidence: he did not know anyone's name
+        - ask: What did Ellie do to make room for Ravi?
+          sample: Ellie moved her backpack off the empty chair so Ravi could sit.
+          evidence: She quickly moved her backpack off the empty chair beside her.
+    - focus: motives
+      questions:
+        - ask: Why did Ellie want to help Ravi?
+          choices: [She remembered her first day., The teacher asked her to., She wanted his lunch.]
+          evidence: She remembered her own first day last year
+        - ask: What happened because Ellie helped Ravi?
+          choices: [Ravi made many friends., Ravi went back to his old town., Ravi ate lunch alone.]
+          evidence: Ravi knew everyone in his class
+        - ask: Why did Ravi always save a seat for Ellie?
+          sample: Ravi saved a seat for Ellie because she was kind to him on his first day.
+          evidence: he always saved a seat for Ellie
+- id: a20-soccer-goalie
+  title: Zara Plays Goalie
+  text: |
+    Zara loved to play forward on her soccer team. She was fast, and she scored a goal almost every
+    game. One Saturday, the team's goalie stayed home with a cold.
+
+    "Who will play goalie today?" asked Coach Rivera. Nobody raised a hand. Being goalie meant
+    standing still and stopping hard kicks.
+
+    Zara looked at her teammates. She knew the team could not play without a goalie. "I will do it,"
+    she said, even though she wished she could run and score.
+
+    Zara pulled on the big padded gloves. During the game, she dove for the ball again and again.
+    She stopped five kicks in a row. The other team scored once, but Zara's team won by one goal.
+
+    After the game, Coach Rivera gave Zara a gold star sticker. "You put the team first," he said.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Zara?
+          choices: [helpful, selfish, careless]
+          evidence: She knew the team could not play without a goalie.
+        - ask: What did Zara usually like to do in soccer?
+          choices: [run and score goals, sit on the bench, stand in the goal]
+          evidence: she scored a goal almost every game
+        - ask: How did Zara show she was a good goalie?
+          sample: Zara dove for the ball and stopped five kicks in a row.
+          evidence: She stopped five kicks in a row.
+    - focus: motives
+      questions:
+        - ask: Why did the team need a new goalie?
+          choices: [Their goalie had a cold., Their goalie moved away., Their goalie was late.]
+          evidence: the team's goalie stayed home with a cold
+        - ask: Why did Zara say she would play goalie?
+          choices: [The team needed a goalie., She did not like running., Her mom told her to.]
+          evidence: She knew the team could not play without a goalie.
+        - ask: Why did the coach say Zara put the team first?
+          sample: The coach said that because Zara played goalie even though she wanted to score.
+          evidence: even though she wished she could run and score
+- id: a21-curious-bug
+  title: Felix and the Snail
+  text: |
+    Felix was always asking questions. Why is the sky blue? Where do birds sleep? One rainy morning, he
+    found a small snail crawling slowly across the wet sidewalk.
+
+    Instead of walking past, Felix crouched down to watch. He noticed that the snail left a shiny
+    trail behind it. He wondered why, so he carefully carried the snail to his porch on a big leaf.
+
+    Felix grabbed his magnifying glass and a notebook. He drew the snail's swirly shell and its two
+    long feelers. Then he asked his mom to help him look up snails on the computer. They learned that
+    the shiny slime helps snails move smoothly.
+
+    Before lunch, Felix gently carried the snail back to the garden. "Thank you for teaching me," he
+    whispered. That night, he started a new notebook called Felix's Nature Questions.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Felix?
+          choices: [curious, bored, careless]
+          evidence: Felix was always asking questions.
+        - ask: What did Felix notice about the snail?
+          choices: [It left a shiny trail., It had wings., It was very fast.]
+          evidence: the snail left a shiny trail behind it
+        - ask: How did Felix show he was gentle with the snail?
+          sample: Felix carried the snail on a leaf and gently put it back in the garden.
+          evidence: Felix gently carried the snail back to the garden.
+    - focus: motives
+      questions:
+        - ask: Why did Felix take the snail to his porch?
+          choices: [He wanted to study it., He wanted to keep it forever., His mom asked for it.]
+          evidence: He wondered why
+        - ask: Why did Felix and his mom use the computer?
+          choices: [To learn about snails., To play a game., To watch a movie.]
+          evidence: help him look up snails on the computer
+        - ask: Why did Felix start a new notebook?
+          sample: Felix started a new notebook because he wanted to write down more nature questions.
+          evidence: he started a new notebook called Felix's Nature Questions
+- id: a22-piano-recital
+  title: June Practices Piano
+  text: |
+    June was learning a song on the piano for her first recital. The song had a tricky part in the
+    middle. Her fingers always tangled there.
+
+    Every day after school, June sat at the piano for twenty minutes. She played the tricky part
+    slowly, one note at a time. Sometimes she wanted to quit and go outside to play. Instead, she set
+    a timer and kept going.
+
+    A week before the recital, June's little cousin Theo visited. He banged on the low keys while she
+    practiced. June felt frustrated, but she did not yell. She showed Theo how to play a simple tune
+    with one finger. Then she finished her practice.
+
+    On the night of the recital, June played the whole song without a single mistake. Theo clapped
+    the loudest of anyone in the room.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes June?
+          choices: [hardworking, lazy, forgetful]
+          evidence: Every day after school, June sat at the piano for twenty minutes.
+        - ask: How did June practice the tricky part?
+          choices: ["slowly, one note at a time", as fast as she could, with her eyes closed]
+          evidence: She played the tricky part slowly, one note at a time.
+        - ask: How did June show patience with Theo?
+          sample: June did not yell and showed Theo how to play a simple tune.
+          evidence: She showed Theo how to play a simple tune with one finger
+    - focus: motives
+      questions:
+        - ask: Why did June practice every day?
+          choices: [She had a recital coming., Her friends asked her to., She was bored at home.]
+          evidence: for her first recital
+        - ask: Why did June set a timer?
+          choices: ["To keep going, not quit.", To know when lunch was., To time Theo's turn.]
+          evidence: Instead, she set a timer and kept going.
+        - ask: Why do you think Theo clapped the loudest?
+          sample: Theo clapped the loudest because June was kind to him and played so well.
+          evidence: Theo clapped the loudest of anyone in the room.
+- id: a23-birdhouse
+  title: "Theo's Birdhouse"
+  text: |
+    Theo wanted to build a birdhouse for the blue jays in his backyard. He did not have a kit, so he
+    looked around the garage for things he could use.
+
+    He found an old shoebox, some craft sticks, and a cardboard tube. Theo cut a round door in the
+    box and glued the craft sticks on top to make a roof. He used the cardboard tube as a little
+    perch. Then he painted the whole house with bright stripes.
+
+    His older sister asked, "What if it rains?" Theo thought for a moment. He wrapped the roof in a
+    piece of plastic from an old shower curtain.
+
+    Theo's dad helped him hang the birdhouse on a low branch. The next morning, Theo peeked out the
+    window. Two small birds were already peeking out of the round door.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Theo?
+          choices: [creative, careless, grumpy]
+          evidence: He found an old shoebox, some craft sticks, and a cardboard tube.
+        - ask: What did Theo use to make the roof?
+          choices: [craft sticks, an old shoe, a paper plate]
+          evidence: glued the craft sticks on top to make a roof
+        - ask: What did Theo do when his sister asked about rain?
+          sample: Theo wrapped the roof in plastic from an old shower curtain.
+          evidence: He wrapped the roof in a piece of plastic from an old shower curtain.
+    - focus: motives
+      questions:
+        - ask: Why did Theo look around the garage?
+          choices: [He did not have a kit., He lost his bike there., His dad asked him to clean.]
+          evidence: He did not have a kit, so he looked around the garage
+        - ask: Why did Theo add plastic to the roof?
+          choices: [To keep the rain out., To make it look shiny., To make it heavier.]
+          evidence: '"What if it rains?"'
+        - ask: Why did Theo build the birdhouse?
+          sample: Theo built the birdhouse because he wanted a home for the birds in his backyard.
+          evidence: Theo wanted to build a birdhouse for the blue jays in his backyard.
+- id: a24-bake-sale
+  title: "Noah's Cookies"
+  text: |
+    Noah's class was having a bake sale to raise money for new library books. Noah and his mom baked
+    two dozen oatmeal cookies. He wrapped each cookie in a napkin and tied it with a ribbon.
+
+    At the sale, Noah sold his cookies quickly. Then he saw that his friend Lily had not sold a
+    thing. Her cupcakes had melted a little in the warm car, and the frosting had slid sideways.
+
+    Noah had one ribbon left in his pocket. He helped Lily put her cupcakes into paper cups and
+    tied a bow on her basket. He also made a new sign that said, "Silly Cupcakes, Extra Sweet!"
+
+    Soon, children lined up to buy the funny-looking cupcakes. Lily laughed and clapped. Together,
+    the class raised enough money for twenty new books.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Noah?
+          choices: [helpful, selfish, lazy]
+          evidence: He helped Lily put her cupcakes into paper cups
+        - ask: How did Noah wrap each cookie?
+          choices: [in a napkin with a ribbon, in a plastic bag, in a large box]
+          evidence: wrapped each cookie in a napkin and tied it with a ribbon
+        - ask: How did Noah show he was clever?
+          sample: Noah made a funny sign that helped Lily sell her melted cupcakes.
+          evidence: '"Silly Cupcakes, Extra Sweet!"'
+    - focus: motives
+      questions:
+        - ask: Why was the class having a bake sale?
+          choices: [to buy new library books, to buy a class pet, to plan a field trip]
+          evidence: to raise money for new library books
+        - ask: Why had Lily not sold any cupcakes?
+          choices: [Her cupcakes had melted., She arrived very late., She forgot her basket.]
+          evidence: Her cupcakes had melted a little in the warm car
+        - ask: What happened after Noah made the new sign?
+          sample: After Noah made the sign, children lined up to buy Lily's cupcakes.
+          evidence: Soon, children lined up to buy the funny-looking cupcakes.
+- id: a25-snowy-walk
+  title: The Snowy Sidewalk
+  text: |
+    Early one winter morning, Ravi looked out his window. Snow covered the whole street like a thick
+    white blanket. His friend Mrs. Patel, who lived next door, walked to the bakery every morning with
+    her cane.
+
+    Ravi knew the sidewalk would be slippery for Mrs. Patel. He pulled on his boots, mittens, and
+    warm hat. Then he grabbed the small red shovel from the garage.
+
+    It was hard work. The snow was heavy, and Ravi's arms grew tired. He stopped to rest twice, but he
+    kept shoveling until the path from her door to the corner was clear. He even sprinkled sand on
+    the icy spots.
+
+    When Mrs. Patel stepped outside, she smiled. "What a wonderful surprise," she said. That
+    afternoon, she brought Ravi a warm cinnamon roll from the bakery.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Ravi?
+          choices: [thoughtful, careless, rude]
+          evidence: Ravi knew the sidewalk would be slippery for Mrs. Patel.
+        - ask: What did Ravi do when his arms grew tired?
+          choices: [He rested and kept going., He went back inside., He asked his dad to finish.]
+          evidence: He stopped to rest twice, but he kept shoveling
+        - ask: How did Ravi make the icy spots safer?
+          sample: Ravi made the icy spots safer by sprinkling sand on them.
+          evidence: He even sprinkled sand on the icy spots.
+    - focus: motives
+      questions:
+        - ask: Why did Ravi shovel the sidewalk?
+          choices: [It was slippery for Mrs. Patel., He wanted to build a snowman., His mom paid him.]
+          evidence: Ravi knew the sidewalk would be slippery for Mrs. Patel.
+        - ask: How did Mrs. Patel feel when she stepped outside?
+          choices: [happy and surprised, sad and tired, cold and grumpy]
+          evidence: '"What a wonderful surprise," she said.'
+        - ask: Why did Mrs. Patel bring Ravi a cinnamon roll?
+          sample: She brought Ravi a cinnamon roll to thank him for clearing the sidewalk.
+          evidence: she brought Ravi a warm cinnamon roll from the bakery

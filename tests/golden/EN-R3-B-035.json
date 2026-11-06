@@ -1,0 +1,124 @@
+{
+  "id": "EN-R3-B-035",
+  "subject": "english",
+  "level": "R3",
+  "section": "B",
+  "part": 6,
+  "sheet_type": "word_builder",
+  "page_number": 85,
+  "variant": 1,
+  "seed": 7668996182273329508,
+  "title": "Two words in one",
+  "parent_tip": "Read each word, then clap once for each small word inside it.",
+  "items": [
+    {
+      "kind": "rule",
+      "parts": [
+        {
+          "show": "word + word",
+          "means": "two words in one"
+        }
+      ]
+    },
+    {
+      "kind": "build",
+      "n": 1,
+      "first": "door",
+      "second": "bell",
+      "built": "doorbell",
+      "pictures": [
+        "door",
+        "bell"
+      ]
+    },
+    {
+      "kind": "build",
+      "n": 2,
+      "first": "cup",
+      "second": "cake",
+      "built": "cupcake",
+      "pictures": [
+        "cup",
+        "cake"
+      ]
+    },
+    {
+      "kind": "build",
+      "n": 3,
+      "first": "hand",
+      "second": "bag",
+      "built": "handbag",
+      "pictures": [
+        "hand",
+        "bag"
+      ]
+    },
+    {
+      "kind": "build",
+      "n": 4,
+      "first": "fish",
+      "second": "bowl",
+      "built": "fishbowl",
+      "pictures": [
+        "fish",
+        "bowl"
+      ]
+    },
+    {
+      "kind": "meaning",
+      "n": 5,
+      "built": "doorbell",
+      "choices": [
+        "a box of sand to play in",
+        "a bell you ring at a door",
+        "a ball made of snow"
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "meaning",
+      "n": 6,
+      "built": "handbag",
+      "choices": [
+        "a fish with whiskers like a cat",
+        "a bell you ring at a door",
+        "a small bag you carry by hand"
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "sentence",
+      "n": 7,
+      "before": "I put pink frosting on top of my ",
+      "after": ".",
+      "options": [
+        "cupcake",
+        "fishbowl"
+      ],
+      "answer": "cupcake"
+    },
+    {
+      "kind": "sentence",
+      "n": 8,
+      "before": "Our goldfish swims around and around in its ",
+      "after": ".",
+      "options": [
+        "eggshell",
+        "fishbowl"
+      ],
+      "answer": "fishbowl"
+    }
+  ],
+  "answer_key": [
+    "1. doorbell",
+    "2. cupcake",
+    "3. handbag",
+    "4. fishbowl",
+    "5. B (a bell you ring at a door)",
+    "6. C (a small bag you carry by hand)",
+    "7. cupcake",
+    "8. fishbowl"
+  ],
+  "new_words": [],
+  "review_words": []
+}

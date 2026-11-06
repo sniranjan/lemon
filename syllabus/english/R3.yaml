@@ -20,6 +20,7 @@ rules:
   # ws/plan.py plan_passages: each passage page is one question set of one passage, in file order;
   # a passage has one set per page it serves (2 here), so the same text is read on two days.
   planner: passages
+  answers: by_line            # answers PDF: one line per answer (sample sentences), ws/booklet.py
   passage_words: [120, 150]
   fk_grade: [2.5, 4.5]       # Flesch-Kincaid grade of every passage (ws/readability.py)
   pages_per_passage: 2       # each passage is read on two pages, with different questions
@@ -51,7 +52,10 @@ sections:
       - { part: 4, pages: [73, 78], name: "-less means without", rules: { affixes: [less] } }
       - { part: 5, pages: [79, 84], name: All four,              rules: { affixes: [un, re, ful, less] } }
       # Compound words are grade 2 (L.2.4d); here they close the section with meaning-in-a-sentence work.
-      - { part: 6, pages: [85, 90], name: Two words in one,      rules: { affixes: [compound] }, standards: [L.2.4d] }
+      - { part: 6, pages: [85, 90], name: Two words in one,      standards: [L.2.4d],
+          rules: { affixes: [compound], tips: { word_builder: [
+            "Say both picture words, then put them together into one word.",
+            "Read each word, then clap once for each small word inside it." ] } } }
 
   - code: C
     name: Fables and Morals
@@ -60,7 +64,13 @@ sections:
     sheet_types: [passage_questions]
     standards: [RL.3.2, RL.3.1]
     source: ours
-    rules: { passages: C }
+    rules:
+      passages: C
+      tips:
+        passage_questions:
+          - "Ask: what did the animal learn? When have you learned that too?"
+          - "Retell the fable together in three parts: start, middle and end."
+          - "Ask which part of the fable shows the lesson best, and why."
 
   - code: D
     name: Feelings and Reasons
@@ -69,7 +79,13 @@ sections:
     sheet_types: [passage_questions]
     standards: [RL.3.3, RL.3.1]
     source: ours
-    rules: { passages: D }
+    rules:
+      passages: D
+      tips:
+        passage_questions:
+          - "Talk about the feeling words: when have you felt that way?"
+          - "Ask why the character felt that way. Find the words that show it."
+          - "Ask how the feeling changed from the start to the end, and why."
 
   # Turn the question into the answer: "Why did Ben smile?" -> "Ben smiled because ...".
   # Part 1 gives the first words of each answer; part 2 doesn't.

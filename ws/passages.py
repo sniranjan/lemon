@@ -32,6 +32,7 @@ from .readability import fk_grade, words
 BLANK = "___"
 MAX_ASK = 60       # characters: one line at 20px
 MAX_CHOICE = 40    # characters: a choice never wraps
+MAX_TITLE = 22     # characters: the title stays on one line in the header
 
 
 class _Strict(BaseModel):
@@ -140,6 +141,8 @@ def passage_problems(p: Passage, rules: dict, section: str) -> list[str]:
     lo, hi = rules.get("passage_words", [120, 150])
     if not lo <= n <= hi:
         out.append(f"passage {p.id}: {n} words (needs {lo}–{hi})")
+    if len(p.title) > MAX_TITLE:
+        out.append(f"passage {p.id}: title is {len(p.title)} characters (max {MAX_TITLE})")
     fk_lo, fk_hi = rules.get("fk_grade", [2.5, 4.5])
     fk = fk_grade(p.text)
     if not fk_lo <= fk <= fk_hi:
@@ -189,8 +192,8 @@ def wordpart_problems(w: WordPart, known: set[str]) -> list[str]:
         out.append(f"{w.built}: {w.base} + {w.affix} doesn't spell it")
     if w.sentence.count(BLANK) != 1:
         out.append(f"{w.built}: the sentence needs exactly one blank ({BLANK})")
-    if w.foil == w.built or w.foil not in known:
-        out.append(f"{w.built}: foil {w.foil!r} must be another built word")
+    if w.foil == w.built or (w.foil not in known and w.foil != w.base):
+        out.append(f"{w.built}: foil {w.foil!r} must be its base word or another built word")
     return out
 
 
@@ -274,7 +277,7 @@ def build_passage_items(ctx, write_lines: int) -> tuple[str, list[dict], list[st
             if q.starter and starters:
                 item["starter"] = q.starter
             items.append(item)
-            key.append(f"{n}. {q.sample}")
+            key.append(f"{n}. Sample: {q.sample}")
     return p.title, items, key
 
 
@@ -312,7 +315,7 @@ def check_passage_sheet(sheet, write_lines: int) -> list[str]:
         else:
             if item["kind"] != "write" or item["lines"] != write_lines:
                 out.append(f"question {n}: needs {write_lines} writing lines")
-            key.append(f"{n}. {q.sample}")
+            key.append(f"{n}. Sample: {q.sample}")
     if sheet.answer_key != key:
         out.append("answer key doesn't match the questions")
     return out
