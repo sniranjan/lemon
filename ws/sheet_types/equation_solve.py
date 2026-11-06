@@ -10,7 +10,10 @@ Rules (merged level → section → part):
 - `title`: the sheet title.
 Numbers are stored as text ("2.5", "3/4", "1 1/2"); verify solves every equation again exactly
 (x = q − p or x = q ÷ p, with Fraction) and checks the kinds and ranges.
-Lions math adds `mode: multi_step` (multi-step equations, 8.EE.7): see _multi_step.py.
+
+`mode: two_step` (Penguins math, 7.EE.4): two-step equations px + q = r, p(x + q) = r, x/p + q = r
+and inequalities graphed on a number line, with negative numbers; see _two_step.py.
+`mode: multi_step` (Lions math, 8.EE.7): multi-step equations; see _multi_step.py.
 """
 
 from __future__ import annotations
@@ -19,6 +22,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
+from . import _two_step
 from ._common import error
 from ._multi_step import MultiStep
 from ._rational import fmt, parse
@@ -74,11 +78,15 @@ class EquationSolve(SheetType):
 
     def template_for(self, sheet: Sheet) -> str:
         mode = MODES.get(_mode(sheet))
-        return mode.template if mode else self.template
+        if mode:
+            return mode.template
+        return _two_step.TEMPLATE if sheet.items and sheet.items[0].get("kind") == "two_step" else self.template
 
     def generate(self, ctx: GenContext) -> SheetContent:
         if ctx.rules.get("mode") in MODES:
             return MODES[ctx.rules["mode"]]().generate(ctx)
+        if _two_step.is_two_step(ctx.rules):
+            return _two_step.generate(ctx, self.name)
         r = ctx.rules
         rng = ctx.rng
         max_q = r.get("max_q", 100)
@@ -122,6 +130,8 @@ class EquationSolve(SheetType):
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if _two_step.is_two_step(r):
+            return _two_step.verify(sheet, r)
         items = sheet.items
         issues: list[Issue] = []
         count = r.get("problems", PROBLEMS)

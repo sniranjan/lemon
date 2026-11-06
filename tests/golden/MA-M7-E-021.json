@@ -1,0 +1,155 @@
+{
+  "id": "MA-M7-E-021",
+  "subject": "math",
+  "level": "M7",
+  "section": "E",
+  "part": 3,
+  "sheet_type": "expression_eval",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 8105041801459310921,
+  "title": "Factor and rewrite",
+  "parent_tip": "To factor, find the biggest number that divides both terms. Write it outside and what is left inside the brackets.",
+  "items": [
+    {
+      "kind": "tidy",
+      "n": 1,
+      "task": "factor",
+      "src": "6*n - 4",
+      "show": [
+        "6n − 4"
+      ],
+      "answer": "2(3n − 2)"
+    },
+    {
+      "kind": "tidy",
+      "n": 2,
+      "task": "factor",
+      "src": "18*x + 12",
+      "show": [
+        "18x + 12"
+      ],
+      "answer": "6(3x + 2)"
+    },
+    {
+      "kind": "tidy",
+      "n": 3,
+      "task": "fractions",
+      "src": "3/8*n + 1/6*n - 1/3",
+      "show": [
+        {
+          "n": 3,
+          "d": 8
+        },
+        "n + ",
+        {
+          "n": 1,
+          "d": 6
+        },
+        "n − ",
+        {
+          "n": 1,
+          "d": 3
+        }
+      ],
+      "answer": "13/24n − 1/3"
+    },
+    {
+      "kind": "tidy",
+      "n": 4,
+      "task": "rewrite",
+      "src": "t + 0.15*t",
+      "show": [
+        "t + 0.15t"
+      ],
+      "answer": "1.15t"
+    },
+    {
+      "kind": "tidy",
+      "n": 5,
+      "task": "factor",
+      "src": "18*y + 4",
+      "show": [
+        "18y + 4"
+      ],
+      "answer": "2(9y + 2)"
+    },
+    {
+      "kind": "tidy",
+      "n": 6,
+      "task": "factor",
+      "src": "7*p + 28",
+      "show": [
+        "7p + 28"
+      ],
+      "answer": "7(p + 4)"
+    },
+    {
+      "kind": "tidy",
+      "n": 7,
+      "task": "fractions",
+      "src": "3/2*x - 1/2*x + 3/2",
+      "show": [
+        {
+          "n": 3,
+          "d": 2
+        },
+        "x − ",
+        {
+          "n": 1,
+          "d": 2
+        },
+        "x + ",
+        {
+          "n": 3,
+          "d": 2
+        }
+      ],
+      "answer": "x + 3/2"
+    },
+    {
+      "kind": "tidy",
+      "n": 8,
+      "task": "rewrite",
+      "src": "n - 0.15*n",
+      "show": [
+        "n − 0.15n"
+      ],
+      "answer": "0.85n"
+    },
+    {
+      "kind": "tidy",
+      "n": 9,
+      "task": "factor",
+      "src": "5*p + 45",
+      "show": [
+        "5p + 45"
+      ],
+      "answer": "5(p + 9)"
+    },
+    {
+      "kind": "tidy",
+      "n": 10,
+      "task": "factor",
+      "src": "12*p + 54",
+      "show": [
+        "12p + 54"
+      ],
+      "answer": "6(2p + 9)"
+    }
+  ],
+  "answer_key": [
+    "2(3n − 2)",
+    "6(3x + 2)",
+    "13/24n − 1/3",
+    "1.15t",
+    "2(9y + 2)",
+    "7(p + 4)",
+    "x + 3/2",
+    "0.85n",
+    "5(p + 9)",
+    "6(2p + 9)"
+  ],
+  "new_words": [],
+  "review_words": []
+}

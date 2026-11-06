@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+{% from "_math_text.html.j2" import mt, mt_css %}
+{# Tidy expressions: two columns of cards, each with the expression and "= ☐" (a wide box for the
+   tidy form) underneath, leaving room to circle like terms. #}
+{% block style %}
+{{ mt_css() }}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px 18px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 8px 16px 8px 32px; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.ex { font-size: 32px; font-weight: 700; white-space: nowrap; }
+.ans { align-self: flex-end; display: flex; align-items: center; gap: 8px; font-size: 32px; font-weight: 700; }
+.box { display: inline-block; width: 210px; height: 48px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for e in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ e.n }}</span>
+        <div class="ex">{{ mt(e.show) }}</div>
+        <div class="ans"><span>=</span><span class="box"></span></div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

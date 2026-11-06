@@ -90,6 +90,8 @@ MIN_TIP_PX = 16
 def min_child_px(level: str, subject: str | None = None) -> int:
     if subject == "math" and level == "4A":
         return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
+    if level == "M7":
+        return 20   # Penguins math (age 10): number-line labels and stacked fractions use the 20px floor
     if subject == "math" and level == "M6":
         return 22   # Pandas Math (age 9): grid labels and stacked fractions may go down to 22px
     if level[:1] == "R" and level[1:].isdigit():

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Penguins · Math · page 111</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.tables { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(3, 1fr); gap: 14px; }
+.tables .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 10px 20px 10px 34px; border-radius: 22px; }
+.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.say { font-size: 24px; line-height: 1.25; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+table.rt { border-collapse: collapse; }
+table.rt th { font-size: 20px; font-weight: 700; text-align: left; padding: 0 10px 0 0; width: 150px; line-height: 1.1; }
+table.rt td { width: 70px; height: 46px; border: 3px solid var(--ink); text-align: center; font-size: 26px; font-weight: 700; }
+table.rt tr:first-child td { background: var(--tint); }
+.qs { display: flex; flex-direction: column; gap: 8px; font-size: 22px; font-weight: 700; }
+.qs div { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.pick { border: 2px solid var(--ink); border-radius: 999px; padding: 0 12px; font-size: 22px; }
+.box { display: inline-block; width: 74px; height: 40px; border: 3px solid var(--ink); border-radius: 10px; background: #fff; }
+.muted { color: var(--muted); font-size: 20px; font-weight: 400; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Penguins · Math</div>
+      <div class="title-row"><h1>Is it proportional?</h1><span class="pill">Penguins · 111</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Divide each y by its x. If every column gives the same number, the table is proportional and that number is k.</div>
+  <main class="body">
+    <div class="tables">
+      <div class="card"><span class="qn" data-audience="parent">1</span>
+        <div class="say">Mina saves the same amount each week.</div>
+        <div class="row">
+          <table class="rt">
+            <tr><th>Weeks (x)</th><td>3</td><td>7</td><td>10</td><td>12</td></tr>
+            <tr><th>Dollars saved (y)</th><td>22.50</td><td>52.50</td><td></td><td>90</td></tr>
+          </table>
+          <div class="qs">
+            <div>Proportional? <span class="pick">yes</span><span class="pick">no</span></div>
+            <div><span class="muted">If yes:</span> k = <span class="box"></span></div>
+            <div>y = <span class="box"></span>x</div>
+          </div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">2</span>
+        <div class="say">Tickets for the school play.</div>
+        <div class="row">
+          <table class="rt">
+            <tr><th>Tickets (x)</th><td>4</td><td>5</td><td>10</td><td>11</td></tr>
+            <tr><th>Cost ($) (y)</th><td>27</td><td>33</td><td>63</td><td>69</td></tr>
+          </table>
+          <div class="qs">
+            <div>Proportional? <span class="pick">yes</span><span class="pick">no</span></div>
+            <div><span class="muted">If yes:</span> k = <span class="box"></span></div>
+            <div>y = <span class="box"></span>x</div>
+          </div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">3</span>
+        <div class="say">A printer prints pages.</div>
+        <div class="row">
+          <table class="rt">
+            <tr><th>Minutes (x)</th><td>1</td><td>2</td><td>6</td><td>8</td></tr>
+            <tr><th>Pages printed (y)</th><td>20</td><td></td><td>120</td><td>160</td></tr>
+          </table>
+          <div class="qs">
+            <div>Proportional? <span class="pick">yes</span><span class="pick">no</span></div>
+            <div><span class="muted">If yes:</span> k = <span class="box"></span></div>
+            <div>y = <span class="box"></span>x</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Penguins · Math · page 111</footer>
+</div>
+</body>
+</html>

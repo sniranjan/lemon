@@ -11,6 +11,7 @@ a × mults[k] and b × mults[k]. Rules (merged level → section → part):
   child also writes the simplest ratio.
 - `max_value`: no number in a table above it.
 - `title`: the sheet title.
+`mode: proportional` (Penguins math, 7.RP.2): is the table proportional, k, y = kx; see _proportional.py.
 Every other column has exactly one empty cell (top or bottom). Answers per table: the empty
 cells left to right, then the simplest ratio "a:b" when the child writes it.
 """
@@ -21,6 +22,7 @@ from math import gcd
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
+from . import _proportional
 from ._common import error
 
 TABLES = 4
@@ -52,7 +54,12 @@ def answers_for(t: dict) -> list[str]:
 class RatioTable(SheetType):
     template = "ratio_table.html.j2"
 
+    def template_for(self, sheet: Sheet) -> str:
+        return _proportional.TEMPLATE if sheet.items and sheet.items[0].get("kind") == "proportion" else self.template
+
     def generate(self, ctx: GenContext) -> SheetContent:
+        if _proportional.is_proportional_mode(ctx.rules):
+            return _proportional.generate(ctx, self.name)
         r = ctx.rules
         count, cols = r.get("tables", TABLES), r.get("columns", COLUMNS)
         lo, hi = r["base"]
@@ -92,6 +99,8 @@ class RatioTable(SheetType):
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if _proportional.is_proportional_mode(r):
+            return _proportional.verify(sheet, r)
         count, cols = r.get("tables", TABLES), r.get("columns", COLUMNS)
         known = contexts()
         issues: list[Issue] = []

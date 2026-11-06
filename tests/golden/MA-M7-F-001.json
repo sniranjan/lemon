@@ -1,0 +1,139 @@
+{
+  "id": "MA-M7-F-001",
+  "subject": "math",
+  "level": "M7",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "equation_solve",
+  "page_number": 171,
+  "variant": 1,
+  "seed": 8284359920495083271,
+  "title": "Two-step equations",
+  "parent_tip": "Check each answer by putting it back into the equation: both sides should match.",
+  "items": [
+    {
+      "kind": "two_step",
+      "n": 1,
+      "form": "px+q=r",
+      "letter": "y",
+      "p": "2",
+      "q": "16",
+      "r": "-6",
+      "x": "-11",
+      "show": [
+        "2y + 16 = −6"
+      ],
+      "answer": "y = −11"
+    },
+    {
+      "kind": "two_step",
+      "n": 2,
+      "form": "px+q=r",
+      "letter": "k",
+      "p": "8",
+      "q": "9",
+      "r": "-47",
+      "x": "-7",
+      "show": [
+        "8k + 9 = −47"
+      ],
+      "answer": "k = −7"
+    },
+    {
+      "kind": "two_step",
+      "n": 3,
+      "form": "px+q=r",
+      "letter": "p",
+      "p": "3",
+      "q": "-8",
+      "r": "-41",
+      "x": "-11",
+      "show": [
+        "3p − 8 = −41"
+      ],
+      "answer": "p = −11"
+    },
+    {
+      "kind": "two_step",
+      "n": 4,
+      "form": "px+q=r",
+      "letter": "y",
+      "p": "-8",
+      "q": "-2",
+      "r": "54",
+      "x": "-7",
+      "show": [
+        "−8y − 2 = 54"
+      ],
+      "answer": "y = −7"
+    },
+    {
+      "kind": "two_step",
+      "n": 5,
+      "form": "px+q=r",
+      "letter": "p",
+      "p": "-9",
+      "q": "15",
+      "r": "6",
+      "x": "1",
+      "show": [
+        "−9p + 15 = 6"
+      ],
+      "answer": "p = 1"
+    },
+    {
+      "kind": "two_step",
+      "n": 6,
+      "form": "px+q=r",
+      "letter": "t",
+      "p": "2",
+      "q": "-1",
+      "r": "5",
+      "x": "3",
+      "show": [
+        "2t − 1 = 5"
+      ],
+      "answer": "t = 3"
+    },
+    {
+      "kind": "two_step",
+      "n": 7,
+      "form": "px+q=r",
+      "letter": "y",
+      "p": "9",
+      "q": "-9",
+      "r": "-99",
+      "x": "-10",
+      "show": [
+        "9y − 9 = −99"
+      ],
+      "answer": "y = −10"
+    },
+    {
+      "kind": "two_step",
+      "n": 8,
+      "form": "px+q=r",
+      "letter": "k",
+      "p": "7",
+      "q": "13",
+      "r": "69",
+      "x": "8",
+      "show": [
+        "7k + 13 = 69"
+      ],
+      "answer": "k = 8"
+    }
+  ],
+  "answer_key": [
+    "y = −11",
+    "k = −7",
+    "p = −11",
+    "y = −7",
+    "p = 1",
+    "t = 3",
+    "y = −10",
+    "k = 8"
+  ],
+  "new_words": [],
+  "review_words": []
+}

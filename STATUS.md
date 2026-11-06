@@ -111,6 +111,19 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   nonnegative. Child text ≥ 22px (`min_child_px` M6). Tests in `tests/test_math_M6.py` (18 goldens). All 200 pages verify with
   0 errors and 0 warnings; booklets per section + `pandas-math-level.pdf` (202 pages) and
   `pandas-math-level-answers.pdf` (14 pages). Free preview pages 11, 51, 121, 171 wait for Pandas Reading.
+- **Penguins Math (M7, our own level, grade 7 work for age 10, 200 pages)** (2026-11-06): `syllabus/math/M7.yaml`:
+  A Adding and Subtracting Negatives 1–40 (7.NS.1a–d) · B Multiplying and Dividing Negatives 41–70 (7.NS.2a–c) ·
+  C All Kinds of Numbers 71–100 (7.NS.1d, 2c, 2d, 3) · D Proportions and Percent Change 101–140 (7.RP.1, 2a–c, 3) ·
+  E Tidy Expressions 141–170 (7.EE.1–2) · F Two-Step Equations and Inequalities 171–200 (7.EE.3, 4a, 4b); 10-page parts
+  (`source: ours`). No new sheet types: modes of the Pandas types, Pandas/Otters output byte-identical:
+  `signed_numbers` `layout: operations` (`_signed_ops.py`), `rational_story` with 68 new frames (tags signed_story,
+  fraction_rate, percent_change, money_percent, two_step_story, inequality_story; `signed`, percent, step ranges,
+  floor/ceil), `ratio_table` `mode: proportional` (`_proportional.py`), `expression_eval` `task: tidy` (`_tidy.py`),
+  `equation_solve` `mode: two_step` (`_two_step.py`, inequalities graphed on a number line). Exact numbers and a tiny
+  linear-expression type in `ws/sheet_types/_linear.py`; `SheetType.template_for(sheet)` lets a mode use its own
+  template. Child text ≥ 20px (`min_child_px("M7")`). Tests `tests/test_math_M7.py`. All 200 pages verify with 0 errors,
+  0 warnings; booklets per section + `penguins-math-level.pdf` (202 pages) and `penguins-math-level-answers.pdf`
+  (15 pages). Preview pages 1, 45, 121, 191 (wait for Penguins Reading).
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -139,7 +152,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **MA M6 (Pandas Math)**, **MA M8 (Lions Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M4 (Owls Math)**, **MA M5 (Otters Math)**, **MA M6 (Pandas Math)**, **MA M7 (Penguins Math)**, **MA M8 (Lions Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, **EN 2A (Cubs Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 - **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
