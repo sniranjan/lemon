@@ -301,6 +301,31 @@
 - { word: thumb,   picture: thumb,   category: body,     level: 6A, sentences: ["Here is my thumb."] }
 - { word: family,  picture: family,  category: family,   level: 6A, sentences: ["I love my family."] }
 
+# Bunnies Reading (5A) word batch 1: 23 words, approved 2026-11-06 by the orchestrator under the user's
+# delegation (syllabus/drafts/5A-words-batch1.md). Order = order of introduction.
+- { word: queen,   picture: queen,   category: people,   level: 5A, sentences: ["The queen has a crown."] }
+- { word: quilt,   picture: quilt,   category: home,     level: 5A, sentences: ["My bed has a warm quilt."] }
+- { word: zipper,  picture: zipper,  category: clothes,  level: 5A, sentences: ["My coat has a zipper."] }
+- { word: bat,     picture: bat,     category: toys,     level: 5A, sentences: ["I swing my bat at the ball."] }
+- { word: pen,     picture: pen,     category: home,     level: 5A, sentences: ["Mom writes with a pen."] }
+- { word: pin,     picture: pin,     category: home,     level: 5A, sentences: ["The safety pin is closed."] }
+- { word: mop,     picture: mop,     category: home,     level: 5A, sentences: ["Dad cleans the floor with a mop."] }
+- { word: bug,     picture: bug,     category: animals,  level: 5A, sentences: ["The little bug is green."] }
+- { word: mat,     picture: mat,     category: home,     level: 5A, sentences: ["Wipe your feet on the mat."] }
+- { word: net,     picture: net,     category: toys,     level: 5A, sentences: ["I hold a net."] }
+- { word: bun,     picture: bun,     category: food,     level: 5A, sentences: ["I eat a bun."] }
+- { word: top,     picture: top,     category: toys,     level: 5A, sentences: ["The top can spin."] }
+- { word: mug,     picture: mug,     category: home,     level: 5A, sentences: ["Dad drinks from a mug."] }
+- { word: pan,     picture: pan,     category: home,     level: 5A, sentences: ["Mom cooks eggs in a pan."] }
+- { word: jet,     picture: jet,     category: vehicles, level: 5A, sentences: ["The jet flies fast."] }
+- { word: wig,     picture: wig,     category: toys,     level: 5A, sentences: ["I put on a funny wig."] }
+- { word: log,     picture: log,     category: nature,   level: 5A, sentences: ["The frog sits on a log."] }
+- { word: nut,     picture: nut,     category: food,     level: 5A, sentences: ["The squirrel has a nut."] }
+- { word: map,     picture: map,     category: toys,     level: 5A, sentences: ["The map shows the way."] }
+- { word: web,     picture: web,     category: nature,   level: 5A, sentences: ["I see a web."] }
+- { word: lid,     picture: lid,     category: home,     level: 5A, sentences: ["Put the lid on the pot."] }
+- { word: jam,     picture: jam,     category: food,     level: 5A, mass: true, sentences: ["I like jam on toast."] }
+- { word: tub,     picture: tub,     category: home,     level: 5A, sentences: ["The tub has water in it."] }
 # --- Kittens Reading (4A) words: one new word on pages 4-8 of each Letter Teams unit; the planner
 # (ws/phonics.py) gives each page the next word listed under its team in content/phonics/english.yaml.
 # Batch 1 (words 1-40) and batch 2 (41-50) approved by the orchestrator under user delegation 2026-11-06;
@@ -351,7 +376,7 @@
 - { word: pond,    picture: pond,    category: nature,   level: 4A, sentences: ["Look at the pond."] }
 - { word: vest,    picture: vest,    category: clothes,  level: 4A, sentences: ["Here is my vest."] }
 - { word: stamp,   picture: stamp,   category: toys,     level: 4A, sentences: ["Here is my stamp."] }
-- { word: can,     picture: can,     category: home,     level: 4A, sentences: ["Look at the can."] }
+- { word: man,     picture: man,     category: people,   level: 4A, sentences: ["I see a man."] }
 - { word: jug,     picture: jug,     category: home,     level: 4A, sentences: ["Look at the jug."] }
 - { word: rake,    picture: rake,    category: toys,     level: 4A, sentences: ["Look at the rake."] }
 - { word: crow,    picture: crow,    category: animals,  level: 4A, sentences: ["I see a crow."] }

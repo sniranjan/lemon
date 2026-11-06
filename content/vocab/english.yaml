@@ -376,7 +376,7 @@
 - { word: pond,    picture: pond,    category: nature,   level: 4A, sentences: ["Look at the pond."] }
 - { word: vest,    picture: vest,    category: clothes,  level: 4A, sentences: ["Here is my vest."] }
 - { word: stamp,   picture: stamp,   category: toys,     level: 4A, sentences: ["Here is my stamp."] }
-- { word: can,     picture: can,     category: home,     level: 4A, sentences: ["Look at the can."] }
+- { word: man,     picture: man,     category: people,   level: 4A, sentences: ["I see a man."] }
 - { word: jug,     picture: jug,     category: home,     level: 4A, sentences: ["Look at the jug."] }
 - { word: rake,    picture: rake,    category: toys,     level: 4A, sentences: ["Look at the rake."] }
 - { word: crow,    picture: crow,    category: animals,  level: 4A, sentences: ["I see a crow."] }

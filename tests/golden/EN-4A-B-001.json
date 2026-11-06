@@ -14,42 +14,63 @@
     {
       "kind": "rhyme_pair",
       "words": [
-        "kick",
-        "chick"
+        "mitten",
+        "kitten"
       ],
       "pictures": [
-        "kick",
-        "chick"
+        "mitten",
+        "kitten"
       ],
       "parts": [
         [
-          "k",
-          "ick"
+          "m",
+          "itten"
         ],
         [
-          "ch",
-          "ick"
+          "k",
+          "itten"
         ]
       ]
     },
     {
       "kind": "rhyme_pair",
       "words": [
-        "sleep",
-        "sheep"
+        "cake",
+        "snake"
       ],
       "pictures": [
-        "sleep",
-        "sheep"
+        "cake",
+        "snake"
       ],
       "parts": [
         [
-          "sl",
-          "eep"
+          "c",
+          "ake"
         ],
         [
-          "sh",
-          "eep"
+          "sn",
+          "ake"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "run",
+        "sun"
+      ],
+      "pictures": [
+        "run",
+        "sun"
+      ],
+      "parts": [
+        [
+          "r",
+          "un"
+        ],
+        [
+          "s",
+          "un"
         ]
       ]
     },
@@ -73,39 +94,18 @@
           "ox"
         ]
       ]
-    },
-    {
-      "kind": "rhyme_pair",
-      "words": [
-        "dig",
-        "pig"
-      ],
-      "pictures": [
-        "dig",
-        "pig"
-      ],
-      "parts": [
-        [
-          "d",
-          "ig"
-        ],
-        [
-          "p",
-          "ig"
-        ]
-      ]
     }
   ],
   "answer_key": null,
   "new_words": [],
   "review_words": [
-    "kick",
-    "chick",
-    "sleep",
-    "sheep",
+    "mitten",
+    "kitten",
+    "cake",
+    "snake",
+    "run",
+    "sun",
     "box",
-    "fox",
-    "dig",
-    "pig"
+    "fox"
   ]
 }

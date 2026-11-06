@@ -21,6 +21,26 @@ sentence_recite:
   - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
   - "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one."
   - "Point to the picture and ask a question the sentence answers. Then say the sentence together and color a circle."
+letter_trace:
+  - "Trace the first big letter with your finger together, saying its name and sound. Then your child traces the dots with a pencil. Praise every try."
+  - "Say the letter's sound and let your child find it in each picture word. Trace the dots slowly, from the top line down."
+  - "Show how to write the letter once, starting at the top. Your child traces the dots; wobbly lines are just fine."
+letter_trace_review:
+  - "Name each letter together and say its picture word. Your child traces one row at a time; it's fine to rest between rows."
+  - "Say a picture word and let your child point to its letter. Then trace that row together, from left to right."
+letter_trace_pairs:
+  - "Point to the big letter and the small letter and say: they are the same letter. Your child traces the small ones."
+  - "Name both letters, then say the picture word. Ask your child to trace the small letters, starting at the top."
+sound_parts:
+  - "Touch the first box and say its sound, then the second box, then slide your finger under the whole word and say it."
+  - "Say the word in two parts, like c... at, then say it fast: cat! Let your child do the next one with you."
+  - "Point to the picture and say its word slowly in two parts. Your child repeats the parts, then says the whole word."
+sound_parts_rhyme:
+  - "These words rhyme: they end the same way. Say each one in two parts, then say all of them together in a sing-song voice."
+  - "Point to the ending that stays the same. Change the first sound together and hear a new word."
+word_trace:
+  - "Read each word together while pointing to the picture. Then your child traces the dots, one letter at a time, left to right."
+  - "Say the word, then say each letter as your child traces it. Read the whole word again at the end."
 letter_team:
   - "Say the team's sound together (sh says shhh). Read each word slowly, sliding through the sounds, then let your child trace or write the team."
   - "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try."

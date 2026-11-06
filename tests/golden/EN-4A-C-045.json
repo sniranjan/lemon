@@ -13,10 +13,10 @@
   "items": [
     {
       "kind": "sentence",
-      "text": "I like to eat a cookie.",
+      "text": "Look at my yellow trumpet.",
       "runs": [
         [
-          "I",
+          "Look",
           false
         ],
         [
@@ -24,7 +24,7 @@
           false
         ],
         [
-          "like",
+          "at",
           false
         ],
         [
@@ -32,7 +32,7 @@
           false
         ],
         [
-          "to",
+          "my",
           false
         ],
         [
@@ -40,23 +40,15 @@
           false
         ],
         [
-          "eat",
-          false
+          "yellow",
+          true
         ],
         [
           " ",
           false
         ],
         [
-          "a",
-          false
-        ],
-        [
-          " ",
-          false
-        ],
-        [
-          "cookie",
+          "trumpet",
           true
         ],
         [
@@ -64,26 +56,28 @@
           false
         ]
       ],
-      "frame": "I like to eat {a} {eatable}.",
+      "frame": "Look at my {color} {colored_mine}.",
       "slots": {
-        "eatable": "cookie"
+        "color": "yellow",
+        "colored_mine": "trumpet"
       },
-      "word": "cookie",
+      "word": "trumpet",
       "words": [
-        "cookie"
+        "yellow",
+        "trumpet"
       ],
       "pictures": [
-        "cookie"
+        "trumpet"
       ],
       "trace_lines": [
-        "I like to",
-        "eat a cookie."
+        "Look at my",
+        "yellow trumpet."
       ],
       "trace_size": 64
     },
     {
       "kind": "sentence",
-      "text": "I see the ladybug crawl.",
+      "text": "I see the panda climb.",
       "runs": [
         [
           "I",
@@ -110,7 +104,7 @@
           false
         ],
         [
-          "ladybug",
+          "panda",
           true
         ],
         [
@@ -118,7 +112,7 @@
           false
         ],
         [
-          "crawl",
+          "climb",
           true
         ],
         [
@@ -128,20 +122,20 @@
       ],
       "frame": "I see the {animal} {action}.",
       "slots": {
-        "animal": "ladybug",
-        "action": "crawl"
+        "animal": "panda",
+        "action": "climb"
       },
-      "word": "ladybug",
+      "word": "panda",
       "words": [
-        "ladybug",
-        "crawl"
+        "panda",
+        "climb"
       ],
       "pictures": [
-        "ladybug"
+        "panda"
       ],
       "trace_lines": [
         "I see the",
-        "ladybug crawl."
+        "panda climb."
       ],
       "trace_size": 64
     }
@@ -149,8 +143,9 @@
   "answer_key": null,
   "new_words": [],
   "review_words": [
-    "cookie",
-    "ladybug",
-    "crawl"
+    "yellow",
+    "trumpet",
+    "panda",
+    "climb"
   ]
 }

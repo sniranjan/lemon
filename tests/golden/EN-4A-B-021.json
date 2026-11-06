@@ -13,92 +13,92 @@
   "items": [
     {
       "kind": "rhyme_pick",
-      "prompt": "rock",
-      "picture": "rock",
+      "prompt": "peach",
+      "picture": "peach",
       "choices": [
-        "nap",
-        "ring",
-        "sock"
+        "beach",
+        "shell",
+        "snake"
       ],
       "pictures": [
-        "nap",
-        "ring",
-        "sock"
+        "beach",
+        "shell",
+        "snake"
       ],
-      "answer": "sock"
+      "answer": "beach"
     },
     {
       "kind": "rhyme_pick",
-      "prompt": "grill",
-      "picture": "grill",
+      "prompt": "grass",
+      "picture": "grass",
       "choices": [
-        "hill",
-        "deer",
-        "rocket"
+        "bunny",
+        "glass",
+        "fish"
       ],
       "pictures": [
-        "hill",
-        "deer",
-        "rocket"
+        "bunny",
+        "glass",
+        "fish"
       ],
-      "answer": "hill"
+      "answer": "glass"
     },
     {
       "kind": "rhyme_pick",
-      "prompt": "hug",
-      "picture": "hug",
+      "prompt": "hair",
+      "picture": "hair",
       "choices": [
-        "fox",
-        "fan",
-        "rug"
+        "van",
+        "lamp",
+        "bear"
       ],
       "pictures": [
-        "fox",
-        "fan",
-        "rug"
+        "van",
+        "lamp",
+        "bear"
       ],
-      "answer": "rug"
+      "answer": "bear"
     },
     {
       "kind": "rhyme_pick",
-      "prompt": "bunny",
-      "picture": "bunny",
+      "prompt": "swing",
+      "picture": "swing",
       "choices": [
-        "grass",
-        "cook",
-        "honey"
+        "goat",
+        "jar",
+        "ring"
       ],
       "pictures": [
-        "grass",
-        "cook",
-        "honey"
+        "goat",
+        "jar",
+        "ring"
       ],
-      "answer": "honey"
+      "answer": "ring"
     }
   ],
   "answer_key": [
-    "sock",
-    "hill",
-    "rug",
-    "honey"
+    "beach",
+    "glass",
+    "bear",
+    "ring"
   ],
   "new_words": [],
   "review_words": [
-    "rock",
-    "nap",
-    "ring",
-    "sock",
-    "grill",
-    "hill",
-    "deer",
-    "rocket",
-    "hug",
-    "fox",
-    "fan",
-    "rug",
-    "bunny",
+    "peach",
+    "beach",
+    "shell",
+    "snake",
     "grass",
-    "cook",
-    "honey"
+    "bunny",
+    "glass",
+    "fish",
+    "hair",
+    "van",
+    "lamp",
+    "bear",
+    "swing",
+    "goat",
+    "jar",
+    "ring"
   ]
 }

@@ -70,7 +70,7 @@ sections:
       - { part: 26, pages: [84, 88],  rules: { teams: [ng, nk, nd, mp, nt, "-st", lt], team_rows: 1, new_words_per_sheet: 1 } }
       - { part: 27, pages: [89, 90],  rules: { teams: [ng, nk, nd, mp, nt, "-st", lt], team_rows: 1, team_task: fill } }
       # 10 word families: usually two families a page, two words each (cat, hat / sock, clock); a family whose new word still needs sightings may stand alone
-      - { part: 28, pages: [91, 93],  name: Word families, rules: { teams: &families ["-at", "-an", "-ig", "-ug", "-ed", "-ock", "-uck", "-ick", "-ell", "-ee", "-oon", "-ar", "-un", "-ing", "-ox", "-oat", "-ain", "-ook", "-ide", "-um", "-ap", "-ush", "-eep", "-ice", "-ose", "-ish", "-ake", "-ill", "-all", "-ass", "-amp", "-est", "-ate", "-each", "-ow"], team_rows: 2 } }
+      - { part: 28, pages: [91, 93],  name: Word families, rules: { teams: &families ["-at", "-an", "-ig", "-ug", "-ed", "-ock", "-uck", "-ick", "-ell", "-ee", "-oon", "-ar", "-un", "-ing", "-ox", "-oat", "-ain", "-ook", "-ide", "-um", "-ap", "-ush", "-eep", "-ice", "-ose", "-ish", "-ake", "-ill", "-all", "-ass", "-amp", "-est", "-ate", "-each", "-ow", "-et", "-op", "-en", "-in"], team_rows: 2 } }
       - { part: 29, pages: [94, 98],  rules: { teams: *families, team_rows: 2, new_words_per_sheet: 1 } }
       - { part: 30, pages: [99, 100], rules: { teams: *families, team_rows: 2, team_task: fill } }
 
@@ -105,6 +105,7 @@ sections:
       phrase_kind: sentence
       phrases_per_sheet: 2
       max_sentence_words: 6
+      level_word_first: true   # the first sentence on each page uses a Kittens word (ship, pretzel, shark) when one fits
     parts:
       - { part: 1, pages: [141, 150], name: This is,  rules: { phrase_groups: [this_is] } }      # This is a cat.
       - { part: 2, pages: [151, 160], name: Colors,   rules: { phrase_groups: [colors] } }       # The banana is yellow.

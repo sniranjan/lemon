@@ -286,10 +286,17 @@ PICS = {
            + nos(star(50, 85, 9, RED)),
     # --- unit 10: word families --------------------------------------------------------------------
     # bat, pan, wig and bug were drawn first, then given to Bunnies Reading (its batch has them); replaced by:
-    "can": r(28, 22, 44, 66, LGRAY, 4) + r(28, 36, 44, 38, RED, 0)
-           + nos(c(50, 55, 9, GOLD)) + c(50, 55, 9, "none")
-           + e(50, 22, 22, 5, LGRAY) + e(50, 88, 22, 4, LGRAY)
-           + line("M30 30 L70 30 M30 80 L70 80", 2, GRAY),
+    # "can" (a soup can) was replaced by "man" after merging Bunnies Reading, so "can" stays only the verb.
+    "man": line(GROUND, 3)
+           + colored_line("M42 70 L40 90 M58 70 L60 90", BLUE, 9)
+           + e(38, 91, 7, 3.5, DARK) + e(62, 91, 7, 3.5, DARK)
+           + colored_line("M30 44 L18 64 M70 44 L84 26", SKIN, 7)
+           + p("M30 40 C30 34 40 32 50 32 C60 32 70 34 70 40 L66 72 L34 72 Z", GREEN)
+           + e(35, 24, 3.5, 5, SKIN) + e(65, 24, 3.5, 5, SKIN) + c(50, 22, 15, SKIN)
+           + p("M35 20 C35 2 65 2 65 20 C60 13 40 13 35 20 Z", BROWN)
+           + p("M36 26 C38 46 62 46 64 26 C60 34 40 34 36 26 Z", BROWN)
+           + c(44, 21, 2.2, "#222", False) + c(56, 21, 2.2, "#222", False)
+           + line("M45 27 C48 29.5 52 29.5 55 27", 2),
     "jug": colored_line("M70 34 C88 34 90 64 72 68", BLUE, 5)
            + p("M38 16 L62 16 L64 26 C74 34 76 48 74 70 C74 86 68 92 50 92 C32 92 26 86 26 70 C24 48 26 34 36 26 Z", BLUE)
            + p("M26 66 C40 62 60 62 74 66 L74 70 C74 86 68 92 50 92 C32 92 26 86 26 70 Z", WHITE)

@@ -103,8 +103,10 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   (new words chosen by team, not bank order); hand-checked teams and rhymes in `content/phonics/english.yaml`.
   50 new words (target 50; chart ~225), batches `4A-words-batch1.md` (40) and `batch2.md` (10), approved by the
   orchestrator under the user's delegation; pictures `scripts/pictures/draw_4A_batch1.py`. bat/pan/wig/bug were
-  given to Bunnies Reading (replaced by can, jug, rake, crow): once Bunnies words merge, add them to the 4A rhyme
-  groups and families (-at, -an, -ig, -ug). Verify 0 errors (1 warning: color-word pages 151–160); booklets:
+  given to Bunnies Reading (replaced by can, jug, rake, crow); after the merge "can" became "man" (so "can"
+  is only the verb) and the Bunnies words joined the families and rhyme groups (-at, -an, -ig, -ug, -ap, -un,
+  new -et, -op, -en, -in). Trace a Sentence: `level_word_first` makes each page's first sentence use a Kittens
+  word (ship, pretzel, swan) when one fits. Verify 0 errors (1 warning: color-word pages); booklets:
   three section PDFs + `kittens-reading-level.pdf` (202 pages) + answers for Rhyme Time.
 
 ## Next steps

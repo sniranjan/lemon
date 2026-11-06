@@ -59,12 +59,12 @@ letter_teams:
   mp: { letters: mp, where: end, words: [lamp, jump, stamp] }
   nt: { letters: nt, where: end, words: [tent, ant, paint, plant, present] }
   "-st": { letters: st, where: end, words: [nest, toast, vest] }
-  lt: { letters: lt, where: end, words: [belt] }
+  lt: { letters: lt, where: end, words: [belt, quilt] }
   # Part 10: word families (same spelling and same sound at the end)
-  "-at":  { letters: at,  where: end, words: [cat, hat] }
-  "-an":  { letters: an,  where: end, words: [van, fan, can] }
-  "-ig":  { letters: ig,  where: end, words: [pig, dig] }
-  "-ug":  { letters: ug,  where: end, words: [rug, hug, jug] }
+  "-at":  { letters: at,  where: end, words: [cat, hat, bat, mat] }
+  "-an":  { letters: an,  where: end, words: [van, fan, pan, man] }
+  "-ig":  { letters: ig,  where: end, words: [pig, dig, wig] }
+  "-ug":  { letters: ug,  where: end, words: [rug, hug, jug, bug, mug] }
   "-ed":  { letters: ed,  where: end, words: [bed, sled] }
   "-ock": { letters: ock, where: end, words: [sock, clock, rock, lock] }
   "-uck": { letters: uck, where: end, words: [duck, truck] }
@@ -73,7 +73,7 @@ letter_teams:
   "-ee":  { letters: ee,  where: end, words: [bee, tree, knee] }
   "-oon": { letters: oon, where: end, words: [moon, spoon, balloon] }
   "-ar":  { letters: ar,  where: end, words: [car, star, jar] }
-  "-un":  { letters: un,  where: end, words: [sun, run] }
+  "-un":  { letters: un,  where: end, words: [sun, run, bun] }
   "-ing": { letters: ing, where: end, words: [swing, sing, ring] }
   "-ox":  { letters: ox,  where: end, words: [fox, box] }
   "-oat": { letters: oat, where: end, words: [coat, goat, boat] }
@@ -81,7 +81,7 @@ letter_teams:
   "-ook": { letters: ook, where: end, words: [book, cook] }
   "-ide": { letters: ide, where: end, words: [slide, hide, ride] }
   "-um":  { letters: um,  where: end, words: [drum, plum] }
-  "-ap":  { letters: ap,  where: end, words: [clap, nap] }
+  "-ap":  { letters: ap,  where: end, words: [clap, nap, map] }
   "-ush": { letters: ush, where: end, words: [bush, push] }
   "-eep": { letters: eep, where: end, words: [sheep, sleep] }
   "-ice": { letters: ice, where: end, words: [ice, rice] }
@@ -97,6 +97,11 @@ letter_teams:
   "-ate":  { letters: ate,  where: end, words: [plate, skate] }
   "-each": { letters: each, where: end, words: [peach, beach] }
   "-ow":   { letters: ow,   where: end, words: [snow, blow, crow] }
+  # with Bunnies words
+  "-et":   { letters: et,   where: end, words: [jet, net] }
+  "-op":   { letters: op,   where: end, words: [mop, top] }
+  "-en":   { letters: en,   where: end, words: [hen, pen] }
+  "-in":   { letters: in,   where: end, words: [chin, pin] }
 
 # Rhyme groups: words that rhyme with each other (same vowel sound and same ending sound, said aloud in
 # General American English), checked by ear. Spelling may differ (bear, chair). `vowel` is the vowel
@@ -107,16 +112,16 @@ letter_teams:
 #   - pairs that rhyme in some American accents only: ball/doll, dog/frog
 #   - color words (crayon pictures) and describing words (no picture)
 rhymes:
-  - { sound: at,    vowel: a,   words: [cat, hat] }
-  - { sound: an,    vowel: a,   words: [van, fan, can] }
-  - { sound: ap,    vowel: a,   words: [clap, nap] }
-  - { sound: ig,    vowel: i,   words: [pig, dig] }
+  - { sound: at,    vowel: a,   words: [cat, hat, bat, mat] }
+  - { sound: an,    vowel: a,   words: [van, fan, pan, man] }
+  - { sound: ap,    vowel: a,   words: [clap, nap, map] }
+  - { sound: ig,    vowel: i,   words: [pig, dig, wig] }
   - { sound: ick,   vowel: i,   words: [chick, kick, stick, brick] }
   - { sound: ing,   vowel: i,   words: [swing, sing, ring] }
   - { sound: itten, vowel: i,   words: [kitten, mitten] }
-  - { sound: ug,    vowel: u,   words: [rug, hug, jug] }
+  - { sound: ug,    vowel: u,   words: [rug, hug, jug, bug, mug] }
   - { sound: uck,   vowel: u,   words: [duck, truck] }
-  - { sound: un,    vowel: u,   words: [sun, run] }
+  - { sound: un,    vowel: u,   words: [sun, run, bun] }
   - { sound: um,    vowel: u,   words: [drum, plum, thumb] }
   - { sound: unny,  vowel: u,   words: [bunny, honey] }
   - { sound: ed,    vowel: e,   words: [bed, sled, bread, head] }
@@ -154,3 +159,10 @@ rhymes:
   - { sound: ate,   vowel: ai,  words: [plate, skate] }
   - { sound: amp,   vowel: a,   words: [lamp, stamp] }
   - { sound: est,   vowel: e,   words: [nest, vest] }
+  # with Bunnies words
+  - { sound: et,    vowel: e,   words: [jet, net] }
+  - { sound: op,    vowel: o,   words: [mop, top] }
+  - { sound: en,    vowel: e,   words: [hen, pen] }
+  - { sound: in,    vowel: i,   words: [chin, pin] }
+  - { sound: am,    vowel: a,   words: [lamb, jam] }
+  - { sound: ipper, vowel: i,   words: [slipper, zipper] }

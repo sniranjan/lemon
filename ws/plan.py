@@ -208,7 +208,10 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         frames_on_page: set[str] = set()
         groups_on_page: set[str] = set()
         phrases = []
-        for _ in range(rules["phrases_per_sheet"]):
+        for index in range(rules["phrases_per_sheet"]):
+            # `level_word_first` (Kittens): the page's first sentence uses one of this level's own words
+            want_level_word = rules.get("level_word_first") and index == 0
+
             def score(c):
                 group, frame, fill = c
                 words = list(fill.values())
@@ -218,6 +221,7 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
                         any(w in todo and this_level[w].picture and w not in pictures_for(fill, data)
                             for w in words),
                         -sum(1 for w in words if w in level_new and seen[w] < min_seen and w not in on_page),
+                        bool(want_level_word) and not any(w in this_level for w in words),
                         text_uses[text],
                         any(w in on_page for w in words),
                         group in groups_on_page,

@@ -181,12 +181,14 @@ ownable:
   toys:     [ball, kite, balloon, blocks, drum, doll, puppet, bubbles, tent,
              teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box,   # box: his own box of treasures
              crown, shovel, whistle, bell,                                  # Chicks batch 5 (not rattle: a baby thing; not seesaw)
-             sticker, flag, glue, present, trumpet, skate, ring, stamp]     # Kittens (not rake: a grown-up tool; not dice)
+             bat, net, top, wig, map,                                       # Bunnies batch 1
+             sticker, flag, glue, present, trumpet, skate, ring, stamp]     # Kittens (not rake: a grown-up tool)
   clothes:  [shoe, hat, sock, coat, shirt, pants, boots, dress, scarf, belt,
              jacket, mitten, skirt, cap, sweater, pajamas, shorts, apron, sandal,
              watch, pocket, glove, slipper, vest]                            # Kittens
   home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket,
-             glass, dish]                                                    # Kittens (not couch, shelf, shower: the house)
+             pen, mug, quilt,   # Bunnies batch 1 (not pin, mop, pan, lid, tub: grown-up things)
+             glass, dish]       # Kittens (not couch, shelf, shower: the house)
   pets:     [cat, dog, fish, bunny, bird, turtle, puppy, kitten]
   vehicles: [bike, scooter]
   food:     [milk, juice, soup]     # plus everything in `eatable`
@@ -197,8 +199,9 @@ ownable:
 # would need "some" (a cake, a pizza).
 eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pear, corn, rice, cherry,
           noodles, peach, muffin, toast, pancake, yogurt, peas,
-          waffle, bagel, plum, pickle, popcorn,
-          cracker, pretzel]   # Kittens   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
+          waffle, bagel, plum, pickle, popcorn,   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
+          bun, nut,                                # Bunnies batch 1. Not jam (eaten on something, like honey)
+          cracker, pretzel]                        # Kittens
 
 # Only one of each in the sky: "the sun", never "a sun". These nouns never fill a frame with `{a}`
 # ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.

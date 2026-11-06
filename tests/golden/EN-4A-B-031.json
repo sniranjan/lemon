@@ -14,79 +14,79 @@
     {
       "kind": "rhyme_odd_one",
       "choices": [
-        "bell",
-        "rain",
-        "train"
+        "kick",
+        "brick",
+        "snail"
       ],
       "pictures": [
-        "bell",
-        "rain",
-        "train"
+        "kick",
+        "brick",
+        "snail"
       ],
-      "answer": "bell"
+      "answer": "snail"
     },
     {
       "kind": "rhyme_odd_one",
       "choices": [
-        "sleep",
-        "balloon",
-        "spoon"
+        "seal",
+        "wheel",
+        "pocket"
       ],
       "pictures": [
-        "sleep",
-        "balloon",
-        "spoon"
+        "seal",
+        "wheel",
+        "pocket"
       ],
-      "answer": "sleep"
+      "answer": "pocket"
     },
     {
       "kind": "rhyme_odd_one",
       "choices": [
-        "bunny",
-        "boat",
-        "goat"
+        "rice",
+        "fox",
+        "ice"
       ],
       "pictures": [
-        "bunny",
-        "boat",
-        "goat"
+        "rice",
+        "fox",
+        "ice"
       ],
-      "answer": "bunny"
+      "answer": "fox"
     },
     {
       "kind": "rhyme_odd_one",
       "choices": [
-        "bee",
-        "knee",
-        "pear"
+        "zipper",
+        "stamp",
+        "slipper"
       ],
       "pictures": [
-        "bee",
-        "knee",
-        "pear"
+        "zipper",
+        "stamp",
+        "slipper"
       ],
-      "answer": "pear"
+      "answer": "stamp"
     }
   ],
   "answer_key": [
-    "bell",
-    "sleep",
-    "bunny",
-    "pear"
+    "snail",
+    "pocket",
+    "fox",
+    "stamp"
   ],
   "new_words": [],
   "review_words": [
-    "bell",
-    "rain",
-    "train",
-    "sleep",
-    "balloon",
-    "spoon",
-    "bunny",
-    "boat",
-    "goat",
-    "bee",
-    "knee",
-    "pear"
+    "kick",
+    "brick",
+    "snail",
+    "seal",
+    "wheel",
+    "pocket",
+    "rice",
+    "fox",
+    "ice",
+    "zipper",
+    "stamp",
+    "slipper"
   ]
 }

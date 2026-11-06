@@ -132,6 +132,21 @@ def test_sections_have_public_names_and_standards():
     assert all(s.public_name and s.standards for s in EN4A.sections)
 
 
+def test_can_stays_a_verb_and_bunnies_words_join_the_families():
+    data, bank = phonics(), vocab_by_word()
+    assert "can" not in bank
+    assert {"bat", "mat"} <= set(data["letter_teams"]["-at"]["words"])
+    assert {"pan", "man"} <= set(data["letter_teams"]["-an"]["words"])
+    assert {"bug", "mug"} <= set(rhyme_group(data, "rug")["words"])
+
+
+def test_trace_a_sentence_uses_kittens_words():
+    plan = gen.build_plan(EN4A)
+    kittens = {e.word for e in vocab() if e.level == "4A"}
+    firsts = [plan.pages[p].extra["phrases"][0]["words"] for p in range(141, 201)]
+    assert sum(1 for ws in firsts if kittens & set(ws)) >= 40
+
+
 def test_new_frames_stay_true():
     data, bank = phrases(), vocab_by_word()
     from ws.phrases import fillings, render
