@@ -1,6 +1,6 @@
 # Letters and sounds for Bunnies Reading (letter tracing, sound parts, word tracing).
 # Hand-checked lists: every word must be in content/vocab/english.yaml (tests/test_bunnies_reading.py).
-# New words join these lists by hand once they are approved.
+# New words join these lists by hand once they are approved (Bunnies word batch 1: 2026-11-06).
 
 # letter_words: words whose FIRST SOUND is the letter's usual sound, best first.
 #   Left out on purpose: digraph starts (chair, cheese, chin, shoe, sheep, shell, thumb, whale, whistle,
@@ -26,7 +26,7 @@ letter_words:
   n: [nest, nap, neck, nose, noodles]
   o: [octopus]
   p: [pig, pot, pear, plum, pizza, plate, peach, puppy, panda, penguin, pillow, pumpkin, potato]
-  q: []
+  q: [queen, quilt]
   r: [rug, rock, run, rain, rice, robot, rocket, rattle]
   s: [sun, sock, sit, sand, swim, soap, soup, seal, sofa, snail, star, spoon, sled, swing, snow]
   t: [tent, truck, tree, table, tiger, toe, toast, tomato, turtle, teddy, towel, train, tractor]
@@ -35,7 +35,7 @@ letter_words:
   w: [worm, walk, wave, wagon, window, wash]
   x: []
   y: [yawn, yogurt]
-  z: [zebra]
+  z: [zebra, zipper]
 
 letter_inside:
   a: [cat, hat, van, fan, bag, hand, lamp, crab]
@@ -52,18 +52,21 @@ letter_inside:
 # vowels that aren't short (bush, push), and anything with an odd-looking rime (grass).
 rimes:
   # short a
-  at: [cat, hat]
-  an: [van, fan]
-  ap: [cap, nap, clap]
+  at: [cat, hat, bat, mat]
+  an: [van, fan, pan]
+  ap: [cap, nap, clap, map]
   ag: [bag]
   ad: [dad]
   and: [hand, sand]
   amp: [lamp]
   ab: [crab]
+  am: [jam]
   # short e
   ed: [bed, sled]
   eg: [leg]
-  en: [hen]
+  et: [net, jet]
+  eb: [web]
+  en: [hen, pen]
   est: [nest]
   ent: [tent]
   eck: [neck]
@@ -71,31 +74,34 @@ rimes:
   elt: [belt]
   ess: [dress]
   # short i
-  ig: [pig, dig]
+  ig: [pig, dig, wig]
   it: [sit]
   ish: [fish]
   ill: [hill]
   ink: [sink, drink]
   im: [swim]
   ing: [sing, swing]
-  in: [chin]
+  in: [chin, pin]
   ick: [kick, stick]
   ib: [bib, crib]
   ilk: [milk]
+  id: [lid]
   # short o
-  og: [dog, frog]
+  og: [dog, frog, log]
   ox: [fox, box]
   ot: [pot]
   ock: [rock, sock, clock]
   oll: [doll]
   om: [mom]
-  op: [hop]
+  op: [hop, mop, top]
   # short u
   us: [bus]
   up: [cup]
-  un: [sun, run]
+  un: [sun, run, bun]
   uck: [duck, truck]
-  ug: [rug, hug]
+  ug: [rug, hug, bug, mug]
   um: [drum, plum]
   ump: [jump]
+  ut: [nut]
+  ub: [tub]
   ush: [brush]

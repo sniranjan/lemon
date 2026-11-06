@@ -1,8 +1,13 @@
 # Bunnies Reading (5A): word batch 1, draft for approval
 
-**Status: draft, waiting for the user's OK.** Nothing here is drawn or in `content/vocab/english.yaml` yet.
+**Status: approved by the orchestrator under the user's delegation, 2026-11-06.** The user's words: "Take
+sensible call on the word table, keep the age and our requirmement of 2 levels up and keep going, don't wait
+for my inputs." Approved: the 23 needed words (#1–23). The 6 optional words are not approved, so the built
+letter pages stay as they are. Hat/cap: "hat" is redrawn as a wide-brim straw sun hat, and cap stays as it is.
+All 23 are drawn (`scripts/pictures/draw_5A_batch1.py`), in `content/vocab/english.yaml` (`level: 5A`, table
+order), and in `content/sounds/english.yaml`. Bunnies Reading now builds all 200 pages.
 
-## Where things stand
+## Where things stood before this batch
 
 The 280 approved words (200 Chicks + 80 Ducklings) already build **165 of 200 pages**. Verify gives
 0 errors and 5 warnings, all of them pages waiting for new words.

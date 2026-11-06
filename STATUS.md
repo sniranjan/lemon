@@ -40,7 +40,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 216 passed (2026-11-06, with Bunnies Reading).
+- `uv run pytest`: 217 passed (2026-11-06, with Bunnies Reading).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -61,11 +61,13 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   151–160 (capital + small, a–z, then b/d/p), D Word Trails 161–200. New sheet types `letter_trace`,
   `sound_parts`, `word_trace`; dotted letters come from our own single-stroke trace font (`ws/trace_font.py`);
   planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
-  **165 of 200 pages build from approved words**; 35 wait for new words (verify warns: z 52–53, q 66–67 and
-  156, Sound Pieces 131–150, Word Trails 191–200). Draft for approval: `syllabus/drafts/5A-words-batch1.md`
-  (23 needed words + 6 optional; vocab_target 23). After approval: add the words (level 5A, in table order)
-  and to `letter_words` / `rimes` in `content/sounds/english.yaml`; every page then builds.
-  Booklets render (`bunnies-reading-level.pdf`: 167 pages today).
+  Word batch 5A-1 (23 words: queen, quilt, zipper + 20 short-vowel words; approved 2026-11-06 by the
+  orchestrator under the user's delegation; `draw_5A_batch1.py`, which also redraws **hat** as a straw sun hat
+  so it no longer looks like a cap): **Bunnies Reading is complete, 200/200 pages**, verify 0 errors and 0 warnings,
+  every new word seen at least 3 times. Optional words in the draft (igloo, otter, ox, vest, vase, yarn) are not approved.
+  `ws generate` now skips pages that still wait for words (with a note) for `--pages` and `--count` too.
+  Booklets: one per section plus `bunnies-reading-level.pdf` (202 pages = cover + 200 + log).
+  The hat redraw changes how Chicks and Ducklings pages with "hat" look: rebuild their booklets and the live previews when convenient.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in
