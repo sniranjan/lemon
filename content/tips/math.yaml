@@ -118,3 +118,9 @@ expression_eval:
   - "Put each number in place of its letter, then work it out in order: brackets, powers, times and divide, add and take away."
 equation_solve:
   - "Undo what is done to the letter: take away to undo adding, divide to undo times. Then check by putting the answer back."
+power_root:
+  - "Say each power as a times sentence: 2 to the 5th is five 2s multiplied. A square root asks: what number times itself makes this?"
+sci_notation:
+  - "Scientific notation is a number from 1 to just under 10, times a power of ten. Count how many places the decimal point moves."
+pythagorean:
+  - "In a right triangle, the two short sides squared and added make the longest side squared: a² + b² = c²."

@@ -1,0 +1,73 @@
+{
+  "id": "MA-M8-F-001",
+  "subject": "math",
+  "level": "M8",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "pythagorean",
+  "page_number": 181,
+  "variant": 1,
+  "seed": 12745051556036140572,
+  "title": "Find the missing side",
+  "parent_tip": "To test a triangle, square the two short sides and add. If that equals the long side squared, it has a right angle.",
+  "items": [
+    {
+      "n": 1,
+      "task": "hypotenuse",
+      "a": 6,
+      "b": 8,
+      "flip": true
+    },
+    {
+      "n": 2,
+      "task": "leg",
+      "a": 35,
+      "c": 37,
+      "b": 12,
+      "flip": true
+    },
+    {
+      "n": 3,
+      "task": "hypotenuse",
+      "a": 5,
+      "b": 12,
+      "flip": true
+    },
+    {
+      "n": 4,
+      "task": "leg",
+      "a": 30,
+      "c": 50,
+      "b": 40,
+      "flip": false
+    },
+    {
+      "n": 5,
+      "task": "is_right",
+      "sides": [
+        5,
+        12,
+        13
+      ]
+    },
+    {
+      "n": 6,
+      "task": "is_right",
+      "sides": [
+        15,
+        20,
+        24
+      ]
+    }
+  ],
+  "answer_key": [
+    "c = 10",
+    "b = 12",
+    "c = 13",
+    "b = 40",
+    "yes",
+    "no"
+  ],
+  "new_words": [],
+  "review_words": []
+}
