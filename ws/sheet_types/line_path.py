@@ -227,9 +227,13 @@ class LinePath(SheetType):
         u0 = (DISC if marker != "dot" else lane / 2 + 3) + EDGE
         length = frac * (run - u0 - DISC - EDGE)
         band = across / n
+        # square bumps on a top→bottom lane would be flat strokes going left: those lanes use steps
+        kinds = [k for k in r.get("kinds", []) if not (vertical and k == "bumps")] or ["steps"]
         items = []
         for i, end in enumerate(ends):
-            kind = ctx.rng.choice(r["kinds"]) if r["path"] == "mixed" else r["path"]
+            kind = ctx.rng.choice(kinds) if r["path"] == "mixed" else r["path"]
+            if vertical and kind == "bumps":
+                kind = "steps"
             count = _count(ctx, kind)
             amp = min(band * (0.25 if kind in CORNER_KINDS else 0.22), 100 if kind in CORNER_KINDS else 70)
             d, p0, p1 = _emit(_segments(kind, u0, band * (i + 0.5), length, count, amp), vertical)
@@ -277,6 +281,10 @@ class LinePath(SheetType):
                 if q[a] < p[a] - 1e-6:
                     way = "left" if a == 0 else "up"
                     return [error(sheet, f"lane turns back ({way}) at {[round(p[0], 1), round(p[1], 1)]}")]
+        if item["direction"] == "vertical":       # a flat stroke to the left reads as going back
+            for p, q in zip(pts, pts[1:]):
+                if q[0] < p[0] - 1e-6 and abs(q[1] - p[1]) < 1e-6:
+                    return [error(sheet, f"lane runs flat to the left at {[round(p[0], 1), round(p[1], 1)]}")]
         return []
 
     @staticmethod

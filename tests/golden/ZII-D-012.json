@@ -9,13 +9,13 @@
   "variant": 1,
   "seed": 16409964818255609521,
   "title": "Corners and curves",
-  "parent_tip": "At each corner, stop, then go the new way. Smooth curves can go a little faster. Praise every finished path.",
+  "parent_tip": "Run a finger along the path first and say \"turn\" at every corner. Then draw it slowly from the dot to the picture.",
   "items": [
     {
       "kind": "path",
-      "d": "M264.0 27.0 L264.0 125.8 L88.0 125.8 L88.0 224.7 L264.0 224.7 L264.0 323.5 L88.0 323.5 L88.0 422.3 L264.0 422.3 L264.0 521.2",
+      "d": "M88.0 27.0 C88.0 109.4 264.0 109.4 264.0 191.7 C264.0 274.1 88.0 274.1 88.0 356.4 C88.0 438.8 264.0 438.8 264.0 521.2",
       "start": [
-        264.0,
+        88.0,
         27.0
       ],
       "end": [
@@ -27,8 +27,8 @@
       "direction": "vertical",
       "disc": 44,
       "size": 64,
-      "path_kind": "bumps",
-      "join": "miter"
+      "path_kind": "s_curve",
+      "join": "round"
     },
     {
       "kind": "path",

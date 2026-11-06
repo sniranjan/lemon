@@ -136,6 +136,12 @@ def test_line_path_verify_catches_backward_and_crowded_lanes(fixture_content):
     (x0, y0), (x1, y1) = sheet.items[0]["start"], sheet.items[0]["end"]
     bad.items[0]["d"] = f"M{x0:.1f} {y0:.1f} L{x0 + 200:.1f} {y0 - 40:.1f} L{x0 + 150:.1f} {y0 + 40:.1f} L{x1:.1f} {y1:.1f}"
     assert any("turns back (left)" in i.message for i in lp.verify(bad))
+    flat_left = copy.deepcopy(gen.build_sheet(ZII, 92, plan))   # vertical lanes
+    item = flat_left.items[0]
+    assert item["direction"] == "vertical"
+    (vx, vy) = item["start"]
+    item["d"] = f"M{vx:.1f} {vy:.1f} L{vx:.1f} {vy + 100:.1f} L{vx - 80:.1f} {vy + 100:.1f} L{vx - 80:.1f} {vy + 300:.1f}"
+    assert any("flat to the left" in i.message for i in lp.verify(flat_left))
     crowded = copy.deepcopy(sheet)
     crowded.items[1]["d"] = crowded.items[0]["d"]
     crowded.items[1]["start"], crowded.items[1]["end"] = crowded.items[0]["start"], crowded.items[0]["end"]
