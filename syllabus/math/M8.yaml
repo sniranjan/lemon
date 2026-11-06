@@ -213,12 +213,13 @@ sections:
       - part: 5
         pages: [141, 150]
         rules:
-          title: Write the equation
-          mixes: [[from_points, from_table], [write_graph, draw_line]]
+          title: Lines and functions
+          mixes: [[from_points, is_function, compare, from_table, is_function, compare], [write_graph, draw_line]]
           tips:
             coordinate_grid:
               - "Find the slope m first (from two points, a table or the graph), then use one point in y = mx + b to find b."
               - "To draw a line, put a dot at b on the y-axis, then count the run and rise for the next dot. In a table, the y-value at x = 0 is b."
+              - "A table is a function if no x-value repeats with a different y. To compare rates, compare the two slopes."
         standards: [8.F.2]
 
   - code: E

@@ -73,7 +73,7 @@ def test_whole_level_passes(fixture_content):
         seen |= {i.get("task") or i.get("form") for i in sheet.items}
     assert {"power", "rule_value", "between", "to_sci", "times_bigger", "like_terms", "distribute_both",
             "fraction_coef", "points", "read_mb", "draw_line", "from_table", "graph_read", "substitution",
-            "elimination", "inspect", "story", "hypotenuse", "leg", "is_right", "distance"} <= seen
+            "elimination", "inspect", "story", "is_function", "compare", "hypotenuse", "leg", "is_right", "distance"} <= seen
 
 
 def _page(page):
@@ -124,6 +124,11 @@ def test_verify_catches_bad_lines(fixture_content):
     bad = copy.deepcopy(s)
     bad.items[0]["ys"][2] += 1
     assert any("table row" in m for m in check(bad))
+    s = _page(141)
+    bad = copy.deepcopy(s)
+    f = next(i for i in bad.items if i["task"] == "is_function")
+    f["function"] = not f["function"]
+    assert any("yes/no" in m for m in check(bad))
 
 
 def test_verify_catches_bad_systems(fixture_content):

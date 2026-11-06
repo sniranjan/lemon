@@ -11,6 +11,12 @@
 .ans { font-size: 26px; font-weight: 700; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .ans .line { display: inline-block; width: 190px; border-bottom: 3px solid var(--ink); height: 30px; }
 .ans.two { gap: 6px; font-size: 24px; }
+.ask { font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.yn { display: inline-flex; gap: 10px; font-size: 24px; font-weight: 700; }
+.yn span { border: 3px solid var(--ink); border-radius: 999px; padding: 0 12px; }
+.cmp { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; white-space: nowrap; }
+.cmp table.xy { font-size: 20px; line-height: 1.15; }
+.cmp table.xy th, .cmp table.xy td { padding: 0 6px; min-width: 36px; }
 {% endblock %}
 {% block body %}
     <div class="probs">
@@ -22,6 +28,14 @@
 {% elif i.task in ["table", "from_table"] %}
         {{ alg.xy_table(i.xs, i.ys) }}
         {% if i.task == "table" %}{{ slope_box() }}{% else %}{{ eq_line() }}{% endif %}
+{% elif i.task == "is_function" %}
+        {{ alg.xy_table(i.xs, i.ys) }}
+        <div class="ask">Is <i>y</i> a function of <i>x</i>?</div>
+        <div class="yn"><span>yes</span><span>no</span></div>
+{% elif i.task == "compare" %}
+        <div class="ask" style="font-weight: 400">Circle the bigger rate of change.</div>
+        <div class="cmp"><span class="yn"><span>A</span></span> <span>{{ alg.mathi(i.tokens) }}</span></div>
+        <div class="cmp"><span class="yn"><span>B</span></span> {{ alg.xy_table(i.xs, i.ys) }}</div>
 {% elif i.task == "read_mb" %}
         <div class="q">{{ alg.mathi(i.tokens) }}</div>
         <div class="ans two"><i>m</i> = <span class="ansbox"></span> <span style="width: 14px"></span> <i>b</i> = <span class="ansbox"></span></div>

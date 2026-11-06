@@ -6,6 +6,9 @@ Every item is one line y = mx + b with m from the rules' `slopes` ("p/q" strings
 - `read_slope`: a drawn line with two dots; find the slope.  - `read_mb`: y = mx + b; write m and b.
 - `write_graph`: a drawn line; write its equation.           - `draw_line`: an equation; draw the line.
 - `from_points`, `from_table`: write the equation from two points or a table.
+- `compare` (8.F.2): line A as an equation, line B as a table; which has the greater rate of change?
+- `is_function` (8.F.1): an x/y table; is y a function of x (no x with two different y-values)?
+  They come in yes/no pairs on a page, in either order.
 Rules: `mixes` (a list of task lists; pages cycle through them from the part's first page; a page
 with graph tasks has 4 items, a points/read_mb page 8, other pages 6), `grid` (R: the grid runs
 −R…R), `slopes`, `intercepts` [lo, hi], `points` [lo, hi] (coordinates in points and tables).
@@ -59,17 +62,27 @@ def answer(i: dict) -> str:
         return f"slope {show(i['m'])}"
     if t == "read_mb":
         return f"slope {show(i['m'])}, y-intercept {show(i['b'])}"
+    if t == "is_function":
+        return "yes" if function_ok(i["xs"], i["ys"]) else "no"
+    if t == "compare":
+        return "A" if Fraction(i["m"]) > Fraction(i["mB"]) else "B"
     if t == "draw_line":
         (x1, y1), (x2, y2) = i["through"]
         return f"line through ({show(x1)}, {show(y1)}) and ({show(x2)}, {show(y2)})"
     return eq_text(i["m"], i["b"])
 
 
+def function_ok(xs: list[int], ys: list[int]) -> bool:
+    """True when no x-value has two different y-values."""
+    seen: dict[int, int] = {}
+    return all(seen.setdefault(x, y) == y for x, y in zip(xs, ys))
+
+
 def _line_ok(m: Fraction, b: Fraction, R: int) -> bool:
     return len(lattice(m, b, R)) >= 3
 
 
-def _item(ctx: GenContext, task: str) -> dict | None:
+def _item(ctx: GenContext, task: str, want: bool | None = None) -> dict | None:
     r, rng = ctx.rules, ctx.rng
     R = r["grid"]
     m = Fraction(rng.choice(r["slopes"]))
@@ -85,6 +98,26 @@ def _item(ctx: GenContext, task: str) -> dict | None:
         if task == "from_points" and (b.denominator > 1 or not r["intercepts"][0] <= b <= r["intercepts"][1]):
             return None
         item.update(b=fstr(b), p1=[x1, y1], p2=[x2, int(y2)])
+        return item
+    if task == "is_function":
+        xs = rng.sample(range(-5, 6), 5)
+        ys = [rng.randint(-9, 9) for _ in xs]
+        if not want:   # one x-value comes back with a different y-value
+            j, k = rng.sample(range(5), 2)
+            xs[k] = xs[j]
+            if ys[k] == ys[j]:
+                ys[k] += rng.choice([-3, 3])
+        return {"task": task, "xs": xs, "ys": ys, "function": bool(want)}
+    if task == "compare":
+        b = Fraction(rng.randint(*r["intercepts"]))
+        m2 = Fraction(rng.choice(r["slopes"]))
+        x0, step = rng.randint(-3, 1), m2.denominator
+        b2 = Fraction(rng.randint(*r["intercepts"]))
+        xs = [x0 + k * step for k in range(4)]
+        ys = [m2 * x + b2 for x in xs]
+        if m2 == m or any(v.denominator > 1 or abs(v) > 2 * phi for v in ys) or (m == 0 and b == 0):
+            return None
+        item.update(b=fstr(b), tokens=line_tokens(m, b), mB=fstr(m2), bB=fstr(b2), xs=xs, ys=[int(v) for v in ys])
         return item
     if task in ("table", "from_table"):
         step = m.denominator * rng.choice([1, 1, 2]) if m.denominator > 1 else rng.choice([1, 1, 2, 3])
@@ -134,11 +167,13 @@ class Lines:
         r, spec = ctx.rules, ctx.spec
         tasks = tasks_for(r, _page_index(spec.subject, spec.level, spec.page))
         items: list[dict] = []
+        first_yes = ctx.rng.random() < 0.5 if "is_function" in tasks else True
         for k, task in enumerate(tasks):
+            want = (tasks[:k].count("is_function") % 2 == 0) == first_yes
             for _ in range(5000):
-                item = _item(ctx, task)
+                item = _item(ctx, task, want)
                 if item and _key(item) not in {_key(i) for i in items} and \
-                        all((item["m"], item["b"]) != (i["m"], i["b"]) for i in items):
+                        all("m" not in item or (item["m"], item["b"]) != (i.get("m"), i.get("b")) for i in items):
                     break
             else:
                 raise ValueError(f"slope_graph: no {task} item fits the rules")
@@ -156,9 +191,24 @@ class Lines:
         want = tasks_for(r, _page_index(sheet.subject, sheet.level, sheet.page_number))
         if [i["task"] for i in sheet.items] != want:
             issues.append(error(sheet, f"tasks {[i['task'] for i in sheet.items]} should be {want}"))
+        funcs = []
         for i in sheet.items:
             t, label = i["task"], f"item {i.get('n')} ({i['task']})"
+            if t == "is_function":
+                ok = function_ok(i["xs"], i["ys"])
+                funcs.append(ok)
+                if ok != i["function"] or len(i["xs"]) != 5 or not all(-5 <= v <= 5 for v in i["xs"]):
+                    issues.append(error(sheet, f"{label}: the table doesn't match its yes/no"))
+                if not ok and len(set(i["xs"])) != 4:
+                    issues.append(error(sheet, f"{label}: exactly one x-value should repeat"))
+                continue
             m, b = Fraction(i["m"]), Fraction(i["b"])
+            if t == "compare":
+                m2, b2 = Fraction(i["mB"]), Fraction(i["bB"])
+                if m2 == m or i["mB"] not in r["slopes"]:
+                    issues.append(error(sheet, f"{label}: the two rates must differ"))
+                if any(y != m2 * x + b2 for x, y in zip(i["xs"], i["ys"])):
+                    issues.append(error(sheet, f"{label}: table B isn't one line"))
             if i["m"] not in r["slopes"]:
                 issues.append(error(sheet, f"{label}: slope {i['m']} isn't one of this part's slopes"))
             if t not in ("points", "table") and (b.denominator > 1 or not r["intercepts"][0] <= b <= r["intercepts"][1]):
@@ -191,9 +241,11 @@ class Lines:
                     issues.append(error(sheet, f"{label}: needs two dots to count rise and run"))
                 if t == "write_graph" and [0, int(b)] not in i["dots"]:
                     issues.append(error(sheet, f"{label}: the y-intercept should be marked"))
-            if t in ("read_mb", "draw_line") and i["tokens"] != line_tokens(m, b):
+            if t in ("read_mb", "draw_line", "compare") and i["tokens"] != line_tokens(m, b):
                 issues.append(error(sheet, f"{label}: the printed equation isn't y = {i['m']}x + {i['b']}"))
-        lines = [(i["m"], i["b"]) for i in sheet.items]
+        if any(funcs[k] == funcs[k + 1] for k in range(0, len(funcs) - 1, 2)):
+            issues.append(error(sheet, f"function tables should come in yes/no pairs (got {funcs})"))
+        lines = [(i["m"], i["b"]) for i in sheet.items if "m" in i]
         if len(set(lines)) != len(lines):
             issues.append(error(sheet, "the same line is on the page twice"))
         expected = [answer(i) for i in sheet.items]
