@@ -1,0 +1,77 @@
+# Penguins Reading, section E "One Topic, Two Ways" (pages 161–200): a story set in the past (Text 1) beside a
+# historical account of the same time (Text 2), RL.7.9. Every question set asks what the story keeps from
+# history and what it invents or changes; at least two questions quote both texts. The stories are ours;
+# the accounts use well-established, checkable facts only (no wars, disasters or living people).
+# Schema and checks: ws/spreads.py (genre paired).
+
+- id: e01-erie-canal
+  title: The Big Ditch
+  genre: paired
+  texts:
+    - title: "Ezra and the Wedding of the Waters"
+      kind: story
+      text: |
+        Ezra had led his uncle's mule along the towpath all summer, so he knew every bend of the canal
+        between the farm and the town of Rochester. On the October morning when the governor's boat passed,
+        he climbed onto a fence post to see it. The Seneca Chief was painted bright white, and a band played
+        on its deck while people cheered from both banks.
+
+        "They're carrying a barrel of water from Lake Erie," his uncle explained, "all the way to New York
+        City. When they get there, they'll pour it into the ocean."
+
+        Ezra imagined the lake and the ocean shaking hands. He watched the boat glide slowly away until it shrank to
+        a tiny white speck in the distance. That night he dreamed he rode the whole way himself, standing at the front of the boat
+        as the barrel splashed into the sea.
+    - title: The Erie Canal Opens
+      kind: history
+      text: |
+        The Erie Canal opened on October 26, 1825. It ran about 363 miles across New York State, from
+        Buffalo on Lake Erie to Albany on the Hudson River. Workers had spent eight years digging it, much of
+        it by hand, and they built 83 locks to raise and lower boats.
+
+        To celebrate, Governor DeWitt Clinton boarded a boat called the Seneca Chief at Buffalo. Crowds
+        gathered in towns along the route as it traveled east, and the trip to New York City took about nine
+        days. There, Clinton poured a keg of Lake Erie water into the Atlantic Ocean. People called it the
+        Wedding of the Waters.
+
+        Horses and mules walked on towpaths beside the canal, pulling the boats. The canal made shipping goods
+        far cheaper and faster, and cities along its route, such as Rochester, grew quickly.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - The boat carried Lake Erie water to the ocean.
+            - Ezra's uncle owned the governor's boat.
+            - A band pulled the boat from the deck.
+            - The barrel was poured out in Rochester.
+          evidence:
+            - "They're carrying a barrel of water from Lake Erie"
+            - Clinton poured a keg of Lake Erie water into the Atlantic Ocean.
+        - kind: quote
+          ask: Which sentence comes from the story writer’s imagination, not from history?
+          choices:
+            - That night he dreamed he rode the whole way himself
+            - The Erie Canal opened on October 26, 1825.
+            - Horses and mules walked on towpaths beside the canal
+            - Crowds gathered in towns along the route
+          evidence: That night he dreamed he rode the whole way himself
+        - kind: write
+          ask: The trip took nine days. How does the story show that?
+          sample: The story skips the nine days; Ezra sees the boat for only a moment and then rides the whole way in a dream.
+          rubric: notes the story leaves out the long trip and uses Ezra's dream to jump to the end.
+          evidence:
+            - That night he dreamed he rode the whole way himself
+            - the trip to New York City took about nine days
+        - kind: paragraph
+          ask: Why might the author tell this event through a boy on a towpath? Use both texts.
+          sample: >-
+            The history gives facts like "about 363 miles" and "83 locks," but it does not say how the
+            day felt. The story lets a reader stand with Ezra, who "climbed onto a fence post to see it" as
+            people cheered. It keeps real details, such as the Seneca Chief and the barrel of lake water. By
+            using a made-up boy, the author can show the excitement without changing the main facts.
+          rubric: says the story adds feeling or a viewpoint the history lacks; cites a detail from each text.
+          evidence:
+            - climbed onto a fence post to see it
+            - It ran about 363 miles across New York State

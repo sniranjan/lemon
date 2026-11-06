@@ -1,0 +1,599 @@
+# Penguins Reading, section C "Word Roots" (pages 101–130): grade 7 Greek and Latin roots as clues to meaning
+# (L.7.4b), in teaching order, two a page (a Latin root, then a Greek one), then reviewed four a page.
+# Every word's origin was checked by hand against standard etymologies (e.g. pedestrian is Latin pes, ped-
+# "foot", while tripod is Greek pous, pod- "foot"; verdict is Latin vere dictum "truly said").
+# Each root: 4 words (the first is the card's example; 2 and 3 are matched on its teaching page; 4 on its
+# review page), 2 fill-in sentences (word 2 or 3, then word 4) and, for the 30 roots a page explains, an
+# `explain` word that is not on the page (ws/roots.py explained_on).
+# Roots with two spellings list both (`vert, vers`): every word contains one of them. Schema: ws/roots.py.
+
+roots:
+  - root: bene
+    origin: Latin
+    meaning: good, well
+    words:
+      - { word: benefit, meaning: something good that helps you }
+      - { word: beneficial, meaning: helpful or good for you }
+      - { word: benefactor, meaning: a person who gives money or help }
+      - { word: benevolent, meaning: kind and wanting to do good }
+    sentences:
+      - { word: beneficial, text: "Sleep is ___ for growing bodies and busy minds." }
+      - { word: benevolent, text: "The ___ neighbor shoveled every driveway on the block." }
+    explain:
+      word: beneficiary
+      sample: A beneficiary is a person who receives something good, such as a gift or help, because bene means good.
+      rubric: links bene (good) to a person who gets something good or helpful.
+
+  - root: chron
+    origin: Greek
+    meaning: time
+    words:
+      - { word: chronological, meaning: in the order things happened }
+      - { word: synchronize, meaning: make things happen at the same time }
+      - { word: chronometer, meaning: a very exact clock }
+      - { word: chronicle, meaning: a record of events in time order }
+    sentences:
+      - { word: synchronize, text: "The swimmers ___ their kicks so the team moves as one." }
+      - { word: chronicle, text: "Her diary is a ___ of every day of the camping trip." }
+    explain:
+      word: anachronism
+      sample: An anachronism is something placed in the wrong time, like a cell phone in a story about knights, since chron means time.
+      rubric: uses chron (time) to explain something that doesn't belong in its time.
+
+  - root: dict
+    origin: Latin
+    meaning: say, speak
+    words:
+      - { word: predict, meaning: say what will happen before it does }
+      - { word: contradict, meaning: say the opposite of what someone said }
+      - { word: dictate, meaning: say words aloud for someone to write }
+      - { word: valedictorian, meaning: a student who gives a farewell speech }
+    sentences:
+      - { word: contradict, text: "My little brother likes to ___ everything I say, just for fun." }
+      - { word: valedictorian, text: "As ___, Maya gave the farewell speech at graduation." }
+  - root: path
+    origin: Greek
+    meaning: feeling
+    words:
+      - { word: sympathy, meaning: feeling sorry about someone's trouble }
+      - { word: empathy, meaning: understanding how someone else feels }
+      - { word: apathy, meaning: not caring or feeling interested }
+      - { word: telepathy, meaning: sharing thoughts without any words }
+    sentences:
+      - { word: empathy, text: "Rosa had moved schools too, so she felt real ___ for the new girl." }
+      - { word: telepathy, text: "The twins joked that they could talk by ___, without words." }
+    explain:
+      word: antipathy
+      sample: Antipathy is a strong feeling against something, a dislike, because anti means against and path means feeling.
+      rubric: combines against and feeling into a strong dislike.
+
+  - root: ject
+    origin: Latin
+    meaning: throw
+    words:
+      - { word: project, meaning: throw an image onto a screen }
+      - { word: eject, meaning: throw or push something out }
+      - { word: reject, meaning: refuse to accept something }
+      - { word: trajectory, meaning: the curved path of a thrown object }
+    sentences:
+      - { word: reject, text: "The magazine may ___ the story if it is too long." }
+      - { word: trajectory, text: "The coach drew the ball's curved ___ on the whiteboard." }
+    explain:
+      word: interject
+      sample: To interject is to throw a remark into the middle of a conversation, since inter means between and ject means throw.
+      rubric: uses throw to explain putting words in between other people's words.
+
+  - root: morph
+    origin: Greek
+    meaning: form, shape
+    words:
+      - { word: metamorphosis, meaning: a complete change of form }
+      - { word: amorphous, meaning: having no clear shape }
+      - { word: morphology, meaning: the study of the shapes of living things }
+      - { word: morph, meaning: change smoothly into another shape }
+    sentences:
+      - { word: amorphous, text: "The ___ lump of dough slowly became a neat loaf in the pan." }
+      - { word: morph, text: "In the cartoon, a cloud seemed to ___ into a sleeping dragon." }
+    explain:
+      word: anthropomorphic
+      sample: Anthropomorphic means given a human form or human traits, like a talking rabbit in a cartoon, because morph means form.
+      rubric: connects morph (form) to giving an animal or thing a human form or traits.
+
+  - root: rupt
+    origin: Latin
+    meaning: break, burst
+    words:
+      - { word: interrupt, meaning: break into what someone is saying }
+      - { word: erupt, meaning: burst out suddenly }
+      - { word: disrupt, meaning: break up the usual order }
+      - { word: abrupt, meaning: sudden and unexpected }
+    sentences:
+      - { word: erupt, text: "The crowd will ___ in cheers when the final buzzer sounds." }
+      - { word: abrupt, text: "The bus made an ___ stop, and our backpacks slid forward." }
+  - root: phil
+    origin: Greek
+    meaning: love
+    words:
+      - { word: philosophy, meaning: the love and study of wisdom }
+      - { word: philanthropist, meaning: a person who gives to help others }
+      - { word: bibliophile, meaning: a person who loves books }
+      - { word: philharmonic, meaning: an orchestra that loves harmony }
+    sentences:
+      - { word: philanthropist, text: "A generous ___ paid for the new playground in the park." }
+      - { word: philharmonic, text: "We heard the city's ___ orchestra play under the stars." }
+    explain:
+      word: audiophile
+      sample: An audiophile is a person who loves listening to music and good sound, because audio means sound and phil means love.
+      rubric: combines love and sound into a person who loves sound or music.
+
+  - root: spect
+    origin: Latin
+    meaning: look, see
+    words:
+      - { word: inspect, meaning: look at something closely }
+      - { word: spectator, meaning: a person who watches an event }
+      - { word: perspective, meaning: a way of seeing things }
+      - { word: spectacle, meaning: an amazing sight }
+    sentences:
+      - { word: spectator, text: "Every ___ in the stands jumped up to see the last lap." }
+      - { word: spectacle, text: "The fireworks over the harbor were a dazzling ___." }
+    explain:
+      word: retrospect
+      sample: Retrospect means looking back at something that already happened, because retro means back and spect means look.
+      rubric: explains looking back at the past.
+
+  - root: therm
+    origin: Greek
+    meaning: heat
+    words:
+      - { word: thermometer, meaning: a tool that measures temperature }
+      - { word: thermal, meaning: made to hold in warmth }
+      - { word: thermostat, meaning: a device that keeps a room's temperature }
+      - { word: geothermal, meaning: using heat from inside the earth }
+    sentences:
+      - { word: thermal, text: "On the ski trip, I wore ___ socks to keep my feet warm." }
+      - { word: geothermal, text: "Many homes in Iceland use ___ heat from deep underground." }
+    explain:
+      word: exothermic
+      sample: Exothermic means giving off heat, like a campfire, because exo means outside and therm means heat.
+      rubric: uses heat to explain giving off or releasing warmth.
+
+  - root: tract
+    origin: Latin
+    meaning: pull, drag
+    words:
+      - { word: tractor, meaning: a machine that pulls farm tools }
+      - { word: attract, meaning: pull something closer }
+      - { word: distract, meaning: pull someone's attention away }
+      - { word: retract, meaning: pull something back in }
+    sentences:
+      - { word: distract, text: "Loud music can ___ you while you do your math homework." }
+      - { word: retract, text: "A cat can ___ its claws when it is relaxed." }
+  - root: hydr
+    origin: Greek
+    meaning: water
+    words:
+      - { word: hydrant, meaning: a street pipe where firefighters get water }
+      - { word: dehydrated, meaning: having lost too much water }
+      - { word: hydroelectric, meaning: making electricity from moving water }
+      - { word: hydrate, meaning: give water to; take in water }
+    sentences:
+      - { word: hydroelectric, text: "The dam's ___ plant lights thousands of homes." }
+      - { word: hydrate, text: "On hot days, our coach reminds us to ___ by drinking often." }
+    explain:
+      word: hydrology
+      sample: Hydrology is the study of water, such as rivers, rain and lakes, because hydr means water and logy means study.
+      rubric: uses water (and study) to explain the science of water.
+
+  - root: cred
+    origin: Latin
+    meaning: believe
+    words:
+      - { word: incredible, meaning: hard to believe; amazing }
+      - { word: credible, meaning: able to be believed; trustworthy }
+      - { word: credentials, meaning: proof that you are qualified }
+      - { word: credulous, meaning: too quick to believe things }
+    sentences:
+      - { word: credible, text: "A ___ source, such as a science museum, checks its facts." }
+      - { word: credulous, text: "The ___ boy believed his cousin's tale about a talking cow." }
+    explain:
+      word: discredit
+      sample: To discredit someone is to make people stop believing or trusting them, since dis means not and cred means believe.
+      rubric: combines not and believe into making people doubt something.
+
+  - root: astr, aster
+    origin: Greek
+    meaning: star
+    words:
+      - { word: astronaut, meaning: a person who travels into space }
+      - { word: astronomy, meaning: the science of stars and space }
+      - { word: asterisk, meaning: a small star-shaped mark (*) }
+      - { word: astronomical, meaning: "enormous, like distances in space" }
+    sentences:
+      - { word: asterisk, text: "Put an ___ beside any word you want to look up later." }
+      - { word: astronomical, text: "The price of the rare comic book was ___, far more than we had." }
+    explain:
+      word: asteroid
+      sample: An asteroid is a small rocky object in space that looks like a star in a telescope, because aster means star.
+      rubric: connects star to a rocky object in space.
+
+  - root: vert, vers
+    origin: Latin
+    meaning: turn
+    words:
+      - { word: reverse, meaning: turn back the other way }
+      - { word: convert, meaning: change into a different form }
+      - { word: divert, meaning: turn something aside onto a new path }
+      - { word: versatile, meaning: able to turn to many uses or jobs }
+    sentences:
+      - { word: divert, text: "Workers will ___ traffic around the bridge while it is repaired." }
+      - { word: versatile, text: "A ___ player can play almost any position on the team." }
+  - root: scope, scop
+    origin: Greek
+    meaning: look at, view
+    words:
+      - { word: telescope, meaning: a tool for viewing faraway things }
+      - { word: periscope, meaning: a tube with mirrors for seeing over things }
+      - { word: kaleidoscope, meaning: a tube of mirrors and colored glass }
+      - { word: stethoscope, meaning: a tool for listening to the heart }
+    sentences:
+      - { word: periscope, text: "The submarine crew raised the ___ to look above the waves." }
+      - { word: stethoscope, text: "The doctor used a ___ to listen to my heartbeat." }
+    explain:
+      word: microscopic
+      sample: Microscopic means so small that you need a microscope to see it, because micro means small and scop means look.
+      rubric: combines small and look into too tiny to see without help.
+
+  - root: port
+    origin: Latin
+    meaning: carry
+    words:
+      - { word: transport, meaning: carry from one place to another }
+      - { word: portable, meaning: easy to carry around }
+      - { word: export, meaning: send goods out to another country }
+      - { word: porter, meaning: a person who carries bags for travelers }
+    sentences:
+      - { word: export, text: "Brazil and Vietnam ___ coffee beans to cafes around the world." }
+      - { word: porter, text: "At the station, a ___ helped us with our heavy suitcases." }
+    explain:
+      word: portfolio
+      sample: A portfolio is a folder of artwork or papers that you carry to show people, because port means carry.
+      rubric: uses carry to explain a case or folder of work you take with you.
+
+  - root: log
+    origin: Greek
+    meaning: word, speech, study
+    words:
+      - { word: dialogue, meaning: a conversation between people }
+      - { word: monologue, meaning: a long speech by one person }
+      - { word: geology, meaning: the study of rocks and the earth }
+      - { word: archaeology, meaning: the study of ancient people's things }
+    sentences:
+      - { word: monologue, text: "The actor gave a long ___ while the others on stage stayed silent." }
+      - { word: archaeology, text: "Her love of ___ began when she dug up old pottery in the garden." }
+    explain:
+      word: epilogue
+      sample: An epilogue is a short part with extra words at the end of a story, because epi means after or in addition and log means words.
+      rubric: connects words or speech to a section added at the end.
+
+  - root: aud
+    origin: Latin
+    meaning: hear
+    words:
+      - { word: audience, meaning: the people who watch or listen }
+      - { word: audible, meaning: loud enough to be heard }
+      - { word: audition, meaning: a tryout where you perform for judges }
+      - { word: auditorium, meaning: a big room where an audience sits }
+    sentences:
+      - { word: audible, text: "Her whisper was barely ___ over the noise of the fan." }
+      - { word: auditorium, text: "The whole school gathered in the ___ for the spring concert." }
+  - root: phon
+    origin: Greek
+    meaning: sound
+    words:
+      - { word: symphony, meaning: a long piece for a whole orchestra }
+      - { word: phonics, meaning: the sounds that letters stand for }
+      - { word: xylophone, meaning: an instrument of wooden bars you tap }
+      - { word: cacophony, meaning: a harsh mix of loud sounds }
+    sentences:
+      - { word: xylophone, text: "The ___ player tapped the wooden bars with two soft mallets." }
+      - { word: cacophony, text: "The band warming up made a ___ of honks, squeaks and thumps." }
+    explain:
+      word: homophone
+      sample: A homophone is a word that sounds the same as another word but means something else, like pair and pear, since homo means same and phon means sound.
+      rubric: combines same and sound, ideally with an example pair.
+
+  - root: mit, miss
+    origin: Latin
+    meaning: send
+    words:
+      - { word: transmit, meaning: send a signal from one place to another }
+      - { word: mission, meaning: a job someone is sent to do }
+      - { word: submit, meaning: send in or hand over for judging }
+      - { word: intermission, meaning: a break between parts of a show }
+    sentences:
+      - { word: submit, text: "Students must ___ their poems by Friday to enter the contest." }
+      - { word: intermission, text: "We bought popcorn during the ___ between the two acts." }
+    explain:
+      word: emit
+      sample: To emit is to send something out, like light from a lamp or a sound from a whistle, because e means out and mit means send.
+      rubric: combines out and send into giving off light, sound or heat.
+
+  - root: cycl
+    origin: Greek
+    meaning: circle, wheel
+    words:
+      - { word: bicycle, meaning: a vehicle with two wheels }
+      - { word: recycle, meaning: send through the cycle to use again }
+      - { word: cyclist, meaning: a person who rides a bicycle }
+      - { word: encyclopedia, meaning: a book covering every kind of topic }
+    sentences:
+      - { word: cyclist, text: "The ___ wore a bright vest so drivers could see her." }
+      - { word: encyclopedia, text: "I looked up sea otters in the ___ to learn how they stay warm." }
+    explain:
+      word: cyclical
+      sample: Cyclical means happening again and again in a circle, like the seasons or the moon's phases, because cycl means circle.
+      rubric: uses circle to explain something that repeats in a cycle.
+
+  - root: struct
+    origin: Latin
+    meaning: build
+    words:
+      - { word: construct, meaning: build or put together }
+      - { word: structure, meaning: "something built, or how its parts fit" }
+      - { word: instruct, meaning: teach; build knowledge in someone }
+      - { word: obstruct, meaning: block the way }
+    sentences:
+      - { word: instruct, text: "A lifeguard will ___ the swimmers on how to float." }
+      - { word: obstruct, text: "Fallen branches can ___ the trail after a windy night." }
+  - root: dyna
+    origin: Greek
+    meaning: power
+    words:
+      - { word: dynamic, meaning: full of energy and change }
+      - { word: dynamo, meaning: a machine that makes electric power }
+      - { word: aerodynamic, meaning: shaped to move easily through air }
+      - { word: dynasty, meaning: a family that holds power for years }
+    sentences:
+      - { word: aerodynamic, text: "The race car's ___ shape lets air flow smoothly over it." }
+      - { word: dynasty, text: "One family ran the town bakery for five generations, a baking ___." }
+    explain:
+      word: thermodynamics
+      sample: Thermodynamics is the science of heat and energy, because therm means heat and dyna means power.
+      rubric: combines heat and power into the science of heat and energy.
+
+  - root: voc, vok
+    origin: Latin
+    meaning: voice, call
+    words:
+      - { word: vocal, meaning: using the voice }
+      - { word: advocate, meaning: a person who speaks up for a cause }
+      - { word: vocabulary, meaning: all the words a person knows }
+      - { word: provoke, meaning: call up a reaction; stir up }
+    sentences:
+      - { word: advocate, text: "Mila became an ___ for a crosswalk near our school." }
+      - { word: provoke, text: "Tapping on the glass may ___ the turtle into hiding in its shell." }
+    explain:
+      word: vociferous
+      sample: Vociferous means loud and forceful with your voice, like fans shouting at a game, because voc means voice.
+      rubric: uses voice to explain being very loud or outspoken.
+
+  - root: meter, metr
+    origin: Greek
+    meaning: measure
+    words:
+      - { word: perimeter, meaning: the distance around a shape }
+      - { word: symmetry, meaning: the same measure on both sides }
+      - { word: diameter, meaning: a line across a circle through its center }
+      - { word: metronome, meaning: a device that clicks a steady beat }
+    sentences:
+      - { word: symmetry, text: "A butterfly's wings show ___: the left side matches the right." }
+      - { word: metronome, text: "The ___ clicked so Lena could keep a steady beat at the piano." }
+    explain:
+      word: odometer
+      sample: An odometer measures how far a car has traveled, because meter means measure.
+      rubric: uses measure to explain a tool that measures distance.
+
+  - root: fract, frag
+    origin: Latin
+    meaning: break
+    words:
+      - { word: fraction, meaning: a part broken off from a whole }
+      - { word: fracture, meaning: "a break or crack, as in a bone" }
+      - { word: fragment, meaning: a small broken-off piece }
+      - { word: fragile, meaning: easily broken }
+    sentences:
+      - { word: fragment, text: "We found a blue ___ of pottery near the old farmhouse." }
+      - { word: fragile, text: "Wrap the ___ glass ornament in tissue paper." }
+  - root: crypt
+    origin: Greek
+    meaning: hidden, secret
+    words:
+      - { word: cryptic, meaning: "mysterious, with a hidden meaning" }
+      - { word: encrypt, meaning: put a message into secret code }
+      - { word: cryptogram, meaning: a puzzle written in code }
+      - { word: decrypt, meaning: turn a code back into plain words }
+    sentences:
+      - { word: encrypt, text: "Banks ___ their messages so strangers cannot read them." }
+      - { word: decrypt, text: "It took us an hour to ___ the secret note our teacher hid." }
+    explain:
+      word: cryptography
+      sample: Cryptography is the study of writing and breaking secret codes, because crypt means hidden and graph means write.
+      rubric: combines hidden and write into secret writing or codes.
+
+  - root: sequ, secu
+    origin: Latin
+    meaning: follow
+    words:
+      - { word: sequence, meaning: an order in which things follow }
+      - { word: sequel, meaning: a book or movie that follows another }
+      - { word: consequence, meaning: a result that follows an action }
+      - { word: consecutive, meaning: following one after another }
+    sentences:
+      - { word: sequel, text: "The author is writing a ___ about the same three friends." }
+      - { word: consecutive, text: "It rained for five ___ days, so the game was moved." }
+    explain:
+      word: subsequent
+      sample: Subsequent means coming after or next, like the subsequent chapter of a book, because sequ means follow.
+      rubric: uses follow to explain coming after something.
+
+  - root: pan
+    origin: Greek
+    meaning: all
+    words:
+      - { word: panorama, meaning: a wide view of everything around }
+      - { word: pandemonium, meaning: wild noise and confusion }
+      - { word: pantomime, meaning: acting out a story without words }
+      - { word: panacea, meaning: a cure for every problem }
+    sentences:
+      - { word: pantomime, text: "In ___, the actor pretended to climb a ladder without a word." }
+      - { word: panacea, text: "Grandpa says laughter is a ___ for almost any bad day." }
+    explain:
+      word: pangram
+      sample: A pangram is a sentence that uses all the letters of the alphabet, because pan means all and gram means letter.
+      rubric: uses all to explain a sentence with every letter.
+
+  - root: ped
+    origin: Latin
+    meaning: foot
+    words:
+      - { word: pedal, meaning: a lever you push with your foot }
+      - { word: pedestrian, meaning: a person traveling on foot }
+      - { word: pedestal, meaning: the base a statue stands on }
+      - { word: centipede, meaning: a creature with very many legs }
+    sentences:
+      - { word: pedestrian, text: "Drivers must stop when a ___ steps into the crosswalk." }
+      - { word: centipede, text: "A ___ scurried out from under the flowerpot." }
+  - root: pod
+    origin: Greek
+    meaning: foot
+    words:
+      - { word: tripod, meaning: a stand with three legs }
+      - { word: podium, meaning: a raised stand a speaker steps onto }
+      - { word: arthropod, meaning: "an animal with jointed legs, like an ant" }
+      - { word: gastropod, meaning: "a snail or slug, which crawls on its belly" }
+    sentences:
+      - { word: podium, text: "The winner stepped onto the ___ to receive her gold medal." }
+      - { word: gastropod, text: "A snail is a ___ that glides along on one wide, flat foot." }
+    explain:
+      word: decapod
+      sample: A decapod is an animal with ten legs, like a crab or a lobster, because deca means ten and pod means foot.
+      rubric: combines ten and foot into an animal with ten legs.
+
+  - root: ver
+    origin: Latin
+    meaning: "true"
+    words:
+      - { word: verify, meaning: check that something is true }
+      - { word: verdict, meaning: a final decision about what is true }
+      - { word: veracity, meaning: truthfulness }
+      - { word: veritable, meaning: truly so; real }
+    sentences:
+      - { word: verdict, text: "After tasting all five pies, the judges gave their ___." }
+      - { word: veritable, text: "The garage sale was a ___ treasure chest of old toys." }
+    explain:
+      word: verity
+      sample: A verity is a true fact or a truth that people accept, because ver means true.
+      rubric: uses true to explain a fact or truth.
+
+  - root: chrom
+    origin: Greek
+    meaning: color
+    words:
+      - { word: monochrome, meaning: in one color only }
+      - { word: polychrome, meaning: made in many colors }
+      - { word: chromosome, meaning: a tiny cell part that carries genes }
+      - { word: chromatic, meaning: using every half step of the scale }
+    sentences:
+      - { word: polychrome, text: "The ___ quilt had every color of the rainbow." }
+      - { word: chromatic, text: "She played a ___ scale, using every white and black key." }
+    explain:
+      word: achromatic
+      sample: Achromatic means without color, like black, white and gray, because a means without and chrom means color.
+      rubric: combines without and color into having no color.
+
+  - root: ced, ceed, cess
+    origin: Latin
+    meaning: go, move
+    words:
+      - { word: proceed, meaning: go forward }
+      - { word: recede, meaning: go back or move away }
+      - { word: exceed, meaning: go beyond a limit }
+      - { word: procession, meaning: a line of people moving forward }
+    sentences:
+      - { word: recede, text: "After high tide, the water began to ___ from the beach." }
+      - { word: procession, text: "A ___ of decorated floats rolled slowly down Main Street." }
+  - root: kine, cine
+    origin: Greek
+    meaning: move, motion
+    words:
+      - { word: kinetic, meaning: having to do with motion }
+      - { word: cinema, meaning: a movie theater; moving pictures }
+      - { word: telekinesis, meaning: moving things with the mind (in stories) }
+      - { word: kinesiology, meaning: the science of how bodies move }
+    sentences:
+      - { word: cinema, text: "The old ___ downtown shows black-and-white movies on Sundays." }
+      - { word: kinesiology, text: "Her love of sports led her to study ___ in college." }
+    explain:
+      word: cinematographer
+      sample: A cinematographer is the person who films the moving pictures of a movie, because cine means motion and graph means record.
+      rubric: connects motion to filming moving pictures.
+
+  - root: luc, lum
+    origin: Latin
+    meaning: light
+    words:
+      - { word: illuminate, meaning: light up }
+      - { word: lucid, meaning: clear and easy to understand }
+      - { word: luminous, meaning: giving off light; glowing }
+      - { word: translucent, meaning: letting some light shine through }
+    sentences:
+      - { word: luminous, text: "The ___ hands of my watch glow in the dark." }
+      - { word: translucent, text: "Light shone softly through the ___ paper lantern." }
+    explain:
+      word: elucidate
+      sample: To elucidate is to make something clear, as if you were shining a light on it, because luc means light.
+      rubric: connects light to making an idea clear.
+
+  - root: onym, nym
+    origin: Greek
+    meaning: name, word
+    words:
+      - { word: synonym, meaning: a word with the same meaning }
+      - { word: antonym, meaning: a word with the opposite meaning }
+      - { word: pseudonym, meaning: a made-up name an author uses }
+      - { word: acronym, meaning: a word made from first letters }
+    sentences:
+      - { word: antonym, text: "Hot is an ___ of cold." }
+      - { word: acronym, text: "SCUBA is an ___ for self-contained underwater breathing apparatus." }
+    explain:
+      word: anonymous
+      sample: Anonymous means without a known name, like a note that nobody signed, because an means without and onym means name.
+      rubric: combines without and name into having no known name.
+
+  - root: magn
+    origin: Latin
+    meaning: great, large
+    words:
+      - { word: magnify, meaning: make something look larger }
+      - { word: magnificent, meaning: grand and beautiful }
+      - { word: magnitude, meaning: great size or importance }
+      - { word: magnanimous, meaning: generous and big-hearted }
+    sentences:
+      - { word: magnitude, text: "We didn't see the ___ of the project until we saw the huge plans." }
+      - { word: magnanimous, text: "The ___ winner shared her prize with the other teams." }
+  - root: arch
+    origin: Greek
+    meaning: chief, ruler
+    words:
+      - { word: monarch, meaning: "a single ruler, such as a queen" }
+      - { word: architect, meaning: the chief planner of a building }
+      - { word: hierarchy, meaning: a ranking from highest to lowest }
+      - { word: matriarch, meaning: a woman who heads a family }
+    sentences:
+      - { word: architect, text: "The ___ drew plans for a library with a glass roof." }
+      - { word: matriarch, text: "Great-Grandma Rose is the ___ who brings our family together." }
+    explain:
+      word: patriarch
+      sample: A patriarch is the father or man who heads a family, because patri means father and arch means ruler or chief.
+      rubric: combines father and ruler into the male head of a family.

@@ -1,0 +1,65 @@
+# Penguins Reading, section A "Two Big Ideas" (pages 1–50): articles that develop two central ideas
+# side by side; the child names both, traces how one develops, and writes an objective summary (RI.7.2).
+# Original nonfiction (ours), well-established facts only. Schema and checks: ws/spreads.py.
+# Each passage is one two-page spread: the reading page, then 4 questions (the last a 3–4-sentence summary).
+
+- id: a01-lake-ice
+  title: Life Under the Ice
+  genre: nonfiction
+  text: |
+    On a cold January morning, a lake in Minnesota can look completely still. A thick lid of ice covers
+    the surface. Yet beneath that frozen lid, the lake is full of life. Fish swim slowly through the
+    dark water, and turtles rest in the mud at the bottom. They survive because of
+    an unusual property of water and because each animal has its own way of coping with the cold.
+
+    Most substances shrink and grow denser as they cool. Water behaves differently. As it cools, it becomes
+    denser only until it reaches about 39 degrees Fahrenheit. Below that temperature, it begins to expand
+    again, and when it freezes, it becomes lighter still, which is why ice floats. As a result, the coldest
+    water and the ice stay at the top, while slightly warmer, heavier water sinks to the bottom. A frozen
+    lake is really a layered lake.
+
+    The ice also works like a blanket. It keeps the warmer water below from losing its heat to the freezing
+    air. If ice sank instead of floating, many lakes would freeze from the bottom up.
+
+    Within this protected space, animals have developed remarkable strategies. Many fish slow their bodies
+    down. Their hearts beat more slowly, and they need far less food and oxygen than they do in summer.
+    Painted turtles go even further. A turtle can stay buried in the mud for months without coming up to
+    breathe, absorbing a little oxygen through its skin.
+
+    Winter under the ice is not easy, though. When deep snow piles on top of the ice, it blocks sunlight,
+    and underwater plants stop producing oxygen. In a long winter, the oxygen in a shallow lake can run
+    low. Even so, the lake's layers and its animals' patient habits usually carry them through until the
+    ice melts in spring.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the article develop?
+          choices:
+            - Water's odd behavior protects lakes, and animals slow down to survive.
+            - Minnesota has long winters, and snow is heavier than ice.
+            - Turtles are better swimmers than fish, and frogs sleep all year.
+            - Lakes freeze solid every winter, and animals leave until spring.
+          evidence: They survive because of an unusual property of water and because each animal has its own way of coping with the cold.
+        - kind: quote
+          ask: Which sentence develops the idea about animals coping?
+          choices:
+            - Many fish slow their bodies down.
+            - The ice also works like a blanket.
+            - Most substances shrink and grow denser as they cool.
+            - Water behaves differently.
+          evidence: Many fish slow their bodies down.
+        - kind: write
+          ask: How do paragraphs 2 and 3 build the idea about water?
+          sample: Paragraph 2 explains that ice floats, so the warmer water sinks to the bottom; paragraph 3 adds that the ice works like a blanket that keeps that heat in.
+          rubric: names ice floating or the layers (paragraph 2) and the ice as a blanket (paragraph 3).
+          evidence: The ice also works like a blanket.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            A frozen lake stays alive underneath because water is "denser only until it reaches about 39
+            degrees Fahrenheit," so ice floats and warmer water sinks. The floating ice also keeps heat in
+            like a blanket. Fish and turtles survive by slowing their bodies down, and turtles take in oxygen
+            through their skin. Deep snow can make oxygen run low, but most animals last until spring.
+          rubric: covers both central ideas (water's layers and the animals' strategies) with key details in order; no opinions.
+          evidence: the lake's layers and its animals' patient habits usually carry them through

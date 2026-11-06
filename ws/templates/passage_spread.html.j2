@@ -29,18 +29,50 @@ h1 { font-size: 28px; }
 .q .box { flex: 1; border: 2px solid var(--ink); border-radius: 14px; padding: 0 12px 8px; }
 .q .box .bh { font-size: 20px; font-weight: 700; color: var(--accent); padding-top: 4px; }
 .q .box .line { margin-left: 0; height: 36px; }
+{% if sheet.items[0].genre in ("poem", "paired") %}
+/* Penguins Reading: poems (numbered lines in stanzas) and two texts on one reading page */
+.read.poem { flex: none; padding-left: 52px; }
+.poem-title { font-size: 24px; font-weight: 700; margin: 4px 0 10px; }
+.stanza { margin: 0 0 13px; }
+.vl { font-size: 20px; line-height: 1.3; position: relative; }
+.vl .ln { position: absolute; left: -52px; width: 34px; text-align: right; color: #6a6a70; }
+.read.pair { flex: none; }
+.read.pair + .read.pair { margin-top: 14px; padding-top: 12px; border-top: 3px solid var(--accent); }
+.text-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 6px -36px; }
+.text-head .badge { flex: none; font-size: 20px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 999px; padding: 0 12px; }
+.text-head .t { font-size: 22px; font-weight: 700; }
+.text-head .k { font-size: 20px; color: #4a4a50; font-style: italic; }
+{% endif %}
 {% endblock %}
 {% block body %}
 {% set head = sheet.items[0] %}
-{% set what = "article" if head.genre == "nonfiction" else "story" %}
+{% set what = {"nonfiction": "article", "argument": "argument", "poem": "poem", "paired": "two texts"}.get(head.genre, "story") %}
 {% if head.side == "read" %}
     <section class="read-wrap">
-      <div class="how">{% if head.again %}Read again: {{ head.look_for }}{% else %}Read the {{ what }}. The questions are on the next page.{% endif %}</div>
+      <div class="how">{% if head.again %}Read again: {{ head.look_for }}{% elif head.genre == "poem" %}Read the poem aloud. The questions are on the next page.{% elif head.genre == "paired" %}Read both texts. The questions are on the next page.{% else %}Read the {{ what }}. The questions are on the next page.{% endif %}</div>
+{% if head.genre == "poem" %}
+      <div class="card read poem">
+        <div class="poem-title">{{ sheet.title }}</div>
+{% for st in head.stanzas %}
+        <div class="stanza">{% for row in st %}<div class="vl"><span class="ln">{{ row.n }}</span>{{ row.text }}</div>{% endfor %}</div>
+{% endfor %}
+      </div>
+{% elif head.genre == "paired" %}
+{% for t in head.texts %}
+      <div class="card read pair">
+        <div class="text-head"><span class="badge">Text {{ loop.index }}</span><span class="t">{{ t.title }}</span><span class="k">{{ t.type }}</span></div>
+{% for para in t.paragraphs %}
+        <p><span class="pn">{{ para.n }}</span>{{ para.text }}</p>
+{% endfor %}
+      </div>
+{% endfor %}
+{% else %}
       <div class="card read">
 {% for para in head.paragraphs %}
         <p>{% if para.n %}<span class="pn">{{ para.n }}</span>{% endif %}{{ para.text }}</p>
 {% endfor %}
       </div>
+{% endif %}
 {% if head.turn %}
       <div class="how turn">The {{ what }} continues on the next page. →</div>
 {% endif %}

@@ -301,6 +301,9 @@ def plan_passages(level: Level, variant: int = 1) -> LevelPlan:
                 continue
             used.update(chosen)
             plan.pages[page] = PagePlan(page=page, extra={"builds": chosen})
+    if any(resolve_page(level, s.pages[0]).rules.get("roots") for s in level.sections):
+        from .roots import plan_roots       # Penguins Reading: Greek and Latin roots (ws/roots.py)
+        plan_roots(level, plan)
     return plan
 
 

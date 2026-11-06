@@ -1,0 +1,67 @@
+# Penguins Reading, section B "Claim and Evidence" (pages 51–100): short arguments by made-up writers (letters,
+# speeches, newsletter columns) on school, community, nature and science topics, never politics. The child
+# traces the claim and its reasons and judges whether the evidence is relevant and sufficient (RI.7.8).
+# Most arguments mix strong evidence with one weak or off-topic piece on purpose. Facts stated as general
+# knowledge are well established; surveys and counts belong to the made-up writer's own school or town.
+# Schema and checks: ws/spreads.py (genre argument).
+
+- id: b01-rail-trail
+  title: Trail on the Old Tracks
+  genre: argument
+  text: |
+    The railroad tracks that run behind Main Street in Maple Falls have not carried a train in eleven years.
+    Today they are a strip of weeds and rusty rails. The town council should turn that strip into a paved
+    trail for walking and biking, because a rail trail would make our town healthier, safer and better
+    connected.
+
+    First, a trail would give people an easy, pleasant place to exercise. Health experts recommend that
+    young people get about an hour of physical activity every day, and adults need regular exercise too.
+    Last month, my science class surveyed 150 students at Maple Falls Middle School, and seventy percent said
+    they would walk or bike more if they had a safe path away from cars.
+
+    Second, a trail would make getting around safer. Students who live on the east side of town currently
+    ride their bikes along Route 9, a busy road that has no sidewalk. A trail on the old tracks would connect
+    the east side to the school and the library without crossing a single major road.
+
+    Third, many other towns have done this successfully. Hundreds of communities across the country have
+    turned unused rail lines into trails. My cousin lives near one in Ohio, and she says it is the best thing
+    about her town. Railroads were first built in the United States in the 1830s, and they helped the young
+    country grow.
+
+    Some people worry that a trail would cost too much. However, much of the work is already done, because
+    the old rail bed is flat, wide and connected. Building on an old rail line is usually far cheaper than
+    clearing a new path through the woods. The council should vote to give Maple Falls a trail
+    that everyone can use.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - The town should turn the old tracks into a trail.
+            - Trains should run on the tracks again.
+            - Students should bike on Route 9.
+            - The library should move to the east side.
+          evidence: The town council should turn that strip into a paved
+        - kind: quote
+          ask: Which words are NOT relevant evidence for the claim?
+          choices:
+            - Railroads were first built in the United States
+            - seventy percent said they would walk or bike more
+            - a busy road that has no sidewalk
+            - the old rail bed is flat, wide and connected
+          evidence: Railroads were first built in the United States
+        - kind: write
+          ask: Is the cousin in Ohio strong evidence? Why or why not?
+          sample: No, it is weak, because it is one person's opinion about one town, not facts about many trails.
+          rubric: says it is weak and explains it is one person's opinion or a single example.
+          evidence: she says it is the best thing about her town
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence is strong for the first two reasons. The survey shows that "seventy percent said
+            they would walk or bike more," and the Route 9 detail shows a real safety problem. The third
+            reason is weaker, because it rests on a cousin's opinion and an unrelated fact about the 1830s.
+            The writer also says the trail is cheaper without giving any costs.
+          rubric: judges each reason; names the survey or Route 9 as strong; names the cousin, the history fact or the missing costs as weak.
+          evidence: My cousin lives near one in Ohio
