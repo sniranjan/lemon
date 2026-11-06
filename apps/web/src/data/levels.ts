@@ -65,7 +65,7 @@ const LOOK: Record<string, Look> = {
   ducklings: {
     mascot: "/pictures/duck.svg",
     color: "sky",
-    blurb: "Short phrases to say out loud, numbers up to 50, and steadier pencil lines.",
+    blurb: "Short phrases to say out loud, numbers all the way to 100, and steadier pencil lines.",
     preview: { kind: "phrase", phrase: "a red ball", picture: "ball" },
   },
   bunnies: {
