@@ -32,7 +32,8 @@ function fileLabel(name: string): string {
   return subject ? `${subject}: ${what}` : what;
 }
 
-function mb(bytes: number): string {
+function fileSize(bytes: number): string {
+  if (bytes < 1_048_576) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
   return `${(bytes / 1_048_576).toFixed(bytes < 10_485_760 ? 1 : 0)} MB`;
 }
 
@@ -149,7 +150,7 @@ function Ready({ order }: { order: Order }) {
               >
                 <FileText className="size-6 shrink-0 text-coral" />
                 <span className="flex-1">{fileLabel(f.name)}</span>
-                <span className="text-sm text-ink/60">{mb(f.size)}</span>
+                <span className="text-sm text-ink/60">{fileSize(f.size)}</span>
                 <Download className="size-5 shrink-0" />
               </a>
             </li>
