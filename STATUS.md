@@ -40,7 +40,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 203 passed (2026-11-06).
+- `uv run pytest`: 216 passed (2026-11-06, with Bunnies Reading).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -54,6 +54,18 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   full level). Booklets: one per section plus `ducklings-reading-level.pdf` (202 pages = cover + 200 + log).
   The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
+
+- **Bunnies Reading (EN 5A)** (2026-11-06): `syllabus/english/5A.yaml`: A Letter Trails 1–70 (letters in
+  stroke order: l i t · c o a d g · r n m h b p · u y v w x k z · e s f j q, 2 pages each + group reviews),
+  B Sound Pieces 71–150 (short a/e/i/o/u, rhyming families, then one new word a page), C Letter Pairs
+  151–160 (capital + small, a–z, then b/d/p), D Word Trails 161–200. New sheet types `letter_trace`,
+  `sound_parts`, `word_trace`; dotted letters come from our own single-stroke trace font (`ws/trace_font.py`);
+  planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
+  **165 of 200 pages build from approved words**; 35 wait for new words (verify warns: z 52–53, q 66–67 and
+  156, Sound Pieces 131–150, Word Trails 191–200). Draft for approval: `syllabus/drafts/5A-words-batch1.md`
+  (23 needed words + 8 optional; vocab_target 23). After approval: add the words (level 5A, in table order)
+  and to `letter_words` / `rimes` in `content/sounds/english.yaml`; every page then builds.
+  Booklets render (`bunnies-reading-level.pdf`: 167 pages today).
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

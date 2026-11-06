@@ -56,7 +56,9 @@ def generate(
             outside = [p for p in page_list if not s.pages[0] <= p <= s.pages[1]]
             if outside:
                 raise ValueError(f"pages {outside} are outside {level}-{section} (pages {s.pages[0]}–{s.pages[1]})")
-        made = generate_pages(lvl, page_list, variant, seed, sheet_type)
+        made = generate_pages(lvl, page_list, variant, seed, sheet_type, skip_waiting=all_)
+        if all_ and len(made) < len(page_list):
+            typer.echo(f"skipped {len(page_list) - len(made)} pages that wait for new words (see ws verify)")
     except (KeyError, ValueError) as e:
         typer.echo(f"cannot generate: {e.args[0]}", err=True)
         raise typer.Exit(1)

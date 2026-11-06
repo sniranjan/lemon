@@ -250,9 +250,9 @@ test.** Nothing else in the code should change.
 | `word_story` | EN 7A-C | 1 picture, 2–4 short sentences using known words |
 | `phrase_card` | EN 6A-B | 3 cards of picture(s) + 2–3 word phrase ("a red apple", "mom and dad"), built from frames in `content/phrases/english.yaml` |
 | `sentence_recite` | EN 6A-C | 2 blocks (3 on new-word pages) of picture(s) + one sentence ("The dog can run."), each with 3 circles to color, one per recitation |
-| `letter_trace` | EN 5A-A/C | Two picture words + large dotted lower-case letters to trace |
-| `sound_parts` | EN 5A-B | Word split into onset + rime with picture |
-| `word_trace` | EN 5A-D | Dotted whole words to trace under pictures |
+| `letter_trace` | EN 5A-A/C | One letter (big copies + practice rows) with two picture words that start with its sound; or review rows of 3 letters (with capitals in 5A-C) |
+| `sound_parts` | EN 5A-B | 3 cards: picture + short-vowel word split into onset + rime boxes ("c" "at"), then the whole word; rhyme pages show one family |
+| `word_trace` | EN 5A-D | 3 pictures, each with its word (solid) and the same word dotted to trace |
 | `colouring` | ZI-A | Simple outline shape to colour inside |
 | `line_path` | ZI-B/C, ZII-A…D | Draw from a start dot along a lane to what's at the end. ZI: straight, then curved lanes to a small picture. ZII-A: from a shape to the same shape. ZII-B: story pairs, picture to picture ("the bee goes to the flower", `content/pencil/line_stories.yaml`). ZII-C: zigzags. ZII-D: right-angle steps, square bumps (left→right lanes only) and S-curves. Lines always run left→right or top→bottom and never turn back; no arrows or text for the child; lanes narrow across the level and lines get longer across each part |
 | `count_and_say` | MA 6A-A/B | Rows of N pictures + big numeral + number word; count aloud while pointing |
@@ -299,6 +299,10 @@ page's new word is used in one of its phrases, and its picture is shown there. W
 **"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
 page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.
 The main cards stay at 2 new words. Pages 1–3 have no strip, because no word is old enough yet.
+
+**Letters and sounds (EN 5A)**: one planner (`rules: { planner: letters }`, `ws/plan.py plan_letters`) picks
+each page's letter, rime or words from the hand-checked lists in `content/sounds/english.yaml` (words by
+first sound, onset + rime splits). Pages the word bank can't fill yet are listed by verify as warnings.
 
 Later levels (4A–2A English, 3A–2A Math) need more types. Add them when the child is about
 one level away. Don't build them early.
@@ -350,7 +354,8 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
 - `phrase_card` / `sentence_recite`: every token is known (or in `allowed_words`); the phrase
   re-renders from its frame; colors, sizes, temperatures and animal actions match the tables;
   the pictures and `picture_size` are the ones the phrase calls for; new words are used and pictured.
-- `letter_trace`: letters requested exist in the trace font.
+- `letter_trace` / `word_trace`: letters requested exist in the trace font (`ws/trace_font.py`, our own
+  single-stroke dotted a–z in Andika's shapes; Andika only has outlines) and the solid letters in Andika's cmap.
 
 **Exposure checks (per section / level run)**
 - Words are "new" exactly once in the level.

@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.wt { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 18px; }
+.wt .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 26px; padding: 10px 26px; }
+.wt img { flex: none; width: 150px; height: 150px; }
+.wt .right { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.wt .word { font-size: 44px; font-weight: 700; line-height: 1.1; padding-left: 6px; }
+{% endblock %}
+{% block body %}
+    <div class="wt">
+{% for item in sheet.items %}
+      <div class="card">
+        <img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt="">
+        <div class="right">
+          <div class="word">{{ item.word }}</div>
+          {{ trace(item.word, 0.82, width_px=470) }}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}
