@@ -88,7 +88,7 @@ function putSecret(name, value) {
 }
 
 const ladder = parse(readFileSync(new URL("../../../syllabus/ladder.yaml", import.meta.url), "utf8"));
-const account = await stripe("GET", "/account");
+const account = await stripe("GET", "/account").catch(() => ({ id: "(restricted key: account name not readable)" }));
 console.log(
   `Stripe account: ${account.settings?.dashboard?.display_name ?? account.business_profile?.name ?? account.id}` +
     ` (${account.id}, ${LIVE ? "LIVE" : "test"} mode)${apply ? "" : "  [dry run: add --apply to make changes]"}\n`,
