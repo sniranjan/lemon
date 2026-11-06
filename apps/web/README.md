@@ -69,6 +69,12 @@ Preview PDFs must not show internal level codes or anything referencing other pr
 - **Local testing:** put test values in `.dev.vars` (git-ignored); `stripe listen --forward-to
   localhost:5173/api/stripe/webhook` prints a webhook secret for local use.
 
+## Session replay
+
+OpenReplay (self-hosted at `replay.cloudhut.io`), started in `src/lib/replay.ts`, on paperlessons.com only.
+Nothing is masked on purpose (text, inputs, network payloads), so replays show emails typed into the
+waitlist and order-page URLs, which contain download tokens.
+
 ## Data
 
 ```bash
