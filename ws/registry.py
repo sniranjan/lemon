@@ -21,6 +21,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "fact_drill",
     # Cubs math (M2): place value, skip counting, column adding/taking away, story problems
     "place_value", "skip_count", "column_arithmetic", "math_story",
+    # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
+    "passage_questions", "word_builder", "full_sentence_answer",
 })
 
 

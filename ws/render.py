@@ -85,6 +85,8 @@ MIN_TIP_PX = 16
 def min_child_px(level: str, subject: str | None = None) -> int:
     if subject == "math" and level == "4A":
         return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
+    if level[:1] == "R" and level[1:].isdigit():
+        return 20   # our own reading levels (Foxes on): grade 3+ passages
     return 20 if level in {"4A", "3A", "2A"} else 28
 
 

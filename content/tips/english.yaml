@@ -41,3 +41,15 @@ sound_parts_rhyme:
 word_trace:
   - "Read each word together while pointing to the picture. Then your child traces the dots, one letter at a time, left to right."
   - "Say the word, then say each letter as your child traces it. Read the whole word again at the end."
+passage_questions:
+  - "Let your child read the story aloud, helping only when asked. For each question, ask: where in the story did you find that?"
+  - "Read the story together, taking turns by sentence. Then your child answers; point back to the story if an answer needs a clue."
+  - "After reading, ask your child to retell the story in a few sentences before starting the questions."
+word_builder:
+  - "Cover the word part with a finger and read the known word, then uncover it and read the new word. Say what it means together."
+  - "Ask your child to use each new word in a sentence out loud before writing. Silly sentences count!"
+  - "Read each built word aloud and ask: what does the word part add to the meaning?"
+full_sentence_answer:
+  - "Show how the question gives the first words of the answer: Why did Ben smile? Ben smiled because... Spelling doesn't need to be perfect."
+  - "Let your child say each answer out loud first, then write it. Check that it starts with a capital letter and ends with a period."
+  - "Read the story together, then ask your child to point to the sentence in the story that helps with each answer."

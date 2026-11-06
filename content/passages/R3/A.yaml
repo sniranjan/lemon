@@ -1,0 +1,42 @@
+# Foxes Reading, section A "Why They Did It" (pages 1–50): character traits and motives (RL.3.3).
+# Original stories (ours). Schema: ws/passages.py. Each passage serves 2 pages (one question set each).
+# Multiple choice: `choices` (3, the first is right; the sheet shuffles them). Written: `sample`.
+# `evidence`: words copied exactly from the text that back up the answer.
+
+- id: a01-kite-for-leo
+  title: A Kite for Leo
+  text: |
+    Mia and her little brother Leo went to the park on a windy Saturday. Mia had a beautiful red kite
+    with a long, curly tail, and Leo had a small paper kite that he had made at school.
+
+    Leo ran across the grass, and his kite rose into the sky. Suddenly a powerful gust pulled it
+    into a tall oak tree. The paper tore, and Leo sat down on the grass with tears on his cheeks.
+
+    Mia looked at her own kite. She had waited all week to fly it. She knelt next to Leo and placed the
+    string in his hands. "You can fly mine," she said. "I will hold the tail until the wind catches it."
+
+    Leo smiled and wiped his eyes. All afternoon the red kite danced above the park, and Mia cheered
+    every time it climbed higher.
+  pages:
+    - focus: traits
+      questions:
+        - ask: Which word best describes Mia in this story?
+          choices: [caring, bossy, lazy]
+          evidence: placed the string in his hands
+        - ask: Why did Leo sit down on the grass?
+          choices: [His kite tore in a tree., He was tired from running., He wanted to rest in the shade.]
+          evidence: The paper tore, and Leo sat down
+        - ask: Why did Mia give Leo her kite?
+          sample: Mia gave Leo her kite because his kite tore and he was sad.
+          evidence: with tears on his cheeks
+    - focus: motives
+      questions:
+        - ask: What did Mia give up to help Leo?
+          choices: [her turn to fly her new kite, her lunch at the park, her seat on the bus]
+          evidence: She had waited all week to fly it.
+        - ask: What does Mia do that shows she wants Leo to have fun?
+          choices: [She holds the tail and cheers., She runs home to get a new kite., She tells Leo to go home.]
+          evidence: Mia cheered every time it climbed higher
+        - ask: How did Leo feel at the end of the story? How do you know?
+          sample: Leo felt happy at the end, because he smiled and wiped his eyes.
+          evidence: Leo smiled and wiped his eyes.

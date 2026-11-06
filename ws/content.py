@@ -87,6 +87,21 @@ def line_stories() -> tuple[tuple[str, str], ...]:
     return tuple((d["from"], d["to"]) for d in data)
 
 
+@lru_cache(maxsize=None)
+def passages(level: str, section: str) -> tuple[dict, ...]:
+    """Reading passages for one section of a passage level: content/passages/<level>/<section>.yaml."""
+    path = CONTENT_DIR / "passages" / level / f"{section}.yaml"
+    return tuple(yaml.safe_load(path.read_text()) or []) if path.exists() else ()
+
+
+@lru_cache(maxsize=None)
+def wordparts(level: str) -> dict:
+    """Prefixes, suffixes and compound words to build: content/wordparts/<level>.yaml."""
+    path = CONTENT_DIR / "wordparts" / f"{level}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
 def clear_caches() -> None:
-    for f in (vocab, tips, licenses, stories, phrases, sounds, math_objects, math_stories, line_targets, line_stories):
+    for f in (vocab, tips, licenses, stories, phrases, sounds, math_objects, math_stories, line_targets, line_stories,
+              passages, wordparts):
         f.cache_clear()
