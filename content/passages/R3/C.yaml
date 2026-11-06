@@ -446,7 +446,7 @@
   title: The Bear Asks for Help
   moral: "It is smart to ask for help when you need it."
   text: |
-    Bear loved the shiny red apples at the top of the old apple tree. Every autumn he stretched his
+    Bear loved the shiny red apples at the top of the old apple tree. Every fall he stretched his
     paws as high as he could, but the best apples were always out of reach.
 
     "I am big and strong," Bear grumbled. "I should be able to do this myself." He jumped and
@@ -606,44 +606,44 @@
           sample: She knelt down so the white goat could step over, and then both crossed safely.
           evidence: Both goats crossed safely
 
-- id: c16-duck-shares-her-bread
+- id: c16-duck-shares-her-oats
   title: The Duck Who Shared
   moral: "When you share what you have, everyone can enjoy it."
   text: |
-    A kind girl walked by the pond and tossed a whole loaf of bread into the water. Duck paddled
-    over quickly and grabbed it first. "This is all mine," she quacked, and she swam to a quiet
+    A kind girl walked by the pond and poured a whole bag of duck oats on the bank. Duck paddled
+    over quickly and got there first. "This is all mine," she quacked, and she swam to a quiet
     corner by herself.
 
-    The loaf was much too big for one duck. Duck nibbled and nibbled until her tummy was full, but
-    most of the bread was still left. Soon it became soggy and began to sink.
+    The pile was much too big for one duck. Duck nibbled and nibbled until her tummy was full, but
+    most of the oats were still left. Soon the rain made them soggy, and they washed away.
 
     Across the pond, the geese and the young ducklings watched hungrily. Duck looked at the soggy
-    bread, and then she looked at her hungry neighbors.
+    oats, and then she looked at her hungry neighbors.
 
-    The next day, the girl brought another loaf. This time Duck broke it into many small pieces and
+    The next day, the girl brought another bag. This time Duck pushed the oats into many small piles and
     called everyone over. The whole pond splashed and quacked happily, and nothing was wasted at all.
   pages:
     - focus: recount
       questions:
-        - ask: What did Duck do with the first loaf?
+        - ask: What did Duck do with the first bag of oats?
           choices: [She kept it all for herself., She shared it with the geese., She gave it back to the girl.]
           evidence: This is all mine
-        - ask: What happened to the bread Duck could not eat?
-          choices: [It became soggy and began to sink., The geese stole it from her., The girl took it home.]
-          evidence: Soon it became soggy and began to sink.
-        - ask: What did Duck do with the second loaf?
-          sample: Duck broke the second loaf into small pieces and shared it with everyone.
-          evidence: Duck broke it into many small pieces and called everyone over
+        - ask: What happened to the oats Duck could not eat?
+          choices: [They got soggy and washed away., The geese stole them from her., The girl took them home.]
+          evidence: Soon the rain made them soggy, and they washed away.
+        - ask: What did Duck do with the second bag?
+          sample: Duck pushed the oats into small piles and shared them with everyone.
+          evidence: Duck pushed the oats into many small piles and
     - focus: lesson
       questions:
         - ask: What is the lesson of this fable?
-          choices: [Sharing lets everyone enjoy it., Bread is better when it is soggy., Ducks should swim alone.]
+          choices: [Sharing lets everyone enjoy it., Oats are better when they are soggy., Ducks should swim alone.]
           evidence: The whole pond splashed and quacked happily
         - ask: Which detail shows keeping it all was a problem?
-          choices: [Most of the bread was still left., The girl walked by the pond., Duck paddled over quickly.]
-          evidence: most of the bread was still left
+          choices: [Most of the oats were still left., The girl walked by the pond., Duck paddled over quickly.]
+          evidence: most of the oats were still left
         - ask: How does Duck learn the lesson?
-          sample: Duck learns the lesson when her extra bread sinks and her neighbors stay hungry.
+          sample: Duck learns the lesson when her extra oats wash away and her neighbors stay hungry.
           evidence: then she looked at her hungry neighbors
 
 
@@ -662,7 +662,7 @@
     yellow flower bloomed, and a small green pumpkin appeared.
 
     Turtle waited all summer long. Day by day, the pumpkin grew rounder and turned bright orange. By
-    autumn, it was the biggest pumpkin in the whole valley. Turtle invited Frog over, and they shared
+    fall, it was the biggest pumpkin in the whole valley. Turtle invited Frog over, and they shared
     a delicious pumpkin pie.
   pages:
     - focus: recount
@@ -673,8 +673,8 @@
         - ask: What did Turtle see the very next morning?
           choices: [only brown dirt, a big orange pumpkin, a yellow flower]
           evidence: There was only brown dirt.
-        - ask: What happened by autumn?
-          sample: By autumn the pumpkin was the biggest one in the whole valley.
+        - ask: What happened by fall?
+          sample: By fall the pumpkin was the biggest one in the whole valley.
           evidence: it was the biggest pumpkin in the whole valley
     - focus: lesson
       questions:

@@ -761,9 +761,9 @@ Page 2 (lesson):
 2. Why did Little Goat fall in the stream? — **She did not listen to Grandmother.** / Grandmother pushed her in. / A stone was missing.
 3. How does Little Goat learn the lesson? — sample: She learns the lesson when she slips after rushing, and then crosses safely by going slowly.
 
-### The Bear Asks for Help (`c12-bear-asks-for-help`, pages 113–114; 135 words, FK 2.88)
+### The Bear Asks for Help (`c12-bear-asks-for-help`, pages 113–114; 135 words, FK 2.79)
 
-Bear loved the shiny red apples at the top of the old apple tree. Every autumn he stretched his paws as high as he could, but the best apples were always out of reach.
+Bear loved the shiny red apples at the top of the old apple tree. Every fall he stretched his paws as high as he could, but the best apples were always out of reach.
 
 "I am big and strong," Bear grumbled. "I should be able to do this myself." He jumped and jumped until he was out of breath, but not one apple fell.
 
@@ -849,29 +849,29 @@ Page 2 (lesson):
 2. Which detail shows the goats were stubborn? — **Neither goat would budge.** / The bridge was narrow. / The turtle was on the riverbank.
 3. How did the brown goat help both goats? — sample: She knelt down so the white goat could step over, and then both crossed safely.
 
-### The Duck Who Shared (`c16-duck-shares-her-bread`, pages 121–122; 133 words, FK 3.68)
+### The Duck Who Shared (`c16-duck-shares-her-oats`, pages 121–122; 137 words, FK 3.39)
 
-A kind girl walked by the pond and tossed a whole loaf of bread into the water. Duck paddled over quickly and grabbed it first. "This is all mine," she quacked, and she swam to a quiet corner by herself.
+A kind girl walked by the pond and poured a whole bag of duck oats on the bank. Duck paddled over quickly and got there first. "This is all mine," she quacked, and she swam to a quiet corner by herself.
 
-The loaf was much too big for one duck. Duck nibbled and nibbled until her tummy was full, but most of the bread was still left. Soon it became soggy and began to sink.
+The pile was much too big for one duck. Duck nibbled and nibbled until her tummy was full, but most of the oats were still left. Soon the rain made them soggy, and they washed away.
 
-Across the pond, the geese and the young ducklings watched hungrily. Duck looked at the soggy bread, and then she looked at her hungry neighbors.
+Across the pond, the geese and the young ducklings watched hungrily. Duck looked at the soggy oats, and then she looked at her hungry neighbors.
 
-The next day, the girl brought another loaf. This time Duck broke it into many small pieces and called everyone over. The whole pond splashed and quacked happily, and nothing was wasted at all.
+The next day, the girl brought another bag. This time Duck pushed the oats into many small piles and called everyone over. The whole pond splashed and quacked happily, and nothing was wasted at all.
 
 *Lesson:* When you share what you have, everyone can enjoy it.
 
 Page 1 (recount):
-1. What did Duck do with the first loaf? — **She kept it all for herself.** / She shared it with the geese. / She gave it back to the girl.
-2. What happened to the bread Duck could not eat? — **It became soggy and began to sink.** / The geese stole it from her. / The girl took it home.
-3. What did Duck do with the second loaf? — sample: Duck broke the second loaf into small pieces and shared it with everyone.
+1. What did Duck do with the first bag of oats? — **She kept it all for herself.** / She shared it with the geese. / She gave it back to the girl.
+2. What happened to the oats Duck could not eat? — **They got soggy and washed away.** / The geese stole them from her. / The girl took them home.
+3. What did Duck do with the second bag? — sample: Duck pushed the oats into small piles and shared them with everyone.
 
 Page 2 (lesson):
-1. What is the lesson of this fable? — **Sharing lets everyone enjoy it.** / Bread is better when it is soggy. / Ducks should swim alone.
-2. Which detail shows keeping it all was a problem? — **Most of the bread was still left.** / The girl walked by the pond. / Duck paddled over quickly.
-3. How does Duck learn the lesson? — sample: Duck learns the lesson when her extra bread sinks and her neighbors stay hungry.
+1. What is the lesson of this fable? — **Sharing lets everyone enjoy it.** / Oats are better when they are soggy. / Ducks should swim alone.
+2. Which detail shows keeping it all was a problem? — **Most of the oats were still left.** / The girl walked by the pond. / Duck paddled over quickly.
+3. How does Duck learn the lesson? — sample: Duck learns the lesson when her extra oats wash away and her neighbors stay hungry.
 
-### The Turtle's Pumpkin (`c17-turtle-and-the-pumpkin`, pages 123–124; 130 words, FK 3.64)
+### The Turtle's Pumpkin (`c17-turtle-and-the-pumpkin`, pages 123–124; 130 words, FK 3.55)
 
 In the spring, Turtle planted a pumpkin seed in her garden. The very next morning, she hurried outside. "Where is my pumpkin?" she asked. There was only brown dirt.
 
@@ -879,14 +879,14 @@ Her neighbor, Frog, laughed gently. "Seeds need time," he said. "Give it water a
 
 Turtle wanted to dig up the seed to see what was happening. Instead, she watered it every day. Soon a tiny green sprout poked up. Then came wide leaves and a long, curling vine. In summer, a yellow flower bloomed, and a small green pumpkin appeared.
 
-Turtle waited all summer long. Day by day, the pumpkin grew rounder and turned bright orange. By autumn, it was the biggest pumpkin in the whole valley. Turtle invited Frog over, and they shared a delicious pumpkin pie.
+Turtle waited all summer long. Day by day, the pumpkin grew rounder and turned bright orange. By fall, it was the biggest pumpkin in the whole valley. Turtle invited Frog over, and they shared a delicious pumpkin pie.
 
 *Lesson:* Good things take time, so be patient.
 
 Page 1 (recount):
 1. What did Turtle plant in the spring? — **a pumpkin seed** / an apple tree / a row of flowers
 2. What did Turtle see the very next morning? — **only brown dirt** / a big orange pumpkin / a yellow flower
-3. What happened by autumn? — sample: By autumn the pumpkin was the biggest one in the whole valley.
+3. What happened by fall? — sample: By fall the pumpkin was the biggest one in the whole valley.
 
 Page 2 (lesson):
 1. What is the lesson of this fable? — **Good things take time.** / Pumpkins grow in one night. / Never listen to a frog.
