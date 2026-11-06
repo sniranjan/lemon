@@ -31,7 +31,7 @@ def frame_options(entry, story_data: dict, phrase_data: dict) -> list[str]:
     """The frames that say something true about this word (see content/stories/english.yaml):
     its own frames, else its category's, else the defaults; "my" / "I have" only for things a child
     can have; no "I can" for what a 3-year-old can't do; plural nouns never in "... is ...";
-    "the sun", never "a sun"."""
+    "the sun", never "a sun"; never "Look at the sun"."""
     own = story_data.get("frames_by_word", {}).get(entry.word)   # hand-written for this word: "I wash my hand."
     options = own or story_data.get("frames_by_category", {}).get(entry.category) or story_data["frames"]
     keep = []
@@ -44,6 +44,8 @@ def frame_options(entry, story_data: dict, phrase_data: dict) -> list[str]:
         if " is " in f and entry.word in phrase_data.get("plural", []):
             continue
         if "{a}" in f and entry.word in phrase_data.get("the_only", []):
+            continue
+        if "look at" in f.lower() and entry.word in phrase_data.get("dont_look_at", []):
             continue
         keep.append(f)
     if not keep:

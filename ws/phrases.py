@@ -115,6 +115,8 @@ def is_true(filling: dict[str, str], frame: str, data: dict) -> bool:
             return False
     if "{a}" in frame and noun in data.get("the_only", []):   # "the sun", never "a sun"
         return False
+    if "look at" in frame.lower() and noun in data.get("dont_look_at", []):   # never "Look at the sun."
+        return False
     return True
 
 
