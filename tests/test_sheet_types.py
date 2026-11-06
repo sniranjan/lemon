@@ -182,3 +182,15 @@ def test_color_words_get_color_story_frames():
     for seed in range(10):
         (frame,) = pick_frames(random.Random(seed), [bank["red"]], data)
         assert frame in data["frames_by_category"]["colors"] and "{a}" not in frame
+
+
+def test_action_words_get_action_story_frames():
+    import random
+
+    from ws.content import stories, vocab_by_word
+    from ws.sheet_types.word_story import pick_frames
+
+    bank, data = vocab_by_word(), stories()
+    for seed in range(10):
+        (frame,) = pick_frames(random.Random(seed), [bank["jump"]], data)
+        assert frame in data["frames_by_category"]["actions"] and "{a}" not in frame

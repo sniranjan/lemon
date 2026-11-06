@@ -84,3 +84,45 @@
 - { word: blocks,  picture: blocks,  category: toys,     level: 7A, mass: true, sentences: ["I build with blocks."] }
 - { word: lion,    picture: lion,    category: animals,  level: 7A, sentences: ["The lion says roar."] }
 - { word: purple,  picture: purple,  category: colors,   level: 7A, needs_color: true, sentences: ["Grapes can be purple."] }
+
+# Batch 3 (approved 2026-11-05): 7A pages 41-60. Action words use the `actions` story frames.
+- { word: drum,    picture: drum,    category: toys,     level: 7A, sentences: ["I bang the drum."] }
+- { word: lamp,    picture: lamp,    category: home,     level: 7A, sentences: ["Turn on the lamp."] }
+- { word: clock,   picture: clock,   category: home,     level: 7A, sentences: ["The clock says tick tock."] }
+- { word: key,     picture: key,     category: home,     level: 7A, sentences: ["Dad has the key."] }
+- { word: plate,   picture: plate,   category: home,     level: 7A, sentences: ["Food goes on my plate."] }
+- { word: towel,   picture: towel,   category: home,     level: 7A, sentences: ["I dry off with a towel."] }
+- { word: run,     picture: run,     category: actions,  level: 7A, sentences: ["I run to the park."] }
+- { word: owl,     picture: owl,     category: animals,  level: 7A, sentences: ["The owl says hoo."] }
+- { word: pear,    picture: pear,    category: food,     level: 7A, sentences: ["The pear is juicy."] }
+- { word: hair,    picture: hair,    category: body,     level: 7A, sentences: ["Mom combs my hair."] }
+- { word: jump,    picture: jump,    category: actions,  level: 7A, sentences: ["I jump up high."] }
+- { word: swing,   picture: swing,   category: toys,     level: 7A, sentences: ["Push me on the swing."] }
+- { word: rain,    picture: rain,    category: nature,   level: 7A, sentences: ["The rain goes splash."], mass: true }
+- { word: sister,  picture: sister,  category: family,   level: 7A, sentences: ["My sister reads to me."] }
+- { word: eat,     picture: eat,     category: actions,  level: 7A, sentences: ["We eat lunch together."] }
+- { word: goat,    picture: goat,    category: animals,  level: 7A, sentences: ["The goat says maa."] }
+- { word: corn,    picture: corn,    category: food,     level: 7A, sentences: ["I eat yellow corn."], mass: true }
+- { word: arm,     picture: arm,     category: body,     level: 7A, sentences: ["I hold up my arm."] }
+- { word: sleep,   picture: sleep,   category: actions,  level: 7A, sentences: ["I sleep in my bed."] }
+- { word: brother, picture: brother, category: family,   level: 7A, sentences: ["My brother plays with me."] }
+- { word: van,     picture: van,     category: vehicles, level: 7A, sentences: ["We ride in the van."] }
+- { word: soap,    picture: soap,    category: home,     level: 7A, sentences: ["Soap makes lots of bubbles."], mass: true }
+- { word: sit,     picture: sit,     category: actions,  level: 7A, sentences: ["I sit on the chair."] }
+- { word: monkey,  picture: monkey,  category: animals,  level: 7A, sentences: ["The monkey climbs a tree."] }
+- { word: pizza,   picture: pizza,   category: food,     level: 7A, sentences: ["We share a pizza."] }
+- { word: leg,     picture: leg,     category: body,     level: 7A, sentences: ["I bend my leg."] }
+- { word: scarf,   picture: scarf,   category: clothes,  level: 7A, sentences: ["My scarf keeps me warm."] }
+- { word: wash,    picture: wash,    category: actions,  level: 7A, sentences: ["I wash my hands."] }
+- { word: snow,    picture: snow,    category: nature,   level: 7A, sentences: ["The snow is cold."], mass: true }
+- { word: turtle,  picture: turtle,  category: animals,  level: 7A, sentences: ["The turtle is slow."] }
+- { word: clap,    picture: clap,    category: actions,  level: 7A, sentences: ["Clap your hands with me."] }
+- { word: tractor, picture: tractor, category: vehicles, level: 7A, sentences: ["The tractor is on the farm."] }
+- { word: pillow,  picture: pillow,  category: home,     level: 7A, sentences: ["My pillow is soft."] }
+- { word: diaper,  picture: diaper,  category: clothes,  level: 7A, sentences: ["The baby has a diaper."] }
+- { word: swim,    picture: swim,    category: actions,  level: 7A, sentences: ["I swim in the pool."] }
+- { word: rock,    picture: rock,    category: nature,   level: 7A, sentences: ["I found a little rock."] }
+- { word: doll,    picture: doll,    category: toys,     level: 7A, sentences: ["I hug my doll."] }
+- { word: soup,    picture: soup,    category: food,     level: 7A, sentences: ["The soup is warm."], mass: true }
+- { word: teeth,   picture: teeth,   category: body,     level: 7A, sentences: ["I brush my teeth."] }
+- { word: slide,   picture: slide,   category: toys,     level: 7A, sentences: ["I go down the slide."] }
