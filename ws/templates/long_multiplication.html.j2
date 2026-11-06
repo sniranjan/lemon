@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{# Long multiplication. Every line is right-aligned in `cols` digit columns, with the sign in its own
+   column on the left. Carry boxes sit over the digits of the top number (not the ones). Partial lines
+   get one box per digit; the answer line gets a box in every column. #}
+{% set n = sheet.items | length %}
+{% block style %}
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 20px 24px; }
+.problems .card { min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px; border-radius: 24px; }
+.sum { display: grid; grid-template-columns: 40px repeat(var(--cols), 46px); column-gap: 3px; align-items: center; justify-items: center; }
+.d { font-size: 46px; font-weight: 700; line-height: 50px; height: 50px; }
+.sign { font-size: 42px; font-weight: 700; line-height: 50px; }
+.carry { width: 32px; height: 30px; border: 2px dashed var(--accent); border-radius: 7px; margin-bottom: 4px; }
+.rule { grid-column: 1 / -1; justify-self: stretch; height: 0; border-top: 4px solid var(--ink); margin: 4px 0 8px; }
+.ans { width: 40px; height: 46px; border: 3px solid var(--ink); border-radius: 9px; margin: 2px 0; font-size: 34px; font-weight: 700; line-height: 42px; text-align: center; color: #8a8a90; }
+.ans.part { border-width: 2px; }
+{% if n > 4 %}
+.problems { gap: 16px 20px; }
+.d { font-size: 44px; line-height: 48px; height: 48px; }
+.sign { font-size: 40px; line-height: 48px; }
+{% endif %}
+{% endblock %}
+{% block body %}
+    <div class="problems">
+{% for item in sheet.items %}
+{% set cols = item.cols %}
+      <div class="card"><div class="sum" style="--cols: {{ cols }}">
+{% if item.carry_cols %}
+        <span></span>{% for c in range(cols) %}{% if (cols - 1 - c) in item.carry_cols %}<span class="carry"></span>{% else %}<span></span>{% endif %}{% endfor %}
+
+{% endif %}
+{% for num in [item.a, item.b] %}
+{% set s = num | string %}
+        <span class="sign">{% if not loop.first %}×{% endif %}</span>{% for c in range(cols) %}{% set k = c - (cols - s | length) %}<span class="d">{% if k >= 0 %}{{ s[k] }}{% endif %}</span>{% endfor %}
+
+{% endfor %}
+        <span class="rule"></span>
+{% if item.partials %}
+{% for p in item.partials %}
+{% set w = p | string | length %}{% set last_line = loop.last %}
+        <span class="sign">{% if loop.last %}+{% endif %}</span>{% for c in range(cols) %}{% set col = cols - 1 - c %}{% if col < w %}<span class="ans part">{% if item.zero_shown and last_line and col == 0 %}0{% endif %}</span>{% else %}<span></span>{% endif %}{% endfor %}
+
+{% endfor %}
+        <span class="rule"></span>
+{% endif %}
+        <span></span>{% for c in range(cols) %}<span class="ans"></span>{% endfor %}
+
+      </div></div>
+{% endfor %}
+    </div>
+{% endblock %}

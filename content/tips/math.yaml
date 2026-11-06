@@ -75,3 +75,16 @@ fraction_line:
 story_problem:
   - "Read each story together, then ask: equal groups or sharing? Draw dots in the empty space if it helps."
   - "Let your child say the number sentence first, then write the answer in the box."
+# Owls math (long_multiplication, division_house, factor_pairs, fraction_bars). Parts usually override these.
+long_multiplication:
+  - "Start with the ones, on the right. Write one digit in each box and carry the tens to the little box over the next column."
+  - "Guess the answer first by rounding, then check that the answer is close to the guess."
+division_house:
+  - "Divide, multiply, take away, bring down. Say the four steps together for each digit."
+  - "Check an answer by multiplying back: the answer times the divisor, plus the remainder, is the number in the house."
+factor_pairs:
+  - "Factor pairs multiply to make the number. Try 1, 2, 3 and so on, and stop when the pairs turn around."
+  - "A multiple of 6 is in the 6 times table. Count by 6s together if it helps."
+fraction_bars:
+  - "Same size bars, different pieces. Count the shaded parts on each bar together."
+  - "When the bottom numbers match, add or take away the tops; the bottom stays the same."

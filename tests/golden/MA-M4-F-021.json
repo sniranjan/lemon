@@ -1,0 +1,79 @@
+{
+  "id": "MA-M4-F-021",
+  "subject": "math",
+  "level": "M4",
+  "section": "F",
+  "part": 3,
+  "sheet_type": "fraction_bars",
+  "page_number": 191,
+  "variant": 1,
+  "seed": 2646645909365930634,
+  "title": "Add and take away",
+  "parent_tip": "When the bottom numbers match, add or take away the tops. The bottom stays the same: 2/8 and 3/8 make 5/8.",
+  "items": [
+    {
+      "n_": 1,
+      "kind": "op",
+      "op": "add",
+      "den": 4,
+      "a": 3,
+      "c": 1,
+      "bar": true
+    },
+    {
+      "n_": 2,
+      "kind": "op",
+      "op": "sub",
+      "den": 6,
+      "a": 4,
+      "c": 3,
+      "bar": true
+    },
+    {
+      "n_": 3,
+      "kind": "op",
+      "op": "add",
+      "den": 12,
+      "a": 5,
+      "c": 7,
+      "bar": false
+    },
+    {
+      "n_": 4,
+      "kind": "op",
+      "op": "sub",
+      "den": 6,
+      "a": 3,
+      "c": 2,
+      "bar": false
+    },
+    {
+      "n_": 5,
+      "kind": "op",
+      "op": "add",
+      "den": 10,
+      "a": 5,
+      "c": 4,
+      "bar": false
+    },
+    {
+      "n_": 6,
+      "kind": "op",
+      "op": "sub",
+      "den": 6,
+      "a": 5,
+      "c": 1,
+      "bar": false
+    }
+  ],
+  "answer_key": [
+    "4/4",
+    "1/6",
+    "12/12",
+    "1/6",
+    "9/10",
+    "4/6"
+  ],
+  "new_words": [],
+  "review_words": []
+}

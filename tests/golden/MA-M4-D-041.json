@@ -1,0 +1,39 @@
+{
+  "id": "MA-M4-D-041",
+  "subject": "math",
+  "level": "M4",
+  "section": "D",
+  "part": 5,
+  "sheet_type": "division_house",
+  "page_number": 141,
+  "variant": 1,
+  "seed": 9231642441785101543,
+  "title": "Four-digit division",
+  "parent_tip": "Guess first: 4236 shared by 6 is about 4200 shared by 6, so about 700.",
+  "items": [
+    {
+      "kind": "divide",
+      "dividend": 6165,
+      "divisor": 7,
+      "quotient": 880,
+      "remainder": 5,
+      "start": 1,
+      "r_box": true
+    },
+    {
+      "kind": "divide",
+      "dividend": 1323,
+      "divisor": 9,
+      "quotient": 147,
+      "remainder": 0,
+      "start": 1,
+      "r_box": true
+    }
+  ],
+  "answer_key": [
+    "880 R 5",
+    "147 R 0"
+  ],
+  "new_words": [],
+  "review_words": []
+}
