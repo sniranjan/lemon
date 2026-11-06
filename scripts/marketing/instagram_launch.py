@@ -196,7 +196,7 @@ def post_hello() -> str:
 
 def level_road() -> str:
     """Slide 1 of 'Meet the levels': all 13 mascots on a winding road up a hill."""
-    xs = [195, 425, 655, 885]
+    xs = [215, 435, 655, 875]
     rows = [1100, 878, 656]
     pts: list[tuple[int, int]] = []
     for r, y in enumerate(rows):
@@ -209,7 +209,7 @@ def level_road() -> str:
         if y0 == y1:
             d += f" L{x1} {y1}"
         else:  # a rounded switchback on the outside of the row
-            bulge = 120 if x0 > 540 else -120
+            bulge = 95 if x0 > 540 else -95
             d += f" C{x0 + bulge} {y0} {x1 + bulge} {y1} {x1} {y1}" if x0 == x1 else f" C{x0 + bulge} {y0 - 40} {x1 + 60} {y1 + 90} {x1} {y1}"
     road = (f'<svg class="abs" style="left:0;top:0" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
             f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>'
@@ -222,16 +222,16 @@ def level_road() -> str:
                   f'background:#fff;box-shadow:6px 6px 0 {INK}"><img src="{lv["mascot"]}" alt=""></div>'
                   f'<div class="abs fred" style="left:{x - 110}px;width:220px;top:{y + size // 2 + 6}px;text-align:center;'
                   f'font-size:38px;color:{INK};-webkit-text-stroke:12px {SKY};paint-order:stroke fill">{lv["name"]}</div>')
-    flag = (f'<svg class="abs" style="left:600px;top:285px" width="110" height="110" viewBox="0 0 110 110">'
+    flag = (f'<svg class="abs" style="left:618px;top:285px" width="110" height="110" viewBox="0 0 110 110">'
             f'<path d="M14 104 V10" stroke="{INK}" stroke-width="7" stroke-linecap="round"/>'
             f'<path d="M14 12 H86 L72 32 L86 52 H14 Z" fill="{CORAL}" stroke="{INK}" stroke-width="6" stroke-linejoin="round"/></svg>')
     body = f"""
-<div class="abs" style="left:60px;top:66px"><span class="chip">13 levels &middot; ages 3 to 12</span></div>
-<div class="abs fred" style="left:60px;top:150px;font-size:96px;width:760px">Thirteen levels,<br>one big climb</div>
+<div class="abs" style="left:90px;top:66px"><span class="chip">13 levels &middot; ages 3 to 12</span></div>
+<div class="abs fred" style="left:90px;top:150px;font-size:92px;width:760px">Thirteen levels,<br>one big climb</div>
 <div class="abs hand" style="left:690px;top:390px;font-size:46px;transform:rotate(-4deg)">the top!</div>
 {road}{flag}{stops}
-<div class="abs hand" style="left:62px;top:1236px;font-size:40px;transform:rotate(-1.5deg)">start at the bottom and climb!</div>
-<div class="abs" style="right:60px;top:1240px;font-size:38px;font-weight:900">swipe &rarr;</div>
+<div class="abs hand" style="left:92px;top:1236px;font-size:40px;transform:rotate(-1.5deg)">start at the bottom and climb!</div>
+<div class="abs" style="right:90px;top:1240px;font-size:38px;font-weight:900">swipe &rarr;</div>
 """
     return html(body, W, H, SKY)
 
@@ -293,11 +293,11 @@ def post_real_page() -> str:
     body = f"""
 <div class="blob" style="left:-160px;top:420px;width:520px;height:520px;background:{SUN};opacity:.40"></div>
 <div class="blob" style="right:-120px;top:-120px;width:380px;height:380px;background:{TEAL};opacity:.18"></div>
-<div class="abs fred" style="left:60px;top:64px;font-size:92px">A real page</div>
-<div class="abs hand" style="left:66px;top:160px;font-size:50px;color:{CORAL};transform:rotate(-2deg);transform-origin:left">
+<div class="abs fred" style="left:90px;top:64px;font-size:92px">A real page</div>
+<div class="abs hand" style="left:96px;top:160px;font-size:50px;color:{CORAL};transform:rotate(-2deg);transform-origin:left">
   from Ducklings Reading</div>
 {sheet(d3, 200, 244, 720, 3, 1)}
-<div class="abs" style="left:620px;top:120px;width:400px;transform:rotate(16deg);z-index:2">{PENCIL}</div>
+<div class="abs" style="left:610px;top:112px;width:360px;transform:rotate(16deg);z-index:2">{PENCIL}</div>
 <div class="abs sticker" style="left:560px;top:1118px;z-index:3;background:{CORAL};padding:18px 34px 22px;
      transform:rotate(-4deg);border-radius:36px">
   <div class="fred" style="font-size:52px">Try it free</div>
@@ -315,11 +315,11 @@ def post_how() -> str:
     cards = ""
     y = 296
     for i, (color, ic, title, text) in enumerate(steps):
-        x = 86 if i != 1 else 126
+        x = 116 if i != 1 else 150
         cards += f"""
-<div class="abs sticker" style="left:{x}px;top:{y}px;width:854px;height:262px;background:#fff;display:flex;align-items:center;gap:34px;padding:0 40px">
+<div class="abs sticker" style="left:{x}px;top:{y}px;width:814px;height:262px;background:#fff;display:flex;align-items:center;gap:34px;padding:0 40px">
   <div class="disc" style="width:160px;height:160px;flex:none;background:{color}">{icon(ic, 92)}</div>
-  <div><div class="fred" style="font-size:62px">{title}</div>
+  <div><div class="fred" style="font-size:58px">{title}</div>
        <div style="font-size:37px;line-height:1.3;margin-top:10px;font-weight:800;opacity:.85">{text}</div></div>
   <div class="abs disc" style="left:-26px;top:-26px;width:74px;height:74px;background:{INK};color:#fff;border-color:{INK};font-weight:900;font-size:40px">{i + 1}</div>
 </div>"""
@@ -327,10 +327,10 @@ def post_how() -> str:
     body = f"""
 <div class="blob" style="right:-130px;top:-150px;width:440px;height:440px;background:#fff;opacity:.35"></div>
 <div class="blob" style="left:-110px;bottom:-140px;width:360px;height:360px;background:#fff;opacity:.30"></div>
-<div class="abs fred" style="left:60px;top:70px;font-size:110px">How it works</div>
-<div class="abs hand" style="left:64px;top:194px;font-size:50px;transform:rotate(-1.5deg);transform-origin:left">three little steps</div>
+<div class="abs fred" style="left:90px;top:70px;font-size:110px">How it works</div>
+<div class="abs hand" style="left:94px;top:194px;font-size:50px;transform:rotate(-1.5deg);transform-origin:left">three little steps</div>
 {cards}
-<div class="abs" style="left:60px;right:60px;top:1222px;display:flex;align-items:center;justify-content:space-between">
+<div class="abs" style="left:90px;right:90px;top:1196px;display:flex;align-items:center;justify-content:space-between">
   {logo(380)}<span style="font-size:38px;font-weight:900">paperlessons.com</span></div>
 """
     return html(body, W, H, SUN)
@@ -343,25 +343,25 @@ def post_two_grades() -> str:
     for i, (slug, age) in enumerate(rows):
         lv = BY_SLUG[slug]
         assert lv["age"] == age
-        x = 60 + i * 40
+        x = 90 + i * 30
         hi = slug == "foxes"
         out += f"""
-<div class="abs sticker" style="left:{x}px;top:{y}px;width:820px;height:146px;background:{SUN if hi else '#fff'};
+<div class="abs sticker" style="left:{x}px;top:{y}px;width:800px;height:146px;background:{SUN if hi else '#fff'};
      display:flex;align-items:center;gap:26px;padding:0 30px;border-radius:36px">
   <div class="disc" style="width:112px;height:112px;flex:none;background:#fff"><img src="{lv['mascot']}" alt=""></div>
-  <span class="fred" style="font-size:64px;width:250px">Age {age}</span>
-  <svg width="70" height="40" viewBox="0 0 70 40"><path d="M4 20 H60 M44 6 L62 20 L44 34" fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span class="fred" style="font-size:62px;width:206px;white-space:nowrap">Age {age}</span>
+  <svg width="58" height="34" viewBox="0 0 70 40"><path d="M4 20 H60 M44 6 L62 20 L44 34" fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <span class="chip" style="font-size:40px;background:{lv['color'] if not hi else '#fff'}">{grade_label(lv['grade'])}</span>
 </div>"""
         y += 146 + 28
     body = f"""
 <div class="blob" style="right:-150px;top:-120px;width:460px;height:460px;background:{GRAPE};opacity:.16"></div>
 <div class="blob" style="left:-140px;top:1000px;width:360px;height:360px;background:{LEAF};opacity:.20"></div>
-<div class="abs fred" style="left:60px;top:70px;font-size:124px">Age 6?<br><span style="color:{CORAL}">Grade 3</span> work.</div>
-<div class="abs" style="left:60px;top:360px;width:900px;font-size:42px;line-height:1.3;font-weight:800">
+<div class="abs fred" style="left:90px;top:70px;font-size:124px">Age 6?<br><span style="color:{CORAL}">Grade 3</span> work.</div>
+<div class="abs" style="left:90px;top:360px;width:900px;font-size:42px;line-height:1.3;font-weight:800">
   Every level runs about two grades ahead of school, one small step at a time.</div>
 {out}
-<div class="abs hand" style="left:60px;right:60px;top:1228px;font-size:42px;text-align:center;white-space:nowrap;transform:rotate(-1deg)">
+<div class="abs hand" style="left:90px;right:90px;top:1228px;font-size:42px;text-align:center;white-space:nowrap;transform:rotate(-1deg)">
   Start where it feels easy, climb at your own pace.</div>
 """
     return html(body, W, H, CREAM)
@@ -373,21 +373,21 @@ def post_previews() -> str:
     zs = [1, 3, 4, 2]
     fan = ""
     rots = [-12, -4, 4, 12]
-    xs = [56, 206, 462, 612]
-    ys = [560, 510, 510, 560]
+    xs = [140, 265, 490, 597]
+    ys = [610, 560, 560, 610]
     for src, r, x, y, z in zip(pages, rots, xs, ys, zs):
-        fan += sheet(src, x, y, 392, r, z)
+        fan += sheet(src, x, y, 340, r, z)
     body = f"""
 <div class="blob" style="left:-150px;top:-150px;width:460px;height:460px;background:#fff;opacity:.18"></div>
 <div class="blob" style="right:-140px;top:280px;width:320px;height:320px;background:{SUN};opacity:.55"></div>
-<div class="abs fred" style="left:60px;right:60px;top:66px;text-align:center;font-size:118px">Try it free</div>
+<div class="abs fred" style="left:90px;right:90px;top:66px;text-align:center;font-size:118px">Try it free</div>
 <div class="abs" style="left:0;right:0;top:214px;display:flex;justify-content:center">
   <span class="chip" style="font-size:42px;padding:10px 34px 12px;box-shadow:8px 8px 0 {INK}">Free previews: Chicks &amp; Ducklings</span></div>
-<div class="abs hand" style="left:60px;right:60px;top:318px;text-align:center;font-size:48px;color:#fff;transform:rotate(-1.5deg)">
+<div class="abs hand" style="left:90px;right:90px;top:318px;text-align:center;font-size:46px;color:#fff;transform:rotate(-1.5deg)">
   print a few pages and see how they feel</div>
 {fan}
-<img class="abs" src="{BY_SLUG['chicks']['mascot']}" style="left:46px;top:470px;width:150px;transform:rotate(-10deg);z-index:9" alt="">
-<img class="abs" src="{BY_SLUG['ducklings']['mascot']}" style="right:40px;top:470px;width:160px;transform:rotate(8deg);z-index:9" alt="">
+<img class="abs" src="{BY_SLUG['chicks']['mascot']}" style="left:100px;top:470px;width:140px;transform:rotate(-10deg);z-index:9" alt="">
+<img class="abs" src="{BY_SLUG['ducklings']['mascot']}" style="right:104px;top:470px;width:150px;transform:rotate(8deg);z-index:9" alt="">
 <div class="abs" style="left:0;right:0;top:1158px;display:flex;justify-content:center;z-index:10">
   <span class="sticker" style="background:#fff;padding:14px 48px 18px;border-radius:999px;font-family:Fredoka;font-weight:700;font-size:64px">paperlessons.com</span></div>
 """

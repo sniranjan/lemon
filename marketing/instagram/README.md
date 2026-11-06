@@ -15,7 +15,7 @@ templates/   reusable layouts
 | Format | Size | Notes |
 |---|---|---|
 | Profile picture | 1080×1080 | shown as a small circle: keep everything inside the middle ~80% |
-| Feed post | 1080×1350 (4:5) | the tallest Instagram allows; also fine: 1080×1080 |
+| Feed post | 1080×1350 (4:5) | the tallest Instagram allows; also fine: 1080×1080. Profile grid crops to 3:4 (~35px off each side): keep 90px side margins and 60px top/bottom for all text and key art |
 | Story / reel | 1080×1920 (9:16) | keep text out of the top 250px and bottom 300px (app UI covers them) |
 
 ## Brand (same as the site and the PDFs)
