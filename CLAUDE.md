@@ -257,9 +257,9 @@ test.** Nothing else in the code should change.
 | `line_path` | ZI-B/C, ZII-C/D | Draw from a start dot to a small picture to reach ("take the bee to the flower") along a straight/curved/zigzag lane. Lines always run left→right or top→bottom; no arrows or text for the child; lines get longer across each part |
 | `count_and_say` | MA 6A-A/B | Rows of N pictures + big numeral + number word; count aloud while pointing |
 | `count_and_point` | MA 6A-B/C | Rows of N pictures + 3 numeral choices to point at |
-| `number_read` | MA 6A-C, 5A-A | Numerals (in jars/balloons/boxes) to read aloud, with matching pictures |
+| `number_read` | MA 6A-C, 5A-A/E | 4 numeral cards to read aloud, each with a picture of how many: object pictures (6A, `show: pictures`), ten-frames (5A-A up to 30, `show: ten_frames`) or tens bars + ones squares (5A-E, 51–100, `show: rods`) |
 | `dots_to_number` | MA 6A-D | Dot patterns up to 10 with their numerals |
-| `number_sequence` | MA 5A-B/C/D | Number line/track with a few gaps to say aloud |
+| `number_sequence` | MA 5A-B/C/D | 4 tracks of 10 consecutive numerals with `gaps` empty boxes to say aloud (first box always shown, gaps never side by side); answer key = the gap numbers |
 | `number_trace` | MA 4A-A | Large dotted numerals to trace |
 | `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
 | `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
@@ -268,6 +268,12 @@ test.** Nothing else in the code should change.
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the
 pictures in the item, not in one row.
+
+**Numbers past 10** (MA 5A): never draw more than 10 object pictures. Numbers 11–30 are shown
+as ten-frames (one full frame per ten + a partly filled frame for the ones, K.NBT.1); 51–100
+(5A-E) as bars of ten squares + single squares, since eight or nine ten-frames don't fit a card.
+Sequence sheets (5A-B/C/D) use numerals only. A part's `new` may be a list (5A-A adds two
+numbers per part); every page shows all of them.
 
 **Line paths**: the start is a dot; the end is a small picture on a white disc centered on
 the lane's end. Lane ends never touch the page edge. One direction per sheet (cycling

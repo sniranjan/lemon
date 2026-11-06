@@ -1,0 +1,70 @@
+{
+  "id": "MA-5A-A-091",
+  "subject": "math",
+  "level": "5A",
+  "section": "A",
+  "part": 10,
+  "sheet_type": "number_read",
+  "page_number": 91,
+  "variant": 1,
+  "seed": 6601719565737708164,
+  "title": "Read the numbers",
+  "parent_tip": "Point to the number and say it. A full frame is ten; count the dots after it to check.",
+  "items": [
+    {
+      "kind": "tens",
+      "n": 30,
+      "show": "ten_frames",
+      "tens": 3,
+      "ones": 0,
+      "frames": [
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "kind": "tens",
+      "n": 23,
+      "show": "ten_frames",
+      "tens": 2,
+      "ones": 3,
+      "frames": [
+        10,
+        10,
+        3
+      ]
+    },
+    {
+      "kind": "tens",
+      "n": 18,
+      "show": "ten_frames",
+      "tens": 1,
+      "ones": 8,
+      "frames": [
+        10,
+        8
+      ]
+    },
+    {
+      "kind": "tens",
+      "n": 29,
+      "show": "ten_frames",
+      "tens": 2,
+      "ones": 9,
+      "frames": [
+        10,
+        10,
+        9
+      ]
+    }
+  ],
+  "answer_key": [
+    30,
+    23,
+    18,
+    29
+  ],
+  "new_words": [],
+  "review_words": []
+}

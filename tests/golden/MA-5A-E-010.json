@@ -1,0 +1,51 @@
+{
+  "id": "MA-5A-E-010",
+  "subject": "math",
+  "level": "5A",
+  "section": "E",
+  "part": 2,
+  "sheet_type": "number_read",
+  "page_number": 200,
+  "variant": 1,
+  "seed": 1771302356155390523,
+  "title": "Read the numbers",
+  "parent_tip": "Read each big number together. Each tall bar is ten: count the bars by tens, then the small squares.",
+  "items": [
+    {
+      "kind": "tens",
+      "n": 78,
+      "show": "rods",
+      "tens": 7,
+      "ones": 8
+    },
+    {
+      "kind": "tens",
+      "n": 87,
+      "show": "rods",
+      "tens": 8,
+      "ones": 7
+    },
+    {
+      "kind": "tens",
+      "n": 81,
+      "show": "rods",
+      "tens": 8,
+      "ones": 1
+    },
+    {
+      "kind": "tens",
+      "n": 56,
+      "show": "rods",
+      "tens": 5,
+      "ones": 6
+    }
+  ],
+  "answer_key": [
+    78,
+    87,
+    81,
+    56
+  ],
+  "new_words": [],
+  "review_words": []
+}

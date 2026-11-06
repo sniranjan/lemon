@@ -15,15 +15,21 @@ def word_items(words: list[str], kind: str) -> list[dict]:
     return [{"kind": kind, "word": w, "picture": bank[w].picture} for w in words]
 
 
+def new_numbers(rules: dict) -> list[int]:
+    """The part's `new` number(s): null, one number, or a list (5A parts add two numbers each)."""
+    new = rules.get("new")
+    return [] if new is None else [new] if isinstance(new, int) else list(new)
+
+
 def pick_numbers(rng: random.Random, rules: dict, count: int) -> list[int]:
-    """`count` distinct numbers from [min, max]; the part's `new` number is always one of them."""
-    lo, hi, new = rules["min"], rules["max"], rules.get("new")
-    pool = [n for n in range(lo, hi + 1) if n != new]
-    if count > len(pool) + (new is not None):
+    """`count` distinct numbers from [min, max]; the part's `new` number(s) are always among them."""
+    lo, hi, news = rules["min"], rules["max"], new_numbers(rules)
+    pool = [n for n in range(lo, hi + 1) if n not in news]
+    if count > len(pool) + len(news) or len(news) > count:
         raise ValueError(f"cannot pick {count} distinct numbers from {lo}–{hi}")
-    picked = rng.sample(pool, count - (new is not None))
-    if new is not None:
-        picked.insert(rng.randrange(count), new)
+    picked = rng.sample(pool, count - len(news))
+    for n in news:
+        picked.insert(rng.randrange(len(picked) + 1), n)
     return picked
 
 

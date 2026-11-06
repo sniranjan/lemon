@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import NUMBER_WORDS, error, pick_numbers, pick_objects
+from ._common import NUMBER_WORDS, error, new_numbers, pick_numbers, pick_objects
 
 ROWS = 3
 
@@ -24,8 +24,9 @@ def check_counts(sheet: Sheet) -> list[Issue]:
     for item in sheet.items:
         if not rules["min"] <= item["n"] <= rules["max"]:
             issues.append(error(sheet, f"{item['n']} is outside this part's range {rules['min']}–{rules['max']}"))
-    if rules.get("new") is not None and rules["new"] not in [i["n"] for i in sheet.items]:
-        issues.append(error(sheet, f"the part's new number {rules['new']} is missing"))
+    for n in new_numbers(rules):
+        if n not in [i["n"] for i in sheet.items]:
+            issues.append(error(sheet, f"the part's new number {n} is missing"))
     return issues
 
 

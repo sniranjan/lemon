@@ -6,6 +6,9 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Milestones 1–3** (CLAUDE.md §13): package, models, syllabus YAML for EN 7A, MA 6A and pencil ZI;
   all 10 sheet types with templates; `ws verify` (content, plan and layout checks, contact sheets);
   PDF booklets with cover, progress log and answer keys.
+- **Math 5A (Ducklings math)**: `syllabus/math/5A.yaml`, 200 pages, sections A–E with `standards:`.
+  `number_read` gained `show: ten_frames | rods` (11–30 as ten-frames, 51–100 as tens bars);
+  new `number_sequence` (tracks with gaps to say aloud). All 200 pages verify with 0 errors.
 - **Word bank: 120 of ~200 words** in `content/vocab/english.yaml` (file order = introduction order,
   2 new words per page), all with original pictures in `assets/pictures/` and licence entries.
   | Batch | Words | 7A pages | Approved | Commit |
