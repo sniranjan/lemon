@@ -1,0 +1,107 @@
+# Letters and sounds for Bunnies Reading (letter tracing, sound parts, word tracing).
+# Hand-checked lists: every word must be in content/vocab/english.yaml (tests/test_bunnies_reading.py).
+# New words join these lists by hand once they are approved (Bunnies word batch 1: 2026-11-06).
+
+# letter_words: words whose FIRST SOUND is the letter's usual sound, best first.
+#   Left out on purpose: digraph starts (chair, cheese, chin, shoe, sheep, shell, thumb, whale, whistle,
+#   phone), silent letters (knee), soft c/g (giraffe), and vowels that don't say their short sound
+#   (eye, ear, ice, owl, orange, oven, acorn, apron, arm). Color words are left out too (they need
+#   color printing).
+# letter_inside: words where the letter's sound is heard inside the word (a short vowel in the middle,
+#   x at the end). Used only when letter_words has fewer than two words.
+letter_words:
+  a: [apple, ant]
+  b: [ball, bed, bus, bag, box, bell, book, bee, bib, bear, boat, bike, banana, baby]
+  c: [cat, cup, cap, car, cow, cake, corn, coat, cookie, carrot, camel, cactus]
+  d: [dog, duck, dad, doll, drum, dig, door, deer, donkey, dolphin, digger]
+  e: [egg, elbow]
+  f: [fish, fox, fan, frog, foot, fork, feather, finger, flower]
+  g: [goat, grass, grandma, grandpa]
+  h: [hat, hen, hand, hill, hop, hug, horse, hippo, honey, hair, head, hose]
+  i: []
+  j: [jump, juice, jacket]
+  k: [kite, kick, kitten, key, koala]
+  l: [lamp, leg, leaf, lion, lemon, lamb, ladybug]
+  m: [mom, milk, moon, mouse, monkey, mouth, melon, mitten, muffin, mirror]
+  n: [nest, nap, neck, nose, noodles]
+  o: [octopus]
+  p: [pig, pot, pear, plum, pizza, plate, peach, puppy, panda, penguin, pillow, pumpkin, potato]
+  q: [queen, quilt]
+  r: [rug, rock, run, rain, rice, robot, rocket, rattle]
+  s: [sun, sock, sit, sand, swim, soap, soup, seal, sofa, snail, star, spoon, sled, swing, snow]
+  t: [tent, truck, tree, table, tiger, toe, toast, tomato, turtle, teddy, towel, train, tractor]
+  u: []
+  v: [van]
+  w: [worm, walk, wave, wagon, window, wash]
+  x: []
+  y: [yawn, yogurt]
+  z: [zebra, zipper]
+
+letter_inside:
+  a: [cat, hat, van, fan, bag, hand, lamp, crab]
+  e: [bed, leg, hen, nest, tent, bell, neck, sled]
+  i: [pig, fish, sit, dig, hill, swim, bib, kick, milk, sink]
+  o: [dog, fox, box, pot, rock, sock, doll, frog]
+  u: [bus, cup, sun, duck, rug, drum, hug, jump]
+  v: [oven]
+  x: [fox, box]
+
+# rimes: one-syllable words with a short vowel, split into onset + rime ("c" + "at").
+# The onset is the word minus the rime. Rimes with two or more words make rhyming families.
+# Left out: plurals (pants, grapes), silent letters (lamb, thumb), color words (red, pink, black),
+# vowels that aren't short (bush, push), and anything with an odd-looking rime (grass).
+rimes:
+  # short a
+  at: [cat, hat, bat, mat]
+  an: [van, fan, pan]
+  ap: [cap, nap, clap, map]
+  ag: [bag]
+  ad: [dad]
+  and: [hand, sand]
+  amp: [lamp]
+  ab: [crab]
+  am: [jam]
+  # short e
+  ed: [bed, sled]
+  eg: [leg]
+  et: [net, jet]
+  eb: [web]
+  en: [hen, pen]
+  est: [nest]
+  ent: [tent]
+  eck: [neck]
+  ell: [bell, shell]
+  elt: [belt]
+  ess: [dress]
+  # short i
+  ig: [pig, dig, wig]
+  it: [sit]
+  ish: [fish]
+  ill: [hill]
+  ink: [sink, drink]
+  im: [swim]
+  ing: [sing, swing]
+  in: [chin, pin]
+  ick: [kick, stick]
+  ib: [bib, crib]
+  ilk: [milk]
+  id: [lid]
+  # short o
+  og: [dog, frog, log]
+  ox: [fox, box]
+  ot: [pot]
+  ock: [rock, sock, clock]
+  oll: [doll]
+  om: [mom]
+  op: [hop, mop, top]
+  # short u
+  us: [bus]
+  up: [cup]
+  un: [sun, run, bun]
+  uck: [duck, truck]
+  ug: [rug, hug, bug, mug]
+  um: [drum, plum]
+  ump: [jump]
+  ut: [nut]
+  ub: [tub]
+  ush: [brush]

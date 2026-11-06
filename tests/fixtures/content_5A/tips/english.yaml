@@ -1,0 +1,31 @@
+# Parent tips per sheet type (≤ 220 characters, warm, concrete, American spelling).
+# A sheet picks one by its seed.
+word_picture_pair:
+  - "Point to each picture and say the word slowly. Let your child say it back. Then say the small pictures again together."
+  - "Touch the picture, then the word, and say it together. Clap once for each word you say."
+  - "Say each word in a fun voice: whisper it, then say it big. Smile and praise every try."
+word_picture_sentence:
+  - "Say each word, then read the sentence to your child, pointing to each word. Let your child say the word back."
+  - "Read the sentence slowly while you point. Pause before the picture word and let your child say it."
+review_grid_4:
+  - "Say one of the words and let your child find it. Then let your child pick one for you to find!"
+  - "Play find it: say a word, your child touches the picture. Cheer for every find."
+word_story:
+  - "Read the story together, pointing to each word. Pause at the picture words and let your child say them."
+  - "Read each line, then read it again together. Point to each word as you say it."
+phrase_card:
+  - "Point to each word as you say the phrase together. Then let your child say it alone while touching the picture."
+sentence_recite:
+  - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
+letter_trace:
+  - "Trace the first big letter with your finger together, saying its name and sound. Then your child traces the dots."
+letter_trace_review:
+  - "Name each letter together and say its picture word. Your child traces one row at a time."
+letter_trace_pairs:
+  - "Point to the big letter and the small letter and say: they are the same letter. Your child traces the small ones."
+sound_parts:
+  - "Touch the first box and say its sound, then the second box, then say the whole word."
+sound_parts_rhyme:
+  - "These words rhyme: they end the same way. Say each one in two parts."
+word_trace:
+  - "Read each word together while pointing to the picture. Then your child traces the dots, left to right."

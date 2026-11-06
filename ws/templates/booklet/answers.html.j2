@@ -11,7 +11,7 @@ td { height: 34px; }
     <h1>Answers{% if loop.length > 1 %} ({{ loop.index }} of {{ loop.length }}){% endif %}</h1>
   </div>
   <table style="margin-top: 20px;">
-    <tr><th class="c-page">Page</th><th>Answers, top to bottom</th></tr>
+    <tr><th class="c-page">Page</th><th>Answers, in the order of the sheet (rows left to right, top to bottom; numbered facts follow their numbers)</th></tr>
 {% for r in chunk %}
     <tr><td>Page {{ r.page }}</td><td>{{ r.answers }}</td></tr>
 {% endfor %}

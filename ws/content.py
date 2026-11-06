@@ -58,8 +58,15 @@ def phrases(subject: str = "english") -> dict:
 
 
 @lru_cache(maxsize=None)
+def phonics(subject: str = "english") -> dict:
+    """Hand-checked letter teams and rhyme groups (Kittens Reading; see the file's header)."""
+    path = CONTENT_DIR / "phonics" / f"{subject}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
 def grammar(subject: str = "english") -> dict:
-    """Word kinds, fill-in sentences and puzzle words for 2A (content/grammar/<subject>.yaml)."""
+    """Word kinds, fill-in sentences and puzzle words for Cubs Reading (content/grammar/<subject>.yaml)."""
     path = CONTENT_DIR / "grammar" / f"{subject}.yaml"
     return yaml.safe_load(path.read_text()) if path.exists() else {}
 
@@ -72,8 +79,21 @@ def passages(subject: str = "english") -> dict:
 
 
 @lru_cache(maxsize=None)
+def sounds(subject: str = "english") -> dict:
+    """Letter words and onset + rime splits for letters-and-sounds levels (5A)."""
+    path = CONTENT_DIR / "sounds" / f"{subject}.yaml"
+    return yaml.safe_load(path.read_text()) if path.exists() else {}
+
+
+@lru_cache(maxsize=None)
 def math_objects() -> tuple[dict, ...]:
     return tuple(yaml.safe_load((CONTENT_DIR / "math" / "objects.yaml").read_text()))
+
+
+@lru_cache(maxsize=None)
+def math_stories() -> dict:
+    """Story-problem frames for Cubs math (content/math/stories.yaml)."""
+    return yaml.safe_load((CONTENT_DIR / "math" / "stories.yaml").read_text())
 
 
 @lru_cache(maxsize=None)
@@ -88,6 +108,17 @@ def line_stories() -> tuple[tuple[str, str], ...]:
     return tuple((d["from"], d["to"]) for d in data)
 
 
+@lru_cache(maxsize=None)
+def story_problems() -> tuple[dict, ...]:
+    """Story problem frames for math word problems (see the file's header)."""
+    frames = tuple(yaml.safe_load((CONTENT_DIR / "math" / "story_problems.yaml").read_text()))
+    ids = [f["id"] for f in frames]
+    if len(set(ids)) != len(ids):
+        raise ValueError("story_problems.yaml: frame ids must be unique")
+    return frames
+
+
 def clear_caches() -> None:
-    for f in (vocab, tips, licenses, stories, phrases, grammar, passages, math_objects, line_targets, line_stories):
+    for f in (vocab, tips, licenses, stories, phrases, phonics, sounds, math_objects, math_stories, line_targets,
+              line_stories, story_problems, grammar, passages):
         f.cache_clear()

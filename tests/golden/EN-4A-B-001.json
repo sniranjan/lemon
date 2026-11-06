@@ -1,0 +1,111 @@
+{
+  "id": "EN-4A-B-001",
+  "subject": "english",
+  "level": "4A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "rhyme_match",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 598264137297417083,
+  "title": "Words that rhyme",
+  "parent_tip": "Say both words slowly, then say just the ending sound together. Let your child find the matching letters at the end.",
+  "items": [
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "mitten",
+        "kitten"
+      ],
+      "pictures": [
+        "mitten",
+        "kitten"
+      ],
+      "parts": [
+        [
+          "m",
+          "itten"
+        ],
+        [
+          "k",
+          "itten"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "cake",
+        "snake"
+      ],
+      "pictures": [
+        "cake",
+        "snake"
+      ],
+      "parts": [
+        [
+          "c",
+          "ake"
+        ],
+        [
+          "sn",
+          "ake"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "run",
+        "sun"
+      ],
+      "pictures": [
+        "run",
+        "sun"
+      ],
+      "parts": [
+        [
+          "r",
+          "un"
+        ],
+        [
+          "s",
+          "un"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "box",
+        "fox"
+      ],
+      "pictures": [
+        "box",
+        "fox"
+      ],
+      "parts": [
+        [
+          "b",
+          "ox"
+        ],
+        [
+          "f",
+          "ox"
+        ]
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "mitten",
+    "kitten",
+    "cake",
+    "snake",
+    "run",
+    "sun",
+    "box",
+    "fox"
+  ]
+}

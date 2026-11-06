@@ -25,24 +25,6 @@ for (const [path, target] of Object.entries(SHORT_LINKS)) {
   app.get(path, (c) => c.redirect(target, 302));
 }
 
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-const AGES = new Set(["2", "3", "4", "5", "6", "7+"]);
-
-app.post("/api/waitlist", async (c) => {
-  const body = await c.req.json<{ email?: string; childAge?: string }>().catch(() => ({}) as never);
-  const email = String(body?.email ?? "").trim().toLowerCase();
-  const age = AGES.has(String(body?.childAge)) ? String(body.childAge) : null;
-  if (!EMAIL.test(email) || email.length > 254) {
-    return c.json({ ok: false, error: "Please enter a valid email address." }, 400);
-  }
-  await c.env.DB.prepare(
-    "INSERT INTO waitlist (email, child_age) VALUES (?, ?) ON CONFLICT(email) DO UPDATE SET child_age = COALESCE(excluded.child_age, child_age)",
-  )
-    .bind(email, age)
-    .run();
-  return c.json({ ok: true });
-});
-
 // Free previews live in R2 as previews/<level-slug>.pdf (uploaded separately, one per level).
 const SLUG = /^[a-z][a-z0-9-]{1,40}$/;
 

@@ -1,0 +1,63 @@
+{
+  "id": "MA-M3-G-001",
+  "subject": "math",
+  "level": "M3",
+  "section": "G",
+  "part": null,
+  "sheet_type": "story_problem",
+  "page_number": 191,
+  "variant": 1,
+  "seed": 10962892192541193407,
+  "title": "Story problems",
+  "parent_tip": "One story on each page has two steps. Find the first answer, then use it for the second step.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "car_wheels",
+      "values": {
+        "a": 2
+      },
+      "text": "A car has 4 wheels. How many wheels do 2 cars have?",
+      "answer": 8,
+      "unit": "wheels",
+      "steps": 1
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "pencils_given",
+      "values": {
+        "a": 2,
+        "b": 4,
+        "d": 2,
+        "c": 8
+      },
+      "text": "Ava buys 2 packs of 4 pencils. She gives 2 pencils to her brother. How many pencils does she have left?",
+      "answer": 6,
+      "unit": "pencils",
+      "steps": 2
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "sticker_pages",
+      "values": {
+        "a": 10,
+        "b": 8,
+        "c": 80
+      },
+      "text": "Ben has 80 stickers. He puts the same number on each of 8 pages. How many stickers are on each page?",
+      "answer": 10,
+      "unit": "stickers",
+      "steps": 1
+    }
+  ],
+  "answer_key": [
+    8,
+    6,
+    10
+  ],
+  "new_words": [],
+  "review_words": []
+}

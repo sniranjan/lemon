@@ -1,0 +1,73 @@
+{
+  "id": "EN-5A-C-001",
+  "subject": "english",
+  "level": "5A",
+  "section": "C",
+  "part": null,
+  "sheet_type": "letter_trace",
+  "page_number": 151,
+  "variant": 1,
+  "seed": 15188882933996632798,
+  "title": "Big and small letters",
+  "parent_tip": "Point to the big letter and the small letter and say: they are the same letter. Your child traces the small ones.",
+  "items": [
+    {
+      "kind": "row",
+      "letter": "a",
+      "word": "apple",
+      "picture": "apple",
+      "runs": [
+        [
+          "a",
+          true
+        ],
+        [
+          "pple",
+          false
+        ]
+      ],
+      "upper": "A"
+    },
+    {
+      "kind": "row",
+      "letter": "b",
+      "word": "ball",
+      "picture": "ball",
+      "runs": [
+        [
+          "b",
+          true
+        ],
+        [
+          "all",
+          false
+        ]
+      ],
+      "upper": "B"
+    },
+    {
+      "kind": "row",
+      "letter": "c",
+      "word": "cup",
+      "picture": "cup",
+      "runs": [
+        [
+          "c",
+          true
+        ],
+        [
+          "up",
+          false
+        ]
+      ],
+      "upper": "C"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "apple",
+    "ball",
+    "cup"
+  ]
+}

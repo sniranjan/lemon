@@ -10,7 +10,7 @@ from ws.syllabus import (
     all_levels, level_path, load_level, merge_rules, page_seed, parse_pages, resolve_page, sheet_id,
 )
 
-LEVELS = [("english", "7A"), ("math", "6A"), ("pencil", "ZI"), ("pencil", "ZII")]
+LEVELS = [("english", "7A"), ("math", "6A"), ("pencil", "ZI"), ("pencil", "ZII"), ("math", "M2")]
 
 
 @pytest.mark.parametrize("subject,level", LEVELS)
@@ -145,7 +145,7 @@ def test_7A_strip_rule_present():
 # --- IDs, seeds, page specs ---------------------------------------------------------------
 
 def test_sheet_ids():
-    en, ma, zi, zii = (load_level(*x) for x in LEVELS)
+    en, ma, zi, zii = (load_level(*x) for x in LEVELS[:4])
     assert sheet_id(en, en.section("A"), 1) == "EN-7A-A-001"
     assert sheet_id(en, en.section("B"), 101) == "EN-7A-B-001"
     assert sheet_id(ma, ma.section("B"), 44) == "MA-6A-B-014"

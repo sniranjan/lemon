@@ -1,0 +1,67 @@
+{
+  "id": "MA-M2-G-017",
+  "subject": "math",
+  "level": "M2",
+  "section": "G",
+  "part": 4,
+  "sheet_type": "column_arithmetic",
+  "page_number": 187,
+  "variant": 1,
+  "seed": 920041325052385117,
+  "title": "Taking away",
+  "parent_tip": "When there aren't enough ones on top, take one ten from the next column. Cross it out and write the new numbers above.",
+  "items": [
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        918,
+        326
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        693,
+        666
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        509,
+        182
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        718,
+        374
+      ],
+      "cols": 3,
+      "boxes": true
+    }
+  ],
+  "answer_key": [
+    592,
+    27,
+    327,
+    344
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,95 @@
+{
+  "id": "MA-M2-C-016",
+  "subject": "math",
+  "level": "M2",
+  "section": "C",
+  "part": 2,
+  "sheet_type": "skip_count",
+  "page_number": 66,
+  "variant": 1,
+  "seed": 13281403367983067124,
+  "title": "Count by 10s and 100s",
+  "parent_tip": "Read each row together from the first number. Say the jump out loud (ten more, a hundred more) and write the missing numbers.",
+  "items": [
+    {
+      "kind": "skip",
+      "step": 10,
+      "cells": [
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150
+      ],
+      "gaps": [
+        3,
+        5
+      ]
+    },
+    {
+      "kind": "skip",
+      "step": 100,
+      "cells": [
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "gaps": [
+        3,
+        6
+      ]
+    },
+    {
+      "kind": "skip",
+      "step": 10,
+      "cells": [
+        190,
+        200,
+        210,
+        220,
+        230,
+        240,
+        250
+      ],
+      "gaps": [
+        4,
+        6
+      ]
+    },
+    {
+      "kind": "skip",
+      "step": 100,
+      "cells": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "gaps": [
+        3,
+        5
+      ]
+    }
+  ],
+  "answer_key": [
+    120,
+    140,
+    600,
+    900,
+    230,
+    250,
+    500,
+    700
+  ],
+  "new_words": [],
+  "review_words": []
+}

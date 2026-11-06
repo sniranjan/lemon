@@ -1,0 +1,127 @@
+{
+  "id": "MA-M3-A-011",
+  "subject": "math",
+  "level": "M3",
+  "section": "A",
+  "part": 2,
+  "sheet_type": "column_arithmetic",
+  "page_number": 11,
+  "variant": 1,
+  "seed": 14187174800379697311,
+  "title": "Big taking away",
+  "parent_tip": "Start with the ones. If the top digit is too small, trade one ten for ten ones and write the new digits in the little boxes.",
+  "items": [
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        504,
+        427
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        927,
+        465
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        597,
+        219
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        908,
+        483
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        809,
+        661
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        710,
+        173
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        985,
+        896
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        211,
+        188
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "sub",
+      "sign": "−",
+      "numbers": [
+        319,
+        181
+      ],
+      "cols": 3,
+      "boxes": true
+    }
+  ],
+  "answer_key": [
+    77,
+    462,
+    378,
+    425,
+    148,
+    537,
+    89,
+    23,
+    138
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kittens · Reading · page 9</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #0B7A75;
+  --tint: #E6F4F3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.teams { flex: none; display: flex; justify-content: center; gap: 18px; margin-bottom: 16px; }
+.teams span { font-size: 48px; font-weight: 700; line-height: 1; padding: 8px 26px 12px; border: 3px solid var(--ink);
+              border-radius: 999px; background: var(--tint); }
+.teams.many span { font-size: 36px; padding: 6px 18px 10px; }
+.rows { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.rows .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 22px; padding: 4px 26px; }
+.rows img { flex: none; width: 118px; height: 118px; }
+.rows .read, .rows .work { flex: 1; min-width: 0; font-size: 56px; line-height: 1.1; white-space: nowrap; }
+/* the team: bold, in the subject color and underlined, so it still shows in black and white */
+.rows .read { font-weight: 700; }
+.rows .read b { color: var(--accent); text-decoration: underline; text-decoration-thickness: 5px; text-underline-offset: 8px; text-decoration-skip-ink: none; }
+/* the child's turn: the word on a writing line, the team in gray to trace or as empty boxes */
+.rows .work { font-weight: 400; border-bottom: 3px solid #9a9aa0; padding-bottom: 4px; display: flex; align-items: flex-end; }
+.rows .work i { font-style: normal; color: #bdbdc3; }
+.rows .work .box { display: inline-block; width: 44px; height: 58px; margin: 0 3px; border: 3px solid var(--ink); border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Kittens · Reading</div>
+      <div class="title-row"><h1>Letter teams</h1><span class="pill">Kittens · 9</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Read each word together and clap on the team&#39;s sound. Then trace or write the team, one letter at a time.</div>
+  <main class="body">
+    <div class="teams"><span>ss</span><span>gg</span><span>ll</span></div>
+    <div class="rows">
+      <div class="card">
+        <img src="../../../../../assets/pictures/grass.svg" alt="">
+        <div class="read">gra<b>ss</b></div>
+        <div class="work">gra<span class="box"></span><span class="box"></span></div>
+      </div>
+      <div class="card">
+        <img src="../../../../../assets/pictures/egg.svg" alt="">
+        <div class="read">e<b>gg</b></div>
+        <div class="work">e<span class="box"></span><span class="box"></span></div>
+      </div>
+      <div class="card">
+        <img src="../../../../../assets/pictures/bull.svg" alt="">
+        <div class="read">bu<b>ll</b></div>
+        <div class="work">bu<span class="box"></span><span class="box"></span></div>
+      </div>
+      <div class="card">
+        <img src="../../../../../assets/pictures/grill.svg" alt="">
+        <div class="read">gri<b>ll</b></div>
+        <div class="work">gri<span class="box"></span><span class="box"></span></div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Kittens · Reading · page 9</footer>
+</div>
+</body>
+</html>

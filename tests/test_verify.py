@@ -246,7 +246,7 @@ def test_free_preview_pdf(out_dir, booklet_out):
 
 
 def test_preview_refuses_a_level_that_is_not_built_yet():
-    report = booklet.build_preview("bunnies")
+    report = booklet.build_preview("lions")
     assert report.booklets == [] and all(i.severity == "error" for i in report.issues)
     assert "isn't built yet" in report.issues[0].message
 

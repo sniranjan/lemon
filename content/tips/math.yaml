@@ -36,3 +36,42 @@ number_write_fill:
 fact_drill:
   - "Read each fact out loud together, then let your child fill in the box. Count on fingers if needed."
   - "Let your child answer first. Help only when asked, and praise each fact they know quickly."
+# Cubs math (place_value, skip_count, column_arithmetic, math_story). Column tips are keyed by
+# op and regrouping (column_<op>[_regroup], column_add_three); place value tips by mode.
+place_value_blocks:
+  - "Touch each bar and count by tens, then count the small squares by ones. Write how many of each, then the whole number."
+  - "Count the big squares by hundreds, the bars by tens and the small squares by ones. A zero means none of that kind."
+place_value_expanded:
+  - "Say each number out loud together. Show how 347 is 300, 40 and 7: the place of a digit tells how much it is worth."
+  - "Read each line together. A zero holds a place: 306 has 3 hundreds, no tens and 6 ones."
+place_value_compare:
+  - "Look at the biggest place first. If those digits match, look at the next place. The open side faces the bigger number."
+  - "Read both numbers out loud. Compare hundreds, then tens, then ones, and write <, > or = in the circle."
+skip_count:
+  - "Read each row together from the first number. Say the jump out loud (five more, ten more) and write the missing numbers."
+  - "Clap on each number as you count along the row. When you reach an empty box, let your child say and write it."
+column_add:
+  - "Add the ones first, on the right, then the tens. Write one digit in each answer box."
+  - "Start on the right: ones plus ones, then tens plus tens. Point to each column as you go."
+column_add_regroup:
+  - "Add the ones first. Ten or more ones make a new ten: write the ones below and the 1 ten in the small box at the top."
+  - "Start with the ones. If they make 10 or more, carry the ten to the small box over the next column, then add that column."
+column_add_three:
+  - "Add the ones of all three numbers first, then the tens. If the ones make 10 or more, put the tens in the small box."
+column_sub:
+  - "Take away the ones first, on the right, then the tens. The top number is always the bigger one."
+  - "Start on the right: top ones take away bottom ones, then the same for the tens."
+column_sub_regroup:
+  - "Start with the ones. If the top digit is too small, break one ten into ten ones: write the new digits in the small boxes."
+  - "When there aren't enough ones on top, take one ten from the next column. Cross it out and write the new numbers above."
+column_mixed_regroup:
+  - "Look at the sign first: + or −. Then start with the ones. Use the small boxes only when you need to carry or break a ten."
+math_story:
+  - "Read each story aloud. Ask: do we get more or fewer? Then write the numbers, the + or − sign and the answer."
+  - "Read the story together and act it out with toys if you like. Fill in the number sentence, then say the answer in words."
+fraction_line:
+  - "Count the equal parts between 0 and 1 together. That number goes on the bottom of the fraction."
+  - "Count jumps from 0 to find each fraction. The number of jumps goes on top."
+story_problem:
+  - "Read each story together, then ask: equal groups or sharing? Draw dots in the empty space if it helps."
+  - "Let your child say the number sentence first, then write the answer in the box."

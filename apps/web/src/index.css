@@ -95,6 +95,9 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   h1, h2, h3 { @apply font-display; }
+  /* Tailwind v4 resets buttons to the default arrow; anything clickable should show the hand. */
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), summary, select { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
 }
 
 /* Chunky "sticker" look shared by cards and buttons. */

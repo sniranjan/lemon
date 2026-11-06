@@ -159,9 +159,6 @@ function Privacy() {
       <H>What we collect</H>
       <ul className="list-disc space-y-2 pl-6">
         <li>
-          <strong>Early-access list:</strong> your email address, and your child's age range if you choose to give it.
-        </li>
-        <li>
           <strong>Orders:</strong> your email address, the level you bought, the amount, and how many times your files
           were downloaded. We use your email to send you your download link (one email per order). Card details go
           straight to Stripe; we never see them.
@@ -222,7 +219,7 @@ function Privacy() {
       <H>How long we keep it</H>
       <p>
         Orders are kept as long as you might need to download your files and as long as tax and accounting rules
-        require. Early-access emails are kept until you ask us to remove them. Session recordings and analytics are
+        require. Session recordings and analytics are
         kept only as long as they're useful for improving the site.
       </p>
 
