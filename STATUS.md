@@ -30,9 +30,12 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 
   **Rule (user, 2026-11-06):** the 80 Ducklings words must not be reused as new words in Chicks batches 4–5.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): EN 7A pages 1–60,
-  101–112, 141–150, plus samples of MA 6A and ZI.
-- `ws verify`: 382 sheets, **0 errors**, 2 expected warnings (color-word pages; the word bank
-  covers 60 of 100 new-word pages, so 7A-B/C sheets will change as words are added).
+  101–112, 141–150, plus samples of MA 6A and ZI; **EN 6A (Ducklings Reading) all 200 pages** (2026-11-06).
+- `ws verify` (Chicks, earlier run): 382 sheets, **0 errors**, 2 expected warnings (color-word pages; the word
+  bank covers 60 of 100 new-word pages, so 7A-B/C sheets will change as words are added).
+- `ws verify --subject english --level 6A` (2026-11-06): 200 sheets, **0 errors**, 2 expected warnings
+  (color-word pages; it reviews Chicks words and the Chicks bank has 120 of 200). Adding batch 2 left
+  pages 1–150 unchanged.
 - `uv run pytest`: 151 tests pass.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
