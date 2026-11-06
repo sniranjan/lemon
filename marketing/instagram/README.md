@@ -4,7 +4,8 @@ Marketing material for https://www.instagram.com/paper.lessons/. Everything here
 
 ```
 profile/     profile picture (1080×1080) and the bio
-posts/       feed posts, one folder per post: posts/YYYY-MM-DD-short-name/ (images + caption.md)
+posts/       feed posts, one folder per post: posts/YYYY-MM-DD-short-name/ (images + caption.md);
+             the launch set uses posts/NN-slug/ (see posts/README.md)
 stories/     stories (1080×1920)
 reels/       reel covers (1080×1920) and scripts
 templates/   reusable layouts
