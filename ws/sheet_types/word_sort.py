@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from ..content import grammar, vocab_by_word
 from ..models import Issue, Sheet
-from ..reading import KINDS, kind_of
+from ..reading import KINDS, distractor_kinds, kind_of
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
 
@@ -120,6 +120,10 @@ class WordSort(SheetType):
                 if rules["target"] != "mixed" and i["want"] != rules["target"]:
                     issues.append(error(sheet, f"{i['text']!r} asks for a {i['want']} word in a {rules['target']} part"))
                 kinds = [kind_of(w, g) for w in i["choices"]]
+                wrong = [w for w in i["choices"] if w != i["answer"]]
+                if any(kind_of(w, g) not in distractor_kinds(i["want"]) for w in wrong):
+                    issues.append(error(sheet, f"wrong choice {wrong} for {i['text']!r} could fit the blank; "
+                                               f"use a {' or '.join(distractor_kinds(i['want']))} word"))
                 if len(i["choices"]) != 2 or i["answer"] not in i["choices"] or kinds.count(i["want"]) != 1 \
                         or kind_of(i["answer"], g) != i["want"]:
                     issues.append(error(sheet, f"choices {i['choices']} for {i['text']!r} need exactly one "

@@ -39,6 +39,12 @@ def kind_of(word: str, grammar: dict) -> str | None:
     return None
 
 
+def distractor_kinds(kind: str) -> list[str]:
+    """Kinds the wrong fill-in choice may come from. A describing blank often sits before a noun
+    ("a ___ hug"), where a naming word could read as right ("a bear hug"): only doing words there."""
+    return ["doing"] if kind == "describing" else [k for k in KINDS if k != kind]
+
+
 def sentences(text: str) -> list[str]:
     """Split a passage into sentences (a closing quote stays with its sentence)."""
     return [s for s in re.split(r'(?<=[.!?])"?\s+(?=["A-Z])', text.strip()) if s]
@@ -268,7 +274,7 @@ def _word_kinds(rules: dict, grammar: dict, known: list[str], new: list[str], pi
                                                    pick.seen[s["answer"]]))
             answer = sentence["answer"]
             on_page.append(answer)
-            other = take([x for x in KINDS if x != kind], exclude=[answer])
+            other = take(distractor_kinds(kind), exclude=[answer])
             choices = [answer, other]
             pick.rng.shuffle(choices)
             fill_use[sentence["text"]] += 1
