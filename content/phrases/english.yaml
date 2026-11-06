@@ -86,14 +86,25 @@ picture_colors:
   shorts: red
   peas: green
   grass: green
+  # Chicks word batch 5 (checked on the drawn pictures)
+  ladybug: red
+  cactus: green
+  pickle: green
+  plum: purple
+  octopus: purple
+  crown: yellow
+  bell: yellow
+  potty: blue
+  phone: blue
+  apron: pink
 
 # big / little: nouns each is true of, in real life and in the picture (the picture is drawn large or
 # small to match). Hand-checked like the colors: no "a little whale", no "a big bee". No mass or plural nouns.
 sizes:
   big: [dog, bear, horse, cow, lion, whale, tree, truck, bus, train, tractor, plane, boat, ball, cake,
-        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled]
+        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled, hippo]
   little: [mouse, bee, bird, chick, kitten, puppy, snail, crab, frog, duck, fish, egg, cookie, key, rock,
-           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen]
+           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen, ladybug, worm]
 
 # hot / cold: only things that really are (and whose pictures don't say otherwise; the soup steams).
 temperatures:
@@ -106,10 +117,11 @@ can_do:
   run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten,
         zebra, tiger, giraffe, lamb]
   jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten, lamb]
-  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin]
+  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin, hippo, octopus, dolphin]
   eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion,
-        puppy, kitten, chick, crab, snail, whale, zebra, tiger, giraffe, hen, ant, seal, penguin, lamb]
-  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten, tiger, seal, lamb]
+        puppy, kitten, chick, crab, snail, whale, zebra, tiger, giraffe, hen, ant, seal, penguin, lamb,
+        hippo, panda]
+  sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten, tiger, seal, lamb, panda]
   sit: [dog, cat, monkey, bunny, puppy, kitten]
   clap: []
   wash: []
@@ -125,15 +137,18 @@ can_do:
   wave: []
   read: []
   draw: []
-  climb: [monkey, cat, bear, goat, mouse, kitten, snail, ant]
+  climb: [monkey, cat, bear, goat, mouse, kitten, snail, ant, panda, ladybug]
   hide: [cat, mouse, bunny, turtle, kitten, crab, snail]
   # Ducklings word batch 2. hug / push / throw / catch: people only (the pictures show a child).
   hug: []
   push: []
   throw: []
   catch: []
-  crawl: [ant, turtle, crab, snail]
-  splash: [duck, dog, seal, whale]
+  crawl: [ant, turtle, crab, snail, worm, ladybug]
+  splash: [duck, dog, seal, whale, dolphin, hippo]
+  # Chicks word batch 5. paint / build: people only. blow and yawn are not in the `action` slot (below).
+  paint: []
+  build: []
 
 # Actions the child (3–4) can't truthfully say "I can ___" about: he likes to read, but can't yet.
 child_cannot: [read, cook]   # he helps cook; "I like to cook." stays
@@ -150,9 +165,10 @@ people_can:
 # "my key"), playground things ("my swing", "my slide"), baby things ("my diaper", "my bib", "my crib").
 ownable:
   toys:     [ball, kite, balloon, blocks, drum, doll, puppet, bubbles, tent,
-             teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box]   # box: his own box of treasures
+             teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box,   # box: his own box of treasures
+             crown, shovel, whistle, bell]                                  # Chicks batch 5 (not rattle: a baby thing; not seesaw)
   clothes:  [shoe, hat, sock, coat, shirt, pants, boots, dress, scarf, belt,
-             jacket, mitten, skirt, cap, sweater, pajamas, shorts]
+             jacket, mitten, skirt, cap, sweater, pajamas, shorts, apron, sandal]
   home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket]
   pets:     [cat, dog, fish, bunny, bird, turtle, puppy, kitten]
   vehicles: [bike, scooter]
@@ -163,7 +179,8 @@ ownable:
 # into something else or not on their own (lemon, potato, pumpkin, tomato), and whole dishes that
 # would need "some" (a cake, a pizza).
 eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pear, corn, rice, cherry,
-          noodles, peach, muffin, toast, pancake, yogurt, peas]
+          noodles, peach, muffin, toast, pancake, yogurt, peas,
+          waffle, bagel, plum, pickle, popcorn]   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
 
 # Only one of each in the sky: "the sun", never "a sun". These nouns never fill a frame with `{a}`
 # ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.
@@ -217,7 +234,7 @@ slots:
   temp:    { words: [hot, cold] }
   temp_thing: { described_by: temperatures }
   temp_food: { categories: [food], described_by: temperatures }   # "I like hot soup."
-  action:  { categories: [actions], except: [wash, ride] }    # these need an object: "I wash my hand.", "I ride my bike."
+  action:  { categories: [actions], except: [wash, ride, blow, yawn] }    # need an object ("I wash my hand.", "I ride my bike.", "I blow my whistle."); "I like to yawn." is odd
   color:   { categories: [colors] }
   eatable: { lists: [eatable] }                                # "I eat ..."
   washable: { words: [hand, hair, face] }                      # not "I wash my foot.

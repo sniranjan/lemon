@@ -171,6 +171,48 @@
 - { word: hill,    picture: hill,    category: nature,   level: 7A, sentences: ["We run up the hill."] }
 - { word: rug,     picture: rug,     category: home,     level: 7A, sentences: ["The cat naps on the rug."] }
 
+# Batch 5 (approved 2026-11-06): 7A pages 81-100 (syllabus/drafts/7A-words-batch5.md; the last Chicks batch)
+- { word: hippo,   picture: hippo,   category: animals,  level: 7A, sentences: ["The hippo has a big mouth."] }
+- { word: popcorn, picture: popcorn, category: food,     level: 7A, mass: true, sentences: ["I like crunchy popcorn."] }
+- { word: mirror,  picture: mirror,  category: home,     level: 7A, sentences: ["I see me in the mirror."] }
+- { word: digger,  picture: digger,  category: vehicles, level: 7A, sentences: ["The digger scoops up dirt."] }
+- { word: paint,   picture: paint,   category: actions,  level: 7A, sentences: ["I paint a big sun."] }
+- { word: stick,   picture: stick,   category: nature,   level: 7A, sentences: ["The dog fetches a stick."] }
+- { word: apron,   picture: apron,   category: clothes,  level: 7A, sentences: ["Mom wears an apron."] }
+- { word: panda,   picture: panda,   category: animals,  level: 7A, sentences: ["The panda munches bamboo."] }
+- { word: honey,   picture: honey,   category: food,     level: 7A, mass: true, sentences: ["Bees make sweet honey."] }
+- { word: rattle,  picture: rattle,  category: toys,     level: 7A, sentences: ["The baby shakes a rattle."] }
+- { word: tongue,  picture: tongue,  category: body,     level: 7A, sentences: ["Stick out your tongue!"] }
+- { word: bottle,  picture: bottle,  category: home,     level: 7A, sentences: ["The baby drinks from a bottle."] }
+- { word: octopus, picture: octopus, category: animals,  level: 7A, sentences: ["An octopus has eight arms."] }
+- { word: waffle,  picture: waffle,  category: food,     level: 7A, sentences: ["I eat a waffle for breakfast."] }
+- { word: blow,    picture: blow,    category: actions,  level: 7A, sentences: ["Blow out the candles!"] }
+- { word: cactus,  picture: cactus,  category: nature,   level: 7A, sentences: ["The cactus is prickly."] }
+- { word: crown,   picture: crown,   category: toys,     level: 7A, sentences: ["The king wears a crown."] }
+- { word: ladybug, picture: ladybug, category: animals,  level: 7A, sentences: ["The ladybug has black spots."] }
+- { word: melon,   picture: melon,   category: food,     level: 7A, sentences: ["The melon is juicy."] }
+- { word: potty,   picture: potty,   category: home,     level: 7A, sentences: ["I sit on the potty."] }
+- { word: gray,    picture: gray,    category: colors,   level: 7A, needs_color: true, sentences: ["The elephant is gray."] }
+- { word: friend,  picture: friend,  category: family,   level: 7A, sentences: ["I play with my friend."] }
+- { word: shovel,  picture: shovel,  category: toys,     level: 7A, sentences: ["I dig with my shovel."] }
+- { word: dolphin, picture: dolphin, category: animals,  level: 7A, sentences: ["The dolphin jumps and splashes."] }
+- { word: yawn,    picture: yawn,    category: actions,  level: 7A, sentences: ["I yawn when I am sleepy."] }
+- { word: bagel,   picture: bagel,   category: food,     level: 7A, sentences: ["I eat a bagel."] }
+- { word: sandal,  picture: sandal,  category: clothes,  level: 7A, sentences: ["My sandal has a strap."] }
+- { word: basket,  picture: basket,  category: home,     level: 7A, sentences: ["The toys go in the basket."] }
+- { word: worm,    picture: worm,    category: animals,  level: 7A, sentences: ["The worm wiggles in the dirt."] }
+- { word: cart,    picture: cart,    category: vehicles, level: 7A, sentences: ["We push the shopping cart."] }
+- { word: elbow,   picture: elbow,   category: body,     level: 7A, sentences: ["Bend your elbow."] }
+- { word: plum,    picture: plum,    category: food,     level: 7A, sentences: ["The plum is purple."] }
+- { word: seesaw,  picture: seesaw,  category: toys,     level: 7A, sentences: ["We ride the seesaw."] }
+- { word: bush,    picture: bush,    category: nature,   level: 7A, sentences: ["The bird hides in the bush."] }
+- { word: build,   picture: build,   category: actions,  level: 7A, sentences: ["I build a tall tower."] }
+- { word: phone,   picture: phone,   category: home,     level: 7A, sentences: ["Grandma calls on the phone."] }
+- { word: pickle,  picture: pickle,  category: food,     level: 7A, sentences: ["The pickle is green."] }
+- { word: whistle, picture: whistle, category: toys,     level: 7A, sentences: ["I blow my whistle."] }
+- { word: fan,     picture: fan,     category: home,     level: 7A, sentences: ["The fan keeps me cool."] }
+- { word: bell,    picture: bell,    category: toys,     level: 7A, sentences: ["Ring the bell!"] }
+
 # --- Ducklings Reading (6A) word batch 1, approved 2026-11-06 (syllabus/drafts/6A-words-batch1.md) ---
 # One new word a page, in this order: words 1–30 on pages 71–100 (Little Phrases), 31–40 on pages
 # 141–150 (Say a Sentence). big/little/hot/cold have no picture of their own: the noun's picture carries

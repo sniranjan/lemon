@@ -1,6 +1,8 @@
 # Chicks reading (7A): word batch 5, draft for approval
 
-**Status: draft, waiting for approval.** Nothing drawn, word bank unchanged.
+**Status: approved 2026-11-06** with the recommendations below (gray as the color word, potty, elbow/tongue
+with a light tint, friend under family, generic phone, cart under vehicles; popcorn and honey `mass: true`).
+Drawn (`scripts/pictures/draw_7A_batch5.py`, which also redraws batch 4's neck and pour) and added to the word bank.
 
 ## Where things stand
 

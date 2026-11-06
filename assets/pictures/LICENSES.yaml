@@ -239,3 +239,45 @@ roll:    { source: original, licence: original }
 pumpkin: { source: original, licence: original }
 hill:    { source: original, licence: original }
 rug:     { source: original, licence: original }
+
+# Chicks Reading word batch 5 (approved 2026-11-06), drawn with scripts/pictures/draw_7A_batch5.py
+hippo:   { source: original, licence: original }
+popcorn: { source: original, licence: original }
+mirror:  { source: original, licence: original }
+digger:  { source: original, licence: original }
+paint:   { source: original, licence: original }
+stick:   { source: original, licence: original }
+apron:   { source: original, licence: original }
+panda:   { source: original, licence: original }
+honey:   { source: original, licence: original }
+rattle:  { source: original, licence: original }
+tongue:  { source: original, licence: original }
+bottle:  { source: original, licence: original }
+octopus: { source: original, licence: original }
+waffle:  { source: original, licence: original }
+blow:    { source: original, licence: original }
+cactus:  { source: original, licence: original }
+crown:   { source: original, licence: original }
+ladybug: { source: original, licence: original }
+melon:   { source: original, licence: original }
+potty:   { source: original, licence: original }
+gray:    { source: original, licence: original, kind: color_swatch }   # true hue: no lightness rule
+friend:  { source: original, licence: original }
+shovel:  { source: original, licence: original }
+dolphin: { source: original, licence: original }
+yawn:    { source: original, licence: original }
+bagel:   { source: original, licence: original }
+sandal:  { source: original, licence: original }
+basket:  { source: original, licence: original }
+worm:    { source: original, licence: original }
+cart:    { source: original, licence: original }
+elbow:   { source: original, licence: original }
+plum:    { source: original, licence: original }
+seesaw:  { source: original, licence: original }
+bush:    { source: original, licence: original }
+build:   { source: original, licence: original }
+phone:   { source: original, licence: original }
+pickle:  { source: original, licence: original }
+whistle: { source: original, licence: original }
+fan:     { source: original, licence: original }
+bell:    { source: original, licence: original }
