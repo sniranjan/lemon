@@ -1,4 +1,5 @@
 {% extends "booklet/_doc.html.j2" %}
+{% from "booklet/_brand.html.j2" import brand %}
 {% block style %}
 .cover { justify-content: space-between; }
 .cover .foot { margin-top: 0; }
@@ -10,9 +11,12 @@
 {% endblock %}
 {% block pages %}
 <div class="page cover">
-  <div class="rule">
-    <div class="eyebrow">{{ level.public_name }} · {{ theme.label }}</div>
-    <h1>{{ level.public_title }}</h1>
+  <div class="rule" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;">
+    <div>
+      <div class="eyebrow">{{ level.public_name }} · {{ theme.label }}</div>
+      <h1>{{ level.public_title }}</h1>
+    </div>
+    {{ brand(30) }}
   </div>
   <div class="middle">
   <div>
@@ -26,13 +30,13 @@
   </div>
   </div>
   <div class="name">Name <i></i></div>
-  <div class="tip"><b>For grown-ups:</b> About {{ level.daily_pages }} pages a day, with you beside your child.
+  <div class="tip"><b>For grown-ups:</b> A few pages a day, with you beside your child.
     Move on when your child finishes 3 sheets in a row {{ pace }} without prompting.
-    If it's still hard, repeat the pages with a fresh version; there's no rush.
+    If it's still hard, print those pages again and repeat them; there's no rush.
 {% if color_pages %}
     <br><b>Print in color if you can:</b> pages {{ color_pages }} teach color words.
 {% endif %}
   </div>
-  <div class="foot">{{ booklet_id }}</div>
+  <div class="foot">paperlessons.com · for the children in your home; please don't share this file</div>
 </div>
 {% endblock %}
