@@ -1,0 +1,35 @@
+{
+  "id": "EN-3A-D-021",
+  "subject": "english",
+  "level": "3A",
+  "section": "D",
+  "part": 3,
+  "sheet_type": "sentence_copy",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 13023123507480910759,
+  "title": "Read it and copy it",
+  "parent_tip": "Say each word as your child writes it. Check together: capital at the start? Mark at the end? Cheer for neat spaces.",
+  "items": [
+    {
+      "kind": "copy",
+      "word": "lake",
+      "picture": "lake",
+      "text": "Can we swim in the lake?",
+      "rows": 2
+    },
+    {
+      "kind": "copy",
+      "word": "goal",
+      "picture": "goal",
+      "text": "Did the ball go in the goal?",
+      "rows": 2
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "lake",
+    "goal"
+  ]
+}

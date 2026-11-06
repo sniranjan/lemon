@@ -59,7 +59,7 @@ def phrases(subject: str = "english") -> dict:
 
 @lru_cache(maxsize=None)
 def phonics(subject: str = "english") -> dict:
-    """Hand-checked letter teams and rhyme groups (Kittens Reading; see the file's header)."""
+    """Hand-checked letter teams and rhyme groups (Kittens Reading) and spelling patterns, endings, syllables, sight words (Puppies Reading)."""
     path = CONTENT_DIR / "phonics" / f"{subject}.yaml"
     return yaml.safe_load(path.read_text()) if path.exists() else {}
 

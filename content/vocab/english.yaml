@@ -426,3 +426,78 @@
 - { word: silly,    picture: null,     category: describing, level: 2A, sentences: ["Dad makes a silly face."] }
 - { word: pebble,   picture: pebble,   category: nature,   level: 2A, sentences: ["I find a smooth gray pebble."] }
 - { word: lizard,   picture: lizard,   category: animals,  level: 2A, sentences: ["A green lizard sits on a warm rock."] }
+# --- Puppies Reading (3A): 70 spelling-pattern words, one new word a page in Word Patterns (pages 1–70),
+# in introduction order. `sentences` are the copy sentences of Copy a Sentence (pages 141–200): true to the
+# word's picture, built from known words and the sight words in content/phonics/english.yaml.
+# Batch 3A-1 (words 1–40, pages 1–40): letter pairs, magic e, ai/ay, ee/ea.
+- { word: shampoo, picture: shampoo, category: home,     level: 3A, sentences: ["I wash my hair with shampoo.", "Is the shampoo in the bathtub?"], mass: true }
+- { word: teacher, picture: teacher, category: family,   level: 3A, sentences: ["The teacher reads a book.", "Can the teacher help me?"] }
+- { word: chimney, picture: chimney, category: home,     level: 3A, sentences: ["The chimney is on the roof.", "Can you see the chimney?"] }
+- { word: chest,   picture: chest,   category: toys,     level: 3A, sentences: ["The crown is in the chest.", "Can you open the chest?"] }
+- { word: thread,  picture: thread,  category: home,     level: 3A, sentences: ["Grandma has blue thread.", "Can you find the thread?"], mass: true }
+- { word: shed,    picture: shed,    category: home,     level: 3A, sentences: ["The shovel is in the shed.", "Is the bike in the shed?"] }
+- { word: chalk,   picture: chalk,   category: toys,     level: 3A, sentences: ["I draw with chalk.", "Can you draw a sun with chalk?"], mass: true }
+- { word: cheetah, picture: cheetah, category: animals,  level: 3A, sentences: ["The cheetah can run.", "Can you run like a cheetah?"] }
+- { word: throne,  picture: throne,  category: home,     level: 3A, sentences: ["The crown is on the throne.", "Can I sit on the throne?"] }
+- { word: wheat,   picture: wheat,   category: nature,   level: 3A, sentences: ["Bread is made from wheat.", "Can you see the wheat?"], mass: true }
+- { word: gate,    picture: gate,    category: home,     level: 3A, sentences: ["Please open the gate.", "Can you open the gate?"] }
+- { word: lake,    picture: lake,    category: nature,   level: 3A, sentences: ["The duck can swim in the lake.", "Can we swim in the lake?"] }
+- { word: cape,    picture: cape,    category: clothes,  level: 3A, sentences: ["I have a red cape.", "Do you have a cape?"] }
+- { word: vase,    picture: vase,    category: home,     level: 3A, sentences: ["The flower is in the vase.", "Can you put the vase on the table?"] }
+- { word: hive,    picture: hive,    category: nature,   level: 3A, sentences: ["The bee flies to the hive.", "Do you see the hive?"] }
+- { word: lime,    picture: lime,    category: food,     level: 3A, sentences: ["The lime is green.", "Do you like lime juice?"] }
+- { word: rope,    picture: rope,    category: toys,     level: 3A, sentences: ["I can jump over the rope.", "Can we play with the rope?"] }
+- { word: bone,    picture: bone,    category: home,     level: 3A, sentences: ["The dog has a bone.", "Can the puppy have the bone?"] }
+- { word: cube,    picture: cube,    category: food,     level: 3A, sentences: ["The ice cube is cold.", "Can you put the ice cube in the cup?"] }
+- { word: flute,   picture: flute,   category: toys,     level: 3A, sentences: ["Dad can play the flute.", "Can you play the flute?"] }
+- { word: tail,    picture: tail,    category: animals,  level: 3A, sentences: ["The cat has a long tail.", "Where is the tail?"] }
+- { word: nail,    picture: nail,    category: home,     level: 3A, sentences: ["Dad has a nail.", "Can you find the nail?"] }
+- { word: mail,    picture: mail,    category: home,     level: 3A, sentences: ["The mail is here.", "Can I get the mail?"], mass: true }
+- { word: sail,    picture: sail,    category: vehicles, level: 3A, sentences: ["The boat has a sail.", "Can you see the sail?"] }
+- { word: braid,   picture: braid,   category: body,     level: 3A, sentences: ["My sister has a braid.", "Can you make a braid?"] }
+- { word: chain,   picture: chain,   category: home,     level: 3A, sentences: ["Look at the long chain.", "Is the chain on the swing?"] }
+- { word: hay,     picture: hay,     category: nature,   level: 3A, sentences: ["The horse eats hay.", "Does the cow like to eat hay?"], mass: true }
+- { word: spray,   picture: spray,   category: home,     level: 3A, sentences: ["I spray the flower.", "Can you spray the tree?"] }
+- { word: clay,    picture: clay,    category: toys,     level: 3A, sentences: ["I make a cake with clay.", "Can you make a ball with clay?"], mass: true }
+- { word: jay,     picture: jay,     category: animals,  level: 3A, sentences: ["The blue jay can fly.", "Is the jay in the tree?"] }
+- { word: seed,    picture: seed,    category: nature,   level: 3A, sentences: ["The bird eats a seed.", "Can a seed grow?"] }
+- { word: feet,    picture: feet,    category: body,     level: 3A, sentences: ["I have two feet.", "Can you hop on two feet?"] }
+- { word: peel,    picture: peel,    category: food,     level: 3A, sentences: ["The banana peel is yellow.", "Where can I put the peel?"] }
+- { word: eagle,   picture: eagle,   category: animals,  level: 3A, sentences: ["The eagle can fly.", "Can you see the eagle?"] }
+- { word: bean,    picture: bean,    category: food,     level: 3A, sentences: ["I like green beans.", "Is the bean green?"] }
+- { word: beak,    picture: beak,    category: animals,  level: 3A, sentences: ["The bird has a beak.", "Where is the beak?"] }
+- { word: seat,    picture: seat,    category: home,     level: 3A, sentences: ["Please sit in your seat.", "Is this seat for me?"] }
+- { word: tea,     picture: tea,     category: food,     level: 3A, sentences: ["Mom has a cup of tea.", "Is the tea hot?"], mass: true }
+- { word: leash,   picture: leash,   category: home,     level: 3A, sentences: ["The dog has a leash.", "Can I hold the leash?"] }
+- { word: jeans,   picture: jeans,   category: clothes,  level: 3A, sentences: ["I have blue jeans.", "Are these my jeans?"] }
+# Batch 3A-2 (words 41–70, pages 41–70): oa/ow/igh, bossy r, ou/ow/oi/oy/oo.
+- { word: road,    picture: road,    category: nature,   level: 3A, sentences: ["The car is on the road.", "Where does this road go?"] }
+- { word: toad,    picture: toad,    category: animals,  level: 3A, sentences: ["The toad can hop.", "Can you see the toad?"] }
+- { word: loaf,    picture: loaf,    category: food,     level: 3A, sentences: ["Mom has a loaf of bread.", "Can we eat the loaf of bread?"] }
+- { word: goal,    picture: goal,    category: toys,     level: 3A, sentences: ["I kick the ball in the goal.", "Did the ball go in the goal?"] }
+- { word: oatmeal, picture: oatmeal, category: food,     level: 3A, sentences: ["I eat oatmeal.", "Is the oatmeal hot?"], mass: true }
+- { word: mower,   picture: mower,   category: home,     level: 3A, sentences: ["Dad has a mower.", "Can Dad push the mower?"] }
+- { word: bow,     picture: bow,     category: clothes,  level: 3A, sentences: ["My doll has a pink bow.", "Can you make a bow?"] }
+- { word: light,   picture: light,   category: home,     level: 3A, sentences: ["Please turn on the light.", "Is the light on?"] }
+- { word: night,   picture: night,   category: nature,   level: 3A, sentences: ["I sleep at night.", "Can you see the moon at night?"] }
+- { word: rowboat, picture: rowboat, category: vehicles, level: 3A, sentences: ["We sit in the rowboat.", "Can we go in the rowboat?"] }
+- { word: barn,    picture: barn,    category: home,     level: 3A, sentences: ["The horse sleeps in the barn.", "Is the barn red?"] }
+- { word: guitar,  picture: guitar,  category: toys,     level: 3A, sentences: ["Mom can play the guitar.", "Can you play the guitar?"] }
+- { word: yarn,    picture: yarn,    category: toys,     level: 3A, sentences: ["The kitten plays with the yarn.", "Is the yarn blue?"], mass: true }
+- { word: card,    picture: card,    category: toys,     level: 3A, sentences: ["I make a card for Mom.", "Is this card for me?"] }
+- { word: harp,    picture: harp,    category: toys,     level: 3A, sentences: ["Grandma can play the harp.", "Can you play the harp?"] }
+- { word: horn,    picture: horn,    category: toys,     level: 3A, sentences: ["My bike has a horn.", "Can you hear the horn?"] }
+- { word: fort,    picture: fort,    category: toys,     level: 3A, sentences: ["We make a fort with a blanket.", "Can I play in the fort?"] }
+- { word: girl,    picture: girl,    category: family,   level: 3A, sentences: ["The girl is my friend.", "Is the girl your sister?"] }
+- { word: nurse,   picture: nurse,   category: family,   level: 3A, sentences: ["The nurse helps me.", "Can the nurse help the baby?"] }
+- { word: purse,   picture: purse,   category: clothes,  level: 3A, sentences: ["Mom has a red purse.", "Is the purse red?"] }
+- { word: house,   picture: house,   category: home,     level: 3A, sentences: ["Look at the house.", "Can you draw a house?"] }
+- { word: coin,    picture: coin,    category: toys,     level: 3A, sentences: ["I have a coin.", "Can you find the coin?"] }
+- { word: oil,     picture: oil,     category: food,     level: 3A, sentences: ["Mom cooks with oil.", "Is the oil in the pot?"], mass: true }
+- { word: boy,     picture: boy,     category: family,   level: 3A, sentences: ["The boy is my brother.", "Can the boy jump?"] }
+- { word: brownie, picture: brownie, category: food,     level: 3A, sentences: ["I eat a brownie.", "Can I have a brownie?"] }
+- { word: pool,    picture: pool,    category: nature,   level: 3A, sentences: ["We swim in the pool.", "Is the pool cold?"] }
+- { word: roof,    picture: roof,    category: home,     level: 3A, sentences: ["The bird is on the roof.", "Can you see the roof?"] }
+- { word: hoop,    picture: hoop,    category: toys,     level: 3A, sentences: ["I play with my hoop.", "Can you roll the hoop?"] }
+- { word: goose,   picture: goose,   category: animals,  level: 3A, sentences: ["The goose can swim.", "Do you see the goose?"] }
+- { word: zoo,     picture: zoo,     category: nature,   level: 3A, sentences: ["We see a giraffe at the zoo.", "Can we go to the zoo?"] }

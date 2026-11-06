@@ -1,0 +1,72 @@
+{
+  "id": "EN-3A-C-001",
+  "subject": "english",
+  "level": "3A",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "syllable_split",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 16716702684036171257,
+  "title": "Clap and split",
+  "parent_tip": "Say the word like a robot, part by part. Let your child clap along, then write or circle the answer.",
+  "items": [
+    {
+      "kind": "syllables",
+      "mode": "boxes",
+      "word": "rainbow",
+      "picture": "rainbow",
+      "syllables": [
+        "rain",
+        "bow"
+      ],
+      "choices": []
+    },
+    {
+      "kind": "syllables",
+      "mode": "boxes",
+      "word": "grandma",
+      "picture": "grandma",
+      "syllables": [
+        "grand",
+        "ma"
+      ],
+      "choices": []
+    },
+    {
+      "kind": "syllables",
+      "mode": "boxes",
+      "word": "grandpa",
+      "picture": "grandpa",
+      "syllables": [
+        "grand",
+        "pa"
+      ],
+      "choices": []
+    },
+    {
+      "kind": "syllables",
+      "mode": "boxes",
+      "word": "snowman",
+      "picture": "snowman",
+      "syllables": [
+        "snow",
+        "man"
+      ],
+      "choices": []
+    }
+  ],
+  "answer_key": [
+    "rain-bow",
+    "grand-ma",
+    "grand-pa",
+    "snow-man"
+  ],
+  "new_words": [],
+  "review_words": [
+    "rainbow",
+    "grandma",
+    "grandpa",
+    "snowman"
+  ]
+}
