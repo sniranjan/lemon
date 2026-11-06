@@ -1,0 +1,33 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 16px 20px; }
+.problems .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.colsum { display: grid; grid-template-columns: 40px repeat(3, 46px); justify-items: center; align-items: center; row-gap: 3px; font-size: 44px; font-weight: 700; line-height: 1; }
+.colsum .op { color: var(--accent); }
+.carry { width: 30px; height: 28px; border: 2px dashed #8a8a90; border-radius: 7px; }
+.colsum .rule { grid-column: 1 / 5; justify-self: stretch; border-top: 4px solid var(--ink); margin-top: 4px; }
+.digit { width: 40px; height: 50px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; margin-top: 4px; }
+{% endblock %}
+{% block body %}
+    <div class="problems">
+{% for p in sheet.items %}
+{% set w = p.width %}
+{% set da = "%*d" | format(w, p.a) %}
+{% set db = "%*d" | format(w, p.b) %}
+      <div class="card"><span class="qn" data-audience="parent">{{ p.n }}</span>
+        <div class="colsum">
+          <span></span>{% for i in range(w) %}{% if i < w - 1 %}<span class="carry"></span>{% else %}<span></span>{% endif %}{% endfor %}
+
+          <span></span>{% for ch in da %}<span>{{ ch if ch != " " else "" }}</span>{% endfor %}
+
+          <span class="op">{% if p.op == "-" %}&minus;{% else %}+{% endif %}</span>{% for ch in db %}<span>{{ ch if ch != " " else "" }}</span>{% endfor %}
+
+          <span class="rule"></span>
+          <span></span>{% for i in range(w) %}<span class="digit"></span>{% endfor %}
+
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

@@ -36,3 +36,12 @@ number_write_fill:
 fact_drill:
   - "Read each fact out loud together, then let your child fill in the box. Count on fingers if needed."
   - "Let your child answer first. Help only when asked, and praise each fact they know quickly."
+column_arithmetic:
+  - "Start with the ones, on the right, then the tens, then the hundreds. Use the little boxes for trades."
+  - "Let your child work each column out loud. If a column needs a trade, write it in the little box first."
+fraction_line:
+  - "Count the equal parts between 0 and 1 together. That number goes on the bottom of the fraction."
+  - "Count jumps from 0 to find each fraction. The number of jumps goes on top."
+story_problem:
+  - "Read each story together, then ask: equal groups or sharing? Draw dots in the empty space if it helps."
+  - "Let your child say the number sentence first, then write the answer in the box."

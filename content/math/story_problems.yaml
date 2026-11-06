@@ -1,0 +1,206 @@
+# Story problem frames (Foxes math, 3.OA.3 and 3.OA.8). Our own sentences; American spelling.
+# Each frame:
+#   id:      stable name (stored on the sheet)
+#   text:    the problem, with {a} {b} {c} {d} filled in from `vars` and `let`
+#   vars:    whole-number ranges [lo, hi] the generator picks from
+#   let:     numbers worked out from the vars (c = a * b), so sharing always comes out even
+#   answer:  the expression verify recomputes (+, -, *, / on the names above and plain numbers)
+#   checks:  extra conditions that keep the story true to life (d < c: you can't use more than you have)
+#   unit:    the word printed after the answer box
+# Every number stays within 100, every answer is a whole number above 0, and vars start at 2 so
+# nouns are always plural. Frames with two signs in `answer` are two-step problems (3.OA.8).
+
+# --- times: equal groups and arrays ----------------------------------------------------------
+- id: bags_apples
+  text: "There are {a} bags. Each bag has {b} apples. How many apples are there in all?"
+  vars: { a: [2, 9], b: [3, 10] }
+  answer: "a * b"
+  unit: apples
+- id: spider_legs
+  text: "A spider has 8 legs. How many legs do {a} spiders have?"
+  vars: { a: [2, 10] }
+  answer: "a * 8"
+  unit: legs
+- id: car_wheels
+  text: "A car has 4 wheels. How many wheels do {a} cars have?"
+  vars: { a: [2, 10] }
+  answer: "a * 4"
+  unit: wheels
+- id: week_days
+  text: "A week has 7 days. How many days are in {a} weeks?"
+  vars: { a: [2, 10] }
+  answer: "a * 7"
+  unit: days
+- id: chair_rows
+  text: "Sam puts {b} chairs in each row. He makes {a} rows. How many chairs is that?"
+  vars: { a: [2, 9], b: [3, 10] }
+  answer: "a * b"
+  unit: chairs
+- id: crayon_boxes
+  text: "Each box has {b} crayons. Mia has {a} boxes. How many crayons does she have?"
+  vars: { a: [2, 9], b: [3, 10] }
+  answer: "a * b"
+  unit: crayons
+- id: juice_packs
+  text: "A pack has {b} juice boxes. Dad buys {a} packs. How many juice boxes does he buy?"
+  vars: { a: [2, 6], b: [3, 8] }
+  answer: "a * b"
+  unit: juice boxes
+- id: carrot_rows
+  text: "Leo plants {a} rows of carrots. Each row has {b} carrots. How many carrots does he plant?"
+  vars: { a: [2, 9], b: [2, 10] }
+  answer: "a * b"
+  unit: carrots
+- id: hand_fingers
+  text: "A hand has 5 fingers. How many fingers are on {a} hands?"
+  vars: { a: [2, 10] }
+  answer: "a * 5"
+  unit: fingers
+- id: plate_cookies
+  text: "There are {a} plates. Each plate has {b} cookies. How many cookies are there?"
+  vars: { a: [2, 9], b: [2, 9] }
+  answer: "a * b"
+  unit: cookies
+- id: reading_pages
+  text: "Ava reads {b} pages each day. How many pages does she read in {a} days?"
+  vars: { a: [2, 7], b: [2, 10] }
+  answer: "a * b"
+  unit: pages
+- id: bike_wheels
+  text: "A bike has 2 wheels. How many wheels do {a} bikes have?"
+  vars: { a: [3, 10] }
+  answer: "a * 2"
+  unit: wheels
+- id: vase_flowers
+  text: "There are {a} vases. Each vase has {b} flowers. How many flowers are there?"
+  vars: { a: [2, 8], b: [3, 9] }
+  answer: "a * b"
+  unit: flowers
+
+# --- sharing: how many in each group ---------------------------------------------------------
+- id: share_crayons
+  text: "Mom shares {c} crayons equally among {b} kids. How many crayons does each kid get?"
+  vars: { a: [2, 10], b: [2, 9] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: crayons
+- id: grape_bowls
+  text: "Dad puts {c} grapes into {b} bowls, the same number in each. How many grapes are in each bowl?"
+  vars: { a: [3, 10], b: [2, 9] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: grapes
+- id: teams
+  text: "{c} kids make {b} teams of the same size. How many kids are on each team?"
+  vars: { a: [3, 9], b: [2, 5] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: kids
+- id: sticker_pages
+  text: "Ben has {c} stickers. He puts the same number on each of {b} pages. How many stickers are on each page?"
+  vars: { a: [2, 10], b: [2, 8] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: stickers
+- id: egg_rows
+  text: "{c} eggs sit in {b} rows. Each row has the same number. How many eggs are in each row?"
+  vars: { a: [2, 6], b: [2, 4] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: eggs
+- id: bead_strings
+  text: "Zoe has {c} beads for {b} bracelets, the same number on each. How many beads go on each bracelet?"
+  vars: { a: [3, 10], b: [2, 9] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: beads
+
+# --- sharing: how many groups ----------------------------------------------------------------
+- id: orange_bags
+  text: "Each bag holds {b} oranges. How many bags do you need for {c} oranges?"
+  vars: { a: [2, 10], b: [3, 9] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: bags
+- id: table_seats
+  text: "A table seats {b} people. How many tables are needed for {c} people?"
+  vars: { a: [2, 10], b: [4, 8] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: tables
+- id: pencil_cents
+  text: "Max has {c} cents. A pencil costs {b} cents. How many pencils can he buy?"
+  vars: { a: [2, 10], b: [5, 10] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: pencils
+- id: count_spiders
+  text: "A spider has 8 legs. Ivy counts {c} legs. How many spiders are there?"
+  vars: { a: [2, 10] }
+  let: { c: "a * 8" }
+  answer: "c / 8"
+  unit: spiders
+- id: count_cars
+  text: "A car has 4 wheels. Sam counts {c} wheels. How many cars are there?"
+  vars: { a: [2, 10] }
+  let: { c: "a * 4" }
+  answer: "c / 4"
+  unit: cars
+- id: muffin_boxes
+  text: "A box holds {b} muffins. How many boxes do you need for {c} muffins?"
+  vars: { a: [2, 10], b: [4, 6] }
+  let: { c: "a * b" }
+  answer: "c / b"
+  unit: boxes
+- id: days_weeks
+  text: "A week has 7 days. How many weeks are in {c} days?"
+  vars: { a: [2, 10] }
+  let: { c: "a * 7" }
+  answer: "c / 7"
+  unit: weeks
+
+# --- two steps (3.OA.8) ----------------------------------------------------------------------
+- id: eggs_used
+  text: "There are {a} boxes with {b} eggs in each. Dad uses {d} eggs. How many eggs are left?"
+  vars: { a: [2, 5], b: [6, 6], d: [2, 9] }
+  let: { c: "a * b" }
+  answer: "a * b - d"
+  checks: ["d < c"]
+  unit: eggs
+- id: marbles_found
+  text: "Ben has {a} bags with {b} marbles in each. He finds {d} more marbles. How many marbles does he have now?"
+  vars: { a: [2, 6], b: [3, 10], d: [2, 9] }
+  answer: "a * b + d"
+  unit: marbles
+- id: plate_eaten
+  text: "Mom puts {c} cookies on {b} plates, the same number on each. Leo eats {d} cookies from one plate. How many are left on that plate?"
+  vars: { a: [4, 10], b: [2, 6], d: [2, 3] }
+  let: { c: "a * b" }
+  answer: "c / b - d"
+  checks: ["d < a"]
+  unit: cookies
+- id: pencils_given
+  text: "Ava buys {a} packs of {b} pencils. She gives {d} pencils to her brother. How many pencils does she have left?"
+  vars: { a: [2, 5], b: [4, 10], d: [2, 9] }
+  let: { c: "a * b" }
+  answer: "a * b - d"
+  checks: ["d < c"]
+  unit: pencils
+- id: chairs_added
+  text: "There are {a} rows of {b} chairs. Then Sam brings {d} more chairs. How many chairs are there now?"
+  vars: { a: [2, 8], b: [3, 9], d: [2, 9] }
+  answer: "a * b + d"
+  unit: chairs
+- id: team_balls
+  text: "{c} kids make teams of {b}. Each team gets 2 balls. How many balls do the teams need?"
+  vars: { a: [2, 6], b: [3, 5] }
+  let: { c: "a * b" }
+  answer: "c / b * 2"
+  unit: balls
+- id: apples_shared_left
+  text: "Mia picks {a} apples each day for {b} days. She gives away {d} apples. How many apples does she have left?"
+  vars: { a: [2, 6], b: [2, 7], d: [2, 9] }
+  let: { c: "a * b" }
+  answer: "a * b - d"
+  checks: ["d < c"]
+  unit: apples

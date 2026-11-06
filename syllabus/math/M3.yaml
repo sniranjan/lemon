@@ -1,0 +1,235 @@
+subject: math
+level: M3
+title: Big Adding, Times Tables, Sharing and Fractions
+# Our own level (source: ours): Foxes math, grade 3 work (syllabus/PLAN-upper-levels.md). It assumes
+# grade 2 math (two-digit adding and taking away, place value to 1000) from the level before.
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [1, 31, 141, 171]   # column adding, skip-count bridge into times 2, times backwards, halves to eighths
+aims:
+  - Add and take away three-digit numbers in columns, trading tens and hundreds (within 1000)
+  - Know the times tables 1 to 10 by heart, starting from skip counting and arrays
+  - See sharing as the times tables backwards and know the sharing facts within 100
+  - Place unit fractions and other fractions with 2, 3, 4, 6 or 8 parts on a number line from 0 to 1
+  - Solve one- and two-step story problems with times and sharing
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [2, 4]   # source: ours (9 column problems, 12 facts, 5 lines or 3 stories a page)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# (ws/sheet_types/*.py). fact_drill here: ops "*" (times) and "/" (sharing); amounts = the tables;
+# first = the other factor (for "/", the answer); layouts cycle per part from its first page.
+rules:
+  max_total: 100
+  blanks: [c]
+  turnarounds: true
+sections:
+  - code: A
+    name: Three-Digit Adding and Subtracting with Regrouping
+    public_name: Big Adding & Taking Away
+    pages: [1, 30]
+    sheet_types: [column_arithmetic]
+    standards: [3.NBT.2]
+    source: ours
+    rules:
+      max_total: 999
+      count: 9
+      tips:
+        column_arithmetic:
+          - "Start with the ones, on the right. If a column makes 10 or more, write the ten in the little box over the next column."
+          - "Say each column out loud: ones, then tens, then hundreds. Let your child decide when a trade is needed."
+    parts:
+      - part: 1
+        pages: [1, 10]
+        rules: { title: Big adding, ops: ["+"], first: [100, 899], second: [100, 899], regroups: [1, 2] }
+      - part: 2
+        pages: [11, 20]
+        rules:
+          title: Big taking away
+          ops: ["-"]
+          first: [200, 999]
+          second: [100, 899]
+          regroups: [1, 2]
+          across_zero: 1
+          tips:
+            column_arithmetic:
+              - "Start with the ones. If the top digit is too small, trade one ten for ten ones and write the new digits in the little boxes."
+              - "For 402 take away 168, there are no tens to trade: trade a hundred for ten tens first, then a ten for ten ones."
+      - part: 3
+        pages: [21, 30]
+        rules:
+          title: Add or take away
+          ops: ["+", "-"]
+          first: [200, 999]
+          second: [100, 799]
+          regroups: [0, 1, 2]
+          across_zero: 1
+          tips:
+            column_arithmetic:
+              - "Adding and taking away are mixed now. Point to the sign together before each problem, then start with the ones."
+              - "Some problems need no trades at all. Ask your child to check each column before deciding."
+
+  - code: B
+    name: Times Tables 2, 5 and 10
+    public_name: Times Tables 2, 5, 10
+    pages: [31, 60]
+    sheet_types: [fact_drill]
+    standards: [3.OA.1, 3.OA.5, 3.OA.7]
+    source: ours
+    rules:
+      title: Times tables
+      ops: ["*"]
+      first: [1, 10]
+      layouts: [skip, arrays, horizontal, skip, vertical]
+      tips:
+        fact_drill:
+          - "Count by the table together first. 4 times 2 means four 2s: say 2, 4, 6, 8."
+          - "Each dot picture is rows of dots. 3 times 5 is 3 rows of 5. Count by 5s down the rows."
+          - "Read each fact out loud together. 2 times 7 and 7 times 2 are the same answer."
+    parts:
+      - { part: 1, pages: [31, 40], rules: { amounts: [2] } }
+      - { part: 2, pages: [41, 50], rules: { amounts: [5] } }
+      - part: 3
+        pages: [51, 60]
+        rules:
+          amounts: [2, 5, 10]
+          layouts: [skip, horizontal, arrays, vertical, horizontal]
+
+  - code: C
+    name: Times Tables 3 and 4
+    public_name: Times Tables 3 and 4
+    pages: [61, 90]
+    sheet_types: [fact_drill]
+    standards: [3.OA.1, 3.OA.4, 3.OA.7]
+    source: ours
+    rules:
+      title: Times tables
+      ops: ["*"]
+      first: [1, 10]
+      layouts: [skip, arrays, horizontal, skip, vertical]
+      tips:
+        fact_drill:
+          - "Count by the table together first, then read each fact. 4 times 3 is four 3s: 3, 6, 9, 12."
+          - "The 4s are double the 2s: 6 times 2 is 12, so 6 times 4 is 24."
+    parts:
+      - { part: 1, pages: [61, 70], rules: { amounts: [3] } }
+      - { part: 2, pages: [71, 80], rules: { amounts: [4] } }
+      - part: 3
+        pages: [81, 90]
+        rules:
+          amounts: [3, 4]
+          blanks: [c, b]
+          layouts: [horizontal, arrays, vertical, skip, horizontal]
+          tips:
+            fact_drill:
+              - "Some boxes are in the middle now. For 3 times box is 21, ask: how many 3s make 21?"
+              - "Count by 3s or 4s on fingers for a missing number. Stop when you reach the answer."
+
+  - code: D
+    name: Times Tables 6 to 9
+    public_name: Times Tables 6 to 9
+    pages: [91, 140]
+    sheet_types: [fact_drill]
+    standards: [3.OA.4, 3.OA.5, 3.OA.7]
+    source: ours
+    rules:
+      title: Times tables
+      ops: ["*"]
+      first: [1, 10]
+      layouts: [skip, arrays, horizontal, skip, vertical]
+      tips:
+        fact_drill:
+          - "Use facts you know: 6 times 7 is 5 sevens and one more 7, so 35 and 7 is 42."
+          - "Turn a fact around if it helps: 8 times 3 is the same as 3 times 8."
+          - "Count by the table together first. Then read each fact and let your child answer."
+    parts:
+      - { part: 1, pages: [91, 100], rules: { amounts: [6] } }
+      - { part: 2, pages: [101, 110], rules: { amounts: [7] } }
+      - { part: 3, pages: [111, 120], rules: { amounts: [8] } }
+      - part: 4
+        pages: [121, 130]
+        rules:
+          amounts: [9]
+          tips:
+            fact_drill:
+              - "A trick for 9s: 9 times 6 is 10 sixes take away one 6, so 60 take away 6 is 54."
+              - "Count by 9s together first. The tens go up by one and the ones go down by one."
+      - part: 5
+        pages: [131, 140]
+        rules:
+          amounts: [6, 7, 8, 9]
+          blanks: [c, b]
+          layouts: [horizontal, vertical, arrays, horizontal, skip]
+          tips:
+            fact_drill:
+              - "All the big tables now, with some missing numbers. For 7 times box is 56, ask: how many 7s make 56?"
+              - "Let your child go first. Help only with the facts that still need counting."
+
+  - code: E
+    name: Division as Missing-Factor Facts
+    public_name: Sharing Facts
+    pages: [141, 170]
+    sheet_types: [fact_drill]
+    standards: [3.OA.2, 3.OA.4, 3.OA.6, 3.OA.7]
+    source: ours
+    rules:
+      title: Sharing
+      ops: ["/"]
+      first: [1, 10]
+      layouts: [pairs, arrays, horizontal, families, horizontal]
+      tips:
+        fact_drill:
+          - "Sharing is the times table backwards. For 20 shared by 4, ask: 4 times what is 20?"
+          - "Each dot picture shares the dots into rows. Count how many dots are in one row."
+          - "A family has three numbers. The two small ones times each other make the big one, and the big one shares back."
+    parts:
+      - { part: 1, pages: [141, 150], rules: { amounts: [2, 5, 10] } }
+      - { part: 2, pages: [151, 160], rules: { amounts: [3, 4] } }
+      - { part: 3, pages: [161, 170], rules: { amounts: [6, 7, 8, 9] } }
+
+  - code: F
+    name: Fractions on a Number Line
+    public_name: Fractions on a Line
+    pages: [171, 190]
+    sheet_types: [fraction_line]
+    standards: [3.NF.1, 3.NF.2]
+    source: ours
+    rules:
+      title: Fractions on a line
+      denominators: [2, 3, 4, 6, 8]   # grade 3 fractions use only these (Common Core 3.NF footnote)
+      lines: 5
+    parts:
+      - part: 1
+        pages: [171, 180]
+        rules:
+          unit_only: true
+          tasks: [name, mark]
+          tips:
+            fraction_line:
+              - "Each line from 0 to 1 is cut into equal parts. Count the parts together: that number goes on the bottom."
+              - "One part from 0 is a unit fraction: 1 on top, the number of parts below. A dot means write it; a fraction means draw the dot."
+      - part: 2
+        pages: [181, 190]
+        rules:
+          tasks: [name, mark, fill]
+          tips:
+            fraction_line:
+              - "Count the jumps from 0 to the dot: that number goes on top. The number of parts goes on the bottom."
+              - "To mark 3 over 4, count three parts from 0 and draw a dot there. Fill each empty label the same way."
+
+  - code: G
+    name: Word Problems with Multiplication and Division
+    public_name: Story Problems
+    pages: [191, 200]
+    sheet_types: [story_problem]
+    standards: [3.OA.3, 3.OA.8]
+    source: ours
+    rules:
+      title: Story problems
+      problems: 3
+      ops: ["*", "/"]
+      two_step_min: 1
+      max_value: 100
+      tips:
+        story_problem:
+          - "Read each story together. Ask: are we making equal groups, or sharing? Draw dots in the empty space if it helps."
+          - "Let your child say the number sentence first, like 4 times 6, then write the answer in the box."
+          - "One story on each page has two steps. Find the first answer, then use it for the second step."

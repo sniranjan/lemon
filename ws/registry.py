@@ -18,7 +18,7 @@ CATALOGUE: frozenset[str] = frozenset({
     "colouring", "line_path",
     "count_and_say", "count_and_point", "number_read", "dots_to_number",
     "number_sequence", "number_trace", "number_write", "next_number", "add_facts",
-    "fact_drill",
+    "fact_drill", "column_arithmetic", "fraction_line", "story_problem",
 })
 
 

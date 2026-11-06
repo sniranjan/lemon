@@ -1,0 +1,118 @@
+{
+  "id": "MA-M3-A-001",
+  "subject": "math",
+  "level": "M3",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "column_arithmetic",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 15292289577139146720,
+  "title": "Big adding",
+  "parent_tip": "Start with the ones, on the right. If a column makes 10 or more, write the ten in the little box over the next column.",
+  "items": [
+    {
+      "kind": "column",
+      "n": 1,
+      "a": 286,
+      "op": "+",
+      "b": 194,
+      "c": 480,
+      "regroups": 2,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 2,
+      "a": 196,
+      "op": "+",
+      "b": 663,
+      "c": 859,
+      "regroups": 1,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 3,
+      "a": 486,
+      "op": "+",
+      "b": 446,
+      "c": 932,
+      "regroups": 2,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 4,
+      "a": 136,
+      "op": "+",
+      "b": 447,
+      "c": 583,
+      "regroups": 1,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 5,
+      "a": 138,
+      "op": "+",
+      "b": 103,
+      "c": 241,
+      "regroups": 1,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 6,
+      "a": 227,
+      "op": "+",
+      "b": 686,
+      "c": 913,
+      "regroups": 2,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 7,
+      "a": 249,
+      "op": "+",
+      "b": 472,
+      "c": 721,
+      "regroups": 2,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 8,
+      "a": 656,
+      "op": "+",
+      "b": 307,
+      "c": 963,
+      "regroups": 1,
+      "width": 3
+    },
+    {
+      "kind": "column",
+      "n": 9,
+      "a": 423,
+      "op": "+",
+      "b": 293,
+      "c": 716,
+      "regroups": 1,
+      "width": 3
+    }
+  ],
+  "answer_key": [
+    480,
+    859,
+    932,
+    583,
+    241,
+    913,
+    721,
+    963,
+    716
+  ],
+  "new_words": [],
+  "review_words": []
+}
