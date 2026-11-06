@@ -1,0 +1,53 @@
+{
+  "id": "EN-R9-D-002",
+  "subject": "english",
+  "level": "R9",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "passage_spread",
+  "page_number": 152,
+  "variant": 1,
+  "seed": 16343229202796511119,
+  "title": "The Borrowed Camera",
+  "parent_tip": "Check each quote is copied exactly, in quotation marks.",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "d01-the-borrowed-camera",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 151,
+      "continued": [
+        {
+          "n": null,
+          "text": "Then she handed him the strap and announced that, since he was paying for the lens anyway, he might as well learn how to use the camera properly.",
+          "cont": true
+        }
+      ]
+    },
+    {
+      "kind": "organizer",
+      "n": 1,
+      "ask": "Plan a paragraph: why does Theo tell the truth? Fill in each box.",
+      "heads": [
+        "Claim",
+        "Evidence",
+        "Explanation"
+      ],
+      "lines": 3
+    },
+    {
+      "kind": "paragraph",
+      "n": 2,
+      "ask": "Write your paragraph. Why does Theo tell the truth? Quote the story twice.",
+      "lines": 9
+    }
+  ],
+  "answer_key": [
+    "1. Claim: Theo tells the truth because lying feels worse than facing Marisol. · Evidence: \"each one made his stomach tighten a little more\" · Explanation: His guilt grows with every excuse, so honesty is the only relief.",
+    "2. Sample: Theo tells the truth because he cannot live with his own excuses. All evening he invents lies, but \"each one made his stomach tighten a little more.\" His body reacts to every lie before anyone else hears it. He also knows how hard Marisol worked, since she saved \"for almost a year\" to buy the camera. That knowledge makes a lie feel even worse. In the end, confessing is the only way Theo can feel at peace. Full answer: Claim: one clear reason Theo confesses. Evidence: two exact quotes, such as his stomach tightening and Marisol saving for a year. Explanation: how each quote shows his guilt growing."
+  ],
+  "new_words": [],
+  "review_words": []
+}

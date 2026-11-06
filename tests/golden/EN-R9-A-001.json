@@ -1,0 +1,60 @@
+{
+  "id": "EN-R9-A-001",
+  "subject": "english",
+  "level": "R9",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 312128815813598413,
+  "title": "The Second Bell",
+  "parent_tip": "Ask: where does the story start? Is that where events begin?",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "a01-the-second-bell",
+      "set": 0,
+      "side": "read",
+      "genre": "story",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [
+        {
+          "n": 1,
+          "text": "When the second bell rang, the auditorium fell silent, and Priya stood motionless in the wings with her hands pressed flat against her skirt, as if she could iron the trembling out of them. Somewhere beyond the velvet curtain, two hundred strangers were settling into their seats.",
+          "cont": false
+        },
+        {
+          "n": 2,
+          "text": "Eight months earlier, she had nearly quit. Her teacher had assigned a sonata whose middle section moved so rapidly that her fingers tangled every time she attempted it. Night after night she repeated the same twelve measures, deliberately slow at first and then gradually faster, until the metronome's patient clicking followed her into her dreams.",
+          "cont": false
+        },
+        {
+          "n": 3,
+          "text": "In March, the measures finally untangled. Priya would always remember that evening precisely: rain streaking the window, the lamp humming, and her hands suddenly moving as though they belonged to someone far more confident.",
+          "cont": false
+        },
+        {
+          "n": 4,
+          "text": "Now, in the dim wings, that memory seemed impossibly distant, until her teacher rested a hand on her shoulder and whispered, \"Breathe, Priya. You already know how this ends.\"",
+          "cont": false
+        },
+        {
+          "n": 5,
+          "text": "Onstage, the lights were warmer than she had expected, and the piano looked unexpectedly small beneath them. The opening went smoothly. The middle section arrived like a wave she had watched building for months, and instead of resisting it, she rode it until the twelve measures that had once defeated her passed in a few seconds.",
+          "cont": false
+        },
+        {
+          "n": 6,
+          "text": "When the final chord faded, the applause arrived all at once, a sound like heavy rain on a tin roof. Priya bowed, and for a moment she imagined she could hear a metronome, still clicking patiently, somewhere far behind her.",
+          "cont": false
+        }
+      ],
+      "turn": false
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

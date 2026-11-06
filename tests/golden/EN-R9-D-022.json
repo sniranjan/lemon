@@ -1,0 +1,49 @@
+{
+  "id": "EN-R9-D-022",
+  "subject": "english",
+  "level": "R9",
+  "section": "D",
+  "part": 2,
+  "sheet_type": "passage_spread",
+  "page_number": 172,
+  "variant": 1,
+  "seed": 11526881440506071328,
+  "title": "Second Chair",
+  "parent_tip": "Claim first, then two exact quotes, then why they prove it.",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "d06-second-chair",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 171,
+      "continued": []
+    },
+    {
+      "kind": "quote",
+      "n": 1,
+      "ask": "Which sentence is the strongest evidence that Ana is secretly jealous of June?",
+      "choices": [
+        "She and June had taken lessons together since they were seven",
+        "Ana smiled and congratulated June in the hallway",
+        "June blinked, caught the melody, and played the rest of the solo beautifully.",
+        "She told herself that she simply wanted to improve, but privately she was waiting for June to make a mistake."
+      ],
+      "answer": "D",
+      "columns": 1
+    },
+    {
+      "kind": "paragraph",
+      "n": 2,
+      "ask": "Write a paragraph. What does Ana feel about June's first chair? Quote the story twice.",
+      "lines": 9
+    }
+  ],
+  "answer_key": [
+    "1. D (She told herself that she simply wanted to improve, but privately she was waiting for June to make a mistake.)",
+    "2. Sample: Ana feels jealous of June's success, even though she hides it. In public she \"smiled and congratulated June,\" but on the bus she replays every note she missed. Her jealousy becomes clear when the story reveals that \"privately she was waiting for June to make a mistake.\" This shows that her friendly words cover up a competitive feeling. Ana's feelings are mixed, because she loves her friend but resents losing to her. Full answer: Claim: what Ana feels and that it is hidden. Evidence: two exact quotes, one public and one private. Explanation: how the contrast between them reveals her jealousy."
+  ],
+  "new_words": [],
+  "review_words": []
+}
