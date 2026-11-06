@@ -157,6 +157,29 @@ def render(
         raise typer.Exit(1)
 
 
+@app.command()
+def preview(
+    subject: str = typer.Option(..., help="english | math | pencil"),
+    level: str = typer.Option(..., help="internal level code, e.g. 7A"),
+) -> None:
+    """Free preview PDF for the website: out/previews/<slug>.pdf (pages from the syllabus `preview_pages`)."""
+    from .booklet import build_preview
+    from .generate import generate_pages
+
+    lvl = _load(subject, level)
+    if not lvl.preview_pages:
+        typer.echo(f"{subject} {level} has no preview_pages in its syllabus", err=True)
+        raise typer.Exit(1)
+    # regenerate (deterministic) so the pages use the current templates and content
+    for sheet, _ in generate_pages(lvl, sorted(lvl.preview_pages)):
+        typer.echo(f"page {sheet.page_number:>3}  {sheet.sheet_type}")
+    report = build_preview(subject, level)
+    for b in report.booklets:
+        typer.echo(f"preview: {b.relative_to(ROOT)}")
+    if _print_issues(report.issues):
+        raise typer.Exit(1)
+
+
 @pictures_app.command("missing")
 def pictures_missing(subject: str = typer.Option(...), level: str = typer.Option(...)) -> None:
     """List words with no SVG picture or no licence entry."""

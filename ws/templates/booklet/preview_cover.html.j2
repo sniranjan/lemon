@@ -1,0 +1,44 @@
+{% extends "booklet/_doc.html.j2" %}
+{% from "booklet/_brand.html.j2" import brand %}
+{% block style %}
+.cover { justify-content: space-between; }
+.cover .foot { margin-top: 0; }
+.brand { display: flex; align-items: center; gap: 12px; color: #1F2A44; line-height: 1; }
+.brand .lessons { color: #E5533F; font-style: italic; }
+.free { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; font-size: 22px;
+        border-radius: 999px; padding: 6px 20px; letter-spacing: 0.04em; }
+.big { font-size: 120px; font-weight: 700; color: var(--accent); line-height: 1; margin-top: 18px; }
+.sub { font-size: 30px; margin-top: 8px; }
+.sections { font-size: 22px; line-height: 1.8; }
+.name { font-size: 28px; display: flex; align-items: flex-end; gap: 16px; }
+.name i { flex: 1; border-bottom: 3px solid var(--ink); height: 1.2em; }
+{% endblock %}
+{% block pages %}
+<div class="page cover">
+  <div class="rule" style="display: flex; justify-content: space-between; align-items: flex-end;">
+    <div>
+      <div class="eyebrow">{{ label }}</div>
+      <h1>Free preview</h1>
+    </div>
+    {{ brand(30) }}
+  </div>
+  <div>
+    <span class="free">{{ n_pages }} sample pages</span>
+    <div class="big">{{ level.public_name }}</div>
+    <div class="sub">{{ level.public_title }} · from a {{ level.pages }}-page level</div>
+  </div>
+  <div class="sections">
+{% for s in sections %}
+    <div><b>{{ s.name }}</b> · page{{ "s" if s.pages | length > 1 }} {{ s.pages | join(", ") }}</div>
+{% endfor %}
+  </div>
+  <div class="name">Name <i></i></div>
+  <div class="tip"><b>For grown-ups:</b> Print these pages and try one or two at a time, sitting right beside
+    your child. Each page has a short tip at the top. Keep it light and happy; stop while it's still fun.
+{% if color_pages %}
+    <br><b>Print in color if you can:</b> the color-word pages ({{ color_pages }}).
+{% endif %}
+  </div>
+  <div class="foot">paperlessons.com</div>
+</div>
+{% endblock %}

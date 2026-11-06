@@ -90,7 +90,8 @@ lemon/                           # repo root
     exposure.py                  # tracks how often each word/number has appeared
   out/                           # generated output (git-ignored)
     english/7A/A/EN-7A-A-001.html …
-    english/7A/EN-7A-A-001-020.pdf
+    english/7A/chicks-reading-pages-001-020.pdf   # buyer-facing files use public names (§15)
+    previews/chicks.pdf                           # free preview PDFs (ws preview)
     manifest.jsonl               # one line per generated sheet (id, seed, items, checks)
   tests/
 ```
@@ -366,6 +367,7 @@ ws render --subject english --level 7A --pdf     # one booklet PDF per section +
 # Content helpers
 ws pictures missing --subject english --level 7A
 ws pictures sheet                                # contact sheet of all pictures
+ws preview --subject english --level 7A          # free preview PDF → out/previews/<slug>.pdf (§15)
 ws vocab stats --level 7A                        # words in bank vs. target, exposure counts
 ws syllabus show english 7A                      # print sections, page ranges, sheet types
 ```
@@ -377,8 +379,9 @@ the end of the section's range errors clearly ("7A-A is complete: pages 1–100"
 **Booklet PDF** = cover page (child's name field, level, page range, sections, and the mastery
 note from §12 for grown-ups) + the sheets in order + a final **progress log** page (date, pages,
 minutes, notes). No answer keys in the child's booklet. Answer keys go in a separate `-answers.pdf`.
-Names: one per section from the pages present (`EN-7A-A-001-020.pdf`) and one for the whole
-level (`EN-7A-level.pdf`, `ZI-level.pdf`); variants add `-vN`. Gaps in a section are a warning.
+Names use public names (§15): one per section from the pages present, numbered by level page
+(`chicks-reading-pages-001-020.pdf`), and one for the whole level (`chicks-reading-level.pdf`,
+`tadpoles-level.pdf`); variants add `-vN`. Gaps in a section are a warning.
 
 ---
 
@@ -386,7 +389,7 @@ level (`EN-7A-level.pdf`, `ZI-level.pdf`); variants add `-vN`. Gaps in a section
 
 - Page: US Letter 816×1056 px, padding 48/56/40 px, white background.
 - Font: **Andika** (designed for early readers, single-storey "a"), bold for headings.
-- Header: small caps line `LEVEL 7A · ENGLISH`, sheet title (34px bold), pill with the page number **within the level** (`7A · 101`, so progress
+- Header: small caps line `CHICKS · READING` (public level name · public subject), sheet title (34px bold), pill with the page number **within the level** (`Chicks · 101`, so progress
   reads 1–200 in one line),
   and `Name ____ Date ____ Time ____` on the right, then a 3px rule in the subject colour.
 - Subject colours: English teal `#0B7A75` (tint `#E6F4F3`), Math orange `#B4410C`
@@ -399,7 +402,8 @@ level (`EN-7A-level.pdf`, `ZI-level.pdf`); variants add `-vN`. Gaps in a section
 - Ligatures are off (`font-variant-ligatures: none`) so early readers see every letter.
 - Cards: 3px near-black border, 28px radius. Pictures 200–250px in 7A English, 72px
   per item in counting rows.
-- Footer: 12px grey sheet ID (section-relative, e.g. `EN-7A-B-001`). No branding.
+- Footer: 12px grey public reference (`Chicks · Reading · page 101`, plus `· version N`). Internal sheet IDs
+  (`EN-7A-B-001`) stay in the manifest and work files. No branding on sheets.
 
 ---
 
@@ -524,6 +528,12 @@ app much later. This repo is a monorepo: the generator stays at the root (Python
   Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may
   stay inside the generator, but anything a buyer sees (sheet headers, page pills, footers, PDF names,
   covers) must use public names before it is sold or offered as a preview.
-- **Free previews:** one PDF per level in R2 at `previews/<slug>.pdf`; the site picks them up automatically.
+- **Public names live in the syllabus YAML:** `public_name`, `public_title`, `slug`, `preview_pages` per level and
+  `public_name` per section (all required). `ws/public.py` builds labels and file names from them.
+  Internal level codes are in `content/banned.yaml`, so verify and the booklet/preview builders fail if
+  one ever reaches printed text.
+- **Free previews:** `ws preview --subject … --level …` regenerates the level's `preview_pages` and builds
+  `out/previews/<slug>.pdf` (preview cover + pages + closing page). Upload to R2 at `previews/<slug>.pdf`
+  (see `apps/web/README.md`); the site picks them up automatically.
 - **Logo:** "paper" (Fredoka, bold, ink) + "lessons" (Gochi Hand, coral) next to a smiling folded-corner
   sheet. Keep it this simple.

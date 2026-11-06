@@ -1,0 +1,21 @@
+{% extends "booklet/_doc.html.j2" %}
+{% from "booklet/_brand.html.j2" import brand %}
+{% block style %}
+.end { justify-content: center; align-items: center; text-align: center; gap: 36px; }
+.brand { display: flex; align-items: center; gap: 14px; color: #1F2A44; line-height: 1; }
+.brand .lessons { color: #E5533F; font-style: italic; }
+.end h1 { font-size: 48px; }
+.end p { font-size: 24px; line-height: 1.5; max-width: 600px; margin: 0; }
+.url { font-size: 40px; font-weight: 700; color: var(--accent); border: 3px solid var(--accent);
+       border-radius: 999px; padding: 10px 36px; }
+{% endblock %}
+{% block pages %}
+<div class="page end">
+  {{ brand(56) }}
+  <h1>Did you enjoy these pages?</h1>
+  <p>The whole <b>{{ level.public_name }}</b> level has {{ level.pages }} pages that grow one small
+    step at a time{% if sections | length > 1 %}: {{ sections | map(attribute="name") | join(", ") }}{% endif %}.</p>
+  <div class="url">paperlessons.com</div>
+  <p style="font-size: 20px; color: var(--muted);">Download the whole level, print it at home, and do a few pages a day together.</p>
+</div>
+{% endblock %}

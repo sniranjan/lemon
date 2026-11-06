@@ -1,3 +1,4 @@
+import re
 import pytest
 
 from ws import generate as gen
@@ -78,7 +79,8 @@ def test_html_is_deterministic(out_dir, fixture_content):
     second = {p.name: p.read_bytes() for _, p in gen.generate_pages(EN7A, [4, 3, 2, 1])}
     assert first == second
     html = first["EN-7A-A-004.html"].decode()
-    assert "7A · 4" in html and "EN-7A-A-004" in html and 'class="strip"' in html
+    assert "Chicks · 4" in html and "Chicks · Reading · page 4" in html and 'class="strip"' in html
+    assert not re.search(r"\b(7A|EN-7A)\b", html)       # internal codes never printed (CLAUDE.md §15)
     assert str(ROOT) not in html and 'src="../../../../../assets/pictures/fish.svg"' in html
     assert 'class="strip"' not in first["EN-7A-A-001.html"].decode()
 

@@ -145,15 +145,20 @@ def test_booklets_have_cover_sheets_log_and_answers(made, booklet_out):
 
     report = booklet.build_booklets("math", "6A")
     names = sorted(p.name for p in report.booklets)
-    assert "MA-6A-A-001-012.pdf" in names and "MA-6A-A-001-012-answers.pdf" in names
-    assert "MA-6A-level.pdf" in names and "MA-6A-level-answers.pdf" in names
+    # public file names only (CLAUDE.md §15): level slug + subject, level page numbers
+    assert "ducklings-numbers-pages-001-012.pdf" in names and "ducklings-numbers-pages-001-012-answers.pdf" in names
+    assert "ducklings-numbers-level.pdf" in names and "ducklings-numbers-level-answers.pdf" in names
+    assert not [n for n in names if re.search(r"\b(6A|MA)\b", n)]
     assert [i for i in report.issues if i.severity == "error"] == []
-    sec = booklet_out / "math" / "6A" / "MA-6A-A-001-012.pdf"
+    sec = booklet_out / "math" / "6A" / "ducklings-numbers-pages-001-012.pdf"
     assert len(PdfReader(sec).pages) == 1 + 12 + 1
-    answers = PdfReader(booklet_out / "math" / "6A" / "MA-6A-A-001-012-answers.pdf")
-    assert "MA-6A-A-001" in answers.pages[0].extract_text()
+    answers = PdfReader(booklet_out / "math" / "6A" / "ducklings-numbers-pages-001-012-answers.pdf")
+    assert "Page 1" in answers.pages[0].extract_text()
     child_text = "".join(p.extract_text() for p in PdfReader(sec).pages)
     assert "Answers" not in child_text                     # no answer key in the child's booklet
+    assert "Ducklings" in child_text
+    for code in ("6A", "MA-6A"):                           # no internal codes anywhere a buyer looks
+        assert code not in child_text and code not in answers.pages[0].extract_text()
 
 
 def test_booklets_are_byte_identical_and_undated(made, booklet_out):
@@ -206,3 +211,26 @@ def test_longest_real_words_fit_both_card_types(out_dir):
     made = gen.generate_pages(EN7A, pages) + gen.generate_pages(EN7A, pages, variant=2, sheet_type="word_picture_sentence")
     for r in render_pngs([p for _, p in made]):
         assert r.problems == [], (r.html.name, r.problems)
+
+
+def test_internal_level_codes_are_banned_in_printed_text():
+    # buyers only ever see public names (CLAUDE.md §15); "#0B7A75" (a color) is not a whole word
+    assert banned_words("Level 7A · Reading") == ["7a"]
+    assert banned_words("ZI-A-003") == ["zi"]
+    assert banned_words("color: #0B7A75; Chicks · Reading") == []
+
+
+def test_free_preview_pdf(out_dir, booklet_out):
+    pytest.importorskip("playwright")
+    from pypdf import PdfReader
+
+    level = load_level("pencil", "ZI")
+    gen.generate_pages(level, sorted(level.preview_pages))
+    report = booklet.build_preview("pencil", "ZI")
+    assert [i for i in report.issues if i.severity == "error"] == []
+    assert [p.name for p in report.booklets] == ["tadpoles.pdf"]
+    pdf = PdfReader(booklet_out / "previews" / "tadpoles.pdf")
+    assert len(pdf.pages) == 1 + len(level.preview_pages) + 1          # cover + samples + closing page
+    text = "".join(p.extract_text() for p in pdf.pages)
+    assert "Tadpoles" in text and "paperlessons.com" in text
+    assert not re.search(r"\bZI\b", text)

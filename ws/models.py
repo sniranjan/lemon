@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -53,7 +54,8 @@ class Part(_Strict):
 
 class Section(_Strict):
     code: str
-    name: str
+    name: str                 # internal (planning) name
+    public_name: str          # what parents and children see: our own name (CLAUDE.md §15)
     pages: PageRange
     sheet_types: list[str]
     rules: dict[str, Any] = Field(default_factory=dict)
@@ -86,8 +88,12 @@ class Section(_Strict):
 
 class Level(_Strict):
     subject: Subject
-    level: str
+    level: str                # internal code (7A, 6A, ZI): never printed on anything a buyer sees
     title: str
+    public_name: str          # public level name, e.g. "Chicks" (CLAUDE.md §15)
+    public_title: str         # public subtitle for covers, e.g. "First words"
+    slug: str                 # site + R2 key, e.g. "chicks"
+    preview_pages: list[int] = Field(default_factory=list)   # pages in the free preview PDF
     aims: list[str] = Field(default_factory=list)
     pages: int
     daily_pages: int = 5
@@ -103,6 +109,11 @@ class Level(_Strict):
         if codes != expected:
             raise ValueError(f"{self.level}: section codes must be {expected} in page order, got {codes}")
         _check_tiling([s.pages for s in self.sections], 1, self.pages, f"{self.level} sections")
+        if not re.fullmatch(r"[a-z][a-z0-9-]*", self.slug):
+            raise ValueError(f"{self.level}: slug {self.slug!r} must be lowercase letters, digits and dashes")
+        bad = [p for p in self.preview_pages if not 1 <= p <= self.pages]
+        if bad or len(set(self.preview_pages)) != len(self.preview_pages):
+            raise ValueError(f"{self.level}: preview_pages must be distinct pages 1–{self.pages}, got {self.preview_pages}")
         return self
 
     def section(self, code: str) -> Section:

@@ -1,6 +1,11 @@
 subject: pencil
 level: ZI
 title: Pencil skills 1
+# Public (CLAUDE.md §15): the only names a buyer sees.
+public_name: Tadpoles
+public_title: First crayon and pencil play
+slug: tadpoles
+preview_pages: [1, 11, 21, 31, 41, 51, 71, 91]   # free preview PDF (ws preview)
 aims:
   - Hold a crayon or pencil and color inside a simple shape
   - Draw straight lines, then curved lines, from a start picture to an end picture
@@ -23,6 +28,7 @@ rules:
 sections:
   - code: A
     name: Coloring
+    public_name: Color It In
     pages: [1, 20]
     sheet_types: [colouring]
     source: ours
@@ -32,6 +38,7 @@ sections:
 
   - code: B
     name: Straight Lines
+    public_name: Straight Paths
     pages: [21, 50]
     sheet_types: [line_path]
     source: ours
@@ -42,6 +49,7 @@ sections:
 
   - code: C
     name: Curved Lines
+    public_name: Curvy Paths
     pages: [51, 100]
     sheet_types: [line_path]
     source: ours

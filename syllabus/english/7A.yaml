@@ -1,6 +1,11 @@
 subject: english
 level: 7A
 title: Repeating familiar words
+# Public (CLAUDE.md §15): the only names a buyer sees.
+public_name: Chicks
+public_title: First words
+slug: chicks
+preview_pages: [1, 5, 21, 22, 101, 102, 141, 142]   # free preview PDF (ws preview)
 aims:
   - Repeat familiar words and everyday expressions while looking at them
   - Introduce ~200 words, each seen at least 3 times
@@ -13,6 +18,7 @@ rules:
 sections:
   - code: A
     name: Familiar Words
+    public_name: Picture Words
     pages: [1, 100]
     sheet_types: [word_picture_pair, word_picture_sentence]
     rules:
@@ -30,6 +36,7 @@ sections:
 
   - code: B
     name: Familiar Words Review
+    public_name: Find It
     pages: [101, 140]
     sheet_types: [review_grid_4]
     rules:
@@ -39,6 +46,7 @@ sections:
 
   - code: C
     name: Word Stories
+    public_name: Tiny Stories
     pages: [141, 200]
     sheet_types: [word_story]
     rules:

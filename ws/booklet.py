@@ -17,9 +17,10 @@ from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 
 from .generate import OUT_DIR, load_manifest, sheet_dir
-from .models import SUBJECT_PREFIX, Issue, Level, Sheet
+from .models import Issue, Level, Sheet
+from .public import public_label, public_tag
 from .render import MIN_TIP_PX, THEMES, _CHECK_JS, _env
-from .syllabus import ROOT, load_level, sheet_id
+from .syllabus import ROOT, load_level
 from .verify import _ranges, banned_words, color_word_pages
 
 LETTER = (612, 792)
@@ -32,9 +33,8 @@ class BookletReport:
 
 
 def _level_tag(level: Level, variant: int) -> str:
-    prefix = SUBJECT_PREFIX[level.subject]
-    base = f"{prefix}-{level.level}" if prefix else level.level
-    return base + (f"-v{variant}" if variant > 1 else "")
+    """Public file-name stem (`chicks-reading`); buyers download these files, so no internal codes."""
+    return public_tag(level, variant)
 
 
 def _pace(level: Level) -> str:
@@ -122,6 +122,8 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
             elif tuple(round(float(v)) for v in pages[0].mediabox[2:]) != LETTER:
                 report.issues.append(Issue(sheet_id=s.id, severity="error",
                                            message=f"page size {pages[0].mediabox}, expected Letter"))
+            for w in banned_words(text):
+                report.issues.append(Issue(sheet_id=s.id, severity="error", message=f"banned word {w!r}"))
             sheet_pdf[s.id] = data
 
         def doc(template: str, name: str, booklet_id: str, **ctx) -> bytes:
@@ -143,14 +145,14 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
             log = doc("booklet/progress_log.html.j2", f"{booklet_id}-log", booklet_id)
             report.booklets.append(_write_booklet(
                 [cover, *(sheet_pdf[s.id] for s in group), log], level_dir / f"{booklet_id}.pdf",
-                f"{tag} pages {first}-{last}"))
+                f"paperlessons {public_label(level)} pages {first}-{last}"))
             answered = [s for s in group if s.answer_key]
             if answered:
                 rows = [{"id": s.id, "page": s.page_number, "answers": ", ".join(map(str, s.answer_key))}
                         for s in answered]
                 answers = doc("booklet/answers.html.j2", f"{booklet_id}-answers", booklet_id, rows=rows)
                 report.booklets.append(_write_booklet([answers], level_dir / f"{booklet_id}-answers.pdf",
-                                                      f"{tag} answers"))
+                                                      f"paperlessons {public_label(level)} answers"))
 
         all_info = []
         for code, group in sorted(by_section.items()):
@@ -160,11 +162,82 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
             if gaps:
                 report.issues.append(Issue(sheet_id=f"{tag}-{code}", severity="warning",
                                            message=f"section {code} booklet skips pages {gaps}"))
-            info = {"code": code, "name": section.name, "first": pages[0], "last": pages[-1]}
+            info = {"code": code, "name": section.public_name, "first": pages[0], "last": pages[-1]}
             all_info.append(info)
-            last_num = pages[-1] - section.pages[0] + 1
-            booklet_id = f"{sheet_id(level, section, pages[0], 1)}-{last_num:03d}" + (
+            # page numbers within the level, as printed in each sheet's page pill
+            booklet_id = f"{public_tag(level)}-pages-{pages[0]:03d}-{pages[-1]:03d}" + (
                 f"-v{variant}" if variant > 1 else "")
             booklet(group, booklet_id, [info])
         booklet(sheets, f"{tag}-level", all_info)
+    return report
+
+
+# --- free previews (CLAUDE.md §15) ---------------------------------------------------------
+
+def preview_dir() -> Path:
+    return OUT_DIR / "previews"   # looked up at call time, so tests can point OUT_DIR elsewhere
+
+
+def build_preview(subject: str, level_code: str) -> BookletReport:
+    """`out/previews/<slug>.pdf`: a preview cover, the level's `preview_pages`, and a closing page.
+
+    The pages must already be generated (variant 1); `ws preview` regenerates them first so they use
+    the current templates. Every page gets the booklet checks: one Letter page, layout, banned words
+    (which include internal level codes).
+    """
+    level = load_level(subject, level_code)
+    theme = THEMES[subject]
+    report = BookletReport()
+    if not level.preview_pages:
+        report.issues.append(Issue(sheet_id=level.slug, severity="error",
+                                   message=f"{subject} {level_code} has no preview_pages in its syllabus"))
+        return report
+    by_page = {s.page_number: s for s in load_manifest(subject, level_code) if s.variant == 1}
+    missing = [p for p in level.preview_pages if p not in by_page]
+    if missing:
+        report.issues.append(Issue(sheet_id=level.slug, severity="error",
+                                   message=f"preview pages not generated yet: {missing}"))
+        return report
+    sheets = [by_page[p] for p in sorted(level.preview_pages)]
+    work = preview_dir() / "_work" / level.slug
+
+    from .render import min_child_px
+
+    with _Printer() as printer:
+        parts: list[bytes] = []
+
+        def check(name: str, data: bytes, problems: list[str], text: str) -> None:
+            for p in problems:
+                report.issues.append(Issue(sheet_id=name, severity="error", message=f"layout: {p}"))
+            for w in banned_words(text):
+                report.issues.append(Issue(sheet_id=name, severity="error", message=f"banned word {w!r}"))
+            pages = _pages(data)
+            if len(pages) != 1:
+                report.issues.append(Issue(sheet_id=name, severity="error",
+                                           message=f"prints as {len(pages)} pages, must be 1"))
+
+        def doc(template: str, name: str, **ctx) -> bytes:
+            html = _write_doc(template, work / f"{name}.html", level=level, theme=theme, variant=1,
+                              doc_title=f"{public_label(level)} free preview", label=public_label(level), **ctx)
+            data, problems, text = printer.pdf(html)
+            check(name, data, problems, text)
+            return data
+
+        sections = []
+        for section in level.sections:
+            pages = [s.page_number for s in sheets if s.section == section.code]
+            if pages:
+                sections.append({"name": section.public_name, "pages": pages})
+        colors = color_word_pages(sheets)
+        parts.append(doc("booklet/preview_cover.html.j2", "cover", sections=sections, n_pages=len(sheets),
+                         color_pages=_ranges(colors) if colors else ""))
+        for s in sheets:
+            data, problems, text = printer.pdf(sheet_dir(s) / f"{s.id}.html", min_child_px(level_code))
+            check(s.id, data, problems, text)
+            parts.append(data)
+        parts.append(doc("booklet/preview_end.html.j2", "end", sections=sections))
+
+    if not any(i.severity == "error" for i in report.issues):
+        report.booklets.append(_write_booklet(parts, preview_dir() / f"{level.slug}.pdf",
+                                              f"paperlessons {public_label(level)} free preview"))
     return report

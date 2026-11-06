@@ -1,6 +1,11 @@
 subject: math
 level: 6A
 title: Counting
+# Public (CLAUDE.md §15): the only names a buyer sees.
+public_name: Ducklings
+public_title: Counting to 10
+slug: ducklings
+preview_pages: [1, 11, 31, 71, 101, 141, 151, 191]   # free preview PDF (ws preview)
 aims:
   - Count objects up to 10 while pointing and saying the numbers
   - Read the numerals 1 to 10
@@ -13,6 +18,7 @@ sct_minutes_per_page: null
 sections:
   - code: A
     name: Counting up to 5
+    public_name: Counting to 5
     pages: [1, 30]
     sheet_types: [count_and_say]
     source: ours
@@ -23,6 +29,7 @@ sections:
 
   - code: B
     name: Counting up to 10
+    public_name: Counting to 10
     pages: [31, 100]
     sheet_types: [count_and_say]
     source: ours
@@ -37,6 +44,7 @@ sections:
 
   - code: C
     name: Number Reading up to 10
+    public_name: Reading Numbers
     pages: [101, 150]
     # Pages alternate: read the numerals, then count and point to the right one.
     sheet_types: [number_read, count_and_point]
@@ -51,6 +59,7 @@ sections:
 
   - code: D
     name: Number of Dots up to 10
+    public_name: Dot Patterns
     pages: [151, 200]
     sheet_types: [dots_to_number]
     source: ours
