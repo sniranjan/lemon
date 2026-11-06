@@ -62,6 +62,17 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
 - `uv run pytest`: 242 passed (2026-11-06, with Kittens, Bunnies and Puppies Math).
+- **Cubs Reading (EN 2A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/2A.yaml`, with `standards:`:
+  A Picture Puzzles 1–60 (missing letters, then little crosswords) · B Kinds of Words 61–150 (naming / doing /
+  describing words: pick, sort, fill in) · C Read Aloud 151–200 (25 original passages of 43–60 words, each read on
+  two pages with different questions). New sheet types `word_puzzle`, `word_sort`, `read_aloud`; planner
+  `ws/reading.py` (`plan_reading`, picked up by rules `puzzle` / `word_kinds` / `passage_words`); hand-checked word
+  kinds, fill-in sentences and puzzle words in `content/grammar/english.yaml`; passages in
+  `content/passages/english.yaml`. Word batch 2A-1 (40 words: 16 naming, 12 doing, 12 describing; one new a page on
+  61–100; drafts `syllabus/drafts/2A-words-batch1.md`, `2A-passages.md`, approved under user delegation) and 28
+  pictures (`draw_2A_batch1.py`). Verify 0 errors, 0 warnings; every new word seen ≥ 3 times; booklets
+  `cubs-reading-level.pdf` (202 pages) + `-answers.pdf` and one pair per section. Preview pages 5, 45, 95, 155: the
+  Cubs free preview waits for Cubs Math (M2). Tests: `tests/test_english_2A.py`; the sentence scan covers Cubs text.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,

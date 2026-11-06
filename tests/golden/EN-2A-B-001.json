@@ -1,0 +1,87 @@
+{
+  "id": "EN-2A-B-001",
+  "subject": "english",
+  "level": "2A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "word_sort",
+  "page_number": 61,
+  "variant": 1,
+  "seed": 9184370382892744193,
+  "title": "Naming words",
+  "parent_tip": "Read the new word and its sentence together. Then read each row: which word names a thing, is something you do, or tells what it is like?",
+  "items": [
+    {
+      "kind": "new_word",
+      "word": "pencil",
+      "sentence": "I write my name with a pencil.",
+      "picture": "pencil"
+    },
+    {
+      "kind": "pick",
+      "words": [
+        "eat",
+        "build",
+        "family"
+      ],
+      "answer": "family",
+      "want": "naming",
+      "ask": "Circle the naming word."
+    },
+    {
+      "kind": "pick",
+      "words": [
+        "sit",
+        "mouse",
+        "climb"
+      ],
+      "answer": "mouse",
+      "want": "naming",
+      "ask": "Circle the naming word."
+    },
+    {
+      "kind": "pick",
+      "words": [
+        "pencil",
+        "hot",
+        "draw"
+      ],
+      "answer": "pencil",
+      "want": "naming",
+      "ask": "Circle the naming word."
+    },
+    {
+      "kind": "pick",
+      "words": [
+        "throw",
+        "clap",
+        "scarf"
+      ],
+      "answer": "scarf",
+      "want": "naming",
+      "ask": "Circle the naming word."
+    }
+  ],
+  "answer_key": [
+    "family",
+    "mouse",
+    "pencil",
+    "scarf"
+  ],
+  "new_words": [
+    "pencil"
+  ],
+  "review_words": [
+    "eat",
+    "build",
+    "family",
+    "sit",
+    "mouse",
+    "climb",
+    "hot",
+    "draw",
+    "throw",
+    "clap",
+    "scarf"
+  ]
+}

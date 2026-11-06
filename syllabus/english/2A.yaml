@@ -1,0 +1,79 @@
+subject: english
+level: 2A
+title: Word puzzles, kinds of words and reading aloud
+# Public level name: syllabus/ladder.yaml (Cubs, age 5, content grade 2). Section public_name is what buyers
+# see (CLAUDE.md §15). Preview: one Picture Puzzles page, one crossword, one Kinds of Words page, one passage.
+preview_pages: [5, 45, 95, 155]
+aims:
+  - Spell familiar words from picture clues, then in little crosswords
+  - Know naming words, doing words and describing words, and use the right kind in a sentence
+  - Read a short passage (40–60 words) aloud in about a minute, twice, and answer who/what/where/when/why/how questions
+  - "Add 40 new words (naming, doing and describing words), each seen at least 3 times"
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [1, 2]
+vocab_target: 40   # source: ours (one new word a page on Kinds of Words pages 61–100)
+rules:
+  min_exposures_per_word: 3
+sections:
+  # Picture Puzzles: earlier-level words from the hand-checked `puzzle_words` (content/grammar/english.yaml).
+  # First one missing letter, then more, then little two-word crosswords. Answers go in the answers PDF.
+  - code: A
+    name: Word Puzzle
+    public_name: Picture Puzzles
+    pages: [1, 60]
+    sheet_types: [word_puzzle]
+    standards: [RF.2.3, RF.2.3c, L.2.2d]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+    parts:
+      - { part: 1, pages: [1, 10],  name: The middle sound,   rules: { puzzle: missing, puzzle_items: 4, word_length: [3, 4], blanks: 1, blank_letters: vowels } }
+      - { part: 2, pages: [11, 20], name: One letter missing, rules: { puzzle: missing, puzzle_items: 4, word_length: [4, 5], blanks: 1, blank_letters: any } }
+      - { part: 3, pages: [21, 30], name: Two letters missing, rules: { puzzle: missing, puzzle_items: 4, word_length: [4, 6], blanks: 2, blank_letters: any } }
+      - { part: 4, pages: [31, 40], name: First letter only,  rules: { puzzle: missing, puzzle_items: 4, word_length: [3, 5], blanks: all_but_first } }
+      - { part: 5, pages: [41, 50], name: Little crosswords,  rules: { puzzle: crossword, puzzle_items: 2, word_length: [3, 4], given: [first, shared] } }
+      - { part: 6, pages: [51, 60], name: Crosswords,         rules: { puzzle: crossword, puzzle_items: 2, word_length: [3, 5], given: [shared] } }
+
+  # Kinds of Words: naming (nouns), doing (verbs) and describing (adjectives) words from the hand-checked
+  # `kinds` lists. Parts 1–4 bring one new word a page (shown on a word card with its sentence); parts 5–9
+  # bring no new words, so the 40 new words come back (≥ 3 sightings each, with the Read Aloud passages).
+  - code: B
+    name: Function of Words
+    public_name: Kinds of Words
+    pages: [61, 150]
+    sheet_types: [word_sort]
+    standards: [L.2.1, L.2.1e, L.2.1f, L.2.5a, L.1.1b, L.1.1f]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+    parts:
+      - { part: 1, pages: [61, 70],   name: Naming words,      rules: { new_words_per_sheet: 1, word_kinds: pick, target: naming, rows: 4 } }
+      - { part: 2, pages: [71, 80],   name: Doing words,       rules: { new_words_per_sheet: 1, word_kinds: pick, target: doing, rows: 4 } }
+      - { part: 3, pages: [81, 90],   name: Describing words,  rules: { new_words_per_sheet: 1, word_kinds: pick, target: describing, rows: 4 } }
+      - { part: 4, pages: [91, 100],  name: Sort the words,    rules: { new_words_per_sheet: 1, word_kinds: sort, sort_words: 6 } }
+      - { part: 5, pages: [101, 110], name: Sort more words,   rules: { word_kinds: sort, sort_words: 6 } }
+      - { part: 6, pages: [111, 120], name: Fill in a naming word,     rules: { word_kinds: fill, target: naming, fill_sentences: 4 } }
+      - { part: 7, pages: [121, 130], name: Fill in a doing word,      rules: { word_kinds: fill, target: doing, fill_sentences: 4 } }
+      - { part: 8, pages: [131, 140], name: Fill in a describing word, rules: { word_kinds: fill, target: describing, fill_sentences: 4 } }
+      - { part: 9, pages: [141, 150], name: Fill in any kind,          rules: { word_kinds: fill, target: mixed, fill_sentences: 4 } }
+
+  # Read Aloud: content/passages/english.yaml, in file order. Each passage is read on two pages in a row
+  # (different questions), so the child reads it twice (RF.2.4b). Passages grow from ~45 to ~60 words.
+  - code: C
+    name: Oral Reading
+    public_name: Read Aloud
+    pages: [151, 200]
+    sheet_types: [read_aloud]
+    standards: [RL.2.1, RF.2.4, RF.2.4a, RF.2.4b, RF.2.4c]
+    source: ours
+    rules:
+      new_words_per_sheet: 0
+      passage_reads: 2
+      choices: 3
+    parts:
+      - { part: 1, pages: [151, 160], rules: { passage_words: [40, 48], max_sentence_words: 10, questions_per_sheet: 2 } }
+      - { part: 2, pages: [161, 170], rules: { passage_words: [44, 52], max_sentence_words: 12, questions_per_sheet: 2 } }
+      - { part: 3, pages: [171, 180], rules: { passage_words: [48, 56], max_sentence_words: 13, questions_per_sheet: 3 } }
+      - { part: 4, pages: [181, 190], rules: { passage_words: [52, 60], max_sentence_words: 16, questions_per_sheet: 3 } }
+      - { part: 5, pages: [191, 200], rules: { passage_words: [52, 60], max_sentence_words: 16, questions_per_sheet: 3 } }

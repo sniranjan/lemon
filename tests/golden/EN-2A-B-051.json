@@ -1,0 +1,72 @@
+{
+  "id": "EN-2A-B-051",
+  "subject": "english",
+  "level": "2A",
+  "section": "B",
+  "part": 6,
+  "sheet_type": "word_sort",
+  "page_number": 111,
+  "variant": 1,
+  "seed": 1437271656931103480,
+  "title": "Fill in the blank",
+  "parent_tip": "Read the sentence with each choice. Which one sounds right? Praise every good try.",
+  "items": [
+    {
+      "kind": "fill",
+      "text": "The ___ has a very long neck.",
+      "answer": "giraffe",
+      "want": "naming",
+      "choices": [
+        "throw",
+        "giraffe"
+      ]
+    },
+    {
+      "kind": "fill",
+      "text": "I play tag with my ___.",
+      "answer": "friend",
+      "want": "naming",
+      "choices": [
+        "scrub",
+        "friend"
+      ]
+    },
+    {
+      "kind": "fill",
+      "text": "The ___ is round and orange.",
+      "answer": "pumpkin",
+      "want": "naming",
+      "choices": [
+        "pumpkin",
+        "clap"
+      ]
+    },
+    {
+      "kind": "fill",
+      "text": "The ___ hides in its shell.",
+      "answer": "turtle",
+      "want": "naming",
+      "choices": [
+        "turtle",
+        "sweep"
+      ]
+    }
+  ],
+  "answer_key": [
+    "giraffe",
+    "friend",
+    "pumpkin",
+    "turtle"
+  ],
+  "new_words": [],
+  "review_words": [
+    "throw",
+    "giraffe",
+    "scrub",
+    "friend",
+    "pumpkin",
+    "clap",
+    "turtle",
+    "sweep"
+  ]
+}

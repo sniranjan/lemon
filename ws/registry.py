@@ -19,6 +19,7 @@ CATALOGUE: frozenset[str] = frozenset({
     "count_and_say", "count_and_point", "number_read", "dots_to_number",
     "number_sequence", "number_trace", "number_write", "next_number", "add_facts",
     "fact_drill",
+    "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
 })
 
 

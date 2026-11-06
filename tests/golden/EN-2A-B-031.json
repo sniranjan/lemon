@@ -1,0 +1,66 @@
+{
+  "id": "EN-2A-B-031",
+  "subject": "english",
+  "level": "2A",
+  "section": "B",
+  "part": 4,
+  "sheet_type": "word_sort",
+  "page_number": 91,
+  "variant": 1,
+  "seed": 8647470099210279160,
+  "title": "Sort the words",
+  "parent_tip": "Try each word in a little sentence: \"I see a ...\" for naming words, \"I can ...\" for doing words. Praise every good try.",
+  "items": [
+    {
+      "kind": "new_word",
+      "word": "tulip",
+      "sentence": "A red tulip grows in the garden.",
+      "picture": "tulip"
+    },
+    {
+      "kind": "sort",
+      "word": "sniff",
+      "answer": "doing"
+    },
+    {
+      "kind": "sort",
+      "word": "sleepy",
+      "answer": "describing"
+    },
+    {
+      "kind": "sort",
+      "word": "giggle",
+      "answer": "doing"
+    },
+    {
+      "kind": "sort",
+      "word": "tulip",
+      "answer": "naming"
+    },
+    {
+      "kind": "sort",
+      "word": "tractor",
+      "answer": "naming"
+    },
+    {
+      "kind": "sort",
+      "word": "hungry",
+      "answer": "describing"
+    }
+  ],
+  "answer_key": [
+    "naming: tulip & tractor",
+    "doing: sniff & giggle",
+    "describing: sleepy & hungry"
+  ],
+  "new_words": [
+    "tulip"
+  ],
+  "review_words": [
+    "sniff",
+    "sleepy",
+    "giggle",
+    "tractor",
+    "hungry"
+  ]
+}

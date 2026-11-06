@@ -2,7 +2,7 @@
 
 The hand-checked lists live in content/phrases/english.yaml (`eatable`, `ownable`, `the_only`, ...).
 The scan at the bottom reads every sentence and phrase the Chicks and Ducklings Reading plans can
-print (story sentences, card sentences, planned phrases) and checks it against rules written here,
+print, and every Cubs Reading card sentence, fill-in sentence and passage sentence (story sentences, card sentences, planned phrases) and checks it against rules written here,
 independently of the generator's own filters.
 """
 
@@ -11,7 +11,8 @@ import re
 import pytest
 
 from ws import generate as gen
-from ws.content import phrases, stories, vocab, vocab_by_word
+from ws.content import grammar, passages, phrases, stories, vocab, vocab_by_word
+from ws.reading import sentences
 from ws.phrases import fillings, ownable, render, word_list
 from ws.sheet_types.word_story import frame_options, story_sentences
 from ws.syllabus import load_level
@@ -27,6 +28,7 @@ KNOWN_BAD = {
     "I can cook.", "I can wash.", "I wash my foot.", "I see a sun.", "This is a sun.", "a yellow sun",
     "I like my yellow key.", "my broom", "my hose", "I eat green grapes.",
     "Look at the sun.",
+    "There is a candle on my cake.", "I eat my soup with a spoon.", "First she draws a sun.",   # Cubs drafts
 }
 
 
@@ -112,6 +114,11 @@ def all_texts() -> list[tuple[str, str]]:
     plan = gen.build_plan(EN6A)
     for page, p in plan.pages.items():
         out += [(f"6A p{page}", ph["text"]) for ph in p.extra.get("phrases", [])]
+    # Cubs Reading: word-card sentences, fill-in sentences with their answer, every passage sentence
+    out += [(f"card:{e.word}", s) for e in bank if e.level == "2A" for s in e.sentences]
+    out += [(f"2A fill:{f['answer']}", f["text"].replace("___", f["answer"]))
+            for group in grammar()["fill"].values() for f in group]
+    out += [(f"2A passage:{p['id']}", s) for p in passages()["passages"] for s in sentences(" ".join(p["text"].split()))]
     return out
 
 

@@ -1,0 +1,34 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.read { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+.read .story { flex: none; padding: 10px 26px 12px; }
+.read .story .top { display: flex; align-items: center; gap: 18px; margin-bottom: 4px; }
+.read .story img { width: 76px; height: 76px; flex: none; }
+.read .story h2 { font-size: 34px; margin: 0; line-height: 1.15; }
+.read .story p { font-size: 25px; line-height: 1.38; margin: 0; }
+/* for grown-ups: word count and the reading time */
+.timer { flex: none; display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: var(--ink);
+         border: 2px solid var(--accent); border-radius: 14px; padding: 6px 18px; }
+.timer b { color: var(--accent); }
+.timer i { display: inline-block; width: 80px; border-bottom: 1.5px solid #9a9aa0; height: 1em; }
+.qs { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 10px; }
+.qs .card { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 2px 26px; }
+.qs .q { font-size: 25px; font-weight: 700; line-height: 1.2; }
+.qs .choices { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.qs .choices span { font-size: 22px; border: 3px dashed var(--accent); border-radius: 999px; padding: 0 14px; }
+{% endblock %}
+{% block body %}
+{% set p = sheet.items[0] %}
+    <div class="read">
+      <div class="card story">
+        <div class="top"><img src="{{ root }}/assets/pictures/{{ p.picture }}.svg" alt=""><h2>{{ p.title }}</h2></div>
+        <p>{{ p.text }}</p>
+      </div>
+      <div class="timer" data-audience="parent"><span><b>For grown-ups:</b> {{ p.words }} words · reading {{ p.read }} of {{ p.reads }}</span><span>Time: <i></i> seconds</span><span>Aim: about 1 minute</span></div>
+      <div class="qs">
+{% for q in sheet.items if q.kind == "question" %}
+        <div class="card"><div class="q">{{ loop.index }}. {{ q.q }}</div><div class="choices">{% for c in q.choices %}<span>{{ c }}</span>{% endfor %}</div></div>
+{% endfor %}
+      </div>
+    </div>
+{% endblock %}

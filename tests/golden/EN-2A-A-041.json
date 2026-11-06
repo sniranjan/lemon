@@ -1,0 +1,134 @@
+{
+  "id": "EN-2A-A-041",
+  "subject": "english",
+  "level": "2A",
+  "section": "A",
+  "part": 5,
+  "sheet_type": "word_puzzle",
+  "page_number": 41,
+  "variant": 1,
+  "seed": 4355324989777194700,
+  "title": "Picture crosswords",
+  "parent_tip": "Say the picture's word together and stretch out its sounds. Your child writes the letters that are missing.",
+  "items": [
+    {
+      "kind": "crossword",
+      "words": [
+        "fox",
+        "fish"
+      ],
+      "pictures": [
+        "fox",
+        "fish"
+      ],
+      "across_row": 0,
+      "down_col": 0,
+      "grid": [
+        [
+          {
+            "ch": "f",
+            "given": true
+          },
+          {
+            "ch": "o",
+            "given": false
+          },
+          {
+            "ch": "x",
+            "given": false
+          }
+        ],
+        [
+          {
+            "ch": "i",
+            "given": false
+          },
+          null,
+          null
+        ],
+        [
+          {
+            "ch": "s",
+            "given": false
+          },
+          null,
+          null
+        ],
+        [
+          {
+            "ch": "h",
+            "given": false
+          },
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "kind": "crossword",
+      "words": [
+        "dog",
+        "drum"
+      ],
+      "pictures": [
+        "dog",
+        "drum"
+      ],
+      "across_row": 0,
+      "down_col": 0,
+      "grid": [
+        [
+          {
+            "ch": "d",
+            "given": true
+          },
+          {
+            "ch": "o",
+            "given": false
+          },
+          {
+            "ch": "g",
+            "given": false
+          }
+        ],
+        [
+          {
+            "ch": "r",
+            "given": false
+          },
+          null,
+          null
+        ],
+        [
+          {
+            "ch": "u",
+            "given": false
+          },
+          null,
+          null
+        ],
+        [
+          {
+            "ch": "m",
+            "given": false
+          },
+          null,
+          null
+        ]
+      ]
+    }
+  ],
+  "answer_key": [
+    "fox",
+    "fish",
+    "dog",
+    "drum"
+  ],
+  "new_words": [],
+  "review_words": [
+    "fox",
+    "fish",
+    "dog",
+    "drum"
+  ]
+}
