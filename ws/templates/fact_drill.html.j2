@@ -1,0 +1,96 @@
+{% extends "base.html.j2" %}
+{% set layout = sheet.items[0].layout %}
+{% macro sign(op) %}{% if op == "-" %}&minus;{% else %}+{% endif %}{% endmacro %}
+{% macro slot(f, part) %}{% if f.blank == part %}<span class="ans"></span>{% else %}<span class="num">{{ f[part] }}</span>{% endif %}{% endmacro %}
+{% macro line(f) %}<div class="eqn">{{ slot(f, "a") }}<span class="op">{{ sign(f.op) }}</span>{{ slot(f, "b") }}<span class="op">=</span>{{ slot(f, "c") }}</div>{% endmacro %}
+{% block style %}
+.facts { flex: 1; min-height: 0; display: grid; gap: 14px 22px; }
+.facts .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eqn { display: flex; align-items: center; gap: 14px; font-size: 48px; font-weight: 700; line-height: 1; }
+.num { min-width: 0.6em; text-align: center; }
+.op { color: var(--accent); }
+.ans { display: inline-block; width: 84px; height: 66px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+
+.horizontal { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, 1fr); grid-auto-flow: column; }
+
+.vertical { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); grid-auto-flow: column; gap: 20px 18px; }
+.col { display: grid; grid-template-columns: auto auto; justify-items: end; align-items: center; column-gap: 10px; row-gap: 6px; font-size: 48px; font-weight: 700; line-height: 1; }
+.col .rule { grid-column: 1 / 3; justify-self: stretch; border-top: 4px solid var(--ink); margin-top: 4px; }
+.col .ans { width: 92px; height: 66px; }
+
+.bridge { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, 1fr); gap: 12px 22px; }
+.bridge .wide { grid-column: 1 / 3; justify-content: space-between; padding: 0 40px 0 48px; }
+.bridge .eqn { font-size: 44px; }
+.track { position: relative; display: flex; gap: 10px; padding-top: 24px; }
+.cell { width: 60px; height: 54px; border: 3px solid var(--ink); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 700; }
+.cell.start { background: var(--tint); border-color: var(--accent); border-width: 4px; }
+.cell.empty { border-style: dashed; }
+.hop { position: absolute; top: 4px; height: 22px; width: 70px; border: 3px solid var(--accent); border-bottom: none; border-radius: 35px 35px 0 0; }
+
+.families { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); gap: 20px; }
+.families .card { justify-content: space-between; padding: 0 22px 0 26px; }
+.house { display: flex; flex-direction: column; align-items: center; width: 132px; }
+.roof { display: block; }
+.rooms { display: grid; grid-template-columns: 1fr 1fr; width: 124px; border: 3px solid var(--ink); border-top: none; border-radius: 0 0 12px 12px; background: var(--tint); }
+.rooms div { font-size: 34px; font-weight: 700; text-align: center; padding: 8px 0; line-height: 1; }
+.rooms div + div { border-left: 3px solid var(--ink); }
+.roof-num { font-size: 32px; font-weight: 700; margin-top: -46px; height: 42px; line-height: 44px; }
+.fam-facts { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; grid-auto-flow: column; gap: 22px 26px; }
+.fam-facts .eqn { font-size: 36px; gap: 8px; position: relative; padding-left: 18px; }
+.fam-facts .eqn .ans { width: 62px; height: 52px; }
+.fam-facts .qn { top: -4px; left: 0; }
+{% endblock %}
+{% block body %}
+{% if layout == "families" %}
+    <div class="facts families">
+{% for fam in sheet.items %}
+      <div class="card">
+        <div class="house">
+          <svg class="roof" width="132" height="68" viewBox="0 0 132 68"><polygon points="66,3 129,66 3,66" fill="var(--tint)" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/></svg>
+          <div class="roof-num">{{ fam.numbers[2] }}</div>
+          <div class="rooms"><div>{{ fam.numbers[0] }}</div><div>{{ fam.numbers[1] }}</div></div>
+        </div>
+        <div class="fam-facts">
+{% for f in fam.facts %}
+          <div class="eqn"><span class="qn" data-audience="parent">{{ f.n }}</span>{{ slot(f, "a") }}<span class="op">{{ sign(f.op) }}</span>{{ slot(f, "b") }}<span class="op">=</span>{{ slot(f, "c") }}</div>
+{% endfor %}
+        </div>
+      </div>
+{% endfor %}
+    </div>
+{% elif layout == "vertical" %}
+    <div class="facts vertical">
+{% for f in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ f.n }}</span>
+        <div class="col"><span></span>{{ slot(f, "a") }}<span class="op">{{ sign(f.op) }}</span>{{ slot(f, "b") }}<span class="rule"></span><span></span>{{ slot(f, "c") }}</div>
+      </div>
+{% endfor %}
+    </div>
+{% elif layout == "bridge" %}
+    <div class="facts bridge">
+{% for f in sheet.items %}
+{% if f.track is defined %}
+      <div class="card wide"><span class="qn" data-audience="parent">{{ f.n }}</span>
+        <div class="track">
+{% for t in f.track %}
+{% if not loop.last %}<span class="hop" style="left: {{ loop.index0 * 70 + 30 }}px"></span>{% endif %}
+          <div class="cell{% if t == f.a %} start{% elif t == f.c %} empty{% endif %}">{% if t != f.c %}{{ t }}{% endif %}</div>
+{% endfor %}
+        </div>
+        {{ line(f) }}
+      </div>
+{% else %}
+{% set k = loop.index0 - 4 %}
+      <div class="card" style="grid-column: {{ 1 + k // 3 }}; grid-row: {{ 5 + k % 3 }}"><span class="qn" data-audience="parent">{{ f.n }}</span>{{ line(f) }}</div>
+{% endif %}
+{% endfor %}
+    </div>
+{% else %}
+    <div class="facts horizontal">
+{% for f in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ f.n }}</span>{{ line(f) }}</div>
+{% endfor %}
+    </div>
+{% endif %}
+{% endblock %}

@@ -6,9 +6,30 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 - **Milestones 1–3** (CLAUDE.md §13): package, models, syllabus YAML for EN 7A, MA 6A and pencil ZI;
   all 10 sheet types with templates; `ws verify` (content, plan and layout checks, contact sheets);
   PDF booklets with cover, progress log and answer keys.
+- **Math 4A (Bunnies Math)** (2026-11-06): `syllabus/math/4A.yaml`, 200 pages, A Tracing Numbers to 10 1–40 ·
+  B Writing Numbers to 10 41–100 · C Writing Numbers to 20 101–120 · D Writing Numbers to 30 121–140 ·
+  E Writing Numbers to 50 141–200, with `standards:`. New sheet types `number_trace` and `number_write`
+  (`copy` / `fill`); child text ≥ 28px enforced for this strand (`min_child_px("4A", "math")`). All 200 pages
+  verify with 0 errors; booklets `bunnies-math-level.pdf` (202 pages) + `-answers.pdf` (pages 41–200).
 - **Math 5A (Ducklings math)**: `syllabus/math/5A.yaml`, 200 pages, sections A–E with `standards:`.
   `number_read` gained `show: ten_frames | rods` (11–30 as ten-frames, 51–100 as tens bars);
   new `number_sequence` (tracks with gaps to say aloud). All 200 pages verify with 0 errors.
+- **Math 3A (Kittens math, 200 pages)** (2026-11-06): `syllabus/math/3A.yaml`, sections A What Comes Next to 100
+  (1–60) · B What Comes Next to 120 (61–70) · C Plus One (71–130) · D Plus Two (131–160) · E Plus Three
+  (161–180) · F Plus One, Two or Three (181–200), with `standards:` and per-section SCT. New sheet types
+  `next_number` and `add_facts` (general: `op`, `addend`/`second`, `min_first`/`max_first`, `new_from`,
+  `rows`, `bridge`; C shows "n → box" above "n + 1 = box"). `max_first` follows CLAUDE.md §5 (sums up to the
+  chart's number: "up to 14+2" = `max_first: 12`). All 200 pages verify with 0 errors; booklets per
+  section + `kittens-math-level.pdf` (202 pages) and `-answers.pdf` files. The Kittens free preview waits
+  for Kittens Reading.
+- **Puppies Math (M1, our own level, 200 pages)** (2026-11-06): `syllabus/math/M1.yaml`, adding and taking-away
+  facts within 20 (1.OA.4–8, 2.OA.2): A Adding Warm-Up 1–10 · B Adding 4 and 5 11–40 · C Adding 6 and 7 41–70 ·
+  D Adding 8, 9 and 10 71–100 · E Adding Mix 101–110 · F Taking Away 1, 2, 3 111–130 · G Taking Away 4, 5, 6 131–150 ·
+  H Taking Away 7 to 10 151–170 · I Add or Take Away 171–180 · J Missing Numbers and Families 181–200.
+  New sheet type `fact_drill` (layouts horizontal / vertical / bridge number tracks / fact-family houses), tests in
+  `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
+  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
+  Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -37,10 +58,9 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
-- `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
-  the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 238 passed (2026-11-06, with Kittens Reading).
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
+- `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
+- `uv run pytest`: see the latest merge commit.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -55,6 +75,26 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
 
+- **Cubs Math (math M2, our own level)** (2026-11-06): `syllabus/math/M2.yaml`, 200 pages, sections A–H
+  (Tens and Ones 1–20 · Hundreds, Tens and Ones 21–50 · Counting by 5s, 10s and 100s 51–70 · Adding Ones 71–90 ·
+  Adding Two-Digit Numbers 91–130 · Taking Away Two-Digit Numbers 131–170 · Big Number Adding and Taking Away
+  171–190 · Story Problems 191–200), standards 1.NBT.2 (on-ramp), 2.NBT.1–7, 2.OA.1. New sheet types
+  `place_value`, `skip_count`, `column_arithmetic`, `math_story` (frames in `content/math/stories.yaml`).
+  All 200 pages verify with 0 errors; booklets: one per section plus `cubs-math-level.pdf` (202 pages) and
+  answers PDFs (`cubs-math-level-answers.pdf`, 10 pages). `ws preview` for Cubs needs Cubs Reading first.
+- **Bunnies Reading (EN 5A)** (2026-11-06): `syllabus/english/5A.yaml`: A Letter Trails 1–70 (letters in
+  stroke order: l i t · c o a d g · r n m h b p · u y v w x k z · e s f j q, 2 pages each + group reviews),
+  B Sound Pieces 71–150 (short a/e/i/o/u, rhyming families, then one new word a page), C Letter Pairs
+  151–160 (capital + small, a–z, then b/d/p), D Word Trails 161–200. New sheet types `letter_trace`,
+  `sound_parts`, `word_trace`; dotted letters come from our own single-stroke trace font (`ws/trace_font.py`);
+  planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
+  Word batch 5A-1 (23 words: queen, quilt, zipper + 20 short-vowel words; approved 2026-11-06 by the
+  orchestrator under the user's delegation; `draw_5A_batch1.py`, which also redraws **hat** as a straw sun hat
+  so it no longer looks like a cap): **Bunnies Reading is complete, 200/200 pages**, verify 0 errors and 0 warnings,
+  every new word seen at least 3 times. Optional words in the draft (igloo, otter, ox, vest, vase, yarn) are not approved.
+  `ws generate` now skips pages that still wait for words (with a note) for `--pages` and `--count` too.
+  Booklets: one per section plus `bunnies-reading-level.pdf` (202 pages = cover + 200 + log).
+  The hat redraw changes how Chicks and Ducklings pages with "hat" look: rebuild their booklets and the live previews when convenient.
 - **Kittens Reading (EN 4A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/4A.yaml`: A Letter Teams
   1–100 (ten 10-page units: double letters, sh, ch/tch, th/wh, ck, l-, r-, s-blends, teams at the end, word
   families; each unit = 3 parts: familiar words 1–3, one new word a page 4–8, write the team 9–10), B Rhyme Time

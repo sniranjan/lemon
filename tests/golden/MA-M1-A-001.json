@@ -1,0 +1,151 @@
+{
+  "id": "MA-M1-A-001",
+  "subject": "math",
+  "level": "M1",
+  "section": "A",
+  "part": null,
+  "sheet_type": "fact_drill",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 11331954547843539641,
+  "title": "Add",
+  "parent_tip": "Read each fact out loud together. If your child gets stuck, count on from the first number.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 3,
+      "op": "+",
+      "b": 3,
+      "c": 6,
+      "blank": "c",
+      "track": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layout": "bridge",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 16,
+      "op": "+",
+      "b": 3,
+      "c": 19,
+      "blank": "c",
+      "track": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "layout": "bridge",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 5,
+      "op": "+",
+      "b": 2,
+      "c": 7,
+      "blank": "c",
+      "track": [
+        5,
+        6,
+        7
+      ],
+      "layout": "bridge",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "+",
+      "b": 2,
+      "c": 8,
+      "blank": "c",
+      "track": [
+        6,
+        7,
+        8
+      ],
+      "layout": "bridge",
+      "n": 4
+    },
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "+",
+      "b": 2,
+      "c": 6,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 5
+    },
+    {
+      "kind": "fact",
+      "a": 13,
+      "op": "+",
+      "b": 2,
+      "c": 15,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 6
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "+",
+      "b": 3,
+      "c": 13,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 7
+    },
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "+",
+      "b": 3,
+      "c": 5,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 8
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "+",
+      "b": 3,
+      "c": 10,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 9
+    },
+    {
+      "kind": "fact",
+      "a": 6,
+      "op": "+",
+      "b": 1,
+      "c": 7,
+      "blank": "c",
+      "layout": "bridge",
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    6,
+    19,
+    7,
+    8,
+    6,
+    15,
+    13,
+    5,
+    10,
+    7
+  ],
+  "new_words": [],
+  "review_words": []
+}

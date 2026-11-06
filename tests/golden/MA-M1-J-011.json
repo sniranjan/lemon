@@ -1,0 +1,172 @@
+{
+  "id": "MA-M1-J-011",
+  "subject": "math",
+  "level": "M1",
+  "section": "J",
+  "part": 2,
+  "sheet_type": "fact_drill",
+  "page_number": 191,
+  "variant": 1,
+  "seed": 17531269909644673336,
+  "title": "Number families",
+  "parent_tip": "Each family has three numbers. The two small ones add to the big one, and you can take them back.",
+  "items": [
+    {
+      "kind": "family",
+      "numbers": [
+        1,
+        10,
+        11
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 1,
+          "op": "+",
+          "b": 10,
+          "c": 11,
+          "blank": "c",
+          "n": 1
+        },
+        {
+          "kind": "fact",
+          "a": 10,
+          "op": "+",
+          "b": 1,
+          "c": 11,
+          "blank": "c",
+          "n": 2
+        },
+        {
+          "kind": "fact",
+          "a": 11,
+          "op": "-",
+          "b": 10,
+          "c": 1,
+          "blank": "c",
+          "n": 3
+        },
+        {
+          "kind": "fact",
+          "a": 11,
+          "op": "-",
+          "b": 1,
+          "c": 10,
+          "blank": "c",
+          "n": 4
+        }
+      ],
+      "layout": "families"
+    },
+    {
+      "kind": "family",
+      "numbers": [
+        3,
+        9,
+        12
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 3,
+          "op": "+",
+          "b": 9,
+          "c": 12,
+          "blank": "c",
+          "n": 5
+        },
+        {
+          "kind": "fact",
+          "a": 9,
+          "op": "+",
+          "b": 3,
+          "c": 12,
+          "blank": "c",
+          "n": 6
+        },
+        {
+          "kind": "fact",
+          "a": 12,
+          "op": "-",
+          "b": 9,
+          "c": 3,
+          "blank": "c",
+          "n": 7
+        },
+        {
+          "kind": "fact",
+          "a": 12,
+          "op": "-",
+          "b": 3,
+          "c": 9,
+          "blank": "c",
+          "n": 8
+        }
+      ],
+      "layout": "families"
+    },
+    {
+      "kind": "family",
+      "numbers": [
+        7,
+        3,
+        10
+      ],
+      "facts": [
+        {
+          "kind": "fact",
+          "a": 7,
+          "op": "+",
+          "b": 3,
+          "c": 10,
+          "blank": "c",
+          "n": 9
+        },
+        {
+          "kind": "fact",
+          "a": 3,
+          "op": "+",
+          "b": 7,
+          "c": 10,
+          "blank": "c",
+          "n": 10
+        },
+        {
+          "kind": "fact",
+          "a": 10,
+          "op": "-",
+          "b": 3,
+          "c": 7,
+          "blank": "c",
+          "n": 11
+        },
+        {
+          "kind": "fact",
+          "a": 10,
+          "op": "-",
+          "b": 7,
+          "c": 3,
+          "blank": "c",
+          "n": 12
+        }
+      ],
+      "layout": "families"
+    }
+  ],
+  "answer_key": [
+    11,
+    11,
+    1,
+    10,
+    12,
+    12,
+    3,
+    9,
+    10,
+    10,
+    7,
+    3
+  ],
+  "new_words": [],
+  "review_words": []
+}

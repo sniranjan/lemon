@@ -1,0 +1,110 @@
+subject: math
+level: 3A
+title: Adding 1 to 3
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [1, 71, 141, 181]   # this strand's pages in the level's free preview (ws preview)
+aims:
+  - Write the number that comes next, up to 120
+  - See that adding 1 means "the next number"
+  - Add 1, 2 and 3 by counting on
+pages: 200
+daily_pages: 5
+# Pages 1–60 are 0.5–2 minutes, from page 61 on 1–2 minutes (each section carries its own).
+sct_minutes_per_page: [1, 2]
+# Part ranges in A, B and F are our own (source: ours). In C–E `max_first` is the largest first
+# number, so "up to 18+1" (sums up to 18) is `max_first: 17`, as in CLAUDE.md §5 and §8.
+sections:
+  # next_number: `min`–`max` is the part's number limit; `max` is the largest answer, so the
+  # largest number shown is max − 1. `new_from`: about half the answers reach the part's new numbers.
+  # `order: run` puts each column in counting order (an easier start); `mixed` shuffles them.
+  - code: A
+    name: Numbers up to 100
+    public_name: What Comes Next to 100
+    pages: [1, 60]
+    sheet_types: [next_number]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.2, K.CC.4c, 1.NBT.1]
+    source: ours
+    parts:
+      - { part: 1, pages: [1, 10],  rules: { min: 1,  max: 30,  order: run } }
+      - { part: 2, pages: [11, 20], rules: { min: 1,  max: 50,  new_from: 31, order: mixed } }
+      - { part: 3, pages: [21, 30], rules: { min: 21, max: 60,  new_from: 51, order: run } }
+      - { part: 4, pages: [31, 40], rules: { min: 31, max: 70,  new_from: 61, order: mixed } }
+      - { part: 5, pages: [41, 50], rules: { min: 41, max: 85,  new_from: 71, order: mixed } }
+      - { part: 6, pages: [51, 60], rules: { min: 51, max: 100, new_from: 86, order: mixed } }
+
+  - code: B
+    name: Numbers up to 120
+    public_name: What Comes Next to 120
+    pages: [61, 70]
+    sheet_types: [next_number]
+    sct_minutes_per_page: [1, 2]
+    standards: [K.CC.2, 1.NBT.1]
+    source: ours
+    parts:
+      - { part: 1, pages: [61, 70], rules: { min: 71, max: 120, new_from: 101, order: mixed } }
+
+  # add_facts: `op` (default +), `addend` (one number or a list), first numbers from `min_first`
+  # to `max_first`, `new_from`: about half the facts start at or above it (the part's new numbers).
+  # `bridge` (even): how many facts also show "n → box" above "n + 1 = box" (+1 only); each takes two
+  # of the `rows` per column (default 5; C uses 6 so the bridged pairs have room).
+  - code: C
+    name: Adding 1
+    public_name: Plus One
+    pages: [71, 130]
+    sheet_types: [add_facts]
+    sct_minutes_per_page: [1, 2]
+    standards: [1.OA.5, 1.OA.6, 1.NBT.4]
+    rules:
+      addend: 1
+      rows: 6
+      tips:
+        add_facts:
+          - "Plus one is the next number. Say the top number, then the next one, and write it in both boxes."
+          - "Read each pair together: 7, what comes next? 8. So 7 plus 1 is 8. Let your child write it."
+          - "Point to the number and count one more. The top box and the bottom box get the same answer."
+    parts:
+      - { part: 1, pages: [71, 80],   rules: { max_first: 11, bridge: 6 } }                        # up to 12+1
+      - { part: 2, pages: [81, 90],   rules: { max_first: 17, new_from: 12, bridge: 6 } }          # up to 18+1
+      - { part: 3, pages: [91, 100],  rules: { max_first: 23, new_from: 18, bridge: 4 } }          # up to 24+1
+      - { part: 4, pages: [101, 110], rules: { max_first: 29, new_from: 24, bridge: 4 } }          # up to 30+1
+      - { part: 5, pages: [111, 120], rules: { max_first: 59, new_from: 30, bridge: 2 } }          # up to 60+1
+      - { part: 6, pages: [121, 130], rules: { min_first: 10, max_first: 999, new_from: 100, bridge: 4 } }   # up to 1000+1
+
+  - code: D
+    name: Adding 2
+    public_name: Plus Two
+    pages: [131, 160]
+    sheet_types: [add_facts]
+    sct_minutes_per_page: [1, 2]
+    standards: [1.OA.5, 1.OA.6, 1.NBT.4]
+    rules: { addend: 2 }
+    parts:
+      - { part: 1, pages: [131, 140], rules: { max_first: 12 } }                 # up to 14+2
+      - { part: 2, pages: [141, 150], rules: { max_first: 16, new_from: 13 } }   # up to 18+2
+      - { part: 3, pages: [151, 160], rules: { max_first: 30, new_from: 17 } }   # up to 32+2
+
+  - code: E
+    name: Adding 3
+    public_name: Plus Three
+    pages: [161, 180]
+    sheet_types: [add_facts]
+    sct_minutes_per_page: [1, 2]
+    standards: [1.OA.5, 1.OA.6]
+    rules: { addend: 3 }
+    parts:
+      - { part: 1, pages: [161, 170], rules: { max_first: 11 } }                 # up to 14+3
+      - { part: 2, pages: [171, 180], rules: { max_first: 18, new_from: 12 } }   # up to 21+3
+
+  - code: F
+    name: Adding up to 3
+    public_name: Plus One, Two or Three
+    pages: [181, 200]
+    sheet_types: [add_facts]
+    sct_minutes_per_page: [1, 2]
+    standards: [1.OA.5, 1.OA.6]
+    source: ours
+    rules: { addend: [1, 2, 3] }
+    parts:
+      - { part: 1, pages: [181, 190], rules: { max_first: 12 } }
+      - { part: 2, pages: [191, 200], rules: { max_first: 17, new_from: 10 } }

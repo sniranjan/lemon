@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import arrow with context %}
+{% block style %}
+.cols { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.col { min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.col .card { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px 16px; }
+.col .card.bridge { flex: 2; }
+/* one grid per fact: number, sign, number, =, box; a bridged fact puts "n → box" in a row above,
+   so the two n's and the two boxes line up */
+.fact { display: grid; grid-template-columns: minmax(76px, auto) 26px auto 26px 112px; align-items: center; column-gap: 8px; row-gap: 18px;
+        font-size: 42px; font-weight: 700; line-height: 1; white-space: nowrap; }
+.fact .a { text-align: right; }
+.fact .sym { text-align: center; }
+.fact .arrow-wrap { grid-column: 2 / 5; display: flex; justify-content: center; }
+.answer { width: 112px; height: 72px; border: 3px dashed var(--accent); border-radius: 14px; background: #fff; }
+{% endblock %}
+{# A bridged fact shows "n → box" above "n + 1 = box": adding 1 is the next number. #}
+{% block body %}
+{% set per = (sheet.items | length) // 2 %}
+    <div class="cols">
+{% for col in [sheet.items[:per], sheet.items[per:]] %}
+      <div class="col">
+{% for item in col %}
+        <div class="card{% if item.bridge %} bridge{% endif %}"><div class="fact">{% if item.bridge %}<span class="a">{{ item.a }}</span><span class="arrow-wrap">{{ arrow() }}</span><div class="answer"></div>{% endif %}<span class="a">{{ item.a }}</span><span class="sym">{{ item.op }}</span><span>{{ item.b }}</span><span class="sym">=</span><div class="answer"></div></div></div>
+{% endfor %}
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

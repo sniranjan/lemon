@@ -1,0 +1,42 @@
+{% extends "base.html.j2" %}
+{% from "_numerals.html.j2" import dot_defs, dotted %}
+{# copy: one box per number, as wide as the run allows (150px for 3–4 numbers, 120px for 5);
+   fill: two rows of five 118×86px boxes. #}
+{% block style %}
+{% set copy = sheet.items[0].kind == "copy" %}
+{% set run = sheet.items[0].numbers | length if copy else 5 %}
+.defs { position: absolute; }
+.blocks { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.blocks .card { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: {{ 10 if copy else 8 }}px; padding: 8px 12px; }
+.row { display: flex; gap: 14px; }
+.cell { width: {{ ([150, (660 - 14 * (run - 1)) // run] | min) if copy else 118 }}px; height: {{ 92 if copy else 86 }}px; flex: none;
+        display: flex; align-items: center; justify-content: center; }
+.dotted { display: block; }
+.dotted text { font-family: "Andika"; font-weight: 400; fill: url(#trace-dots); }
+.write { border: 3px solid #8a8a90; border-radius: 14px; background: #fff; }
+.shown { border: 3px solid var(--ink); border-radius: 14px; font-size: 52px; font-weight: 700; line-height: 1; }
+.shown.first { background: var(--tint); border-color: var(--accent); }
+.gap { border: 3px dashed var(--accent); border-radius: 14px; background: #fff; }
+{% endblock %}
+{% block body %}
+{% set copy = sheet.items[0].kind == "copy" %}
+{% set run = sheet.items[0].numbers | length if copy else 5 %}
+{% set w = [150, (660 - 14 * (run - 1)) // run] | min %}
+    {{ dot_defs() }}
+    <div class="blocks">
+{% for item in sheet.items %}
+{% if item.kind == "copy" %}
+      <div class="card">
+        <div class="row">{% for n in item.numbers %}<div class="cell">{{ dotted(n, 110 if n < 10 else [104, w - 18] | min, w) }}</div>{% endfor %}</div>
+        <div class="row">{% for n in item.numbers %}<div class="cell write"></div>{% endfor %}</div>
+      </div>
+{% else %}
+      <div class="card">
+{% for r in range(0, item.cells | length, 5) %}
+        <div class="row">{% for n in item.cells[r:r + 5] %}{% set p = r + loop.index0 %}{% if p in item.gaps %}<div class="cell gap"></div>{% else %}<div class="cell shown{% if p == 0 %} first{% endif %}">{{ n }}</div>{% endif %}{% endfor %}</div>
+{% endfor %}
+      </div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

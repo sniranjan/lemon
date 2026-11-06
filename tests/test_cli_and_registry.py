@@ -35,8 +35,11 @@ def test_register_rejects_names_outside_catalogue():
 
 
 def test_get_unimplemented_type():
+    missing = sorted(registry.CATALOGUE - set(registry.implemented()))
+    if not missing:
+        pytest.skip("every catalogue sheet type is implemented")
     with pytest.raises(KeyError, match="not implemented yet"):
-        registry.get("add_facts")
+        registry.get(missing[0])
 
 
 def test_exposure_word_is_new_once():

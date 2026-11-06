@@ -1,0 +1,233 @@
+subject: math
+level: M1
+title: Adding and Subtracting Facts to 20
+# Our own level (source: ours): Puppies math, compressed so grade 2 fact fluency (2.OA.2) is reached
+# before Cubs. It takes the old "adding up to 10" steps plus subtraction facts into one 200-page level.
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [1, 61, 111, 191]   # count-on bridge, adding 6 and 7, count-back bridge, fact families
+aims:
+  - Add any two numbers up to 10 and adding facts with sums to 20, quickly and from memory
+  - Take away numbers up to 10 from numbers up to 20, with no negative answers
+  - See that adding and taking away undo each other (fact families) and find a missing number
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [1, 2]   # source: ours (12 facts a page)
+# fact_drill rules (merged level → section → part; all ranges are ours):
+#   ops:         which signs a part uses ("+", "-")
+#   amounts:     the number added or taken away (the second number)
+#   first:       [lo, hi] range of the first number
+#   turnarounds: adding facts may also show the amount first (9 + 3 as well as 3 + 9, 1.OA.3)
+#   max_total:   no sum above this; taking away never goes below 0
+#   blanks:      "c" = answer after the equals sign; "b" = missing number in the middle (1.OA.8)
+#   layouts:     pages cycle through these within each part: horizontal (12 facts), vertical
+#                (12 column facts), bridge (4 count-on / count-back tracks + 6 facts), families
+#                (3 fact families of 4 facts)
+rules:
+  max_total: 20
+  blanks: [c]
+  turnarounds: false
+sections:
+  - code: A
+    name: Adding 1 to 3 Review
+    public_name: Adding Warm-Up
+    pages: [1, 10]
+    sheet_types: [fact_drill]
+    standards: [1.OA.5, 1.OA.6]
+    source: ours
+    rules:
+      title: Add
+      ops: ["+"]
+      amounts: [1, 2, 3]
+      first: [1, 17]
+      layouts: [bridge, horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Start on the big number and count on: say 7, then eight, nine. The last number is the answer."
+          - "Read each fact out loud together. If your child gets stuck, count on from the first number."
+
+  - code: B
+    name: Adding 4 and 5
+    public_name: Adding 4 and 5
+    pages: [11, 40]
+    sheet_types: [fact_drill]
+    standards: [1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Add
+      ops: ["+"]
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Read each fact together. Adding 5? Hold up one hand and count on from the first number."
+          - "Let your child read and answer each fact. Praise the ones they know right away, then check the rest."
+    parts:
+      - { part: 1, pages: [11, 20], rules: { amounts: [4], first: [1, 16] } }
+      - { part: 2, pages: [21, 30], rules: { amounts: [5], first: [1, 15] } }
+      - { part: 3, pages: [31, 40], rules: { amounts: [4, 5], first: [1, 15] } }
+
+  - code: C
+    name: Adding 6 and 7
+    public_name: Adding 6 and 7
+    pages: [41, 70]
+    sheet_types: [fact_drill]
+    standards: [1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Add
+      ops: ["+"]
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Read each fact together. For 8 + 6, try making ten first: 8 and 2 make 10, and 4 more is 14."
+          - "Let your child answer each fact out loud first, then write it. Go slowly; getting it right comes first."
+    parts:
+      - { part: 1, pages: [41, 50], rules: { amounts: [6], first: [1, 14] } }
+      - { part: 2, pages: [51, 60], rules: { amounts: [7], first: [1, 13] } }
+      - { part: 3, pages: [61, 70], rules: { amounts: [6, 7], first: [1, 13] } }
+
+  - code: D
+    name: Adding 8, 9 and 10
+    public_name: Adding 8, 9 and 10
+    pages: [71, 100]
+    sheet_types: [fact_drill]
+    standards: [1.OA.3, 1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Add
+      ops: ["+"]
+      layouts: [horizontal, vertical]
+      turnarounds: true   # 9 + 4 and 4 + 9 are the same fact; there are too few "n + 9" facts alone
+      tips:
+        fact_drill:
+          - "Adding 10 just changes the first digit: 4 + 10 is 14. For 9, add 10 and step back one."
+          - "Read each fact together. If 3 + 9 looks hard, turn it around: 9 + 3 is the same."
+    parts:
+      - { part: 1, pages: [71, 80], rules: { amounts: [8], first: [1, 12] } }
+      - { part: 2, pages: [81, 90], rules: { amounts: [9], first: [1, 11] } }
+      - { part: 3, pages: [91, 100], rules: { amounts: [8, 9, 10], first: [1, 12] } }
+
+  - code: E
+    name: Adding within 20
+    public_name: Adding Mix
+    pages: [101, 110]
+    sheet_types: [fact_drill]
+    standards: [1.OA.3, 1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Add
+      ops: ["+"]
+      amounts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      first: [1, 10]
+      turnarounds: true
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "All kinds of adding today. Let your child go first; help only on the ones that need counting."
+          - "Time this page for fun, not pressure. Most facts should come quickly now."
+
+  - code: F
+    name: Subtracting 1 to 3
+    public_name: Taking Away 1, 2, 3
+    pages: [111, 130]
+    sheet_types: [fact_drill]
+    standards: [1.OA.5, 1.OA.6]
+    source: ours
+    rules:
+      title: Take away
+      ops: ["-"]
+      tips:
+        fact_drill:
+          - "Taking away is counting back. Start on the big number and step back: 9, then eight, seven."
+          - "On the number tracks, start on the colored box and hop back one box for each one taken away."
+    parts:
+      - { part: 1, pages: [111, 120], rules: { amounts: [1, 2], first: [3, 12], layouts: [bridge, horizontal] } }
+      - { part: 2, pages: [121, 130], rules: { amounts: [1, 2, 3], first: [4, 20], layouts: [bridge, horizontal, vertical] } }
+
+  - code: G
+    name: Subtracting 4 to 6
+    public_name: Taking Away 4, 5, 6
+    pages: [131, 150]
+    sheet_types: [fact_drill]
+    standards: [1.OA.4, 1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Take away
+      ops: ["-"]
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Think adding: 11 take away 5? What goes with 5 to make 11? That is the answer."
+          - "Read each fact together. Let your child count back on fingers if needed, and praise each try."
+    parts:
+      - { part: 1, pages: [131, 140], rules: { amounts: [4, 5], first: [5, 15] } }
+      - { part: 2, pages: [141, 150], rules: { amounts: [4, 5, 6], first: [6, 20] } }
+
+  - code: H
+    name: Subtracting 7 to 10
+    public_name: Taking Away 7 to 10
+    pages: [151, 170]
+    sheet_types: [fact_drill]
+    standards: [1.OA.4, 1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Take away
+      ops: ["-"]
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Taking away 10 changes only the first digit: 16 take away 10 is 6. For 9, take 10 and add one back."
+          - "Use adding to check: 15 take away 8 is 7, because 7 and 8 make 15."
+    parts:
+      - { part: 1, pages: [151, 160], rules: { amounts: [7, 8], first: [8, 18] } }
+      - { part: 2, pages: [161, 170], rules: { amounts: [9, 10], first: [10, 20] } }
+
+  - code: I
+    name: Adding and Subtracting within 20
+    public_name: Add or Take Away
+    pages: [171, 180]
+    sheet_types: [fact_drill]
+    standards: [1.OA.6, 2.OA.2]
+    source: ours
+    rules:
+      title: Add or take away
+      ops: ["+", "-"]
+      amounts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      first: [1, 20]
+      layouts: [horizontal, vertical]
+      tips:
+        fact_drill:
+          - "Some facts add and some take away. Point to the sign together before each answer."
+          - "Let your child say plus or take away for each fact first, then answer it."
+
+  - code: J
+    name: Missing Numbers and Fact Families
+    public_name: Missing Numbers and Families
+    pages: [181, 200]
+    sheet_types: [fact_drill]
+    standards: [1.OA.4, 1.OA.8, 2.OA.2]
+    source: ours
+    rules:
+      ops: ["+", "-"]
+      amounts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    parts:
+      - part: 1
+        pages: [181, 190]
+        rules:
+          title: Missing numbers
+          first: [1, 20]
+          blanks: [b]
+          layouts: [horizontal, vertical]
+          tips:
+            fact_drill:
+              - "The empty box is in the middle now. For 8 + box = 11, ask: 8 and what make 11?"
+              - "Read each fact with a pause at the box. Adding? Count on from the first number to the last. Taking away? Count back."
+      - part: 2
+        pages: [191, 200]
+        rules:
+          title: Number families
+          first: [1, 10]
+          layouts: [families]
+          tips:
+            fact_drill:
+              - "Each family has three numbers. The two small ones add to the big one, and you can take them back."
+              - "Read the three numbers in the house together, then use only those numbers to finish all four facts."

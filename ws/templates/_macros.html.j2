@@ -6,3 +6,6 @@
 {% endfor %}
 </div>
 {% endmacro %}
+
+{# A drawn arrow pointing right (no font glyph): "this number, then the next one". #}
+{% macro arrow(width=64) %}<svg class="arrow" viewBox="0 0 64 32" width="{{ width }}" height="{{ width // 2 }}" aria-hidden="true"><path d="M4 16 H50" stroke="#1d1d1f" stroke-width="5" stroke-linecap="round"/><path d="M40 5 L58 16 L40 27" fill="none" stroke="#1d1d1f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}

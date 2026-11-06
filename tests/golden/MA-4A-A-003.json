@@ -1,0 +1,38 @@
+{
+  "id": "MA-4A-A-003",
+  "subject": "math",
+  "level": "4A",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "number_trace",
+  "page_number": 3,
+  "variant": 1,
+  "seed": 7712138241365828116,
+  "title": "Trace the numbers",
+  "parent_tip": "Trace slowly along the dots, starting at the top. Say the number each time you finish one.",
+  "items": [
+    {
+      "kind": "trace",
+      "n": 1,
+      "traces": 3
+    },
+    {
+      "kind": "trace",
+      "n": 2,
+      "traces": 3
+    },
+    {
+      "kind": "trace",
+      "n": 3,
+      "traces": 3
+    },
+    {
+      "kind": "trace",
+      "n": 1,
+      "traces": 3
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}
