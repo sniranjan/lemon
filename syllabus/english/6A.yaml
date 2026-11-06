@@ -3,7 +3,7 @@ level: 6A
 title: Reciting words, phrases and sentences
 # Public level name: syllabus/ladder.yaml (Ducklings). Section public_name is what buyers see (CLAUDE.md §15).
 # Preview pages are built only from words that already have approved pictures (one per section).
-preview_pages: [3, 33, 103, 125]
+preview_pages: [3, 33, 103, 131]
 aims:
   - Recite familiar words, short phrases and simple sentences while looking at them
   - Put known words together into phrases and short sentences
