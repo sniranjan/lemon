@@ -1,0 +1,73 @@
+{
+  "id": "MA-M7-D-001",
+  "subject": "math",
+  "level": "M7",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "rational_story",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 1750350815115920650,
+  "title": "Unit rates",
+  "parent_tip": "To divide by a fraction, multiply by its flip: 1/2 ÷ 1/4 = 1/2 × 4 = 2.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "snail",
+      "picks": {
+        "a": "3/5",
+        "b": "2"
+      },
+      "values": {
+        "a": "3/5",
+        "b": "2"
+      },
+      "text": "A garden snail crawls 3/5 of a foot in 2 minutes. How many feet does it crawl per minute?",
+      "answer": "3/10",
+      "unit": "foot per minute",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "robot_vacuum",
+      "picks": {
+        "a": "1/2",
+        "b": "1/2"
+      },
+      "values": {
+        "a": "1/2",
+        "b": "1/2"
+      },
+      "text": "A robot vacuum cleans 1/2 square yards in 1/2 of a minute. How many square yards does it clean per minute?",
+      "answer": "1",
+      "unit": "square yards",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "bike_speed",
+      "picks": {
+        "a": "2 1/2",
+        "b": "1/2"
+      },
+      "values": {
+        "a": "2 1/2",
+        "b": "1/2"
+      },
+      "text": "Ana rides her bike 2 1/2 miles in 1/2 hour. What is her speed in miles per hour?",
+      "answer": "5",
+      "unit": "miles per hour",
+      "equation": false
+    }
+  ],
+  "answer_key": [
+    "3/10 foot per minute",
+    "1 square yards",
+    "5 miles per hour"
+  ],
+  "new_words": [],
+  "review_words": []
+}

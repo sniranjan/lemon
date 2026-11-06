@@ -103,3 +103,9 @@ factor_pairs:
 fraction_bars:
   - "Same size bars, different pieces. Count the shaded parts on each bar together."
   - "When the bottom numbers match, add or take away the tops; the bottom stays the same."
+power_root:
+  - "Say each power as a times sentence: 2 to the 5th is five 2s multiplied. A square root asks: what number times itself makes this?"
+sci_notation:
+  - "Scientific notation is a number from 1 to just under 10, times a power of ten. Count how many places the decimal point moves."
+pythagorean:
+  - "In a right triangle, the two short sides squared and added make the longest side squared: a² + b² = c²."

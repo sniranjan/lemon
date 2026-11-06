@@ -1,0 +1,179 @@
+{
+  "id": "MA-M7-B-021",
+  "subject": "math",
+  "level": "M7",
+  "section": "B",
+  "part": 3,
+  "sheet_type": "signed_numbers",
+  "page_number": 61,
+  "variant": 1,
+  "seed": 9865913614905005745,
+  "title": "Mixed signs",
+  "parent_tip": "Count the negative signs in a times-and-sharing run: an even number gives a positive answer, an odd number a negative one.",
+  "items": [
+    {
+      "kind": "fact",
+      "n": 1,
+      "operands": [
+        "1",
+        "11",
+        "-8"
+      ],
+      "ops": [
+        "*",
+        "+"
+      ],
+      "show": [
+        "1 × 11 + (−8)"
+      ],
+      "answer": "3",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 2,
+      "operands": [
+        "9",
+        "-2",
+        "-8"
+      ],
+      "ops": [
+        "*",
+        "+"
+      ],
+      "show": [
+        "9 × (−2) + (−8)"
+      ],
+      "answer": "−26",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 3,
+      "operands": [
+        "-5",
+        "7",
+        "7"
+      ],
+      "ops": [
+        "+",
+        "*"
+      ],
+      "show": [
+        "−5 + 7 × 7"
+      ],
+      "answer": "44",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 4,
+      "operands": [
+        "-9",
+        "9",
+        "2"
+      ],
+      "ops": [
+        "/",
+        "+"
+      ],
+      "show": [
+        "−9 ÷ 9 + 2"
+      ],
+      "answer": "1",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 5,
+      "operands": [
+        "-8",
+        "12",
+        "-3"
+      ],
+      "ops": [
+        "-",
+        "/"
+      ],
+      "show": [
+        "−8 − 12 ÷ (−3)"
+      ],
+      "answer": "−4",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 6,
+      "operands": [
+        "2",
+        "-1",
+        "-2"
+      ],
+      "ops": [
+        "+",
+        "*"
+      ],
+      "show": [
+        "2 + (−1) × (−2)"
+      ],
+      "answer": "4",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 7,
+      "operands": [
+        "-3",
+        "6",
+        "2"
+      ],
+      "ops": [
+        "-",
+        "/"
+      ],
+      "show": [
+        "−3 − 6 ÷ 2"
+      ],
+      "answer": "−6",
+      "layout": "chain",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 8,
+      "operands": [
+        "3",
+        "-12",
+        "3"
+      ],
+      "ops": [
+        "-",
+        "/"
+      ],
+      "show": [
+        "3 − (−12) ÷ 3"
+      ],
+      "answer": "7",
+      "layout": "chain",
+      "numbers": "integer"
+    }
+  ],
+  "answer_key": [
+    "3",
+    "−26",
+    "44",
+    "1",
+    "−4",
+    "4",
+    "−6",
+    "7"
+  ],
+  "new_words": [],
+  "review_words": []
+}

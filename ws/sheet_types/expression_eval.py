@@ -10,6 +10,9 @@ Rules (merged level → section → part):
 Expressions are stored in Python form ("3*n+4") and as printed ("3n + 4"); verify prints and
 evaluates each one again (exactly, with Fraction) and checks it against its form. Letters are
 never `a`, so a printed term can't spell an internal level code ("6a").
+
+`task: tidy` (Penguins math, 7.EE.1–2): collecting like terms, opening brackets, factoring and
+rewriting linear expressions; see _tidy.py.
 """
 
 from __future__ import annotations
@@ -19,6 +22,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
+from . import _tidy
 from ._common import error
 from ._rational import evaluate, pretty
 
@@ -130,7 +134,12 @@ def check_item(i: dict, r: dict) -> str | None:
 class ExpressionEval(SheetType):
     template = "expression_eval.html.j2"
 
+    def template_for(self, sheet: Sheet) -> str:
+        return _tidy.TEMPLATE if sheet.items and sheet.items[0].get("kind") == "tidy" else self.template
+
     def generate(self, ctx: GenContext) -> SheetContent:
+        if _tidy.is_tidy(ctx.rules):
+            return _tidy.generate(ctx, self.name)
         r = ctx.rules
         rng = ctx.rng
         task = r["task"]
@@ -187,6 +196,8 @@ class ExpressionEval(SheetType):
         from ..verify import banned_words
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if _tidy.is_tidy(r):
+            return _tidy.verify(sheet, r)
         task = r["task"]
         count = r.get("problems", FEWER.get(task, 12))
         items = sheet.items

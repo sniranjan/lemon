@@ -39,7 +39,7 @@ def write_html(sheet: Sheet, level: Level, path: Path) -> None:
     """Asset links are relative to the HTML file, so output is the same on any machine."""
     path.parent.mkdir(parents=True, exist_ok=True)
     root = Path(os.path.relpath(ROOT, path.parent)).as_posix()
-    template = _env.get_template(registry.get(sheet.sheet_type).template)
+    template = _env.get_template(registry.get(sheet.sheet_type).template_for(sheet))
     path.write_text(template.render(sheet=sheet, level=level, theme=THEMES[sheet.subject], root=root))
 
 
@@ -91,10 +91,14 @@ MIN_TIP_PX = 16
 def min_child_px(level: str, subject: str | None = None) -> int:
     if subject == "math" and level == "4A":
         return 28   # Bunnies Math is first writing at age 4: keep the 28px floor
+    if level == "M7":
+        return 20   # Penguins math (age 10): number-line labels and stacked fractions use the 20px floor
     if subject == "math" and level == "M6":
         return 22   # Pandas Math (age 9): grid labels and stacked fractions may go down to 22px
     if level[:1] == "R" and level[1:].isdigit():
         return 20   # our own reading levels (Foxes on): grade 3+ passages
+    if subject == "math" and level == "M8":
+        return 20   # Lions Math (age 11): graphs and equations need the 20px floor (§8, 4A+)
     return 20 if level in {"4A", "3A", "2A"} else 28
 
 

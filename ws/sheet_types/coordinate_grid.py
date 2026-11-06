@@ -15,6 +15,8 @@ Rules (merged level → section → part):
 Every point stores its grid position in pixels (`px`, `py`) as well as its coordinates; the
 template draws read points at that position and verify checks it against the coordinates, so
 a point can't be drawn in the wrong place.
+Lions math adds `mode: lines` (slope and y = mx + b, 8.EE.5–6, 8.F; _slope_lines.py) and
+`mode: systems` (two equations at once, 8.EE.8; _systems.py).
 """
 
 from __future__ import annotations
@@ -23,6 +25,8 @@ from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _lines
 from ._common import error
+from ._slope_lines import Lines
+from ._systems import Systems
 from ._rational import show
 
 CELL = 38
@@ -59,11 +63,26 @@ def answer_for(i: dict) -> str:
     return f"{abs(x1 - x2) + abs(y1 - y2)} units"
 
 
+def _mode(sheet: Sheet) -> str | None:
+    from ..syllabus import load_level, resolve_page
+
+    return resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules.get("mode")
+
+
+MODES = {"lines": Lines, "systems": Systems}
+
+
 @register("coordinate_grid")
 class CoordinateGrid(SheetType):
     template = "coordinate_grid.html.j2"
 
+    def template_for(self, sheet: Sheet) -> str:
+        mode = MODES.get(_mode(sheet))
+        return mode.template if mode else self.template
+
     def generate(self, ctx: GenContext) -> SheetContent:
+        if ctx.rules.get("mode") in MODES:
+            return MODES[ctx.rules["mode"]]().generate(ctx)
         r = ctx.rules
         rng = ctx.rng
         if "graphs" in r:
@@ -124,6 +143,8 @@ class CoordinateGrid(SheetType):
                             answer_key=[i["answer"] for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
+        if _mode(sheet) in MODES:
+            return MODES[_mode(sheet)]().verify(sheet)
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules

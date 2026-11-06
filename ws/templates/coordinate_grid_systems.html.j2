@@ -1,0 +1,44 @@
+{% extends "base.html.j2" %}
+{# Two equations at once (coordinate_grid, mode systems; ws/sheet_types/_systems.py). #}
+{% import "_lions_algebra.html.j2" as alg %}
+{% macro pair(i) %}<div class="pair"><span class="brace"></span><div>{% for e in [i.eq1, i.eq2] %}<div>{{ alg.mathi(e.tokens) }}</div>{% endfor %}</div></div>{% endmacro %}
+{% macro point_ans() %}<div class="ans">( <span class="ansbox small"></span> , <span class="ansbox small"></span> )</div>{% endmacro %}
+{% block style %}
+{{ alg.math_style() }}
+{% set n = sheet.items | length %}
+.probs { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ (n + 1) // 2 }}, 1fr); gap: 14px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 10px 14px 10px 26px; border-radius: 22px; }
+.probs .card.story { grid-column: span 2; align-items: stretch; }
+.pair { display: flex; align-items: center; gap: 8px; font-size: 25px; font-weight: 700; line-height: 1.35; white-space: nowrap; align-self: flex-start; }
+.pair .brace { width: 10px; align-self: stretch; border: 3px solid var(--ink); border-right: none; border-radius: 10px 0 0 10px; }
+.duo { display: flex; gap: 22px; font-size: 22px; font-weight: 700; white-space: nowrap; }
+.ans { font-size: 26px; font-weight: 700; display: flex; align-items: center; gap: 6px; white-space: nowrap; align-self: flex-end; }
+.ans .ansbox.small { width: 54px; height: 40px; }
+.ans .line { display: inline-block; width: 230px; border-bottom: 3px solid var(--ink); height: 30px; }
+.story-text { font-size: 22px; line-height: 1.4; }
+.names { display: flex; justify-content: flex-end; gap: 28px; font-size: 22px; font-weight: 700; }
+.names span.ansbox { width: 70px; height: 40px; }
+{% endblock %}
+{% block body %}
+    <div class="probs">
+{% for i in sheet.items %}
+{% if i.task in ["graph_read", "graph_draw"] %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="duo">{% for e in [i.eq1, i.eq2] %}<span>{{ alg.mathi(e.tokens) }}</span>{% endfor %}</div>
+        {% if i.task == "graph_read" %}{{ alg.grid(i.grid, 19, [i.ends[0], i.ends[1] + ["#1d1d1f", "9 6"]]) }}{% else %}{{ alg.grid(i.grid, 19) }}{% endif %}
+        {{ point_ans() }}
+      </div>
+{% elif i.task == "story" %}
+      <div class="card story"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <div class="story-text">{{ i.text }}</div>
+        <div class="names">{% for nm in i.names %}<span>{{ nm }} <span class="ansbox"></span></span>{% endfor %}</div>
+      </div>
+{% else %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        {{ pair(i) }}
+        {% if i.task == "inspect" %}<div class="ans"><span class="line"></span></div>{% else %}{{ point_ans() }}{% endif %}
+      </div>
+{% endif %}
+{% endfor %}
+    </div>
+{% endblock %}

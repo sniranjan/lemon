@@ -1,0 +1,73 @@
+{
+  "id": "MA-M8-B-011",
+  "subject": "math",
+  "level": "M8",
+  "section": "B",
+  "part": 2,
+  "sheet_type": "sci_notation",
+  "page_number": 41,
+  "variant": 1,
+  "seed": 17087046867094186760,
+  "title": "Times and divide",
+  "parent_tip": "If the front number ends up 10 or more (like 24), move the point one place and add 1 to the power: 2.4 times 10 to the 7th.",
+  "items": [
+    {
+      "n": 1,
+      "task": "multiply",
+      "coef": "8",
+      "exp": 5,
+      "coef2": "4.7",
+      "exp2": -5
+    },
+    {
+      "n": 2,
+      "task": "divide",
+      "coef": "1.44",
+      "exp": 5,
+      "coef2": "8",
+      "exp2": -4
+    },
+    {
+      "n": 3,
+      "task": "multiply",
+      "coef": "6.2",
+      "exp": -8,
+      "coef2": "2",
+      "exp2": 12
+    },
+    {
+      "n": 4,
+      "task": "divide",
+      "coef": "1.4",
+      "exp": -8,
+      "coef2": "2",
+      "exp2": -7
+    },
+    {
+      "n": 5,
+      "task": "times_bigger",
+      "coef": "1.2",
+      "exp": 8,
+      "coef2": "3",
+      "exp2": 5
+    },
+    {
+      "n": 6,
+      "task": "times_bigger",
+      "coef": "2.4",
+      "exp": 8,
+      "coef2": "3",
+      "exp2": 4
+    }
+  ],
+  "answer_key": [
+    "3.76 × 10^1",
+    "1.8 × 10^8",
+    "1.24 × 10^5",
+    "7 × 10^−2",
+    "4 × 10^2",
+    "8 × 10^3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

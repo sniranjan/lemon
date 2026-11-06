@@ -93,6 +93,11 @@ def parts(s: str | Fraction) -> dict:
 
 # --- expressions ---------------------------------------------------------------------------
 
+_CALLS = {"floor": lambda x: Fraction(x.numerator // x.denominator),
+          "ceil": lambda x: Fraction(-((-x.numerator) // x.denominator)),
+          "abs": abs}
+
+
 def evaluate(expr: str, values: dict[str, Fraction | int | str] | None = None) -> Fraction | bool:
     """Exact arithmetic on names and numbers: + − × ÷ and whole-number powers, comparisons.
 
@@ -125,6 +130,9 @@ def evaluate(expr: str, values: dict[str, Fraction | int | str] | None = None) -
             return _CMP[type(node.ops[0])](ev(node.left), ev(node.comparators[0]))
         if isinstance(node, ast.BoolOp) and isinstance(node.op, ast.And):
             return all(ev(v) for v in node.values)
+        if (isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in _CALLS
+                and len(node.args) == 1 and not node.keywords):
+            return _CALLS[node.func.id](ev(node.args[0]))   # Penguins: at most / at least how many
         raise ValueError(f"not allowed in an expression: {ast.dump(node)}")
 
     return ev(ast.parse(expr, mode="eval"))

@@ -1,0 +1,172 @@
+{
+  "id": "MA-M7-B-001",
+  "subject": "math",
+  "level": "M7",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "signed_numbers",
+  "page_number": 41,
+  "variant": 1,
+  "seed": 13191438688064839375,
+  "title": "Times with negatives",
+  "parent_tip": "Work out the size first, then the sign: same signs give a positive answer, different signs give a negative one.",
+  "items": [
+    {
+      "kind": "pattern",
+      "n": 1,
+      "b": "-8",
+      "rows": [
+        {
+          "a": "3",
+          "answer": "−24",
+          "blank": false
+        },
+        {
+          "a": "2",
+          "answer": "−16",
+          "blank": false
+        },
+        {
+          "a": "1",
+          "answer": "−8",
+          "blank": false
+        },
+        {
+          "a": "0",
+          "answer": "0",
+          "blank": true
+        },
+        {
+          "a": "-1",
+          "answer": "8",
+          "blank": true
+        },
+        {
+          "a": "-2",
+          "answer": "16",
+          "blank": true
+        },
+        {
+          "a": "-3",
+          "answer": "24",
+          "blank": true
+        }
+      ],
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 2,
+      "operands": [
+        "5",
+        "-9"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "5 × (−9)"
+      ],
+      "answer": "−45",
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 3,
+      "operands": [
+        "-7",
+        "-6"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "−7 × (−6)"
+      ],
+      "answer": "42",
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 4,
+      "operands": [
+        "-10",
+        "8"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "−10 × 8"
+      ],
+      "answer": "−80",
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 5,
+      "operands": [
+        "5",
+        "-2"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "5 × (−2)"
+      ],
+      "answer": "−10",
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 6,
+      "operands": [
+        "-10",
+        "9"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "−10 × 9"
+      ],
+      "answer": "−90",
+      "layout": "pattern",
+      "numbers": "integer"
+    },
+    {
+      "kind": "fact",
+      "n": 7,
+      "operands": [
+        "-2",
+        "-10"
+      ],
+      "ops": [
+        "*"
+      ],
+      "show": [
+        "−2 × (−10)"
+      ],
+      "answer": "20",
+      "layout": "pattern",
+      "numbers": "integer"
+    }
+  ],
+  "answer_key": [
+    "0, 8, 16, 24",
+    "−45",
+    "42",
+    "−80",
+    "−10",
+    "−90",
+    "20"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -14,6 +14,9 @@ Rules (merged level → section → part):
 - `halves`: true lets compare, abs and order use halves (−2.5) as well as whole numbers.
 - `problems`: items a page (default 5 lines, 12 facts). `title`: the sheet title.
 Numbers are stored as text ("-3", "2.5"); verify recomputes every answer exactly with Fraction.
+
+`layout: operations` (Penguins math, 7.NS.1–2): adding, taking away, multiplying and dividing
+signed integers, fractions and decimals, and fractions as decimals; see _signed_ops.py.
 """
 
 from __future__ import annotations
@@ -22,6 +25,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
+from . import _signed_ops
 from ._common import error
 from ._rational import fmt, parse, show
 
@@ -75,7 +79,12 @@ def context_text(i: dict) -> str:
 class SignedNumbers(SheetType):
     template = "signed_numbers.html.j2"
 
+    def template_for(self, sheet: Sheet) -> str:
+        return _signed_ops.TEMPLATE if sheet.items and "layout" in sheet.items[0] else self.template
+
     def generate(self, ctx: GenContext) -> SheetContent:
+        if _signed_ops.is_operations(ctx.rules):
+            return _signed_ops.generate(ctx, self.name)
         r = ctx.rules
         rng = ctx.rng
         lo, hi = r["range"]
@@ -141,6 +150,8 @@ class SignedNumbers(SheetType):
         from ..syllabus import load_level, resolve_page
 
         r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        if _signed_ops.is_operations(r):
+            return _signed_ops.verify(sheet)
         lo, hi = r["range"]
         lines = r["layout"] == "lines"
         count = r.get("problems", LINES if lines else FACTS)
