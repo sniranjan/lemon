@@ -57,7 +57,7 @@ def plan_new_words(level: Level, bank: Sequence[VocabEntry], variant: int = 1) -
     for page in range(1, level.pages + 1):
         rules = resolve_page(level, page).rules
         n = rules.get("new_words_per_sheet", 0)
-        if not n:
+        if not n or "teams" in rules:   # letter-team pages pick new words by team (ws/phonics.py)
             continue
         if next_word + n > len(words):
             break   # bank exhausted: later pages need more words first
@@ -191,6 +191,9 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         if rules.get("new_words_per_sheet", 0) and entry is None:
             continue   # the word bank can't introduce this page's new words yet
         entry = entry or PagePlan(page=page)
+        for earlier in range(1, page):   # words this level brought on other kinds of page (letter teams)
+            for w in plan.pages[earlier].new_words if earlier in plan.pages else ():
+                known.setdefault(w, this_level[w])
         for w in entry.new_words:
             known[w] = this_level[w]
             level_new.add(w)

@@ -1,0 +1,155 @@
+{
+  "id": "EN-4A-C-045",
+  "subject": "english",
+  "level": "4A",
+  "section": "C",
+  "part": 5,
+  "sheet_type": "sentence_trace",
+  "page_number": 185,
+  "variant": 1,
+  "seed": 10586721194785194481,
+  "title": "Read it, then trace it",
+  "parent_tip": "Read it once together, then let your child read it alone. Trace slowly on the lines, and point out the period at the end.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "I like to eat a cookie.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "like",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "to",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "eat",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "cookie",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I like to eat {a} {eatable}.",
+      "slots": {
+        "eatable": "cookie"
+      },
+      "word": "cookie",
+      "words": [
+        "cookie"
+      ],
+      "pictures": [
+        "cookie"
+      ],
+      "trace_lines": [
+        "I like to",
+        "eat a cookie."
+      ],
+      "trace_size": 64
+    },
+    {
+      "kind": "sentence",
+      "text": "I see the panda eat.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "see",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "the",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "panda",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "eat",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I see the {animal} {action}.",
+      "slots": {
+        "animal": "panda",
+        "action": "eat"
+      },
+      "word": "panda",
+      "words": [
+        "panda",
+        "eat"
+      ],
+      "pictures": [
+        "panda"
+      ],
+      "trace_lines": [
+        "I see the panda eat."
+      ],
+      "trace_size": 59
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "cookie",
+    "panda",
+    "eat"
+  ]
+}

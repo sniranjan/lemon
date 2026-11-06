@@ -1,0 +1,76 @@
+{
+  "id": "EN-4A-A-054",
+  "subject": "english",
+  "level": "4A",
+  "section": "A",
+  "part": 17,
+  "sheet_type": "letter_team",
+  "page_number": 54,
+  "variant": 1,
+  "seed": 15992921063627491566,
+  "title": "Letter teams",
+  "parent_tip": "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try.",
+  "items": [
+    {
+      "kind": "team_word",
+      "word": "cloud",
+      "picture": "cloud",
+      "team": "cl",
+      "letters": "cl",
+      "parts": [
+        "",
+        "cl",
+        "oud"
+      ],
+      "task": "trace"
+    },
+    {
+      "kind": "team_word",
+      "word": "glass",
+      "picture": "glass",
+      "team": "gl",
+      "letters": "gl",
+      "parts": [
+        "",
+        "gl",
+        "ass"
+      ],
+      "task": "trace"
+    },
+    {
+      "kind": "team_word",
+      "word": "plane",
+      "picture": "plane",
+      "team": "pl",
+      "letters": "pl",
+      "parts": [
+        "",
+        "pl",
+        "ane"
+      ],
+      "task": "trace"
+    },
+    {
+      "kind": "team_word",
+      "word": "flag",
+      "picture": "flag",
+      "team": "fl",
+      "letters": "fl",
+      "parts": [
+        "",
+        "fl",
+        "ag"
+      ],
+      "task": "trace"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [
+    "flag"
+  ],
+  "review_words": [
+    "cloud",
+    "glass",
+    "plane"
+  ]
+}

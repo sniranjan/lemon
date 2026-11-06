@@ -300,3 +300,59 @@
 - { word: toe,     picture: toe,     category: body,     level: 6A, sentences: ["Here is my toe."] }
 - { word: thumb,   picture: thumb,   category: body,     level: 6A, sentences: ["Here is my thumb."] }
 - { word: family,  picture: family,  category: family,   level: 6A, sentences: ["I love my family."] }
+
+# --- Kittens Reading (4A) words: one new word on pages 4-8 of each Letter Teams unit; the planner
+# (ws/phonics.py) gives each page the next word listed under its team in content/phonics/english.yaml.
+# Batch 1 (words 1-40) and batch 2 (41-50) approved by the orchestrator under user delegation 2026-11-06;
+# pictures by scripts/pictures/draw_4A_batch1.py.
+- { word: glass,   picture: glass,   category: home,     level: 4A, sentences: ["Here is my glass."] }
+- { word: wall,    picture: wall,    category: home,     level: 4A, sentences: ["Look at the wall."] }
+- { word: well,    picture: well,    category: nature,   level: 4A, sentences: ["I see a well."] }
+- { word: bull,    picture: bull,    category: animals,  level: 4A, sentences: ["The bull is big."] }
+- { word: grill,   picture: grill,   category: home,     level: 4A, sentences: ["Look at the grill."] }
+- { word: ship,    picture: ship,    category: vehicles, level: 4A, sentences: ["I see a ship."] }
+- { word: dish,    picture: dish,    category: home,     level: 4A, sentences: ["Here is my dish."] }
+- { word: shark,   picture: shark,   category: animals,  level: 4A, sentences: ["The shark can swim."] }
+- { word: shelf,   picture: shelf,   category: home,     level: 4A, sentences: ["Look at the shelf."] }
+- { word: shower,  picture: shower,  category: home,     level: 4A, sentences: ["This is a shower."] }
+- { word: bench,   picture: bench,   category: home,     level: 4A, sentences: ["I see a bench."] }
+- { word: watch,   picture: watch,   category: clothes,  level: 4A, sentences: ["Here is my watch."] }
+- { word: couch,   picture: couch,   category: home,     level: 4A, sentences: ["Look at the couch."] }
+- { word: beach,   picture: beach,   category: nature,   level: 4A, sentences: ["I see a beach."] }
+- { word: cheek,   picture: cheek,   category: body,     level: 4A, sentences: ["Here is my cheek."] }
+- { word: tooth,   picture: tooth,   category: body,     level: 4A, sentences: ["Here is my tooth."] }
+- { word: path,    picture: path,    category: nature,   level: 4A, sentences: ["Look at the path."] }
+- { word: moth,    picture: moth,    category: animals,  level: 4A, sentences: ["I see a moth."] }
+- { word: wheel,   picture: wheel,   category: vehicles, level: 4A, sentences: ["Look at the wheel."] }
+- { word: whisk,   picture: whisk,   category: home,     level: 4A, sentences: ["This is a whisk."] }
+- { word: lock,    picture: lock,    category: home,     level: 4A, sentences: ["I see a lock."] }
+- { word: pocket,  picture: pocket,  category: clothes,  level: 4A, sentences: ["Here is my pocket."] }
+- { word: chicken, picture: chicken, category: animals,  level: 4A, sentences: ["The chicken can walk."] }
+- { word: sticker, picture: sticker, category: toys,     level: 4A, sentences: ["Here is my sticker."] }
+- { word: cracker, picture: cracker, category: food,     level: 4A, sentences: ["I eat a cracker."] }
+- { word: flag,    picture: flag,    category: toys,     level: 4A, sentences: ["Here is my flag."] }
+- { word: glove,   picture: glove,   category: clothes,  level: 4A, sentences: ["I like my green glove."] }
+- { word: plant,   picture: plant,   category: nature,   level: 4A, sentences: ["Look at the plant."] }
+- { word: glue,    picture: glue,    category: toys,     level: 4A, sentences: ["Here is my glue."] }
+- { word: slipper, picture: slipper, category: clothes,  level: 4A, sentences: ["Here is my slipper."] }
+- { word: brick,   picture: brick,   category: home,     level: 4A, sentences: ["I see a brick."] }
+- { word: present, picture: present, category: toys,     level: 4A, sentences: ["Here is my present."] }
+- { word: pretzel, picture: pretzel, category: food,     level: 4A, sentences: ["I eat a pretzel."] }
+- { word: tray,    picture: tray,    category: home,     level: 4A, sentences: ["Look at the tray."] }
+- { word: trumpet, picture: trumpet, category: toys,     level: 4A, sentences: ["Here is my trumpet."] }
+- { word: snake,   picture: snake,   category: animals,  level: 4A, sentences: ["I see a snake."] }
+- { word: sponge,  picture: sponge,  category: home,     level: 4A, sentences: ["This is a sponge."] }
+- { word: swan,    picture: swan,    category: animals,  level: 4A, sentences: ["The swan can swim."] }
+- { word: skate,   picture: skate,   category: toys,     level: 4A, sentences: ["Here is my skate."] }
+- { word: stool,   picture: stool,   category: home,     level: 4A, sentences: ["Look at the stool."] }
+# Kittens batch 2
+- { word: ring,    picture: ring,    category: toys,     level: 4A, sentences: ["Here is my ring."] }
+- { word: skunk,   picture: skunk,   category: animals,  level: 4A, sentences: ["The skunk can walk."] }
+- { word: pond,    picture: pond,    category: nature,   level: 4A, sentences: ["Look at the pond."] }
+- { word: vest,    picture: vest,    category: clothes,  level: 4A, sentences: ["Here is my vest."] }
+- { word: stamp,   picture: stamp,   category: toys,     level: 4A, sentences: ["Here is my stamp."] }
+- { word: can,     picture: can,     category: home,     level: 4A, sentences: ["Look at the can."] }
+- { word: jug,     picture: jug,     category: home,     level: 4A, sentences: ["Look at the jug."] }
+- { word: rake,    picture: rake,    category: toys,     level: 4A, sentences: ["Look at the rake."] }
+- { word: crow,    picture: crow,    category: animals,  level: 4A, sentences: ["I see a crow."] }
+- { word: jar,     picture: jar,     category: home,     level: 4A, sentences: ["Look at the jar."] }

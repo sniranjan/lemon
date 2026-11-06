@@ -40,7 +40,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 203 passed (2026-11-06).
+- `uv run pytest`: 238 passed (2026-11-06, with Kittens Reading).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -54,6 +54,18 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   full level). Booklets: one per section plus `ducklings-reading-level.pdf` (202 pages = cover + 200 + log).
   The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
+
+- **Kittens Reading (EN 4A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/4A.yaml`: A Letter Teams
+  1–100 (ten 10-page units: double letters, sh, ch/tch, th/wh, ck, l-, r-, s-blends, teams at the end, word
+  families; each unit = 3 parts: familiar words 1–3, one new word a page 4–8, write the team 9–10), B Rhyme Time
+  101–140 (pairs, pick of 2, pick of 3, odd one out), C Trace a Sentence 141–200 (6A frames + `more_can` /
+  `more_daily`). New sheet types `letter_team`, `rhyme_match`, `sentence_trace`; planner `ws/phonics.py`
+  (new words chosen by team, not bank order); hand-checked teams and rhymes in `content/phonics/english.yaml`.
+  50 new words (target 50; chart ~225), batches `4A-words-batch1.md` (40) and `batch2.md` (10), approved by the
+  orchestrator under the user's delegation; pictures `scripts/pictures/draw_4A_batch1.py`. bat/pan/wig/bug were
+  given to Bunnies Reading (replaced by can, jug, rake, crow): once Bunnies words merge, add them to the 4A rhyme
+  groups and families (-at, -an, -ig, -ug). Verify 0 errors (1 warning: color-word pages 151–160); booklets:
+  three section PDFs + `kittens-reading-level.pdf` (202 pages) + answers for Rhyme Time.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

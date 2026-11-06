@@ -18,6 +18,7 @@ from ws.syllabus import load_level
 
 EN7A = load_level("english", "7A")
 EN6A = load_level("english", "6A")
+EN4A = load_level("english", "4A")
 
 # Sentences that once came out of the frames and must never come back.
 KNOWN_BAD = {
@@ -112,6 +113,9 @@ def all_texts() -> list[tuple[str, str]]:
     plan = gen.build_plan(EN6A)
     for page, p in plan.pages.items():
         out += [(f"6A p{page}", ph["text"]) for ph in p.extra.get("phrases", [])]
+    plan = gen.build_plan(EN4A)   # Kittens Reading: traced sentences
+    for page, p in plan.pages.items():
+        out += [(f"4A p{page}", ph["text"]) for ph in p.extra.get("phrases", [])]
     return out
 
 

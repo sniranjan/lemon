@@ -1,0 +1,92 @@
+{
+  "id": "EN-4A-B-031",
+  "subject": "english",
+  "level": "4A",
+  "section": "B",
+  "part": 4,
+  "sheet_type": "rhyme_match",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 4240104113379672009,
+  "title": "Which one doesn't rhyme?",
+  "parent_tip": "Say the words slowly together. Words that rhyme end with the same sound, like cat and hat. Let your child point first, then circle.",
+  "items": [
+    {
+      "kind": "rhyme_odd_one",
+      "choices": [
+        "bell",
+        "rain",
+        "train"
+      ],
+      "pictures": [
+        "bell",
+        "rain",
+        "train"
+      ],
+      "answer": "bell"
+    },
+    {
+      "kind": "rhyme_odd_one",
+      "choices": [
+        "sleep",
+        "balloon",
+        "spoon"
+      ],
+      "pictures": [
+        "sleep",
+        "balloon",
+        "spoon"
+      ],
+      "answer": "sleep"
+    },
+    {
+      "kind": "rhyme_odd_one",
+      "choices": [
+        "bunny",
+        "boat",
+        "goat"
+      ],
+      "pictures": [
+        "bunny",
+        "boat",
+        "goat"
+      ],
+      "answer": "bunny"
+    },
+    {
+      "kind": "rhyme_odd_one",
+      "choices": [
+        "bee",
+        "knee",
+        "pear"
+      ],
+      "pictures": [
+        "bee",
+        "knee",
+        "pear"
+      ],
+      "answer": "pear"
+    }
+  ],
+  "answer_key": [
+    "bell",
+    "sleep",
+    "bunny",
+    "pear"
+  ],
+  "new_words": [],
+  "review_words": [
+    "bell",
+    "rain",
+    "train",
+    "sleep",
+    "balloon",
+    "spoon",
+    "bunny",
+    "boat",
+    "goat",
+    "bee",
+    "knee",
+    "pear"
+  ]
+}

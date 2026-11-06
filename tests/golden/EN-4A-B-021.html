@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kittens · Reading · page 121</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #0B7A75;
+  --tint: #E6F4F3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.rhymes { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+.rhymes .card { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: space-around; gap: 12px; padding: 4px 16px; }
+.rhymes .pic { display: flex; flex-direction: column; align-items: center; gap: 0; width: 132px; }
+.rhymes .pic img { width: 86px; height: 86px; }
+.rhymes .word { font-size: 34px; font-weight: 700; line-height: 1.1; white-space: nowrap; }
+.rhymes .word b { color: var(--accent); text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; text-decoration-skip-ink: none; }
+/* the word to match, in a tinted box with a heavy border; then the choices to circle */
+.rhymes .prompt { flex: none; background: var(--tint); border: 3px solid var(--ink); border-radius: 20px; padding: 6px 4px; }
+.rhymes .join { flex: none; width: 36px; border-top: 5px dotted var(--ink); }
+.rhymes .choices { flex: 1; display: flex; justify-content: space-around; }
+.rhymes .pair .pic { width: 230px; }
+.rhymes .pair .pic img { width: 96px; height: 96px; }
+.rhymes .pair .word { font-size: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Kittens · Reading</div>
+      <div class="title-row"><h1>Which one rhymes?</h1><span class="pill">Kittens · 121</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Say the words slowly together. Words that rhyme end with the same sound, like cat and hat. Let your child point first, then circle.</div>
+  <main class="body">
+    <div class="rhymes">
+      <div class="card"><div class="prompt"><div class="pic"><img src="../../../../../assets/pictures/rock.svg" alt=""><div class="word">rock</div></div></div><div class="join"></div><div class="choices"><div class="pic"><img src="../../../../../assets/pictures/nap.svg" alt=""><div class="word">nap</div></div><div class="pic"><img src="../../../../../assets/pictures/ring.svg" alt=""><div class="word">ring</div></div><div class="pic"><img src="../../../../../assets/pictures/sock.svg" alt=""><div class="word">sock</div></div></div></div>
+      <div class="card"><div class="prompt"><div class="pic"><img src="../../../../../assets/pictures/grill.svg" alt=""><div class="word">grill</div></div></div><div class="join"></div><div class="choices"><div class="pic"><img src="../../../../../assets/pictures/hill.svg" alt=""><div class="word">hill</div></div><div class="pic"><img src="../../../../../assets/pictures/deer.svg" alt=""><div class="word">deer</div></div><div class="pic"><img src="../../../../../assets/pictures/rocket.svg" alt=""><div class="word">rocket</div></div></div></div>
+      <div class="card"><div class="prompt"><div class="pic"><img src="../../../../../assets/pictures/hug.svg" alt=""><div class="word">hug</div></div></div><div class="join"></div><div class="choices"><div class="pic"><img src="../../../../../assets/pictures/fox.svg" alt=""><div class="word">fox</div></div><div class="pic"><img src="../../../../../assets/pictures/fan.svg" alt=""><div class="word">fan</div></div><div class="pic"><img src="../../../../../assets/pictures/rug.svg" alt=""><div class="word">rug</div></div></div></div>
+      <div class="card"><div class="prompt"><div class="pic"><img src="../../../../../assets/pictures/bunny.svg" alt=""><div class="word">bunny</div></div></div><div class="join"></div><div class="choices"><div class="pic"><img src="../../../../../assets/pictures/grass.svg" alt=""><div class="word">grass</div></div><div class="pic"><img src="../../../../../assets/pictures/cook.svg" alt=""><div class="word">cook</div></div><div class="pic"><img src="../../../../../assets/pictures/honey.svg" alt=""><div class="word">honey</div></div></div></div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Kittens · Reading · page 121</footer>
+</div>
+</body>
+</html>

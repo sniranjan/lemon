@@ -1,0 +1,35 @@
+# Parent tips per sheet type (≤ 220 characters, warm, concrete, American spelling).
+# A sheet picks one by its seed.
+word_picture_pair:
+  - "Point to each picture and say the word slowly. Let your child say it back. Then say the small pictures again together."
+  - "Touch the picture, then the word, and say it together. Clap once for each word you say."
+  - "Say each word in a fun voice: whisper it, then say it big. Smile and praise every try."
+word_picture_sentence:
+  - "Say each word, then read the sentence to your child, pointing to each word. Let your child say the word back."
+  - "Read the sentence slowly while you point. Pause before the picture word and let your child say it."
+review_grid_4:
+  - "Say one of the words and let your child find it. Then let your child pick one for you to find!"
+  - "Play find it: say a word, your child touches the picture. Cheer for every find."
+word_story:
+  - "Read the story together, pointing to each word. Pause at the picture words and let your child say them."
+  - "Read each line, then read it again together. Point to each word as you say it."
+phrase_card:
+  - "Point to each word as you say the phrase together. Then let your child say it alone while touching the picture."
+  - "Say the phrase, then ask a little question about it. Let your child answer with the whole phrase."
+  - "Read each card slowly and let your child echo you. Make it a game: say it in a whisper, then in a big voice."
+sentence_recite:
+  - "Read the sentence while you point to each word. Your child says it with you three times and colors a circle each time."
+  - "Say the sentence together three times: slowly, then a little faster, then in a happy voice. Color a circle after each one."
+  - "Point to the picture and ask a question the sentence answers. Then say the sentence together and color a circle."
+letter_team:
+  - "Say the team's sound together (sh says shhh). Read each word slowly, sliding through the sounds, then let your child trace or write the team."
+  - "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try."
+  - "Read each word together and clap on the team's sound. Then trace or write the team, one letter at a time."
+rhyme_match:
+  - "Say the words slowly together. Words that rhyme end with the same sound, like cat and hat. Let your child point first, then circle."
+  - "Say each picture's word out loud. Ask: do these sound the same at the end? Let your child find the answer, then cheer!"
+  - "Make it a game: say a rhyming pair, then make up a silly word that rhymes too. Let your child circle the answer."
+sentence_trace:
+  - "Read the sentence together, pointing to each word. Then your child traces the gray letters, starting with the big capital letter."
+  - "Read it once together, then let your child read it alone. Trace slowly on the lines, and point out the period at the end."
+  - "Say the sentence, then trace it one word at a time. Leave a finger space between words. Read the traced sentence together at the end."

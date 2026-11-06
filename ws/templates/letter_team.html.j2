@@ -1,0 +1,31 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.teams { flex: none; display: flex; justify-content: center; gap: 18px; margin-bottom: 16px; }
+.teams span { font-size: 48px; font-weight: 700; line-height: 1; padding: 8px 26px 12px; border: 3px solid var(--ink);
+              border-radius: 999px; background: var(--tint); }
+.teams.many span { font-size: 36px; padding: 6px 18px 10px; }
+.rows { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px; }
+.rows .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 22px; padding: 4px 26px; }
+.rows img { flex: none; width: 118px; height: 118px; }
+.rows .read, .rows .work { flex: 1; min-width: 0; font-size: 56px; line-height: 1.1; white-space: nowrap; }
+/* the team: bold, in the subject color and underlined, so it still shows in black and white */
+.rows .read { font-weight: 700; }
+.rows .read b { color: var(--accent); text-decoration: underline; text-decoration-thickness: 5px; text-underline-offset: 8px; text-decoration-skip-ink: none; }
+/* the child's turn: the word on a writing line, the team in gray to trace or as empty boxes */
+.rows .work { font-weight: 400; border-bottom: 3px solid #9a9aa0; padding-bottom: 4px; display: flex; align-items: flex-end; }
+.rows .work i { font-style: normal; color: #bdbdc3; }
+.rows .work .box { display: inline-block; width: 44px; height: 58px; margin: 0 3px; border: 3px solid var(--ink); border-radius: 8px; }
+{% endblock %}
+{% block body %}
+{% set teams = sheet.items | map(attribute="letters") | unique | list %}
+    <div class="teams{% if teams | length > 3 %} many{% endif %}">{% for t in teams %}<span>{{ t }}</span>{% endfor %}</div>
+    <div class="rows">
+{% for item in sheet.items %}
+      <div class="card">
+        <img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt="">
+        <div class="read">{{ item.parts[0] }}<b>{{ item.parts[1] }}</b>{{ item.parts[2] }}</div>
+        <div class="work">{{ item.parts[0] }}{% if item.task == "fill" %}{% for _ in item.parts[1] %}<span class="box"></span>{% endfor %}{% else %}<i>{{ item.parts[1] }}</i>{% endif %}{{ item.parts[2] }}</div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

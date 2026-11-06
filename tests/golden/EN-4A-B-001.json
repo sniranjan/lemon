@@ -1,0 +1,111 @@
+{
+  "id": "EN-4A-B-001",
+  "subject": "english",
+  "level": "4A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "rhyme_match",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 598264137297417083,
+  "title": "Words that rhyme",
+  "parent_tip": "Say both words slowly, then say just the ending sound together. Let your child find the matching letters at the end.",
+  "items": [
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "kick",
+        "chick"
+      ],
+      "pictures": [
+        "kick",
+        "chick"
+      ],
+      "parts": [
+        [
+          "k",
+          "ick"
+        ],
+        [
+          "ch",
+          "ick"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "sleep",
+        "sheep"
+      ],
+      "pictures": [
+        "sleep",
+        "sheep"
+      ],
+      "parts": [
+        [
+          "sl",
+          "eep"
+        ],
+        [
+          "sh",
+          "eep"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "box",
+        "fox"
+      ],
+      "pictures": [
+        "box",
+        "fox"
+      ],
+      "parts": [
+        [
+          "b",
+          "ox"
+        ],
+        [
+          "f",
+          "ox"
+        ]
+      ]
+    },
+    {
+      "kind": "rhyme_pair",
+      "words": [
+        "dig",
+        "pig"
+      ],
+      "pictures": [
+        "dig",
+        "pig"
+      ],
+      "parts": [
+        [
+          "d",
+          "ig"
+        ],
+        [
+          "p",
+          "ig"
+        ]
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "kick",
+    "chick",
+    "sleep",
+    "sheep",
+    "box",
+    "fox",
+    "dig",
+    "pig"
+  ]
+}

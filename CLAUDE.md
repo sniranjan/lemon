@@ -264,6 +264,9 @@ test.** Nothing else in the code should change.
 | `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
 | `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
 | `add_facts` | MA 3A-C…F, 2A | Vertical list of `a + b =` facts within the part's range; answer key generated |
+| `letter_team` | EN 4A-A | 4 picture words with their letter team highlighted (sh, bl, -at); trace the team in gray or write it in boxes. Teams and words from the hand-checked `content/phonics/english.yaml`; new words go to the page whose team they carry |
+| `rhyme_match` | EN 4A-B | 4 rows from hand-checked rhyme groups: read a rhyming pair, pick the picture that rhymes, or find the odd one out (wrong choices never share the vowel sound); answer key |
+| `sentence_trace` | EN 4A-C | Picture + a sentence of known words (the 6A frames and truth rules), read, then traced in gray on writing lines (two lines when long) |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the
@@ -351,6 +354,7 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
   re-renders from its frame; colors, sizes, temperatures and animal actions match the tables;
   the pictures and `picture_size` are the ones the phrase calls for; new words are used and pictured.
 - `letter_trace`: letters requested exist in the trace font.
+- `letter_team`: the word is on the team's hand-checked list and the team sits at its place (start/end/any). `rhyme_match`: rhymes come from the hand-checked groups; wrong choices have a different vowel; the answer is not always in the same place.
 
 **Exposure checks (per section / level run)**
 - Words are "new" exactly once in the level.
