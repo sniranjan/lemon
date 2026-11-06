@@ -9,7 +9,13 @@ posts/       feed posts, one folder per post: posts/YYYY-MM-DD-short-name/ (imag
 stories/     stories (1080×1920)
 reels/       reel covers (1080×1920) and scripts
 templates/   reusable layouts
+posted.jsonl one line per published post/story (written by ig_publish.py)
+API.md       posting, comments and DMs from the repo: token refresh, make → render → publish
 ```
+
+**To make and publish a new post, read [API.md](API.md).** Short version:
+`ig_post.py new <YYYY-MM-DD-slug>` → edit `post.yaml` → `ig_post.py render <folder>` → look at it →
+refresh the token → `ig_publish.py <folder>`.
 
 ## Sizes
 | Format | Size | Notes |
