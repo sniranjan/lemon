@@ -1,0 +1,31 @@
+{% extends "base.html.j2" %}
+{# Decimal columns: whole-number digits right-aligned, decimal digits left-aligned, the points in
+   one narrow column. Missing places stay empty (3.5 over 12.47). The answer row has a box for
+   every column; the point is printed in it only when the part says so. #}
+{% macro digits(s, w, d) %}{% set whole = s.split(".")[0] %}{% set frac = s.split(".")[1] if "." in s else "" %}{% for c in range(w) %}{% set k = c - (w - whole | length) %}<span class="d">{% if k >= 0 %}{{ whole[k] }}{% endif %}</span>{% endfor %}<span class="pt">{% if frac %}.{% endif %}</span>{% for c in range(d) %}<span class="d">{% if c < frac | length %}{{ frac[c] }}{% endif %}</span>{% endfor %}{% endmacro %}
+{% block style %}
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat({{ (sheet.items | length + 1) // 2 }}, 1fr); gap: 18px 22px; }
+.problems .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.sum { display: grid; grid-template-columns: 44px repeat(var(--w), 44px) 18px repeat(var(--d), 44px); column-gap: 3px; align-items: center; justify-items: center; }
+.d { font-size: 46px; font-weight: 700; line-height: 50px; height: 50px; }
+.pt { font-size: 46px; font-weight: 700; line-height: 50px; height: 50px; }
+.sign { font-size: 44px; font-weight: 700; line-height: 50px; color: var(--accent); }
+.rule { grid-column: 1 / -1; justify-self: stretch; height: 0; border-top: 4px solid var(--ink); margin: 6px 0 10px; }
+.ans { width: 42px; height: 50px; border: 3px solid var(--ink); border-radius: 10px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ink); align-self: end; margin-bottom: 4px; }
+{% endblock %}
+{% block body %}
+    <div class="problems">
+{% for i in sheet.items %}
+{% set w, d = i.cols %}
+      <div class="card"><span class="qn" data-audience="parent">{{ loop.index }}</span><div class="sum" style="--w: {{ w }}; --d: {{ d }}">
+        <span></span>{{ digits(i.a, w, d) }}
+        <span class="sign">{{ i.sign }}</span>{{ digits(i.b, w, d) }}
+        <span class="rule"></span>
+        <span></span>{% for c in range(w) %}<span class="ans"></span>{% endfor %}{% if i.point %}<span class="dot"></span>{% else %}<span></span>{% endif %}{% for c in range(d) %}<span class="ans"></span>{% endfor %}
+
+      </div></div>
+{% endfor %}
+    </div>
+{% endblock %}

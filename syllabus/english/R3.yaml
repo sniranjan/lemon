@@ -1,0 +1,102 @@
+subject: english
+level: R3
+title: Characters, word builders, fables and full-sentence answers
+# Our own level (source: ours), grade 3 reading for an on-pace 6-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md, audit table: sections re-aimed to grade 3 standards).
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Every passage is original (content/passages/R3/<section>.yaml); word builders are hand-checked
+# (content/wordparts/R3.yaml). Drafts and their approval: syllabus/drafts/R3-passages.md, R3-words.md.
+preview_pages: [1, 51, 91, 171]   # one page of each sheet type, in the level's free preview
+aims:
+  - Describe characters by their traits, motives and feelings, and explain why they act as they do (RL.3.3)
+  - Work out the meaning of words built with un-, re-, -ful and -less, and read compound words (L.3.4b)
+  - Retell fables and find their lesson, using details from the text (RL.3.2)
+  - Answer questions about a text in full sentences that use the words of the question (RL.3.1)
+  - Read 120–150-word passages at a grade 3 level (Flesch-Kincaid grade 2.5–4.5)
+pages: 200
+daily_pages: 2               # source: ours; a passage page takes much longer than a picture page
+sct_minutes_per_page: [6, 10]  # source: ours (read the passage, then answer)
+rules:
+  # ws/plan.py plan_passages: each passage page is one question set of one passage, in file order;
+  # a passage has one set per page it serves (2 here), so the same text is read on two days.
+  planner: passages
+  answers: by_line            # answers PDF: one line per answer (sample sentences), ws/booklet.py
+  passage_words: [120, 150]
+  fk_grade: [2.5, 4.5]       # Flesch-Kincaid grade of every passage (ws/readability.py)
+  pages_per_passage: 2       # each passage is read on two pages, with different questions
+  questions_per_page: 3      # what fits on one Letter page under a 150-word passage at 20px
+  written_answers: [1, 1]    # of those, how many are written on lines (the rest: circle A, B or C)
+sections:
+  - code: A
+    name: Character Traits and Motives
+    public_name: Why They Did It
+    pages: [1, 50]
+    sheet_types: [passage_questions]
+    standards: [RL.3.3, RL.3.1, RF.3.4]
+    source: ours
+    rules: { passages: A }
+
+  # Affixes one at a time (L.3.4b examples: care/careless), then mixed, then compound words.
+  - code: B
+    name: Prefixes, Suffixes and Compound Words
+    public_name: Word Builders
+    pages: [51, 90]
+    sheet_types: [word_builder]
+    standards: [L.3.4b, RF.3.3a, L.3.4a]
+    source: ours
+    rules: { builds: 4, meanings: 2, sentences: 2 }
+    parts:
+      - { part: 1, pages: [51, 58], name: "un- means not",       rules: { affixes: [un] } }
+      - { part: 2, pages: [59, 66], name: "re- means again",     rules: { affixes: [re] } }
+      - { part: 3, pages: [67, 72], name: "-ful means full of",  rules: { affixes: [ful] } }
+      - { part: 4, pages: [73, 78], name: "-less means without", rules: { affixes: [less] } }
+      - { part: 5, pages: [79, 84], name: All four,              rules: { affixes: [un, re, ful, less] } }
+      # Compound words are grade 2 (L.2.4d); here they close the section with meaning-in-a-sentence work.
+      - { part: 6, pages: [85, 90], name: Two words in one,      standards: [L.2.4d],
+          rules: { affixes: [compound], tips: { word_builder: [
+            "Say both picture words, then put them together into one word.",
+            "Read each word, then clap once for each small word inside it." ] } } }
+
+  - code: C
+    name: Fables and Morals
+    public_name: Fables and Their Lessons
+    pages: [91, 130]
+    sheet_types: [passage_questions]
+    standards: [RL.3.2, RL.3.1]
+    source: ours
+    rules:
+      passages: C
+      tips:
+        passage_questions:
+          - "Ask: what did the animal learn? When have you learned that too?"
+          - "Retell the fable together in three parts: start, middle and end."
+          - "Ask which part of the fable shows the lesson best, and why."
+
+  - code: D
+    name: Feelings and Reasons
+    public_name: Why Did They?
+    pages: [131, 170]
+    sheet_types: [passage_questions]
+    standards: [RL.3.3, RL.3.1]
+    source: ours
+    rules:
+      passages: D
+      tips:
+        passage_questions:
+          - "Talk about the feeling words: when have you felt that way?"
+          - "Ask why the character felt that way. Find the words that show it."
+          - "Ask how the feeling changed from the start to the end, and why."
+
+  # Turn the question into the answer: "Why did Ben smile?" -> "Ben smiled because ...".
+  # Part 1 gives the first words of each answer; part 2 doesn't.
+  - code: E
+    name: Full-Sentence Answers
+    public_name: Say It in a Sentence
+    pages: [171, 200]
+    sheet_types: [full_sentence_answer]
+    standards: [RL.3.1, L.3.1i, L.3.2]
+    source: ours
+    rules: { passages: E, passage_words: [120, 140], written_answers: [3, 3] }
+    parts:
+      - { part: 1, pages: [171, 180], name: With a sentence starter, rules: { starters: true } }
+      - { part: 2, pages: [181, 200], name: On your own,             rules: { starters: false } }

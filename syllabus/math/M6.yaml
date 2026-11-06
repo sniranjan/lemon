@@ -24,14 +24,15 @@ sections:
     name: Dividing Fractions by Fractions
     public_name: Dividing Fractions
     pages: [1, 30]
-    sheet_types: [fraction_divide]
+    sheet_types: [fraction_ops]
     standards: [6.NS.1]
     source: ours
     rules:
+      op: div
       max_den: 12
       max_whole: 6
       tips:
-        fraction_divide:
+        fraction_ops:
           - "To divide by a fraction, keep the first number, change ÷ to ×, and flip the second fraction: 3/4 ÷ 1/8 = 3/4 × 8/1 = 6."
           - "Ask: how many of the second number fit in the first? 2 ÷ 1/3 means how many thirds fit in 2. The answer is 6."
           - "Check an answer by multiplying back: if 3/4 ÷ 1/8 = 6, then 6 × 1/8 should be 3/4."
@@ -49,7 +50,7 @@ sections:
           max_whole: 3
           max_pieces: 24
           tips:
-            fraction_divide:
+            fraction_ops:
               - "Each bar is one whole, cut into pieces the size of the second fraction. Count the shaded pieces: that is how many fit."
               - "Read 3 ÷ 1/4 as: how many quarters are in 3? Count the quarter pieces in three whole bars."
               - "For 3/4 ÷ 1/8, the shaded part is 3/4 of a bar. Count how many eighths it covers."
@@ -58,8 +59,8 @@ sections:
         pages: [11, 20]
         rules:
           title: Dividing fractions
-          layout: facts
-          problems: 10
+          layout: list
+          problems: 8
           dividend: [proper]
           divisor: [proper, unit, proper, proper, unit]
           max_den: 10
@@ -67,11 +68,11 @@ sections:
       - part: 3
         name: Mixed numbers and stories
         pages: [21, 30]
-        sheet_types: [fraction_divide, fraction_divide, rational_story]
+        sheet_types: [fraction_ops, fraction_ops, rational_story]
         rules:
           title: Mixed numbers
-          layout: facts
-          problems: 10
+          layout: list
+          problems: 8
           dividend: [mixed, whole, mixed, proper, mixed]
           divisor: [proper, mixed, unit, proper, proper]
           max_whole: 5
@@ -79,7 +80,7 @@ sections:
           story_title: Fraction stories
           tags: [fraction_divide, fraction_divide, fraction_divide]
           tips:
-            fraction_divide:
+            fraction_ops:
               - "Turn mixed numbers into fractions first: 2 1/2 is 5/2. Then keep, change and flip as before."
               - "Write the answer in simplest form. An answer above 1 can be a mixed number, like 2 1/3."
             rational_story:

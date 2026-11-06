@@ -56,23 +56,30 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
 .obj-row img { width: var(--obj); height: var(--obj); }
 
 .foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
-.q { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; vertical-align: middle; }
-.q-w, .q-s { font-size: 42px; line-height: 1; }
-.q-f { display: inline-flex; flex-direction: column; align-items: center; font-size: 30px; line-height: 1.08; }
-.q-f > span:first-child { border-bottom: 3px solid var(--ink); padding: 0 4px 1px; }
-.q-f > span:last-child { padding: 1px 4px 0; }
-
-.probs { flex: 1; min-height: 0; display: grid; gap: 14px 18px;
-         grid-template-columns: 1fr; grid-auto-rows: 1fr; }
-.probs .card { position: relative; min-height: 0; display: flex; align-items: center; gap: 26px; padding: 8px 22px 8px 34px; border-radius: 22px; }
-.qn { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; color: #8a8a90; }
-.eq { min-width: 300px; display: flex; align-items: center; gap: 9px; font-size: 38px; font-weight: 700; white-space: nowrap; }
-.ans { width: 86px; height: 82px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; flex: none; }
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
+.list { grid-template-rows: repeat(3, 1fr); grid-auto-flow: column; }
+.area { grid-template-rows: 1fr 1fr; }
+.problems .card { position: relative; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 22px 12px 10px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+.eqn { display: flex; align-items: center; gap: 12px; font-weight: 700; line-height: 1; }
+.opnd { display: inline-flex; align-items: center; gap: 4px; }
+.whole { font-size: 42px; }
+.fr { display: inline-flex; flex-direction: column; align-items: center; font-size: 30px; line-height: 1.05; }
+.fr .bar { width: 100%; min-width: 30px; border-top: 3px solid var(--ink); margin: 3px 0; }
+.op { font-size: 36px; color: var(--accent); }
+.ans { display: inline-block; width: 92px; height: 86px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+.work { margin-top: auto; width: 88%; border-bottom: 2px dashed #c9c9ce; height: 1px; }
+.area .card { justify-content: space-around; padding-top: 16px; }
+.area .ans { height: 82px; }
+/* dividing (Pandas math): one problem a row with whole bars cut into divisor-sized pieces */
+.model { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+.model .card { flex-direction: row; align-items: center; justify-content: flex-start; gap: 26px; padding: 8px 22px 8px 34px; }
+.model .eqn { min-width: 320px; }
 .bars { flex: 1; display: flex; flex-direction: column; gap: 8px; }
-.bar { display: flex; height: 28px; border: 3px solid var(--ink); border-radius: 5px; overflow: hidden; }
-.bar i { flex: 1; border-left: 2px solid var(--ink); background: #fff; }
-.bar i:first-child { border-left: 0; }
-.bar i.on { background: repeating-linear-gradient(45deg, #fff 0 4px, var(--accent) 4px 7px); }
+.pbar { display: flex; height: 28px; border: 3px solid var(--ink); border-radius: 5px; overflow: hidden; }
+.pbar i { flex: 1; border-left: 2px solid var(--ink); background: #fff; }
+.pbar i:first-child { border-left: 0; }
+.pbar i.on { background: repeating-linear-gradient(45deg, #fff 0 4px, var(--accent) 4px 7px); }
 </style>
 </head>
 <body>
@@ -90,36 +97,36 @@ h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
   </header>
   <div class="tip" data-audience="parent"><b>For grown-ups:</b> Read 3 ÷ 1/4 as: how many quarters are in 3? Count the quarter pieces in three whole bars.</div>
   <main class="body">
-    <div class="probs">
+    <div class="problems model">
       <div class="card"><span class="qn" data-audience="parent">1</span>
-        <div class="eq"><span class="q"><span class="q-w">2</span></span><span>÷</span><span class="q"><span class="q-f"><span>1</span><span>3</span></span></span><span>=</span><span class="ans"></span></div>
+        <div class="eqn"><span class="opnd"><span class="whole">2</span></span><span class="op">÷</span><span class="opnd"><span class="fr"><span>1</span><span class="bar"></span><span>3</span></span></span><span class="op">=</span><span class="ans"></span></div>
         <div class="bars">
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         </div>
       </div>
       <div class="card"><span class="qn" data-audience="parent">2</span>
-        <div class="eq"><span class="q"><span class="q-f"><span>2</span><span>3</span></span></span><span>÷</span><span class="q"><span class="q-f"><span>1</span><span>6</span></span></span><span>=</span><span class="ans"></span></div>
+        <div class="eqn"><span class="opnd"><span class="fr"><span>2</span><span class="bar"></span><span>3</span></span></span><span class="op">÷</span><span class="opnd"><span class="fr"><span>1</span><span class="bar"></span><span>6</span></span></span><span class="op">=</span><span class="ans"></span></div>
         <div class="bars">
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
         </div>
       </div>
       <div class="card"><span class="qn" data-audience="parent">3</span>
-        <div class="eq"><span class="q"><span class="q-w">1</span></span><span>÷</span><span class="q"><span class="q-f"><span>1</span><span>4</span></span></span><span>=</span><span class="ans"></span></div>
+        <div class="eqn"><span class="opnd"><span class="whole">1</span></span><span class="op">÷</span><span class="opnd"><span class="fr"><span>1</span><span class="bar"></span><span>4</span></span></span><span class="op">=</span><span class="ans"></span></div>
         <div class="bars">
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
         </div>
       </div>
       <div class="card"><span class="qn" data-audience="parent">4</span>
-        <div class="eq"><span class="q"><span class="q-f"><span>3</span><span>5</span></span></span><span>÷</span><span class="q"><span class="q-f"><span>1</span><span>10</span></span></span><span>=</span><span class="ans"></span></div>
+        <div class="eqn"><span class="opnd"><span class="fr"><span>3</span><span class="bar"></span><span>5</span></span></span><span class="op">÷</span><span class="opnd"><span class="fr"><span>1</span><span class="bar"></span><span>10</span></span></span><span class="op">=</span><span class="ans"></span></div>
         <div class="bars">
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
         </div>
       </div>
       <div class="card"><span class="qn" data-audience="parent">5</span>
-        <div class="eq"><span class="q"><span class="q-w">1</span></span><span>÷</span><span class="q"><span class="q-f"><span>1</span><span>3</span></span></span><span>=</span><span class="ans"></span></div>
+        <div class="eqn"><span class="opnd"><span class="whole">1</span></span><span class="op">÷</span><span class="opnd"><span class="fr"><span>1</span><span class="bar"></span><span>3</span></span></span><span class="op">=</span><span class="ans"></span></div>
         <div class="bars">
-          <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <div class="pbar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         </div>
       </div>
     </div>

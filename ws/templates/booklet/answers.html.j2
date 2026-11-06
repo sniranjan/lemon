@@ -2,6 +2,8 @@
 {% block style %}
 td { height: 34px; }
 .c-page { width: 18%; }
+.ans { line-height: 24px; padding-left: 1.4em; text-indent: -1.4em; }
+td.by-line { padding-top: 6px; padding-bottom: 6px; vertical-align: top; }
 {% endblock %}
 {% block pages %}
 {% for chunk in rows %}{# pages of rows, split by ws.booklet._answer_pages #}
@@ -13,7 +15,7 @@ td { height: 34px; }
   <table style="margin-top: 20px;">
     <tr><th class="c-page">Page</th><th>Answers, in the order of the sheet (rows left to right, top to bottom; numbered facts follow their numbers)</th></tr>
 {% for r in chunk %}
-    <tr><td>Page {{ r.page }}</td><td>{{ r.answers }}</td></tr>
+    <tr><td>Page {{ r.page }}</td><td{% if r.get("by_line") %} class="by-line"{% endif %}>{% if r.get("lines") %}{% for a in r.lines %}<div class="ans">{{ a }}</div>{% endfor %}{% else %}{{ r.answers }}{% endif %}</td></tr>
 {% endfor %}
   </table>
   <div class="foot">{{ booklet_id }}-answers</div>

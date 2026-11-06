@@ -58,6 +58,19 @@ sound_parts_rhyme:
 word_trace:
   - "Read each word together while pointing to the picture. Then your child traces the dots, one letter at a time, left to right."
   - "Say the word, then say each letter as your child traces it. Read the whole word again at the end."
+passage_questions:
+  # one line each (a short tip leaves room for the passage and the questions)
+  - "Your child reads aloud. For each answer, ask: where did you find it?"
+  - "Take turns reading sentences. Point back to the story for clues."
+  - "After reading, let your child retell the story in their own words."
+word_builder:
+  - "Cover the word part, read the known word, then read the new word."
+  - "Ask your child to say each new word in a sentence. Silly ones count!"
+  - "Read each built word and ask: what does the word part add?"
+full_sentence_answer:
+  - "Show how each answer reuses the question's words. Spelling can wobble."
+  - "Say each answer aloud first, then write it: capital letter, period."
+  - "Ask your child to point to the sentence that helps with each answer."
 letter_team:
   - "Say the team's sound together (sh says shhh). Read each word slowly, sliding through the sounds, then let your child trace or write the team."
   - "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try."

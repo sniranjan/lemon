@@ -1,0 +1,79 @@
+{
+  "id": "MA-M5-F-001",
+  "subject": "math",
+  "level": "M5",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "order_of_operations",
+  "page_number": 191,
+  "variant": 1,
+  "seed": 2188792213566039586,
+  "title": "Parentheses first",
+  "parent_tip": "Cover the rest of the line and do just the part in parentheses. Write that number above it, then finish.",
+  "items": [
+    {
+      "kind": "expression",
+      "expr": "(11 + 2) × (6 − 3)",
+      "n": 1
+    },
+    {
+      "kind": "expression",
+      "expr": "10 − (10 − 9)",
+      "n": 2
+    },
+    {
+      "kind": "expression",
+      "expr": "9 + [7 × (11 − 1)]",
+      "n": 3
+    },
+    {
+      "kind": "expression",
+      "expr": "10 − (2 + 7)",
+      "n": 4
+    },
+    {
+      "kind": "expression",
+      "expr": "[7 × (1 + 5)] ÷ 3",
+      "n": 5
+    },
+    {
+      "kind": "expression",
+      "expr": "10 × (5 + 1)",
+      "n": 6
+    },
+    {
+      "kind": "expression",
+      "expr": "(1 + 7) × 5",
+      "n": 7
+    },
+    {
+      "kind": "expression",
+      "expr": "[(1 + 9) × 4] − 2",
+      "n": 8
+    },
+    {
+      "kind": "expression",
+      "expr": "8 × 10 − 10 ÷ 5",
+      "n": 9
+    },
+    {
+      "kind": "expression",
+      "expr": "10 × 2 + 4 × 12",
+      "n": 10
+    }
+  ],
+  "answer_key": [
+    39,
+    9,
+    79,
+    1,
+    14,
+    60,
+    40,
+    38,
+    78,
+    68
+  ],
+  "new_words": [],
+  "review_words": []
+}

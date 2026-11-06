@@ -78,11 +78,11 @@ def test_whole_level_passes_and_keeps_to_the_parts(fixture_content):
         r = resolve_page(M6, page).rules
         if sheet.sheet_type == "equation_solve":
             assert all(parse(e["x"]) > 0 and parse(e["q"]) <= r["max_q"] for e in sheet.items)
-        if sheet.sheet_type == "fraction_divide":
-            assert all(parse(i["a"]) / parse(i["b"]) == parse(i["answer"]) for i in sheet.items)
+        if sheet.sheet_type == "fraction_ops":
+            assert all(i["op"] == "div" for i in sheet.items)
         if page > 130 or page <= 100:   # negatives only in Below Zero
             assert not any(str(a).lstrip("$").startswith(("−", "-")) for a in sheet.answer_key), sheet.id
-    assert types == {"fraction_divide", "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    assert types == {"fraction_ops", "ratio_table", "rational_story", "percent_problem", "signed_numbers",
                      "coordinate_grid", "expression_eval", "equation_solve"}
 
 
@@ -97,8 +97,8 @@ def test_verify_catches_wrong_answers(fixture_content):
         return " ".join(check(bad))
 
     def frac(b):
-        b.items[0]["answer"] = "99"
-    assert "is wrong" in broken(11, frac)
+        b.answer_key[0] = "99"
+    assert "answer key" in broken(11, frac)
 
     def bar(b):
         b.items[0]["bar"]["shaded"] += 1

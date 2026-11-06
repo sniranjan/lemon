@@ -24,11 +24,16 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Puppies Reading (3A): spelling patterns, word endings, syllables, sentence copying
     "pattern_words", "word_endings", "syllable_split", "sentence_copy",
+    # Foxes Reading (R3): passages with questions, word builders, full-sentence answers
+    "passage_questions", "word_builder", "full_sentence_answer",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
-    # Pandas math (M6): dividing fractions, ratios, rates, percents, negatives, the coordinate
+    # Otters math (M5): fraction and decimal arithmetic, parentheses, volume (long division reuses division_house)
+    "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
+    "order_of_operations", "box_volume",
+    # Pandas math (M6; dividing fractions extends fraction_ops): ratios, rates, percents, negatives, the coordinate
     # plane, expressions and one-step equations
-    "fraction_divide", "ratio_table", "rational_story", "percent_problem", "signed_numbers",
+    "ratio_table", "rational_story", "percent_problem", "signed_numbers",
     "coordinate_grid", "expression_eval", "equation_solve",
     "word_puzzle", "word_sort", "read_aloud",   # Cubs Reading (2A)
     # Owls math (M4): long multiplication, long division, factors and multiples, fraction bars

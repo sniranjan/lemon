@@ -1,0 +1,97 @@
+{
+  "id": "MA-M5-D-031",
+  "subject": "math",
+  "level": "M5",
+  "section": "D",
+  "part": 4,
+  "sheet_type": "decimal_column",
+  "page_number": 151,
+  "variant": 1,
+  "seed": 6998008403894178506,
+  "title": "Add or take away",
+  "parent_tip": "Look at the sign first. The answer row has no point now: your child puts it in, right under the other points.",
+  "items": [
+    {
+      "kind": "decimal_column",
+      "op": "add",
+      "sign": "+",
+      "a": "23.03",
+      "b": "54.72",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "decimal_column",
+      "op": "sub",
+      "sign": "−",
+      "a": "63",
+      "b": "14.12",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "decimal_column",
+      "op": "sub",
+      "sign": "−",
+      "a": "78.3",
+      "b": "57.09",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "decimal_column",
+      "op": "add",
+      "sign": "+",
+      "a": "8.45",
+      "b": "7.66",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "decimal_column",
+      "op": "sub",
+      "sign": "−",
+      "a": "89.48",
+      "b": "16.4",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    },
+    {
+      "kind": "decimal_column",
+      "op": "add",
+      "sign": "+",
+      "a": "24.94",
+      "b": "11.47",
+      "point": false,
+      "cols": [
+        2,
+        2
+      ]
+    }
+  ],
+  "answer_key": [
+    "77.75",
+    "48.88",
+    "21.21",
+    "16.11",
+    "73.08",
+    "36.41"
+  ],
+  "new_words": [],
+  "review_words": []
+}
