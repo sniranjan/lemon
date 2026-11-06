@@ -22,6 +22,14 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   chart's number: "up to 14+2" = `max_first: 12`). All 200 pages verify with 0 errors; booklets per
   section + `kittens-math-level.pdf` (202 pages) and `-answers.pdf` files. The Kittens free preview waits
   for Kittens Reading.
+- **Puppies Math (M1, our own level, 200 pages)** (2026-11-06): `syllabus/math/M1.yaml`, adding and taking-away
+  facts within 20 (1.OA.4–8, 2.OA.2): A Adding Warm-Up 1–10 · B Adding 4 and 5 11–40 · C Adding 6 and 7 41–70 ·
+  D Adding 8, 9 and 10 71–100 · E Adding Mix 101–110 · F Taking Away 1, 2, 3 111–130 · G Taking Away 4, 5, 6 131–150 ·
+  H Taking Away 7 to 10 151–170 · I Add or Take Away 171–180 · J Missing Numbers and Families 181–200.
+  New sheet type `fact_drill` (layouts horizontal / vertical / bridge number tracks / fact-family houses), tests in
+  `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
+  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
+  Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -50,10 +58,10 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 3A, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 3A, MA M1, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
   the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 203 passed (2026-11-06).
+- `uv run pytest`: 242 passed (2026-11-06, with Kittens, Bunnies and Puppies Math).
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,

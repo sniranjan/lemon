@@ -1,0 +1,151 @@
+{
+  "id": "MA-M1-B-002",
+  "subject": "math",
+  "level": "M1",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "fact_drill",
+  "page_number": 12,
+  "variant": 1,
+  "seed": 8811019248246606505,
+  "title": "Add",
+  "parent_tip": "Read each fact together. Adding 5? Hold up one hand and count on from the first number.",
+  "items": [
+    {
+      "kind": "fact",
+      "a": 3,
+      "op": "+",
+      "b": 4,
+      "c": 7,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 1
+    },
+    {
+      "kind": "fact",
+      "a": 4,
+      "op": "+",
+      "b": 4,
+      "c": 8,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 2
+    },
+    {
+      "kind": "fact",
+      "a": 15,
+      "op": "+",
+      "b": 4,
+      "c": 19,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 3
+    },
+    {
+      "kind": "fact",
+      "a": 1,
+      "op": "+",
+      "b": 4,
+      "c": 5,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 4
+    },
+    {
+      "kind": "fact",
+      "a": 16,
+      "op": "+",
+      "b": 4,
+      "c": 20,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 5
+    },
+    {
+      "kind": "fact",
+      "a": 9,
+      "op": "+",
+      "b": 4,
+      "c": 13,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 6
+    },
+    {
+      "kind": "fact",
+      "a": 2,
+      "op": "+",
+      "b": 4,
+      "c": 6,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 7
+    },
+    {
+      "kind": "fact",
+      "a": 8,
+      "op": "+",
+      "b": 4,
+      "c": 12,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 8
+    },
+    {
+      "kind": "fact",
+      "a": 10,
+      "op": "+",
+      "b": 4,
+      "c": 14,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 9
+    },
+    {
+      "kind": "fact",
+      "a": 14,
+      "op": "+",
+      "b": 4,
+      "c": 18,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 10
+    },
+    {
+      "kind": "fact",
+      "a": 13,
+      "op": "+",
+      "b": 4,
+      "c": 17,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 11
+    },
+    {
+      "kind": "fact",
+      "a": 7,
+      "op": "+",
+      "b": 4,
+      "c": 11,
+      "blank": "c",
+      "layout": "vertical",
+      "n": 12
+    }
+  ],
+  "answer_key": [
+    7,
+    8,
+    19,
+    5,
+    20,
+    13,
+    6,
+    12,
+    14,
+    18,
+    17,
+    11
+  ],
+  "new_words": [],
+  "review_words": []
+}

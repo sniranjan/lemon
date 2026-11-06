@@ -33,3 +33,6 @@ number_write_fill:
   - "Read each row together. When you reach an empty box, say the number, then let your child write it."
   - "Count along the boxes from the first number. Your child writes the numbers that are missing."
   - "Touch each box and count. At an empty box, stop and let your child write the number."
+fact_drill:
+  - "Read each fact out loud together, then let your child fill in the box. Count on fingers if needed."
+  - "Let your child answer first. Help only when asked, and praise each fact they know quickly."
