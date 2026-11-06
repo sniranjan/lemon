@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block style %}
+.stories { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 22px; }
+.stories .card { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 10px 26px; }
+.story { display: flex; align-items: center; gap: 22px; }
+.story img { width: 96px; height: 96px; flex: none; }
+.story p { margin: 0; font-size: 28px; line-height: 1.3; }
+.eq { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 44px; font-weight: 700; }
+.box { width: 100px; height: 60px; border: 3px solid var(--ink); border-radius: 10px; }
+.op { width: 58px; height: 58px; border: 3px solid var(--ink); border-radius: 50%; }
+{% endblock %}
+{% block body %}
+    <div class="stories">
+{% for item in sheet.items %}
+      <div class="card">
+        <div class="story"><img src="{{ root }}/assets/pictures/{{ item.picture }}.svg" alt=""><p>{{ item.text }}</p></div>
+        <div class="eq"><span class="box"></span><span class="op"></span><span class="box"></span><span>=</span><span class="box"></span></div>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

@@ -13,6 +13,7 @@ from ws.syllabus import all_levels, load_level
 EN7A, MA6A, ZI = load_level("english", "7A"), load_level("math", "6A"), load_level("pencil", "ZI")
 MA5A = load_level("math", "5A")
 ZII = load_level("pencil", "ZII")
+MAM2 = load_level("math", "M2")
 
 # (level, page, sheet type override) → one golden file per sheet type
 GOLDEN_PAGES = [
@@ -32,6 +33,14 @@ GOLDEN_PAGES = [
     (ZII, 42, None),     # line_path, story pairs on vertical arcs
     (ZII, 72, None),     # line_path, vertical zigzag
     (ZII, 92, None),     # line_path, corners and S-curves
+    (MAM2, 9, None),     # place_value blocks, tens and ones
+    (MAM2, 22, None),    # place_value blocks, hundred squares
+    (MAM2, 36, None),    # place_value expanded, all four forms
+    (MAM2, 44, None),    # place_value compare
+    (MAM2, 66, None),    # skip_count by 10s and 100s, up to 1000
+    (MAM2, 125, None),   # column_arithmetic, three addends
+    (MAM2, 187, None),   # column_arithmetic, 3-digit taking away with one break
+    (MAM2, 193, None),   # math_story, mixed
 ]
 
 
@@ -51,7 +60,7 @@ def test_golden(level, page, sheet_type, out_dir, fixture_content, golden):
     golden(f"{sheet.id}.json", sheet.model_dump_json(indent=2) + "\n")
 
 
-@pytest.mark.parametrize("level", [MA6A, MA5A, ZI, ZII], ids=lambda l: l.level)
+@pytest.mark.parametrize("level", [MA6A, MA5A, MAM2, ZI, ZII], ids=lambda l: l.level)
 def test_whole_level_passes_type_checks(level, fixture_content):
     plan = gen.build_plan(level)
     for page in range(1, level.pages + 1):

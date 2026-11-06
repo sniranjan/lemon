@@ -63,6 +63,12 @@ def math_objects() -> tuple[dict, ...]:
 
 
 @lru_cache(maxsize=None)
+def math_stories() -> dict:
+    """Story-problem frames for Cubs math (content/math/stories.yaml)."""
+    return yaml.safe_load((CONTENT_DIR / "math" / "stories.yaml").read_text())
+
+
+@lru_cache(maxsize=None)
 def line_targets() -> tuple[str, ...]:
     return tuple(yaml.safe_load((CONTENT_DIR / "pencil" / "line_targets.yaml").read_text()))
 
@@ -75,5 +81,5 @@ def line_stories() -> tuple[tuple[str, str], ...]:
 
 
 def clear_caches() -> None:
-    for f in (vocab, tips, licenses, stories, phrases, math_objects, line_targets, line_stories):
+    for f in (vocab, tips, licenses, stories, phrases, math_objects, math_stories, line_targets, line_stories):
         f.cache_clear()

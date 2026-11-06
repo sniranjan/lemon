@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+{# Box width follows the widest number on the page, so "1000" fits seven boxes across. #}
+{% set digits = sheet.items | map(attribute="cells") | map("last") | map("string") | map("length") | max %}
+{% block style %}
+.tracks { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 20px; }
+.tracks .card { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 6px 8px; }
+.by { font-size: 30px; font-weight: 700; color: var(--accent); }
+.track { display: flex; gap: 4px; }
+.box { width: {{ {1: 64, 2: 64, 3: 80, 4: 92}[digits] }}px; height: 76px; border: 3px solid var(--ink); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: {{ 36 if digits < 4 else 34 }}px; font-weight: 700; line-height: 1; }
+.box.first { background: var(--tint); border-color: var(--accent); }
+.box.gap { border: 3px dashed var(--accent); background: #fff; }
+{% endblock %}
+{% block body %}
+    <div class="tracks">
+{% for item in sheet.items %}
+      <div class="card"><div class="by">by {{ item.step }}s</div><div class="track">{% for n in item.cells %}{% if loop.index0 in item.gaps %}<div class="box gap"></div>{% else %}<div class="box{% if loop.index0 < 2 %} first{% endif %}">{{ n }}</div>{% endif %}{% endfor %}</div></div>
+{% endfor %}
+    </div>
+{% endblock %}

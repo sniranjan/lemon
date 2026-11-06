@@ -1,0 +1,55 @@
+{
+  "id": "MA-M2-H-003",
+  "subject": "math",
+  "level": "M2",
+  "section": "H",
+  "part": null,
+  "sheet_type": "math_story",
+  "page_number": 193,
+  "variant": 1,
+  "seed": 1486615735906626069,
+  "title": "Story problems",
+  "parent_tip": "Read each story aloud. Ask: do we get more or fewer? Then write the numbers, the + or − sign and the answer.",
+  "items": [
+    {
+      "kind": "story",
+      "op": "add",
+      "sign": "+",
+      "a": 52,
+      "b": 26,
+      "frame": 1,
+      "thing": "ball",
+      "picture": "ball",
+      "text": "A box has 52 balls. Dad puts in 26 more. How many balls are in the box now?"
+    },
+    {
+      "kind": "story",
+      "op": "sub",
+      "sign": "−",
+      "a": 62,
+      "b": 55,
+      "frame": 12,
+      "thing": "apple",
+      "picture": "apple",
+      "text": "A box has 62 apples. We take out 55. How many apples are in the box now?"
+    },
+    {
+      "kind": "story",
+      "op": "sub",
+      "sign": "−",
+      "a": 58,
+      "b": 55,
+      "frame": 10,
+      "thing": "fish",
+      "picture": "fish",
+      "text": "A tank has 58 fish. We move 55 to a new tank. How many fish are in the first tank now?"
+    }
+  ],
+  "answer_key": [
+    "52 + 26 = 78",
+    "62 - 55 = 7",
+    "58 - 55 = 3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

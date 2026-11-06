@@ -264,6 +264,10 @@ test.** Nothing else in the code should change.
 | `number_write` | MA 4A-B…E | Trace a row, then write the same numbers in empty circles |
 | `next_number` | MA 3A-A/B | "Write the number that comes next" in boxes |
 | `add_facts` | MA 3A-C…F, 2A | Vertical list of `a + b =` facts within the part's range; answer key generated |
+| `place_value` | MA M2-A/B | `mode: blocks` (tens bars / hundred squares → "☐ hundreds ☐ tens ☐ ones = ☐"), `expanded` (parts, units, number names), `compare` (<, >, =) |
+| `skip_count` | MA M2-C | Tracks counting by 5s/10s/100s from a multiple of the step; first two boxes shown, gaps to write |
+| `column_arithmetic` | MA M2-D…H | Vertical 2-/3-digit add/take away (or 3 addends); dashed carry/borrow boxes only on regrouping parts; verify recomputes answers and regrouping per part (`regroup: none/all/mixed`, `max_regroups`) |
+| `math_story` | MA M2-H | Tiny story problems from `content/math/stories.yaml` with a picture and "☐ ◯ ☐ = ☐" to fill |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the
@@ -494,6 +498,11 @@ are 1–2 min/page.
 | | I Adding 9, 151–160 | up to 12+9 |
 | | J Adding 9 and 10, 161–170 | up to 12+9 and 15+10 |
 | | K Adding up to 10, 171–200 | mixed |
+
+**M2 (Cubs math, our own level, `source: ours`, 200p):** A Tens and Ones 1–20 · B Hundreds, Tens and Ones 21–50 ·
+C Skip Counting 51–70 · D Adding Ones 71–90 · E Adding Tens and Ones 91–130 (incl. three addends) · F Taking Away
+131–170 · G Three-Digit Adding and Taking Away 171–190 · H Story Problems and Review 191–200. Covers 2.NBT.1–7 and
+2.OA.1 so Foxes can open with 3-digit regrouping. See `syllabus/math/M2.yaml`.
 
 Bridging pattern used throughout 3A: "3 → ☐" (next number) is shown above "3 + 1 = ☐", so
 the child sees that +1 means "the next number". Reproduce the *idea* with our own layout.

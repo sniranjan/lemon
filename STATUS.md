@@ -55,6 +55,14 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
 
+- **Cubs Math (math M2, our own level)** (2026-11-06): `syllabus/math/M2.yaml`, 200 pages, sections A–H
+  (Tens and Ones 1–20 · Hundreds, Tens and Ones 21–50 · Counting by 5s, 10s and 100s 51–70 · Adding Ones 71–90 ·
+  Adding Two-Digit Numbers 91–130 · Taking Away Two-Digit Numbers 131–170 · Big Number Adding and Taking Away
+  171–190 · Story Problems 191–200), standards 1.NBT.2 (on-ramp), 2.NBT.1–7, 2.OA.1. New sheet types
+  `place_value`, `skip_count`, `column_arithmetic`, `math_story` (frames in `content/math/stories.yaml`).
+  All 200 pages verify with 0 errors; booklets: one per section plus `cubs-math-level.pdf` (202 pages) and
+  answers PDFs (`cubs-math-level-answers.pdf`, 10 pages). `ws preview` for Cubs needs Cubs Reading first.
+
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in
    `content/phrases/english.yaml` (stories and phrases then avoid "... is ...").
