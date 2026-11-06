@@ -1,11 +1,8 @@
 subject: english
 level: 7A
 title: Repeating familiar words
-# Public (CLAUDE.md §15): the only names a buyer sees.
-public_name: Chicks
-public_title: First words
-slug: chicks
-preview_pages: [1, 5, 21, 22, 101, 102, 141, 142]   # free preview PDF (ws preview)
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [5, 22, 101, 141]   # this strand's pages in the level's free preview (ws preview)
 aims:
   - Repeat familiar words and everyday expressions while looking at them
   - Introduce ~200 words, each seen at least 3 times

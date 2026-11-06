@@ -9,13 +9,13 @@ from __future__ import annotations
 from .models import Level
 
 # Subject names as parents see them (the site uses the same words).
-SUBJECT_LABEL = {"english": "Reading", "math": "Numbers", "pencil": "Pencil skills"}
-_SUBJECT_SLUG = {"english": "reading", "math": "numbers", "pencil": "pencil"}
+SUBJECT_LABEL = {"english": "Reading", "math": "Math", "pencil": "Pencil skills"}
+_SUBJECT_SLUG = {"english": "reading", "math": "math", "pencil": "pencil"}
 
 
 def public_tag(level: Level, variant: int = 1) -> str:
-    """File-name stem for a level: `chicks-reading`, `ducklings-numbers`; pencil levels are just `tadpoles`."""
-    tag = level.slug if level.subject == "pencil" else f"{level.slug}-{_SUBJECT_SLUG[level.subject]}"
+    """File-name stem for one strand of a public level: `chicks-reading`, `chicks-math`, `chicks-pencil`."""
+    tag = f"{level.slug}-{_SUBJECT_SLUG[level.subject]}"
     return f"{tag}-v{variant}" if variant > 1 else tag
 
 

@@ -146,17 +146,17 @@ def test_booklets_have_cover_sheets_log_and_answers(made, booklet_out):
     report = booklet.build_booklets("math", "6A")
     names = sorted(p.name for p in report.booklets)
     # public file names only (CLAUDE.md §15): level slug + subject, level page numbers
-    assert "ducklings-numbers-pages-001-012.pdf" in names and "ducklings-numbers-pages-001-012-answers.pdf" in names
-    assert "ducklings-numbers-level.pdf" in names and "ducklings-numbers-level-answers.pdf" in names
+    assert "chicks-math-pages-001-012.pdf" in names and "chicks-math-pages-001-012-answers.pdf" in names
+    assert "chicks-math-level.pdf" in names and "chicks-math-level-answers.pdf" in names
     assert not [n for n in names if re.search(r"\b(6A|MA)\b", n)]
     assert [i for i in report.issues if i.severity == "error"] == []
-    sec = booklet_out / "math" / "6A" / "ducklings-numbers-pages-001-012.pdf"
+    sec = booklet_out / "math" / "6A" / "chicks-math-pages-001-012.pdf"
     assert len(PdfReader(sec).pages) == 1 + 12 + 1
-    answers = PdfReader(booklet_out / "math" / "6A" / "ducklings-numbers-pages-001-012-answers.pdf")
+    answers = PdfReader(booklet_out / "math" / "6A" / "chicks-math-pages-001-012-answers.pdf")
     assert "Page 1" in answers.pages[0].extract_text()
     child_text = "".join(p.extract_text() for p in PdfReader(sec).pages)
     assert "Answers" not in child_text                     # no answer key in the child's booklet
-    assert "Ducklings" in child_text
+    assert "Chicks" in child_text and "Math" in child_text
     for code in ("6A", "MA-6A"):                           # no internal codes anywhere a buyer looks
         assert code not in child_text and code not in answers.pages[0].extract_text()
 
@@ -221,16 +221,39 @@ def test_internal_level_codes_are_banned_in_printed_text():
 
 
 def test_free_preview_pdf(out_dir, booklet_out):
+    """One preview per public level, covering every strand (reading, math, pencil warm-ups)."""
     pytest.importorskip("playwright")
     from pypdf import PdfReader
 
-    level = load_level("pencil", "ZI")
-    gen.generate_pages(level, sorted(level.preview_pages))
-    report = booklet.build_preview("pencil", "ZI")
+    from ws.syllabus import ladder_level
+
+    rung = ladder_level("chicks")
+    n = 0
+    for subject, code in rung.strands.items():
+        level = load_level(subject, code)
+        gen.generate_pages(level, sorted(level.preview_pages))
+        n += len(level.preview_pages)
+    report = booklet.build_preview("chicks")
     assert [i for i in report.issues if i.severity == "error"] == []
-    assert [p.name for p in report.booklets] == ["tadpoles.pdf"]
-    pdf = PdfReader(booklet_out / "previews" / "tadpoles.pdf")
-    assert len(pdf.pages) == 1 + len(level.preview_pages) + 1          # cover + samples + closing page
+    assert [p.name for p in report.booklets] == ["chicks.pdf"]
+    pdf = PdfReader(booklet_out / "previews" / "chicks.pdf")
+    assert len(pdf.pages) == 1 + n + 1                                  # cover + samples + closing page
     text = "".join(p.extract_text() for p in pdf.pages)
-    assert "Tadpoles" in text and "paperlessons.com" in text
-    assert not re.search(r"\bZI\b", text)
+    for word in ("Chicks", "Reading", "Math", "Pencil skills", "paperlessons.com"):
+        assert word in text
+    assert not re.search(r"\b(7A|6A|ZI|EN-7A|MA-6A)\b", text)
+
+
+def test_preview_refuses_a_level_that_is_not_built_yet():
+    report = booklet.build_preview("ducklings")
+    assert report.booklets == [] and all(i.severity == "error" for i in report.issues)
+    assert "isn't built yet" in report.issues[0].message
+
+
+def test_ladder_pairs_reading_and_math_and_covers_every_syllabus_file():
+    from ws.syllabus import all_levels, load_ladder
+
+    rungs = load_ladder()
+    assert all({"english", "math"} <= set(r.strands) for r in rungs)
+    for lvl in all_levels():                      # every built level belongs to a public level
+        assert lvl.public_name and lvl.slug

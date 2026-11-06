@@ -6,6 +6,14 @@
 <style>
 @font-face { font-family: "Andika"; font-weight: 400; src: url("{{ root }}/assets/fonts/Andika-Regular.ttf"); }
 @font-face { font-family: "Andika"; font-weight: 700; src: url("{{ root }}/assets/fonts/Andika-Bold.ttf"); }
+/* logo fonts: the same files as the website wordmark (assets/fonts/brand) */
+@font-face { font-family: "Fredoka"; font-weight: 700; src: url("{{ root }}/assets/fonts/brand/Fredoka-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Gochi Hand"; font-weight: 400; src: url("{{ root }}/assets/fonts/brand/GochiHand-Regular.woff2") format("woff2"); }
+/* wordmark, matching apps/web/src/components/Logo.tsx: ink #1f2a44, coral #ff6b5e */
+.brand { display: flex; align-items: center; gap: 0.3em; line-height: 1; white-space: nowrap; }
+.brand .paper { font-family: "Fredoka", sans-serif; font-weight: 700; letter-spacing: -0.025em; color: #1f2a44; }
+.brand .lessons { font-family: "Gochi Hand", cursive; font-weight: 400; color: #ff6b5e; font-size: 1.12em;
+                  display: inline-block; transform: translateY(0.06em) rotate(-3deg); }
 @page { size: letter; margin: 0; }
 :root { --accent: {{ theme.accent }}; --tint: {{ theme.tint }}; --ink: #1d1d1f; --muted: #6b6b70; }
 * { box-sizing: border-box; }

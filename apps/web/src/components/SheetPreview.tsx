@@ -1,8 +1,8 @@
-import type { Level, Preview } from "@/data/levels";
+import { previewSubject, type Level, type Preview } from "@/data/levels";
 import { cn } from "@/lib/utils";
 
 // Short labels: the mini-sheet header is narrow.
-const SHORT_LABEL = { reading: "Reading", numbers: "Numbers", pencil: "Pencil" } as const;
+const SHORT_LABEL = { reading: "Reading", math: "Math", pencil: "Pencil" } as const;
 
 const NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 
@@ -21,7 +21,7 @@ export function SheetPreview({ level, className }: { level: Level; className?: s
     >
       <div className="flex items-baseline justify-between gap-2 border-b-2 pb-1" style={{ borderColor: `var(--${level.color})` }}>
         <span className="truncate text-[9px] font-extrabold uppercase tracking-[0.12em] text-ink/60">
-          {level.name} · {SHORT_LABEL[level.subjects[0]]}
+          {level.name} · {SHORT_LABEL[previewSubject(level.preview)]}
         </span>
         <span className="shrink-0 text-[9px] text-ink/50">Name ______</span>
       </div>
@@ -139,20 +139,18 @@ function Body({ preview }: { preview: Preview }) {
           </div>
         </div>
       );
-    case "add":
+    case "facts":
       return (
-        <div className="flex flex-col gap-1.5">
-          {preview.facts.map(([a, b], i) => (
-            <div key={i} className="flex items-center gap-3 font-display text-2xl font-semibold">
-              {i === 0 && (
-                <span className="flex items-center gap-1 text-base text-ink/60">
-                  {a} → <span className="inline-block size-6 rounded border-2 border-ink/60" />
+        <div className="flex flex-col gap-2">
+          {preview.lines.map((line, i) => (
+            <div key={line} className="flex items-center gap-2.5 font-display text-2xl font-semibold whitespace-nowrap">
+              {preview.bridge && (
+                <span className={cn("flex w-14 items-center gap-1 text-base text-ink/60", i > 0 && "invisible")}>
+                  {preview.bridge} <span className="inline-block size-5 rounded border-2 border-ink/60" />
                 </span>
               )}
-              <span className={i === 0 ? "" : "pl-[4.25rem]"}>
-                {a} + {b} =
-              </span>
-              <span className="inline-block h-7 w-9 rounded-md border-2 border-ink" />
+              <span>{line}</span>
+              {line.trim().endsWith("=") && <span className="inline-block h-7 w-10 shrink-0 rounded-md border-2 border-ink" />}
             </div>
           ))}
         </div>
@@ -160,7 +158,7 @@ function Body({ preview }: { preview: Preview }) {
     case "read":
       return (
         <div className="flex flex-col gap-2">
-          <Pic name={preview.picture} className="mx-auto size-16" />
+          {preview.picture && <Pic name={preview.picture} className="mx-auto size-16" />}
           {preview.lines.map((l) => (
             <p key={l} className="font-display text-xl font-semibold leading-tight">
               {l}

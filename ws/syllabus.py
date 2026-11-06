@@ -9,7 +9,7 @@ from typing import Any
 
 import yaml
 
-from .models import SUBJECT_PREFIX, Level, PageSpec, Section
+from .models import SUBJECT_PREFIX, LadderLevel, Level, PageSpec, Section
 
 ROOT = Path(__file__).resolve().parent.parent
 SYLLABUS_DIR = ROOT / "syllabus"
@@ -30,16 +30,56 @@ def level_path(subject: str, level: str) -> Path:
     return SYLLABUS_DIR / subject / f"{level}.yaml"
 
 
+# Strand order inside a public level (covers, previews).
+STRAND_ORDER = ["english", "math", "pencil"]
+_PUBLIC_KEYS = ("public_name", "public_title", "slug")
+
+
+@lru_cache(maxsize=None)
+def load_ladder() -> tuple[LadderLevel, ...]:
+    """The public level ladder (CLAUDE.md §15). Each internal level belongs to exactly one public level."""
+    rungs = tuple(LadderLevel.model_validate(d) for d in yaml.safe_load((SYLLABUS_DIR / "ladder.yaml").read_text()))
+    seen_slugs: set[str] = set()
+    seen_strands: dict[tuple[str, str], str] = {}
+    for r in rungs:
+        if r.slug in seen_slugs:
+            raise ValueError(f"ladder: duplicate slug {r.slug!r}")
+        seen_slugs.add(r.slug)
+        for subject, code in r.strands.items():
+            if (subject, code) in seen_strands:
+                raise ValueError(f"ladder: {subject} {code} is in both {seen_strands[(subject, code)]} and {r.slug}")
+            seen_strands[(subject, code)] = r.slug
+    return rungs
+
+
+def ladder_level(slug: str) -> LadderLevel:
+    for r in load_ladder():
+        if r.slug == slug:
+            return r
+    raise KeyError(f"no public level {slug!r} in syllabus/ladder.yaml")
+
+
+def rung_for(subject: str, level: str) -> LadderLevel:
+    for r in load_ladder():
+        if r.strands.get(subject) == level:
+            return r
+    raise ValueError(f"{subject} {level} is not in syllabus/ladder.yaml; give it a public level first")
+
+
 @lru_cache(maxsize=None)
 def load_level(subject: str, level: str) -> Level:
     path = level_path(subject, level)
     if not path.exists():
         raise FileNotFoundError(f"no syllabus for {subject} {level} (expected {path})")
     data = yaml.safe_load(path.read_text())
+    if set(_PUBLIC_KEYS) & set(data):
+        raise ValueError(f"{path}: public names belong in syllabus/ladder.yaml, not the level file")
     lvl = Level.model_validate(data)
     if (lvl.subject, lvl.level) != (subject, level):
         raise ValueError(f"{path} declares {lvl.subject} {lvl.level}, expected {subject} {level}")
-    return lvl
+    rung = rung_for(subject, level)
+    return lvl.model_copy(update={"public_name": rung.public_name, "public_title": rung.public_title,
+                                  "slug": rung.slug})
 
 
 def all_levels() -> list[Level]:

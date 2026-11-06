@@ -53,7 +53,7 @@ function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1 text-sm font-extrabold">
-            <Sun className="size-4 text-coral" /> For ages 3 and up
+            <Sun className="size-4 text-coral" /> For ages 3 to 12
           </p>
           <h1 className="mt-5 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.1rem]">
             Little <span className="inline-block -rotate-2 font-hand text-[1.08em] text-coral">lessons</span>,
@@ -61,8 +61,8 @@ function Hero() {
             one page at a time.
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink/80">
-            Printable practice sheets for reading, numbers and pencil skills. A few pages a day,
-            about ten minutes, one small step at a time.
+            Printable reading and math sheets that run a little ahead of school, from first words
+            and counting to fractions and first algebra. A few pages a day, one small step at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="coral" size="pill">
@@ -78,7 +78,7 @@ function Hero() {
 
         {/* A small fan of sheets. */}
         <div className="relative mx-auto h-[400px] w-full max-w-[440px]" aria-hidden="true">
-          <SheetPreview level={bySlug("tadpoles")} className="float absolute left-0 top-10 h-[300px] w-[230px] [--r:-8deg]" />
+          <SheetPreview level={bySlug("owls")} className="float absolute left-0 top-10 h-[300px] w-[230px] [--r:-8deg]" />
           <SheetPreview
             level={bySlug("ducklings")}
             className="float absolute right-0 top-0 h-[300px] w-[230px] [--r:7deg] [animation-delay:-2s]"
@@ -141,19 +141,19 @@ const SUBJECTS = [
     icon: BookOpen,
     color: "bg-teal",
     title: "Reading",
-    text: "From picture words to short stories, with every new word coming back again and again until it sticks.",
+    text: "From first picture words to reading whole stories and explaining them, with every new word coming back until it sticks.",
   },
   {
     icon: Calculator,
     color: "bg-coral",
-    title: "Numbers",
-    text: "Counting while pointing, reading and writing numbers, then adding by finding the next number.",
+    title: "Math",
+    text: "From counting to ten all the way to times tables, fractions, decimals and first algebra, one small step at a time.",
   },
   {
     icon: Pencil,
     color: "bg-grape",
-    title: "Pencil skills",
-    text: "Coloring and drawing lines from a dot to a picture, so little hands are ready to trace and write.",
+    title: "Pencil warm-ups",
+    text: "In the first two levels: coloring and drawing lines from a dot to a picture, so little hands are ready to write.",
   },
 ];
 
@@ -197,7 +197,7 @@ function EarlyAccess() {
 const FAQ = [
   {
     q: "What age is this for?",
-    a: "Children from age 3 and up. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
+    a: "Ages 3 to 12, from first words and counting all the way into middle school. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
   },
   {
     q: "Do I need a color printer?",
@@ -205,7 +205,7 @@ const FAQ = [
   },
   {
     q: "How long does a day take?",
-    a: "About ten minutes. Short and happy beats long and tired.",
+    a: "About ten minutes for little ones, 15 to 20 for older kids. Short and happy beats long and tired.",
   },
   {
     q: "What if a level feels too hard?",

@@ -516,15 +516,13 @@ app much later. This repo is a monorepo: the generator stays at the root (Python
 
 - **Stack (keep it simple):** one Cloudflare Worker (Hono API + React/Vite SPA as static assets),
   D1 for data, R2 for files (PDFs). Tailwind v4 + shadcn/ui, bright kid-friendly palette.
-- **Nothing public references Kumon**: no name, no comparisons, no level codes. Public level names:
-
-  | Internal | Public | Internal | Public |
-  |---|---|---|---|
-  | pencil ZI | Tadpoles | EN/MA 5A | Bunnies |
-  | pencil ZII | Froglets | EN/MA 4A | Kittens |
-  | EN 7A | Chicks | EN/MA 3A | Puppies |
-  | EN/MA 6A | Ducklings | EN/MA 2A | Cubs |
-
+- **Nothing public references Kumon**: no name, no comparisons, no level codes.
+- **The public ladder is `syllabus/ladder.yaml`** (single source of truth; the site copies it at build time):
+  12 levels for ages 3 to 12, Chicks → Ducklings → Bunnies → Kittens → Puppies → Cubs → Foxes → Owls →
+  Otters → Pandas → Penguins → Lions. **Every level = one reading strand + one math strand**, paired by
+  age (reading 7A + math 6A, reading 6A + math 5A, …); Chicks and Ducklings also carry pencil warm-ups
+  (ZI, ZII). Public subjects are "Reading", "Math" and "Pencil skills". Each internal level belongs to
+  exactly one public level; `load_level` fills in its public name from the ladder.
   Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may
   stay inside the generator, but anything a buyer sees (sheet headers, page pills, footers, PDF names,
   covers) must use public names before it is sold or offered as a preview.

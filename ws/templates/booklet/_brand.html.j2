@@ -1,12 +1,14 @@
-{# The paperlessons mark + wordmark, for preview covers and end pages only (sheets stay unbranded). #}
+{# The paperlessons logo, drawn exactly like the website (apps/web/src/components/Logo.tsx):
+   smiling folded-corner sheet + "paper" (Fredoka Bold) + "lessons" (Gochi Hand). Styles in _doc.html.j2.
+   Preview covers and closing pages only; sheets stay unbranded. #}
 {% macro brand(size=40) %}
 <div class="brand" style="font-size: {{ size }}px;">
-  <svg viewBox="0 0 64 64" width="{{ (size * 1.25) | int }}" height="{{ (size * 1.25) | int }}" aria-hidden="true">
-    <path d="M12 6 H42 L54 18 V56 a2 2 0 0 1-2 2 H12 a2 2 0 0 1-2-2 V8 a2 2 0 0 1 2-2 Z" fill="#FFC83D" stroke="#1F2A44" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M42 6 V18 H54" fill="#fff" stroke="#1F2A44" stroke-width="4" stroke-linejoin="round"/>
-    <circle cx="24" cy="32" r="3.2" fill="#1F2A44"/><circle cx="40" cy="32" r="3.2" fill="#1F2A44"/>
-    <path d="M23 41 Q32 49 41 41" fill="none" stroke="#1F2A44" stroke-width="4" stroke-linecap="round"/>
+  <svg viewBox="0 0 64 64" width="{{ (size * 1.32) | int }}" height="{{ (size * 1.32) | int }}" aria-hidden="true">
+    <path d="M12 6 H42 L54 18 V56 a2 2 0 0 1-2 2 H12 a2 2 0 0 1-2-2 V8 a2 2 0 0 1 2-2 Z" fill="#ffc83d" stroke="#1f2a44" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M42 6 V18 H54" fill="#fff" stroke="#1f2a44" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="24" cy="32" r="3.2" fill="#1f2a44"/><circle cx="40" cy="32" r="3.2" fill="#1f2a44"/>
+    <path d="M23 41 Q32 49 41 41" fill="none" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/>
   </svg>
-  <span><b>paper</b><span class="lessons">lessons</span></span>
+  <span><span class="paper">paper</span><span class="lessons">lessons</span></span>
 </div>
 {% endmacro %}

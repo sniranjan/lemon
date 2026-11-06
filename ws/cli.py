@@ -159,21 +159,26 @@ def render(
 
 @app.command()
 def preview(
-    subject: str = typer.Option(..., help="english | math | pencil"),
-    level: str = typer.Option(..., help="internal level code, e.g. 7A"),
+    slug: str = typer.Argument(..., help="public level, e.g. chicks (syllabus/ladder.yaml)"),
 ) -> None:
-    """Free preview PDF for the website: out/previews/<slug>.pdf (pages from the syllabus `preview_pages`)."""
+    """Free preview PDF for the website: out/previews/<slug>.pdf (each strand's `preview_pages`)."""
     from .booklet import build_preview
     from .generate import generate_pages
+    from .syllabus import STRAND_ORDER, ladder_level, level_path, load_level
 
-    lvl = _load(subject, level)
-    if not lvl.preview_pages:
-        typer.echo(f"{subject} {level} has no preview_pages in its syllabus", err=True)
+    try:
+        rung = ladder_level(slug)
+    except KeyError as e:
+        typer.echo(e.args[0], err=True)
         raise typer.Exit(1)
     # regenerate (deterministic) so the pages use the current templates and content
-    for sheet, _ in generate_pages(lvl, sorted(lvl.preview_pages)):
-        typer.echo(f"page {sheet.page_number:>3}  {sheet.sheet_type}")
-    report = build_preview(subject, level)
+    for subject in STRAND_ORDER:
+        code = rung.strands.get(subject)
+        if code and level_path(subject, code).exists():
+            lvl = load_level(subject, code)
+            for sheet, _ in generate_pages(lvl, sorted(lvl.preview_pages)):
+                typer.echo(f"{subject:<8} page {sheet.page_number:>3}  {sheet.sheet_type}")
+    report = build_preview(slug)
     for b in report.booklets:
         typer.echo(f"preview: {b.relative_to(ROOT)}")
     if _print_issues(report.issues):

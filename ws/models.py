@@ -90,10 +90,11 @@ class Level(_Strict):
     subject: Subject
     level: str                # internal code (7A, 6A, ZI): never printed on anything a buyer sees
     title: str
-    public_name: str          # public level name, e.g. "Chicks" (CLAUDE.md §15)
-    public_title: str         # public subtitle for covers, e.g. "First words"
-    slug: str                 # site + R2 key, e.g. "chicks"
-    preview_pages: list[int] = Field(default_factory=list)   # pages in the free preview PDF
+    # Public names come from syllabus/ladder.yaml (filled in by load_level, never set in the level file).
+    public_name: str = ""     # e.g. "Chicks" (CLAUDE.md §15)
+    public_title: str = ""    # e.g. "First words and counting"
+    slug: str = ""            # site + R2 key, e.g. "chicks"
+    preview_pages: list[int] = Field(default_factory=list)   # this strand's pages in the level's free preview
     aims: list[str] = Field(default_factory=list)
     pages: int
     daily_pages: int = 5
@@ -109,8 +110,6 @@ class Level(_Strict):
         if codes != expected:
             raise ValueError(f"{self.level}: section codes must be {expected} in page order, got {codes}")
         _check_tiling([s.pages for s in self.sections], 1, self.pages, f"{self.level} sections")
-        if not re.fullmatch(r"[a-z][a-z0-9-]*", self.slug):
-            raise ValueError(f"{self.level}: slug {self.slug!r} must be lowercase letters, digits and dashes")
         bad = [p for p in self.preview_pages if not 1 <= p <= self.pages]
         if bad or len(set(self.preview_pages)) != len(self.preview_pages):
             raise ValueError(f"{self.level}: preview_pages must be distinct pages 1–{self.pages}, got {self.preview_pages}")
@@ -127,6 +126,24 @@ class Level(_Strict):
             if s.pages[0] <= page <= s.pages[1]:
                 return s
         raise KeyError(f"page {page} is outside {self.level} (pages 1–{self.pages})")
+
+
+class LadderLevel(_Strict):
+    """One public level (syllabus/ladder.yaml): a reading strand + a math strand (+ pencil early on)."""
+
+    slug: str
+    public_name: str
+    public_title: str
+    ages: str
+    strands: dict[Subject, str]          # subject -> internal level code
+
+    @model_validator(mode="after")
+    def _valid(self) -> LadderLevel:
+        if not re.fullmatch(r"[a-z][a-z0-9-]*", self.slug):
+            raise ValueError(f"ladder: slug {self.slug!r} must be lowercase letters, digits and dashes")
+        if not {"english", "math"} <= set(self.strands):
+            raise ValueError(f"ladder: {self.slug} needs both an english and a math strand")
+        return self
 
 
 class PageSpec(_Strict):

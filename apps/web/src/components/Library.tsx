@@ -31,8 +31,8 @@ export function Library() {
   return (
     <section id="library" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="the library" title="Little levels, one big climb">
-          Each level is a stack of sheets that grows one small step at a time.
+        <SectionHeading eyebrow="the library" title="Twelve levels, one big climb">
+          Every level has reading and math, from age 3 to 12, and runs a little ahead of school.
           <span className="hidden sm:inline"> Hover a level to peek at a sheet.</span>
           <span className="sm:hidden"> Tap a level to peek at a sheet.</span>
         </SectionHeading>

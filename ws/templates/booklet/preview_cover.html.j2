@@ -3,13 +3,15 @@
 {% block style %}
 .cover { justify-content: space-between; }
 .cover .foot { margin-top: 0; }
-.brand { display: flex; align-items: center; gap: 12px; color: #1F2A44; line-height: 1; }
-.brand .lessons { color: #E5533F; font-style: italic; }
 .free { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; font-size: 22px;
         border-radius: 999px; padding: 6px 20px; letter-spacing: 0.04em; }
 .big { font-size: 120px; font-weight: 700; color: var(--accent); line-height: 1; margin-top: 18px; }
 .sub { font-size: 30px; margin-top: 8px; }
-.sections { font-size: 22px; line-height: 1.8; }
+.sections { font-size: 20px; line-height: 1.55; }
+.strand { margin-top: 10px; font-size: 22px; color: var(--accent); }
+.strand:first-child { margin-top: 0; }
+.sec { padding-left: 18px; }
+.muted { color: var(--muted); font-size: 18px; }
 .name { font-size: 28px; display: flex; align-items: flex-end; gap: 16px; }
 .name i { flex: 1; border-bottom: 3px solid var(--ink); height: 1.2em; }
 {% endblock %}
@@ -24,12 +26,15 @@
   </div>
   <div>
     <span class="free">{{ n_pages }} sample pages</span>
-    <div class="big">{{ level.public_name }}</div>
-    <div class="sub">{{ level.public_title }} · from a {{ level.pages }}-page level</div>
+    <div class="big">{{ rung.public_name }}</div>
+    <div class="sub">{{ rung.public_title }} · ages {{ rung.ages }}</div>
   </div>
   <div class="sections">
-{% for s in sections %}
-    <div><b>{{ s.name }}</b> · page{{ "s" if s.pages | length > 1 }} {{ s.pages | join(", ") }}</div>
+{% for g in groups %}
+    <div class="strand"><b>{{ g.subject }}</b> <span class="muted">· {{ g.pages }} pages in the full level</span></div>
+{% for s in g.sections %}
+    <div class="sec">{{ s.name }} · page{{ "s" if s.pages | length > 1 }} {{ s.pages | join(", ") }}</div>
+{% endfor %}
 {% endfor %}
   </div>
   <div class="name">Name <i></i></div>

@@ -19,7 +19,7 @@ PAGE_W, PAGE_H = 816, 1056
 # Labels are the public subject names (ws/public.py SUBJECT_LABEL).
 THEMES = {
     "english": {"label": "Reading", "accent": "#0B7A75", "tint": "#E6F4F3"},
-    "math": {"label": "Numbers", "accent": "#B4410C", "tint": "#FDEDE3"},
+    "math": {"label": "Math", "accent": "#B4410C", "tint": "#FDEDE3"},
     "pencil": {"label": "Pencil skills", "accent": "#6B4FBB", "tint": "#EFEBFA"},
 }
 

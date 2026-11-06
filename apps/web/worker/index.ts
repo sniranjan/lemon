@@ -59,7 +59,7 @@ app.get("/api/previews/:slug", async (c) => {
     headers: {
       "content-type": "application/pdf",
       "content-disposition": `attachment; filename="paperlessons-${slug}-preview.pdf"`,
-      "cache-control": "public, max-age=3600",
+      "cache-control": "public, max-age=300",
       etag: obj.httpEtag,
     },
   });
