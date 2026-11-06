@@ -276,7 +276,24 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Situations in `content/math/algebra_stories.yaml` (copy in test fixtures). Variables are never `a` and the
   general quadratic formula is never printed (digit + a would read as an internal code). Tests
   `tests/test_math_M9.py` (19 goldens). Verify 0 errors, 0 warnings; booklets per section + `whales-math-level.pdf`
-  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 wait for Whales Reading.
+  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 (built with Whales Reading).
+- **Whales Reading (R9, our own level, grade 9 reading for age 12, 200 pages)** (2026-11-06): `syllabus/english/R9.yaml`:
+  A The Writer's Choices 1–50 (RL.9-10.5, RL.9-10.4: flashback, frame, in medias res, held-back facts, slowed or
+  compressed time, reverse order, circular endings; connotation and tone) · B Characters in Conflict 51–100
+  (RL.9-10.3) · C The Art of Persuasion 101–150 (RI.9-10.6, RI.9-10.8: speeches, essays and letters on school start
+  times, libraries, inventing, volunteering, a park meadow, gardens, journals…, each with one deliberate weak spot in
+  its reasoning) · D Prove It in a Paragraph 151–200 (RL.9-10.1, W.9-10.1, W.9-10.9a: part 1 plans with a
+  Claim / Evidence / Explanation organizer, part 2 picks the strongest quote; then a 9-line paragraph). Codes checked
+  on thecorestandards.org. 52 original passages (`content/passages/R9/`, 240–287 words, Flesch-Kincaid 8.58–10.42),
+  each read on two spreads; drafts `syllabus/drafts/R9-passages.md` (`scripts/r9_drafts.py`, approved by the
+  orchestrator under the user's delegation); `scripts/r9_check.py` checks a section before generating. No new sheet
+  type: Pandas' `passage_spread`, extended with genres `speech` / `essay` / `letter` (named on the page) and rules
+  `paragraph_sentences`, `paragraph_quotes`, `rubric_parts` (Pandas output byte-identical). A Letter page at 20px holds
+  ~265 words of grade 9 prose, so passages stay near 260–290 words (≤ ~40 words end on the questions page). Tests
+  `tests/test_whales_reading.py` (5 goldens). Verify 0 errors, 0 warnings; booklets per section +
+  `whales-reading-level.pdf` (202 pages) and `whales-reading-level-answers.pdf` (38 pages, samples + rubrics); no
+  internal codes in PDF text. Free preview pages 1, 2, 102, 172: `ws preview whales` builds `out/previews/whales.pdf`
+  (10 pages; not uploaded).
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

@@ -32,7 +32,7 @@ h1 { font-size: 28px; }
 {% endblock %}
 {% block body %}
 {% set head = sheet.items[0] %}
-{% set what = "article" if head.genre == "nonfiction" else "story" %}
+{% set what = {"nonfiction": "article"}.get(head.genre, head.genre) %}
 {% if head.side == "read" %}
     <section class="read-wrap">
       <div class="how">{% if head.again %}Read again: {{ head.look_for }}{% else %}Read the {{ what }}. The questions are on the next page.{% endif %}</div>

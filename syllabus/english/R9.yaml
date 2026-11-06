@@ -1,0 +1,129 @@
+subject: english
+level: R9
+title: Author's choices, complex characters, rhetoric and analytical paragraphs
+# Our own level (source: ours), grade 9 reading for an on-pace 12-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md, Whales). Public level name: syllabus/ladder.yaml. Section
+# public_name is what buyers see (CLAUDE.md §15). Every passage is original
+# (content/passages/R9/<section>.yaml). Drafts and their approval: syllabus/drafts/R9-passages.md
+# (written by scripts/r9_drafts.py from the YAML).
+# Standards checked on thecorestandards.org (2026-11-06): RL.9-10.1–5, RL.9-10.10, RI.9-10.1, 4, 5, 6,
+# 8, 10, W.9-10.1, W.9-10.9a, W.9-10.9b.
+preview_pages: [1, 2, 102, 172]   # one whole spread (story + questions), a rhetoric questions page, an analytical paragraph page
+aims:
+  - Analyze how a writer's choices about structure, order of events and pacing create suspense, surprise or tension (RL.9-10.5)
+  - Work out figurative and connotative meanings and how word choice shapes tone (RL.9-10.4, RI.9-10.4)
+  - Analyze how complex characters with mixed motives develop, interact and move the plot forward (RL.9-10.3)
+  - Find an author's point of view, analyze the rhetoric that advances it, and judge whether the reasoning and evidence hold up (RI.9-10.6, RI.9-10.8)
+  - Write analytical paragraphs with a claim, cited evidence and explanation (RL.9-10.1, W.9-10.1, W.9-10.9)
+  - Read 300–400-word passages at a grade 9 level (Flesch-Kincaid grade 8.5–10.5)
+pages: 200
+daily_pages: 2               # source: ours; one spread (read, then answer) a day
+sct_minutes_per_page: [10, 20]  # source: ours
+rules:
+  # ws/passages.py plan_passages with `spread`: each question set takes two pages in a row, a reading
+  # page then its questions page (ws/spreads.py, the Pandas Reading sheet type). Every passage has two
+  # sets: the text is read on two days, the second time with a lens (`look_for`).
+  planner: passages
+  spread: true
+  answers: by_line
+  answers_height: 860
+  # A Letter page at the 20px floor holds about 280 words of grade 9 text; the rest of a passage
+  # continues at the top of its questions page (ws/spreads.py split_text). Source: ours.
+  passage_words: [260, 310]
+  fk_grade: [8.5, 10.5]      # Flesch-Kincaid grade of every passage (ws/readability.py)
+  sets_per_passage: [1, 2]
+  questions_per_page: [3, 3]
+  page_units: 130
+sections:
+  # Stories built in a deliberate way (a flashback, a frame, a held-back fact, a slowed-down moment),
+  # and the words that set their tone.
+  - code: A
+    name: Author's Choices
+    public_name: The Writer's Choices
+    pages: [1, 50]
+    sheet_types: [passage_spread]
+    standards: [RL.9-10.5, RL.9-10.4, RL.9-10.1, RL.9-10.10]
+    source: ours
+    rules:
+      passages: A
+      genres: [story]
+      tips:
+        passage_spread_read:
+          - "Your child reads it once for the story, once for how it's told."
+          - "Ask: where does the story start? Is that where events begin?"
+        passage_spread:
+          - "Ask: why this order? What if it were told straight through?"
+          - "Pick one strong word. What does it hint that a plain one can't?"
+          - "Ask where the story speeds up or slows down, and why."
+
+  - code: B
+    name: Complex Characters
+    public_name: Characters in Conflict
+    pages: [51, 100]
+    sheet_types: [passage_spread]
+    standards: [RL.9-10.3, RL.9-10.1, RL.9-10.2]
+    source: ours
+    rules:
+      passages: B
+      genres: [story]
+      tips:
+        passage_spread_read:
+          - "Your child reads it silently, then aloud. Just listen."
+          - "Ask: what does this character want most? What gets in the way?"
+        passage_spread:
+          - "Ask what the character wants, and what pulls the other way."
+          - "Ask how the character changes by the end, and what changed them."
+          - "Ask how the character's choice moves the story forward."
+
+  # Speeches, essays and letters that argue a kid-sized, non-political point; each has one weak spot
+  # in its reasoning for the reader to find (RI.9-10.8).
+  - code: C
+    name: Rhetoric and Argument
+    public_name: The Art of Persuasion
+    pages: [101, 150]
+    sheet_types: [passage_spread]
+    standards: [RI.9-10.6, RI.9-10.8, RI.9-10.1, RI.9-10.4, RI.9-10.5, RI.9-10.10]
+    source: ours
+    rules:
+      passages: C
+      genres: [speech, essay, letter]
+      tips:
+        passage_spread_read:
+          - "Ask your child to read it aloud like a speech, with feeling."
+          - "Ask: what is the writer trying to get us to think or do?"
+        passage_spread:
+          - "Ask: what does the writer want us to believe or do?"
+          - "Hunt for one persuasion move: a story, a question, a repeat."
+          - "Ask: is every reason backed up? Which claim is thinnest?"
+
+  # One analytical paragraph a page: plan it (claim, evidence, explanation), then write it.
+  - code: D
+    name: Analytical Paragraphs with Cited Evidence
+    public_name: Prove It in a Paragraph
+    pages: [151, 200]
+    sheet_types: [passage_spread]
+    standards: [RL.9-10.1, W.9-10.1, W.9-10.9, W.9-10.9a]
+    source: ours
+    rules:
+      passages: D
+      genres: [story]
+      passage_words: [240, 280]
+      questions_per_page: [2, 2]
+      paragraph_lines: 9
+      paragraph_sentences: [5, 7]
+      paragraph_quotes: 2
+      rubric_parts: [Claim, Evidence, Explanation]
+      kinds_per_page: { paragraph: [1, 1] }
+      tips:
+        passage_spread_read:
+          - "Your child reads it twice, marking lines that could be quotes."
+          - "Ask: what is one thing you could prove about this story?"
+        passage_spread:
+          - "Claim first, then two exact quotes, then why they prove it."
+          - "Read the paragraph aloud: does every sentence prove the claim?"
+          - "Check each quote is copied exactly, in quotation marks."
+    parts:
+      - { part: 1, pages: [151, 170], name: "Plan, then write",
+          rules: { kinds_per_page: { organizer: [1, 1], paragraph: [1, 1] } } }
+      - { part: 2, pages: [171, 200], name: "On your own",
+          rules: { kinds_per_page: { quote: [1, 1], paragraph: [1, 1] } } }
