@@ -1,0 +1,59 @@
+{
+  "id": "EN-5A-A-010",
+  "subject": "english",
+  "level": "5A",
+  "section": "A",
+  "part": 2,
+  "sheet_type": "letter_trace",
+  "page_number": 10,
+  "variant": 1,
+  "seed": 14870127105546804750,
+  "title": "Trace the letter",
+  "parent_tip": "Trace the first big letter with your finger together, saying its name and sound. Then your child traces the dots.",
+  "items": [
+    {
+      "kind": "letter",
+      "letter": "c",
+      "upper": "C",
+      "step": 1
+    },
+    {
+      "kind": "word",
+      "letter": "c",
+      "word": "cat",
+      "picture": "cat",
+      "runs": [
+        [
+          "c",
+          true
+        ],
+        [
+          "at",
+          false
+        ]
+      ]
+    },
+    {
+      "kind": "word",
+      "letter": "c",
+      "word": "cup",
+      "picture": "cup",
+      "runs": [
+        [
+          "c",
+          true
+        ],
+        [
+          "up",
+          false
+        ]
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "cat",
+    "cup"
+  ]
+}

@@ -250,9 +250,9 @@ test.** Nothing else in the code should change.
 | `word_story` | EN 7A-C | 1 picture, 2–4 short sentences using known words |
 | `phrase_card` | EN 6A-B | 3 cards of picture(s) + 2–3 word phrase ("a red apple", "mom and dad"), built from frames in `content/phrases/english.yaml` |
 | `sentence_recite` | EN 6A-C | 2 blocks (3 on new-word pages) of picture(s) + one sentence ("The dog can run."), each with 3 circles to color, one per recitation |
-| `letter_trace` | EN 5A-A/C | Two picture words + large dotted lower-case letters to trace |
-| `sound_parts` | EN 5A-B | Word split into onset + rime with picture |
-| `word_trace` | EN 5A-D | Dotted whole words to trace under pictures |
+| `letter_trace` | EN 5A-A/C | One letter (big copies + practice rows) with two picture words that start with its sound; or review rows of 3 letters (with capitals in 5A-C) |
+| `sound_parts` | EN 5A-B | 3 cards: picture + short-vowel word split into onset + rime boxes ("c" "at"), then the whole word; rhyme pages show one family |
+| `word_trace` | EN 5A-D | 3 pictures, each with its word (solid) and the same word dotted to trace |
 | `colouring` | ZI-A | Simple outline shape to colour inside |
 | `line_path` | ZI-B/C, ZII-A…D | Draw from a start dot along a lane to what's at the end. ZI: straight, then curved lanes to a small picture. ZII-A: from a shape to the same shape. ZII-B: story pairs, picture to picture ("the bee goes to the flower", `content/pencil/line_stories.yaml`). ZII-C: zigzags. ZII-D: right-angle steps, square bumps (left→right lanes only) and S-curves. Lines always run left→right or top→bottom and never turn back; no arrows or text for the child; lanes narrow across the level and lines get longer across each part |
 | `count_and_say` | MA 6A-A/B | Rows of N pictures + big numeral + number word; count aloud while pointing |
@@ -265,14 +265,20 @@ test.** Nothing else in the code should change.
 | `next_number` | MA 3A-A/B | "Write the number that comes next": two columns of `n → box` (`order: run` or `mixed`; `max` is the largest answer) |
 | `add_facts` | MA 3A-C…F, 2A | Two columns of `a + b = box` facts within the part's range (`op`, `addend`/`second` one number or a list, `min_first`/`max_first`, `new_from`, `rows`); answer key generated, one answer per box. `bridge: N` (+1 only) shows `n → box` above `n + 1 = box`; reusable for subtraction (`op: "-"`) |
 | `fact_drill` | MA M1 (Puppies math, ours) | + and − facts within 20 (`ops`, `amounts`, `first`, `turnarounds`, `blanks`: answer or missing middle number) in four layouts cycled per part: `horizontal` (12), `vertical` (12 column facts), `bridge` (4 count-on/count-back number tracks + 6 facts, amounts ≤ 3), `families` (3 number houses × 4 facts). Facts numbered small for grown-ups; answer key in that order. Verify recomputes every answer, keeps operands in the part's range, sums ≤ 20, no negatives, every amount and sign on the page, ≤ 1 zero answer |
+| `fact_drill` (× ÷) | MA M3 B–E (Foxes math, ours) | Same type with `ops: ["*"]` / `["/"]` (facts within 100; `amounts` = the tables, `first` = the other factor, or the answer for ÷, so sharing always comes out even). Extra layouts: `skip` (count-by track b…10b with 4 gaps + 8 facts of that table), `arrays` (4 dot arrays: a rows of b), `pairs` (6 rows "☐ × b = c" next to "c ÷ b = ☐"), and `families` as × ÷ houses. Verify recomputes every fact, the track, array sizes and pairs |
 | `place_value` | MA M2-A/B | `mode: blocks` (tens bars / hundred squares → "☐ hundreds ☐ tens ☐ ones = ☐"), `expanded` (parts, units, number names), `compare` (<, >, =) |
 | `skip_count` | MA M2-C | Tracks counting by 5s/10s/100s from a multiple of the step; first two boxes shown, gaps to write |
-| `column_arithmetic` | MA M2-D…H | Vertical 2-/3-digit add/take away (or 3 addends); dashed carry/borrow boxes only on regrouping parts; verify recomputes answers and regrouping per part (`regroup: none/all/mixed`, `max_regroups`) |
+| `column_arithmetic` | MA M2-D…H | Vertical 2-/3-digit add/take away (or 3 addends); dashed carry/borrow boxes only on regrouping parts; verify recomputes answers and regrouping per part (`regroup: none/all/mixed`, `max_regroups`). Foxes (MA M3-A) adds `problems: 9` (3 × 3, compact), `regroup_counts` (exact number of trading columns each problem may have; every count on every page) and `across_zero` (at least N take-aways trading through a 0 in the tens, 402 − 168) |
 | `math_story` | MA M2-H | Tiny story problems from `content/math/stories.yaml` with a picture and "☐ ◯ ☐ = ☐" to fill |
 | `pattern_words` | EN 3A-A (Puppies Reading) | Pattern bank on top (sh ch th wh / a_e i_e … / ai ay …), 4 cards: picture + word with the pattern's letters as boxes to fill (the whole word is shown too on the first `show_word_pages` of a part). New word first; review words from `known_levels` + earlier 3A words with the same pattern family (`content/phonics/english.yaml`). Verify: the pattern really occurs at the gaps. Answer key = the words |
 | `word_endings` | EN 3A-B | `add`: "jump + ing = ☐" (plurals show the picture twice), `take_off`: "jumping − ing = ☐". Forms from the hand-checked `endings` table; verify re-derives each from the spelling rules (es, drop e, double) unless listed under `irregular` |
 | `syllable_split` | EN 3A-C | Picture + word; `boxes`: one box per clap to write each syllable, `count`: circle 1, 2 or 3 claps. Splits from the hand-checked `syllables` table (join back into the word, a vowel in each) |
 | `sentence_copy` | EN 3A-D | 2 cards: picture + a sentence (the word's own `sentences:`) + 2 handwriting rows. Verify: known words, sight words and their regular endings only; part's length and end marks (`.` / `?`); sentence-sense scan in `tests/test_sentence_sense.py` |
+| `letter_team` | EN 4A-A | 4 picture words with their letter team highlighted (sh, bl, -at); trace the team in gray or write it in boxes. Teams and words from the hand-checked `content/phonics/english.yaml`; new words go to the page whose team they carry |
+| `rhyme_match` | EN 4A-B | 4 rows from hand-checked rhyme groups: read a rhyming pair, pick the picture that rhymes, or find the odd one out (wrong choices never share the vowel sound); answer key |
+| `sentence_trace` | EN 4A-C | Picture + a sentence of known words (the 6A frames and truth rules), read, then traced in gray on writing lines (two lines when long) |
+| `fraction_line` | MA M3 F | 5 number lines 0–1 cut into 2, 3, 4, 6, 8 parts (one of each a page); tasks `name` (write the dotted fraction), `mark` (draw a dot), `fill` (write missing tick labels); `unit_only` in part 1. Only whole numbers stored; verify checks ticks, marks and answers |
+| `story_problem` | MA M3 G | 3 short stories a page from `content/math/story_problems.yaml` (33 frames: equal groups, sharing, two-step); one times, one sharing and one two-step story a page. Verify refills each frame from the stored numbers, recomputes the answer and the true-to-life checks |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the
@@ -308,6 +314,10 @@ page's new word is used in one of its phrases, and its picture is shown there. W
 **"Say it again" strip** (every 7A-A sheet, both types): a small strip at the bottom of the
 page with 2 small pictures and their words, taken from words introduced 3–10 sheets earlier.
 The main cards stay at 2 new words. Pages 1–3 have no strip, because no word is old enough yet.
+
+**Letters and sounds (EN 5A)**: one planner (`rules: { planner: letters }`, `ws/plan.py plan_letters`) picks
+each page's letter, rime or words from the hand-checked lists in `content/sounds/english.yaml` (words by
+first sound, onset + rime splits). Pages the word bank can't fill yet are listed by verify as warnings.
 
 Later levels (4A–2A English, 3A–2A Math) need more types. Add them when the child is about
 one level away. Don't build them early.
@@ -359,7 +369,9 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
 - `phrase_card` / `sentence_recite`: every token is known (or in `allowed_words`); the phrase
   re-renders from its frame; colors, sizes, temperatures and animal actions match the tables;
   the pictures and `picture_size` are the ones the phrase calls for; new words are used and pictured.
-- `letter_trace`: letters requested exist in the trace font.
+- `letter_trace` / `word_trace`: letters requested exist in the trace font (`ws/trace_font.py`, our own
+  single-stroke dotted a–z in Andika's shapes; Andika only has outlines) and the solid letters in Andika's cmap.
+- `letter_team`: the word is on the team's hand-checked list and the team sits at its place (start/end/any). `rhyme_match`: rhymes come from the hand-checked groups; wrong choices have a different vowel; the answer is not always in the same place.
 
 **Exposure checks (per section / level run)**
 - Words are "new" exactly once in the level.
@@ -504,6 +516,7 @@ are 1–2 min/page.
 | | J Adding 9 and 10, 161–170 | up to 12+9 and 15+10 |
 | | K Adding up to 10, 171–200 | mixed |
 | **M1 (ours)** Puppies: Adding and Subtracting to 20 | A Adding 1–3 review 1–10 · B Adding 4, 5 11–40 · C Adding 6, 7 41–70 · D Adding 8, 9, 10 71–100 · E Adding within 20 101–110 · F Subtracting 1–3 111–130 · G Subtracting 4–6 131–150 · H Subtracting 7–10 151–170 · I + and − within 20 171–180 · J Missing numbers 181–190, fact families 191–200 | Replaces 2A for Puppies (grade 1–2: 1.OA.4–8, 2.OA.2); sheet type `fact_drill`; 10-page parts with ranges in `syllabus/math/M1.yaml` (`source: ours`); SCT 1–2 min/page (ours) |
+| **M3 (ours)** Foxes: Big Adding, Times Tables, Sharing, Fractions | A Big Adding & Taking Away 1–30 · B Times Tables 2, 5, 10 31–60 · C Times Tables 3 and 4 61–90 · D Times Tables 6 to 9 91–140 · E Sharing Facts 141–170 · F Fractions on a Line 171–190 · G Story Problems 191–200 | Grade 3 work for age 6 (3.NBT.2, 3.OA.1–8, 3.NF.1–2); sheet types `column_arithmetic`, `fact_drill` (× ÷), `fraction_line`, `story_problem`; 10-page parts in `syllabus/math/M3.yaml` (`source: ours`); SCT 2–4 min/page (ours); child text kept at ≥ 28px |
 
 **M2 (Cubs math, our own level, `source: ours`, 200p):** A Tens and Ones 1–20 · B Hundreds, Tens and Ones 21–50 ·
 C Skip Counting 51–70 · D Adding Ones 71–90 · E Adding Tens and Ones 91–130 (incl. three addends) · F Taking Away

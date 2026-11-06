@@ -1,0 +1,100 @@
+{
+  "id": "MA-M3-F-011",
+  "subject": "math",
+  "level": "M3",
+  "section": "F",
+  "part": 2,
+  "sheet_type": "fraction_line",
+  "page_number": 181,
+  "variant": 1,
+  "seed": 726278559727091303,
+  "title": "Fractions on a line",
+  "parent_tip": "Count the jumps from 0 to the dot: that number goes on top. The number of parts goes on the bottom.",
+  "items": [
+    {
+      "kind": "line",
+      "n": 1,
+      "task": "mark",
+      "den": 8,
+      "ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "num": 6
+    },
+    {
+      "kind": "line",
+      "n": 2,
+      "task": "name",
+      "den": 4,
+      "ticks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num": 1
+    },
+    {
+      "kind": "line",
+      "n": 3,
+      "task": "fill",
+      "den": 3,
+      "ticks": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blanks": [
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "line",
+      "n": 4,
+      "task": "name",
+      "den": 6,
+      "ticks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "num": 2
+    },
+    {
+      "kind": "line",
+      "n": 5,
+      "task": "mark",
+      "den": 2,
+      "ticks": [
+        0,
+        1,
+        2
+      ],
+      "num": 1
+    }
+  ],
+  "answer_key": [
+    "dot on 6/8",
+    "1/4",
+    "1/3 and 2/3",
+    "2/6",
+    "dot on 1/2"
+  ],
+  "new_words": [],
+  "review_words": []
+}

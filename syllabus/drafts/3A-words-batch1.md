@@ -46,3 +46,5 @@ One new word a page on Word Patterns; each word comes back on Word Endings (plur
 | 38 | tea | food | ea | Mom has a cup of tea. / Is the tea hot? | teacup of hot tea with steam |
 | 39 | leash | home | ea, sh | The dog has a leash. / Can I hold the leash? | dog leash with handle |
 | 40 | jeans | clothes | ea | I have blue jeans. / Are these my jeans? | blue jeans |
+
+**Later change (2026-11-06):** shark, wheel, beach, couch, tooth, shower, snake, tray, crow and jar are now Kittens Reading words; they were swapped for shampoo, teacher, chimney, chest, thread, shed, lake, spray, mower and guitar (see `3A-words-batch3.md`).

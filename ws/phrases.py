@@ -145,11 +145,11 @@ def check_phrase(item: dict, data: dict, known: dict[str, VocabEntry], max_words
     if max_words is not None and len(item["text"].split()) > max_words:
         problems.append(f"longer than {max_words} words: {item['text']!r}")
     filling = item["slots"]
-    if not is_true(filling, item["frame"], data):
+    in_frame_order = {k: filling[k] for k in _slots(item["frame"]) if k in filling}   # the manifest sorts keys
+    if not is_true(in_frame_order, item["frame"], data):
         problems.append(f"doesn't match its pictures: {item['text']!r}")
     if render(item["frame"], filling, known, data) != item["text"]:
         problems.append(f"text doesn't match its frame: {item['text']!r}")
-    in_frame_order = {k: filling[k] for k in _slots(item["frame"]) if k in filling}   # the manifest sorts keys
     if item["pictures"] != pictures_for(in_frame_order, data):
         problems.append(f"pictures {item['pictures']} don't match the phrase: {item['text']!r}")
     if item.get("picture_size") != picture_size(filling):

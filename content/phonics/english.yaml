@@ -1,3 +1,173 @@
+# Letter teams and rhymes for Kittens Reading (syllabus/english/4A.yaml). Hand-checked, never guessed.
+#
+# letter_teams: <id>: { letters, where, words }
+#   letters: the letters that work together in these words (shown highlighted on the sheet)
+#   where:   start | end | any. The team is found at that place in the word (first match for start/any,
+#            last for end), and verify checks it is really there.
+#   words:   words in which these letters really make the team's sound (checked by ear, one by one).
+#            A word that merely contains the letters is NOT listed: "orange" and "finger" have n-g but
+#            not the "ng" in "sing"; "table" has b-l across a syllable; "sister" s|t; "balloon" and
+#            "pillow" have ll in the middle (part 1 teaches ll at the end); "brush" ends in "ush" but
+#            doesn't rhyme with bush/push, so it is not in the -ush family.
+#   Color words (crayon pictures) and describing words (no picture) are left out: a gray crayon can't
+#   show "gr" in black and white.
+# Adding approved Kittens words: put each under the team(s) it shows; the planner gives a team's
+# new-word pages the next unused Kittens word (word-bank order) that is listed under that team.
+
+letter_teams:
+  # Part 1: double letters at the end (ll, ss, ff, zz, gg)
+  ll: { letters: ll, where: end, words: [ball, doll, bell, shell, hill, roll, wall, well, bull, grill] }
+  ss: { letters: ss, where: end, words: [dress, grass, glass] }
+  ff: { letters: ff, where: end, words: [] }
+  zz: { letters: zz, where: end, words: [] }
+  gg: { letters: gg, where: end, words: [egg] }
+  # Part 2-4: consonant digraphs
+  sh: { letters: sh, where: any, words: [shoe, sheep, shirt, fish, brush, bush, shell, shovel, wash, splash, shorts, push, ship, dish, shark, shelf, shower] }
+  ch: { letters: ch, where: any, words: [cheese, chair, chin, cherry, chick, peach, bench, couch, beach, cheek, chicken] }
+  tch: { letters: tch, where: end, words: [catch, watch] }
+  th: { letters: th, where: any, words: [teeth, mouth, thumb, brother, bathtub, feather, throw, tooth, path, moth] }
+  wh: { letters: wh, where: start, words: [whale, whistle, wheel, whisk] }
+  # Part 5
+  ck: { letters: ck, where: any, words: [duck, sock, clock, truck, rock, chick, kick, stick, neck, pickle, bucket, jacket, rocket, blocks, lock, pocket, chicken, sticker, cracker, brick] }
+  # Part 6: l-blends at the start
+  bl: { letters: bl, where: start, words: [blocks, blanket, blow] }
+  cl: { letters: cl, where: start, words: [clock, cloud, clap, climb] }
+  fl: { letters: fl, where: start, words: [flower, flag] }
+  gl: { letters: gl, where: start, words: [glass, glove, glue] }
+  pl: { letters: pl, where: start, words: [plane, plate, plum, plant] }
+  sl: { letters: sl, where: start, words: [slide, sled, sleep, slipper] }
+  # Part 7: r-blends at the start
+  br: { letters: br, where: start, words: [bread, brush, brother, broom, brick] }
+  cr: { letters: cr, where: start, words: [crab, crayon, crawl, crib, crown, cracker, crow] }
+  dr: { letters: dr, where: start, words: [drum, dress, drink, draw] }
+  fr: { letters: fr, where: start, words: [frog, fridge, friend] }
+  gr: { letters: gr, where: start, words: [grapes, grandma, grandpa, grass, grill] }
+  pr: { letters: pr, where: start, words: [present, pretzel] }
+  tr: { letters: tr, where: start, words: [tree, truck, train, tractor, tray, trumpet] }
+  # Part 8: s-blends at the start
+  sn: { letters: sn, where: start, words: [snow, snowman, snail, snake] }
+  sp: { letters: sp, where: start, words: [spoon, sponge] }
+  spl: { letters: spl, where: start, words: [splash] }
+  st: { letters: st, where: start, words: [star, stick, sticker, stool, stamp] }
+  sw: { letters: sw, where: start, words: [swing, swim, sweater, swan] }
+  sk: { letters: sk, where: start, words: [skirt, skate, skunk] }
+  sm: { letters: sm, where: start, words: [smile] }
+  # Part 9: teams at the end (ng, nk, and ending blends)
+  ng: { letters: ng, where: end, words: [swing, sing, ring] }
+  nk: { letters: nk, where: end, words: [sink, drink, skunk] }
+  nd: { letters: nd, where: end, words: [hand, friend, sand, pond] }
+  mp: { letters: mp, where: end, words: [lamp, jump, stamp] }
+  nt: { letters: nt, where: end, words: [tent, ant, paint, plant, present] }
+  "-st": { letters: st, where: end, words: [nest, toast, vest] }
+  lt: { letters: lt, where: end, words: [belt, quilt] }
+  # Part 10: word families (same spelling and same sound at the end)
+  "-at":  { letters: at,  where: end, words: [cat, hat, bat, mat] }
+  "-an":  { letters: an,  where: end, words: [van, fan, pan, man] }
+  "-ig":  { letters: ig,  where: end, words: [pig, dig, wig] }
+  "-ug":  { letters: ug,  where: end, words: [rug, hug, jug, bug, mug] }
+  "-ed":  { letters: ed,  where: end, words: [bed, sled] }
+  "-ock": { letters: ock, where: end, words: [sock, clock, rock, lock] }
+  "-uck": { letters: uck, where: end, words: [duck, truck] }
+  "-ick": { letters: ick, where: end, words: [chick, kick, stick, brick] }
+  "-ell": { letters: ell, where: end, words: [bell, shell, well] }
+  "-ee":  { letters: ee,  where: end, words: [bee, tree, knee] }
+  "-oon": { letters: oon, where: end, words: [moon, spoon, balloon] }
+  "-ar":  { letters: ar,  where: end, words: [car, star, jar] }
+  "-un":  { letters: un,  where: end, words: [sun, run, bun] }
+  "-ing": { letters: ing, where: end, words: [swing, sing, ring] }
+  "-ox":  { letters: ox,  where: end, words: [fox, box] }
+  "-oat": { letters: oat, where: end, words: [coat, goat, boat] }
+  "-ain": { letters: ain, where: end, words: [train, rain] }
+  "-ook": { letters: ook, where: end, words: [book, cook] }
+  "-ide": { letters: ide, where: end, words: [slide, hide, ride] }
+  "-um":  { letters: um,  where: end, words: [drum, plum] }
+  "-ap":  { letters: ap,  where: end, words: [clap, nap, map] }
+  "-ush": { letters: ush, where: end, words: [bush, push] }
+  "-eep": { letters: eep, where: end, words: [sheep, sleep] }
+  "-ice": { letters: ice, where: end, words: [ice, rice] }
+  "-ose": { letters: ose, where: end, words: [nose, hose] }
+  # with Kittens words
+  "-ish":  { letters: ish,  where: end, words: [fish, dish] }
+  "-ake":  { letters: ake,  where: end, words: [cake, snake, rake] }
+  "-ill":  { letters: ill,  where: end, words: [hill, grill] }
+  "-all":  { letters: all,  where: end, words: [ball, wall] }
+  "-ass":  { letters: ass,  where: end, words: [grass, glass] }
+  "-amp":  { letters: amp,  where: end, words: [lamp, stamp] }
+  "-est":  { letters: est,  where: end, words: [nest, vest] }
+  "-ate":  { letters: ate,  where: end, words: [plate, skate] }
+  "-each": { letters: each, where: end, words: [peach, beach] }
+  "-ow":   { letters: ow,   where: end, words: [snow, blow, crow] }
+  # with Bunnies words
+  "-et":   { letters: et,   where: end, words: [jet, net] }
+  "-op":   { letters: op,   where: end, words: [mop, top] }
+  "-en":   { letters: en,   where: end, words: [hen, pen] }
+  "-in":   { letters: in,   where: end, words: [chin, pin] }
+
+# Rhyme groups: words that rhyme with each other (same vowel sound and same ending sound, said aloud in
+# General American English), checked by ear. Spelling may differ (bear, chair). `vowel` is the vowel
+# sound of the rhyme; a wrong choice on a "which one rhymes?" row never shares it, so sun is never
+# offered against drum (a near rhyme).
+# Left out on purpose:
+#   - eye rhymes (spelled alike, said differently): cow/snow, bear/ear, shoe/toe, brush/bush
+#   - pairs that rhyme in some American accents only: ball/doll, dog/frog
+#   - color words (crayon pictures) and describing words (no picture)
+rhymes:
+  - { sound: at,    vowel: a,   words: [cat, hat, bat, mat] }
+  - { sound: an,    vowel: a,   words: [van, fan, pan, man] }
+  - { sound: ap,    vowel: a,   words: [clap, nap, map] }
+  - { sound: ig,    vowel: i,   words: [pig, dig, wig] }
+  - { sound: ick,   vowel: i,   words: [chick, kick, stick, brick] }
+  - { sound: ing,   vowel: i,   words: [swing, sing, ring] }
+  - { sound: itten, vowel: i,   words: [kitten, mitten] }
+  - { sound: ug,    vowel: u,   words: [rug, hug, jug, bug, mug] }
+  - { sound: uck,   vowel: u,   words: [duck, truck] }
+  - { sound: un,    vowel: u,   words: [sun, run, bun] }
+  - { sound: um,    vowel: u,   words: [drum, plum, thumb] }
+  - { sound: unny,  vowel: u,   words: [bunny, honey] }
+  - { sound: ed,    vowel: e,   words: [bed, sled, bread, head] }
+  - { sound: ell,   vowel: e,   words: [bell, shell, well] }
+  - { sound: eg,    vowel: e,   words: [leg, egg] }
+  - { sound: ock,   vowel: o,   words: [sock, clock, rock, lock] }
+  - { sound: ox,    vowel: o,   words: [fox, box] }
+  - { sound: ar,    vowel: ar,  words: [car, star, jar] }
+  - { sound: ee,    vowel: ee,  words: [bee, tree, knee] }
+  - { sound: eep,   vowel: ee,  words: [sheep, sleep] }
+  - { sound: ear,   vowel: ear, words: [ear, deer] }
+  - { sound: air,   vowel: air, words: [chair, hair, bear, pear] }
+  - { sound: oon,   vowel: oo,  words: [moon, spoon, balloon] }
+  - { sound: ook,   vowel: uu,  words: [book, cook] }
+  - { sound: ush,   vowel: uu,  words: [bush, push] }
+  - { sound: oat,   vowel: oa,  words: [coat, goat, boat] }
+  - { sound: ow,    vowel: oa,  words: [snow, blow, toe, crow] }
+  - { sound: ose,   vowel: oa,  words: [nose, hose] }
+  - { sound: ain,   vowel: ai,  words: [train, rain, plane] }
+  - { sound: ail,   vowel: ai,  words: [snail, whale] }
+  - { sound: ide,   vowel: ie,  words: [slide, hide, ride] }
+  - { sound: ice,   vowel: ie,  words: [ice, rice] }
+  # with Kittens words
+  - { sound: all,   vowel: aw,  words: [ball, wall] }
+  - { sound: ass,   vowel: a,   words: [grass, glass] }
+  - { sound: ill,   vowel: i,   words: [hill, grill] }
+  - { sound: ish,   vowel: i,   words: [fish, dish] }
+  - { sound: each,  vowel: ee,  words: [peach, beach] }
+  - { sound: eal,   vowel: ee,  words: [seal, wheel] }
+  - { sound: ocket, vowel: o,   words: [rocket, pocket] }
+  - { sound: ag,    vowel: a,   words: [bag, flag] }
+  - { sound: ant,   vowel: a,   words: [ant, plant] }
+  - { sound: oo2,   vowel: oo,  words: [shoe, glue] }
+  - { sound: ake,   vowel: ai,  words: [cake, snake, rake] }
+  - { sound: ate,   vowel: ai,  words: [plate, skate] }
+  - { sound: amp,   vowel: a,   words: [lamp, stamp] }
+  - { sound: est,   vowel: e,   words: [nest, vest] }
+  # with Bunnies words
+  - { sound: et,    vowel: e,   words: [jet, net] }
+  - { sound: op,    vowel: o,   words: [mop, top] }
+  - { sound: en,    vowel: e,   words: [hen, pen] }
+  - { sound: in,    vowel: i,   words: [chin, pin] }
+  - { sound: am,    vowel: a,   words: [lamb, jam] }
+  - { sound: ipper, vowel: i,   words: [slipper, zipper] }
+
+# ==============================================================================================
 # Puppies Reading (3A) hand-checked phonics tables. Every list here was checked by hand; `ws verify`
 # re-checks each entry (the pattern letters really occur, endings follow the spelling rules, syllables
 # join back into the word and each has a vowel). Only words in these tables appear on Word Patterns,
@@ -37,18 +207,18 @@ patterns:
 # Puppies words first, then known Chicks/Ducklings words that are reviewed on Word Patterns pages.
 pattern_words:
   # Puppies words (3A)
-  shark: [sh, ar]
-  wheel: [wh, ee]
-  beach: [ch, ea]
-  couch: [ch, ou]
-  tooth: [th, oo]
-  shower: [sh, ow_ou, er]
+  shampoo: [sh, oo]
+  teacher: [ch, ea, er]
+  chimney: [ch]
+  chest: [ch]
+  thread: [th]
+  shed: [sh]
   chalk: [ch]
   cheetah: [ch, ee]
   throne: [th, o_e]
   wheat: [wh, ea]
   gate: [a_e]
-  snake: [a_e]
+  lake: [a_e]
   cape: [a_e]
   vase: [a_e]
   hive: [i_e]
@@ -64,7 +234,7 @@ pattern_words:
   braid: [ai]
   chain: [ch, ai]
   hay: [ay]
-  tray: [ay]
+  spray: [ay]
   clay: [ay]
   jay: [ay]
   seed: [ee]
@@ -82,13 +252,13 @@ pattern_words:
   loaf: [oa]
   goal: [oa]
   oatmeal: [oa, ea]
-  crow: [ow_o]
+  mower: [ow_o, er]
   bow: [ow_o]
   light: [igh]
   night: [igh]
   rowboat: [ow_o, oa]
   barn: [ar]
-  jar: [ar]
+  guitar: [ar]
   yarn: [ar]
   card: [ar]
   harp: [ar]
@@ -221,12 +391,7 @@ endings:
   dress: { plural: dresses }
   brush: { plural: brushes }
   peach: { plural: peaches }
-  shark: { plural: sharks }
-  wheel: { plural: wheels }
-  beach: { plural: beaches }
-  couch: { plural: couches }
   gate: { plural: gates }
-  snake: { plural: snakes }
   cape: { plural: capes }
   vase: { plural: vases }
   hive: { plural: hives }
@@ -240,7 +405,6 @@ endings:
   sail: { plural: sails }
   braid: { plural: braids }
   chain: { plural: chains }
-  tray: { plural: trays }
   jay: { plural: jays }
   seed: { plural: seeds }
   bean: { plural: beans }
@@ -250,12 +414,10 @@ endings:
   eagle: { plural: eagles }
   toad: { plural: toads }
   goal: { plural: goals }
-  crow: { plural: crows }
   bow: { plural: bows }
   light: { plural: lights }
   rowboat: { plural: rowboats }
   barn: { plural: barns }
-  jar: { plural: jars }
   card: { plural: cards }
   harp: { plural: harps }
   horn: { plural: horns }
@@ -269,6 +431,13 @@ endings:
   brownie: { plural: brownies }
   pool: { plural: pools }
   hoop: { plural: hoops }
+  teacher: { plural: teachers }
+  chimney: { plural: chimneys }
+  chest: { plural: chests }
+  shed: { plural: sheds }
+  lake: { plural: lakes }
+  mower: { plural: mowers }
+  guitar: { plural: guitars }
   # actions: every one takes -ing; -ed only where the past is regular (not ran, ate, sat, swam ...)
   run: { ing: running }
   eat: { ing: eating }
@@ -348,6 +517,8 @@ syllables:
     blanket: [blan, ket]
     pizza: [piz, za]
     sister: [sis, ter]
+    shampoo: [sham, poo]
+    chimney: [chim, ney]
   open:
     tiger: [ti, ger]
     zebra: [ze, bra]
@@ -358,7 +529,8 @@ syllables:
     yogurt: [yo, gurt]
     eagle: [ea, gle]
     cheetah: [chee, tah]
-    shower: [show, er]
+    teacher: [tea, cher]
+    mower: [mow, er]
   three:
     potato: [po, ta, to]
     tomato: [to, ma, to]
@@ -369,16 +541,10 @@ syllables:
     family: [fam, i, ly]
     koala: [ko, a, la]
   one:
-    shark: [shark]
-    wheel: [wheel]
-    beach: [beach]
-    couch: [couch]
-    tooth: [tooth]
     chalk: [chalk]
     throne: [throne]
     wheat: [wheat]
     gate: [gate]
-    snake: [snake]
     cape: [cape]
     vase: [vase]
     hive: [hive]
@@ -392,7 +558,6 @@ syllables:
     sail: [sail]
     braid: [braid]
     chain: [chain]
-    tray: [tray]
     seed: [seed]
     peel: [peel]
     bean: [bean]
@@ -403,10 +568,8 @@ syllables:
     toad: [toad]
     loaf: [loaf]
     goal: [goal]
-    crow: [crow]
     light: [light]
     barn: [barn]
-    jar: [jar]
     yarn: [yarn]
     harp: [harp]
     horn: [horn]
@@ -421,6 +584,11 @@ syllables:
     roof: [roof]
     hoop: [hoop]
     goose: [goose]
+    chest: [chest]
+    shed: [shed]
+    lake: [lake]
+    spray: [spray]
+    thread: [thread]
     tea: [tea]
     hay: [hay]
     clay: [clay]
@@ -445,13 +613,13 @@ sight_words: [a, an, and, the, I, is, it, in, "on", at, to, my, we, you, he, she
 # Sentence-sense facts about the Puppies words, added to the hand-checked lists in
 # content/phrases/english.yaml when tests/test_sentence_sense.py scans the copy sentences.
 sense:
-  picture_colors: { cape: red, lime: green, jay: blue, peel: yellow, bean: green, jeans: blue, bow: pink,
+  picture_colors: { thread: blue, cape: red, lime: green, jay: blue, peel: yellow, bean: green, jeans: blue, bow: pink,
                     barn: red, yarn: blue, purse: red }
   ownable: [cape, coin, hoop, jeans]
   eatable: [oatmeal, brownie]
   plural: [jeans, feet]
   can_do:
-    swim: [shark, goose]
+    swim: [goose]
     run: [cheetah]
     hop: [toad]
-    fly: [bird, bee, owl, parrot, duck, jay, eagle, crow]
+    fly: [bird, bee, owl, parrot, duck, jay, eagle]

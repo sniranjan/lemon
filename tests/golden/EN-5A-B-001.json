@@ -1,0 +1,46 @@
+{
+  "id": "EN-5A-B-001",
+  "subject": "english",
+  "level": "5A",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "sound_parts",
+  "page_number": 71,
+  "variant": 1,
+  "seed": 10000049178240059435,
+  "title": "Say the sounds",
+  "parent_tip": "Touch the first box and say its sound, then the second box, then say the whole word.",
+  "items": [
+    {
+      "kind": "word",
+      "word": "van",
+      "picture": "van",
+      "onset": "v",
+      "rime": "an",
+      "new": false
+    },
+    {
+      "kind": "word",
+      "word": "bag",
+      "picture": "bag",
+      "onset": "b",
+      "rime": "ag",
+      "new": false
+    },
+    {
+      "kind": "word",
+      "word": "hat",
+      "picture": "hat",
+      "onset": "h",
+      "rime": "at",
+      "new": false
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "van",
+    "bag",
+    "hat"
+  ]
+}

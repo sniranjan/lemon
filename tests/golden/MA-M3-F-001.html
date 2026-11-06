@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Foxes · Math · page 171</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.lines { flex: 1; min-height: 0; display: grid; grid-template-rows: repeat(5, 1fr); gap: 12px; }
+.lines .card { position: relative; min-height: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 26px 0 14px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+svg.nl text { font-family: "Andika", sans-serif; font-weight: 700; fill: #1d1d1f; }
+.side { width: 96px; display: flex; flex-direction: column; align-items: center; }
+.stack { display: flex; flex-direction: column; align-items: center; font-size: 40px; font-weight: 700; line-height: 1.05; color: var(--accent); }
+.stack .bar { width: 44px; border-top: 4px solid var(--accent); margin: 3px 0; }
+.box { width: 50px; height: 44px; border: 3px solid var(--ink); border-radius: 9px; background: #fff; }
+.side .bar { width: 60px; border-top: 4px solid var(--ink); margin: 5px 0; }
+.hole { fill: #fff; stroke: #1d1d1f; stroke-width: 2; stroke-dasharray: 4 3; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Foxes · Math</div>
+      <div class="title-row"><h1>Fractions on a line</h1><span class="pill">Foxes · 171</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Each line from 0 to 1 is cut into equal parts. Count the parts together: that number goes on the bottom.</div>
+  <main class="body">
+    <div class="lines">
+      <div class="card"><span class="qn" data-audience="parent">1</span>
+        <svg class="nl" width="568" height="122" viewBox="0 0 568 122">
+          <line x1="34" x2="534" y1="30" y2="30" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <line x1="34.0" x2="34.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="34.0" y="92" text-anchor="middle" style="font-size: 30px">0</text>
+          <line x1="200.67" x2="200.67" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="367.33" x2="367.33" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="534.0" x2="534.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="534.0" y="92" text-anchor="middle" style="font-size: 30px">1</text>
+          <circle cx="200.67" cy="30" r="10" fill="#B4410C" stroke="#1d1d1f" stroke-width="2.5"/>
+        </svg>
+        <div class="side">
+          <div class="box"></div><div class="bar"></div><div class="box"></div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">2</span>
+        <svg class="nl" width="568" height="122" viewBox="0 0 568 122">
+          <line x1="34" x2="534" y1="30" y2="30" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <line x1="34.0" x2="34.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="34.0" y="92" text-anchor="middle" style="font-size: 30px">0</text>
+          <line x1="284.0" x2="284.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="534.0" x2="534.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="534.0" y="92" text-anchor="middle" style="font-size: 30px">1</text>
+          <circle cx="284.0" cy="30" r="10" fill="#B4410C" stroke="#1d1d1f" stroke-width="2.5"/>
+        </svg>
+        <div class="side">
+          <div class="box"></div><div class="bar"></div><div class="box"></div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">3</span>
+        <svg class="nl" width="568" height="122" viewBox="0 0 568 122">
+          <line x1="34" x2="534" y1="30" y2="30" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <line x1="34.0" x2="34.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="34.0" y="92" text-anchor="middle" style="font-size: 30px">0</text>
+          <line x1="159.0" x2="159.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="284.0" x2="284.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="409.0" x2="409.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="534.0" x2="534.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="534.0" y="92" text-anchor="middle" style="font-size: 30px">1</text>
+        </svg>
+        <div class="side">
+          <div class="stack"><span>1</span><span class="bar"></span><span>4</span></div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">4</span>
+        <svg class="nl" width="568" height="122" viewBox="0 0 568 122">
+          <line x1="34" x2="534" y1="30" y2="30" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <line x1="34.0" x2="34.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="34.0" y="92" text-anchor="middle" style="font-size: 30px">0</text>
+          <line x1="117.33" x2="117.33" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="200.67" x2="200.67" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="284.0" x2="284.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="367.33" x2="367.33" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="450.67" x2="450.67" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="534.0" x2="534.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="534.0" y="92" text-anchor="middle" style="font-size: 30px">1</text>
+        </svg>
+        <div class="side">
+          <div class="stack"><span>1</span><span class="bar"></span><span>6</span></div>
+        </div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">5</span>
+        <svg class="nl" width="568" height="122" viewBox="0 0 568 122">
+          <line x1="34" x2="534" y1="30" y2="30" stroke="#1d1d1f" stroke-width="4" stroke-linecap="round"/>
+          <line x1="34.0" x2="34.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="34.0" y="92" text-anchor="middle" style="font-size: 30px">0</text>
+          <line x1="96.5" x2="96.5" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="159.0" x2="159.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="221.5" x2="221.5" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="284.0" x2="284.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="346.5" x2="346.5" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="409.0" x2="409.0" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="471.5" x2="471.5" y1="18" y2="42" stroke="#1d1d1f" stroke-width="3"/>
+          <line x1="534.0" x2="534.0" y1="14" y2="46" stroke="#1d1d1f" stroke-width="4"/>
+          <text x="534.0" y="92" text-anchor="middle" style="font-size: 30px">1</text>
+          <circle cx="96.5" cy="30" r="10" fill="#B4410C" stroke="#1d1d1f" stroke-width="2.5"/>
+        </svg>
+        <div class="side">
+          <div class="box"></div><div class="bar"></div><div class="box"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Foxes · Math · page 171</footer>
+</div>
+</body>
+</html>

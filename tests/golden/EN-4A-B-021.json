@@ -1,0 +1,104 @@
+{
+  "id": "EN-4A-B-021",
+  "subject": "english",
+  "level": "4A",
+  "section": "B",
+  "part": 3,
+  "sheet_type": "rhyme_match",
+  "page_number": 121,
+  "variant": 1,
+  "seed": 5436345247302141300,
+  "title": "Which one rhymes?",
+  "parent_tip": "Say the words slowly together. Words that rhyme end with the same sound, like cat and hat. Let your child point first, then circle.",
+  "items": [
+    {
+      "kind": "rhyme_pick",
+      "prompt": "peach",
+      "picture": "peach",
+      "choices": [
+        "beach",
+        "shell",
+        "snake"
+      ],
+      "pictures": [
+        "beach",
+        "shell",
+        "snake"
+      ],
+      "answer": "beach"
+    },
+    {
+      "kind": "rhyme_pick",
+      "prompt": "grass",
+      "picture": "grass",
+      "choices": [
+        "bunny",
+        "glass",
+        "fish"
+      ],
+      "pictures": [
+        "bunny",
+        "glass",
+        "fish"
+      ],
+      "answer": "glass"
+    },
+    {
+      "kind": "rhyme_pick",
+      "prompt": "hair",
+      "picture": "hair",
+      "choices": [
+        "van",
+        "lamp",
+        "bear"
+      ],
+      "pictures": [
+        "van",
+        "lamp",
+        "bear"
+      ],
+      "answer": "bear"
+    },
+    {
+      "kind": "rhyme_pick",
+      "prompt": "swing",
+      "picture": "swing",
+      "choices": [
+        "goat",
+        "jar",
+        "ring"
+      ],
+      "pictures": [
+        "goat",
+        "jar",
+        "ring"
+      ],
+      "answer": "ring"
+    }
+  ],
+  "answer_key": [
+    "beach",
+    "glass",
+    "bear",
+    "ring"
+  ],
+  "new_words": [],
+  "review_words": [
+    "peach",
+    "beach",
+    "shell",
+    "snake",
+    "grass",
+    "bunny",
+    "glass",
+    "fish",
+    "hair",
+    "van",
+    "lamp",
+    "bear",
+    "swing",
+    "goat",
+    "jar",
+    "ring"
+  ]
+}

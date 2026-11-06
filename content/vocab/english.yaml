@@ -301,22 +301,103 @@
 - { word: thumb,   picture: thumb,   category: body,     level: 6A, sentences: ["Here is my thumb."] }
 - { word: family,  picture: family,  category: family,   level: 6A, sentences: ["I love my family."] }
 
+# Bunnies Reading (5A) word batch 1: 23 words, approved 2026-11-06 by the orchestrator under the user's
+# delegation (syllabus/drafts/5A-words-batch1.md). Order = order of introduction.
+- { word: queen,   picture: queen,   category: people,   level: 5A, sentences: ["The queen has a crown."] }
+- { word: quilt,   picture: quilt,   category: home,     level: 5A, sentences: ["My bed has a warm quilt."] }
+- { word: zipper,  picture: zipper,  category: clothes,  level: 5A, sentences: ["My coat has a zipper."] }
+- { word: bat,     picture: bat,     category: toys,     level: 5A, sentences: ["I swing my bat at the ball."] }
+- { word: pen,     picture: pen,     category: home,     level: 5A, sentences: ["Mom writes with a pen."] }
+- { word: pin,     picture: pin,     category: home,     level: 5A, sentences: ["The safety pin is closed."] }
+- { word: mop,     picture: mop,     category: home,     level: 5A, sentences: ["Dad cleans the floor with a mop."] }
+- { word: bug,     picture: bug,     category: animals,  level: 5A, sentences: ["The little bug is green."] }
+- { word: mat,     picture: mat,     category: home,     level: 5A, sentences: ["Wipe your feet on the mat."] }
+- { word: net,     picture: net,     category: toys,     level: 5A, sentences: ["I hold a net."] }
+- { word: bun,     picture: bun,     category: food,     level: 5A, sentences: ["I eat a bun."] }
+- { word: top,     picture: top,     category: toys,     level: 5A, sentences: ["The top can spin."] }
+- { word: mug,     picture: mug,     category: home,     level: 5A, sentences: ["Dad drinks from a mug."] }
+- { word: pan,     picture: pan,     category: home,     level: 5A, sentences: ["Mom cooks eggs in a pan."] }
+- { word: jet,     picture: jet,     category: vehicles, level: 5A, sentences: ["The jet flies fast."] }
+- { word: wig,     picture: wig,     category: toys,     level: 5A, sentences: ["I put on a funny wig."] }
+- { word: log,     picture: log,     category: nature,   level: 5A, sentences: ["The frog sits on a log."] }
+- { word: nut,     picture: nut,     category: food,     level: 5A, sentences: ["The squirrel has a nut."] }
+- { word: map,     picture: map,     category: toys,     level: 5A, sentences: ["The map shows the way."] }
+- { word: web,     picture: web,     category: nature,   level: 5A, sentences: ["I see a web."] }
+- { word: lid,     picture: lid,     category: home,     level: 5A, sentences: ["Put the lid on the pot."] }
+- { word: jam,     picture: jam,     category: food,     level: 5A, mass: true, sentences: ["I like jam on toast."] }
+- { word: tub,     picture: tub,     category: home,     level: 5A, sentences: ["The tub has water in it."] }
+# --- Kittens Reading (4A) words: one new word on pages 4-8 of each Letter Teams unit; the planner
+# (ws/phonics.py) gives each page the next word listed under its team in content/phonics/english.yaml.
+# Batch 1 (words 1-40) and batch 2 (41-50) approved by the orchestrator under user delegation 2026-11-06;
+# pictures by scripts/pictures/draw_4A_batch1.py.
+- { word: glass,   picture: glass,   category: home,     level: 4A, sentences: ["Here is my glass."] }
+- { word: wall,    picture: wall,    category: home,     level: 4A, sentences: ["Look at the wall."] }
+- { word: well,    picture: well,    category: nature,   level: 4A, sentences: ["I see a well."] }
+- { word: bull,    picture: bull,    category: animals,  level: 4A, sentences: ["The bull is big."] }
+- { word: grill,   picture: grill,   category: home,     level: 4A, sentences: ["Look at the grill."] }
+- { word: ship,    picture: ship,    category: vehicles, level: 4A, sentences: ["I see a ship."] }
+- { word: dish,    picture: dish,    category: home,     level: 4A, sentences: ["Here is my dish."] }
+- { word: shark,   picture: shark,   category: animals,  level: 4A, sentences: ["The shark can swim."] }
+- { word: shelf,   picture: shelf,   category: home,     level: 4A, sentences: ["Look at the shelf."] }
+- { word: shower,  picture: shower,  category: home,     level: 4A, sentences: ["This is a shower."] }
+- { word: bench,   picture: bench,   category: home,     level: 4A, sentences: ["I see a bench."] }
+- { word: watch,   picture: watch,   category: clothes,  level: 4A, sentences: ["Here is my watch."] }
+- { word: couch,   picture: couch,   category: home,     level: 4A, sentences: ["Look at the couch."] }
+- { word: beach,   picture: beach,   category: nature,   level: 4A, sentences: ["I see a beach."] }
+- { word: cheek,   picture: cheek,   category: body,     level: 4A, sentences: ["Here is my cheek."] }
+- { word: tooth,   picture: tooth,   category: body,     level: 4A, sentences: ["Here is my tooth."] }
+- { word: path,    picture: path,    category: nature,   level: 4A, sentences: ["Look at the path."] }
+- { word: moth,    picture: moth,    category: animals,  level: 4A, sentences: ["I see a moth."] }
+- { word: wheel,   picture: wheel,   category: vehicles, level: 4A, sentences: ["Look at the wheel."] }
+- { word: whisk,   picture: whisk,   category: home,     level: 4A, sentences: ["This is a whisk."] }
+- { word: lock,    picture: lock,    category: home,     level: 4A, sentences: ["I see a lock."] }
+- { word: pocket,  picture: pocket,  category: clothes,  level: 4A, sentences: ["Here is my pocket."] }
+- { word: chicken, picture: chicken, category: animals,  level: 4A, sentences: ["The chicken can walk."] }
+- { word: sticker, picture: sticker, category: toys,     level: 4A, sentences: ["Here is my sticker."] }
+- { word: cracker, picture: cracker, category: food,     level: 4A, sentences: ["I eat a cracker."] }
+- { word: flag,    picture: flag,    category: toys,     level: 4A, sentences: ["Here is my flag."] }
+- { word: glove,   picture: glove,   category: clothes,  level: 4A, sentences: ["I like my green glove."] }
+- { word: plant,   picture: plant,   category: nature,   level: 4A, sentences: ["Look at the plant."] }
+- { word: glue,    picture: glue,    category: toys,     level: 4A, sentences: ["Here is my glue."] }
+- { word: slipper, picture: slipper, category: clothes,  level: 4A, sentences: ["Here is my slipper."] }
+- { word: brick,   picture: brick,   category: home,     level: 4A, sentences: ["I see a brick."] }
+- { word: present, picture: present, category: toys,     level: 4A, sentences: ["Here is my present."] }
+- { word: pretzel, picture: pretzel, category: food,     level: 4A, sentences: ["I eat a pretzel."] }
+- { word: tray,    picture: tray,    category: home,     level: 4A, sentences: ["Look at the tray."] }
+- { word: trumpet, picture: trumpet, category: toys,     level: 4A, sentences: ["Here is my trumpet."] }
+- { word: snake,   picture: snake,   category: animals,  level: 4A, sentences: ["I see a snake."] }
+- { word: sponge,  picture: sponge,  category: home,     level: 4A, sentences: ["This is a sponge."] }
+- { word: swan,    picture: swan,    category: animals,  level: 4A, sentences: ["The swan can swim."] }
+- { word: skate,   picture: skate,   category: toys,     level: 4A, sentences: ["Here is my skate."] }
+- { word: stool,   picture: stool,   category: home,     level: 4A, sentences: ["Look at the stool."] }
+# Kittens batch 2
+- { word: ring,    picture: ring,    category: toys,     level: 4A, sentences: ["Here is my ring."] }
+- { word: skunk,   picture: skunk,   category: animals,  level: 4A, sentences: ["The skunk can walk."] }
+- { word: pond,    picture: pond,    category: nature,   level: 4A, sentences: ["Look at the pond."] }
+- { word: vest,    picture: vest,    category: clothes,  level: 4A, sentences: ["Here is my vest."] }
+- { word: stamp,   picture: stamp,   category: toys,     level: 4A, sentences: ["Here is my stamp."] }
+- { word: man,     picture: man,     category: people,   level: 4A, sentences: ["I see a man."] }
+- { word: jug,     picture: jug,     category: home,     level: 4A, sentences: ["Look at the jug."] }
+- { word: rake,    picture: rake,    category: toys,     level: 4A, sentences: ["Look at the rake."] }
+- { word: crow,    picture: crow,    category: animals,  level: 4A, sentences: ["I see a crow."] }
+- { word: jar,     picture: jar,     category: home,     level: 4A, sentences: ["Look at the jar."] }
+
 # --- Puppies Reading (3A): 70 spelling-pattern words, one new word a page in Word Patterns (pages 1–70),
 # in introduction order. `sentences` are the copy sentences of Copy a Sentence (pages 141–200): true to the
 # word's picture, built from known words and the sight words in content/phonics/english.yaml.
 # Batch 3A-1 (words 1–40, pages 1–40): letter pairs, magic e, ai/ay, ee/ea.
-- { word: shark,   picture: shark,   category: animals,  level: 3A, sentences: ["The shark can swim.", "Can you see the shark?"] }
-- { word: wheel,   picture: wheel,   category: vehicles, level: 3A, sentences: ["A car has four wheels.", "Can you roll the wheel?"] }
-- { word: beach,   picture: beach,   category: nature,   level: 3A, sentences: ["We play in the sand at the beach.", "Can we go to the beach?"] }
-- { word: couch,   picture: couch,   category: home,     level: 3A, sentences: ["I sit on the couch.", "Can Dad nap on the couch?"] }
-- { word: tooth,   picture: tooth,   category: body,     level: 3A, sentences: ["This is my tooth.", "Can you see my tooth?"] }
-- { word: shower,  picture: shower,  category: home,     level: 3A, sentences: ["I wash my hair in the shower.", "Is the shower hot?"] }
+- { word: shampoo, picture: shampoo, category: home,     level: 3A, sentences: ["I wash my hair with shampoo.", "Is the shampoo in the bathtub?"], mass: true }
+- { word: teacher, picture: teacher, category: family,   level: 3A, sentences: ["The teacher reads a book.", "Can the teacher help me?"] }
+- { word: chimney, picture: chimney, category: home,     level: 3A, sentences: ["The chimney is on the roof.", "Can you see the chimney?"] }
+- { word: chest,   picture: chest,   category: toys,     level: 3A, sentences: ["The crown is in the chest.", "Can you open the chest?"] }
+- { word: thread,  picture: thread,  category: home,     level: 3A, sentences: ["Grandma has blue thread.", "Can you find the thread?"], mass: true }
+- { word: shed,    picture: shed,    category: home,     level: 3A, sentences: ["The shovel is in the shed.", "Is the bike in the shed?"] }
 - { word: chalk,   picture: chalk,   category: toys,     level: 3A, sentences: ["I draw with chalk.", "Can you draw a sun with chalk?"], mass: true }
 - { word: cheetah, picture: cheetah, category: animals,  level: 3A, sentences: ["The cheetah can run.", "Can you run like a cheetah?"] }
 - { word: throne,  picture: throne,  category: home,     level: 3A, sentences: ["The crown is on the throne.", "Can I sit on the throne?"] }
 - { word: wheat,   picture: wheat,   category: nature,   level: 3A, sentences: ["Bread is made from wheat.", "Can you see the wheat?"], mass: true }
 - { word: gate,    picture: gate,    category: home,     level: 3A, sentences: ["Please open the gate.", "Can you open the gate?"] }
-- { word: snake,   picture: snake,   category: animals,  level: 3A, sentences: ["Look at the snake.", "Can the snake hide in the grass?"] }
+- { word: lake,    picture: lake,    category: nature,   level: 3A, sentences: ["The duck can swim in the lake.", "Can we swim in the lake?"] }
 - { word: cape,    picture: cape,    category: clothes,  level: 3A, sentences: ["I have a red cape.", "Do you have a cape?"] }
 - { word: vase,    picture: vase,    category: home,     level: 3A, sentences: ["The flower is in the vase.", "Can you put the vase on the table?"] }
 - { word: hive,    picture: hive,    category: nature,   level: 3A, sentences: ["The bee flies to the hive.", "Do you see the hive?"] }
@@ -332,8 +413,8 @@
 - { word: braid,   picture: braid,   category: body,     level: 3A, sentences: ["My sister has a braid.", "Can you make a braid?"] }
 - { word: chain,   picture: chain,   category: home,     level: 3A, sentences: ["Look at the long chain.", "Is the chain on the swing?"] }
 - { word: hay,     picture: hay,     category: nature,   level: 3A, sentences: ["The horse eats hay.", "Does the cow like to eat hay?"], mass: true }
-- { word: tray,    picture: tray,    category: home,     level: 3A, sentences: ["I put the cup on the tray.", "Can you hold the tray?"] }
-- { word: clay,    picture: clay,    category: toys,     level: 3A, sentences: ["I make a snake with clay.", "Can you make a ball with clay?"], mass: true }
+- { word: spray,   picture: spray,   category: home,     level: 3A, sentences: ["I spray the flower.", "Can you spray the tree?"] }
+- { word: clay,    picture: clay,    category: toys,     level: 3A, sentences: ["I make a cake with clay.", "Can you make a ball with clay?"], mass: true }
 - { word: jay,     picture: jay,     category: animals,  level: 3A, sentences: ["The blue jay can fly.", "Is the jay in the tree?"] }
 - { word: seed,    picture: seed,    category: nature,   level: 3A, sentences: ["The bird eats a seed.", "Can a seed grow?"] }
 - { word: feet,    picture: feet,    category: body,     level: 3A, sentences: ["I have two feet.", "Can you hop on two feet?"] }
@@ -351,13 +432,13 @@
 - { word: loaf,    picture: loaf,    category: food,     level: 3A, sentences: ["Mom has a loaf of bread.", "Can we eat the loaf of bread?"] }
 - { word: goal,    picture: goal,    category: toys,     level: 3A, sentences: ["I kick the ball in the goal.", "Did the ball go in the goal?"] }
 - { word: oatmeal, picture: oatmeal, category: food,     level: 3A, sentences: ["I eat oatmeal.", "Is the oatmeal hot?"], mass: true }
-- { word: crow,    picture: crow,    category: animals,  level: 3A, sentences: ["The crow can fly.", "Do you see the crow?"] }
+- { word: mower,   picture: mower,   category: home,     level: 3A, sentences: ["Dad has a mower.", "Can Dad push the mower?"] }
 - { word: bow,     picture: bow,     category: clothes,  level: 3A, sentences: ["My doll has a pink bow.", "Can you make a bow?"] }
 - { word: light,   picture: light,   category: home,     level: 3A, sentences: ["Please turn on the light.", "Is the light on?"] }
 - { word: night,   picture: night,   category: nature,   level: 3A, sentences: ["I sleep at night.", "Can you see the moon at night?"] }
 - { word: rowboat, picture: rowboat, category: vehicles, level: 3A, sentences: ["We sit in the rowboat.", "Can we go in the rowboat?"] }
 - { word: barn,    picture: barn,    category: home,     level: 3A, sentences: ["The horse sleeps in the barn.", "Is the barn red?"] }
-- { word: jar,     picture: jar,     category: home,     level: 3A, sentences: ["The cookie is in the jar.", "Can you open the jar?"] }
+- { word: guitar,  picture: guitar,  category: toys,     level: 3A, sentences: ["Mom can play the guitar.", "Can you play the guitar?"] }
 - { word: yarn,    picture: yarn,    category: toys,     level: 3A, sentences: ["The kitten plays with the yarn.", "Is the yarn blue?"], mass: true }
 - { word: card,    picture: card,    category: toys,     level: 3A, sentences: ["I make a card for Mom.", "Is this card for me?"] }
 - { word: harp,    picture: harp,    category: toys,     level: 3A, sentences: ["Grandma can play the harp.", "Can you play the harp?"] }

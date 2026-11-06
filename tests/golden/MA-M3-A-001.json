@@ -1,0 +1,127 @@
+{
+  "id": "MA-M3-A-001",
+  "subject": "math",
+  "level": "M3",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "column_arithmetic",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 15292289577139146720,
+  "title": "Big adding",
+  "parent_tip": "Start with the ones, on the right. If a column makes 10 or more, write the ten in the little box over the next column.",
+  "items": [
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        117,
+        217
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        172,
+        361
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        286,
+        194
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        196,
+        663
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        486,
+        446
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        227,
+        686
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        540,
+        265
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        249,
+        472
+      ],
+      "cols": 3,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        656,
+        307
+      ],
+      "cols": 3,
+      "boxes": true
+    }
+  ],
+  "answer_key": [
+    334,
+    533,
+    480,
+    859,
+    932,
+    913,
+    805,
+    721,
+    963
+  ],
+  "new_words": [],
+  "review_words": []
+}

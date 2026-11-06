@@ -13,7 +13,7 @@ from ws import generate as gen
 from ws import registry
 from ws.content import phonics, vocab, vocab_by_word
 from ws.models import VocabEntry
-from ws.phonics import (by_rule, check_endings, check_sentence, check_syllables, pattern_span,
+from ws.spelling import (by_rule, check_endings, check_sentence, check_syllables, pattern_span,
                         spelling_rule, syllable_table)
 from ws.plan import plan_new_words, plan_phrases, plan_review, plan_spelling
 from ws.sheet_types.sentence_copy import known_words
@@ -142,7 +142,7 @@ def test_every_copy_sentence_uses_known_words():
 
 def test_copy_parts_have_enough_sentences():
     """Each Copy a Sentence part can fill its pages without one sentence twice."""
-    from ws.phonics import sentence_tokens
+    from ws.spelling import sentence_tokens
 
     bank = vocab_by_word()
     sentences = [s for w in MINE for s in bank[w].sentences]

@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from ..content import phonics
 from ..models import Issue, Sheet
-from ..phonics import by_rule, spelling_rule, tail
+from ..spelling import by_rule, spelling_rule, tail
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
 from .pattern_words import _rules

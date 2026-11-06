@@ -22,8 +22,8 @@
     },
     {
       "kind": "pattern",
-      "word": "shark",
-      "picture": "shark",
+      "word": "shampoo",
+      "picture": "shampoo",
       "pattern": "sh",
       "letters": [
         [
@@ -39,11 +39,19 @@
           false
         ],
         [
-          "r",
+          "m",
           false
         ],
         [
-          "k",
+          "p",
+          false
+        ],
+        [
+          "o",
+          false
+        ],
+        [
+          "o",
           false
         ]
       ],
@@ -146,13 +154,13 @@
     }
   ],
   "answer_key": [
-    "shark",
+    "shampoo",
     "chair",
     "mouth",
     "whistle"
   ],
   "new_words": [
-    "shark"
+    "shampoo"
   ],
   "review_words": [
     "chair",

@@ -97,14 +97,28 @@ picture_colors:
   potty: blue
   phone: blue
   apron: pink
+  # Kittens words (checked on the drawn pictures)
+  glove: green
+  flag: red
+  present: red
+  skate: red
+  grill: red
+  lock: yellow
+  trumpet: yellow
+  snake: green
+  couch: purple
+  dish: pink
+  pocket: blue
 
 # big / little: nouns each is true of, in real life and in the picture (the picture is drawn large or
 # small to match). Hand-checked like the colors: no "a little whale", no "a big bee". No mass or plural nouns.
 sizes:
   big: [dog, bear, horse, cow, lion, whale, tree, truck, bus, train, tractor, plane, boat, ball, cake,
-        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled, hippo]
+        teddy, box, pig, sheep, goat, balloon, tiger, giraffe, zebra, sled, hippo,
+        bull, shark, ship]   # Kittens
   little: [mouse, bee, bird, chick, kitten, puppy, snail, crab, frog, duck, fish, egg, cookie, key, rock,
-           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen, ladybug, worm]
+           leaf, cup, spoon, sock, ball, bunny, baby, dog, cat, ant, lamb, shell, hen, ladybug, worm,
+           moth]   # Kittens
 
 # hot / cold: only things that really are (and whose pictures don't say otherwise; the soup steams).
 temperatures:
@@ -115,12 +129,12 @@ temperatures:
 # A sentence with an animal doing an action shows the animal only (the action pictures show a child).
 can_do:
   run: [dog, cat, horse, bunny, mouse, lion, goat, monkey, bear, pig, cow, sheep, puppy, kitten,
-        zebra, tiger, giraffe, lamb]
+        zebra, tiger, giraffe, lamb, bull, chicken, skunk]
   jump: [frog, bunny, monkey, goat, cat, dog, sheep, horse, puppy, kitten, lamb]
-  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin, hippo, octopus, dolphin]
+  swim: [fish, duck, frog, turtle, dog, whale, seal, penguin, hippo, octopus, dolphin, shark, swan]
   eat: [dog, cat, bunny, cow, pig, goat, horse, monkey, bear, mouse, bird, duck, sheep, turtle, lion,
         puppy, kitten, chick, crab, snail, whale, zebra, tiger, giraffe, hen, ant, seal, penguin, lamb,
-        hippo, panda]
+        hippo, panda, bull, shark, chicken, snake, swan, skunk, crow]
   sleep: [cat, dog, owl, bear, bunny, pig, lion, cow, mouse, baby, puppy, kitten, tiger, seal, lamb, panda]
   sit: [dog, cat, monkey, bunny, puppy, kitten]
   clap: []
@@ -132,13 +146,13 @@ can_do:
   nap: [cat, dog, bear, pig, lion, baby, puppy, kitten, tiger, seal, lamb]
   dig: [dog, bunny, puppy, crab]
   walk: [dog, cat, horse, cow, pig, sheep, goat, duck, bear, lion, mouse, turtle, monkey, puppy, kitten, chick, crab,
-         zebra, tiger, giraffe, hen, ant, penguin, lamb]
+         zebra, tiger, giraffe, hen, ant, penguin, lamb, bull, chicken, skunk, crow]
   kick: [horse]
   wave: []
   read: []
   draw: []
   climb: [monkey, cat, bear, goat, mouse, kitten, snail, ant, panda, ladybug]
-  hide: [cat, mouse, bunny, turtle, kitten, crab, snail]
+  hide: [cat, mouse, bunny, turtle, kitten, crab, snail, snake, skunk]
   # Ducklings word batch 2. hug / push / throw / catch: people only (the pictures show a child).
   hug: []
   push: []
@@ -166,10 +180,15 @@ people_can:
 ownable:
   toys:     [ball, kite, balloon, blocks, drum, doll, puppet, bubbles, tent,
              teddy, bag, puzzle, robot, bucket, crayon, wagon, sled, box,   # box: his own box of treasures
-             crown, shovel, whistle, bell]                                  # Chicks batch 5 (not rattle: a baby thing; not seesaw)
+             crown, shovel, whistle, bell,                                  # Chicks batch 5 (not rattle: a baby thing; not seesaw)
+             bat, net, top, wig, map,                                       # Bunnies batch 1
+             sticker, flag, glue, present, trumpet, skate, ring, stamp]     # Kittens (not rake: a grown-up tool)
   clothes:  [shoe, hat, sock, coat, shirt, pants, boots, dress, scarf, belt,
-             jacket, mitten, skirt, cap, sweater, pajamas, shorts, apron, sandal]
-  home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket]
+             jacket, mitten, skirt, cap, sweater, pajamas, shorts, apron, sandal,
+             watch, pocket, glove, slipper, vest]                            # Kittens
+  home:     [cup, bed, book, spoon, chair, bowl, plate, towel, pillow, brush, comb, fork, blanket,
+             pen, mug, quilt,   # Bunnies batch 1 (not pin, mop, pan, lid, tub: grown-up things)
+             glass, dish]       # Kittens (not couch, shelf, shower: the house)
   pets:     [cat, dog, fish, bunny, bird, turtle, puppy, kitten]
   vehicles: [bike, scooter]
   food:     [milk, juice, soup]     # plus everything in `eatable`
@@ -180,7 +199,9 @@ ownable:
 # would need "some" (a cake, a pizza).
 eatable: [apple, banana, egg, bread, cookie, orange, cheese, carrot, grapes, pear, corn, rice, cherry,
           noodles, peach, muffin, toast, pancake, yogurt, peas,
-          waffle, bagel, plum, pickle, popcorn]   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
+          waffle, bagel, plum, pickle, popcorn,   # Chicks batch 5. Not honey (eaten on something), not melon ("a melon" is whole)
+          bun, nut,                                # Bunnies batch 1. Not jam (eaten on something, like honey)
+          cracker, pretzel]                        # Kittens
 
 # Only one of each in the sky: "the sun", never "a sun". These nouns never fill a frame with `{a}`
 # ("I see a sun.", "a yellow moon"); "The sun is hot." and "I see the moon." are fine.
@@ -252,3 +273,6 @@ sentence_groups:        # 6A-C: short sentences, recited three times
   can: ["The {animal} can {action}.", "I can {action}.", "{person} can {action}."]
   daily: ["I like to {action}.", "I eat {a} {eatable}.", "I wash my {washable}.", "I love my {family}."]
   describe: ["The {sized} is {size}.", "I see {a} {size} {sized}.", "The {temp_thing} is {temp}.", "I like {temp} {temp_food}."]
+  # Kittens Reading (traced sentences): a little longer, still only known words and allowed_words.
+  more_can: ["The {size} {animal} can {action}.", "My {person} can {action}.", "I see the {animal} {action}."]
+  more_daily: ["I like to eat {a} {eatable}.", "Look at my {color} {colored_mine}."]

@@ -28,14 +28,14 @@
     {
       "kind": "ending",
       "mode": "take_off",
-      "word": "harp",
-      "picture": "harp",
+      "word": "barn",
+      "picture": "barn",
       "ending": "plural",
-      "form": "harps",
+      "form": "barns",
       "tail": "s",
       "copies": 2,
       "split": [
-        "harp",
+        "barn",
         "s"
       ]
     },
@@ -70,14 +70,14 @@
   ],
   "answer_key": [
     "catch",
-    "harp",
+    "barn",
     "smile",
     "swim"
   ],
   "new_words": [],
   "review_words": [
     "catch",
-    "harp",
+    "barn",
     "smile",
     "swim"
   ]

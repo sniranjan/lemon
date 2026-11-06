@@ -69,3 +69,9 @@ column_mixed_regroup:
 math_story:
   - "Read each story aloud. Ask: do we get more or fewer? Then write the numbers, the + or − sign and the answer."
   - "Read the story together and act it out with toys if you like. Fill in the number sentence, then say the answer in words."
+fraction_line:
+  - "Count the equal parts between 0 and 1 together. That number goes on the bottom of the fraction."
+  - "Count jumps from 0 to find each fraction. The number of jumps goes on top."
+story_problem:
+  - "Read each story together, then ask: equal groups or sharing? Draw dots in the empty space if it helps."
+  - "Let your child say the number sentence first, then write the answer in the box."

@@ -1,0 +1,75 @@
+{
+  "id": "EN-4A-A-009",
+  "subject": "english",
+  "level": "4A",
+  "section": "A",
+  "part": 3,
+  "sheet_type": "letter_team",
+  "page_number": 9,
+  "variant": 1,
+  "seed": 14084176822065191620,
+  "title": "Letter teams",
+  "parent_tip": "Read each word together and clap on the team's sound. Then trace or write the team, one letter at a time.",
+  "items": [
+    {
+      "kind": "team_word",
+      "word": "grass",
+      "picture": "grass",
+      "team": "ss",
+      "letters": "ss",
+      "parts": [
+        "gra",
+        "ss",
+        ""
+      ],
+      "task": "fill"
+    },
+    {
+      "kind": "team_word",
+      "word": "egg",
+      "picture": "egg",
+      "team": "gg",
+      "letters": "gg",
+      "parts": [
+        "e",
+        "gg",
+        ""
+      ],
+      "task": "fill"
+    },
+    {
+      "kind": "team_word",
+      "word": "bull",
+      "picture": "bull",
+      "team": "ll",
+      "letters": "ll",
+      "parts": [
+        "bu",
+        "ll",
+        ""
+      ],
+      "task": "fill"
+    },
+    {
+      "kind": "team_word",
+      "word": "grill",
+      "picture": "grill",
+      "team": "ll",
+      "letters": "ll",
+      "parts": [
+        "gri",
+        "ll",
+        ""
+      ],
+      "task": "fill"
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "grass",
+    "egg",
+    "bull",
+    "grill"
+  ]
+}

@@ -13,23 +13,23 @@
   "items": [
     {
       "kind": "copy",
-      "word": "shower",
-      "picture": "shower",
-      "text": "Is the shower hot?",
+      "word": "lake",
+      "picture": "lake",
+      "text": "Can we swim in the lake?",
       "rows": 2
     },
     {
       "kind": "copy",
-      "word": "tray",
-      "picture": "tray",
-      "text": "Can you hold the tray?",
+      "word": "goal",
+      "picture": "goal",
+      "text": "Did the ball go in the goal?",
       "rows": 2
     }
   ],
   "answer_key": null,
   "new_words": [],
   "review_words": [
-    "shower",
-    "tray"
+    "lake",
+    "goal"
   ]
 }

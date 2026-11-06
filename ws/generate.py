@@ -7,9 +7,10 @@ import random
 from pathlib import Path
 
 from . import registry
-from .content import phonics, phrases, tips, vocab
+from .content import phonics, phrases, sounds, tips, vocab
 from .models import Level, Sheet
-from .plan import LevelPlan, plan_new_words, plan_phrases, plan_review, plan_spelling
+from .phonics import plan_phonics
+from .plan import LevelPlan, plan_letters, plan_new_words, plan_phrases, plan_review, plan_spelling
 from .render import write_html
 from .syllabus import ROOT, page_seed, resolve_page, sheet_id
 
@@ -18,9 +19,12 @@ MANIFEST = OUT_DIR / "manifest.jsonl"
 
 
 def build_plan(level: Level, variant: int = 1) -> LevelPlan:
+    if level.subject == "english" and level.rules.get("planner") == "letters":
+        return plan_letters(level, vocab("english"), sounds("english"), variant)
     if level.subject == "english":
         bank = vocab("english")
         plan = plan_review(level, plan_new_words(level, bank, variant), bank)
+        plan = plan_phonics(level, bank, plan, phonics("english"))
         plan = plan_phrases(level, bank, plan, phrases("english"))
         return plan_spelling(level, bank, plan, phonics("english"))   # Puppies Reading (3A)
     return LevelPlan(subject=level.subject, level=level.level, variant=variant)
@@ -81,10 +85,14 @@ def sheet_dir(sheet: Sheet) -> Path:
 
 
 def generate_pages(level: Level, pages: list[int], variant: int = 1,
-                   seed: int | None = None, sheet_type: str | None = None) -> list[tuple[Sheet, Path]]:
+                   seed: int | None = None, sheet_type: str | None = None,
+                   skip_waiting: bool = False) -> list[tuple[Sheet, Path]]:
     """Write the requested pages. A forced `seed` or `sheet_type` (previews, one-offs) builds
-    each page on its own; otherwise pages come from `build_section`, free of repeats."""
+    each page on its own; otherwise pages come from `build_section`, free of repeats.
+    `skip_waiting` leaves out pages the plan says still wait for new words (`--all`)."""
     plan = build_plan(level, variant)
+    if skip_waiting:
+        pages = [p for p in pages if p not in plan.waiting]
     sheets: dict[int, Sheet] = {}
     if seed is not None or sheet_type:
         for page in pages:

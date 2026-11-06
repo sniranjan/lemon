@@ -13,23 +13,23 @@
   "items": [
     {
       "kind": "copy",
-      "word": "tooth",
-      "picture": "tooth",
-      "text": "This is my tooth.",
+      "word": "teacher",
+      "picture": "teacher",
+      "text": "The teacher reads a book.",
       "rows": 2
     },
     {
       "kind": "copy",
-      "word": "chalk",
-      "picture": "chalk",
-      "text": "I draw with chalk.",
+      "word": "thread",
+      "picture": "thread",
+      "text": "Grandma has blue thread.",
       "rows": 2
     }
   ],
   "answer_key": null,
   "new_words": [],
   "review_words": [
-    "tooth",
-    "chalk"
+    "teacher",
+    "thread"
   ]
 }

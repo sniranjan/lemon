@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from ..content import phonics
 from ..models import Issue, Sheet
-from ..phonics import gapped, pattern_letters, pattern_span
+from ..spelling import gapped, pattern_letters, pattern_span
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
 

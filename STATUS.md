@@ -38,8 +38,21 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   (rule `known_levels: [7A, 6A]` pins the review pool, so other strands' words never change these pages);
   hand-checked tables in `content/phonics/english.yaml`. 70 new words (one a page in A; batches 3A-1 40 words and
   3A-2 30 words, `syllabus/drafts/3A-words-batch*.md`, approved under user delegation), 70 pictures
-  (`draw_3A_batch1.py`, `draw_3A_batch2.py`). Verify 0 errors, every word seen ≥ 3 times; booklets per section +
+  (`draw_3A_batch1.py`, `draw_3A_batch2.py`). After Kittens Reading merged, 10 words it owns (shark, wheel, beach,
+  couch, tooth, shower, snake, tray, crow, jar) were swapped for shampoo, teacher, chimney, chest, thread, shed, lake,
+  spray, mower, guitar (batch 3A-3, `draw_3A_batch3.py`); the Puppies tables follow Kittens' in the shared
+  `content/phonics/english.yaml`, and the Puppies code is `ws/spelling.py` (Kittens' is `ws/phonics.py`). Verify 0 errors, every word seen ≥ 3 times; booklets per section +
   `puppies-reading-level.pdf` (202 pages) and `-answers.pdf` (A–C). Free preview pages 3, 85, 113, 143.
+- **Foxes Math (M3, our own level, grade 3 work, 200 pages)** (2026-11-06): `syllabus/math/M3.yaml`:
+  A Big Adding & Taking Away 1–30 (3.NBT.2) · B Times Tables 2, 5, 10 31–60 · C Times Tables 3 and 4 61–90 ·
+  D Times Tables 6 to 9 91–140 (3.OA.1/4/5/7) · E Sharing Facts 141–170 (3.OA.2/4/6/7) · F Fractions on a Line
+  171–190 (3.NF.1–2; denominators 2, 3, 4, 6, 8 only) · G Story Problems 191–200 (3.OA.3, 3.OA.8). New sheet types
+  `fraction_line`, `story_problem` (33 frames in `content/math/story_problems.yaml`, copy in test fixtures); Cubs'
+  `column_arithmetic` serves section A too (new optional rules `regroup_counts`, `across_zero`, `title`, 9 a page;
+  Cubs output unchanged); `fact_drill` gained × and ÷ (`skip`, `arrays`, `pairs`, × ÷ `families`) with Puppies output
+  byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
+  section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
+  ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -68,7 +81,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 
@@ -92,6 +105,32 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `place_value`, `skip_count`, `column_arithmetic`, `math_story` (frames in `content/math/stories.yaml`).
   All 200 pages verify with 0 errors; booklets: one per section plus `cubs-math-level.pdf` (202 pages) and
   answers PDFs (`cubs-math-level-answers.pdf`, 10 pages). `ws preview` for Cubs needs Cubs Reading first.
+- **Bunnies Reading (EN 5A)** (2026-11-06): `syllabus/english/5A.yaml`: A Letter Trails 1–70 (letters in
+  stroke order: l i t · c o a d g · r n m h b p · u y v w x k z · e s f j q, 2 pages each + group reviews),
+  B Sound Pieces 71–150 (short a/e/i/o/u, rhyming families, then one new word a page), C Letter Pairs
+  151–160 (capital + small, a–z, then b/d/p), D Word Trails 161–200. New sheet types `letter_trace`,
+  `sound_parts`, `word_trace`; dotted letters come from our own single-stroke trace font (`ws/trace_font.py`);
+  planner `plan_letters` (rule `planner: letters`) with the hand-checked lists in `content/sounds/english.yaml`.
+  Word batch 5A-1 (23 words: queen, quilt, zipper + 20 short-vowel words; approved 2026-11-06 by the
+  orchestrator under the user's delegation; `draw_5A_batch1.py`, which also redraws **hat** as a straw sun hat
+  so it no longer looks like a cap): **Bunnies Reading is complete, 200/200 pages**, verify 0 errors and 0 warnings,
+  every new word seen at least 3 times. Optional words in the draft (igloo, otter, ox, vest, vase, yarn) are not approved.
+  `ws generate` now skips pages that still wait for words (with a note) for `--pages` and `--count` too.
+  Booklets: one per section plus `bunnies-reading-level.pdf` (202 pages = cover + 200 + log).
+  The hat redraw changes how Chicks and Ducklings pages with "hat" look: rebuild their booklets and the live previews when convenient.
+- **Kittens Reading (EN 4A) is complete: 200/200 pages** (2026-11-06). `syllabus/english/4A.yaml`: A Letter Teams
+  1–100 (ten 10-page units: double letters, sh, ch/tch, th/wh, ck, l-, r-, s-blends, teams at the end, word
+  families; each unit = 3 parts: familiar words 1–3, one new word a page 4–8, write the team 9–10), B Rhyme Time
+  101–140 (pairs, pick of 2, pick of 3, odd one out), C Trace a Sentence 141–200 (6A frames + `more_can` /
+  `more_daily`). New sheet types `letter_team`, `rhyme_match`, `sentence_trace`; planner `ws/phonics.py`
+  (new words chosen by team, not bank order); hand-checked teams and rhymes in `content/phonics/english.yaml`.
+  50 new words (target 50; chart ~225), batches `4A-words-batch1.md` (40) and `batch2.md` (10), approved by the
+  orchestrator under the user's delegation; pictures `scripts/pictures/draw_4A_batch1.py`. bat/pan/wig/bug were
+  given to Bunnies Reading (replaced by can, jug, rake, crow); after the merge "can" became "man" (so "can"
+  is only the verb) and the Bunnies words joined the families and rhyme groups (-at, -an, -ig, -ug, -ap, -un,
+  new -et, -op, -en, -in). Trace a Sentence: `level_word_first` makes each page's first sentence use a Kittens
+  word (ship, pretzel, swan) when one fits. Verify 0 errors (1 warning: color-word pages); booklets:
+  three section PDFs + `kittens-reading-level.pdf` (202 pages) + answers for Rhyme Time.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

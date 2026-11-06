@@ -30,6 +30,8 @@ class LevelPlan(BaseModel):
     level: str
     variant: int = 1
     pages: dict[int, PagePlan] = Field(default_factory=dict)
+    # pages the word bank can't fill yet -> why (verify warns about them); used by plan_letters
+    waiting: dict[int, str] = Field(default_factory=dict)
 
     def for_page(self, page: int) -> PagePlan:
         try:
@@ -57,7 +59,7 @@ def plan_new_words(level: Level, bank: Sequence[VocabEntry], variant: int = 1) -
     for page in range(1, level.pages + 1):
         rules = resolve_page(level, page).rules
         n = rules.get("new_words_per_sheet", 0)
-        if not n:
+        if not n or "teams" in rules:   # letter-team pages pick new words by team (ws/phonics.py)
             continue
         if next_word + n > len(words):
             break   # bank exhausted: later pages need more words first
@@ -191,6 +193,9 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         if rules.get("new_words_per_sheet", 0) and entry is None:
             continue   # the word bank can't introduce this page's new words yet
         entry = entry or PagePlan(page=page)
+        for earlier in range(1, page):   # words this level brought on other kinds of page (letter teams)
+            for w in plan.pages[earlier].new_words if earlier in plan.pages else ():
+                known.setdefault(w, this_level[w])
         for w in entry.new_words:
             known[w] = this_level[w]
             level_new.add(w)
@@ -203,7 +208,10 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
         frames_on_page: set[str] = set()
         groups_on_page: set[str] = set()
         phrases = []
-        for _ in range(rules["phrases_per_sheet"]):
+        for index in range(rules["phrases_per_sheet"]):
+            # `level_word_first` (Kittens): the page's first sentence uses one of this level's own words
+            want_level_word = rules.get("level_word_first") and index == 0
+
             def score(c):
                 group, frame, fill = c
                 words = list(fill.values())
@@ -213,6 +221,7 @@ def plan_phrases(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, data
                         any(w in todo and this_level[w].picture and w not in pictures_for(fill, data)
                             for w in words),
                         -sum(1 for w in words if w in level_new and seen[w] < min_seen and w not in on_page),
+                        bool(want_level_word) and not any(w in this_level for w in words),
                         text_uses[text],
                         any(w in on_page for w in words),
                         group in groups_on_page,
@@ -262,7 +271,7 @@ def plan_spelling(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, dat
     """
     import random
 
-    from .phonics import pattern_span, sentence_tokens, spelling_rule, syllable_table, tail
+    from .spelling import pattern_span, sentence_tokens, spelling_rule, syllable_table, tail
     from .syllabus import page_seed
 
     known_levels = level.rules.get("known_levels")
@@ -379,4 +388,198 @@ def plan_spelling(level: Level, bank: Sequence[VocabEntry], plan: LevelPlan, dat
             seen[w] += 1
         review = [w for w in dict.fromkeys(words) if w not in new]
         plan.pages[page] = PagePlan(page=page, new_words=new, review_words=review, extra={"cards": cards})
+    return plan
+
+
+# --- letters and sounds (5A: rule `planner: letters`) ---------------------------------------------
+
+def rime_split(data: dict) -> dict[str, tuple[str, str]]:
+    """word -> (onset, rime) from the hand-checked `rimes` lists in content/sounds/."""
+    return {w: (w[: -len(rime)], rime) for rime, words in data.get("rimes", {}).items() for w in words}
+
+
+def plan_letters(level: Level, bank: Sequence[VocabEntry], data: dict, variant: int = 1) -> LevelPlan:
+    """Plan a letters-and-sounds level page by page from the syllabus rules and content/sounds/.
+
+    - letter_trace, rule `letters`: `pages_per_letter` pages per letter (step 1, 2, …), then review
+      pages of `review_rows` letters (the part's letters reviewed least first, then earlier ones).
+      Rule `review_sets` instead lists the letters of each page (Letter Pairs).
+    - sound_parts: `vowels` pages show `cards_per_sheet` onset + rime words with those short vowels,
+      different rimes where possible; `families` pages one rhyming family each; `introduce` pages
+      bring the next word of this level that has a rime, with its family mates.
+    - word_trace: `trace_words` words from `word_set` (short | known | this_level).
+    Words are picked least seen first (then list order), so every word keeps coming back. A word of
+    this level is new on the first page that shows it. Pages the word bank can't fill yet go in
+    `plan.waiting` with the reason.
+    """
+    from .syllabus import level_rank, page_seed
+
+    usable = {w.word: w for w in bank
+              if level_rank(w.level) <= level_rank(level.level) and w.picture and not w.needs_color}
+    this_level = [w.word for w in bank if w.level == level.level and w.word in usable]
+    this_level_set = set(this_level)
+    splits = {w: s for w, s in rime_split(data).items() if w in usable}
+    order = {w.word: i for i, w in enumerate(bank)}
+    min_seen = level.rules.get("min_exposures_per_word", 0)
+    seen: Counter[str] = Counter()
+    reviewed: Counter[str] = Counter()     # letters on review rows
+    family_uses: Counter[str] = Counter()
+    introduced: set[str] = set()
+    letters_done: list[str] = []           # letters whose own pages are planned, in teaching order
+    prev: set[str] = set()                 # words on the page before
+    combos: set[tuple] = set()             # (sheet type, words) already used: no page repeats another
+    plan = LevelPlan(subject=level.subject, level=level.level, variant=variant)
+
+    def ready(w: str) -> bool:
+        """Earlier levels' words, and this level's words once introduced."""
+        return w not in this_level_set or w in introduced
+
+    def letter_words(letter: str) -> list[str]:
+        """Words for a letter: known words with its first sound; if fewer than two, this level's new
+        words with that sound (they are introduced there: queen for q); else words with the sound inside."""
+        starts = [w for w in data["letter_words"].get(letter, []) if w in usable]
+        known = [w for w in starts if ready(w)]
+        if len(known) >= 2:
+            return known
+        if len(starts) >= 2:
+            return starts
+        inside = [w for w in data.get("letter_inside", {}).get(letter, []) if w in usable and ready(w)]
+        return known + [w for w in inside if w not in known]
+
+    def least_seen(words: list[str], n: int, avoid: set[str] = frozenset()) -> list[str]:
+        pool = [w for w in dict.fromkeys(words) if w not in avoid]
+        pool.sort(key=lambda w: (seen[w], words.index(w)))
+        return pool[:max(n, 0)]
+
+    for page in range(1, level.pages + 1):
+        spec = resolve_page(level, page)
+        section = level.section(spec.section)
+        rules = spec.rules
+        part = section.part_for_page(page)
+        offset = page - (part.pages[0] if part else section.pages[0])
+        extra: dict[str, Any] = {}
+        why = None
+
+        def rank(w: str, page: int = page) -> tuple:
+            # least seen, not on the page before, then a fixed shuffle (different for each page and variant)
+            return seen[w], w in prev, page_seed(level.subject, level.level, w, page, variant)
+
+        def not_again(words: list[str], ranked: list[str], kind: str = spec.sheet_type) -> list[str]:
+            """Swap the last word for the next candidate while this set of words was already a page."""
+            spare = [w for w in ranked if w not in words]
+            while (kind, frozenset(words)) in combos and spare:
+                words = words[:-1] + [spare.pop(0)]
+            return words
+
+        if spec.sheet_type == "letter_trace" and "review_sets" in rules:
+            letters = rules["review_sets"][page - section.pages[0]]
+            rows, used = [], set()
+            for letter in letters:
+                pick = least_seen(letter_words(letter), 1, used)
+                if not pick:
+                    why = f"letter {letter} has no approved word yet"
+                    break
+                used.add(pick[0])
+                rows.append({"letter": letter, "word": pick[0]})
+            extra = {"layout": "rows", "upper": bool(rules.get("show_upper")), "rows": rows}
+
+        elif spec.sheet_type == "letter_trace":
+            letters, per = rules["letters"], rules.get("pages_per_letter", 2)
+            if offset < per * len(letters):
+                letter, step = letters[offset // per], offset % per + 1
+                words = letter_words(letter)
+                if len(words) < 2:
+                    why = f"letter {letter} needs two approved words (has {len(words)})"
+                else:
+                    extra = {"layout": "letter", "letter": letter, "step": step, "words": least_seen(words, 2)}
+                    if letter not in letters_done:
+                        letters_done.append(letter)
+            else:
+                mine = [x for x in letters if x in letters_done]
+                earlier = [x for x in letters_done if x not in letters]
+                pool = sorted(mine, key=lambda x: (reviewed[x], mine.index(x))) + \
+                    sorted(earlier, key=lambda x: (reviewed[x], earlier.index(x)))
+                rows, used = [], set()
+                for letter in pool[: rules.get("review_rows", 3)]:
+                    pick = least_seen(letter_words(letter), 1, used)
+                    used.add(pick[0])
+                    rows.append({"letter": letter, "word": pick[0]})
+                    reviewed[letter] += 1
+                extra = {"layout": "rows", "upper": False, "rows": rows}
+
+        elif spec.sheet_type == "sound_parts":
+            n = rules.get("cards_per_sheet", 3)
+            if rules.get("families"):
+                fams: dict[str, list[str]] = {}
+                for w, (_, rime) in splits.items():
+                    if not ready(w):
+                        continue
+                    fams.setdefault(rime, []).append(w)
+                fams = {r: ws for r, ws in fams.items() if len(ws) >= 2}
+                names = list(fams)
+                rime = min(names, key=lambda r: (family_uses[r], names.index(r)))
+                family_uses[rime] += 1
+                words = sorted(least_seen(fams[rime], n), key=fams[rime].index)
+                extra = {"layout": "family", "rime": rime, "words": words}
+            else:
+                vowels = rules["vowels"]
+                pool = [w for w, (_, rime) in splits.items() if rime[0] in vowels and ready(w)]
+                words = []
+                if rules.get("introduce"):
+                    fresh = [w for w in this_level if w in splits and w not in introduced]
+                    if not fresh:
+                        why = "needs a new short-vowel word (none approved yet)"
+                    else:
+                        new = fresh[0]
+                        rime = splits[new][1]
+                        mates = [w for w in pool if splits[w][1] == rime and w != new]
+                        due = [w for w in this_level if w in introduced and seen[w] < min_seen and w in pool]
+                        words = [new] + least_seen(mates, n - 1)
+                        words += least_seen(due, n - len(words), set(words))
+                        others = sorted([w for w in pool if w not in words],
+                                        key=lambda w: (splits[w][1][0] != rime[0], seen[w], order[w]))
+                        words += others[: n - len(words)]
+                else:
+                    # least seen first, with a different rime on each card where possible
+                    ranked = sorted(pool, key=rank)
+                    for w in ranked:
+                        if len(words) < n and splits[w][1] not in {splits[x][1] for x in words}:
+                            words.append(w)
+                    words += [w for w in ranked if w not in words][: n - len(words)]
+                    words = not_again(words, ranked)
+                if not why and len(words) < n:
+                    why = f"only {len(words)} approved words with short {'/'.join(vowels)}"
+                extra = {"layout": "cards", "words": words}
+
+        elif spec.sheet_type == "word_trace":
+            n, lo, hi = rules.get("trace_words", 3), rules.get("min_letters", 1), rules.get("max_letters", 99)
+            kind = rules["word_set"]
+            if kind == "short":
+                pool = [w for w in splits if ready(w)]
+            elif kind == "this_level":
+                pool = [w for w in this_level if w in introduced]
+            else:
+                pool = [w for w in usable if w.isalpha() and w.islower()
+                        and (w not in this_level or w in introduced)]
+            pool = [w for w in pool if lo <= len(w) <= hi]
+            pool.sort(key=rank)
+            words = not_again(pool[:n], pool)
+            if len(words) < n:
+                why = ("needs this level's new words (none approved yet)" if kind == "this_level"
+                       else f"only {len(words)} approved words fit")
+            extra = {"words": words}
+        else:
+            continue
+
+        if why:
+            plan.waiting[page] = why
+            continue
+        shown = extra.get("words") or [r["word"] for r in extra.get("rows", [])]
+        new = [w for w in shown if w in this_level and w not in introduced]
+        introduced.update(new)
+        seen.update(shown)
+        prev = set(shown)
+        combos.add((spec.sheet_type, frozenset(shown)))
+        plan.pages[page] = PagePlan(page=page, new_words=new, review_words=[w for w in shown if w not in new],
+                                    extra=extra)
     return plan

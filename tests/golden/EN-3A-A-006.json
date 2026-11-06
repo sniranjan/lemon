@@ -22,8 +22,8 @@
     },
     {
       "kind": "pattern",
-      "word": "shower",
-      "picture": "shower",
+      "word": "shed",
+      "picture": "shed",
       "pattern": "sh",
       "letters": [
         [
@@ -35,19 +35,11 @@
           true
         ],
         [
-          "o",
-          false
-        ],
-        [
-          "w",
-          false
-        ],
-        [
           "e",
           false
         ],
         [
-          "r",
+          "d",
           false
         ]
       ],
@@ -55,70 +47,12 @@
     },
     {
       "kind": "pattern",
-      "word": "couch",
-      "picture": "couch",
+      "word": "chimney",
+      "picture": "chimney",
       "pattern": "ch",
       "letters": [
         [
           "c",
-          false
-        ],
-        [
-          "o",
-          false
-        ],
-        [
-          "u",
-          false
-        ],
-        [
-          "c",
-          true
-        ],
-        [
-          "h",
-          true
-        ]
-      ],
-      "show_word": false
-    },
-    {
-      "kind": "pattern",
-      "word": "tooth",
-      "picture": "tooth",
-      "pattern": "th",
-      "letters": [
-        [
-          "t",
-          false
-        ],
-        [
-          "o",
-          false
-        ],
-        [
-          "o",
-          false
-        ],
-        [
-          "t",
-          true
-        ],
-        [
-          "h",
-          true
-        ]
-      ],
-      "show_word": false
-    },
-    {
-      "kind": "pattern",
-      "word": "whistle",
-      "picture": "whistle",
-      "pattern": "wh",
-      "letters": [
-        [
-          "w",
           true
         ],
         [
@@ -130,11 +64,73 @@
           false
         ],
         [
-          "s",
+          "m",
           false
         ],
         [
+          "n",
+          false
+        ],
+        [
+          "e",
+          false
+        ],
+        [
+          "y",
+          false
+        ]
+      ],
+      "show_word": false
+    },
+    {
+      "kind": "pattern",
+      "word": "thread",
+      "picture": "thread",
+      "pattern": "th",
+      "letters": [
+        [
           "t",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "r",
+          false
+        ],
+        [
+          "e",
+          false
+        ],
+        [
+          "a",
+          false
+        ],
+        [
+          "d",
+          false
+        ]
+      ],
+      "show_word": false
+    },
+    {
+      "kind": "pattern",
+      "word": "whale",
+      "picture": "whale",
+      "pattern": "wh",
+      "letters": [
+        [
+          "w",
+          true
+        ],
+        [
+          "h",
+          true
+        ],
+        [
+          "a",
           false
         ],
         [
@@ -150,17 +146,17 @@
     }
   ],
   "answer_key": [
-    "shower",
-    "couch",
-    "tooth",
-    "whistle"
+    "shed",
+    "chimney",
+    "thread",
+    "whale"
   ],
   "new_words": [
-    "shower"
+    "shed"
   ],
   "review_words": [
-    "couch",
-    "tooth",
-    "whistle"
+    "chimney",
+    "thread",
+    "whale"
   ]
 }

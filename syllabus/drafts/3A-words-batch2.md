@@ -36,3 +36,5 @@ One new word a page on Word Patterns; each word comes back on Word Endings (plur
 | 68 | hoop | toys | oo | I play with my hoop. / Can you roll the hoop? | hoop (toy ring) |
 | 69 | goose | animals | oo | The goose can swim. / Do you see the goose? | white-gray goose |
 | 70 | zoo | nature | oo | We see a lion at the zoo. / Can we go to the zoo? | zoo gate with a giraffe peeking |
+
+**Later change (2026-11-06):** shark, wheel, beach, couch, tooth, shower, snake, tray, crow and jar are now Kittens Reading words; they were swapped for shampoo, teacher, chimney, chest, thread, shed, lake, spray, mower and guitar (see `3A-words-batch3.md`).

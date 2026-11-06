@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from ..content import phonics, vocab_by_word
 from ..models import Issue, Sheet
-from ..phonics import check_sentence
+from ..spelling import check_sentence
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error
 from .pattern_words import _rules

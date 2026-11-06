@@ -1,0 +1,151 @@
+{
+  "id": "EN-4A-C-045",
+  "subject": "english",
+  "level": "4A",
+  "section": "C",
+  "part": 5,
+  "sheet_type": "sentence_trace",
+  "page_number": 185,
+  "variant": 1,
+  "seed": 10586721194785194481,
+  "title": "Read it, then trace it",
+  "parent_tip": "Read it once together, then let your child read it alone. Trace slowly on the lines, and point out the period at the end.",
+  "items": [
+    {
+      "kind": "sentence",
+      "text": "Look at my yellow trumpet.",
+      "runs": [
+        [
+          "Look",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "at",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "my",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "yellow",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "trumpet",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "Look at my {color} {colored_mine}.",
+      "slots": {
+        "color": "yellow",
+        "colored_mine": "trumpet"
+      },
+      "word": "trumpet",
+      "words": [
+        "yellow",
+        "trumpet"
+      ],
+      "pictures": [
+        "trumpet"
+      ],
+      "trace_lines": [
+        "Look at my",
+        "yellow trumpet."
+      ],
+      "trace_size": 64
+    },
+    {
+      "kind": "sentence",
+      "text": "I see the panda climb.",
+      "runs": [
+        [
+          "I",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "see",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "the",
+          false
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "panda",
+          true
+        ],
+        [
+          " ",
+          false
+        ],
+        [
+          "climb",
+          true
+        ],
+        [
+          ".",
+          false
+        ]
+      ],
+      "frame": "I see the {animal} {action}.",
+      "slots": {
+        "animal": "panda",
+        "action": "climb"
+      },
+      "word": "panda",
+      "words": [
+        "panda",
+        "climb"
+      ],
+      "pictures": [
+        "panda"
+      ],
+      "trace_lines": [
+        "I see the",
+        "panda climb."
+      ],
+      "trace_size": 64
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": [
+    "yellow",
+    "trumpet",
+    "panda",
+    "climb"
+  ]
+}
