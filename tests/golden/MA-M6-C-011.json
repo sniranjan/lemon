@@ -1,0 +1,127 @@
+{
+  "id": "MA-M6-C-011",
+  "subject": "math",
+  "level": "M6",
+  "section": "C",
+  "part": 2,
+  "sheet_type": "percent_problem",
+  "page_number": 81,
+  "variant": 1,
+  "seed": 1530585068461205619,
+  "title": "Percent of a number",
+  "parent_tip": "25% is one quarter, 50% is one half and 75% is three quarters. Use those to check.",
+  "items": [
+    {
+      "kind": "fact",
+      "n": 1,
+      "task": "of",
+      "p": 40,
+      "whole": 215,
+      "part": 86
+    },
+    {
+      "kind": "fact",
+      "n": 2,
+      "task": "of",
+      "p": 30,
+      "whole": 170,
+      "part": 51
+    },
+    {
+      "kind": "fact",
+      "n": 3,
+      "task": "of",
+      "p": 20,
+      "whole": 25,
+      "part": 5
+    },
+    {
+      "kind": "fact",
+      "n": 4,
+      "task": "of",
+      "p": 10,
+      "whole": 370,
+      "part": 37
+    },
+    {
+      "kind": "fact",
+      "n": 5,
+      "task": "of",
+      "p": 50,
+      "whole": 400,
+      "part": 200
+    },
+    {
+      "kind": "fact",
+      "n": 6,
+      "task": "of",
+      "p": 15,
+      "whole": 280,
+      "part": 42
+    },
+    {
+      "kind": "fact",
+      "n": 7,
+      "task": "of",
+      "p": 25,
+      "whole": 360,
+      "part": 90
+    },
+    {
+      "kind": "fact",
+      "n": 8,
+      "task": "of",
+      "p": 30,
+      "whole": 180,
+      "part": 54
+    },
+    {
+      "kind": "fact",
+      "n": 9,
+      "task": "of",
+      "p": 10,
+      "whole": 40,
+      "part": 4
+    },
+    {
+      "kind": "fact",
+      "n": 10,
+      "task": "of",
+      "p": 80,
+      "whole": 260,
+      "part": 208
+    },
+    {
+      "kind": "fact",
+      "n": 11,
+      "task": "of",
+      "p": 80,
+      "whole": 90,
+      "part": 72
+    },
+    {
+      "kind": "fact",
+      "n": 12,
+      "task": "of",
+      "p": 30,
+      "whole": 320,
+      "part": 96
+    }
+  ],
+  "answer_key": [
+    "86",
+    "51",
+    "5",
+    "37",
+    "200",
+    "42",
+    "90",
+    "54",
+    "4",
+    "208",
+    "72",
+    "96"
+  ],
+  "new_words": [],
+  "review_words": []
+}

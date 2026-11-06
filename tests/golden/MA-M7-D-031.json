@@ -1,0 +1,76 @@
+{
+  "id": "MA-M7-D-031",
+  "subject": "math",
+  "level": "M7",
+  "section": "D",
+  "part": 4,
+  "sheet_type": "rational_story",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 7401388798150616262,
+  "title": "Money and percents",
+  "parent_tip": "Find the percent of the price first (tax, tip or discount), then decide whether to add it or take it away.",
+  "items": [
+    {
+      "kind": "story",
+      "n": 1,
+      "frame": "percent_off",
+      "picks": {
+        "a": "52",
+        "p": "45"
+      },
+      "values": {
+        "a": "52",
+        "p": "45",
+        "b": "28 3/5"
+      },
+      "text": "A sweatshirt was $52. Now it is on sale for $28.60. What percent off is the sale?",
+      "answer": "45%",
+      "unit": "",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 2,
+      "frame": "delivery_fee",
+      "picks": {
+        "a": "96",
+        "p": "10",
+        "f": "8"
+      },
+      "values": {
+        "a": "96",
+        "p": "10",
+        "f": "8"
+      },
+      "text": "A grocery order costs $96. The delivery fee is 10% of the order, and there is a $8 tip for the driver. What is the total?",
+      "answer": "$113.60",
+      "unit": "$",
+      "equation": false
+    },
+    {
+      "kind": "story",
+      "n": 3,
+      "frame": "commission",
+      "picks": {
+        "a": "1700",
+        "p": "4"
+      },
+      "values": {
+        "a": "1700",
+        "p": "4"
+      },
+      "text": "Ms. Park earns a 4% commission on what she sells. This week she sells $1700 of furniture. How much does she earn?",
+      "answer": "$68",
+      "unit": "$",
+      "equation": false
+    }
+  ],
+  "answer_key": [
+    "45%",
+    "$113.60",
+    "$68"
+  ],
+  "new_words": [],
+  "review_words": []
+}

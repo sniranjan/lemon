@@ -1,0 +1,323 @@
+subject: math
+level: M7
+title: Negative Numbers, Percents, Expressions and Two-Step Equations
+# Our own level (source: ours): Penguins math, grade 7 work for age 10 (syllabus/PLAN-upper-levels.md).
+# It assumes grade 6 math (negative numbers on a line, fraction division, ratios, one-step equations)
+# from the level before. Public level name: syllabus/ladder.yaml. Section public_name is what buyers see.
+preview_pages: [1, 45, 121, 191]   # number-line adding, the sign pattern for times, percent change, inequalities
+aims:
+  - Add, take away, multiply and divide positive and negative numbers, with number lines first
+  - Do all four operations with signed fractions and decimals, and write fractions as decimals
+  - Find unit rates with fractions, spot proportional tables and solve percent problems
+  - Tidy linear expressions by collecting like terms, expanding brackets and factoring
+  - Solve two-step equations and inequalities and graph inequalities on a number line
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [3, 6]   # source: ours (12 facts, 8 fraction problems or 4 word problems a page)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# (ws/sheet_types/*.py).
+sections:
+  - code: A
+    name: Adding and Subtracting Negative Numbers
+    public_name: Adding and Subtracting Negatives
+    pages: [1, 40]
+    sheet_types: [signed_numbers]
+    standards: [7.NS.1a, 7.NS.1b, 7.NS.1c, 7.NS.1d]
+    source: ours
+    rules:
+      layout: operations
+      numbers: integer
+      ops: ["+", "-"]
+    parts:
+      - part: 1
+        pages: [1, 10]
+        rules:
+          title: Adding on a line
+          layouts: [line]
+          ops: ["+"]
+          range: [-9, 9]
+          tips:
+            signed_numbers:
+              - "Start at the first number. Adding a positive number moves right; adding a negative number moves left. Draw the jump."
+              - "A number and its opposite make 0: 5 + (−5) = 0. Ask your child to say where each jump lands before writing it."
+      - part: 2
+        pages: [11, 20]
+        rules:
+          title: Add the opposite
+          layouts: [line]
+          opposite: true
+          range: [-9, 9]
+          tips:
+            signed_numbers:
+              - "Taking away a number is the same as adding its opposite: 4 − 7 = 4 + (−7). Write the opposite first, then jump."
+              - "Taking away a negative moves right: 2 − (−3) = 2 + 3. Check each answer on the line."
+      - part: 3
+        pages: [21, 30]
+        rules:
+          title: Add and take away
+          layouts: [grid]
+          range: [-20, 20]
+          answer_range: [-40, 40]
+          distance: 2
+          tips:
+            signed_numbers:
+              - "No number line now. Ask: which way do I move, and how far? The distance between two numbers is how far apart they are, never negative."
+              - "For −8 − (−13), change it to −8 + 13 first. Signs that differ: take the smaller size from the bigger and keep the bigger one's sign."
+      - part: 4
+        pages: [31, 40]
+        rules:
+          title: Three numbers
+          layouts: [chain]
+          range: [-30, 30]
+          answer_range: [-60, 60]
+          tips:
+            signed_numbers:
+              - "Work from left to right, or change every take-away into adding the opposite and add the positives and the negatives separately."
+              - "Group numbers that make 0 or a round ten first. Adding in any order gives the same answer."
+
+  - code: B
+    name: Multiplying and Dividing Negative Numbers
+    public_name: Multiplying and Dividing Negatives
+    pages: [41, 70]
+    sheet_types: [signed_numbers]
+    standards: [7.NS.2a, 7.NS.2b, 7.NS.2c]
+    source: ours
+    rules:
+      layout: operations
+      numbers: integer
+      range: [-12, 12]
+      answer_range: [-144, 144]
+      dividend_range: [-144, 144]
+    parts:
+      - part: 1
+        pages: [41, 50]
+        rules:
+          title: Times with negatives
+          ops: ["*"]
+          layouts: [pattern, grid]
+          tips:
+            signed_numbers:
+              - "Say the pattern in the column out loud: each answer goes up by the same amount, so a negative times a negative is positive."
+              - "Work out the size first, then the sign: same signs give a positive answer, different signs give a negative one."
+      - part: 2
+        pages: [51, 60]
+        rules:
+          title: Dividing negatives
+          ops: ["/"]
+          layouts: [grid]
+          tips:
+            signed_numbers:
+              - "Dividing follows the times rule: same signs give a positive answer, different signs a negative one. Check by multiplying back."
+              - "For −56 ÷ 8, ask: 8 times what is −56? The answer is −7."
+      - part: 3
+        pages: [61, 70]
+        rules:
+          title: Mixed signs
+          ops: ["*", "/", "+", "-"]
+          layouts: [chain, grid]
+          range: [-12, 12]
+          tips:
+            signed_numbers:
+              - "Times and sharing come before adding and taking away. Underline those steps first."
+              - "Count the negative signs in a times-and-sharing run: an even number gives a positive answer, an odd number a negative one."
+
+  - code: C
+    name: Operations with Rational Numbers
+    public_name: All Kinds of Numbers
+    pages: [71, 100]
+    sheet_types: [signed_numbers]
+    standards: [7.NS.1d, 7.NS.2c, 7.NS.2d, 7.NS.3]
+    source: ours
+    rules:
+      layout: operations
+      layouts: [grid]
+      denominators: [2, 3, 4, 5, 6, 8, 10, 12]
+      max_den: 24
+    parts:
+      - part: 1
+        pages: [71, 80]
+        rules:
+          title: "Fractions: + and −"
+          ops: ["+", "-"]
+          numbers: fraction
+          range: [-3, 3]
+          answer_range: [-6, 6]
+          alternate: { numbers: decimal, range: [-20, 20], answer_range: [-40, 40], title: "Decimals: + and −" }
+          tips:
+            signed_numbers:
+              - "Use the same sign rules as for whole numbers. For fractions, find a common denominator first; for decimals, line up the points."
+              - "Write each answer in simplest form. An answer like −7/4 can also be written −1 3/4."
+      - part: 2
+        pages: [81, 90]
+        rules:
+          title: "Fractions: × and ÷"
+          ops: ["*", "/"]
+          numbers: fraction
+          range: [-3, 3]
+          answer_range: [-9, 9]
+          alternate: { numbers: decimal, range: [-10, 10], answer_range: [-50, 50], places: 1, title: "Decimals: × and ÷" }
+          tips:
+            signed_numbers:
+              - "Decide the sign first, then multiply or divide the sizes. To share by a fraction, multiply by its flip."
+              - "Cancel before you multiply fractions: it keeps the numbers small."
+      - part: 3
+        pages: [91, 100]
+        sheet_types: [signed_numbers, rational_story]
+        rules:
+          title: Fractions as decimals
+          layouts: [convert]
+          convert_denominators: [3, 4, 5, 6, 8, 9, 11, 12, 15, 16, 20]
+          tags: [signed_story, signed_story, signed_story]
+          story_title: Negatives in real life
+          tips:
+            signed_numbers:
+              - "Divide the top by the bottom, adding zeros after the point. Stop when it comes out even or a remainder comes back."
+              - "When a remainder repeats, the digits repeat too. Draw a bar over the digits that repeat: 0.8333… is 0.8 with a bar over the 3."
+            rational_story:
+              - "Ask: is the answer above or below zero? Sketch a quick number line for temperatures, heights and money owed."
+              - "Write the number sentence with its signs first, like −8 + 15, then work it out."
+
+  - code: D
+    name: Proportional Relationships and Percent Problems
+    public_name: Proportions and Percent Change
+    pages: [101, 140]
+    sheet_types: [rational_story]
+    standards: [7.RP.1, 7.RP.2a, 7.RP.2b, 7.RP.2c, 7.RP.3]
+    source: ours
+    rules:
+      max_value: 10000
+      max_den: 24
+      title: Rates and percents
+    parts:
+      - part: 1
+        pages: [101, 110]
+        rules:
+          story_title: Unit rates
+          tags: [fraction_rate, fraction_rate, fraction_rate]
+          tips:
+            rational_story:
+              - "A unit rate is how much for one: miles in one hour, cups for one batch. Divide the first amount by the second."
+              - "To divide by a fraction, multiply by its flip: 1/2 ÷ 1/4 = 1/2 × 4 = 2."
+      - part: 2
+        pages: [111, 120]
+        sheet_types: [ratio_table]
+        rules:
+          mode: proportional
+          title: Is it proportional?
+          tips:
+            ratio_table:
+              - "Divide each y by its x. If every column gives the same number, the table is proportional and that number is k."
+              - "A table with a fixed fee added can't be proportional: zero x would still cost something. Use k to fill the empty cell."
+          tables: 3
+      - part: 3
+        pages: [121, 130]
+        rules:
+          story_title: Percent change
+          tags: [percent_change, percent_change, percent_change]
+          tips:
+            rational_story:
+              - "Percent change is the change divided by the starting amount. Write it as a fraction first, then as a percent."
+              - "For an increase of 20%, the new amount is 120% of the old one: multiply by 1.2."
+      - part: 4
+        pages: [131, 140]
+        rules:
+          story_title: Money and percents
+          tags: [money_percent, money_percent, money_percent]
+          tips:
+            rational_story:
+              - "Find the percent of the price first (tax, tip or discount), then decide whether to add it or take it away."
+              - "Simple interest is the amount saved times the rate times the number of years."
+
+  - code: E
+    name: Equivalent Linear Expressions
+    public_name: Tidy Expressions
+    pages: [141, 170]
+    sheet_types: [expression_eval]
+    standards: [7.EE.1, 7.EE.2]
+    source: ours
+    rules:
+      task: tidy
+      problems: 10
+      coef_range: [-9, 9]
+    parts:
+      - part: 1
+        pages: [141, 150]
+        rules:
+          title: Collect like terms
+          tidy_tasks: [combine]
+          tips:
+            expression_eval:
+              - "Circle the x terms in one color and the plain numbers in another, each with the sign in front of it. Then add each group."
+              - "x on its own means 1x, and −x means −1x. A term keeps the sign in front of it."
+      - part: 2
+        pages: [151, 160]
+        rules:
+          title: Open the brackets
+          tidy_tasks: [expand, expand, expand_combine]
+          tips:
+            expression_eval:
+              - "Multiply the number outside by every term inside the brackets. A minus sign outside changes every sign inside."
+              - "Open the brackets first, then collect like terms."
+      - part: 3
+        pages: [161, 170]
+        rules:
+          title: Factor and rewrite
+          tidy_tasks: [factor, factor, fractions, rewrite]
+          tips:
+            expression_eval:
+              - "To factor, find the biggest number that divides both terms. Write it outside and what is left inside the brackets."
+              - "a + 0.05a is 1a + 0.05a, so it is 1.05a: adding 5% is the same as multiplying by 1.05."
+
+  - code: F
+    name: Two-Step Equations and Inequalities
+    public_name: Two-Step Equations and Inequalities
+    pages: [171, 200]
+    sheet_types: [equation_solve]
+    standards: [7.EE.3, 7.EE.4a, 7.EE.4b]
+    source: ours
+    rules:
+      mode: two_step
+      max_value: 10000
+      solution_range: [-12, 12]
+      coef_range: [-9, 9]
+    parts:
+      - part: 1
+        pages: [171, 180]
+        rules:
+          title: Two-step equations
+          forms: [px+q=r]
+          tips:
+            equation_solve:
+              - "Undo the adding or taking away first, then the times. Do the same thing to both sides."
+              - "Check each answer by putting it back into the equation: both sides should match."
+      - part: 2
+        pages: [181, 190]
+        sheet_types: [equation_solve, equation_solve, rational_story]
+        rules:
+          title: Two-step equations
+          forms: [p(x+q)=r, x/p+q=r, px+q=r]
+          story_title: Equations in stories
+          tags: [two_step_story, two_step_story, two_step_story]
+          tips:
+            equation_solve:
+              - "For 4(x − 3) = −20 you can share both sides by 4 first, or open the brackets first. Try both ways on one problem."
+              - "For x/4 − 2 = 3, add 2 to both sides, then multiply both sides by 4."
+            rational_story:
+              - "Let a letter stand for the number you don't know. Write the equation from the story, then solve it in two steps."
+              - "Check the answer against the story: does it make sense?"
+      - part: 3
+        pages: [191, 200]
+        sheet_types: [equation_solve, equation_solve, rational_story]
+        rules:
+          title: Inequalities
+          inequality: true
+          forms: [px+q=r, p(x+q)=r]
+          solution_range: [-9, 9]
+          story_title: Inequality stories
+          tags: [inequality_story, inequality_story, inequality_story]
+          tips:
+            equation_solve:
+              - "Solve it like an equation, but if you multiply or divide by a negative number, turn the sign around."
+              - "An open dot means the number itself is not included (< or >); a filled dot means it is (≤ or ≥)."
+            rational_story:
+              - "Words like \"at most\" mean ≤ and \"at least\" mean ≥. Solve the inequality, then think about which whole numbers make sense."

@@ -1,0 +1,75 @@
+{
+  "id": "MA-M8-A-001",
+  "subject": "math",
+  "level": "M8",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "power_root",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 5236751529654701277,
+  "title": "Powers and roots",
+  "parent_tip": "A square root asks: what number times itself makes this? A cube root asks the same with three equal factors.",
+  "items": [
+    {
+      "n": 1,
+      "task": "power",
+      "base": 12,
+      "exp": 2
+    },
+    {
+      "n": 2,
+      "task": "power",
+      "base": 10,
+      "exp": 2
+    },
+    {
+      "n": 3,
+      "task": "square_root",
+      "root": 5,
+      "value": 25
+    },
+    {
+      "n": 4,
+      "task": "cube_root",
+      "root": 10,
+      "value": 1000
+    },
+    {
+      "n": 5,
+      "task": "power",
+      "base": 4,
+      "exp": 4
+    },
+    {
+      "n": 6,
+      "task": "power",
+      "base": 2,
+      "exp": 5
+    },
+    {
+      "n": 7,
+      "task": "square_root",
+      "root": 7,
+      "value": 49
+    },
+    {
+      "n": 8,
+      "task": "cube_root",
+      "root": 5,
+      "value": 125
+    }
+  ],
+  "answer_key": [
+    "144",
+    "100",
+    "5",
+    "10",
+    "256",
+    "32",
+    "7",
+    "5"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,46 @@
+{% extends "base.html.j2" %}
+{% import "_algebra.html.j2" as alg with context %}
+{# Rows: five problems, one per card, with a long answer line under each.
+   Box: four problems in two columns; each has an empty multiplication box (row and column labels are
+   the two factors' terms) and an answer line. #}
+{% set layout = sheet.items[0].layout %}
+{% block style %}
+{{ alg.styles() }}
+.ex { font-size: 36px; }
+.probs { flex: 1; min-height: 0; display: grid; gap: 12px 14px; grid-auto-rows: 1fr; }
+.probs.rows { grid-template-columns: 1fr; }
+.probs.rows .card { gap: 0; padding-top: 4px; padding-bottom: 8px; }
+.probs.rows .line { height: 36px; }
+.probs.rows .eq { line-height: 1; }
+.probs.rows .ex { line-height: 1.1; }
+.probs.box { grid-template-columns: 1fr 1fr; }
+.probs.box .ex { font-size: 30px; letter-spacing: -0.01em; }
+.probs.box .card { padding-left: 28px; padding-right: 10px; }
+.probs .card { position: relative; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 6px 16px 10px 32px; border-radius: 22px; }
+.card .qn { position: absolute; top: 10px; left: 14px; }
+.ans { display: flex; align-items: flex-end; }
+table.mbox { border-collapse: collapse; margin: 4px 0 6px; }
+table.mbox td, table.mbox th { font-size: 28px; font-weight: 700; text-align: center; padding: 0; }
+table.mbox th { color: var(--accent); height: 40px; min-width: 40px; }
+table.mbox th.r { text-align: right; padding-right: 10px; }
+table.mbox td { border: 3px solid var(--ink); width: 76px; height: 56px; }
+{% endblock %}
+{% block body %}
+    <p class="ask">{% if layout == "box" %}Fill in the box, then join like terms.{% elif sheet.items[0].kind in ["add", "subtract"] %}Add or subtract. Use standard form.{% else %}Multiply and simplify.{% endif %}</p>
+    <div class="probs {{ layout }}">
+{% for i in sheet.items %}
+      <div class="card"><span class="qn" data-audience="parent">{{ i.n }}</span>
+        <span class="ex">{{ i.q | alg }}</span>
+{% if layout == "box" %}
+        <table class="mbox">
+          <tr><th></th>{% for c in i.box.cols %}<th>{{ c | alg }}</th>{% endfor %}</tr>
+{% for rw in i.box.rows %}
+          <tr><th class="r">{{ rw | alg }}</th>{% for c in i.box.cols %}<td></td>{% endfor %}</tr>
+{% endfor %}
+        </table>
+{% endif %}
+        <span class="ans"><span class="eq">=</span><span class="line"></span></span>
+      </div>
+{% endfor %}
+    </div>
+{% endblock %}

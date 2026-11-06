@@ -1,0 +1,75 @@
+{
+  "id": "MA-M8-F-012",
+  "subject": "math",
+  "level": "M8",
+  "section": "F",
+  "part": 2,
+  "sheet_type": "pythagorean",
+  "page_number": 192,
+  "variant": 1,
+  "seed": 11673891128404754508,
+  "title": "Roots and distances",
+  "parent_tip": "For two points, draw a right triangle: count across and up, then use a² + b² = c² for the distance.",
+  "items": [
+    {
+      "n": 1,
+      "task": "distance",
+      "grid": 6,
+      "p1": [
+        -3,
+        -5
+      ],
+      "p2": [
+        -1,
+        3
+      ]
+    },
+    {
+      "n": 2,
+      "task": "distance",
+      "grid": 6,
+      "p1": [
+        -4,
+        -2
+      ],
+      "p2": [
+        1,
+        -4
+      ]
+    },
+    {
+      "n": 3,
+      "task": "distance",
+      "grid": 6,
+      "p1": [
+        1,
+        -3
+      ],
+      "p2": [
+        5,
+        -5
+      ]
+    },
+    {
+      "n": 4,
+      "task": "distance",
+      "grid": 6,
+      "p1": [
+        -2,
+        5
+      ],
+      "p2": [
+        3,
+        -1
+      ]
+    }
+  ],
+  "answer_key": [
+    "√68 ≈ 8.2 units",
+    "√29 ≈ 5.4 units",
+    "√20 ≈ 4.5 units",
+    "√61 ≈ 7.8 units"
+  ],
+  "new_words": [],
+  "review_words": []
+}

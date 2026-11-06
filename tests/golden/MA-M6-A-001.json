@@ -1,0 +1,134 @@
+{
+  "id": "MA-M6-A-001",
+  "subject": "math",
+  "level": "M6",
+  "section": "A",
+  "part": 1,
+  "sheet_type": "fraction_ops",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 16154473559584519669,
+  "title": "How many fit?",
+  "parent_tip": "Read 3 ÷ 1/4 as: how many quarters are in 3? Count the quarter pieces in three whole bars.",
+  "items": [
+    {
+      "kind": "fraction",
+      "layout": "model",
+      "op": "div",
+      "sign": "÷",
+      "a": {
+        "whole": 2,
+        "num": 0,
+        "den": 1
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 3
+      },
+      "n": 1,
+      "bar": {
+        "bars": 2,
+        "pieces": 3,
+        "shaded": 6
+      }
+    },
+    {
+      "kind": "fraction",
+      "layout": "model",
+      "op": "div",
+      "sign": "÷",
+      "a": {
+        "whole": 0,
+        "num": 2,
+        "den": 3
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 6
+      },
+      "n": 2,
+      "bar": {
+        "bars": 1,
+        "pieces": 6,
+        "shaded": 4
+      }
+    },
+    {
+      "kind": "fraction",
+      "layout": "model",
+      "op": "div",
+      "sign": "÷",
+      "a": {
+        "whole": 1,
+        "num": 0,
+        "den": 1
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 4
+      },
+      "n": 3,
+      "bar": {
+        "bars": 1,
+        "pieces": 4,
+        "shaded": 4
+      }
+    },
+    {
+      "kind": "fraction",
+      "layout": "model",
+      "op": "div",
+      "sign": "÷",
+      "a": {
+        "whole": 0,
+        "num": 3,
+        "den": 5
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 10
+      },
+      "n": 4,
+      "bar": {
+        "bars": 1,
+        "pieces": 10,
+        "shaded": 6
+      }
+    },
+    {
+      "kind": "fraction",
+      "layout": "model",
+      "op": "div",
+      "sign": "÷",
+      "a": {
+        "whole": 1,
+        "num": 0,
+        "den": 1
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 3
+      },
+      "n": 5,
+      "bar": {
+        "bars": 1,
+        "pieces": 3,
+        "shaded": 3
+      }
+    }
+  ],
+  "answer_key": [
+    "6",
+    "4",
+    "4",
+    "6",
+    "3"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,191 @@
+{
+  "id": "MA-M8-C-001",
+  "subject": "math",
+  "level": "M8",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "equation_solve",
+  "page_number": 51,
+  "variant": 1,
+  "seed": 18016051000692780705,
+  "title": "Solve each equation",
+  "parent_tip": "Check each answer by putting it back into the first equation: both sides should come out the same.",
+  "items": [
+    {
+      "n": 1,
+      "form": "like_terms",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "6",
+          "v": "x"
+        },
+        {
+          "c": "2",
+          "v": "x"
+        },
+        {
+          "c": "15",
+          "v": ""
+        }
+      ],
+      "right": [
+        {
+          "c": "-25",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "6n + 2n + 15 = −25"
+      ]
+    },
+    {
+      "n": 2,
+      "form": "like_terms",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "5",
+          "v": "x"
+        },
+        {
+          "c": "6",
+          "v": "x"
+        },
+        {
+          "c": "-2",
+          "v": ""
+        }
+      ],
+      "right": [
+        {
+          "c": "53",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "5n + 6n − 2 = 53"
+      ]
+    },
+    {
+      "n": 3,
+      "form": "two_step",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "7",
+          "v": "x"
+        },
+        {
+          "c": "12",
+          "v": ""
+        }
+      ],
+      "right": [
+        {
+          "c": "-44",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "7n + 12 = −44"
+      ]
+    },
+    {
+      "n": 4,
+      "form": "like_terms",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "2",
+          "v": "x"
+        },
+        {
+          "c": "-16",
+          "v": ""
+        },
+        {
+          "c": "8",
+          "v": "x"
+        }
+      ],
+      "right": [
+        {
+          "c": "-56",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "2n − 16 + 8n = −56"
+      ]
+    },
+    {
+      "n": 5,
+      "form": "like_terms",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "6",
+          "v": "x"
+        },
+        {
+          "c": "1",
+          "v": ""
+        },
+        {
+          "c": "2",
+          "v": "x"
+        }
+      ],
+      "right": [
+        {
+          "c": "-87",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "6n + 1 + 2n = −87"
+      ]
+    },
+    {
+      "n": 6,
+      "form": "two_step",
+      "special": null,
+      "letter": "n",
+      "left": [
+        {
+          "c": "-7",
+          "v": "x"
+        },
+        {
+          "c": "1",
+          "v": ""
+        }
+      ],
+      "right": [
+        {
+          "c": "57",
+          "v": ""
+        }
+      ],
+      "tokens": [
+        "−7n + 1 = 57"
+      ]
+    }
+  ],
+  "answer_key": [
+    "n = −5",
+    "n = 5",
+    "n = −8",
+    "n = −4",
+    "n = −11",
+    "n = −8"
+  ],
+  "new_words": [],
+  "review_words": []
+}

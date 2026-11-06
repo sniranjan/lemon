@@ -103,3 +103,24 @@ factor_pairs:
 fraction_bars:
   - "Same size bars, different pieces. Count the shaded parts on each bar together."
   - "When the bottom numbers match, add or take away the tops; the bottom stays the same."
+# Pandas math (M6). Parts carry their own tips in syllabus/math/M6.yaml; these are fallbacks.
+ratio_table:
+  - "Every column of a ratio table is the same ratio, grown by the same number on both rows."
+rational_story:
+  - "Read each problem twice, decide what is being asked, then write the answer with its unit."
+percent_problem:
+  - "Percent means out of 100. Find 10% or 1% first, then scale up."
+signed_numbers:
+  - "Numbers to the left of 0 are below zero. The further right, the bigger the number."
+coordinate_grid:
+  - "Read x first, across, then y, up or down."
+expression_eval:
+  - "Put each number in place of its letter, then work it out in order: brackets, powers, times and divide, add and take away."
+equation_solve:
+  - "Undo what is done to the letter: take away to undo adding, divide to undo times. Then check by putting the answer back."
+power_root:
+  - "Say each power as a times sentence: 2 to the 5th is five 2s multiplied. A square root asks: what number times itself makes this?"
+sci_notation:
+  - "Scientific notation is a number from 1 to just under 10, times a power of ten. Count how many places the decimal point moves."
+pythagorean:
+  - "In a right triangle, the two short sides squared and added make the longest side squared: a² + b² = c²."

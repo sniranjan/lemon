@@ -1,0 +1,79 @@
+{
+  "id": "MA-M8-B-001",
+  "subject": "math",
+  "level": "M8",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "sci_notation",
+  "page_number": 31,
+  "variant": 1,
+  "seed": 12975232662384971393,
+  "title": "Scientific notation",
+  "parent_tip": "Scientific notation is a number from 1 to just under 10, times a power of ten. Count how many places the decimal point moves.",
+  "items": [
+    {
+      "n": 1,
+      "task": "to_sci",
+      "coef": "3.43",
+      "exp": 2,
+      "standard": "343"
+    },
+    {
+      "n": 2,
+      "task": "to_standard",
+      "coef": "8.6",
+      "exp": 3
+    },
+    {
+      "n": 3,
+      "task": "to_sci",
+      "coef": "5.8",
+      "exp": 3,
+      "standard": "5,800"
+    },
+    {
+      "n": 4,
+      "task": "to_standard",
+      "coef": "3",
+      "exp": 7
+    },
+    {
+      "n": 5,
+      "task": "to_sci",
+      "coef": "2",
+      "exp": 2,
+      "standard": "200"
+    },
+    {
+      "n": 6,
+      "task": "to_standard",
+      "coef": "4.7",
+      "exp": 5
+    },
+    {
+      "n": 7,
+      "task": "to_sci",
+      "coef": "8.61",
+      "exp": -4,
+      "standard": "0.000861"
+    },
+    {
+      "n": 8,
+      "task": "to_standard",
+      "coef": "5",
+      "exp": 7
+    }
+  ],
+  "answer_key": [
+    "3.43 × 10^2",
+    "8,600",
+    "5.8 × 10^3",
+    "30,000,000",
+    "2 × 10^2",
+    "470,000",
+    "8.61 × 10^−4",
+    "50,000,000"
+  ],
+  "new_words": [],
+  "review_words": []
+}

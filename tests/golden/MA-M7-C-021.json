@@ -1,0 +1,159 @@
+{
+  "id": "MA-M7-C-021",
+  "subject": "math",
+  "level": "M7",
+  "section": "C",
+  "part": 3,
+  "sheet_type": "signed_numbers",
+  "page_number": 91,
+  "variant": 1,
+  "seed": 5009520535134343449,
+  "title": "Fractions as decimals",
+  "parent_tip": "Divide the top by the bottom, adding zeros after the point. Stop when it comes out even or a remainder comes back.",
+  "items": [
+    {
+      "kind": "convert",
+      "n": 1,
+      "operands": [
+        "-10/11"
+      ],
+      "show": [
+        "−",
+        {
+          "n": 10,
+          "d": 11
+        }
+      ],
+      "answer": "−0.(90) repeating",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 2,
+      "operands": [
+        "-13/16"
+      ],
+      "show": [
+        "−",
+        {
+          "n": 13,
+          "d": 16
+        }
+      ],
+      "answer": "−0.8125",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 3,
+      "operands": [
+        "5/16"
+      ],
+      "show": [
+        {
+          "n": 5,
+          "d": 16
+        }
+      ],
+      "answer": "0.3125",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 4,
+      "operands": [
+        "4/5"
+      ],
+      "show": [
+        {
+          "n": 4,
+          "d": 5
+        }
+      ],
+      "answer": "0.8",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 5,
+      "operands": [
+        "7/8"
+      ],
+      "show": [
+        {
+          "n": 7,
+          "d": 8
+        }
+      ],
+      "answer": "0.875",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 6,
+      "operands": [
+        "-1/9"
+      ],
+      "show": [
+        "−",
+        {
+          "n": 1,
+          "d": 9
+        }
+      ],
+      "answer": "−0.(1) repeating",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 7,
+      "operands": [
+        "-3/11"
+      ],
+      "show": [
+        "−",
+        {
+          "n": 3,
+          "d": 11
+        }
+      ],
+      "answer": "−0.(27) repeating",
+      "layout": "convert",
+      "numbers": "integer"
+    },
+    {
+      "kind": "convert",
+      "n": 8,
+      "operands": [
+        "5/9"
+      ],
+      "show": [
+        {
+          "n": 5,
+          "d": 9
+        }
+      ],
+      "answer": "0.(5) repeating",
+      "layout": "convert",
+      "numbers": "integer"
+    }
+  ],
+  "answer_key": [
+    "−0.(90) repeating",
+    "−0.8125",
+    "0.3125",
+    "0.8",
+    "0.875",
+    "−0.(1) repeating",
+    "−0.(27) repeating",
+    "0.(5) repeating"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -4,7 +4,8 @@ Rendered by `uv run python scripts/marketing/instagram_launch.py` (re-runnable, 
 Edit the layouts and captions in that script, not the PNGs or `caption.md` files, then re-run it.
 
 The launch set uses `NN-slug/` folders (posting order) instead of the `YYYY-MM-DD-name/` scheme in
-`../README.md`, because the dates aren't fixed yet. Later one-off posts can go back to dated folders.
+`../README.md`, because the dates aren't fixed yet. Later posts use dated folders made with `ig_post.py` (see `../API.md`) and are published with `ig_publish.py`;
+`../posted.jsonl` records what's up.
 
 | # | Folder | Images | Background |
 |---|---|---|---|
