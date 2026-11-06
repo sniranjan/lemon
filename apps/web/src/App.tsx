@@ -57,7 +57,7 @@ function Nav() {
             Library
           </a>
           <Button asChild variant="sun" size="pill-sm">
-            <a href="/#early">Early access</a>
+            <a href="/#early">Get updates</a>
           </Button>
         </nav>
       </div>
@@ -93,7 +93,7 @@ function Hero() {
               </a>
             </Button>
             <Button asChild variant="paper" size="pill">
-              <a href="#early">Get early access</a>
+              <a href="#early">Get updates</a>
             </Button>
           </div>
         </div>
@@ -207,11 +207,11 @@ function EarlyAccess() {
     <section id="early" className="scroll-mt-24 px-4 py-20 sm:px-6">
       <div className="sticker relative mx-auto max-w-3xl bg-teal p-8 text-white sm:p-12">
         <img src="/pictures/star.svg" alt="" className="mascot-bob absolute -right-5 -top-7 size-16" />
-        <p className="font-hand text-2xl text-sun">coming soon</p>
+        <p className="font-hand text-2xl text-sun">ready now</p>
         <h2 className="mt-1 text-4xl font-bold sm:text-5xl">Download, print, play.</h2>
         <p className="mt-4 max-w-xl text-lg text-white/90">
-          Whole levels as printable PDFs are on their way, and printed sets shipped to your door after that. Leave your
-          email and we'll tell you the moment they're ready.
+          Chicks and Ducklings are ready to download today. More levels are on the way, and printed sets shipped to
+          your door after that. Leave your email and we'll tell you when the next level is ready.
         </p>
         <div className="mt-8">
           <Waitlist />

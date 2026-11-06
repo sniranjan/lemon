@@ -68,11 +68,11 @@ export function Waitlist() {
           disabled={state === "sending"}
           className="h-13 rounded-full border-[3px] border-ink px-7 text-lg font-extrabold pop transition-transform hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none"
         >
-          {state === "sending" ? <Loader2 className="size-5 animate-spin" /> : "Tell me first"}
+          {state === "sending" ? <Loader2 className="size-5 animate-spin" /> : "Keep me posted"}
         </Button>
       </div>
       {state === "error" && <p className="w-fit rounded-full bg-white px-3 py-1 text-sm font-bold text-destructive" role="alert">{error}</p>}
-      <p className="text-sm font-semibold opacity-85">One email when downloads open. No spam, ever.</p>
+      <p className="text-sm font-semibold opacity-85">Just a note when a new level is ready. No spam, ever.</p>
     </form>
   );
 }

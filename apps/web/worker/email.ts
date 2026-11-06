@@ -30,7 +30,7 @@ export async function sendOrderEmail(
   ].join("\n");
   const html = `<!doctype html><html><body style="margin:0;background:#fff8ec;font-family:Nunito,Arial,sans-serif;color:#1f2a44">
 <div style="max-width:520px;margin:0 auto;padding:32px 20px">
-  <p style="font-size:22px;font-weight:800;margin:0 0 4px">paper<span style="color:#ff6b5e">lessons</span></p>
+  <img src="https://paperlessons.com/brand/logo-email.png" width="200" alt="paperlessons" style="display:block;width:200px;height:auto;border:0">
   <h1 style="font-size:26px;margin:24px 0 8px">Your ${esc(o.levelName)} pages are ready</h1>
   <p style="font-size:16px;line-height:1.5;margin:0 0 20px">Thank you for buying <b>${esc(o.levelName)}</b> (${esc(o.levelTitle)}).
   Your printable PDFs and answer keys are waiting on your download page.</p>
