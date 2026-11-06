@@ -58,10 +58,9 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 3A, MA M1, ZII all; samples of MA 6A and ZI.
-- `ws verify`: 0 errors after Chicks batch 5 (regenerate 7A and 6A first; the only expected warnings are
-  the color-word pages of Chicks and Ducklings Reading).
-- `uv run pytest`: 242 passed (2026-11-06, with Kittens, Bunnies and Puppies Math).
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, ZII all; samples of MA 6A and ZI.
+- `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
+- `uv run pytest`: see the latest merge commit.
 
 - **Ducklings reading (EN 6A)** (2026-11-06): `syllabus/english/6A.yaml` (A Word Hunt 1–30, B Little
   Phrases 31–100, C Say a Sentence 101–200); new sheet types `phrase_card` and `sentence_recite`; frames,
@@ -75,6 +74,14 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   full level). Booklets: one per section plus `ducklings-reading-level.pdf` (202 pages = cover + 200 + log).
   The live free preview (pages 3, 33, 103, 131) is now stale for
   pages 3, 103 and 131: rebuild it with `ws preview` and re-upload when the user says so.
+
+- **Cubs Math (math M2, our own level)** (2026-11-06): `syllabus/math/M2.yaml`, 200 pages, sections A–H
+  (Tens and Ones 1–20 · Hundreds, Tens and Ones 21–50 · Counting by 5s, 10s and 100s 51–70 · Adding Ones 71–90 ·
+  Adding Two-Digit Numbers 91–130 · Taking Away Two-Digit Numbers 131–170 · Big Number Adding and Taking Away
+  171–190 · Story Problems 191–200), standards 1.NBT.2 (on-ramp), 2.NBT.1–7, 2.OA.1. New sheet types
+  `place_value`, `skip_count`, `column_arithmetic`, `math_story` (frames in `content/math/stories.yaml`).
+  All 200 pages verify with 0 errors; booklets: one per section plus `cubs-math-level.pdf` (202 pages) and
+  answers PDFs (`cubs-math-level-answers.pdf`, 10 pages). `ws preview` for Cubs needs Cubs Reading first.
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

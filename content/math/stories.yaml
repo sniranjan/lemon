@@ -1,0 +1,57 @@
+# Tiny story problems for Cubs math (math_story sheet type). Read aloud by a grown-up; keep words short.
+# Each frame: `op` (add: adding to / putting together; sub: taking from), the `text` with {a}, {b} and
+# {things} (the plural in `plurals`), and the `things` it makes sense for. Each thing is a picture
+# in content/math/objects.yaml. The question always ends the text, so the child knows what to find.
+plurals:
+  apple: apples
+  ball: balls
+  banana: bananas
+  bird: birds
+  car: cars
+  cookie: cookies
+  cup: cups
+  duck: ducks
+  egg: eggs
+  fish: fish
+  flower: flowers
+  star: stars
+frames:
+  - op: add
+    text: "We have {a} {things}. Grandma gives us {b} more. How many {things} do we have now?"
+    things: [apple, ball, banana, car, cookie, cup, egg, flower]
+  - op: add
+    text: "A box has {a} {things}. Dad puts in {b} more. How many {things} are in the box now?"
+    things: [apple, ball, banana, car, cookie, cup, egg]
+  - op: add
+    text: "{a} {things} are on the pond. {b} more come. How many {things} are on the pond now?"
+    things: [duck, bird]
+  - op: add
+    text: "{a} {things} swim in a big tank. Mom adds {b} more. How many {things} are in the tank now?"
+    things: [fish]
+  - op: add
+    text: "We see {a} {things} in the sky. Then we see {b} more. How many {things} do we see in all?"
+    things: [star, bird]
+  - op: add
+    text: "{a} {things} grow in the garden. We plant {b} more. How many {things} grow there now?"
+    things: [flower]
+  - op: add
+    text: "Ana has {a} {things}. Ben has {b} {things}. How many {things} do they have in all?"
+    things: [apple, ball, car, cookie, egg, flower, star]
+  - op: sub
+    text: "We have {a} {things}. We give {b} to our friends. How many {things} are left?"
+    things: [apple, ball, banana, car, cookie, cup, flower]
+  - op: sub
+    text: "{a} {things} sit in a tree. {b} fly away. How many {things} are still in the tree?"
+    things: [bird]
+  - op: sub
+    text: "{a} {things} are on the pond. {b} swim away. How many {things} are on the pond now?"
+    things: [duck]
+  - op: sub
+    text: "A tank has {a} {things}. We move {b} to a new tank. How many {things} are in the first tank now?"
+    things: [fish]
+  - op: sub
+    text: "We bake {a} {things}. We eat {b} of them. How many {things} are left?"
+    things: [cookie]
+  - op: sub
+    text: "A box has {a} {things}. We take out {b}. How many {things} are in the box now?"
+    things: [apple, ball, banana, car, cup, egg, star]

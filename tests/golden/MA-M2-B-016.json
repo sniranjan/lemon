@@ -1,0 +1,135 @@
+{
+  "id": "MA-M2-B-016",
+  "subject": "math",
+  "level": "M2",
+  "section": "B",
+  "part": 2,
+  "sheet_type": "place_value",
+  "page_number": 36,
+  "variant": 1,
+  "seed": 15518593900529465567,
+  "title": "Numbers in parts",
+  "parent_tip": "Say each number out loud together. Show how 347 is 300, 40 and 7: the place of a digit tells how much it is worth.",
+  "items": [
+    {
+      "kind": "expanded",
+      "form": "parts_to_number",
+      "n": 958,
+      "width": 3,
+      "places": [
+        9,
+        5,
+        8
+      ],
+      "parts": [
+        900,
+        50,
+        8
+      ]
+    },
+    {
+      "kind": "expanded",
+      "form": "number_to_parts",
+      "n": 849,
+      "width": 3,
+      "places": [
+        8,
+        4,
+        9
+      ],
+      "parts": [
+        800,
+        40,
+        9
+      ]
+    },
+    {
+      "kind": "expanded",
+      "form": "units_to_number",
+      "n": 744,
+      "width": 3,
+      "places": [
+        7,
+        4,
+        4
+      ],
+      "units": [
+        {
+          "count": 7,
+          "name": "hundreds"
+        },
+        {
+          "count": 4,
+          "name": "tens"
+        },
+        {
+          "count": 4,
+          "name": "ones"
+        }
+      ]
+    },
+    {
+      "kind": "expanded",
+      "form": "name_to_number",
+      "n": 307,
+      "width": 3,
+      "places": [
+        3,
+        0,
+        7
+      ],
+      "name": "three hundred seven"
+    },
+    {
+      "kind": "expanded",
+      "form": "units_to_number",
+      "n": 940,
+      "width": 3,
+      "places": [
+        9,
+        4,
+        0
+      ],
+      "units": [
+        {
+          "count": 9,
+          "name": "hundreds"
+        },
+        {
+          "count": 4,
+          "name": "tens"
+        },
+        {
+          "count": 0,
+          "name": "ones"
+        }
+      ]
+    },
+    {
+      "kind": "expanded",
+      "form": "parts_to_number",
+      "n": 832,
+      "width": 3,
+      "places": [
+        8,
+        3,
+        2
+      ],
+      "parts": [
+        800,
+        30,
+        2
+      ]
+    }
+  ],
+  "answer_key": [
+    958,
+    "800 + 40 + 9",
+    744,
+    307,
+    940,
+    832
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,97 @@
+{
+  "id": "MA-M2-E-035",
+  "subject": "math",
+  "level": "M2",
+  "section": "E",
+  "part": 4,
+  "sheet_type": "column_arithmetic",
+  "page_number": 125,
+  "variant": 1,
+  "seed": 5505463022389723616,
+  "title": "Adding three numbers",
+  "parent_tip": "Add the ones of all three numbers first, then the tens. If the ones make 10 or more, put the tens in the small box.",
+  "items": [
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        17,
+        32,
+        18
+      ],
+      "cols": 2,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        24,
+        25,
+        36
+      ],
+      "cols": 2,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        25,
+        30,
+        19
+      ],
+      "cols": 2,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        24,
+        30,
+        31
+      ],
+      "cols": 2,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        30,
+        12,
+        33
+      ],
+      "cols": 2,
+      "boxes": true
+    },
+    {
+      "kind": "column",
+      "op": "add",
+      "sign": "+",
+      "numbers": [
+        20,
+        12,
+        34
+      ],
+      "cols": 2,
+      "boxes": true
+    }
+  ],
+  "answer_key": [
+    67,
+    85,
+    74,
+    85,
+    75,
+    66
+  ],
+  "new_words": [],
+  "review_words": []
+}
