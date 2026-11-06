@@ -1,7 +1,10 @@
 # 7A-C word stories are built from sentence frames. Each frame has one slot `{w}` for a
 # known word (and `{a}` for its article: a / an, or "some" for words marked `mass: true`).
 # Every other token must be in `allowed_words`, so stories only use words the child has met.
-# A word uses the frames for its category if there are any, otherwise the default `frames`.
+# A word uses its own frames (`frames_by_word`) if it has any, else the frames for its category, else the
+# default `frames`. Frames that say the child owns the thing ("Here is my", "I have") are only used for
+# words in `ownable` / `eatable` (content/phrases/english.yaml) and for the categories in `my_categories`:
+# "I have a dog.", never "I have a koala." Actions in `child_cannot` there never take "I can".
 allowed_words: [I, see, a, an, some, look, at, the, here, is, my, this, like, have, love, hug, touch, can, to]
 frames:
   - "I see {a} {w}."
@@ -16,3 +19,9 @@ frames_by_category:
   nature: ["I see the {w}.", "Look at the {w}.", "I like the {w}.", "Here is the {w}."]
   colors: ["I like {w}.", "I see {w}.", "This is {w}."]
   actions: ["I can {w}.", "I like to {w}."]
+# Body and family words: "my" is always true ("I touch my nose.", "I hug my grandma.").
+my_categories: [family, body]
+# Actions that need an object to make sense ("I can wash." / "I can ride.").
+frames_by_word:
+  wash: ["I {w} my hand.", "I {w} my hair."]
+  ride: ["I {w} my bike.", "I can {w} my bike."]

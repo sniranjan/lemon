@@ -2,6 +2,8 @@
 # 8 fixture words (no color or action words), so 6A plans are stable while the real bank grows.
 allowed_words: [a, an, some, my, the, I, can, is, see, this, here, look, at, like, love, to, and]
 plural: []
+ownable: { toys: [ball], home: [cup], pets: [cat, dog, fish] }   # stories: "Here is my ..." / "I have ..."
+eatable: [apple]
 picture_colors: { apple: red, ball: blue, sun: yellow, cup: purple }
 can_do: {}
 pairs:

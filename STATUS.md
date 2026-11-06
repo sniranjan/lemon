@@ -53,8 +53,10 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
 1. **Batch 5** (words 161–200, 7A pages 81–100): draft a table and wait for the user's OK; avoid every
    Ducklings word (`syllabus/drafts/6A-words-batch*.md`). That completes 7A-A's word bank. Plural words go
    in `plural:` in `content/phrases/english.yaml` (stories and phrases then avoid "... is ...").
-2. Sentence-sense fixes: "I eat a pumpkin/lemon" (Ducklings Say a Sentence) and "I have a koala" (Tiny Stories)
-   come from broad frames; narrow the eatable and "I have" lists.
+2. Sentence-sense fixes: done (2026-11-06). Hand-checked `eatable`, `ownable`, `the_only` lists in
+   `content/phrases/english.yaml`; story "my"/"I have" frames only for ownable words; `frames_by_word` for
+   wash/ride; `tests/test_sentence_sense.py` scans every Chicks + Ducklings sentence. New words in later
+   batches must be added to `ownable` / `eatable` by hand when they fit.
 3. Then generate all of EN 7A, MA 6A, ZI; `ws verify` must pass; build booklets with `ws render --pdf`.
 4. `ws vocab stats` is a stub (exits 2); implement it when needed.
 5. Ducklings Reading is done (200/200). The live free preview may now differ from the rebuilt pages:

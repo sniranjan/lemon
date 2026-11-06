@@ -25,6 +25,8 @@ def slot_words(kind: str, data: dict, known: dict[str, VocabEntry]) -> list[str]
     """Known words that may fill a slot of this kind, in word-bank order."""
     spec = data["slots"][kind]
     cats, extra, skip = set(spec.get("categories", [])), set(spec.get("words", [])), set(spec.get("except", []))
+    for name in spec.get("lists", []):
+        extra |= set(word_list(data, name))
     words = [w for w, e in known.items() if (e.category in cats or w in extra) and w not in skip]
     if spec.get("colored"):
         colors = data["picture_colors"]
@@ -33,6 +35,19 @@ def slot_words(kind: str, data: dict, known: dict[str, VocabEntry]) -> list[str]
         fits = {n for nouns in data[spec["described_by"]].values() for n in nouns}
         words = [w for w in words if w in fits] if (cats or extra) else [w for w in known if w in fits]
     return words
+
+
+def word_list(data: dict, name: str) -> list[str]:
+    """A hand-checked word list from the phrases file: a plain list, or a mapping of headings to lists."""
+    value = data.get(name, [])
+    if isinstance(value, dict):
+        return [w for words in value.values() for w in words]
+    return list(value)
+
+
+def ownable(data: dict) -> set[str]:
+    """Things a child can call "my ..." / "I have a ...": the `ownable` list plus `eatable`."""
+    return set(word_list(data, "ownable")) | set(word_list(data, "eatable"))
 
 
 def _article(next_word: str, noun: VocabEntry | None, data: dict) -> str:
@@ -98,6 +113,8 @@ def is_true(filling: dict[str, str], frame: str, data: dict) -> bool:
     if " is " in frame:
         if any(w in data.get("plural", []) for w in filling.values()):
             return False
+    if "{a}" in frame and noun in data.get("the_only", []):   # "the sun", never "a sun"
+        return False
     return True
 
 
