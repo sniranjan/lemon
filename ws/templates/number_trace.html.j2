@@ -1,0 +1,25 @@
+{% extends "base.html.j2" %}
+{% from "_numerals.html.j2" import dot_defs, dotted %}
+{% block style %}
+.defs { position: absolute; }
+.rows { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.rows .card { flex: 1; min-height: 0; display: flex; align-items: center; gap: 14px; padding: 6px 16px; }
+.model { width: 124px; height: 132px; flex: none; border-radius: 22px; background: var(--tint); border: 3px solid var(--accent);
+         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.model .num { font-size: 84px; font-weight: 700; line-height: 0.9; }
+.model svg { display: block; }
+.traces { flex: 1; display: flex; justify-content: space-around; align-items: center; }
+.dotted { display: block; }
+.dotted text { font-family: "Andika"; font-weight: 400; fill: url(#trace-dots); }
+{% endblock %}
+{% block body %}
+    {{ dot_defs() }}
+    <div class="rows">
+{% for item in sheet.items %}
+{# one digit: 160px numerals in 120px boxes; two digits (10): 118px numerals in 156px boxes #}
+{% set size, w = (160, 120) if item.n < 10 else (118, 156) %}
+{% set cols = [item.n, 5] | min %}{% set dh = 18 if item.n <= 5 else 36 %}
+      <div class="card"><div class="model"><div class="num">{{ item.n }}</div><svg width="{{ cols * 18 }}" height="{{ dh }}" viewBox="0 0 {{ cols * 18 }} {{ dh }}">{% for d in range(item.n) %}<circle cx="{{ 9 + (d % 5) * 18 }}" cy="{{ 9 + (d // 5) * 18 }}" r="6.5" fill="#1d1d1f"/>{% endfor %}</svg></div><div class="traces">{% for _ in range(item.traces) %}{{ dotted(item.n, size, w) }}{% endfor %}</div></div>
+{% endfor %}
+    </div>
+{% endblock %}

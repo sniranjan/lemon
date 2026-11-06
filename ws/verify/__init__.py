@@ -307,7 +307,7 @@ def verify_layout(sheets: list[Sheet]) -> tuple[list[Issue], dict]:
             if not path.exists():
                 issues.append(_err(s.id, f"HTML file missing: {path}"))
         present = [(s, p) for s, p in zip(group, paths) if p.exists()]
-        results = render_pngs([p for _, p in present], min_child=min_child_px(lvl))
+        results = render_pngs([p for _, p in present], min_child=min_child_px(lvl, subject))
         for (s, _), r in zip(present, results):
             issues += [_err(s.id, f"layout: {p}") for p in r.problems]
             pngs[(subject, lvl)].append(r.png)

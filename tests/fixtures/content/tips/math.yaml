@@ -13,3 +13,15 @@ dots_to_number:
 number_sequence:
   - "Read each row together from the first number. When you reach an empty box, let your child say the missing number."
   - "Touch each box as you count along. Pause at the empty boxes and let your child fill them in out loud."
+number_trace:
+  - "Say the number, count the dots under it, then trace each dotted number from the top."
+  - "Trace slowly along the dots, starting at the top. Say the number each time you finish one."
+  - "Point to the dark number and say it together. Then trace the dotted ones, top first."
+number_write_copy:
+  - "Trace the dotted numbers, saying each one. Then write the same numbers in the boxes below."
+  - "Count along as your child traces the top row, then let them write the row underneath."
+  - "Trace first, then write. If a number is tricky, trace it once more with your finger."
+number_write_fill:
+  - "Read each row together. When you reach an empty box, say the number, then let your child write it."
+  - "Count along the boxes from the first number. Your child writes the numbers that are missing."
+  - "Touch each box and count. At an empty box, stop and let your child write the number."

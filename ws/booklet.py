@@ -114,7 +114,7 @@ def build_booklets(subject: str, level_code: str, variant: int = 1) -> BookletRe
     with _Printer() as printer:
         sheet_pdf: dict[str, bytes] = {}
         for s in sheets:
-            data, problems, text = printer.pdf(sheet_dir(s) / f"{s.id}.html", min_child_px(level_code))
+            data, problems, text = printer.pdf(sheet_dir(s) / f"{s.id}.html", min_child_px(level_code, subject))
             pages = _pages(data)
             if len(pages) != 1:
                 report.issues.append(Issue(sheet_id=s.id, severity="error",
@@ -251,7 +251,7 @@ def build_preview(slug: str) -> BookletReport:
                          color_pages=", ".join(color)))
         for level, sheets in strands:
             for s in sheets:
-                data, problems, text = printer.pdf(sheet_dir(s) / f"{s.id}.html", min_child_px(level.level))
+                data, problems, text = printer.pdf(sheet_dir(s) / f"{s.id}.html", min_child_px(level.level, level.subject))
                 check(s.id, data, problems, text)
                 parts.append(data)
         parts.append(doc("booklet/preview_end.html.j2", "end", groups=groups))

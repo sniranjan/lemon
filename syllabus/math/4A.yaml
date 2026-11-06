@@ -1,0 +1,90 @@
+subject: math
+level: 4A
+title: Writing Numbers
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [3, 45, 115, 185]   # this strand's pages in the level's free preview (ws preview)
+aims:
+  - Trace the numerals 1 to 10 with good shapes, starting at the top
+  - Write the numbers up to 10, then up to 20, 30 and 50, first copying, then from memory
+  - Write the missing numbers in a counting sequence up to 50
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [0.5, 2]
+# Part ranges, run lengths and gap counts are our own (source: ours).
+# number_trace: `rows` numbers per page, each a solid model and dotted copies to trace;
+#   `new` numbers appear on every page of the part.
+# number_write `mode: copy`: blocks of `run` consecutive numbers, a dotted row to trace and an empty
+#   row to write the same numbers in. `new_from`: at least one block reaches a number >= this.
+# number_write `mode: fill`: tracks of `length` consecutive numbers (two rows of five) with `gaps`
+#   empty boxes to write in; the first box is always printed.
+sections:
+  - code: A
+    name: Number Tracing
+    public_name: Tracing Numbers to 10
+    pages: [1, 40]
+    sheet_types: [number_trace]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.3]
+    source: ours
+    rules: { rows: 4, traces: 3 }
+    parts:
+      - { part: 1, pages: [1, 10],  rules: { min: 1, max: 3 } }
+      - { part: 2, pages: [11, 20], rules: { min: 1, max: 5, new: [4, 5] } }
+      - { part: 3, pages: [21, 30], rules: { min: 1, max: 7, new: [6, 7] } }
+      - { part: 4, pages: [31, 40], rules: { min: 1, max: 10, new: [8, 9, 10] } }
+
+  - code: B
+    name: Number Writing up to 10
+    public_name: Writing Numbers to 10
+    pages: [41, 100]
+    sheet_types: [number_write]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.3, K.CC.2]
+    source: ours
+    parts:
+      - { part: 1, pages: [41, 50],  rules: { mode: copy, min: 1, max: 6, run: 3 } }
+      - { part: 2, pages: [51, 60],  rules: { mode: copy, min: 1, max: 7, run: 4, new_from: 6 } }
+      - { part: 3, pages: [61, 70],  rules: { mode: copy, min: 1, max: 10, run: 5, new_from: 8 } }
+      - { part: 4, pages: [71, 80],  rules: { mode: copy, min: 1, max: 10, run: 5, new_from: 10 } }
+      - { part: 5, pages: [81, 90],  rules: { mode: fill, min: 1, max: 10, length: 10, gaps: 3 } }
+      - { part: 6, pages: [91, 100], rules: { mode: fill, min: 1, max: 10, length: 10, gaps: 5 } }
+
+  - code: C
+    name: Number Writing up to 20
+    public_name: Writing Numbers to 20
+    pages: [101, 120]
+    sheet_types: [number_write]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.3, K.CC.2]
+    source: ours
+    parts:
+      - { part: 1, pages: [101, 110], rules: { mode: copy, min: 6, max: 20, run: 4, new_from: 11 } }
+      - { part: 2, pages: [111, 120], rules: { mode: fill, min: 1, max: 20, length: 10, gaps: 4, new_from: 11 } }
+
+  - code: D
+    name: Number Writing up to 30
+    public_name: Writing Numbers to 30
+    pages: [121, 140]
+    sheet_types: [number_write]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.2, 1.NBT.1]
+    source: ours
+    parts:
+      - { part: 1, pages: [121, 130], rules: { mode: copy, min: 11, max: 30, run: 4, new_from: 21 } }
+      - { part: 2, pages: [131, 140], rules: { mode: fill, min: 11, max: 30, length: 10, gaps: 4, new_from: 21 } }
+
+  - code: E
+    name: Numbers up to 50
+    public_name: Writing Numbers to 50
+    pages: [141, 200]
+    sheet_types: [number_write]
+    sct_minutes_per_page: [0.5, 2]
+    standards: [K.CC.1, K.CC.2, 1.NBT.1]
+    source: ours
+    parts:
+      - { part: 1, pages: [141, 150], rules: { mode: copy, min: 21, max: 40, run: 4, new_from: 31 } }
+      - { part: 2, pages: [151, 160], rules: { mode: fill, min: 21, max: 40, length: 10, gaps: 4, new_from: 31 } }
+      - { part: 3, pages: [161, 170], rules: { mode: copy, min: 31, max: 50, run: 4, new_from: 41 } }
+      - { part: 4, pages: [171, 180], rules: { mode: fill, min: 31, max: 50, length: 10, gaps: 4, new_from: 41 } }
+      - { part: 5, pages: [181, 190], rules: { mode: fill, min: 1, max: 50, length: 10, gaps: 5 } }
+      - { part: 6, pages: [191, 200], rules: { mode: fill, min: 1, max: 50, length: 10, gaps: 6 } }
