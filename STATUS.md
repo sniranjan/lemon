@@ -40,6 +40,18 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   byte-identical. Tests in `tests/test_math_M3.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per
   section + `foxes-math-level.pdf` (202 pages) and `foxes-math-level-answers.pdf` (10 pages). Child text stays
   ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171 wait for Foxes Reading.
+- **Otters Math (M5, our own level, grade 5 work, 200 pages)** (2026-11-06): `syllabus/math/M5.yaml`:
+  A Long Division 1–40 (5.NBT.6: divide by tens, 2-digit divisors, 2-digit answers, 4-digit dividends) ·
+  B Unlike Fractions 41–90 (5.NF.1: related denominators, then unrelated, then mixed numbers) · C Fractions Times
+  Fractions 91–120 (5.NF.4: whole × fraction, area model, fraction × fraction) · D Decimals in Columns 121–160
+  (5.NBT.3–4, 5.NBT.7: place value page, then add/take away with points lined up) · E Decimals Times and Shared
+  161–190 (5.NBT.2, 5.NBT.7) · F Parentheses and Volume 191–200 (5.OA.1, 5.MD.3–5; pages alternate). New sheet
+  types `long_division_2digit` (named apart from Owls' `long_division`), `fraction_ops`, `decimal_place_value`,
+  `decimal_column`, `decimal_ops`, `order_of_operations`, `box_volume`; exact helpers in `ws/sheet_types/_exact.py`
+  (items store ints / canonical decimal strings; `Fraction` and `Decimal` only for computing). Tests in
+  `tests/test_math_M5.py`. All 200 pages verify with 0 errors and 0 warnings; booklets per section +
+  `otters-math-level.pdf` (202 pages) and `otters-math-level-answers.pdf` (10 pages). Answers with a remainder read
+  "36 R 12" (R5 alone is a banned internal code). Free preview pages 21, 61, 131, 192 wait for Otters Reading.
 - **Pencil ZII (Ducklings pencil warm-ups, 100 pages)**: `syllabus/pencil/ZII.yaml`, using an extended
   `line_path` sheet type. A Shape to Shape 1–30 · B Story Paths 31–60 (picture pairs from
   `content/pencil/line_stories.yaml`) · C Zigzag Paths 61–80 · D Twists and Turns 81–100 (steps,
@@ -68,7 +80,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   regenerated (it reviews Chicks words). The live free previews are stale for Chicks page 101 and Ducklings
   pages 3, 33, 103, 131: rebuild with `ws preview` and re-upload when the user says so.
 - Generated so far (in `out/`, git-ignored; rebuild with `ws generate`): **EN 7A all 200 pages**;
-  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
+  **EN 6A (Ducklings Reading) all 200 pages**; MA 5A, MA 4A, MA 3A, MA M1, **MA M2 (Cubs Math)**, **MA M3 (Foxes Math)**, **MA M5 (Otters Math)**, **EN 5A (Bunnies Reading)**, **EN 4A (Kittens Reading)**, ZII all; samples of MA 6A and ZI.
 - `ws verify`: 0 errors (regenerate a level after content changes; expected warnings: color-word pages).
 - `uv run pytest`: see the latest merge commit.
 

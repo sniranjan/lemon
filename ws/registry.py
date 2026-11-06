@@ -24,6 +24,10 @@ CATALOGUE: frozenset[str] = frozenset({
     "place_value", "skip_count", "column_arithmetic", "math_story",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
+    # Otters math (M5): long division by two-digit numbers, fraction and decimal arithmetic,
+    # parentheses, volume
+    "long_division_2digit", "fraction_ops", "decimal_place_value", "decimal_column", "decimal_ops",
+    "order_of_operations", "box_volume",
 })
 
 

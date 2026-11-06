@@ -1,0 +1,51 @@
+{
+  "id": "MA-M5-A-031",
+  "subject": "math",
+  "level": "M5",
+  "section": "A",
+  "part": 4,
+  "sheet_type": "long_division_2digit",
+  "page_number": 31,
+  "variant": 1,
+  "seed": 12328646074961125954,
+  "title": "Four-digit numbers",
+  "parent_tip": "If the divisor doesn't fit after you bring a digit down, write 0 on top before bringing down the next digit.",
+  "items": [
+    {
+      "kind": "division",
+      "divisor": 42,
+      "dividend": 8801,
+      "n": 1,
+      "work_rows": 6
+    },
+    {
+      "kind": "division",
+      "divisor": 76,
+      "dividend": 5320,
+      "n": 2,
+      "work_rows": 6
+    },
+    {
+      "kind": "division",
+      "divisor": 46,
+      "dividend": 1013,
+      "n": 3,
+      "work_rows": 6
+    },
+    {
+      "kind": "division",
+      "divisor": 41,
+      "dividend": 7421,
+      "n": 4,
+      "work_rows": 6
+    }
+  ],
+  "answer_key": [
+    "209 R 23",
+    "70",
+    "22 R 1",
+    "181"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,287 @@
+subject: math
+level: M5
+title: Long Division, Fractions, Decimals, Order of Operations and Volume
+# Our own level (source: ours): Otters math, grade 5 work (syllabus/PLAN-upper-levels.md). It assumes
+# grade 4 math (long multiplication, division by one-digit numbers, equivalent fractions) from the level before.
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+preview_pages: [21, 61, 131, 192]   # two-digit quotients, unlike fractions, decimals in columns, volume of a box
+aims:
+  - Divide numbers up to four digits by two-digit numbers, with and without remainders
+  - Add and take away fractions with unlike denominators (and mixed numbers), answers in simplest form
+  - Multiply a whole number or a fraction by a fraction, and see the product as an area
+  - Read, compare and round decimals to thousandths; add and take away decimals with the points lined up
+  - Multiply and divide decimals by 10, 100 and 1000, by whole numbers and by simple decimals
+  - Use parentheses and brackets, and find the volume of boxes by counting cubes and multiplying
+pages: 200
+daily_pages: 5
+sct_minutes_per_page: [3, 6]   # source: ours (4 long divisions, 8 fraction problems or 9 columns a page)
+# Rules merge level → section → part; every range below is ours. Each sheet type documents its rules
+# (ws/sheet_types/*.py). Fractions: answers in simplest form, more than 1 written as a mixed number.
+rules: {}
+sections:
+  - code: A
+    name: Long Division with Two-Digit Divisors
+    public_name: Long Division
+    pages: [1, 40]
+    sheet_types: [long_division_2digit]
+    standards: [5.NBT.6]
+    source: ours
+    rules:
+      problems: 4
+      remainder: mixed
+      tips:
+        long_division_2digit:
+          - "Round the divisor to the nearest ten to guess each digit: 38 is about 40. If the guess is too big, try one less."
+          - "Each step is divide, multiply, take away, bring down. Say the steps out loud together."
+          - "The remainder must be smaller than the divisor. If it isn't, the digit on top can go up by one."
+    parts:
+      - part: 1
+        pages: [1, 10]
+        rules:
+          title: Dividing by tens
+          divisor: [20, 90]
+          divisor_multiple_of: 10
+          dividend_digits: 3
+          quotient_digits: [1]
+          tips:
+            long_division_2digit:
+              - "Dividing by 30 is like dividing by 3, ten times smaller. For 240 shared by 30, think: 24 shared by 3 is 8."
+              - "Write the digit over the last digit of the dividend. Multiply it by the divisor, take away, and the rest is the remainder."
+      - part: 2
+        pages: [11, 20]
+        rules:
+          title: Two-digit divisors
+          divisor: [11, 49]
+          dividend_digits: 3
+          quotient_digits: [1]
+      - part: 3
+        pages: [21, 30]
+        rules:
+          title: Two-digit answers
+          divisor: [11, 59]
+          dividend_digits: 3
+          quotient_digits: [2]
+      - part: 4
+        pages: [31, 40]
+        rules:
+          title: Four-digit numbers
+          divisor: [11, 99]
+          dividend_digits: 4
+          quotient_digits: [2, 3]
+          zero_in_quotient: 1
+          tips:
+            long_division_2digit:
+              - "If the divisor doesn't fit after you bring a digit down, write 0 on top before bringing down the next digit."
+              - "Check an answer together: answer times divisor, plus the remainder, gives back the big number."
+
+  - code: B
+    name: Adding and Subtracting Fractions with Unlike Denominators
+    public_name: Unlike Fractions
+    pages: [41, 90]
+    sheet_types: [fraction_ops]
+    standards: [5.NF.1]
+    source: ours
+    rules:
+      problems: 8
+      denominators: [2, 3, 4, 5, 6, 8, 9, 10, 12]
+      simplify_min: 2
+      tips:
+        fraction_ops:
+          - "Make the bottom numbers the same first: 1/2 + 1/3 becomes 3/6 + 2/6. Then add or take away the top numbers."
+          - "Look for the smallest number both bottom numbers go into. Then make each fraction into that many parts."
+          - "Simplify each answer: share the top and bottom by the same number until nothing more goes into both."
+    parts:
+      - part: 1
+        pages: [41, 50]
+        rules: { title: Adding fractions, op: add, relation: multiple, max_answer: 1 }
+      - part: 2
+        pages: [51, 60]
+        rules: { title: Taking away fractions, op: sub, relation: multiple }
+      - part: 3
+        pages: [61, 70]
+        rules:
+          title: Adding fractions
+          op: add
+          relation: other
+          tips:
+            fraction_ops:
+              - "Neither bottom number goes into the other now. Count up in the bigger one until the smaller one goes in too: 4, 8, 12 for 4 and 6."
+              - "An answer more than 1 becomes a mixed number: 13/12 is 1 whole and 1/12."
+      - part: 4
+        pages: [71, 80]
+        rules: { title: Taking away fractions, op: sub, relation: other }
+      - part: 5
+        pages: [81, 90]
+        rules:
+          title: Mixed numbers
+          op: mixed
+          relation: any
+          mixed_numbers: true
+          max_whole: 5
+          tips:
+            fraction_ops:
+              - "Add or take away the wholes, then the fractions. Make the bottom numbers the same first."
+              - "If the fraction part comes to 1 or more, turn it into a whole and add it to the wholes."
+
+  - code: C
+    name: Multiplying Fractions
+    public_name: Fractions Times Fractions
+    pages: [91, 120]
+    sheet_types: [fraction_ops]
+    standards: [5.NF.4, 5.NF.4a, 5.NF.4b]
+    source: ours
+    rules:
+      op: mul
+      problems: 8
+      denominators: [2, 3, 4, 5, 6, 8, 10, 12]
+      tips:
+        fraction_ops:
+          - "Times the top numbers, then times the bottom numbers. Then simplify the answer."
+          - "3 times 2/5 means three groups of 2/5: that is 6/5, or 1 and 1/5."
+    parts:
+      - part: 1
+        pages: [91, 100]
+        rules:
+          title: Whole times fraction
+          whole_times: all
+          max_whole: 9
+          simplify_min: 2
+          tips:
+            fraction_ops:
+              - "3 times 2/5 is three groups of 2/5. Times the whole number by the top number and keep the bottom number."
+              - "Write a whole number over 1 if it helps: 4 is 4/1. Then simplify, and turn answers over 1 into mixed numbers."
+      - part: 2
+        pages: [101, 110]
+        rules:
+          title: Fraction areas
+          layout: area
+          problems: 4
+          denominators: [2, 3, 4, 5, 6]
+          tips:
+            fraction_ops:
+              - "The square is 1 whole. Count the boxes where both shadings cross: that's the top number. All the boxes make the bottom number."
+              - "2/3 of the width and 3/4 of the height cross in 6 of the 12 boxes, so 2/3 times 3/4 is 6/12, or 1/2."
+      - part: 3
+        pages: [111, 120]
+        rules:
+          title: Multiplying fractions
+          whole_times: 2
+          max_whole: 9
+          simplify_min: 3
+
+  - code: D
+    name: Decimals - Place Value, Adding and Subtracting
+    public_name: Decimals in Columns
+    pages: [121, 160]
+    sheet_types: [decimal_column]
+    standards: [5.NBT.3, 5.NBT.3a, 5.NBT.3b, 5.NBT.4, 5.NBT.7]
+    source: ours
+    rules:
+      problems: 6
+      tips:
+        decimal_column:
+          - "Line up the decimal points first. Then add or take away just like whole numbers, starting on the right."
+          - "An empty place counts as 0: 3.5 is the same as 3.50. Your child can write the 0 in to help."
+    parts:
+      - part: 1
+        pages: [121, 130]
+        sheet_types: [decimal_place_value]
+        rules:
+          title: Decimal places
+          tips:
+            decimal_place_value:
+              - "Read each decimal out loud by its places: 4.27 is 4 and 27 hundredths. Then compare the biggest places first."
+              - "To round to the tenth, look at the hundredths digit. 5 or more rounds up; 4 or less stays."
+              - "In 6.284 the 8 is in the hundredths place, so it's worth 8 hundredths: 0.08."
+      - part: 2
+        pages: [131, 140]
+        rules: { title: Adding decimals, op: add, a: ["0.1", "99.99"], b: ["0.1", "99.99"], ragged_min: 3 }
+      - part: 3
+        pages: [141, 150]
+        rules:
+          title: Taking away decimals
+          op: sub
+          a: ["1", "99.99"]
+          b: ["0.01", "99.99"]
+          ragged_min: 3
+          whole_top_min: 1
+          tips:
+            decimal_column:
+              - "Line up the points. If the top number has fewer places, write zeros in: 5 becomes 5.00. Then take away from the right."
+              - "Trade just like whole numbers: one tenth is ten hundredths."
+      - part: 4
+        pages: [151, 160]
+        rules:
+          title: Add or take away
+          op: mixed
+          a: ["1", "99.99"]
+          b: ["0.01", "99.99"]
+          ragged_min: 3
+          answer_point: false
+          tips:
+            decimal_column:
+              - "Look at the sign first. The answer row has no point now: your child puts it in, right under the other points."
+              - "Line up the points, fill empty places with zeros, and start on the right."
+
+  - code: E
+    name: Multiplying and Dividing Decimals
+    public_name: Decimals Times and Shared
+    pages: [161, 190]
+    sheet_types: [decimal_ops]
+    standards: [5.NBT.7]
+    source: ours
+    rules:
+      problems: 10
+      tips:
+        decimal_ops:
+          - "Work it out as whole numbers first, then count the decimal places to put the point back."
+          - "Guess first: 2.4 times 3 is a bit more than 2 times 3, so the answer is about 7."
+    parts:
+      - part: 1
+        pages: [161, 170]
+        standards: [5.NBT.2]
+        rules:
+          title: Moving the point
+          kinds: [times_power, divide_power]
+          tips:
+            decimal_ops:
+              - "Times 10 moves every digit one place to the left; times 100, two places. Sharing by 10 moves them to the right."
+              - "Count the zeros: 100 has two, so the point moves two places. Add zeros if you run out of digits."
+      - part: 2
+        pages: [171, 180]
+        rules:
+          title: With whole numbers
+          kinds: [times_whole, divide_whole]
+          tips:
+            decimal_ops:
+              - "For 2.4 times 3, think 24 times 3 is 72, then put back the one decimal place: 7.2."
+              - "For 8.4 shared by 4, share the ones, then the tenths: 2 and 1 tenth, so 2.1."
+      - part: 3
+        pages: [181, 190]
+        rules:
+          title: Decimal by decimal
+          kinds: [times_decimal, divide_decimal]
+          tips:
+            decimal_ops:
+              - "0.3 times 0.4: 3 times 4 is 12, and there are two decimal places in all, so 0.12."
+              - "For 2.4 shared by 0.6, times both numbers by 10 first: 24 shared by 6 is 4."
+
+  - code: F
+    name: Order of Operations and Volume
+    public_name: Parentheses and Volume
+    pages: [191, 200]
+    sheet_types: [order_of_operations, box_volume]
+    standards: [5.OA.1, 5.MD.3, 5.MD.4, 5.MD.5]
+    source: ours
+    parts:
+      - part: 1
+        pages: [191, 200]
+        rules:
+          max_value: 100
+          tips:
+            order_of_operations:
+              - "Work inside the parentheses first, then brackets. With no parentheses, times and share come before plus and take away."
+              - "Cover the rest of the line and do just the part in parentheses. Write that number above it, then finish."
+            box_volume:
+              - "Volume is how many unit cubes fill the box: length times width times height."
+              - "Count the cubes in one layer, then times by the number of layers. For two boxes, find each one and add them."

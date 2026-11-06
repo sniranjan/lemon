@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Otters · Math · page 192</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #B4410C;
+  --tint: #FDEDE3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+.problems { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px 20px; }
+.problems .card { position: relative; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 24px 6px 14px; border-radius: 22px; }
+.qn { position: absolute; top: 8px; left: 14px; font-size: 13px; font-weight: 700; color: #8a8a90; }
+svg.box text { font-family: "Andika", sans-serif; font-weight: 700; font-size: 28px; fill: #1d1d1f; }
+.given { font-size: 28px; font-weight: 700; }
+.line { display: flex; align-items: center; gap: 10px; font-size: 30px; font-weight: 700; white-space: nowrap; }
+.ans { display: inline-block; width: 110px; height: 52px; border: 3px solid var(--ink); border-radius: 12px; background: #fff; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Otters · Math</div>
+      <div class="title-row"><h1>Volume</h1><span class="pill">Otters · 192</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Count the cubes in one layer, then times by the number of layers. For two boxes, find each one and add them.</div>
+  <main class="body">
+    <div class="problems">
+      <div class="card"><span class="qn" data-audience="parent">1</span>
+        <svg class="box" width="318" height="200" viewBox="0 0 318 200">
+          <rect x="95.0" y="48.5" width="101.4" height="111.5" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="95.0,48.5 196.4,48.5 241.0,12.0 139.6,12.0" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="196.4,160 241.0,123.5 241.0,12.0 196.4,48.5" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+
+          <text x="145.7" y="182" text-anchor="middle" dominant-baseline="middle">10 ft</text>
+          <text x="226.7" y="153.8" text-anchor="start" dominant-baseline="middle">8 ft</text>
+          <text x="87.0" y="104.2" text-anchor="end" dominant-baseline="middle">11 ft</text>
+        </svg>
+        <div class="line"><span>V =</span><span class="ans"></span><span>cubic ft</span></div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">2</span>
+        <svg class="box" width="318" height="200" viewBox="0 0 318 200">
+          <rect x="82.0" y="136.1" width="119.4" height="23.9" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="82.0,136.1 201.4,136.1 254.0,93.1 134.6,93.1" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="201.4,160 254.0,117.0 254.0,93.1 201.4,136.1" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polyline points="82.0,160 134.6,117.0 254.0,117.0" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-dasharray="6 5"/>
+          <line x1="134.6" y1="117.0" x2="134.6" y2="93.1" stroke="#1d1d1f" stroke-width="2" stroke-dasharray="6 5"/>
+
+          <text x="74.0" y="148.1" text-anchor="end" dominant-baseline="middle">2 ft</text>
+        </svg>
+        <div class="given">Base area = 80 sq ft</div>
+        <div class="line"><span>V =</span><span class="ans"></span><span>cubic ft</span></div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">3</span>
+        <svg class="box" width="318" height="200" viewBox="0 0 318 200">
+          <rect x="102.1" y="43.1" width="73.5" height="146.9" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="102.1,43.1 175.5,43.1 215.9,10.0 142.5,10.0" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="175.5,190.0 215.9,156.9 215.9,10.0 175.5,43.1" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <line x1="138.8" y1="190.0" x2="138.8" y2="43.1" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="138.8" y1="43.1" x2="179.2" y2="10.0" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="102.1" y1="153.3" x2="175.5" y2="153.3" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="175.5" y1="153.3" x2="215.9" y2="120.2" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="102.1" y1="116.5" x2="175.5" y2="116.5" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="175.5" y1="116.5" x2="215.9" y2="83.5" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="102.1" y1="79.8" x2="175.5" y2="79.8" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="175.5" y1="79.8" x2="215.9" y2="46.7" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="122.3" y1="26.5" x2="195.7" y2="26.5" stroke="#1d1d1f" stroke-width="1.5"/>
+          <line x1="195.7" y1="173.5" x2="195.7" y2="26.5" stroke="#1d1d1f" stroke-width="1.5"/>
+
+        </svg>
+        <div class="line"><span class="ans"></span><span>cubes</span></div>
+      </div>
+      <div class="card"><span class="qn" data-audience="parent">4</span>
+        <svg class="box" width="318" height="200" viewBox="0 0 318 200">
+          <rect x="78.0" y="69.2" width="103.8" height="90.8" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="78.0,69.2 181.8,69.2 196.1,57.5 92.3,57.5" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="181.8,160 196.1,148.3 196.1,57.5 181.8,69.2" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+
+          <rect x="181.8" y="121.1" width="51.9" height="38.9" fill="#fff" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="181.8,121.1 233.7,121.1 248.0,109.4 196.1,109.4" fill="#FDEDE3" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="233.7,160 248.0,148.3 248.0,109.4 233.7,121.1" fill="#d6d6db" stroke="#1d1d1f" stroke-width="3" stroke-linejoin="round"/>
+
+          <text x="129.9" y="182" text-anchor="middle" dominant-baseline="middle">8</text>
+          <text x="207.8" y="182" text-anchor="middle" dominant-baseline="middle">4</text>
+          <text x="70.0" y="114.6" text-anchor="end" dominant-baseline="middle">7</text>
+          <text x="254.0" y="128.9" text-anchor="start" dominant-baseline="middle">3</text>
+          <text x="77.1" y="57.3" text-anchor="end" dominant-baseline="middle">2</text>
+        </svg>
+        <div class="given">Edges in centimeters</div>
+        <div class="line"><span>V =</span><span class="ans"></span><span>cubic cm</span></div>
+      </div>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Otters · Math · page 192</footer>
+</div>
+</body>
+</html>

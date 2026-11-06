@@ -1,0 +1,91 @@
+{
+  "id": "MA-M5-C-011",
+  "subject": "math",
+  "level": "M5",
+  "section": "C",
+  "part": 2,
+  "sheet_type": "fraction_ops",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 12081673860699646474,
+  "title": "Fraction areas",
+  "parent_tip": "The square is 1 whole. Count the boxes where both shadings cross: that's the top number. All the boxes make the bottom number.",
+  "items": [
+    {
+      "kind": "fraction",
+      "layout": "area",
+      "op": "mul",
+      "sign": "×",
+      "a": {
+        "whole": 0,
+        "num": 1,
+        "den": 2
+      },
+      "b": {
+        "whole": 0,
+        "num": 1,
+        "den": 2
+      },
+      "n": 1
+    },
+    {
+      "kind": "fraction",
+      "layout": "area",
+      "op": "mul",
+      "sign": "×",
+      "a": {
+        "whole": 0,
+        "num": 1,
+        "den": 5
+      },
+      "b": {
+        "whole": 0,
+        "num": 3,
+        "den": 4
+      },
+      "n": 2
+    },
+    {
+      "kind": "fraction",
+      "layout": "area",
+      "op": "mul",
+      "sign": "×",
+      "a": {
+        "whole": 0,
+        "num": 3,
+        "den": 4
+      },
+      "b": {
+        "whole": 0,
+        "num": 2,
+        "den": 3
+      },
+      "n": 3
+    },
+    {
+      "kind": "fraction",
+      "layout": "area",
+      "op": "mul",
+      "sign": "×",
+      "a": {
+        "whole": 0,
+        "num": 1,
+        "den": 2
+      },
+      "b": {
+        "whole": 0,
+        "num": 3,
+        "den": 4
+      },
+      "n": 4
+    }
+  ],
+  "answer_key": [
+    "1/4",
+    "3/20",
+    "1/2",
+    "3/8"
+  ],
+  "new_words": [],
+  "review_words": []
+}

@@ -1,0 +1,77 @@
+{
+  "id": "MA-M5-F-002",
+  "subject": "math",
+  "level": "M5",
+  "section": "F",
+  "part": 1,
+  "sheet_type": "box_volume",
+  "page_number": 192,
+  "variant": 1,
+  "seed": 12728142374189174693,
+  "title": "Volume",
+  "parent_tip": "Count the cubes in one layer, then times by the number of layers. For two boxes, find each one and add them.",
+  "items": [
+    {
+      "task": "box",
+      "dims": [
+        [
+          10,
+          8,
+          11
+        ]
+      ],
+      "unit": "ft",
+      "n": 1
+    },
+    {
+      "task": "base",
+      "dims": [
+        [
+          10,
+          8,
+          2
+        ]
+      ],
+      "unit": "ft",
+      "base": 80,
+      "n": 2
+    },
+    {
+      "task": "cubes",
+      "dims": [
+        [
+          2,
+          2,
+          4
+        ]
+      ],
+      "unit": null,
+      "n": 3
+    },
+    {
+      "task": "two_boxes",
+      "dims": [
+        [
+          8,
+          2,
+          7
+        ],
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "unit": "cm",
+      "n": 4
+    }
+  ],
+  "answer_key": [
+    880,
+    160,
+    16,
+    136
+  ],
+  "new_words": [],
+  "review_words": []
+}
