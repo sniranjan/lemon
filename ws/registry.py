@@ -28,6 +28,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "passage_questions", "word_builder", "full_sentence_answer",
     # Otters Reading (R5): two-page spreads, clue words, figurative language, paragraph summaries
     "read_then_answer", "clue_words", "figurative_language", "paragraph_summary",
+    # Pandas Reading (R6): two-page passages (a reading page, then its questions page)
+    "passage_spread",
     # Foxes math (M3): fractions on a number line, times/sharing story problems
     "fraction_line", "story_problem",
     # Whales math (M9, Algebra 1): exponents and radicals, writing lines, inequalities on a number line, polynomials,

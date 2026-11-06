@@ -1,0 +1,69 @@
+{
+  "id": "EN-R6-A-002",
+  "subject": "english",
+  "level": "R6",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 2,
+  "variant": 1,
+  "seed": 6307114275772619503,
+  "title": "Engineers of the Pond",
+  "parent_tip": "Ask: what is the article about? Which details prove it?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "a01-beaver-engineers",
+      "set": 0,
+      "side": "questions",
+      "genre": "nonfiction",
+      "page_before": 1,
+      "continued": [
+        {
+          "n": 6,
+          "text": "A dam is never finished. When the beavers hear running water, they rush to plug the leak. For this reason, scientists sometimes call beavers engineers. Their work turns a fast, narrow stream into a wide wetland that many plants and animals share.",
+          "cont": false
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What is the central idea of the article?",
+      "choices": [
+        "Wolves and bears hunt beavers near streams.",
+        "Beaver dams make ponds that many living things depend on.",
+        "Beaver dams can be taller than a person.",
+        "Beavers are clumsy walkers but very strong swimmers."
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which words best show that the pond helps other animals?",
+      "choices": [
+        "Then it packs the spaces with mud, stones and plants.",
+        "A beaver is a clumsy walker on land",
+        "Fish find shelter among the sunken branches.",
+        "A dam is never finished."
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "paragraph",
+      "n": 3,
+      "ask": "Write an objective summary in 3–4 sentences. No opinions.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. B (Beaver dams make ponds that many living things depend on.)",
+    "2. C (Fish find shelter among the sunken branches.)",
+    "3. Sample: Beavers build dams from sticks, mud and stones to make deep ponds. The deep water keeps them \"safe from wolves, bears and other hunters\" and stores their winter food. The pond also gives ducks, frogs and fish a home and keeps nearby land wet. Beavers keep repairing their dams, so scientists call them engineers. Full answer: states the central idea; gives 2–3 key details in order; no opinions or \"I\" statements."
+  ],
+  "new_words": [],
+  "review_words": []
+}

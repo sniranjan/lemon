@@ -1,0 +1,1053 @@
+# Pandas Reading, section A "Central Idea" (pages 1–50): the central idea of an article, how its
+# details build it, and an objective summary (RI.6.2). Original nonfiction (ours), well-established
+# facts only. Schema and checks: ws/spreads.py. Each question set is a two-page spread.
+
+- id: a01-beaver-engineers
+  title: Engineers of the Pond
+  genre: nonfiction
+  text: |
+    A beaver dam can look like a messy pile of sticks, but it is really a carefully built structure.
+    The North American beaver is the largest rodent on its continent, and it is also a builder.
+    Beavers are among the few animals that change the land around them on purpose, and the ponds
+    they make become homes for many other living things.
+
+    A beaver begins a dam by pushing branches and sticks into the bottom of a stream. Then it packs
+    the spaces with mud, stones and plants. The beaver carries mud in its front paws, held against
+    its chest, and presses it into place. As the water rises, the beaver keeps adding to the top
+    and sides. Some dams are taller than a grown person and longer than a soccer field.
+
+    Why go to all this trouble? A beaver is a clumsy walker on land but a strong swimmer. Deep water
+    keeps it safe from wolves, bears and other hunters. Behind the dam, the beaver builds a lodge,
+    a dome of sticks and mud with underwater doorways. Inside, a dry room sits above the waterline,
+    where the beaver family rests and raises its young.
+
+    Beavers also need deep water for their winter food. In the fall, they push branches into the
+    mud at the bottom of the pond. When ice covers the surface, the beavers swim out of the lodge
+    and eat the bark from this underwater pantry.
+
+    The pond helps far more than beavers. Ducks nest along its edges, and frogs lay eggs in the
+    calm, shallow water. Fish find shelter among the sunken branches. Because the dam slows the
+    stream, mud and soil settle to the bottom instead of washing away. The water spreads out and
+    soaks into the ground, so nearby land stays green during dry summers.
+
+    A dam is never finished. When the beavers hear running water, they rush to plug the leak. For
+    this reason, scientists sometimes call beavers engineers. Their work turns a fast, narrow
+    stream into a wide wetland that many plants and animals share.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Beaver dams make ponds that many living things depend on.
+            - Beavers are clumsy walkers but very strong swimmers.
+            - Beaver dams can be taller than a person.
+            - Wolves and bears hunt beavers near streams.
+          evidence: the ponds they make become homes for many other living things
+        - kind: quote
+          ask: Which words best show that the pond helps other animals?
+          choices:
+            - Fish find shelter among the sunken branches.
+            - A dam is never finished.
+            - Then it packs the spaces with mud, stones and plants.
+            - A beaver is a clumsy walker on land
+          evidence: Fish find shelter among the sunken branches.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Beavers build dams from sticks, mud and stones to make deep ponds. The deep water keeps them
+            "safe from wolves, bears and other hunters" and stores their winter food. The pond also gives
+            ducks, frogs and fish a home and keeps nearby land wet. Beavers keep repairing their dams, so
+            scientists call them engineers.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: scientists sometimes call beavers engineers
+    - focus: how details build the idea
+      look_for: how each paragraph adds to the big idea
+      questions:
+        - kind: mc
+          ask: What is paragraph 4 mostly about?
+          choices:
+            - how beavers store food under the water for winter
+            - how beavers build their lodges
+            - why ducks like to nest near ponds
+            - how ice forms on a pond in winter
+          evidence: eat the bark from this underwater pantry
+        - kind: mc
+          ask: Which sentence would NOT belong in an objective summary of this article?
+          choices:
+            - Beavers are the most amazing animals in the world.
+            - Beavers make ponds by building dams across streams.
+            - The pond gives shelter to fish and frogs.
+            - Beavers fix leaks in their dams.
+          evidence: Their work turns a fast, narrow stream into a wide wetland
+        - kind: organizer
+          ask: Fill in two ways the pond helps the land and animals around it.
+          heads: [Animals, Land]
+          samples:
+            - Ducks nest there, frogs lay eggs, and fish hide in the branches.
+            - Soil stays put and the land stays green in dry summers.
+          evidence: so nearby land stays green during dry summers
+
+- id: a02-honeybees
+  title: From Flower to Honey
+  genre: nonfiction
+  text: |
+    A spoonful of honey may seem simple, but it is the work of thousands of busy insects. Honeybees
+    live together in large groups called colonies, and each colony can hold tens of thousands of bees.
+    Working as a team, these bees make honey for food, and along the way they help many of the crops
+    that people eat.
+
+    The job begins with forager bees, the workers that fly out of the hive to visit flowers. A forager
+    uses its long, tube-shaped tongue to sip a sweet liquid called nectar. It stores the nectar in a
+    special pouch, sometimes called a honey stomach, and carries it home.
+
+    Back at the hive, the forager passes the nectar to younger worker bees. These house bees add
+    substances from their bodies that slowly change the nectar. They spread it into small six-sided
+    cells made of wax, which the bees produce themselves. Nectar is watery at first, so the bees fan
+    it with their wings until much of the water dries away. When the honey is thick, they seal each
+    cell with a wax cap.
+
+    The colony needs this stored honey to survive the winter. When flowers stop blooming in the cold
+    months, the bees cluster together inside the hive and eat the honey they saved. A strong colony
+    may store far more honey than it needs, which is why beekeepers can collect some.
+
+    While bees gather nectar, they also do something just as important. Their fuzzy bodies pick up
+    tiny grains of pollen from each flower. When a bee lands on the next flower, some of that pollen
+    rubs off. This movement of pollen, called pollination, helps plants make seeds and fruit.
+
+    Many farms depend on this help. Apples, blueberries, cherries and almonds all grow better when
+    bees visit their blossoms. Some farmers even rent hives and place them in their orchards each
+    spring.
+
+    Honeybees, then, are more than honey makers. Each trip a bee takes between flowers feeds its
+    colony and helps grow food for people too.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Honeybees make honey for their colony and pollinate crops.
+            - Honeybees have long, tube-shaped tongues for sipping.
+            - Beekeepers collect extra honey from strong colonies.
+            - Nectar is watery when bees first bring it home.
+          evidence: they help many of the crops that people eat
+        - kind: quote
+          ask: Which words best show that crops need bees?
+          choices:
+            - Apples, blueberries, cherries and almonds all grow better
+            - they seal each cell with a wax cap
+            - the bees cluster together inside the hive
+            - It stores the nectar in a special pouch
+          evidence: Apples, blueberries, cherries and almonds all grow better
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Honeybees sip nectar from flowers and carry it back to the hive. There, house bees put it in
+            wax cells and dry it until it becomes thick honey for the winter. As they visit flowers, the
+            bees also move pollen, which "helps plants make seeds and fruit." Many farms need bees to grow
+            crops such as apples and almonds.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: helps grow food for people too
+    - focus: how details build the idea
+      look_for: the steps that turn nectar into honey
+      questions:
+        - kind: write
+          ask: What does paragraph 3 add to the central idea?
+          sample: It explains how house bees turn nectar into thick honey and seal it in wax cells.
+          evidence: These house bees add substances from their bodies that slowly change the nectar.
+        - kind: mc
+          ask: Why do the bees fan the nectar with their wings?
+          choices:
+            - to dry away much of its water
+            - to keep the hive warm in winter
+            - to spread pollen around the hive
+            - to make the wax cells bigger
+          evidence: the bees fan it with their wings until much of the water dries away
+        - kind: organizer
+          ask: Put three steps of honey making in order.
+          heads: [First, Next, Last]
+          samples:
+            - A forager sips nectar and carries it home.
+            - House bees put it in wax cells and fan it dry.
+            - They seal the thick honey with wax caps.
+          evidence: When the honey is thick, they seal each cell with a wax cap.
+
+- id: a03-lighthouses
+  title: Lights Along the Coast
+  genre: nonfiction
+  text: |
+    For thousands of years, sailors have faced a hidden danger near the shore. Rocks, sandbars and
+    reefs can lie just under the water, where no one on a ship can see them. Lighthouses were built
+    to solve this problem, and for centuries they guided ships safely along dark and stormy coasts.
+
+    The earliest lighthouses were simple fires burning on hilltops or tall towers. One of the most
+    famous stood at the harbor of Alexandria, in ancient Egypt, more than two thousand years ago.
+    Writers of that time described it as one of the wonders of the world. Its keepers fed a large
+    fire at the top, and travelers said its glow could be seen far out at sea.
+
+    Fires and candles were weak, however, and their light did not reach very far. Over time, keepers
+    switched to oil lamps with shiny metal mirrors behind them. In the 1820s, a French scientist
+    designed a new kind of lens made of many rings of glass. It bent the light into a strong, narrow
+    beam that sailors could see from many miles away.
+
+    A light only helps if sailors know which lighthouse they are seeing. For this reason, each
+    lighthouse was given its own signal. Some flashed every few seconds, while others shone steadily
+    or blinked in a set pattern. During the day, painted stripes, checks or bands of color helped
+    sailors tell one tower from another. Printed lists and charts explained every pattern.
+
+    Keeping the light burning was hard work. Lighthouse keepers trimmed wicks, cleaned soot from the
+    glass and wound the machines that turned the lens. In fog, they sounded loud horns or bells to
+    warn ships when the light could not be seen. Many keepers lived with their families in small
+    houses beside the tower.
+
+    Today, most lighthouses run on their own with electric lights, and ships use satellites and radar
+    to find their way. Yet many towers still shine, and visitors climb their stairs to learn how they
+    once protected sailors at sea.
+  pages:
+    - focus: central idea and supporting details
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Lighthouses kept ships safe and improved over time.
+            - Lighthouse keepers often lived with their families.
+            - The lighthouse at Alexandria was a famous wonder.
+            - Ships today use satellites and radar.
+          evidence: for centuries they guided ships safely along dark and stormy coasts
+        - kind: quote
+          ask: Which words best show how the lights got stronger?
+          choices:
+            - It bent the light into a strong, narrow beam
+            - Many keepers lived with their families
+            - Printed lists and charts explained every pattern.
+            - The earliest lighthouses were simple fires
+          evidence: It bent the light into a strong, narrow beam
+        - kind: write
+          ask: What does paragraph 4 add to the central idea?
+          sample: It explains how sailors told lighthouses apart, by their flashes and painted stripes.
+          evidence: each lighthouse was given its own signal
+        - kind: write
+          ask: Why did keepers sound horns or bells in fog?
+          sample: Fog hid the light, so the sound warned ships of danger.
+          evidence: warn ships when the light could not be seen
+    - focus: how details build the idea
+      look_for: how lighthouses changed over time
+      questions:
+        - kind: write
+          ask: What does paragraph 3 add to the central idea?
+          sample: It shows how lighthouse lights grew stronger, from fires to lamps to a bright lens.
+          evidence: designed a new kind of lens made of many rings of glass
+        - kind: mc
+          ask: Which sentence belongs in an objective summary?
+          choices:
+            - Each lighthouse had its own pattern of light.
+            - Lighthouses are the most beautiful buildings.
+            - Everyone should visit a lighthouse someday.
+            - I think keepers had the hardest job of all.
+          evidence: each lighthouse was given its own signal
+        - kind: organizer
+          ask: Tell how lighthouses worked long ago and today.
+          heads: [Long ago, Today]
+          samples:
+            - Keepers tended fires or oil lamps and wound the lens machines.
+            - Electric lights run on their own, and ships also use satellites.
+          evidence: most lighthouses run on their own with electric lights
+
+- id: a04-water-cycle
+  title: Earth's Traveling Water
+  genre: nonfiction
+  text: |
+    The water in the glass you drink today may once have floated in a cloud over the ocean. Earth
+    has had about the same amount of water for a very long time. Instead of being used up, the water
+    moves again and again between the land, the oceans and the sky. Scientists call this endless
+    journey the water cycle, and it is powered mostly by the sun.
+
+    The cycle has no true beginning, but the ocean is a good place to start, because most of Earth's
+    water is found there. When sunlight warms the surface, some of the water turns into an invisible
+    gas called water vapor. This change is called evaporation. Water also evaporates from lakes,
+    rivers and wet ground, and plants release water vapor through tiny openings in their leaves.
+
+    Warm, moist air rises. As it climbs higher, the air grows cooler, and the water vapor turns back
+    into tiny drops of liquid. This change is called condensation. Billions of these drops gather
+    around specks of dust to form clouds. You can see the same process on a cold glass of lemonade,
+    when drops appear on the outside.
+
+    Inside a cloud, the tiny drops bump together and grow larger. When they become too heavy to
+    float, they fall to the ground as rain. If the air is cold enough, the water may fall as snow or
+    sleet instead. Scientists call all of these precipitation.
+
+    Once the water reaches the ground, it can take many paths. Some flows over the land into streams
+    and rivers that carry it back to the sea. Some soaks into the soil and becomes groundwater, which
+    can stay underground for a very long time. Some freezes into glaciers and ice sheets.
+
+    Because of this cycle, water is shared across the whole planet. Rain that waters a farm field may
+    have evaporated from an ocean far away. Each step depends on the one before it, and together they
+    keep fresh water flowing to every living thing.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Earth's water moves in a cycle between land, sea and sky.
+            - Drops form on the outside of a cold glass.
+            - Most of Earth's water is found in the oceans.
+            - Glaciers and ice sheets are made of frozen water.
+          evidence: the water moves again and again between the land, the oceans and the sky
+        - kind: quote
+          ask: Which words best show that the sun powers the cycle?
+          choices:
+            - When sunlight warms the surface
+            - Some freezes into glaciers and ice sheets.
+            - Inside a cloud, the tiny drops bump together
+            - Some flows over the land into streams
+          evidence: When sunlight warms the surface
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Earth's water moves again and again in a path called the water cycle. The sun warms water
+            until it evaporates, and the vapor cools and condenses into clouds. When the drops grow too
+            heavy, they fall as rain or snow. On the ground, the water flows to the sea, soaks in or
+            freezes, and the cycle helps "keep fresh water flowing to every living thing."
+          rubric: states the central idea; gives the main steps in order; no opinions or "I" statements.
+          evidence: Scientists call this endless journey the water cycle
+    - focus: how details build the idea
+      look_for: the steps of the cycle and their names
+      questions:
+        - kind: write
+          ask: What does paragraph 3 add to the central idea?
+          sample: It explains condensation, the step where water vapor cools and forms clouds.
+          evidence: Billions of these drops gather around specks of dust to form clouds.
+        - kind: mc
+          ask: What happens to some water that soaks into the soil?
+          choices:
+            - It becomes groundwater and stays underground.
+            - It turns into a gas right away.
+            - It freezes into a glacier.
+            - It forms a cloud near the ground.
+          evidence: Some soaks into the soil and becomes groundwater
+        - kind: organizer
+          ask: Tell what happens to water in each step.
+          heads: [Evaporation, Condensation, Precipitation]
+          samples:
+            - The sun warms water and it turns into vapor.
+            - The vapor cools and forms drops in clouds.
+            - Heavy drops fall as rain, snow or sleet.
+          evidence: Scientists call all of these precipitation.
+
+- id: a05-fall-leaves
+  title: Why Leaves Change
+  genre: nonfiction
+  text: |
+    Every fall, many forests in North America turn bright shades of red, orange and yellow. These
+    colors may seem to appear out of nowhere, but most of them were hiding inside the leaves all
+    summer. The change happens because trees are getting ready for the long, cold winter ahead.
+
+    During spring and summer, leaves work like tiny food factories. They are full of a green
+    substance called chlorophyll, which captures energy from sunlight. The leaf uses that energy,
+    along with water and air, to make sugar that feeds the tree. There is so much chlorophyll in a
+    summer leaf that its green color covers up every other color.
+
+    As fall arrives, the days grow shorter and the nights grow cooler. With less sunlight, the tree
+    slowly stops making new chlorophyll, and the green begins to fade. Now the yellow and orange
+    colors that were there all along can finally be seen. These are the same kinds of colors that
+    make carrots orange.
+
+    Red and purple leaves work differently. In some trees, such as many maples, sugar becomes trapped
+    in the leaves during fall. The leaves use this sugar to make new red colors. Sunny days and cool
+    nights help produce the brightest reds, so the colors can change from one year to the next.
+
+    Meanwhile, the tree builds a thin layer of cells where each leaf stem joins a branch. This layer
+    slowly closes off the leaf, so water no longer flows in. Soon the leaf turns brown, and a breeze
+    carries it to the ground. On the forest floor, fallen leaves slowly break down and return
+    nutrients to the soil, which helps feed the tree the following year.
+
+    Dropping leaves helps the tree save water and energy through the cold months, when the ground may
+    freeze. Trees with needles, such as pines, keep most of their leaves because the needles are
+    tough and waxy. In spring, buds on the bare branches open, and new green leaves begin the cycle
+    again.
+  pages:
+    - focus: central idea and supporting details
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Leaves change color as trees get ready for winter.
+            - Carrots and leaves have the same orange colors.
+            - Pine needles are tough and waxy.
+            - Maple trees have the reddest leaves in the world.
+          evidence: The change happens because trees are getting ready for the long, cold winter ahead.
+        - kind: quote
+          ask: Which words show the yellow was there all summer?
+          choices:
+            - the yellow and orange colors that were there all along
+            - the days grow shorter and the nights grow cooler
+            - a breeze carries it to the ground
+            - Red and purple leaves work differently.
+          evidence: the yellow and orange colors that were there all along
+        - kind: write
+          ask: What does paragraph 4 add to the article?
+          sample: It explains that red colors are new, made from sugar trapped in the leaves.
+          evidence: The leaves use this sugar to make new red colors.
+        - kind: write
+          ask: Why does the green color fade in fall?
+          sample: With less sunlight, the tree stops making new chlorophyll.
+          evidence: With less sunlight, the tree slowly stops making new chlorophyll
+    - focus: how details build the idea
+      look_for: how the tree gets ready for winter
+      questions:
+        - kind: write
+          ask: What does paragraph 5 add to the central idea?
+          sample: It shows how the tree closes off each leaf, so the leaf falls before winter.
+          evidence: This layer slowly closes off the leaf, so water no longer flows in.
+        - kind: mc
+          ask: Which sentence would NOT belong in an objective summary?
+          choices:
+            - Fall is the best season of the whole year.
+            - Green chlorophyll fades as the days get shorter.
+            - Some trees make new red colors in fall.
+            - Trees drop their leaves to save water.
+          evidence: Dropping leaves helps the tree save water and energy
+        - kind: organizer
+          ask: Fill in a cause and its effect from the article.
+          heads: [Cause, Effect]
+          samples:
+            - Days grow shorter, so there is less sunlight.
+            - The tree stops making chlorophyll, and the green fades.
+          evidence: the green begins to fade
+
+- id: a06-tides
+  title: The Moon and the Tides
+  genre: nonfiction
+  text: |
+    If you spend a whole day at the beach, you may notice a surprising change. In the morning, waves
+    might reach almost to your towel. By afternoon, the water may have retreated, leaving wide
+    stretches of wet sand. These regular rises and falls of the sea are called tides, and they are
+    caused mainly by the Moon.
+
+    The Moon and Earth pull on each other with an invisible force called gravity. The Moon's pull is
+    not powerful enough to lift rocks or people, but it does tug on the enormous oceans. The water on
+    the side of Earth facing the Moon is pulled toward it, forming a wide bulge. Another bulge forms
+    on the opposite side of Earth at the same time.
+
+    As Earth spins, each place on the coast moves through both bulges. When a beach passes through a
+    bulge, the water rises, and people call it high tide. Between the bulges, the water drops to low
+    tide. Because of this, most coasts have two high tides and two low tides approximately every day.
+
+    The tides do not arrive at exactly the same time every day. While Earth spins, the Moon also moves along its
+    path around Earth. As a result, each high tide arrives about fifty minutes later than it did the
+    day before.
+
+    The sun affects tides as well, though less than the Moon, because it is much farther away. When
+    the sun, Moon and Earth line up, at the new moon and the full moon, their pulls work together.
+    These are called spring tides, a name that has nothing to do with the season, and they bring
+    higher highs and lower lows. When the sun and Moon pull at right angles, the tides are smaller.
+
+    Tides shape life along the shore. At low tide, pools of seawater are left among the rocks, where
+    crabs, snails and sea stars wait patiently for the water to return. Sailors and fishers study tide tables,
+    which predict the tides for every day of the year, so they know when the water will be deep
+    enough for their boats.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Tides rise and fall mainly because of the Moon's pull.
+            - Crabs and sea stars live in tide pools.
+            - The sun is much farther away than the Moon.
+            - Beaches have wide stretches of wet sand.
+          evidence: they are caused mainly by the Moon
+        - kind: quote
+          ask: Which words best explain what causes a high tide?
+          choices:
+            - When a beach passes through a bulge, the water rises
+            - Tides shape life along the shore.
+            - each high tide arrives about fifty minutes later
+            - you may notice a surprising change
+          evidence: When a beach passes through a bulge, the water rises
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Tides are the slow rises and falls of the sea, caused mainly by the Moon's gravity. The
+            Moon's pull makes bulges of water, and "each place on the coast moves through both bulges"
+            as Earth spins. Most coasts get two high tides and two low tides a day. The sun also pulls,
+            and when it lines up with the Moon, the tides are bigger.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: pull on each other with an invisible force called gravity
+    - focus: how details build the idea
+      look_for: how the sun and Moon work together
+      questions:
+        - kind: write
+          ask: What does paragraph 5 add to the central idea?
+          sample: It shows that the sun also affects tides, making them bigger when it lines up with the Moon.
+          evidence: The sun affects tides as well, though less than the Moon
+        - kind: mc
+          ask: Why does high tide come later each day?
+          choices:
+            - The Moon moves along its path while Earth spins.
+            - The sun pulls harder in the afternoon.
+            - The ocean gets heavier as the day goes on.
+            - Sailors change the tide tables every day.
+          evidence: While Earth spins, the Moon also moves along its path around Earth.
+        - kind: organizer
+          ask: Tell what happens at high tide and at low tide.
+          heads: [High tide, Low tide]
+          samples:
+            - The beach passes through a bulge, so the water rises.
+            - The water drops, and pools are left among the rocks.
+          evidence: At low tide, pools of seawater are left among the rocks
+
+- id: a07-traveling-seeds
+  title: Seeds on the Move
+  genre: nonfiction
+  text: |
+    A plant cannot walk, yet its seeds can travel across fields, rivers and even oceans. Seeds that
+    land right under their parent plant often have trouble growing, because the larger plant blocks
+    the sunlight and uses up the water. To give their young a better chance, plants have developed
+    many clever ways to send seeds far away.
+
+    Some seeds ride the wind. A dandelion seed hangs beneath a tiny umbrella of soft threads, so even
+    a light breeze can carry it a long way. Maple seeds have flat, papery wings. When they fall, they
+    spin like little helicopters and drift away from the tree. Wind-carried seeds are usually small
+    and light, which helps them stay in the air longer.
+
+    Other seeds travel by water. A coconut has a thick, hairy husk with air trapped inside it, so it
+    floats. Coconuts can drift on ocean currents for many weeks and wash up on distant beaches, where
+    they may sprout into new palm trees. This is one reason coconut palms grow on so many tropical
+    islands.
+
+    Animals carry many seeds, often without knowing it. Burdock and other plants make burrs covered
+    in tiny hooks. When a dog or deer brushes past, the burrs cling to its fur and later drop off
+    somewhere new. Berries work another way. Birds eat the sweet fruit, and the hard seeds pass
+    through their bodies and land in a new location.
+
+    Squirrels help too. In the fall, they bury acorns and other nuts to eat during the long winter months.
+    A squirrel does not discover every nut it hides, and some of the forgotten acorns grow into oak trees.
+
+    A few plants launch their own seeds. The ripe pods of some plants, such as jewelweed, burst open
+    when touched and fling their seeds through the air.
+
+    Wind, water, animals and bursting pods all solve the same problem. By spreading out, seeds find
+    room, light and water, and new plants can grow in places far from where they began.
+  pages:
+    - focus: central idea and supporting details
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Plants have many ways to spread their seeds far away.
+            - Squirrels bury acorns to eat in winter.
+            - Coconuts have thick, hairy husks.
+            - Dandelions grow best in windy places.
+          evidence: plants have developed many clever ways to send seeds far away
+        - kind: quote
+          ask: Which words explain why seeds need to travel?
+          choices:
+            - the larger plant blocks the sunlight and uses up the water
+            - they spin like little helicopters
+            - Squirrels help too.
+            - Berries work another way.
+          evidence: the larger plant blocks the sunlight and uses up the water
+        - kind: write
+          ask: What does paragraph 5 add to the article?
+          sample: It shows that squirrels spread seeds by burying nuts and forgetting some.
+          evidence: some of the forgotten acorns grow into oak trees
+        - kind: write
+          ask: How does a coconut reach a new beach?
+          sample: It floats on ocean currents because its husk holds air.
+          evidence: Coconuts can drift on ocean currents for many weeks
+    - focus: how details build the idea
+      look_for: each way seeds travel
+      questions:
+        - kind: mc
+          ask: How are burrs and berries alike?
+          choices:
+            - Both use animals to carry seeds.
+            - Both float on water.
+            - Both spin in the wind.
+            - Both burst open when touched.
+          evidence: Animals carry many seeds, often without knowing it.
+        - kind: mc
+          ask: Which sentence belongs in an objective summary?
+          choices:
+            - Seeds can be carried by wind, water or animals.
+            - Jewelweed is the most fun plant to touch.
+            - Everyone should plant a maple tree.
+            - I think dandelion seeds are the prettiest.
+          evidence: Wind, water, animals and bursting pods all solve the same problem.
+        - kind: organizer
+          ask: Name seeds from the article that travel each way.
+          heads: [Wind, Water, Animals]
+          samples:
+            - dandelion and maple seeds
+            - coconuts
+            - burrs, berry seeds and acorns
+          evidence: Some seeds ride the wind.
+
+- id: a08-coral-reefs
+  title: Cities Under the Sea
+  genre: nonfiction
+  text: |
+    A coral reef may look like a garden of colorful rocks, but it is actually built by living
+    animals. Corals are tiny creatures, and over many years millions of them can build structures so
+    large they stretch for miles. These reefs become busy underwater cities that shelter an amazing
+    variety of sea life.
+
+    Each coral animal, called a polyp, is soft and often smaller than a pencil eraser. It has a
+    tube-shaped body with a ring of tentacles around its mouth. Corals are related to jellyfish and
+    sea anemones. At night, many polyps stretch out their tentacles to catch tiny drifting food.
+
+    To protect its soft body, a polyp builds a hard cup of limestone beneath itself. Polyps live
+    together in large groups called colonies, and they connect their cups as they grow. When older
+    corals stop living, new polyps build on top of their skeletons. Layer by layer, over thousands of
+    years, the reef slowly rises.
+
+    Corals have a helpful partner. Tiny algae live inside the polyps' bodies. Like plants, the algae
+    use sunlight to make food, and they share much of it with the coral. The algae also give many
+    corals their bright colors. Because the algae need light, most reef-building corals grow in
+    clear, shallow, warm water.
+
+    The reef provides homes for a huge number of living things. Fish dart among the branches, while
+    crabs, shrimp and sea turtles find food and hiding places. Although reefs cover only a tiny part
+    of the ocean floor, they shelter a large share of all ocean species.
+
+    Reefs help people too. They act like walls that slow down strong waves before they reach the
+    shore, and visitors come to see the colorful fish. The largest reef system in the world, the Great Barrier Reef, lies off the coast of
+    Australia.
+
+    Because reefs grow so slowly, scientists work to protect them. They study how warm water and
+    pollution affect corals. A healthy reef is a living structure that keeps building itself for centuries.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Tiny coral animals build reefs that many creatures need.
+            - Corals are related to jellyfish.
+            - The Great Barrier Reef is near Australia.
+            - Sea turtles hide among coral branches.
+          evidence: These reefs become busy underwater cities that shelter an amazing variety of sea life.
+        - kind: write
+          ask: What does paragraph 3 add to the central idea?
+          sample: It explains how polyps build limestone cups on old ones, so the reef grows over time.
+          evidence: over thousands of years, the reef slowly rises
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Coral reefs are built by tiny animals called polyps. Each polyp makes a limestone cup, and
+            new polyps build on old ones, so "the reef slowly rises." Algae inside the corals make food
+            from sunlight and give them color. Reefs give homes to many sea animals and slow waves
+            before they reach the shore.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: it is actually built by living animals
+    - focus: how details build the idea
+      look_for: how corals and algae help each other
+      questions:
+        - kind: write
+          ask: What does paragraph 4 add to the central idea?
+          sample: It explains that algae inside corals make food from sunlight and give them color.
+          evidence: Corals have a helpful partner.
+        - kind: mc
+          ask: Why do most reef corals grow in shallow water?
+          choices:
+            - The algae inside them need sunlight.
+            - Deep water is too salty for them.
+            - Fish cannot swim in deep water.
+            - Waves are stronger far from shore.
+          evidence: Because the algae need light, most reef-building corals grow in clear, shallow, warm water.
+        - kind: organizer
+          ask: Tell what corals and algae give each other.
+          heads: [Coral gives algae, Algae give coral]
+          samples:
+            - a place to live inside the polyp's body
+            - food made from sunlight, and bright colors
+          evidence: they share much of it with the coral
+
+- id: a09-monarchs
+  title: The Monarchs' Long Trip
+  genre: nonfiction
+  text: |
+    Each fall, millions of orange and black monarch butterflies leave Canada and the eastern United
+    States and fly south. Their destination is a few mountain forests in central Mexico, sometimes
+    nearly three thousand miles away. This journey is one of the most remarkable migrations of any
+    insect, and scientists are still learning how the butterflies manage it.
+
+    Monarchs cannot survive the freezing winters of the north. They also depend on milkweed, the
+    only plant their caterpillars eat, and milkweed stops growing when cold weather arrives. So, as
+    the days grow shorter in late summer, a special generation of monarchs begins the trip.
+    Without milkweed, the next generation would have nothing to eat.
+
+    These fall butterflies are different from their parents. Most monarchs live only a few weeks as
+    adults, but the ones that migrate can live for about eight months. Instead of laying eggs right
+    away, they save their energy for the long flight. Along the way, they stop to sip nectar from
+    flowers, which fuels their wings and helps them store fat for the winter.
+
+    How do they find their way to a place they have never seen? Scientists believe monarchs use the
+    position of the sun as a kind of compass. They may also sense Earth's magnetic field. Still, no
+    one fully understands how they reach the same small forests year after year.
+
+    In Mexico, the monarchs gather on fir trees high in the mountains. So many butterflies cling to
+    the branches that the trees look orange. The cool mountain air lets them rest quietly through the
+    winter without using much energy. On warm afternoons, some flutter down to sip water from
+    nearby streams.
+
+    In spring, the butterflies head north and lay eggs on new milkweed plants. It takes several
+    generations, each living just a few weeks, to travel all the way back to Canada. No single
+    butterfly makes the whole round trip. Even so, when fall returns, a new long-lived generation,
+    born months after the first ones left, finds its way south to the very same mountains.
+  pages:
+    - focus: central idea and supporting details
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Monarchs make a long migration to Mexico and back each year.
+            - Monarch caterpillars eat only milkweed.
+            - Fir trees in Mexico can look orange.
+            - Monarchs sip nectar from flowers.
+          evidence: This journey is one of the most remarkable migrations of any insect
+        - kind: quote
+          ask: Which words show that the fall butterflies are special?
+          choices:
+            - the ones that migrate can live for about eight months
+            - the trees look orange
+            - They also depend on milkweed
+            - They may also sense Earth's magnetic field.
+          evidence: the ones that migrate can live for about eight months
+        - kind: write
+          ask: What does paragraph 4 add to the article?
+          sample: It tells how monarchs may find their way, using the sun, and that it is still a puzzle.
+          evidence: no one fully understands how they reach the same small forests
+    - focus: how details build the idea
+      look_for: how the trip is split among generations
+      questions:
+        - kind: write
+          ask: What does paragraph 6 add to the central idea?
+          sample: It explains that several generations of butterflies are needed to finish the trip north.
+          evidence: It takes several generations, each living just a few weeks, to travel all the way back to Canada.
+        - kind: mc
+          ask: Which sentence belongs in an objective summary?
+          choices:
+            - Several generations of monarchs make the trip north.
+            - Monarchs are the prettiest butterflies of all.
+            - Everyone should plant milkweed in the yard.
+            - I think the trip to Mexico is too long.
+          evidence: No single butterfly makes the whole round trip.
+        - kind: organizer
+          ask: Tell what the monarchs do in each season.
+          heads: [Fall, Spring]
+          samples:
+            - A long-lived generation flies south to Mexico.
+            - Butterflies fly north and lay eggs on milkweed.
+          evidence: In spring, the butterflies head north and lay eggs on new milkweed plants.
+
+- id: a10-bicycles
+  title: Two Wheels for Everyone
+  genre: nonfiction
+  text: |
+    Today, bicycles are so common that it is easy to forget they were once a surprising invention.
+    In about two hundred years, the bicycle changed from a strange wooden machine into one of the most
+    popular ways to travel. Along the way, it changed how ordinary people moved through their towns
+    and cities.
+
+    The first bicycle-like machines appeared in Europe in the early 1800s. They had two wheels and a
+    seat but no pedals. Riders sat on the frame and pushed against the ground with their feet, a
+    little like a young child on a balance bike. These machines were heavy and uncomfortable, so few
+    people used them.
+
+    Later, inventors attached pedals directly to the front wheel. To go faster, they made the front
+    wheel larger and larger. Some of these high-wheel bicycles had front wheels taller than a grown
+    person. They were speedy, but riders sat so high that a bump in the road could send them tumbling
+    over the handlebars.
+
+    In the 1880s, a new design solved this problem. The so-called safety bicycle had two wheels of the
+    same size and a chain that connected the pedals to the back wheel. Soon after, air-filled rubber
+    tires made rides much smoother. This basic shape is still used on most bicycles today.
+
+    The safety bicycle quickly became popular. In the 1890s, a bicycle craze swept across many
+    countries. Factory workers could now ride to jobs that were too far to walk. Many women enjoyed a
+    new freedom to travel on their own, and some began wearing looser clothing that made riding easier.
+
+    Bicycle riders also asked their towns to build smoother, paved roads, which later helped
+    automobiles. In fact, several early airplane and automobile builders first worked as bicycle
+    mechanics. Groups of riders formed clubs and shared maps of the best routes.
+
+    Even now, the bicycle remains a simple machine that carries people cheaply, quietly and under
+    their own power. Millions of people still ride bicycles to school, to work and for fun.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - The bicycle grew into a machine that changed daily travel.
+            - Early bicycles had no pedals.
+            - High-wheel bicycles had very large front wheels.
+            - Air-filled tires made rides smoother.
+          evidence: it changed how ordinary people moved through their towns and cities
+        - kind: write
+          ask: What does paragraph 5 add to the central idea?
+          sample: It shows how bicycles changed lives, letting workers ride to jobs and women travel alone.
+          evidence: Factory workers could now ride to jobs
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            The bicycle changed over about two hundred years. Early ones had no pedals, and high-wheel
+            bicycles could tip riders over. The safety bicycle of the 1880s had equal wheels and a chain,
+            and "This basic shape is still used on most bicycles today." Bicycles let workers and women
+            travel farther and led to better roads.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: The safety bicycle quickly became popular.
+    - focus: how details build the idea
+      look_for: the problem each new design solved
+      questions:
+        - kind: mc
+          ask: What problem did the safety bicycle solve?
+          choices:
+            - Riders sat so high they could tumble over.
+            - The wheels were made of heavy wood.
+            - Roads were too smooth for riding.
+            - Riders had to push with their feet.
+          evidence: riders sat so high that a bump in the road could send them tumbling
+        - kind: write
+          ask: What does paragraph 6 add to the central idea?
+          sample: It shows that bicycles also led to better roads and helped people build new machines.
+          evidence: several early airplane and automobile builders first worked as bicycle mechanics
+        - kind: organizer
+          ask: Fill in a problem and the design that solved it.
+          heads: [Problem, Solution]
+          samples:
+            - High-wheel riders could fall over the handlebars.
+            - The safety bicycle had equal wheels and a chain.
+          evidence: In the 1880s, a new design solved this problem.
+
+- id: a11-glass
+  title: From Sand to Glass
+  genre: nonfiction
+  text: |
+    Look around almost any room, and you will probably see glass. It fills windows, holds drinks and
+    covers the screens of computers. Yet this clear, hard material begins as something rough and
+    gritty: ordinary sand. With enough heat and skill, people turn sand into one of the most useful
+    materials on Earth.
+
+    Most sand is made of tiny grains of a mineral called quartz. To become glass, the sand must melt,
+    but quartz melts only at extremely high temperatures. Glassmakers solve this by mixing in other
+    ingredients. Soda ash helps the sand melt at a lower temperature, and limestone makes the finished
+    glass stronger and keeps it from dissolving in water.
+
+    The mixture goes into a huge furnace that heats it to more than 2,500 degrees Fahrenheit. There,
+    the grains melt into a thick, glowing liquid, a little like hot honey. While it is hot, the glass
+    can be stretched, pressed or shaped.
+
+    For thousands of years, skilled workers have shaped glass by hand. A glassblower gathers a blob of
+    melted glass on the end of a long metal pipe. Blowing gently into the pipe makes a bubble inside
+    the glass, which can then be turned and shaped into a bowl or vase. Many glassblowers still work this way in small
+    studios today.
+
+    Flat window glass is made in a different way. In many factories, melted glass is poured onto a
+    bath of melted tin. The glass floats on the tin and spreads into a smooth, perfectly even sheet.
+
+    Cooling is the final step, and it cannot be rushed. If hot glass cools too quickly, it can crack.
+    So the glass passes slowly through a long oven that lowers its temperature a little at a time.
+
+    Glass can also be recycled again and again. Old bottles are crushed and melted with new sand,
+    which saves energy because the broken glass melts more easily. In this way, a simple handful of
+    sand can become a window, then a jar, and later something completely new.
+  pages:
+    - focus: central idea and supporting details
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Sand is heated and shaped in careful steps to make glass.
+            - Glass windows are made on a bath of melted tin.
+            - Old bottles can be crushed and recycled.
+            - Most sand is made of a mineral called quartz.
+          evidence: With enough heat and skill, people turn sand into one of the most useful materials on Earth.
+        - kind: quote
+          ask: Which words explain why glassmakers add soda ash?
+          choices:
+            - Soda ash helps the sand melt at a lower temperature
+            - The glass floats on the tin
+            - Cooling is the final step
+            - It fills windows, holds drinks
+          evidence: Soda ash helps the sand melt at a lower temperature
+        - kind: write
+          ask: What does paragraph 6 add to the article?
+          sample: It explains that glass must cool slowly, or it can crack.
+          evidence: If hot glass cools too quickly, it can crack.
+        - kind: write
+          ask: How does a glassblower make a bubble?
+          sample: The glassblower blows gently into a long metal pipe.
+          evidence: Blowing gently into the pipe makes a bubble inside the glass
+    - focus: how details build the idea
+      look_for: the steps from sand to glass
+      questions:
+        - kind: write
+          ask: What does paragraph 5 add to the central idea?
+          sample: It explains another way to shape glass, floating it on melted tin to make flat sheets.
+          evidence: Flat window glass is made in a different way.
+        - kind: mc
+          ask: Why does recycling glass save energy?
+          choices:
+            - Broken glass melts more easily than sand.
+            - Recycled glass does not need to cool.
+            - Old bottles are lighter than new ones.
+            - Recycling needs no furnace at all.
+          evidence: which saves energy because the broken glass melts more easily
+        - kind: organizer
+          ask: Put three steps of glassmaking in order.
+          heads: [First, Next, Last]
+          samples:
+            - Sand is mixed with soda ash and limestone.
+            - A furnace melts it into a glowing liquid.
+            - It is shaped, then cooled slowly so it won't crack.
+          evidence: Cooling is the final step, and it cannot be rushed.
+
+- id: a12-arch-bridges
+  title: How Arches Hold Up
+  genre: nonfiction
+  text: |
+    Some of the oldest bridges still standing were built from nothing but stone, without any glue or
+    steel to hold them together. Their secret is a curved shape called an arch. An arch takes the heavy
+    load pressing down on a bridge and spreads it out to the ground, so the stones hold one another
+    firmly in place.
+
+    To understand an arch, it helps to know how stone behaves. Stone is very strong when it is
+    squeezed, but it can crack easily when it is bent or stretched. A long, flat stone stretched across
+    a wide gap would sag in the middle and snap. An arch avoids this problem by keeping every stone
+    squeezed.
+
+    An arch is made of wedge-shaped stones, each one narrower on the inside of the curve than on the
+    outside. When weight presses down on the top of the arch, the stones push tightly against their
+    neighbors. The force travels along the curve, from stone to stone, down to the ground at each end.
+
+    Because an arch pushes outward as well as down, its ends need strong support. Builders place them
+    against solid rock or massive blocks of stone. Without this support, the bottom of the arch would
+    spread apart, and the bridge could collapse.
+
+    Building an arch takes careful planning. Workers first build a curved wooden frame to hold the
+    stones while they are set in place. The last stone placed is the keystone, at the very top. Once
+    the keystone is in, the arch can carry its own weight, and the wooden frame is taken away.
+
+    The ancient Romans built many stone arch bridges, along with long water channels called aqueducts.
+    Some of them have stood for about two thousand years, and a few still carry travelers today.
+
+    Modern engineers still use the arch, though now they often build with steel and concrete. Whether
+    old or new, an arch bridge works the same way, by turning a heavy load into a strong, steady push.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - An arch carries weight by squeezing its stones together.
+            - The Romans built long water channels.
+            - Modern bridges are made of steel and concrete.
+            - A keystone sits at the top of an arch.
+          evidence: An arch avoids this problem by keeping every stone squeezed.
+        - kind: quote
+          ask: Which words explain why stone suits an arch?
+          choices:
+            - Stone is very strong when it is squeezed
+            - Workers first build a curved wooden frame
+            - The last stone placed is the keystone
+            - now they often build with steel and concrete
+          evidence: Stone is very strong when it is squeezed
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            An arch bridge holds up heavy loads with a curved shape. Stone is strong when squeezed, and
+            in an arch "the stones push tightly against their neighbors" to carry the weight to the
+            ground. The ends need strong support, and builders use a wooden frame until the keystone is
+            in. Some stone arch bridges built by the Romans have lasted about two thousand years.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: Their secret is a curved shape called an arch.
+    - focus: how details build the idea
+      look_for: how the weight moves through the arch
+      questions:
+        - kind: write
+          ask: What does paragraph 4 add to the central idea?
+          sample: It explains why the ends of an arch need strong support so it does not spread apart.
+          evidence: its ends need strong support
+        - kind: mc
+          ask: Why can the wooden frame be taken away?
+          choices:
+            - Once the keystone is in, the arch holds itself.
+            - The wood is needed for the next bridge.
+            - Steel beams take the place of the frame.
+            - The stones are glued together by then.
+          evidence: Once the keystone is in, the arch can carry its own weight
+        - kind: organizer
+          ask: Fill in a cause and its effect from the article.
+          heads: [Cause, Effect]
+          samples:
+            - Weight presses down on the top of the arch.
+            - The stones push together and carry the force to the ground.
+          evidence: The force travels along the curve, from stone to stone, down to the ground at each end.
+
+- id: a13-libraries
+  title: Libraries for All
+  genre: nonfiction
+  text: |
+    Today, anyone can walk into a public library, choose a book and take it home for free. For most of
+    history, though, this was impossible. Books were rare and expensive, and libraries usually belonged
+    to rulers, schools or rich families. The idea of a library open to everyone grew slowly over
+    hundreds of years.
+
+    Some of the earliest libraries held clay tablets or rolled scrolls instead of books. One of the
+    most famous was the great library in Alexandria, in ancient Egypt. Scholars traveled there from
+    distant lands to study, but ordinary people could not borrow its scrolls.
+
+    For many centuries after that, every book had to be copied by hand. Making a single copy could
+    take months, so books stayed scarce. A person who wanted a book often had to wait a long time for it. Then, in the 1400s, the printing press arrived in Europe and
+    made it possible to produce many copies quickly. As books became cheaper, more people learned to
+    read.
+
+    Even so, most families could not afford many books. In the 1700s, groups of readers began sharing
+    their collections. Members paid a fee, and in return they could borrow from the group's shelves.
+    It was a smart plan, because each person paid a little but could read a lot. Benjamin
+    Franklin helped start one of these libraries in Philadelphia.
+
+    In the 1800s, a new idea spread: libraries paid for by the whole community and free to every
+    person in town. Cities such as Boston opened large public libraries that anyone could use. Later, a
+    rich man named Andrew Carnegie gave money to build more than a thousand library
+    buildings across the United States.
+
+    Over time, libraries kept changing to serve their neighbors. Many added children's rooms and story
+    times. Today, libraries also lend computers, offer homework help and give people a quiet place to
+    learn. Some even lend tools, seeds and games to their neighbors.
+
+    From clay tablets to computer screens, libraries have grown from private collections for a few
+    into shared places for everyone.
+  pages:
+    - focus: central idea and summary
+      questions:
+        - kind: mc
+          ask: What is the central idea of the article?
+          choices:
+            - Libraries slowly changed from private collections to places for all.
+            - Books used to be copied by hand.
+            - The library in Alexandria held scrolls.
+            - Libraries today lend computers.
+          evidence: libraries have grown from private collections for a few into shared places for everyone
+        - kind: quote
+          ask: Which words show how printing changed books?
+          choices:
+            - made it possible to produce many copies quickly
+            - Members paid a fee
+            - Many added children's rooms and story times.
+            - Scholars traveled there from distant lands
+          evidence: made it possible to produce many copies quickly
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Long ago, libraries belonged to rulers, schools or rich families, and books were rare.
+            The printing press made books cheaper, and later groups of readers shared their books for a
+            fee. In the 1800s, cities opened libraries "free to every person in town." Today, libraries also
+            lend computers and help people learn.
+          rubric: states the central idea; gives 2–3 key details in order; no opinions or "I" statements.
+          evidence: The idea of a library open to everyone grew slowly over hundreds of years.

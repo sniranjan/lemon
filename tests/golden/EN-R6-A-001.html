@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pandas · Reading · page 1</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #0B7A75;
+  --tint: #E6F4F3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+h1 { font-size: 28px; }
+.tip { padding: 8px 16px; }
+.body { margin-top: 16px; }
+.how { font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent); }
+.read-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: -6px; }
+.read-wrap .how { margin-bottom: 6px; }
+/* the reading page is the passage alone: no card, so a full grade 6 text fits at 20px */
+.read { flex: 1; min-height: 0; border: none; border-radius: 0; padding: 0 0 0 36px; }
+.read p { font-size: 20px; line-height: 1.27; margin: 0 0 6px; position: relative; }
+.read .pn { position: absolute; left: -36px; width: 26px; text-align: right; font-weight: 700; color: var(--accent); }
+.qs-how { margin: 0 0 4px; }
+.turn { text-align: right; margin-top: 2px; }
+.read.cont { flex: none; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 3px solid var(--accent); }
+.qs { flex: 1; min-height: 0; border: none; border-radius: 0; display: flex; flex-direction: column; justify-content: space-evenly; gap: 4px; }
+.q .ask { font-size: 20px; font-weight: 700; line-height: 1.3; display: flex; gap: 10px; }
+.q .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff;
+          display: inline-flex; align-items: center; justify-content: center; font-size: 20px; }
+.q .choices { display: flex; flex-direction: column; row-gap: 2px; margin: 3px 0 0 40px; font-size: 20px; line-height: 1.2; }
+.q .choices.two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.q .choice { display: flex; align-items: flex-start; gap: 10px; }
+.q .letter { flex: none; width: 26px; height: 26px; border: 2px solid var(--ink); border-radius: 50%;
+             display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
+.q .line { height: 34px; margin-left: 40px; border-bottom: 2px solid #8a8a90; }
+.q .boxes { display: flex; gap: 12px; margin: 6px 0 0 40px; }
+.q .box { flex: 1; border: 2px solid var(--ink); border-radius: 14px; padding: 0 12px 8px; }
+.q .box .bh { font-size: 20px; font-weight: 700; color: var(--accent); padding-top: 4px; }
+.q .box .line { margin-left: 0; height: 36px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Pandas · Reading</div>
+      <div class="title-row"><h1>Engineers of the Pond</h1><span class="pill">Pandas · 1</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Ask: what is this mostly about? Then turn to the questions.</div>
+  <main class="body">
+    <section class="read-wrap">
+      <div class="how">Read the article. The questions are on the next page.</div>
+      <div class="card read">
+        <p><span class="pn">1</span>A beaver dam can look like a messy pile of sticks, but it is really a carefully built structure. The North American beaver is the largest rodent on its continent, and it is also a builder. Beavers are among the few animals that change the land around them on purpose, and the ponds they make become homes for many other living things.</p>
+        <p><span class="pn">2</span>A beaver begins a dam by pushing branches and sticks into the bottom of a stream. Then it packs the spaces with mud, stones and plants. The beaver carries mud in its front paws, held against its chest, and presses it into place. As the water rises, the beaver keeps adding to the top and sides. Some dams are taller than a grown person and longer than a soccer field.</p>
+        <p><span class="pn">3</span>Why go to all this trouble? A beaver is a clumsy walker on land but a strong swimmer. Deep water keeps it safe from wolves, bears and other hunters. Behind the dam, the beaver builds a lodge, a dome of sticks and mud with underwater doorways. Inside, a dry room sits above the waterline, where the beaver family rests and raises its young.</p>
+        <p><span class="pn">4</span>Beavers also need deep water for their winter food. In the fall, they push branches into the mud at the bottom of the pond. When ice covers the surface, the beavers swim out of the lodge and eat the bark from this underwater pantry.</p>
+        <p><span class="pn">5</span>The pond helps far more than beavers. Ducks nest along its edges, and frogs lay eggs in the calm, shallow water. Fish find shelter among the sunken branches. Because the dam slows the stream, mud and soil settle to the bottom instead of washing away. The water spreads out and soaks into the ground, so nearby land stays green during dry summers.</p>
+      </div>
+      <div class="how turn">The article continues on the next page. →</div>
+    </section>
+  </main>
+  <footer class="foot" data-audience="parent">Pandas · Reading · page 1</footer>
+</div>
+</body>
+</html>

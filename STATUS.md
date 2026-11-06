@@ -121,6 +121,19 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `big_idea_summary`, each read serves 2 pages). Tests `tests/test_owls_reading.py`. All 200 pages verify with 0 errors and
   0 warnings; booklets per section + `owls-reading-level.pdf` (202 pages) and `owls-reading-level-answers.pdf` (34 pages).
   Free preview pages 1, 2, 61, 171: `ws preview owls` builds `out/previews/owls.pdf` (10 pages with Owls Math; not uploaded).
+- **Pandas Reading (R6, our own level, grade 6 reading for age 9, 200 pages)** (2026-11-06): `syllabus/english/R6.yaml`:
+  A Central Idea 1–50 (RI.6.2, objective summaries) · B Reading Between the Lines 51–100 (inference with cited
+  evidence, RL.6.1 / RI.6.1) · C Why Was It Written? 101–140 (purpose and point of view, RI.6.6, RL.6.6, RI.6.8) ·
+  D How It's Built 141–170 (cause/effect, compare/contrast, problem/solution; how a paragraph fits, RI.6.5) ·
+  E Short Written Answers 171–200 (two 3–4-sentence answers with a quote, W.6.9, W.6.1). 52 original passages
+  (`content/passages/R6/`, 305–354 words, Flesch-Kincaid 5.5–7.5; 37 nonfiction, 15 stories), each read on one
+  or two two-page spreads. New sheet type `passage_spread` (`ws/spreads.py`): page 1 the passage (numbered
+  paragraphs; a Letter page holds ~300 words at the 20px floor, so the end continues at the top of page 2, split at a
+  sentence), page 2 the questions: `mc` (A–D), `quote` (exact text choices), `write`, `paragraph` (sample + rubric in
+  the key), `organizer` (Cause / Effect boxes). Planner: `plan_passages` with rule `spread: true` (Foxes unchanged).
+  Draft record `syllabus/drafts/R6-passages.md` from `scripts/r6_drafts.py` (approved by the orchestrator under the
+  user's delegation). Verify 0 errors, 0 warnings; booklets per section + `pandas-reading-level.pdf` (202 pages) and
+  `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1–2 and 171–172 (two whole spreads); `ws preview pandas` builds `out/previews/pandas.pdf` (10 pages, with Pandas Math; not uploaded).
 - **Lions Math (M8, our own level, grade 8 work for age 11, 200 pages)** (2026-11-06): `syllabus/math/M8.yaml`:
   A Exponents and Square Roots 1–30 (8.EE.1–2, 8.NS.2) · B Very Big and Very Small 31–50 (8.EE.3–4) · C Multi-Step
   Equations 51–100 (8.EE.7a–b) · D Lines and Slope 101–150 (8.EE.5–6, 8.F.1–4) · E Two Equations at Once 151–180

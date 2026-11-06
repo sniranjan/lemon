@@ -1,0 +1,1124 @@
+# Pandas Reading, section B "Reading Between the Lines" (pages 51–100): inferences from stories and
+# articles, backed by the exact words in the text (RL.6.1, RI.6.1, RL.6.3). Original stories and
+# nonfiction (ours), well-established facts only. Schema and checks: ws/spreads.py. Each question set is a two-page spread.
+
+- id: b01-shelter-morning
+  title: First Day at the Shelter
+  genre: story
+  text: |
+    Priya had been counting down the days until her first volunteer shift at the Maple Street
+    Animal Shelter. She had read three books about animal behavior and practiced clipping a leash
+    onto a collar until she could do it without looking. Still, when her dad dropped her off at
+    eight o'clock, her stomach felt tight, and she held her clipboard against her chest like a shield.
+
+    A woman with short gray hair and a paw-print apron met her at the entrance. "I'm Rosa," she
+    said. "Today you'll help with the cats, and afterward you can exercise a few of the dogs." Priya
+    nodded politely, although she had hoped to start with the dogs. She had never owned a cat, and
+    she honestly wasn't sure what cats enjoyed.
+
+    The cat room was quiet except for a soft, steady purring. Most of the cats stretched toward the
+    bars whenever Rosa walked by, but one gray cat remained curled at the back of her cage. A card
+    on the door explained that her name was Pebble and that she had been living at the shelter for
+    four months.
+
+    Priya cleaned the bowls and refilled the water dishes, glancing at Pebble every time she passed.
+    When she reached the last cage, she sat down on the floor instead of reaching inside. She read
+    the card aloud in a low, gentle voice, the way she read stories to her little cousin at bedtime.
+    After several minutes, Pebble lifted her head, crept forward one careful step at a time, and
+    pressed her nose against Priya's fingers. Priya held her breath and did not move.
+
+    Rosa had been watching from the doorway. "She doesn't do that for most people," she said
+    quietly. "Pebble needs someone patient."
+
+    Later, Priya walked two energetic beagles around the yard, and they tugged her in every
+    direction. She laughed the entire time, but on the way out she stopped by the cat room once
+    more. "Can I work with the cats again next Saturday?" she asked. Rosa smiled and wrote her name
+    on the schedule.
+  pages:
+    - focus: inferring a character's feelings and how she changes
+      questions:
+        - kind: mc
+          ask: How does Priya most likely feel when she first arrives?
+          choices:
+            - nervous, even though she is excited to help
+            - bored, because she has done this many times
+            - upset with her dad for leaving her there
+            - calm and sure of exactly what to do
+          evidence: her stomach felt tight
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - her stomach felt tight
+            - She had never owned a cat
+            - The cat room was quiet except for a soft, steady purring.
+            - Rosa smiled and wrote her name on the schedule.
+          evidence: her stomach felt tight
+        - kind: paragraph
+          ask: How does Priya change? Answer in 3–4 sentences.
+          sample: >-
+            At the start, Priya is nervous and hopes to work only with the dogs. Her stomach "felt tight,"
+            and she held her clipboard "like a shield." By the end, she asks, "Can I work with the cats
+            again next Saturday?" Meeting Pebble made her feel confident and helped her care about cats.
+          rubric: names how Priya feels at the start and at the end; quotes a clue for each; explains what changed her.
+          evidence: Can I work with the cats again next Saturday?
+    - focus: inferring why characters act and what will happen next
+      look_for: clues about what Pebble needs
+      questions:
+        - kind: mc
+          ask: Why does Priya sit on the floor instead of reaching in?
+          choices:
+            - She guesses that a shy cat needs her to be slow and calm.
+            - She is too tired to stand up after cleaning the bowls.
+            - Rosa told her to sit on the floor in every room.
+            - She wants to read the card before she leaves.
+          evidence: she sat down on the floor instead of reaching inside
+        - kind: mc
+          ask: What can you infer from Rosa's words in paragraph 5?
+          choices:
+            - Rosa thinks Priya may be the right helper for Pebble.
+            - Rosa is worried that Priya upset Pebble.
+            - Rosa wants Priya to stay away from the cats.
+            - Rosa thinks Pebble will go home with Priya today.
+          evidence: Pebble needs someone patient.
+        - kind: write
+          ask: What can you infer about Pebble? Give one clue from the text.
+          sample: Pebble is shy and has waited a long time for a home. She "remained curled at the back of her cage" and had been there four months.
+          evidence: she had been living at the shelter for four months
+        - kind: write
+          ask: What will Priya likely do next Saturday? Give one clue.
+          sample: She will probably sit with Pebble again, because Rosa "wrote her name on the schedule" for the cats.
+          evidence: Rosa smiled and wrote her name on the schedule.
+
+- id: b02-desert-camels
+  title: Built for the Desert
+  genre: nonfiction
+  text: |
+    A desert can be one of the very hardest places on Earth to live. Days are hot, nights can be cold,
+    and the nearest water may be many miles away. Yet camels have carried people and goods across the deserts
+    of Africa and Asia for thousands of years. Their bodies hold many useful clues about the harsh environment they
+    come from.
+
+    The first clue is the famous hump. Many people believe a camel's hump is full of water, but it
+    actually stores fat. When food is hard to find, a camel's body can use this fat for energy. A
+    camel that has gone a long time without eating may have a hump that leans or sags to one side.
+
+    Camels are also remarkably careful with water. A camel can go for days without drinking, even
+    in hot weather. Its body temperature can rise during the hottest part of the day before it
+    begins to sweat, so it loses less water. When a thirsty camel finally reaches water, it can
+    drink a huge amount in only a few minutes.
+
+    Look closely at a camel's face. It has two rows of long eyelashes that help keep out blowing
+    sand, and its nostrils can close almost completely during a sandstorm. Then look down at its
+    feet. A camel's feet are wide, with thick, leathery pads on the bottom. When the camel steps,
+    each foot spreads out a little, so it does not sink deep into soft sand. These tough pads also
+    protect it from the burning ground.
+
+    There are two main kinds of camels. The dromedary has one hump and lives mostly in North Africa
+    and Arabia. The Bactrian camel has two humps and lives in the rocky deserts of Central Asia,
+    where it grows a thick, shaggy coat every fall and sheds it in spring.
+
+    Every one of these features solves a particular problem that the desert creates. Together, they
+    explain why people have long called the camel the "ship of the desert."
+  pages:
+    - focus: inferring from details in an article
+      questions:
+        - kind: mc
+          ask: What can you infer about a camel with a tall, firm hump?
+          choices:
+            - It has had plenty of food lately.
+            - It has just finished drinking water.
+            - It is a Bactrian camel in winter.
+            - It has walked through a sandstorm.
+          evidence: a camel's body can use this fat for energy
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - a camel's body can use this fat for energy
+            - It has two rows of long eyelashes
+            - Days are hot, nights can be cold
+            - These tough pads also protect it from the burning ground.
+          evidence: a camel's body can use this fat for energy
+        - kind: paragraph
+          ask: Infer what a camel's home is like. Use 3–4 sentences.
+          sample: >-
+            A camel's home must be sandy and windy. It has long eyelashes "that help keep out blowing
+            sand," and its nostrils close during a sandstorm. Its wide feet keep it from sinking "deep
+            into soft sand," so the ground must be loose. These clues show that camels live where sand
+            blows and shifts.
+          rubric: makes an inference about the place; quotes at least one clue; explains how the clues fit together.
+          evidence: help keep out blowing sand
+    - focus: what an animal's features suggest
+      look_for: clues about the problems each feature solves
+      questions:
+        - kind: mc
+          ask: What would most likely happen if a camel sweated all day?
+          choices:
+            - It would lose much more water.
+            - It would stay warmer at night.
+            - Its hump would grow larger.
+            - It would sink deeper into the sand.
+          evidence: so it loses less water
+        - kind: mc
+          ask: What can you infer about winter where Bactrian camels live?
+          choices:
+            - It gets very cold there.
+            - It rains almost every day.
+            - It is hotter than summer.
+            - The sand turns soft and wet.
+          evidence: grows a thick, shaggy coat every fall
+        - kind: quote
+          ask: Which words best show that camels walk well on sand?
+          choices:
+            - it does not sink deep into soft sand
+            - its nostrils can close almost completely
+            - it can drink a huge amount in only a few minutes
+            - The first clue is the famous hump.
+          evidence: it does not sink deep into soft sand
+        - kind: write
+          ask: Why might people call a camel the "ship of the desert"?
+          sample: It carries people and goods across the desert the way a ship carries them across the sea.
+          evidence: camels have carried people and goods across the deserts
+
+- id: b03-grandmas-bread
+  title: Grandma's Bread
+  genre: story
+  text: |
+    Every Sunday, Leo's grandmother baked bread in her tiny kitchen, and every Sunday Leo arrived
+    just in time to eat it. This week was completely different. Grandma Ines handed him an apron that was far
+    too long, tied it twice around his waist, and announced that today he would bake the loaf
+    himself.
+
+    Leo measured the flour, salt and yeast while his grandmother hummed beside the stove. He stirred
+    in warm water until a shaggy, sticky lump formed in the bowl. "Now you knead it," she said,
+    showing him how to push the dough away with the heel of his hand, fold it over and turn it.
+    After two minutes, Leo's arms ached, and he announced that the dough was definitely ready.
+
+    Grandma Ines pressed one finger into the dough. The dent stayed, flat and lifeless. She said
+    nothing, raised her eyebrows, and went back to humming. Leo sighed dramatically and continued
+    kneading. Gradually the lump changed under his hands, becoming smooth and stretchy, and when he
+    poked it this time, the dough sprang back.
+
+    Next came the most difficult part. The dough had to rise in a covered bowl for an hour, and Leo checked
+    it every few minutes. Each time he lifted the towel, his grandmother quietly lowered it again.
+    Finally she brought out a deck of cards, and they played four games of rummy while the kitchen
+    filled with a warm, yeasty smell.
+
+    When the loaf came out of the oven, it was golden brown and slightly lopsided. Leo tapped the
+    bottom the way his grandmother always did, and it sounded hollow, like a tiny drum. She cut two
+    thick slices, and they ate them standing at the counter, without butter, because neither of
+    them could wait.
+
+    On his way out, Leo paused at the door. "Can I borrow your recipe card?" he asked. "Dad's
+    birthday is next Saturday." Grandma Ines smiled, took the card from her drawer, and added one
+    more line at the bottom in careful letters: Be patient. The dough knows.
+  pages:
+    - focus: inferring why a character acts
+      questions:
+        - kind: mc
+          ask: Why does Grandma Ines press her finger into the dough?
+          choices:
+            - to show Leo that the dough is not ready yet
+            - to make a small hole for the salt
+            - to decorate the top of the loaf
+            - to warm the dough with her hand
+          evidence: The dent stayed, flat and lifeless.
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - The dent stayed, flat and lifeless.
+            - his grandmother hummed beside the stove
+            - it was golden brown and slightly lopsided
+            - Leo arrived just in time to eat it
+          evidence: The dent stayed, flat and lifeless.
+        - kind: paragraph
+          ask: How does Leo change while baking? Use 3–4 sentences.
+          sample: >-
+            At first Leo is impatient and wants to rush. After only two minutes of kneading, he
+            "announced that the dough was definitely ready," and he checked the rising dough "every few
+            minutes." By the end, he wants to bake bread for his dad's birthday. He has learned that
+            good bread takes patience.
+          rubric: describes Leo at the start and the end; quotes a clue; explains what he learned.
+          evidence: he announced that the dough was definitely ready
+    - focus: inferring how a character teaches
+      look_for: clues about how Grandma Ines teaches
+      questions:
+        - kind: mc
+          ask: Why does Grandma lower the towel each time Leo lifts it?
+          choices:
+            - She wants Leo to leave the dough alone to rise.
+            - She thinks the kitchen is much too cold.
+            - She wants to hide the bread from Leo's dad.
+            - She is upset that Leo forgot the salt.
+          evidence: his grandmother quietly lowered it again
+        - kind: mc
+          ask: What does "The dough knows" most likely mean?
+          choices:
+            - Bread is ready in its own time, so a baker must wait.
+            - Dough can tell when someone is watching it.
+            - The recipe card has a secret that only Grandma knows.
+            - Leo should ask the dough before he bakes it.
+          evidence: Be patient. The dough knows.
+        - kind: write
+          ask: How does Grandma Ines teach Leo? Give one clue.
+          sample: She lets him find things out himself instead of telling him. When the dough wasn't ready, she "said nothing, raised her eyebrows."
+          evidence: She said nothing, raised her eyebrows
+        - kind: write
+          ask: Why does Leo ask to borrow the recipe card?
+          sample: He wants to bake bread for his dad, because "Dad's birthday is next Saturday."
+          evidence: birthday is next Saturday
+
+- id: b04-cloudy-filter
+  title: The Cloudy Filter
+  genre: story
+  text: |
+    At nine o'clock on the night before the science fair, Hana poured a jar of muddy water into her
+    homemade filter and waited. For two weeks she had worked on the project, cutting the bottom off
+    a plastic bottle and filling it with layers of gravel, sand and charcoal. Her poster was already
+    finished, and the title, in bright blue letters, read How to Make Muddy Water Clean.
+
+    Brown water dripped slowly out of the bottom. It was hardly cleaner than when she had poured it
+    in. Hana stared at the cup, then at her poster, then at the clock on the wall. The fair would open in less than twelve hours. She pressed her
+    lips together and blinked several times very quickly.
+
+    Her older brother Kenji wandered into the kitchen for a glass of milk and stopped. He studied the
+    cup without saying anything funny, which was unusual for him. Then he pulled out a chair. "Okay,"
+    he said. "Walk me through it, step by step, like I'm one of the judges."
+
+    Hana explained each layer as she pointed to it. Halfway through, she paused and tilted the bottle
+    toward the light. She had never packed the sand down, and the water was rushing through a gap
+    along the side of the bottle, skipping the sand completely.
+
+    Together they rebuilt the filter, pressing each layer firmly with a spoon. The second cup of water
+    came out pale and almost clear. Hana did not cheer. Instead, she found a marker and a fresh sheet
+    of paper and began writing a new heading for the middle of her poster: What Went Wrong and How I
+    Fixed It.
+
+    The next afternoon, a judge with a clipboard stopped at her table and read the new heading twice.
+    She asked Hana question after question about the gap along the bottle. When the judge finally
+    moved on, Hana noticed that she had written three full lines of notes. Kenji, waiting by the
+    door, gave his sister two thumbs up.
+  pages:
+    - focus: inferring feelings and character traits
+      questions:
+        - kind: mc
+          ask: How does Hana feel when the water comes out brown?
+          choices:
+            - upset and close to tears
+            - proud of her hard work
+            - relieved that the project is over
+            - sleepy and bored
+          evidence: blinked several times very quickly
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - blinked several times very quickly
+            - Her poster was already finished
+            - The second cup of water came out pale and almost clear.
+            - a judge with a clipboard stopped at her table
+          evidence: blinked several times very quickly
+        - kind: paragraph
+          ask: What kind of brother is Kenji? Use 3–4 sentences.
+          sample: >-
+            Kenji is a kind and helpful brother. He looked at the cup "without saying anything funny,
+            which was unusual for him." He helped Hana find the problem by asking her to explain it
+            "like I'm one of the judges." At the fair he waited for her and gave her "two thumbs up."
+          rubric: names a trait; quotes at least one clue; explains how the clue shows the trait.
+          evidence: without saying anything funny, which was unusual for him
+    - focus: inferring why a character acts
+      look_for: clues about why Hana changes her poster
+      questions:
+        - kind: mc
+          ask: Why does Hana add a new heading to her poster?
+          choices:
+            - She wants to show what she learned from her mistake.
+            - She wants to hide that the filter ever failed.
+            - Kenji told her the old title was too long.
+            - The judges asked every student to change a heading.
+          evidence: What Went Wrong and How I Fixed It
+        - kind: mc
+          ask: What can you infer from the judge's three lines of notes?
+          choices:
+            - The judge was very interested in Hana's project.
+            - The judge did not understand the poster at all.
+            - The judge wanted Hana to start over.
+            - The judge was bored and passing the time.
+          evidence: she had written three full lines of notes
+        - kind: quote
+          ask: Which words best support the answer to question 2?
+          choices:
+            - She asked Hana question after question
+            - Hana did not cheer.
+            - Brown water dripped slowly out of the bottom.
+            - Then he pulled out a chair.
+          evidence: She asked Hana question after question
+        - kind: write
+          ask: What can you infer about Hana in paragraph 5?
+          sample: She is serious and thinks ahead. Instead of cheering, she "began writing a new heading" for her poster.
+          evidence: began writing a new heading
+
+- id: b05-octopus-disguise
+  title: Masters of Disguise
+  genre: nonfiction
+  text: |
+    Picture a diver swimming slowly over a rocky reef. She notices coral, sand and seaweed, but she
+    does not notice the octopus resting only a few feet away. Its skin matches the rock so closely
+    that the animal seems to disappear. Octopuses are among the greatest hiders in the ocean, and
+    their bodies are built for the job.
+
+    An octopus's skin contains thousands of tiny color cells. Each cell holds a small sac of color,
+    and muscles around it can stretch the sac wide open or relax and let it shrink back. When many cells open at once,
+    a patch of skin turns red, brown or yellow. Because the octopus controls these muscles with its
+    nerves, it can change color in less than a second.
+
+    Color is only part of the trick. An octopus can also change the texture of its skin, raising
+    small bumps and points so that it looks rough like coral or wrinkled like seaweed. An octopus
+    has no bones at all, so its soft body can change shape too. It can flatten itself against the
+    seafloor or squeeze through an opening not much bigger than its hard beak, the only stiff part
+    of its body.
+
+    Why does an octopus need so many disguises? An octopus has no shell, and its soft body makes a
+    fine meal for sharks, eels and many large fish. Staying hidden is its best protection.
+
+    Hiding also helps an octopus hunt. An octopus that blends into the rocks can wait patiently for
+    a crab to wander close, then grab it with its long arms. If a hunter does spot the octopus, it
+    can squirt a cloud of dark ink and jet away while the cloud confuses its enemy.
+
+    Scientists are still studying how octopuses decide which disguise to use. In laboratories, they have
+    watched octopuses solve puzzles and even open jars to reach the food inside. Watching one change
+    from sand to stone to seaweed is a reminder that some of the cleverest animals on Earth live
+    deep in the sea.
+  pages:
+    - focus: inferring from details in an article
+      questions:
+        - kind: mc
+          ask: What can you infer about an octopus that could not hide?
+          choices:
+            - Hunters would catch it much more easily.
+            - It would grow a hard shell instead.
+            - It would change color even faster.
+            - It would need to live on land.
+          evidence: Staying hidden is its best protection.
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - An octopus has no shell
+            - Each cell holds a small sac of color
+            - Scientists are still studying
+            - She notices coral, sand and seaweed
+          evidence: An octopus has no shell
+        - kind: paragraph
+          ask: Why does the diver miss the octopus? Use 3–4 sentences.
+          sample: >-
+            The diver misses the octopus because it uses several tricks at once. Its color cells let
+            its skin match the rock, and it can raise "small bumps and points" to look rough. Its soft
+            body can "flatten itself against the seafloor." Together these tricks make it seem to
+            disappear.
+          rubric: gives the reason; quotes at least one clue; explains how the tricks work together.
+          evidence: Its skin matches the rock so closely
+    - focus: what an animal's features suggest
+      look_for: clues about how hiding helps an octopus
+      questions:
+        - kind: mc
+          ask: How does hiding help an octopus get food?
+          choices:
+            - Crabs come close without noticing it.
+            - Fish bring food to its hiding place.
+            - Its ink cloud traps small animals.
+            - Seaweed grows food on its skin.
+          evidence: can wait patiently for a crab to wander close
+        - kind: mc
+          ask: What does the ink cloud most likely do to a hunter?
+          choices:
+            - It blocks the hunter's view so the octopus escapes.
+            - It makes the hunter fall asleep.
+            - It turns the hunter the same color as the rocks.
+            - It shows the hunter where the octopus is going.
+          evidence: while the cloud confuses its enemy
+        - kind: organizer
+          ask: Write one way hiding helps an octopus in each box.
+          heads: [Staying safe, Catching food]
+          samples:
+            - Sharks, eels and fish can't find it to eat it.
+            - It can wait for a crab to come close, then grab it.
+          evidence: Hiding also helps an octopus hunt.
+
+- id: b06-word-a-day
+  title: A Word a Day
+  genre: story
+  text: |
+    The new girl arrived in Sam's class on a rainy Tuesday in October. Ms. Patel introduced her as
+    Luiza, explaining that her family had just moved from Brazil and that she was still learning
+    English. Luiza gave a small wave, then spent the rest of the morning studying the top of her
+    desk.
+
+    At lunch, she sat at the far end of the long table, unwrapping her sandwich slowly. Sam noticed
+    a sketchbook beside her tray, its cover decorated with drawings of birds. Whenever someone near
+    her laughed, she glanced up quickly, as if checking whether the joke was about her, and then
+    looked down again. No one meant to leave her out, but nobody sat beside her either.
+
+    Sam loved drawing too, although his birds usually looked like potatoes with wings. The next day
+    he brought his own sketchbook to lunch and sat across from Luiza. He drew a lopsided parrot,
+    pushed the page toward her, and said, "Parrot." She studied it for a moment, then smiled and
+    wrote a word underneath: papagaio. Sam repeated the new word slowly, getting the ending
+    wrong twice, and they both laughed.
+
+    That became their routine. Every day at lunch, one of them drew something, and they traded words
+    for it in English and Portuguese. Sam learned that a cat was gato and the sun was sol. Luiza
+    learned "hummingbird," which made her laugh because it was so long, and she practiced it until
+    she could say it perfectly.
+
+    By December, Luiza was raising her hand in science class, and other students had started
+    gathering around the end of the lunch table to watch the drawing game. Sam's Portuguese was
+    still clumsy, and he once called the sun a sandwich by mistake, but Luiza only giggled and
+    corrected him gently.
+
+    On the last day before winter break, Luiza handed Sam a folded piece of paper. Inside was a
+    careful drawing of a hummingbird, its wings spread wide. Underneath, in neat letters, she had
+    written two words, one in each language: amigo, friend.
+  pages:
+    - focus: inferring feelings and motives
+      questions:
+        - kind: mc
+          ask: How does Luiza most likely feel during her first days?
+          choices:
+            - shy and worried about fitting in
+            - bored because the lessons are too easy
+            - angry that her family moved
+            - excited to tell jokes to everyone
+          evidence: as if checking whether the joke was about her
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - as if checking whether the joke was about her
+            - Sam loved drawing too
+            - Sam learned that a cat was gato
+            - its cover decorated with drawings of birds
+          evidence: as if checking whether the joke was about her
+        - kind: paragraph
+          ask: Why does Sam bring his sketchbook? Use 3–4 sentences.
+          sample: >-
+            Sam brings his sketchbook because he noticed that Luiza likes drawing too. Her sketchbook
+            had "drawings of birds" on its cover. Drawing lets them share ideas without needing many
+            English words. It gives Sam a friendly way to help Luiza feel welcome.
+          rubric: gives Sam's reason; quotes a clue; explains how drawing helps them talk.
+          evidence: its cover decorated with drawings of birds
+    - focus: inferring how a character changes
+      look_for: clues about how Luiza changes
+      questions:
+        - kind: mc
+          ask: How has Luiza changed by December?
+          choices:
+            - She feels more confident at school.
+            - She wants to leave class early.
+            - She has stopped learning English.
+            - She is tired of the drawing game.
+          evidence: Luiza was raising her hand in science class
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - Luiza was raising her hand in science class
+            - The new girl arrived in Sam's class
+            - he once called the sun a sandwich by mistake
+            - unwrapping her sandwich slowly
+          evidence: Luiza was raising her hand in science class
+        - kind: mc
+          ask: Why does Luiza write her note in both languages?
+          choices:
+            - Their friendship grew from trading words.
+            - She forgot how to spell the English word.
+            - Ms. Patel told her to practice Portuguese.
+            - She wanted Sam to grade her spelling.
+          evidence: one in each language
+        - kind: write
+          ask: How does Luiza treat Sam's mistakes? Give one clue.
+          sample: She is kind about them. She "only giggled and corrected him gently."
+          evidence: Luiza only giggled and corrected him gently
+
+- id: b07-last-box
+  title: The Last Box
+  genre: story
+  text: |
+    The moving truck pulled away from the yellow house on Birch Lane, leaving behind a stack of
+    cardboard boxes and an unusually quiet Jada. Her little brother Marcus had already claimed the bedroom
+    with the slanted ceiling and was racing up and down the staircase, counting them out loud. Jada sat
+    on the porch steps with her chin in her hands.
+
+    By the end of the week, every box in the house had been opened except one. It sat in the corner
+    of Jada's room, still taped shut, labeled OLD ROOM in her own handwriting. Her mom glanced at it
+    each evening when she said good night, but she never mentioned it. Whenever Marcus asked what was inside, Jada simply
+    shrugged and changed the subject.
+
+    In the city, Jada had covered one wall with a giant subway map. She could travel from one end of
+    town to the other without asking anyone for directions. Here there were no trains at all, only a
+    winding road, a hardware store, a library and a great many trees. She did not even know in which direction the creek flowed.
+
+    On Saturday, a girl about her age appeared at the door carrying a roll of paper. "I'm Tess. I live
+    two houses down," she said. "My grandpa and I made this, and I thought you might need it." She
+    unrolled a hand-drawn map of the town, complete with walking trails, a swimming hole and a tree
+    marked BEST CLIMBING.
+
+    Jada studied it for a long time, following the curving trails with her finger. Then she pointed to a dotted line that stopped in the middle of
+    the woods. "Where does this trail go?" Tess shrugged and grinned. "Nobody's finished exploring it
+    yet."
+
+    That evening, Jada finally peeled the tape off the last box. She pinned her old subway map to
+    the wall, and right beside it, leaving plenty of extra space, she pinned a fresh sheet of paper. At the
+    top, in her best handwriting, she wrote Birch Lane and Beyond. Then she sharpened her pencils, opened the
+    window, and listened for the creek somewhere beyond the trees.
+
+  pages:
+    - focus: inferring feelings and motives
+      questions:
+        - kind: mc
+          ask: How does Jada most likely feel about the move at first?
+          choices:
+            - unhappy and not ready to settle in
+            - thrilled to explore her new town
+            - angry at her little brother
+            - proud of how fast she unpacked
+          evidence: Jada sat on the porch steps with her chin in her hands.
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - Jada sat on the porch steps with her chin in her hands.
+            - a hardware store, a library and a great many trees
+            - She unrolled a hand-drawn map of the town
+            - Tess shrugged and grinned.
+          evidence: Jada sat on the porch steps with her chin in her hands.
+        - kind: paragraph
+          ask: Why won't Jada open the last box? Use 3–4 sentences.
+          sample: >-
+            Jada does not want to open the box because it holds her life in the city. It is "labeled
+            OLD ROOM in her own handwriting." She misses knowing her way around, since in the city she
+            could travel "without asking anyone for directions." Keeping the box shut is a way of
+            holding on to her old home.
+          rubric: gives a reason; quotes at least one clue; explains how the clue shows what Jada feels.
+          evidence: labeled OLD ROOM in her own handwriting
+    - focus: inferring what will happen next
+      look_for: clues about what Jada will do next
+      questions:
+        - kind: mc
+          ask: Why does Mom never mention the box?
+          choices:
+            - She wants Jada to unpack when she feels ready.
+            - She does not notice the box in the corner.
+            - She plans to throw the box away.
+            - She is too busy unpacking the kitchen.
+          evidence: but she never mentioned it
+        - kind: mc
+          ask: What will Jada most likely draw on the fresh paper?
+          choices:
+            - her own map of her new town
+            - a picture of the moving truck
+            - a copy of the subway map
+            - a list of the boxes she unpacked
+          evidence: she wrote Birch Lane and Beyond
+        - kind: quote
+          ask: Which words best support the answer to question 2?
+          choices:
+            - she wrote Birch Lane and Beyond
+            - every box in the house had been opened except one
+            - counting them out loud
+            - Here there were no trains at all
+          evidence: she wrote Birch Lane and Beyond
+        - kind: write
+          ask: What can you infer about Tess? Give one clue.
+          sample: Tess is friendly and thoughtful. She brought the map because "I thought you might need it."
+          evidence: I thought you might need it
+
+- id: b08-arctic-fox
+  title: Winter White
+  genre: nonfiction
+  text: |
+    In the far north, winter brings months of snow, bitter wind and long, dark days. In some parts of the Arctic, the sun does not rise
+    at all for weeks in the middle of winter. Temperatures on
+    the Arctic tundra can fall far below zero. Few animals stay active through such cold, but the
+    Arctic fox keeps hunting, traveling and resting out in the open all winter long.
+
+    Its first defense is its coat. In winter, the fox grows thick, layered fur that traps warm air
+    close to its body, one of the warmest coats of any mammal. Most Arctic foxes turn white in
+    winter, which helps them blend in with the snow, and then change to brown or gray when the snow
+    melts in summer.
+
+    The shape of the fox's body matters too. Compared with foxes that live in warmer places, the
+    Arctic fox has short legs, a short snout and small, rounded ears. Less of its body sticks out
+    into the cold air, so less heat escapes. Even the bottoms of its paws are covered with fur, which
+    keeps them warm on the ice and helps the fox walk without slipping.
+
+    When the fox curls up to sleep, it wraps its long, bushy tail around its body and over its nose
+    and paws, like a blanket. In a storm, it may dig a shelter in a snowbank.
+
+    Finding food is the hardest part of winter. Arctic foxes eat lemmings, small rodents that live in
+    tunnels beneath the snow. A fox listens carefully, tilting its head, until it hears a lemming
+    moving below. Then it leaps high and dives nose first into the snow. When food is scarce, some
+    foxes follow polar bears across the sea ice and eat the leftovers from their meals. In summer, a
+    fox may bury extra food to dig up later.
+
+    Each of these features helps the Arctic fox save energy or find food in one of the harshest
+    places on Earth. Eventually the snow melts, the fox's coat changes color, and the tundra fills
+    with summer life once again.
+  pages:
+    - focus: inferring from comparisons and details
+      questions:
+        - kind: mc
+          ask: What can you infer about foxes from warmer places?
+          choices:
+            - They have longer legs and bigger ears.
+            - They have fur on the bottoms of their paws.
+            - They turn white every winter.
+            - They follow polar bears for food.
+          evidence: Compared with foxes that live in warmer places
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - Compared with foxes that live in warmer places
+            - it may dig a shelter in a snowbank
+            - Arctic foxes eat lemmings
+            - Finding food is the hardest part of winter.
+          evidence: Compared with foxes that live in warmer places
+        - kind: organizer
+          ask: How does each feature help the fox in winter?
+          heads: [Thick fur, Bushy tail, Furry paws]
+          samples:
+            - It traps warm air close to the fox's body.
+            - It covers the fox's nose and paws like a blanket.
+            - They stay warm and don't slip on the ice.
+          evidence: keeps them warm on the ice
+    - focus: inferring how an animal survives
+      look_for: clues about how the fox finds food
+      questions:
+        - kind: mc
+          ask: Why does the fox tilt its head before it leaps?
+          choices:
+            - It is listening for where the lemming is.
+            - It is shaking snow off its ears.
+            - It is looking for a polar bear.
+            - It is getting ready to sleep.
+          evidence: until it hears a lemming moving below
+        - kind: mc
+          ask: What can you infer about polar bears from paragraph 5?
+          choices:
+            - They sometimes leave food behind after eating.
+            - They share their dens with Arctic foxes.
+            - They hunt lemmings under the snow.
+            - They are afraid of Arctic foxes.
+          evidence: eat the leftovers from their meals
+        - kind: paragraph
+          ask: Is summer or winter easier for the fox? Use 3–4 sentences.
+          sample: >-
+            Summer is probably easier for the Arctic fox. In winter, "Finding food is the hardest
+            part," and the fox must hunt lemmings hidden under the snow. In summer, a fox can find
+            enough food to "bury extra food to dig up later." Having extra food shows that summer
+            brings plenty to eat.
+          rubric: makes a claim; quotes a clue about each season; explains why one season is easier.
+          evidence: a fox may bury extra food to dig up later
+
+- id: b09-bent-pole
+  title: The Bent Pole
+  genre: story
+  text: |
+    The sun was already sinking behind the pine trees when Omar heard the crack. He was bending the
+    last tent pole into its curve, just as his mom had shown him, when one section split near the
+    joint. The tent sagged sideways like a tired balloon, and his little sister Leila burst out
+    laughing.
+
+    Omar did not laugh. He had begged for this camping trip for months, and he had promised to set
+    up the tent all by himself. He dropped the broken pole on the ground, kicked a pinecone into the
+    bushes, and announced that they might as well pack up and drive home. Leila stopped laughing and watched him carefully.
+
+    His mom sat down on a log and patted the spot beside her. "We could," she said calmly. "Or we
+    could think about it for five minutes first." She handed him the crumpled instruction booklet
+    from the tent bag, the one he had tossed aside that afternoon because he was certain he didn't
+    need it.
+
+    Omar flipped through the pages without much hope. Then, on the very last page, he discovered a
+    drawing of a short metal tube labeled Repair Sleeve. He dug through the bottom of the bag and
+    found it rolled up in a tiny pocket, along with a strip of tape.
+
+    Sliding the tube over the cracked section took three tries, and Leila held the flashlight while
+    he wrapped the tape tightly around both ends. His fingers were cold, and the tape kept sticking to itself, but
+    he refused to give up. When Omar raised the pole again, it bent into a
+    smooth curve, and the tent rose up firm and straight.
+
+    Later, the three of them lay inside their sleeping bags, listening to frogs singing near the
+    lake. Omar could feel the stiff little bump of the repair sleeve every time the tent swayed.
+    "Next time," he said, mostly to himself, "I'm reading the instructions first." Leila was already
+    asleep, but his mom smiled in the dark.
+  pages:
+    - focus: inferring why a character feels and acts as he does
+      questions:
+        - kind: mc
+          ask: Why is Omar so upset when the pole breaks?
+          choices:
+            - He had promised to set up the tent himself.
+            - He was afraid of sleeping in the woods.
+            - He wanted to go swimming in the lake.
+            - He thought his mom had broken the pole.
+          evidence: he had promised to set up the tent all by himself
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - he had promised to set up the tent all by himself
+            - listening to frogs singing near the lake
+            - The sun was already sinking behind the pine trees
+            - Leila held the flashlight
+          evidence: he had promised to set up the tent all by himself
+        - kind: paragraph
+          ask: How does Mom help Omar solve the problem? Use 3–4 sentences.
+          sample: >-
+            Mom helps Omar by staying calm instead of fixing the tent for him. She says they could
+            "think about it for five minutes first." Then she hands him the instruction booklet he had
+            tossed aside. This lets Omar find the repair sleeve and fix the pole himself.
+          rubric: names what Mom does; quotes a clue; explains how it lets Omar solve it himself.
+          evidence: Or we could think about it for five minutes first.
+    - focus: inferring what a character learns
+      look_for: clues about what Omar learns
+      questions:
+        - kind: mc
+          ask: Why does Omar's mom most likely smile in the dark?
+          choices:
+            - She is glad Omar learned from the problem.
+            - She is laughing at the bump in the tent.
+            - She wants to go home in the morning.
+            - She hears Leila talking in her sleep.
+          evidence: his mom smiled in the dark
+        - kind: mc
+          ask: What can you infer about Omar from paragraph 3?
+          choices:
+            - He thought he already knew how to set up the tent.
+            - He had read the booklet many times before.
+            - He did not want to go camping at all.
+            - He had lost the booklet on the drive.
+          evidence: he was certain he didn't need it
+        - kind: quote
+          ask: Which words best show what Omar learned?
+          choices:
+            - I'm reading the instructions first.
+            - The tent sagged sideways like a tired balloon
+            - Omar flipped through the pages without much hope.
+            - kicked a pinecone into the bushes
+          evidence: I'm reading the instructions first.
+        - kind: write
+          ask: How does Leila help, even though she laughs at first?
+          sample: She helps by holding the light. "Leila held the flashlight" while Omar taped the pole.
+          evidence: Leila held the flashlight
+
+- id: b10-before-recital
+  title: Before the Recital
+  genre: story
+  text: |
+    Backstage, Nadia could hear the audience murmuring on the other side of the heavy velvet curtain. She had
+    practiced her cello piece, a slow, singing melody, nearly every day since September. Now her
+    fingers felt cold and stiff, and she kept wiping her palms on her black skirt even though they
+    were already dry.
+
+    Her cello teacher, Mr. Lund, found her standing beside the water fountain. He did not ask whether
+    she was nervous. Instead, he asked what she had eaten for breakfast, whether her grandfather had
+    found a good seat, and which part of the piece was her favorite. These were ordinary, comfortable questions, the
+    kind her family asked at dinner. Nadia answered each question,
+    and her breathing slowed a little.
+
+    "The long note in the middle," she said finally. "The one that sounds like someone humming." Mr.
+    Lund nodded. "Then play the whole piece for that note," he said. "Everything before it is just
+    the walk to get there."
+
+    Two other students performed before her, one on the trumpet and one on the violin. The boy with the trumpet missed a note near the end, then
+    kept going as if nothing had happened, and the audience clapped just as loudly for him as for
+    everyone else. Nadia noticed that, and she sat up a little straighter.
+
+    When her name was called, she carried her cello to the chair in the center of the stage. The
+    lights were warm and bright, and she could not see the audience at all. Somewhere in the darkness beyond the lights, she
+    knew, her grandfather was sitting very still. She took a slow, deliberate breath, positioned her bow on the string, and began. Her hands trembled during the first few measures, but when the
+    long note arrived, she leaned into it and let it ring.
+
+    Afterward, her grandfather met her in the lobby with a paper cone of yellow tulips. He had
+    traveled two hours by train to hear her play. "That note in the middle," he said, tapping his
+    chest. "I felt it right here." Nadia grinned and admitted that it was her favorite part, too.
+  pages:
+    - focus: inferring feelings and motives
+      questions:
+        - kind: mc
+          ask: How does Nadia most likely feel backstage?
+          choices:
+            - nervous about playing in front of people
+            - bored from waiting so long
+            - upset that her grandfather is late
+            - sure that she will make no mistakes
+          evidence: she kept wiping her palms on her black skirt
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - she kept wiping her palms on her black skirt
+            - a paper cone of yellow tulips
+            - The lights were warm and bright
+            - The one that sounds like someone humming.
+          evidence: she kept wiping her palms on her black skirt
+        - kind: paragraph
+          ask: Why does Mr. Lund ask questions? Use 3–4 sentences.
+          sample: >-
+            Mr. Lund asks questions to take Nadia's mind off her nerves. He "did not ask whether she
+            was nervous" and talked about everyday things instead. As she answered, "her breathing
+            slowed a little." His questions helped her feel calm before she played.
+          rubric: gives Mr. Lund's reason; quotes a clue; explains how the questions helped Nadia.
+          evidence: her breathing slowed a little
+    - focus: inferring what helps a character
+      look_for: clues about what helps Nadia feel brave
+      questions:
+        - kind: mc
+          ask: Why does Nadia sit up straighter after the trumpet player?
+          choices:
+            - She sees that one mistake doesn't spoil a performance.
+            - She wants the audience to see her better.
+            - Her back is sore from the hard chair.
+            - She is proud that she plays better than he does.
+          evidence: kept going as if nothing had happened
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - the audience clapped just as loudly for him
+            - she could not see the audience at all
+            - found her standing beside the water fountain
+            - He had traveled two hours by train
+          evidence: the audience clapped just as loudly for him
+        - kind: mc
+          ask: What do Grandpa's words suggest about her playing?
+          choices:
+            - The long note was played with real feeling.
+            - She played the whole piece too fast.
+            - The trumpet was louder than her cello.
+            - He could not hear her from his seat.
+          evidence: I felt it right here.
+        - kind: write
+          ask: Did Mr. Lund's advice help? Give one clue from the text.
+          sample: Yes. When the long note came, "she leaned into it and let it ring," just as he suggested.
+          evidence: she leaned into it and let it ring
+
+- id: b11-garden-contest
+  title: The Garden Contest
+  genre: story
+  text: |
+    The Oak Street Community Garden held a contest every August, and this year Aisha was determined
+    to win the blue ribbon for Best Plot. All summer she weeded her small square of soil, lined up
+    her squash plants in perfect rows, and edged the path with white stones. She even made a sign
+    with her name painted in green letters.
+
+    The plot beside hers belonged to Mr. Delgado, a retired bus driver who wore the same straw hat
+    every day. His garden looked nothing like hers. Sunflowers leaned over the path, and purple and
+    orange flowers grew in tangled clumps between his beans. Aisha privately thought it looked like a
+    jungle, and she once asked whether he ever planned to tidy it up.
+
+    "Not a chance," he said cheerfully. "My flowers have important guests." He pointed to the
+    bumblebees drifting from blossom to blossom, their legs dusted with yellow powder.
+
+    In July, Aisha noticed a problem. Her squash plants were covered with big golden flowers, but
+    almost no squash were growing. The flowers simply wilted and dropped off. She watered more often and pulled every
+    weed, but nothing changed. Meanwhile, Mr.
+    Delgado's squash, half hidden among his flowers, were growing fat and long.
+
+    Aisha watched both plots carefully for several mornings. Then she borrowed a packet of seeds from
+    Mr. Delgado, who handed it over without a single question, as if he had been expecting her, and planted a row of zinnias along the edge of her plot, exactly where the white
+    stones had been. Within a few weeks, bees were buzzing around her squash blossoms, and small
+    green squash began to swell beneath them.
+
+    On contest day, the judges gave the blue ribbon to a family whose plot had a scarecrow and a tiny
+    fountain. Aisha's plot won nothing at all. Still, when the judges walked past, she pointed to Mr.
+    Delgado's sunflowers and explained, a little shyly, why her squash had finally grown. Mr. Delgado
+    tipped his straw hat to her.
+  pages:
+    - focus: inferring causes and how a character changes
+      questions:
+        - kind: mc
+          ask: Why were Aisha's squash not growing in July?
+          choices:
+            - Not enough bees were visiting her squash flowers.
+            - She was giving them far too much water.
+            - The white stones blocked the sunlight.
+            - Mr. Delgado's beans were crowding them out.
+          evidence: bees were buzzing around her squash blossoms
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - bees were buzzing around her squash blossoms
+            - She even made a sign with her name
+            - who wore the same straw hat every day
+            - Aisha's plot won nothing at all.
+          evidence: bees were buzzing around her squash blossoms
+        - kind: write
+          ask: What did Aisha think of the garden next door at first?
+          sample: She thought it was messy. To her, it "looked like a jungle."
+          evidence: Aisha privately thought it looked like a jungle
+        - kind: write
+          ask: Why does Aisha tell the judges about the sunflowers?
+          sample: She wants Mr. Delgado's flowers to get credit, because they brought the bees that helped her squash grow.
+          evidence: explained, a little shyly, why her squash had finally grown
+    - focus: inferring meaning from clues
+      look_for: clues about the bees and the flowers
+      questions:
+        - kind: mc
+          ask: Who are the "important guests" Mr. Delgado means?
+          choices:
+            - the bees that visit his flowers
+            - the judges of the garden contest
+            - the family with the scarecrow
+            - his friends from the bus company
+          evidence: He pointed to the bumblebees
+        - kind: mc
+          ask: Why does Aisha plant zinnias by her squash?
+          choices:
+            - to bring bees to her squash flowers
+            - to make her plot look neater than his
+            - to replace the squash that had wilted
+            - to win a prize for the best flowers
+          evidence: planted a row of zinnias along the edge of her plot
+        - kind: organizer
+          ask: Fill in Aisha's problem and how she solves it.
+          heads: [Problem, Solution]
+          samples:
+            - Her squash flowers wilt and almost no squash grow.
+            - She plants zinnias, bees come, and squash start to grow.
+          evidence: small green squash began to swell beneath them
+
+- id: b12-paper-and-string
+  title: Paper and String
+  genre: story
+  text: |
+    For as long as Theo could remember, he had watched Mrs. Okafor fly kites in the field behind
+    their street every windy Saturday. So when she leaned over the fence one afternoon and asked
+    whether he wanted to build one, he was through the gate before she finished the question.
+
+    Her garage workbench was covered with supplies: thin wooden sticks, a ball of strong string, a
+    roll of tissue paper and a pot of glue. She showed Theo how to tie the two sticks into a cross,
+    notch their ends, and run the string around the outside to make a frame. Then they glued bright
+    orange paper over it, trimming the edges with careful snips.
+
+    Theo wanted to rush straight to the field, but Mrs. Okafor insisted that the glue dry first.
+    While they waited, she told him about the kites she had flown as a girl in Lagos, made from
+    newspaper and palm sticks, and how she and her brothers had competed to see whose kite would
+    climb highest.
+
+    At last they carried the finished kite outside. A gust caught it, and for one glorious second it rose.
+    Then it began to spin in wild circles, dove sideways, and crashed nose first into the grass.
+    Theo groaned and stared at the ground.
+
+    Mrs. Okafor picked up the kite and turned it over in her hands. "It's not broken," she said.
+    "It's just restless. What do you think it needs?" Theo thought about the kites he had seen her
+    fly, each with a long ribbon trailing behind it. He raced home and returned with a bundle of old
+    hair ribbons that his sister no longer wanted.
+
+    They tied the ribbons into a tail as long as Theo was tall. This time, when the wind lifted the
+    kite, it climbed steadily, the tail rippling beneath it like a bright stream. Mrs. Okafor handed
+    Theo the string and stepped back, and she did not take it back for the rest of the afternoon.
+  pages:
+    - focus: inferring feelings and character traits
+      questions:
+        - kind: mc
+          ask: How does Theo feel when Mrs. Okafor offers to build a kite?
+          choices:
+            - thrilled and eager to start
+            - worried that he will get it wrong
+            - bored because he has built many kites
+            - annoyed that she interrupted him
+          evidence: he was through the gate before she finished the question
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - he was through the gate before she finished the question
+            - a ball of strong string
+            - Theo groaned and stared at the ground.
+            - made from newspaper and palm sticks
+          evidence: he was through the gate before she finished the question
+        - kind: write
+          ask: What can you infer about Mrs. Okafor? Give one clue.
+          sample: She has loved kites since she was a girl. She told Theo about "the kites she had flown as a girl in Lagos."
+          evidence: she told him about the kites she had flown as a girl in Lagos
+        - kind: write
+          ask: Why does Theo think of using ribbons? Give one clue.
+          sample: He remembered that her kites each had "a long ribbon trailing behind it."
+          evidence: each with a long ribbon trailing behind it
+    - focus: inferring meaning and motives
+      look_for: clues about why the kite needs a tail
+      questions:
+        - kind: mc
+          ask: What does Mrs. Okafor mean by "It's just restless"?
+          choices:
+            - The kite can't hold steady in the wind yet.
+            - The kite is too heavy to fly at all.
+            - The kite wants to be left in the garage.
+            - The kite's paper is torn and must be fixed.
+          evidence: Then it began to spin in wild circles
+        - kind: mc
+          ask: Why does Mrs. Okafor ask Theo what the kite needs?
+          choices:
+            - She wants him to figure it out himself.
+            - She has never seen a kite crash before.
+            - She does not know how kites work.
+            - She wants to go back inside.
+          evidence: What do you think it needs?
+        - kind: paragraph
+          ask: What does the ending show about Mrs. Okafor? Use 3–4 sentences.
+          sample: >-
+            The ending shows that Mrs. Okafor trusts Theo and wants him to enjoy the kite. She "handed
+            Theo the string and stepped back." She "did not take it back for the rest of the
+            afternoon," even though she loves flying kites. She is a generous neighbor who is proud of
+            what they built.
+          rubric: makes a claim about Mrs. Okafor; quotes the ending; explains what her actions show.
+          evidence: Mrs. Okafor handed Theo the string and stepped back
+
+- id: b13-storing-rain
+  title: Storing the Rain
+  genre: nonfiction
+  text: |
+    In many deserts, rain may fall only a few times a year. When a storm finally arrives, the water
+    soaks into the ground quickly or dries up in the hot sun. To survive, desert plants must collect
+    as much of this water as they can and hold on to it for months.
+
+    Cactuses are experts at storing water. Instead of thin, flat leaves, most cactuses have thick,
+    fleshy stems that hold water inside, much like a sponge. The giant saguaro cactus of the Sonoran
+    Desert has folds along its stem like an accordion. After a heavy rain, the folds stretch out as
+    the stem swells with water, and in dry months they slowly pull back together. A large saguaro full of water can weigh as much as a car.
+
+    Roots matter as much as stems. Many cactuses have roots that spread out wide just under the
+    surface of the soil instead of growing deep. These shallow roots can soak up rainwater quickly,
+    before it sinks away or dries up.
+
+    Desert plants are also careful not to lose the water they store. Leaves give off water into the
+    air, so many desert plants have small leaves or none at all. A cactus's spines are actually a
+    special kind of leaf. They let out very little water, they shade the stem, and they keep thirsty
+    animals from taking a bite. A waxy coating on the stem works like a raincoat in reverse, keeping
+    water in instead of out.
+
+    Some desert plants survive by waiting for the right moment. The seeds of many desert wildflowers
+    can rest in the dry soil for years. When enough rain falls, they sprout, bloom and make new seeds
+    within a few weeks, covering the desert with color before it dries out again. For a short time after a good rain, a desert can
+    look almost like a garden.
+
+    Each of these features is a different way of saving water. Together they allow plants to live
+    in places where most other plants would quickly wilt.
+  pages:
+    - focus: inferring from details in an article
+      questions:
+        - kind: mc
+          ask: What can you infer about a saguaro with deep, tight folds?
+          choices:
+            - It has not had much rain lately.
+            - It has just soaked up a heavy rain.
+            - It is growing new leaves.
+            - Its roots have grown very deep.
+          evidence: in dry months they slowly pull back together
+        - kind: quote
+          ask: Which words best support the answer to question 1?
+          choices:
+            - in dry months they slowly pull back together
+            - The seeds of many desert wildflowers
+            - Roots matter as much as stems.
+            - keep thirsty animals from taking a bite
+          evidence: in dry months they slowly pull back together
+        - kind: paragraph
+          ask: Why do few desert plants have big leaves? Use 3–4 sentences.
+          sample: >-
+            Big leaves would lose too much water in the desert. The text says "Leaves give off water
+            into the air," so large leaves would dry a plant out. Rain may come only "a few times a
+            year," so a plant cannot replace lost water quickly. That is why many desert plants have
+            "small leaves or none at all."
+          rubric: gives the reason; quotes at least one clue; explains how the clues connect to leaves.
+          evidence: many desert plants have small leaves or none at all

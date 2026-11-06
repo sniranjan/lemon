@@ -1,0 +1,118 @@
+subject: english
+level: R6
+title: Central ideas, inference, purpose, text structure and written answers
+# Our own level (source: ours), grade 6 reading for an on-pace 9-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md, Pandas Reading re-aimed per the audit to grade 6 standards).
+# Public level name: syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Every passage is original (content/passages/R6/<section>.yaml). Drafts and their approval:
+# syllabus/drafts/R6-passages.md (written by scripts/r6_drafts.py from the YAML).
+preview_pages: [1, 2, 171, 172]   # two whole spreads (reading page + its questions page): Central Idea, Short Written Answers
+aims:
+  - Find the central idea of a text, show how its details build it, and write an objective summary (RI.6.2)
+  - Draw inferences from stories and articles and cite the words in the text that support them (RL.6.1, RI.6.1)
+  - Work out why an author wrote a text and what the author thinks, and how the words show it (RI.6.6)
+  - See how a text is built (cause and effect, compare and contrast, problem and solution) and how a paragraph fits it (RI.6.5)
+  - Answer questions in 3–4 sentences that use evidence from the text (W.6.9, RL.6.1)
+  - Read 300–400-word passages at a grade 6 level (Flesch-Kincaid grade 5.5–7.5)
+pages: 200
+daily_pages: 2               # source: ours; one spread (read, then answer) a day
+sct_minutes_per_page: [8, 15]  # source: ours
+rules:
+  # ws/passages.py plan_passages with `spread`: each question set takes two pages in a row, a reading
+  # page (the passage alone) then its questions page (ws/spreads.py). A passage has 1–2 sets, so a
+  # text is read on one or two days; the second reading page says what to look for.
+  planner: passages
+  spread: true
+  answers: by_line            # answers PDF: one line per answer (sample answers), ws/booklet.py
+  answers_height: 860        # long sample answers wrap less than the default estimate assumes; fills each answers page
+  # A Letter page at the 20px child-text floor holds about 300 words of grade 6 text, so a longer
+  # passage ends at the top of its questions page (ws/spreads.py split_text). 330–400 words keeps that
+  # end short enough to leave room for the questions (source: ours).
+  passage_words: [330, 400]
+  fk_grade: [5.5, 7.5]       # Flesch-Kincaid grade of every passage (ws/readability.py)
+  sets_per_passage: [1, 2]
+  questions_per_page: [3, 4]
+  page_units: 140            # coarse height guard for a questions page (ws/spreads.py); the layout check decides
+sections:
+  - code: A
+    name: Central Idea and Objective Summary
+    public_name: Central Idea
+    pages: [1, 50]
+    sheet_types: [passage_spread]
+    standards: [RI.6.2, RI.6.1, RI.6.10]
+    source: ours
+    rules:
+      passages: A
+      genres: [nonfiction]
+      tips:
+        passage_spread:
+          - "Ask: what is the article about? Which details prove it?"
+          - "A summary says what the text says, not what we think of it."
+          - "Ask your child for a new title for the article. Why that one?"
+
+  - code: B
+    name: Inference with Cited Evidence
+    public_name: Reading Between the Lines
+    pages: [51, 100]
+    sheet_types: [passage_spread]
+    standards: [RL.6.1, RI.6.1, RL.6.3]
+    source: ours
+    rules:
+      passages: B
+      tips:
+        passage_spread:
+          - "Ask: how do you know? Point to the exact words first."
+          - "The text doesn't say it outright. Which clues add up?"
+          - "Talk about one clue word at a time: what does it hint at?"
+
+  - code: C
+    name: Author's Purpose and Point of View
+    public_name: Why Was It Written?
+    pages: [101, 140]
+    sheet_types: [passage_spread]
+    standards: [RI.6.6, RL.6.6, RI.6.8]
+    source: ours
+    rules:
+      passages: C
+      tips:
+        passage_spread:
+          - "What does the writer want you to think? Which words show it?"
+          - "Hunt for strong words (best, must, sadly): they show a view."
+          - "Does the writer give reasons and evidence, or only opinions?"
+
+  - code: D
+    name: Text Structure
+    public_name: How It's Built
+    pages: [141, 170]
+    sheet_types: [passage_spread]
+    standards: [RI.6.5, RI.6.3, RI.6.1]
+    source: ours
+    rules:
+      passages: D
+      genres: [nonfiction]
+      kinds_per_page: { organizer: [1, 1] }
+      tips:
+        passage_spread:
+          - "Hunt for signal words: because, so, as a result, however, both."
+          - "Ask what job each paragraph does: cause, effect, problem or fix?"
+          - "Sketch the text's shape: two boxes and an arrow is enough."
+
+  - code: E
+    name: Short Constructed Responses
+    public_name: Short Written Answers
+    pages: [171, 200]
+    sheet_types: [passage_spread]
+    standards: [W.6.9, RL.6.1, RI.6.1, W.6.1]
+    source: ours
+    rules:
+      passages: E
+      # two 3–4-sentence answers need most of the page, so these passages are a little shorter
+      passage_words: [300, 360]
+      questions_per_page: [2, 3]
+      kinds_per_page: { paragraph: [2, 2] }
+      paragraph_lines: 6         # two answers a page, so each gets more room
+      tips:
+        passage_spread:
+          - "Each answer: say it, prove it with the text, then explain it."
+          - "Say the answer aloud first. Then write it in 3 or 4 sentences."
+          - "Check: is there a quote? Does the last sentence explain it?"

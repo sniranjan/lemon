@@ -330,6 +330,7 @@ test.** Nothing else in the code should change.
 | `clue_words` | EN R5-B | A 130–160-word passage with 2–3 words in bold (the question set's `words`) + 3 questions: context clues (part 1) or which meaning of a multiple-meaning word (part 2). Every bold word is asked about |
 | `figurative_language` | EN R5-D | Same layout with similes, metaphors, idioms, adages, proverbs, personification or hyperbole in bold; every bold phrase is in the hand-checked `content/figurative/R5.yaml` with a kind the part allows (rule `kinds`); "What does … mean?" / "what kind?" answers must equal the listed meaning / kind |
 | `paragraph_summary` | EN R5-E | A 3-paragraph passage (numbered) summed up one paragraph at a time: pick the best summary (circle) or write one; second page writes and picks the whole-text summary. Every question names its paragraph or the whole text |
+| `passage_spread` | EN R6 (all sections) | Two pages per question set: a 300–400-word passage (numbered paragraphs; what doesn't fit ends at the top of the next page, split by `ws/spreads.py`), then 2–4 questions: `mc` (A–D), `quote` (pick the words from the text that support it), `write`, `paragraph` (3–4 sentences with a quote; sample + rubric in the key), `organizer` (Cause / Effect boxes). A second reading of a text says what to look for. Content: `content/passages/R6/*.yaml` |
 
 **Counting pictures** (`count_*`, `number_read`): up to 5 in one row; 6–10 as two rows of
 five (ten-frame style), since ten 72px pictures don't fit one row. Checks count the

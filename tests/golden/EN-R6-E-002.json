@@ -1,0 +1,53 @@
+{
+  "id": "EN-R6-E-002",
+  "subject": "english",
+  "level": "R6",
+  "section": "E",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 172,
+  "variant": 1,
+  "seed": 18199416714306538078,
+  "title": "Grandpa's Blue Bicycle",
+  "parent_tip": "Check: is there a quote? Does the last sentence explain it?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "e01-grandpas-bicycle",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 171,
+      "continued": [
+        {
+          "n": null,
+          "text": "She pedaled to the corner and back while Grandpa watched from the porch.",
+          "cont": true
+        },
+        {
+          "n": 7,
+          "text": "When she returned, his eyes were shining. \"It looks exactly the way it did when it was new,\" he said quietly. Lucia grinned and rang the bell again. She had not only repaired an old bicycle, but she had also brought back a piece of her grandfather's history.",
+          "cont": false
+        }
+      ]
+    },
+    {
+      "kind": "paragraph",
+      "n": 1,
+      "ask": "Why does Lucia want to fix the bike? Use evidence. (3–4 sentences)",
+      "lines": 6
+    },
+    {
+      "kind": "paragraph",
+      "n": 2,
+      "ask": "How does Grandpa help Lucia? Explain with evidence. (3–4 sentences)",
+      "lines": 6
+    }
+  ],
+  "answer_key": [
+    "1. Sample: Lucia wants to fix the bike because it is part of her grandfather's past. Grandpa tells her, \"I rode it to school every day when I was your age.\" She even paints it to match \"the color in Grandpa's old photograph.\" This shows she wants to bring back something that matters to him. Full answer: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences",
+    "2. Sample: Grandpa helps Lucia by teaching her but letting her do the work herself. He shows her how to find the holes in the tubes, but he \"never took the tools from her hands.\" When she gets frustrated, he tells her \"Slow is fine.\" This helps her learn and feel proud of the bike. Full answer: clear answer; one exact quote or close detail from the text; explains how the evidence supports the answer; 3–4 complete sentences"
+  ],
+  "new_words": [],
+  "review_words": []
+}
