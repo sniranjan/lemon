@@ -1,0 +1,836 @@
+# Otters Reading, section B "Clue Words" (pages 51–90): context clues (part 1, pages 51–70) and words with
+# more than one meaning (part 2, pages 71–90) (L.5.4, L.5.4a, L.5.5c). Original passages (ours).
+# Schema: ws/passages.py. Each passage serves 2 pages; each page (question set) prints its `words` in bold
+# (copied exactly from the text, first appearance is bolded) and asks about every one of them.
+# 3 questions a page: 2 multiple choice (`choices`, the first is right) + 1 written (`sample`).
+
+- id: b01-the-desert-tortoise
+  title: The Desert Tortoise
+  kind: article
+  text: |
+    The desert tortoise lives in some of the hottest, driest places in North America. Water is so
+    scarce there that months can pass without a single rainstorm. To survive, the tortoise must be
+    resourceful, which means it is good at finding clever ways to get what it needs.
+
+    When rain finally falls, a tortoise may dig a shallow basin in the dirt to catch the water. Then
+    it drinks deeply and stores extra water in its body. During the hottest and coldest parts of the
+    year, the tortoise is dormant. Like a sleeping bear, it rests quietly in a cool burrow underground and
+    hardly moves at all.
+
+    In spring the tortoise becomes active again. It eats tender flowers and grasses, which give it
+    both food and moisture. Because it moves so slowly and carefully, the tortoise uses very little
+    energy. Its patient way of living helps it last for many years.
+  pages:
+    - focus: clues
+      words: [scarce, resourceful, basin]
+      questions:
+        - ask: What does "scarce" mean in paragraph 1?
+          choices: [hard to find, very cold, easy to drink]
+          evidence: months can pass without a single rainstorm
+        - ask: What does "basin" mean in paragraph 2?
+          choices: [a low dip that holds water, a tall pile of rocks, a kind of desert plant]
+          evidence: dig a shallow basin in the dirt to catch the water
+        - ask: Which words in paragraph 1 tell you what "resourceful" means?
+          sample: The words "good at finding clever ways to get what it needs" tell what resourceful means.
+          evidence: which means it is good at finding clever ways to get what it needs
+    - focus: clues
+      words: [dormant, moisture]
+      questions:
+        - ask: What does "dormant" mean in paragraph 2?
+          choices: [resting and not active, hungry and searching, fast and busy]
+          evidence: it rests quietly in a cool burrow underground and hardly moves at all
+        - ask: What does "moisture" mean in paragraph 3?
+          choices: [water or wetness, sharp thorns, bright colors]
+          evidence: which give it both food and moisture
+        - ask: What clue in paragraph 2 helps you understand "dormant"?
+          sample: The clue is that the tortoise rests quietly like a sleeping bear and hardly moves at all.
+          evidence: Like a sleeping bear, it rests quietly in a cool burrow underground and
+
+- id: b02-inside-an-ant-colony
+  title: Inside an Ant Colony
+  kind: article
+  text: |
+    An ant colony can look like a jumble of tiny insects rushing in every direction. In fact, the
+    colony is very organized, which means every ant has a job and the work is carefully arranged.
+    Some ants care for the eggs, some guard the doors, and others search for food.
+
+    Worker ants are very strong for their size. A single ant can lift an object many times
+    heavier than its own body. When a worker finds a crumb that is too enormous to carry alone, it
+    does not give up. Instead, it leaves a scent trail so that other workers can follow it back to
+    the food.
+
+    The queen ant has one main task, which is laying eggs. She is not in charge of the colony the way
+    a human leader would be. The ants cooperate, or work together, and that teamwork helps the whole
+    colony thrive, growing larger and stronger each year.
+  pages:
+    - focus: clues
+      words: [organized, enormous]
+      questions:
+        - ask: What does "organized" mean in paragraph 1?
+          choices: [neatly arranged with a job for each, messy and mixed up, very tiny and quick]
+          evidence: every ant has a job and the work is carefully arranged
+        - ask: What does "enormous" mean in paragraph 2?
+          choices: [very large, very sweet, very light]
+          evidence: a crumb that is too enormous to carry alone
+        - ask: Which words in paragraph 1 help you know what "organized" means?
+          sample: The words "every ant has a job and the work is carefully arranged" explain organized.
+          evidence: which means every ant has a job and the work is carefully arranged
+    - focus: clues
+      words: [cooperate, thrive]
+      questions:
+        - ask: What does "cooperate" mean in paragraph 3?
+          choices: [work together, run away, sleep all day]
+          evidence: The ants cooperate, or work together
+        - ask: What does "thrive" mean in paragraph 3?
+          choices: [grow strong and do well, become lost, move to a new nest]
+          evidence: colony thrive, growing larger and stronger each year
+        - ask: What clue helps you understand "cooperate"?
+          sample: The words "or work together" right after it tell what cooperate means.
+          evidence: The ants cooperate, or work together, and that teamwork helps
+
+- id: b03-moving-day
+  title: Moving Day
+  kind: story
+  text: |
+    Aunt Rosa was moving to a new apartment, and Leo had offered to help her pack. She handed him a
+    box of teacups that had belonged to her own grandmother. "These are very fragile," she warned.
+    "They can break if you even bump them on the table." Leo nodded and wrapped each cup in three
+    layers of soft paper.
+
+    Leo was usually quick and a little careless, but today he was cautious. He walked slowly down the
+    stairs, watching every step and holding the box tightly against his chest. His little sister
+    wanted to help, yet she was reluctant to touch the cups. She worried she might drop one, so she
+    carried the pillows instead.
+
+    By evening, the empty apartment echoed when they talked. Leo felt exhausted, so tired that he
+    could barely lift his arms. Still, when Aunt Rosa unpacked the teacups in her new kitchen and
+    found every one unbroken, Leo grinned with pride.
+  pages:
+    - focus: clues
+      words: [fragile, cautious]
+      questions:
+        - ask: What does "fragile" mean in paragraph 1?
+          choices: [easy to break, very old, very heavy]
+          evidence: They can break if you even bump them on the table.
+        - ask: What does "cautious" mean in paragraph 2?
+          choices: [careful to stay safe, in a big hurry, feeling sleepy]
+          evidence: He walked slowly down the stairs, watching every step
+        - ask: Which words in paragraph 2 help you know what "cautious" means?
+          sample: The words "walked slowly down the stairs, watching every step" show that cautious means careful.
+          evidence: He walked slowly down the stairs, watching every step
+    - focus: clues
+      words: [reluctant, exhausted]
+      questions:
+        - ask: What does "reluctant" mean in paragraph 2?
+          choices: [not wanting to do something, excited and eager, too small to reach]
+          evidence: She worried she might drop one, so she carried the pillows instead.
+        - ask: What does "exhausted" mean in paragraph 3?
+          choices: [very tired, very hungry, very proud]
+          evidence: so tired that he could barely lift his arms
+        - ask: What clue helps you understand "exhausted"?
+          sample: The words "so tired that he could barely lift his arms" explain exhausted.
+          evidence: Leo felt exhausted, so tired that he could barely lift his arms
+
+- id: b04-why-birds-migrate
+  title: Why Birds Migrate
+  kind: article
+  text: |
+    Every fall, huge flocks of birds leave their summer homes and fly south. Scientists say these
+    birds migrate, which means they travel from one region to another when the seasons change. Some
+    fly only a short distance, while others cross whole continents.
+
+    Why do birds make such a long trip? In the north, insects and seeds grow hard to find once the
+    weather turns cold. Farther south, food stays abundant, so the birds can find plenty to eat all
+    winter. In spring, they return north to build nests and raise their young.
+
+    Migration is a demanding journey that takes a great deal of energy. Before they leave, many birds
+    eat extra food to store fat for the long flight. They navigate, or find their way, by using the
+    sun, the stars, and even landmarks such as rivers and coastlines.
+  pages:
+    - focus: clues
+      words: [migrate, abundant]
+      questions:
+        - ask: What does "migrate" mean in paragraph 1?
+          choices: [travel to a new place as seasons change, build a nest high in a tree, sing loudly in the morning]
+          evidence: they travel from one region to another when the seasons change
+        - ask: What does "abundant" mean in paragraph 2?
+          choices: [plentiful, hard to find, frozen]
+          evidence: food stays abundant, so the birds can find plenty to eat
+        - ask: Which words in paragraph 2 help you know what "abundant" means?
+          sample: The words "the birds can find plenty to eat" show that abundant means plentiful.
+          evidence: so the birds can find plenty to eat all winter
+    - focus: clues
+      words: [demanding, navigate]
+      questions:
+        - ask: What does "demanding" mean in paragraph 3?
+          choices: [needing a lot of effort, short and easy, noisy and crowded]
+          evidence: a demanding journey that takes a great deal of energy
+        - ask: What does "navigate" mean in paragraph 3?
+          choices: [find the way, fly very fast, rest at night]
+          evidence: They navigate, or find their way
+        - ask: What clue helps you understand "navigate"?
+          sample: The words "or find their way" right after it explain what navigate means.
+          evidence: They navigate, or find their way, by using the sun
+
+- id: b05-saturday-bread
+  title: Saturday Bread
+  kind: story
+  text: |
+    On Saturday morning, Nora and her dad decided to bake bread together. Dad explained that baking
+    has to be precise. "If you measure the flour carelessly, the loaf might turn out flat," he said.
+    So Nora leveled every cup of flour with a spatula to get the exact amount.
+
+    After they mixed the dough, Nora had to knead it. She pushed, folded, and pressed the soft lump
+    over and over for ten minutes. Then they set the bowl in a warm spot. Slowly the dough began to
+    expand. Within an hour, it had puffed up to twice its size.
+
+    Waiting was the hardest part. Nora felt impatient and kept peeking into the oven every few
+    minutes. At last, Dad pulled out a golden loaf. The kitchen filled with a fragrant smell, as sweet
+    and warm as a bakery. Nora decided the long wait had been worth it.
+  pages:
+    - focus: clues
+      words: [precise, knead]
+      questions:
+        - ask: What does "precise" mean in paragraph 1?
+          choices: [exact and careful, quick and easy, warm and soft]
+          evidence: leveled every cup of flour with a spatula to get the exact amount
+        - ask: What does "knead" mean in paragraph 2?
+          choices: [push and fold dough, cut dough into pieces, bake dough in an oven]
+          evidence: She pushed, folded, and pressed the soft lump over and over
+        - ask: Which words in paragraph 1 help you know what "precise" means?
+          sample: The words "to get the exact amount" show that precise means exact.
+          evidence: leveled every cup of flour with a spatula to get the exact amount
+    - focus: clues
+      words: [expand, fragrant]
+      questions:
+        - ask: What does "expand" mean in paragraph 2?
+          choices: [grow bigger, turn brown, get colder]
+          evidence: it had puffed up to twice its size
+        - ask: What does "fragrant" mean in paragraph 3?
+          choices: [having a nice smell, very loud, very sticky]
+          evidence: a fragrant smell, as sweet and warm as a bakery
+        - ask: What clue helps you understand "expand"?
+          sample: The next sentence says the dough "puffed up to twice its size," so expand means grow bigger.
+          evidence: Within an hour, it had puffed up to twice its size.
+
+- id: b06-the-slow-life-of-sloths
+  title: The Slow Life of Sloths
+  kind: article
+  text: |
+    Sloths live high in the trees of Central and South American forests. They are famous for being
+    sluggish. A sloth moves so slowly that it may spend a whole minute reaching for a single leaf. It
+    sleeps or rests for much of the day.
+
+    Moving slowly helps a sloth save energy. Its diet of leaves is not very nutritious, which means
+    the leaves give it only a little of the fuel and goodness its body needs. Because of this, a
+    sloth cannot afford to rush around.
+
+    A sloth's slowness also helps it stay hidden. Tiny green plants called algae can grow in its
+    shaggy fur. This green tint helps the sloth blend in with the leaves, so it is inconspicuous to
+    hungry eagles flying overhead. Unlike the busy, chattering monkeys nearby, the sloth stays quiet
+    and still, and it is very hard to see.
+  pages:
+    - focus: clues
+      words: [sluggish, nutritious]
+      questions:
+        - ask: What does "sluggish" mean in paragraph 1?
+          choices: [slow-moving, very noisy, brightly colored]
+          evidence: A sloth moves so slowly that it may spend a whole minute
+        - ask: What does "nutritious" mean in paragraph 2?
+          choices: [healthy and full of goodness, sweet and juicy, hard to reach]
+          evidence: the leaves give it only a little of the fuel and goodness its body needs
+        - ask: Which words in paragraph 1 help you know what "sluggish" means?
+          sample: The words "moves so slowly" and "a whole minute reaching for a single leaf" explain sluggish.
+          evidence: A sloth moves so slowly that it may spend a whole minute reaching for a single leaf.
+    - focus: clues
+      words: [algae, inconspicuous]
+      questions:
+        - ask: What are "algae" in paragraph 3?
+          choices: [tiny green plants, small biting bugs, soft baby feathers]
+          evidence: Tiny green plants called algae
+        - ask: What does "inconspicuous" mean in paragraph 3?
+          choices: [hard to notice, easy to spot, very loud]
+          evidence: it is very hard to see
+        - ask: What clue helps you understand "inconspicuous"?
+          sample: The passage says the sloth can "blend in with the leaves" and is "very hard to see."
+          evidence: This green tint helps the sloth blend in with the leaves
+
+- id: b07-sunrise-on-the-hill
+  title: Sunrise on the Hill
+  kind: story
+  text: |
+    Jada's alarm buzzed at five o'clock in the morning, long before the sun came up. She felt so
+    drowsy that her eyes kept closing while she tied her shoes. Her brother Marcus was the opposite,
+    because he was alert and bouncing around the kitchen, wide awake and eager to start the hike.
+
+    The family climbed a steep trail in the gray light. The path was narrow, with thick bushes on
+    both sides, so they walked in single file. Near the top, the ground became rugged, rough and full
+    of rocks and roots. Jada had to watch carefully where she placed each foot.
+
+    When they reached the top, the sky was turning pink and orange. Below them, the lake was gleaming
+    like a polished mirror as the first sunlight touched it. Jada was no longer sleepy at all. She
+    turned to her family and whispered that this beautiful view was worth waking up early for.
+  pages:
+    - focus: clues
+      words: [drowsy, alert]
+      questions:
+        - ask: What does "drowsy" mean in paragraph 1?
+          choices: [sleepy, cheerful, hungry]
+          evidence: her eyes kept closing while she tied her shoes
+        - ask: What does "alert" mean in paragraph 1?
+          choices: [wide awake and ready, tired and slow, worried and upset]
+          evidence: alert and bouncing around the kitchen, wide awake
+        - ask: Which words in paragraph 1 help you know what "drowsy" means?
+          sample: The words "her eyes kept closing" show that drowsy means sleepy.
+          evidence: She felt so drowsy that her eyes kept closing
+    - focus: clues
+      words: [rugged, gleaming]
+      questions:
+        - ask: What does "rugged" mean in paragraph 2?
+          choices: [rough and rocky, smooth and flat, wet and muddy]
+          evidence: rough and full of rocks and roots
+        - ask: What does "gleaming" mean in paragraph 3?
+          choices: [shining brightly, freezing over, making waves]
+          evidence: gleaming like a polished mirror as the first sunlight touched it
+        - ask: What clue helps you understand "rugged"?
+          sample: Right after "rugged," the words "rough and full of rocks and roots" explain it.
+          evidence: the ground became rugged, rough and full of rocks and roots
+
+- id: b08-how-cheese-is-made
+  title: How Cheese Is Made
+  kind: article
+  text: |
+    People have made cheese for thousands of years, and it always begins with plain milk. First,
+    cheesemakers warm the milk and add a special ingredient that makes it curdle. This means the milk
+    separates into soft white lumps called curds and a watery liquid called whey.
+
+    Next, the curds are drained, pressed, and shaped into wheels or blocks. Salt is added to give
+    flavor and to help preserve the cheese, keeping it from spoiling too quickly. Some cheeses are
+    ready to eat right away, like fresh, mild cottage cheese.
+
+    Other cheeses must mature for months or even years. As they slowly age in cool rooms, their
+    flavors grow stronger. A young cheese may taste mild, but an older one can be sharp and tangy.
+    Because there are so many methods, the variety of cheeses is amazing, from soft and creamy ones
+    to hard and crumbly ones.
+  pages:
+    - focus: clues
+      words: [curdle, preserve]
+      questions:
+        - ask: What does "curdle" mean in paragraph 1?
+          choices: [separate into lumps, boil away, turn sweet]
+          evidence: the milk separates into soft white lumps called curds
+        - ask: What does "preserve" mean in paragraph 2?
+          choices: [keep from spoiling, make softer, heat up]
+          evidence: help preserve the cheese, keeping it from spoiling too quickly
+        - ask: Which words in paragraph 1 help you know what "curdle" means?
+          sample: The words "the milk separates into soft white lumps" explain what curdle means.
+          evidence: This means the milk separates into soft white lumps called curds
+    - focus: clues
+      words: [mature, variety]
+      questions:
+        - ask: What does "mature" mean in paragraph 3?
+          choices: [age and change over time, melt into a liquid, get cut into slices]
+          evidence: As they slowly age in cool rooms, their flavors grow stronger.
+        - ask: What does "variety" mean in paragraph 3?
+          choices: [many different kinds, a high price, one single type]
+          evidence: from soft and creamy ones to hard and crumbly ones
+        - ask: What clue helps you understand "mature"?
+          sample: The next sentence says the cheeses "slowly age" and their flavors grow stronger.
+          evidence: As they slowly age in cool rooms, their flavors grow stronger.
+
+- id: b09-the-spelling-bee
+  title: The Spelling Bee
+  kind: story
+  text: |
+    Priya had practiced for the school spelling bee every single night for a month. On the big day, though, she
+    felt anxious. Her hands were shaking, and her stomach did flips as she waited in a line of
+    students on the stage.
+
+    Her best friend Owen sat in the front row. He gave her an encouraging smile and two thumbs up, as
+    if to say, "You can do it!" Priya took a deep breath and tried to stay composed. She kept her
+    face calm and her voice steady, even though her heart was pounding.
+
+    Her final word was "mysterious." Priya hesitated, pausing for a moment to picture the word in her
+    mind. Then she spelled it slowly and correctly, concentrating on one letter at a time. The audience burst into
+    applause, and Priya walked back to her seat with a huge smile. All of her careful practice had finally paid off.
+  pages:
+    - focus: clues
+      words: [anxious, encouraging]
+      questions:
+        - ask: What does "anxious" mean in paragraph 1?
+          choices: [nervous and worried, bored and sleepy, happy and calm]
+          evidence: Her hands were shaking, and her stomach did flips
+        - ask: What does "encouraging" mean in paragraph 2?
+          choices: [giving hope and support, making fun of someone, very quiet]
+          evidence: as if to say, "You can do it!"
+        - ask: Which words in paragraph 1 help you know what "anxious" means?
+          sample: The words "her hands were shaking" and "her stomach did flips" show she was nervous.
+          evidence: Her hands were shaking, and her stomach did flips
+    - focus: clues
+      words: [composed, hesitated]
+      questions:
+        - ask: What does "composed" mean in paragraph 2?
+          choices: [calm and in control, loud and excited, tired and weak]
+          evidence: She kept her face calm and her voice steady
+        - ask: What does "hesitated" mean in paragraph 3?
+          choices: [paused before acting, laughed out loud, gave up]
+          evidence: Priya hesitated, pausing for a moment
+        - ask: What clue helps you understand "composed"?
+          sample: The next sentence says she "kept her face calm and her voice steady."
+          evidence: She kept her face calm and her voice steady
+
+- id: b10-how-rainbows-form
+  title: Colors After the Rain
+  kind: article
+  text: |
+    A rainbow can appear when sunlight shines through raindrops in the air. Sunlight looks white, but
+    it is actually a blend of many colors mixed together. Inside each raindrop, the light bends. Then it
+    spreads apart into bands of color.
+
+    To see a rainbow, you must stand with the sun behind you. This is why rainbows are most frequent
+    in the late afternoon or early morning, when the sun is low. They are rare at noon, because the
+    sun is usually too high in the sky.
+
+    The colors always appear in the same sequence, from red on the outside to violet on the inside.
+    Rainbows are temporary, and most fade within minutes as the rain stops or clouds cover the sun.
+    If you are lucky, you might notice a faint second rainbow. It is much dimmer and paler than the
+    first, and its colors are in the opposite order.
+  pages:
+    - focus: clues
+      words: [blend, frequent]
+      questions:
+        - ask: What does "blend" mean in paragraph 1?
+          choices: [a mix of things, a single color, a kind of raindrop]
+          evidence: a blend of many colors mixed together
+        - ask: What does "frequent" mean in paragraph 2?
+          choices: [happening often, happening rarely, very bright]
+          evidence: They are rare at noon
+        - ask: Which words in paragraph 2 help you know what "frequent" means?
+          sample: The words "They are rare at noon" give the opposite, so frequent means happening often.
+          evidence: They are rare at noon, because the sun is usually too high
+    - focus: clues
+      words: [sequence, temporary, faint]
+      questions:
+        - ask: What does "sequence" mean in paragraph 3?
+          choices: [a set order, a kind of cloud, a bright light]
+          evidence: from red on the outside to violet on the inside
+        - ask: What does "temporary" mean in paragraph 3?
+          choices: [lasting a short time, lasting forever, very large]
+          evidence: most fade within minutes
+        - ask: What clue helps you understand "faint"?
+          sample: The next sentence says the second rainbow is "much dimmer and paler," so faint means hard to see.
+          evidence: It is much dimmer and paler than the first
+
+- id: b11-down-by-the-river
+  title: Down by the River
+  kind: article
+  text: |
+    A river is home to many kinds of plants and animals. Along the muddy bank, turtles sun themselves
+    on logs, and frogs hide among the tall reeds. Some birds even dig nesting holes into the soft dirt
+    at the edge of the water.
+
+    In the middle of the river, the current is strongest. This steady flow of moving water carries
+    leaves, twigs, and tiny creatures downstream. Fish such as trout face upstream so that the water
+    rushes over their gills and brings food floating toward them.
+
+    Plants play an important role too. Their roots hold the soil in place so the edges of the river do
+    not wash away. Water plants also give off oxygen, which fish need to breathe. When you visit a
+    river, look closely, and you may spot a whole community of living things at work.
+  pages:
+    - focus: meanings
+      words: [bank, current]
+      questions:
+        - ask: Which meaning of "bank" is used in paragraph 1?
+          choices: [the land along a river, a place that keeps money, to tilt while turning]
+          evidence: Along the muddy bank, turtles sun themselves on logs
+        - ask: Which meaning of "current" is used in paragraph 2?
+          choices: [a flow of moving water, happening right now, a flow of electricity]
+          evidence: This steady flow of moving water carries leaves
+        - ask: Write a sentence that uses "bank" to mean a place that keeps money.
+          sample: I took my birthday money to the bank to save it.
+          evidence: Along the muddy bank, turtles sun themselves on logs
+    - focus: meanings
+      words: [face, spot]
+      questions:
+        - ask: Which meaning of "face" is used in paragraph 2?
+          choices: [to turn toward, the front of the head, the front of a clock]
+          evidence: Fish such as trout face upstream
+        - ask: Which meaning of "spot" is used in paragraph 3?
+          choices: [to notice or see, a small mark or dot, a place to stand]
+          evidence: look closely, and you may spot a whole community
+        - ask: Write a sentence that uses "spot" to mean a small mark.
+          sample: There was a red spot of paint on my white shirt.
+          evidence: look closely, and you may spot a whole community
+
+- id: b12-the-bake-sale
+  title: The Bake Sale
+  kind: story
+  text: |
+    The night before the school bake sale, Sam and his mom stirred a big bowl of batter for banana
+    muffins. Sam poured the thick, lumpy mixture into the pan while his mom heated the oven. Soon the
+    whole house smelled of warm bananas and cinnamon.
+
+    In the morning, Sam made a sign for their table. He wrote "Muffins, One Dollar Each" in giant
+    green letters and taped the poster to the front of the table. People began to line up in the
+    hallway before the doors even opened.
+
+    Sam's job was to give customers their change. When a man paid with a five-dollar bill for two
+    muffins, Sam carefully counted out three dollars and handed them back. By noon, every muffin was
+    gone. The class had raised enough money to buy new books for the library, and Sam felt proud of
+    the work he had done.
+  pages:
+    - focus: meanings
+      words: [batter, sign]
+      questions:
+        - ask: Which meaning of "batter" is used in paragraph 1?
+          choices: [a thick mix used for baking, a player who swings a bat, to pound again and again]
+          evidence: Sam poured the thick, lumpy mixture into the pan
+        - ask: Which meaning of "sign" is used in paragraph 2?
+          choices: [a poster with words on it, a movement of the hands, to write your name]
+          evidence: taped the poster to the front of the table
+        - ask: Write a sentence that uses "batter" to mean a baseball player.
+          sample: The batter swung hard and sent the ball over the fence.
+          evidence: stirred a big bowl of batter for banana muffins
+    - focus: meanings
+      words: [change, bill]
+      questions:
+        - ask: Which meaning of "change" is used in paragraph 3?
+          choices: [money given back after paying, to make something different, a fresh set of clothes]
+          evidence: Sam carefully counted out three dollars and handed them back
+        - ask: Which meaning of "bill" is used in paragraph 3?
+          choices: [a piece of paper money, the beak of a bird, a list of what you owe]
+          evidence: a man paid with a five-dollar bill
+        - ask: Write a sentence that uses "bill" to mean a bird's beak.
+          sample: The pelican scooped up a fish with its long bill.
+          evidence: a man paid with a five-dollar bill
+
+- id: b13-the-basics-of-baseball
+  title: The Basics of Baseball
+  kind: article
+  text: |
+    Baseball is a team sport played on a field shaped like a giant diamond. The pitcher stands in the
+    middle and throws each pitch toward home plate, a flat, five-sided base. There, a player from the other team waits,
+    holding a smooth wooden bat and hoping for a good chance to swing.
+
+    If the player knocks the ball onto the field, he or she races toward first base. When the ball
+    is knocked high into the air, it is called a fly ball. A fielder may catch it before it touches
+    the ground, and then the runner is out.
+
+    A team scores a run each time a player touches all four bases and returns safely to home plate.
+    A professional game lasts nine innings, and each team gets a turn to swing in every inning. Fans
+    cheer, munch on snacks, and hold up homemade posters for their favorite players.
+  pages:
+    - focus: meanings
+      words: [pitch, bat]
+      questions:
+        - ask: Which meaning of "pitch" is used in paragraph 1?
+          choices: [a throw of the ball, how high or low a sound is, to set up a tent]
+          evidence: throws each pitch toward home plate
+        - ask: Which meaning of "bat" is used in paragraph 1?
+          choices: [a club used to strike a ball, a small flying animal, to blink your eyes]
+          evidence: holding a smooth wooden bat and hoping for a good chance to swing
+        - ask: Write a sentence that uses "pitch" to mean setting up a tent.
+          sample: We will pitch our tent under the tall pine trees.
+          evidence: throws each pitch toward home plate
+    - focus: meanings
+      words: [plate, fly]
+      questions:
+        - ask: Which meaning of "plate" is used in paragraph 1?
+          choices: [a flat base a player must touch, a dish for serving food, a thin sheet of metal]
+          evidence: home plate, a flat, five-sided base
+        - ask: Which meaning of "fly" is used in paragraph 2?
+          choices: [a ball knocked high into the air, a small insect with wings, to move through the air]
+          evidence: When the ball is knocked high into the air, it is called a fly ball.
+        - ask: Write a sentence that uses "fly" to mean a small insect.
+          sample: A fly buzzed around the bowl of fruit on the table.
+          evidence: When the ball is knocked high into the air, it is called a fly ball.
+
+- id: b14-piano-practice
+  title: Piano Practice
+  kind: story
+  text: |
+    Every Tuesday afternoon, Mia visited her grandmother's apartment for a piano lesson. Grandma had played for
+    fifty years, and her fingers glided across the shiny keys. Today she wanted Mia to learn a new
+    scale, eight notes climbing upward one step at a time.
+
+    Mia started at the bottom and pressed each key slowly. Twice she slipped and played a wrong
+    note. "Don't worry," Grandma said gently. "Every musician makes mistakes, especially when learning something unfamiliar, so just keep going." By
+    the tenth try, the scale sounded smooth and even.
+
+    Next, Grandma pointed to a small mark on the music sheet. "That is a rest," she explained. "It
+    tells you to stay silent for one beat." Mia counted quietly in her head during the rest, then
+    played the last two notes. Grandma clapped proudly and celebrated by serving her a slice of homemade lemon cake.
+  pages:
+    - focus: meanings
+      words: [keys, scale]
+      questions:
+        - ask: Which meaning of "keys" is used in paragraph 1?
+          choices: [the parts of a piano you press, small tools that open locks, the answers to a quiz]
+          evidence: her fingers glided across the shiny keys
+        - ask: Which meaning of "scale" is used in paragraph 1?
+          choices: [a set of notes going up in order, a tool for weighing things, a hard plate on a fish]
+          evidence: eight notes climbing upward one step at a time
+        - ask: Write a sentence that uses "scale" to mean a tool for weighing.
+          sample: The nurse asked me to step on the scale to see how much I weigh.
+          evidence: eight notes climbing upward one step at a time
+    - focus: meanings
+      words: [rest, beat]
+      questions:
+        - ask: Which meaning of "rest" is used in paragraph 3?
+          choices: [a silent pause in music, to relax or sleep, what is left over]
+          evidence: It tells you to stay silent for one beat.
+        - ask: Which meaning of "beat" is used in paragraph 3?
+          choices: [one count in music, to win against someone, to stir quickly]
+          evidence: It tells you to stay silent for one beat.
+        - ask: Write a sentence that uses "beat" to mean winning a game.
+          sample: Our team beat the Tigers by two points last night.
+          evidence: It tells you to stay silent for one beat.
+
+- id: b15-how-a-tree-grows
+  title: How a Tree Grows
+  kind: article
+  text: |
+    A tree may seem to stand perfectly still, but it is constantly growing. Its trunk, the thick main stem, grows
+    taller and wider year after year. A layer of tough bark covers the trunk like a coat, protecting
+    the soft wood inside from insects and harsh weather.
+
+    Each year, a tree adds a new layer of wood just under its bark. If you look at the stump of a tree
+    that was cut down, these layers appear as circles. Each ring shows one year of growth, so counting them tells you how
+    old the tree was. A wide ring usually indicates a healthy year with plenty of rain.
+
+    The green leaves are a tree's food factories. They use sunlight, water, and air to make sugar,
+    which feeds the whole tree. In the fall, many trees drop their leaves and rest through the winter.
+    In spring, new buds open on the branches, and the yearly cycle begins again.
+  pages:
+    - focus: meanings
+      words: [trunk, bark]
+      questions:
+        - ask: Which meaning of "trunk" is used in paragraph 1?
+          choices: [the main stem of a tree, a large box for storing things, the back storage space of a car]
+          evidence: Its trunk, the thick main stem
+        - ask: Which meaning of "bark" is used in paragraph 1?
+          choices: [the outer covering of a tree, the sound a dog makes, a kind of sailing ship]
+          evidence: A layer of tough bark covers the trunk like a coat
+        - ask: Write a sentence that uses "bark" to mean a dog's sound.
+          sample: Our dog likes to bark at the mail carrier every morning.
+          evidence: A layer of tough bark covers the trunk like a coat
+    - focus: meanings
+      words: [ring, fall]
+      questions:
+        - ask: Which meaning of "ring" is used in paragraph 2?
+          choices: [a circle in the wood, a band worn on a finger, the sound a bell makes]
+          evidence: these layers appear as circles
+        - ask: Which meaning of "fall" is used in paragraph 3?
+          choices: [the season after summer, to drop to the ground, a place where water drops]
+          evidence: In the fall, many trees drop their leaves and rest through the winter.
+        - ask: Write a sentence that uses "ring" to mean the sound a bell makes.
+          sample: I heard the school bell ring, so I hurried to class.
+          evidence: Each ring shows one year of growth
+
+- id: b16-afternoon-at-the-pond
+  title: Afternoon at the Pond
+  kind: story
+  text: |
+    On Sunday afternoon, Grandpa took Ava and her cousin Theo to the pond in the city park. They found
+    an empty bench near the water and sat down to watch. A mother duck paddled past, followed by six
+    fuzzy babies swimming in a neat little line.
+
+    Theo wanted to toss them crackers, but Grandpa explained that crackers are not healthy for ducks,
+    so they simply watched instead. The mother duck dipped her head underwater to find bits of
+    plants. Then she shook her feathers, and drops of water sparkled in the sunshine.
+
+    After a while, the children ran to the playground. Ava pumped her legs on the swing until she felt
+    as if she were soaring through the sky. Theo climbed to the top of the slide and gave Grandpa a
+    big wave. Grandpa waved back, smiling, and said it was almost time to go home for dinner.
+  pages:
+    - focus: meanings
+      words: [park, duck]
+      questions:
+        - ask: Which meaning of "park" is used in paragraph 1?
+          choices: [a green space where people play, to leave a car in a spot, a gear setting in a car]
+          evidence: the pond in the city park
+        - ask: Which meaning of "duck" is used in paragraph 1?
+          choices: [a bird that swims, to lower your head quickly, a strong cotton cloth]
+          evidence: A mother duck paddled past
+        - ask: Write a sentence that uses "duck" to mean lowering your head fast.
+          sample: I had to duck when the ball flew toward my face.
+          evidence: A mother duck paddled past, followed by six fuzzy babies
+    - focus: meanings
+      words: [swing, wave]
+      questions:
+        - ask: Which meaning of "swing" is used in paragraph 3?
+          choices: [a hanging seat that moves, to move a bat at a ball, a style of jazz music]
+          evidence: Ava pumped her legs on the swing
+        - ask: Which meaning of "wave" is used in paragraph 3?
+          choices: [a hand movement to say hello, a moving ridge of water, a sudden rush of feeling]
+          evidence: gave Grandpa a big wave. Grandpa waved back, smiling
+        - ask: Write a sentence that uses "wave" to mean water at the beach.
+          sample: A big wave crashed on the sand and soaked my towel.
+          evidence: gave Grandpa a big wave
+
+- id: b17-teaching-a-dog-tricks
+  title: Teaching a Dog Tricks
+  kind: article
+  text: |
+    Many families want their dogs to learn good manners. The best way to train a dog is with patience
+    and gentle words. Short, cheerful lessons of five to ten minutes work better than long ones,
+    because dogs, like children, can lose interest when a lesson drags on.
+
+    Start with a simple command, such as "sit." When the dog sits, reward it right away with a small
+    treat or a happy word of praise. Soon the dog connects the action with something it enjoys.
+    Repeat the lesson every day until the dog sits each time you ask.
+
+    Once your dog has learned a few commands, you can teach it to roll over or shake hands. Always end
+    each session with a trick your dog already knows well, so the lesson finishes with success. That
+    way, both you and your dog will look forward to the next practice.
+  pages:
+    - focus: meanings
+      words: [train, treat]
+      questions:
+        - ask: Which meaning of "train" is used in paragraph 1?
+          choices: [to teach a skill, a line of railroad cars, the long back part of a gown]
+          evidence: The best way to train a dog is with patience
+        - ask: Which meaning of "treat" is used in paragraph 2?
+          choices: [a small snack given as a reward, to act a certain way toward someone, to pay for a friend's meal]
+          evidence: reward it right away with a small treat
+        - ask: Write a sentence that uses "train" to mean a railroad train.
+          sample: We rode the train across the state to visit my cousins.
+          evidence: The best way to train a dog is with patience
+    - focus: meanings
+      words: [roll, shake]
+      questions:
+        - ask: Which meaning of "roll" is used in paragraph 3?
+          choices: [to turn over and over, a small round bread, a list of names]
+          evidence: you can teach it to roll over
+        - ask: Which meaning of "shake" is used in paragraph 3?
+          choices: [to move a hand up and down, a thick milk drink, to tremble from cold]
+          evidence: roll over or shake hands
+        - ask: Write a sentence that uses "roll" to mean a small bread.
+          sample: I spread butter on a warm roll at dinner.
+          evidence: you can teach it to roll over or shake hands
+
+- id: b18-the-aquarium-visit
+  title: The Aquarium Visit
+  kind: story
+  text: |
+    For his birthday, Diego's family took him to the aquarium. First they stopped at a giant glass
+    tank as tall as a house, filled with silvery fish swimming in circles. Diego pressed his nose
+    against the glass and watched a sea turtle glide slowly past.
+
+    Next, they watched a seal show. A trainer blew a whistle, and the sleek gray seal flipped its tail
+    and balanced a ball on its nose. Diego laughed when the seal splashed the front row, soaking his
+    dad's sneakers with salty water.
+
+    Last, they visited the touch pool. A helper showed Diego how to gently pet a sea star with two
+    fingers. Its bumpy skin felt rough, like sandpaper. The helper explained that sea stars can
+    actually regrow a missing arm. On the ride home, Diego decided that this was his most wonderful
+    birthday celebration yet.
+  pages:
+    - focus: meanings
+      words: [tank, seal]
+      questions:
+        - ask: Which meaning of "tank" is used in paragraph 1?
+          choices: [a large container for water, a sleeveless shirt, a heavy armored truck]
+          evidence: a giant glass tank as tall as a house, filled with silvery fish
+        - ask: Which meaning of "seal" is used in paragraph 2?
+          choices: [a sea animal with flippers, to close something tightly, an official stamp]
+          evidence: the sleek gray seal flipped its tail
+        - ask: Write a sentence that uses "seal" to mean closing something tightly.
+          sample: Mom told me to seal the bag so the chips stay crunchy.
+          evidence: the sleek gray seal flipped its tail
+    - focus: meanings
+      words: [glass, row]
+      questions:
+        - ask: Which meaning of "glass" is used in paragraph 1?
+          choices: ["a clear, hard material", a cup for drinking, a mirror on a wall]
+          evidence: Diego pressed his nose against the glass
+        - ask: Which meaning of "row" is used in paragraph 2?
+          choices: [a line of seats, to move a boat with oars, a noisy argument]
+          evidence: the seal splashed the front row
+        - ask: Write a sentence that uses "row" to mean moving a boat.
+          sample: We had to row the little boat across the lake.
+          evidence: the seal splashed the front row
+
+- id: b19-making-shadows
+  title: Making Shadows
+  kind: article
+  text: |
+    A shadow forms whenever an object blocks light. Light travels in straight lines, so it cannot
+    bend around a solid object like your body. The dark shape on the ground behind you is simply the
+    area where the sunlight could not reach.
+
+    The size and shape of a shadow can change during the day. In the early morning, when the sun is
+    low in the sky, you cast a long, stretched shadow. At noon, the sun is high overhead, and your
+    shadow shrinks to a small patch near your feet.
+
+    You can test this yourself with a flashlight in a dark room. Hold your hand near the flashlight,
+    and the shadow on the wall grows huge. Move your hand closer to the wall, and the shadow becomes
+    smaller and sharper. With a little practice, you can even make shadow puppets shaped like rabbits
+    and birds.
+  pages:
+    - focus: meanings
+      words: [blocks, light]
+      questions:
+        - ask: Which meaning of "blocks" is used in paragraph 1?
+          choices: [stops something from passing, toy cubes for building, sections of a city street]
+          evidence: so it cannot bend around a solid object like your body
+        - ask: Which meaning of "light" is used in paragraph 1?
+          choices: [brightness that lets us see, not heavy, pale in color]
+          evidence: Light travels in straight lines
+        - ask: Write a sentence that uses "light" to mean not heavy.
+          sample: My backpack felt light because I left my books at school.
+          evidence: A shadow forms whenever an object blocks light.
+    - focus: meanings
+      words: [cast, hold]
+      questions:
+        - ask: Which meaning of "cast" is used in paragraph 2?
+          choices: [to make a shadow appear, the actors in a play, a hard cover for a broken arm]
+          evidence: you cast a long, stretched shadow
+        - ask: Which meaning of "hold" is used in paragraph 3?
+          choices: [to keep in a certain place, a storage space in a ship, to wait on the phone]
+          evidence: Hold your hand near the flashlight
+        - ask: Write a sentence that uses "cast" to mean the actors in a play.
+          sample: The whole cast took a bow at the end of the show.
+          evidence: you cast a long, stretched shadow
+
+- id: b20-the-science-fair
+  title: The Science Fair
+  kind: story
+  text: |
+    For the school science fair, Lena wanted to show how dirty water can be cleaned. She built a
+    filter from a plastic bottle packed with layers of sand, gravel, and cotton. When she poured muddy
+    water in the top, clearer water slowly dripped out of the bottom.
+
+    On the day of the fair, Lena had to present her project to three judges. She was nervous, but
+    she explained each layer clearly. "The gravel catches the big bits of dirt, and the sand traps the
+    smaller ones," she said. One judge asked if the water was safe to drink. "No," Lena answered. "It
+    looks cleaner, but it still needs to be boiled."
+
+    At the end of the day, the judges handed out ribbons. Lena's friend Kai won first place for his
+    model of the solar system. Lena earned a blue ribbon for the clearest explanation, and she was
+    already planning next year's project.
+  pages:
+    - focus: meanings
+      words: [fair, present]
+      questions:
+        - ask: Which meaning of "fair" is used in paragraph 1?
+          choices: [an event where people show their work, treating everyone the same way, light in color]
+          evidence: For the school science fair, Lena wanted to show
+        - ask: Which meaning of "present" is used in paragraph 2?
+          choices: [to show and explain to others, a gift for someone, here and not away]
+          evidence: she explained each layer clearly
+        - ask: Write a sentence that uses "present" to mean a gift.
+          sample: I wrapped a present for my sister's birthday.
+          evidence: Lena had to present her project to three judges
+    - focus: meanings
+      words: [top, model]
+      questions:
+        - ask: Which meaning of "top" is used in paragraph 1?
+          choices: [the highest part, a toy that spins, a shirt or blouse]
+          evidence: she poured muddy water in the top
+        - ask: Which meaning of "model" is used in paragraph 3?
+          choices: [a small copy of something, a person who poses for photos, a perfect example to follow]
+          evidence: his model of the solar system
+        - ask: Write a sentence that uses "top" to mean a toy that spins.
+          sample: My little brother spun his wooden top on the kitchen floor.
+          evidence: she poured muddy water in the top

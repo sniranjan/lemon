@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% import "_reading.html.j2" as rd %}
+{% block style %}
+{{ rd.style() }}
+{% endblock %}
+{% block body %}
+{{ rd.passage(sheet.items[0], "Use the clues to work out the bold words.", "Use the clues to work out new bold words.") }}
+    <div class="card qs">
+{% for q in sheet.items[1:] %}
+{{ rd.question(q) }}
+{% endfor %}
+    </div>
+{% endblock %}

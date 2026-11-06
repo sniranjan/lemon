@@ -1,0 +1,117 @@
+subject: english
+level: R5
+title: Details, clue words, themes, figurative language and summaries
+# Our own level (source: ours), grade 5 reading for an on-pace 8-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md, Otters, sections as re-aimed by the audit). Public level name:
+# syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Every passage is original (content/passages/R5/<section>.yaml); similes, metaphors, idioms, adages and
+# proverbs are hand-checked in content/figurative/R5.yaml. Drafts and their approval:
+# syllabus/drafts/R5-passages.md (written by scripts/r5_drafts.py).
+# Standards checked on thecorestandards.org (2026-11-06).
+preview_pages: [1, 2, 51, 131]   # a whole two-page spread, a clue-words page, a figurative-language page
+aims:
+  - Find and quote details in 280–320-word nonfiction articles to answer questions (RI.5.1)
+  - Work out word meanings from context clues, and pick the right meaning of a multiple-meaning word (L.5.4a, L.5.5c)
+  - Find the theme of a story or fable from how its characters respond to a challenge (RL.5.2)
+  - Explain similes, metaphors, idioms, adages and proverbs in context (L.5.5a, L.5.5b)
+  - Sum up each paragraph of a text in one sentence (RI.5.2)
+  - Read passages at a grade 5 level (Flesch-Kincaid grade 4.5–6.5)
+pages: 200
+daily_pages: 2               # source: ours; one two-page spread (or two one-page passages) a day
+sct_minutes_per_page: [8, 12]  # source: ours (read the passage, then answer)
+rules:
+  # ws/passages.py plan_passages: pages take the section's passages in file order. One-page sections:
+  # a passage serves 2 pages (two question sets, the same text read on two days). Spread sections
+  # (rule `spread`): each passage takes a reading page, then a questions page.
+  planner: passages
+  answers: by_line
+  fk_grade: [4.5, 6.5]       # Flesch-Kincaid grade of every passage (ws/readability.py)
+  max_title: 24              # characters: the title stays on one line in the header
+  max_ask: 70                # characters: a question fits on one line at 20px (passage + questions pages)
+  max_choice: 44
+  passage_words: [130, 160]  # one-page sections: what fits above 3 questions at 20px
+  pages_per_passage: 2
+  questions_per_page: 3
+  written_answers: [1, 1]
+sections:
+  # Two-page spreads: a reading page (~300 words is what one Letter page holds at 20px), then 5 questions.
+  - code: A
+    name: Details in Nonfiction
+    public_name: Finding Details
+    pages: [1, 50]
+    sheet_types: [read_then_answer]
+    standards: [RI.5.1, RI.5.3, RI.5.10, RF.5.4a]
+    source: ours
+    rules:
+      passages: A
+      spread: true
+      passage_words: [280, 320]
+      questions_per_page: 5
+      written_answers: [2, 2]
+      max_ask: 120           # questions pages have room for questions on two lines
+      max_choice: 60
+
+  # Clue words in bold; the child works out what each means. Part 2: words with more than one meaning.
+  - code: B
+    name: Context Clues and Multiple Meanings
+    public_name: Clue Words
+    pages: [51, 90]
+    sheet_types: [clue_words]
+    standards: [L.5.4, L.5.4a, RF.5.4c]
+    source: ours
+    rules: { passages: B, marks: [2, 3] }
+    parts:
+      - { part: 1, pages: [51, 70], name: Clues in the sentence }
+      - { part: 2, pages: [71, 90], name: Words with two meanings, standards: [L.5.5c],
+          rules: { tips: { clue_words: [
+            "Ask: what else can this word mean? Make a sentence for each.",
+            "Try each meaning in the sentence. Which one makes sense?",
+            "Hunt for words with two meanings at home: bat, ring, park." ] } } }
+
+  # Stories and fables; the questions page asks how a character meets a challenge and what that teaches.
+  - code: C
+    name: Theme
+    public_name: What's the Lesson?
+    pages: [91, 130]
+    sheet_types: [read_then_answer]
+    standards: [RL.5.2, RL.5.1]
+    source: ours
+    rules:
+      passages: C
+      spread: true
+      passage_words: [260, 320]
+      questions_per_page: 5
+      written_answers: [2, 2]
+      max_ask: 120
+      max_choice: 60
+      tips:
+        read_then_answer:
+          - "Ask: what was hard for the main character? What did they do?"
+          - "Talk about the lesson. When could it help someone you know?"
+          - "Ask which part of the story shows the lesson best, and why."
+
+  # The bold words are similes, metaphors, idioms, adages and proverbs from content/figurative/R5.yaml.
+  - code: D
+    name: Figurative Language
+    public_name: Like a Picture
+    pages: [131, 160]
+    sheet_types: [figurative_language]
+    standards: [L.5.5a, RL.5.4]
+    source: ours
+    rules: { passages: D, marks: [2, 3] }
+    parts:
+      - { part: 1, pages: [131, 140], name: Similes and metaphors, rules: { kinds: [simile, metaphor] } }
+      - { part: 2, pages: [141, 150], name: Idioms and sayings, standards: [L.5.5b],
+          rules: { kinds: [idiom, adage, proverb] } }
+      - { part: 3, pages: [151, 160], name: All kinds, standards: [L.5.5b],
+          rules: { kinds: [simile, metaphor, idiom, adage, proverb, personification, hyperbole] } }
+
+  # Three numbered paragraphs; first pick the best one-sentence summary, then write your own.
+  - code: E
+    name: Summarizing Paragraphs
+    public_name: Paragraph Summaries
+    pages: [161, 200]
+    sheet_types: [paragraph_summary]
+    standards: [RI.5.2, RL.5.2]
+    source: ours
+    rules: { passages: E, paragraphs: 3, written_answers: [1, 2], passage_words: [115, 145], max_choice: 64 }

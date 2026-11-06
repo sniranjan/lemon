@@ -1,0 +1,1191 @@
+# Otters Reading, section A "Finding Details" (pages 1–50): details in nonfiction (RI.5.1, RI.5.3).
+# Original articles (ours), well-established facts only. Schema: ws/passages.py. Each article is a
+# two-page spread: a reading page (the article, numbered paragraphs), then a questions page with one
+# question set of 5 questions (3 multiple choice, 2 written). Multiple choice: `choices` (3, the first
+# is right; the sheet shuffles them). Written: `sample`. `evidence`: words copied exactly from the text;
+# a question that names "paragraph N" must find its evidence in that paragraph.
+
+- id: a01-sea-otter-coats
+  title: How Sea Otters Stay Warm
+  kind: article
+  text: |
+    Sea otters live in the chilly coastal waters of the northern Pacific Ocean. Most sea mammals, such
+    as whales and seals, are protected from the cold by a thick layer of fat called blubber. Sea otters
+    have almost no blubber at all. Instead, they depend on their remarkable fur.
+
+    A sea otter's fur is thicker than the fur of any other animal on Earth. On a single square inch of
+    its skin, an otter can have as many as one million hairs. That is more hairs than most people have
+    on their entire head. The fur grows in two layers. Long outer hairs keep the water away, while the
+    soft, short hairs underneath trap a layer of air next to the skin. That trapped air works like a
+    warm blanket.
+
+    The coat only works when it is clean, so sea otters spend hours every day grooming. They rub,
+    scrub, and comb their fur with their paws. They even roll over and over in the water and blow
+    air into their fur to fluff it up. A dirty, matted coat would let cold water reach the skin.
+
+    Staying warm also takes a lot of energy. To keep their bodies burning like little furnaces, sea
+    otters eat about a quarter of their own weight in food every day. They dive for crabs, clams,
+    sea urchins, and other creatures. A sea otter often floats on its back and uses its belly as a
+    table. Sometimes it cracks open a hard shell by banging it against a rock balanced on its chest.
+
+    When it is time to rest, a sea otter may wrap itself in long strands of kelp, a kind of seaweed.
+    The kelp keeps the sleeping otter from drifting away while it floats.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, what keeps most sea mammals warm?
+          choices: [a thick layer of fat called blubber, a coat of very long and oily fur, the warm water near the coast]
+          evidence: protected from the cold by a thick layer of fat called blubber
+        - ask: What does the short, soft underfur do?
+          choices: [It traps a layer of air next to the skin., It keeps the otter from sinking too deep., It helps the otter crack open shells.]
+          evidence: the soft, short hairs underneath trap a layer of air next to the skin
+        - ask: Why do sea otters need to eat so much food every day?
+          choices: [Staying warm takes a lot of energy., Their food is very small., They cannot find food in winter.]
+          evidence: Staying warm also takes a lot of energy.
+        - ask: Why does a sea otter spend hours grooming? Use a detail from paragraph 3.
+          sample: A sea otter grooms because its coat only works when it is clean. A dirty, matted coat would let cold water reach the skin.
+          evidence: A dirty, matted coat would let cold water reach the skin.
+        - ask: Copy the sentence from paragraph 5 that tells why an otter wraps itself in kelp.
+          sample: The kelp keeps the sleeping otter from drifting away while it floats.
+          evidence: The kelp keeps the sleeping otter from drifting away while it floats.
+
+- id: a02-bees-honey
+  title: How Bees Make Honey
+  kind: article
+  text: |
+    On a warm summer morning, thousands of worker bees leave their hive and fly from flower to
+    flower. They are searching for nectar, a sweet, watery liquid that flowers make deep inside
+    their blossoms. A bee sips the nectar through its long, strawlike tongue and stores it in a
+    special pouch called a honey stomach.
+
+    When its honey stomach is full, the bee returns to the hive. There it passes the nectar to a
+    younger worker that stays inside. The younger bee chews the nectar and mixes it with natural
+    chemicals from its own body. These chemicals slowly change the nectar, breaking it down into
+    simpler sugars.
+
+    Next, the bees need a place to store the nectar. Worker bees make wax from tiny glands on the
+    underside of their bodies. They shape the wax into honeycomb, which is made of rows of
+    six-sided cells that fit together without any wasted space. The bees spread the nectar into
+    these little wax cells.
+
+    Fresh nectar is still much too watery to be honey. To dry it out, the bees fan their wings
+    rapidly over the cells. The moving air carries the extra water away, the same way a breeze
+    dries wet laundry hanging on a line. Slowly, the thin nectar turns into thick, sticky honey.
+    When the honey is ready, the bees seal each cell with a tight cap of fresh wax.
+
+    Why do bees work so hard? Honey is their food supply for the cold winter months, when no
+    flowers are blooming. A strong colony may store far more honey than it needs. Beekeepers
+    carefully collect some of that extra honey, always leaving plenty behind for the bees.
+
+    The next time you spread honey on your toast, remember the busy insects that visited a great
+    many flowers to make every golden drop.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, where does a bee store the nectar it sips?
+          choices: [in a pouch called a honey stomach, in a tiny basket on its back legs, deep inside the center of the flower]
+          evidence: stores it in a special pouch called a honey stomach
+        - ask: Copy the sentence from paragraph 4 that tells how bees dry out the nectar.
+          sample: To dry it out, the bees fan their wings rapidly over the cells.
+          evidence: To dry it out, the bees fan their wings rapidly over the cells.
+        - ask: In paragraph 2, what happens because the younger bee mixes chemicals into the nectar?
+          choices: [The nectar breaks down into simpler sugars., The nectar turns into hard wax right away., The nectar becomes cold and thick as ice.]
+          evidence: These chemicals slowly change the nectar, breaking it down into simpler sugars.
+        - ask: Why do bees need to store honey? Use a detail from the article.
+          sample: Bees store honey because it is their food for the cold winter months, when no flowers are blooming.
+          evidence: Honey is their food supply for the cold winter months, when no flowers are blooming.
+        - ask: What do the bees do when the honey is ready?
+          choices: [They seal each cell with a cap of wax., They carry it back out to the flowers., They fan it until it turns into wax.]
+          evidence: the bees seal each cell with a tight cap of fresh wax
+
+- id: a03-water-cycle
+  title: The Water Cycle
+  kind: article
+  text: |
+    The water in your glass may be very old. It might once have floated in a cloud over a distant
+    mountain or flowed down a river long before you were born. Our planet does not create much new water.
+    Instead, the same water moves around the Earth again and again in a path called the water
+    cycle.
+
+    The cycle is powered by the sun. When sunlight warms oceans, lakes, and puddles, some of the
+    water turns into an invisible gas called water vapor. This change is called evaporation. The
+    vapor rises into the sky with the warm air, and water also evaporates from damp soil and from
+    the leaves of plants.
+
+    High above the ground, the air is much cooler. As water vapor cools, it changes back into tiny
+    drops of liquid water. This step is called condensation. Billions of these tiny drops gather
+    together to form clouds. You can observe condensation in your own kitchen, too. On a hot day, drops of water
+    form on the outside of a glass of ice water.
+
+    Inside a cloud, the tiny drops bump into each other and join to make bigger drops. When the
+    drops become too heavy to float, they fall back to Earth. Water that falls from the sky is
+    called precipitation. It may be rain, snow, sleet, or hail, depending on how cold the air is.
+
+    Finally, the water collects on the ground. Some of it soaks into the soil, where plant roots
+    can reach it. Some flows into streams and rivers that carry it back to lakes and oceans. Some
+    freezes into ice on tall mountains and stays there for a long time. This step is called
+    collection.
+
+    Then the sun warms the water once more, and the whole cycle begins again. Each raindrop that
+    taps on your window is part of a journey that never really ends.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what gives the water cycle its power?
+          choices: [the sun, the wind, the moon]
+          evidence: The cycle is powered by the sun.
+        - ask: In paragraph 3, what causes water vapor to change back into tiny drops of water?
+          choices: [The vapor cools high in the sky., The vapor is warmed by the sun., The vapor sinks into the soil.]
+          evidence: As water vapor cools, it changes back into tiny drops of liquid water.
+        - ask: Give two kinds of precipitation that the article names.
+          sample: Two kinds of precipitation are rain and snow.
+          evidence: It may be rain, snow, sleet, or hail
+        - ask: Why does rain fall out of a cloud?
+          choices: [The drops become too heavy to float., The cloud grows too warm to hold them., The wind pushes the drops down.]
+          evidence: When the drops become too heavy to float, they fall back to Earth.
+        - ask: In paragraph 5, what are two places the water goes after it lands on the ground?
+          sample: Some of the water soaks into the soil, and some flows into streams and rivers.
+          evidence: Some of it soaks into the soil, where plant roots can reach it.
+
+- id: a04-lighthouses
+  title: Lights by the Sea
+  kind: article
+  text: |
+    For hundreds of years, sailors have faced a serious problem at night. In the darkness, it is
+    hard to see rocky coasts, sandbars, and other dangers hidden near the shore. A ship that sails
+    too close could run aground and be stuck or damaged. To keep sailors safe, people built tall
+    towers with bright lights at the top. These towers are called lighthouses.
+
+    A lighthouse does two important jobs. It warns ships to stay away from dangerous places, and
+    it helps guide them safely into harbors. Each lighthouse has its own pattern of flashes, such
+    as one long flash or two quick ones. By counting the flashes, sailors can tell exactly which
+    lighthouse they are seeing. In the daytime, many lighthouses are painted with stripes or bold
+    colors so that sailors can recognize them.
+
+    Early lighthouses used fires or candles, but their light did not reach very far. In the 1820s,
+    a French scientist named Augustin Fresnel designed a new kind of lens. It was made of many
+    rings of curved glass arranged around the lamp. The rings bent the light and gathered it into
+    one powerful beam. A ship far out at sea could now spot the light from miles away.
+
+    Long ago, every lighthouse needed a keeper. Keepers often lived in a small house beside the
+    tower with their families. Each evening they climbed the winding stairs to light the lamp.
+    Through the night, they kept it burning, trimmed the wicks, and wound the machine that turned
+    the lens. In the morning, they polished the glass so it would shine brightly again.
+
+    Today, most lighthouses run on their own. Electric lights switch on automatically when the sky
+    grows dark, so keepers are no longer needed. Still, many lighthouses keep shining, and visitors love to climb them and gaze out
+    over the sea.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, how can sailors tell which lighthouse they are seeing at night?
+          choices: [by counting its flashes, by the color of its stripes, by the shape of its tower]
+          evidence: By counting the flashes, sailors can tell exactly which lighthouse they are seeing.
+        - ask: What was one job a lighthouse keeper did each morning?
+          choices: [polished the glass, painted the tower, rowed out to the ships]
+          evidence: In the morning, they polished the glass so it would shine brightly again.
+        - ask: Give two details from paragraph 4 about the work of a lighthouse keeper.
+          sample: Keepers climbed the stairs each evening to light the lamp. They also wound the machine that turned the lens.
+          evidence: Each evening they climbed the winding stairs to light the lamp.
+        - ask: How did the Fresnel lens change what sailors could see? Use a detail from paragraph 3.
+          sample: The lens gathered the light into one powerful beam, so ships could spot it from miles away.
+          evidence: A ship far out at sea could now spot the light from miles away.
+        - ask: In paragraph 5, why are keepers no longer needed?
+          choices: [Electric lights switch on by themselves., Ships no longer sail anywhere at night., All of the towers have been closed down.]
+          evidence: Electric lights switch on automatically when the sky grows dark, so keepers are no longer needed.
+
+- id: a05-hawaii-volcanoes
+  title: Islands from Fire
+  kind: article
+  text: |
+    The Hawaiian Islands sit in the middle of the Pacific Ocean, thousands of miles from any
+    continent. Their sandy beaches and green mountains make them look as if they have always been
+    there. Yet every one of these islands was built by volcanoes that began deep under the
+    sea.
+
+    Far beneath the Pacific Ocean, there is a spot where melted rock, called magma, rises up from
+    deep inside the Earth. Scientists call this place a hot spot. The magma pushes up through
+    cracks in the ocean floor. When it bursts out, it is called lava. In the cold seawater, the
+    lava quickly cools and hardens into new rock.
+
+    Each time the volcano erupts, another layer of rock piles on top of the last one. Slowly, the
+    underwater mountain grows taller and taller. After many thousands of years, its
+    top finally rises above the waves. A brand-new island is born.
+
+    The hot spot stays in the same place, but the ocean floor above it does not. The huge slab of
+    rock that forms the floor of the Pacific moves slowly to the northwest, only a few inches each
+    year. As it moves, it carries each island away from the hot spot. Without fresh magma, that
+    volcano grows quiet. Then a new volcano begins to form over the hot spot.
+
+    This slow movement explains why the islands form a long chain. The islands in the northwest
+    are the oldest. Wind and rain have worn them down for millions of years, so they are lower and
+    covered with deep valleys. The Island of Hawaii, often called the Big Island, is the youngest.
+    It sits over the hot spot today, and its volcanoes still send out glowing lava.
+
+    Southeast of the Big Island, a new volcano is growing on the sea
+    floor. Someday, far in the future, it may become the next Hawaiian island.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what happens to lava when it meets the cold seawater?
+          choices: [It cools and hardens into new rock., It turns into steam and floats away., It sinks back into the Earth.]
+          evidence: In the cold seawater, the lava quickly cools and hardens into new rock.
+        - ask: How does an underwater volcano finally become an island? Use a detail from paragraph 3.
+          sample: Layer after layer of rock piles up until the top of the mountain rises above the waves.
+          evidence: Each time the volcano erupts, another layer of rock piles on top of the last one.
+        - ask: Why does a volcano grow quiet after it moves away from the hot spot?
+          choices: [It no longer gets fresh magma., The seawater puts out its fire., Its top rises too high.]
+          evidence: Without fresh magma, that volcano grows quiet.
+        - ask: In paragraph 5, why are the northwest islands lower than the Big Island?
+          choices: [Wind and rain have worn them down., They were built by smaller volcanoes., The ocean has risen around them.]
+          evidence: Wind and rain have worn them down for millions of years, so they are lower
+        - ask: Copy the sentence from paragraph 6 that tells what may happen someday.
+          sample: Someday, far in the future, it may become the next Hawaiian island.
+          evidence: Someday, far in the future, it may become the next Hawaiian island.
+
+- id: a06-monarch-journey
+  title: The Monarch Journey
+  kind: article
+  text: |
+    Every fall, millions of orange and black monarch butterflies begin an amazing journey. Monarchs
+    from the eastern part of North America fly south, some traveling as far as three thousand
+    miles. They are heading for cool, misty mountain forests in central Mexico.
+
+    Monarchs make this trip because they cannot survive a cold northern winter. In the Mexican
+    mountains, the weather stays cool but not freezing. The butterflies cluster together on the
+    trunks and branches of tall fir trees. So many of them gather that the branches seem to be
+    covered with orange leaves. The cool air helps the monarchs rest quietly and save their
+    energy until spring.
+
+    When the days grow warmer, the monarchs start flying north again. Along the way, the females
+    look for a plant called milkweed. Milkweed is the only plant that monarch caterpillars can eat,
+    so the mother butterflies lay their tiny eggs on its leaves. When the caterpillars hatch, they
+    munch the milkweed and grow quickly. Each one then forms a hard case called a chrysalis. Inside
+    it, the caterpillar changes into a butterfly.
+
+    Here is the most surprising part. The butterflies that leave Mexico in spring never reach the
+    far north themselves. Instead, their children and grandchildren continue the trip. A summer
+    monarch lives for only a few weeks, so it usually takes three or four generations to travel
+    all the way north.
+
+    The last generation born in late summer is special. These butterflies live for many months,
+    much longer than their parents did. They are the ones that fly all the way to Mexico in the
+    fall. None of them has ever made the trip before. Yet somehow they find the same forests that
+    their great-great-grandparents left.
+
+    Scientists are still studying how monarchs find their way. Meanwhile, many families help by
+    planting milkweed in their gardens.
+  pages:
+    - focus: details
+      questions:
+        - ask: Copy the sentence from paragraph 2 that tells why monarchs fly to Mexico for the winter.
+          sample: Monarchs make this trip because they cannot survive a cold northern winter.
+          evidence: Monarchs make this trip because they cannot survive a cold northern winter.
+        - ask: According to paragraph 3, why do mother monarchs lay their eggs on milkweed?
+          choices: [It is the only plant the caterpillars eat., Its leaves keep the eggs warm in winter., It grows only in the mountains of Mexico.]
+          evidence: Milkweed is the only plant that monarch caterpillars can eat
+        - ask: According to paragraph 4, why does the trip north take three or four generations?
+          choices: [A summer monarch lives only a few weeks., The butterflies stop to rest all summer., The wind blows them back to Mexico.]
+          evidence: A summer monarch lives for only a few weeks, so it usually takes three or four generations
+        - ask: How can families help monarch butterflies? Use a detail from the article.
+          sample: Families can help monarchs by planting milkweed in their gardens.
+          evidence: many families help by planting milkweed in their gardens
+        - ask: What makes the last generation of the summer special?
+          choices: [They live for many months., They are bigger than the others., They never lay any eggs.]
+          evidence: These butterflies live for many months, much longer than their parents did.
+
+- id: a07-first-paper
+  title: The First Paper
+  kind: article
+  text: |
+    Think about how often you use paper. You read books, draw pictures, and write notes to friends.
+    Yet for most of human history, there was no paper at all. Paper as we know it was invented in
+    ancient China about two thousand years ago.
+
+    Before paper, Chinese writers had two main choices, and neither was perfect. Many wrote on
+    thin strips of bamboo tied together with string. Bamboo was strong, but a long book made of
+    strips was very heavy and bulky. Other writers used silk, a smooth cloth. Silk was light and
+    easy to roll up, but it cost so much that only wealthy people could afford it.
+
+    People needed something that was both light and cheap. A court official named Cai Lun is often
+    given credit for improving the way paper was made. He and other papermakers tried using
+    materials that were easy to find, such as the inner bark of mulberry trees, old rags, hemp
+    plants, and even worn-out fishing nets.
+
+    Making paper took patience. Workers soaked the materials in water and pounded them until they
+    became a soft, mushy pulp. Next, they dipped a flat screen into the pulp and lifted it out. The
+    water dripped through the screen, leaving a thin layer of fibers on top. When this layer dried
+    in the sun, it became a sheet of paper.
+
+    The new paper was light, smooth, and inexpensive, so it quickly became popular in China. For
+    hundreds of years, the Chinese kept their method mostly to themselves. Slowly, though, the
+    secret spread to Korea and Japan, and later west to the Middle East. It took more than a
+    thousand years for papermaking to reach Europe.
+
+    Today, factories make paper mostly from wood, using huge machines. Yet the basic idea of
+    turning plant fibers into a thin, flat sheet is the same one discovered in China long ago.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what was the problem with books made of bamboo strips?
+          choices: [They were very heavy and bulky., They cost too much money to make., They tore apart too easily.]
+          evidence: a long book made of strips was very heavy and bulky
+        - ask: Give two materials from paragraph 3 that early papermakers used.
+          sample: Early papermakers used the inner bark of mulberry trees and old rags.
+          evidence: the inner bark of mulberry trees, old rags, hemp plants, and even worn-out fishing nets
+        - ask: Why did only wealthy people write on silk?
+          choices: [It cost a lot of money., It was too heavy to carry., It was hard to find in China.]
+          evidence: it cost so much that only wealthy people could afford it
+        - ask: In paragraph 4, what happened when the thin layer of fibers dried in the sun?
+          sample: When the layer of fibers dried in the sun, it became a sheet of paper.
+          evidence: When this layer dried in the sun, it became a sheet of paper.
+        - ask: Why did paper quickly become popular in China?
+          choices: ["It was light, smooth, and cheap.", It came in many bright colors., It was made by huge machines.]
+          evidence: The new paper was light, smooth, and inexpensive, so it quickly became popular in China.
+
+- id: a08-emperor-penguins
+  title: Penguin Dads on Duty
+  kind: article
+  text: |
+    Emperor penguins are the largest penguins in the world. They live in Antarctica, the coldest
+    place on Earth. Most animals that live there raise their young during the short summer. Emperor
+    penguins do something surprising. They lay their eggs at the start of the long, dark Antarctic
+    winter.
+
+    In the fall, thousands of emperor penguins walk across the ice to their nesting area, far from
+    the open sea. Each mother lays a single egg. Then she carefully passes the egg to the father.
+    He must not let it touch the frozen ground, or the chick inside would become too cold. After
+    that, the mother walks back to the ocean to eat and build up her strength.
+
+    Now the father's job begins. He balances the egg on top of his feet. A warm fold of feathered
+    skin, called a brood pouch, covers the egg like a cozy blanket. For about two months, he stands
+    and waits through icy winds and endless darkness. During this whole time, he does not eat a
+    single meal.
+
+    To survive the bitter cold, the fathers crowd together in a tight group called a huddle.
+    Hundreds or even thousands of penguins stand side by side, sharing their body heat. The
+    penguins in the middle stay the warmest. Slowly, the whole huddle shifts and shuffles, so each
+    bird takes a turn on the chilly outside edge and a turn in the warm center.
+
+    When the chick finally hatches, the father may feed it a milky food from his throat. Soon
+    afterward, the mother returns from the sea with her belly full of fish. She takes over caring
+    for the chick, and the hungry father heads off to the ocean for his own long meal.
+
+    Together, the two parents take turns feeding their fluffy gray chick until it is ready to swim
+    on its own.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, how are emperor penguins different from most Antarctic animals?
+          choices: [They lay eggs at the start of winter., They raise their young in the summer., They live far away from the ice.]
+          evidence: They lay their eggs at the start of the long, dark Antarctic winter.
+        - ask: In paragraph 3, what covers the egg while the father holds it?
+          choices: [a fold of skin called a brood pouch, a nest made of small stones and snow, a soft wing that the mother holds out]
+          evidence: A warm fold of feathered skin, called a brood pouch, covers the egg
+        - ask: Why must the father keep the egg off the frozen ground? Use a detail from paragraph 2.
+          sample: The father must keep the egg off the ground, or the chick inside would become too cold.
+          evidence: He must not let it touch the frozen ground, or the chick inside would become too cold.
+        - ask: How does a huddle help the penguins survive the cold?
+          choices: [They share their body heat., They block the snow with their wings., They take turns going to sea.]
+          evidence: Hundreds or even thousands of penguins stand side by side, sharing their body heat.
+        - ask: What happens after the mother comes back from the sea? Give two details.
+          sample: The mother takes over caring for the chick. Then the hungry father goes to the ocean to eat.
+          evidence: She takes over caring for the chick, and the hungry father heads off to the ocean
+
+- id: a09-plant-food
+  title: How Plants Eat
+  kind: article
+  text: |
+    You eat breakfast, lunch, and dinner to give your body energy. Plants need energy too, but they
+    cannot walk to a kitchen or a grocery store. Instead, green plants make their own food. To do
+    this, a plant needs three things: water, air, and sunlight.
+
+    A plant gets its water from the soil. Its roots spread out underground, and tiny hairs on the
+    roots soak up water along with minerals. Roots also hold the plant firmly in place, so wind and
+    rain do not knock it over.
+
+    From the roots, the water travels up through the stem. Inside the stem are many thin tubes that
+    work like drinking straws. They carry water up to the branches and leaves. Other tubes carry
+    food from the leaves down to the rest of the plant.
+
+    The leaves are the plant's food factories. They contain a green material called chlorophyll,
+    which captures energy from sunlight. Leaves also take in a gas from the air called carbon
+    dioxide. It enters through tiny openings, mostly on the underside of each leaf. Using the
+    sunlight's energy, the leaf combines water and carbon dioxide to make sugar. This sugar is the
+    plant's food. The process is called photosynthesis. As the plant makes food, it also releases
+    oxygen, the gas that people and animals need to breathe.
+
+    Not all the water stays in the plant. Some of it escapes through the tiny openings in the
+    leaves and drifts into the air as vapor. As water escapes from the leaves, it helps pull more
+    water up from the roots, like sipping through a long straw.
+
+    So the next time you see a tall tree or a sunflower, remember that it is quietly making its own
+    lunch. At the same time, it is sharing fresh oxygen with the people and animals around it.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, what three things does a plant need to make food?
+          choices: ["water, air, and sunlight", "soil, rocks, and rain", "seeds, flowers, and wind"]
+          evidence: "a plant needs three things: water, air, and sunlight"
+        - ask: Give two jobs that roots do for a plant.
+          sample: Roots soak up water from the soil, and they hold the plant firmly in place.
+          evidence: Roots also hold the plant firmly in place, so wind and rain do not knock it over.
+        - ask: In paragraph 3, how do the tubes in a stem work?
+          choices: [like drinking straws, like tiny fans, like warm blankets]
+          evidence: Inside the stem are many thin tubes that work like drinking straws.
+        - ask: Copy the sentence from paragraph 4 that tells what the sugar is for.
+          sample: This sugar is the plant's food.
+          evidence: This sugar is the plant's food.
+        - ask: How does water leaving the leaves help the rest of the plant?
+          choices: [It helps pull more water up from the roots., It keeps the leaves from turning green., It carries sugar down into the roots below.]
+          evidence: As water escapes from the leaves, it helps pull more water up from the roots
+
+- id: a10-moon-phases
+  title: The Changing Moon
+  kind: article
+  text: |
+    Some nights the Moon looks like a big, round silver plate. On other nights it is only a thin
+    curve, and on some nights you cannot see it at all. The Moon itself
+    never actually changes its shape. It only seems to change because of the way sunlight falls on it.
+
+    The Moon does not produce any light of its own. It is an enormous ball of rock, and it shines
+    because it reflects light from the sun, much like a mirror. At every moment, sunlight
+    illuminates one half of the Moon, while the opposite half remains in darkness.
+
+    The Moon travels around the Earth on a curved path called an orbit. As it moves, we observe different amounts of its sunny half. Astronomers
+    call these changing shapes the phases of the Moon.
+
+    When the Moon is between the Earth and the sun, its bright side faces away from us. We see
+    only the darkened side, so the Moon seems to disappear completely. This is called a new moon.
+    A few days later, a narrow sliver of light appears, and this shape is called a
+    crescent. Night after night, the illuminated part grows larger. About a week after the new
+    moon, we can see half of the Moon's face lit up, a phase known as the first quarter.
+
+    About two weeks after the new moon, the Moon reaches the far side of the Earth from the sun.
+    Now its entire sunny side faces us, and we enjoy a full moon. After that, the bright portion
+    gradually shrinks until the Moon disappears again.
+
+    The whole pattern, from one new moon to the next, takes about a month. In fact, the
+    word "month" comes from the word "moon." Long ago, many people used the Moon's phases as a
+    calendar to keep track of time. Tonight, step outside and see which phase you can
+    find.
+  pages:
+    - focus: details
+      questions:
+        - ask: Copy the sentence from paragraph 1 that tells why the Moon seems to change shape.
+          sample: It only seems to change because of the way sunlight falls on it.
+          evidence: It only seems to change because of the way sunlight falls on it.
+        - ask: According to paragraph 2, why does the Moon shine?
+          choices: [It reflects light from the sun., It is made of burning gas like a star., It glows from heat deep inside.]
+          evidence: it shines because it reflects light from the sun, much like a mirror
+        - ask: In paragraph 4, why does the Moon seem to disappear at the new moon?
+          choices: [Its bright side faces away from us., Clouds always cover it then., It moves too far from the Earth.]
+          evidence: When the Moon is between the Earth and the sun, its bright side faces away from us.
+        - ask: How did people long ago use the Moon? Use a detail from paragraph 6.
+          sample: People long ago used the Moon's phases as a calendar to keep track of time.
+          evidence: people used the Moon's phases as a calendar to keep track of time
+        - ask: How long does it take to go from one new moon to the next?
+          choices: [about a month, about a week, about a year]
+          evidence: The whole pattern, from one new moon to the next, takes about a month.
+
+- id: a11-beaver-builders
+  title: Busy Beaver Builders
+  kind: article
+  text: |
+    Beavers are some of the most skillful builders in the animal world. Using only their teeth,
+    paws, and tails, these furry animals can change a whole stream into a quiet pond. Nature has given
+    them special tools that help them accomplish this difficult work.
+
+    A beaver's most important tools are its four large front teeth. These teeth are bright orange
+    on the front and very sharp. Beavers use them to gnaw through tree trunks and chew branches
+    into pieces. All that chewing would wear down ordinary teeth, but a beaver's front teeth never
+    stop growing. Gnawing on wood keeps them at just the right length.
+
+    Beavers construct dams across flowing streams to create their ponds. First they drag branches and logs into the water. Then they
+    pack the spaces with mud, stones, and plants. Water piles up behind the dam and spreads out to
+    form a pond. If the dam springs a leak, the beavers quickly patch it. Some families add to the
+    same dam for many years.
+
+    Why do beavers want a pond? Deep water helps keep them safe from predators. In the middle of the pond, a
+    beaver family builds its home, called a lodge. A lodge looks like a big, rounded pile of
+    sticks and mud. The entrances are hidden underwater, so other animals cannot easily get in.
+    Inside, above the waterline, there is a dry room where the family sleeps and raises its babies.
+
+    In the fall, beavers get ready for winter. They store branches in the mud at the bottom of the
+    pond. When ice covers the top, the beavers swim out through their underwater doors and nibble
+    the bark of their stored branches.
+
+    Beaver ponds help many other creatures, too. Fish, frogs, ducks, and turtles all find homes in
+    the calm water. By building for their own families, beavers create a whole new neighborhood.
+  pages:
+    - focus: details
+      questions:
+        - ask: In paragraph 3, what happens because the beavers build a dam?
+          sample: Water piles up behind the dam and spreads out to form a pond.
+          evidence: Water piles up behind the dam and spreads out to form a pond.
+        - ask: According to paragraph 2, why don't a beaver's front teeth wear down?
+          choices: [They never stop growing., They are covered with mud., Beavers only chew soft plants.]
+          evidence: a beaver's front teeth never stop growing
+        - ask: Why are the doors of a lodge hidden underwater?
+          choices: [So other animals cannot easily get in., So the lodge stays warm and dry inside., So the babies can learn to swim early.]
+          evidence: The entrances are hidden underwater, so other animals cannot easily get in.
+        - ask: Give two animals from paragraph 6 that find homes in beaver ponds.
+          sample: Frogs and ducks find homes in beaver ponds.
+          evidence: Fish, frogs, ducks, and turtles all find homes in the calm water.
+        - ask: What do beavers eat when ice covers the pond?
+          choices: [bark from branches stored in the mud, fish that they catch under the ice, leaves they keep inside the lodge]
+          evidence: nibble the bark of their stored branches
+
+- id: a12-louis-braille
+  title: Reading with Fingertips
+  kind: article
+  text: |
+    Louis Braille was born in a small village in France in 1809. When he was a very young boy, he
+    had an accident in his father's workshop. An infection followed, and by the age of five he had
+    lost his sight. Louis was bright and curious, and he still wanted very much to
+    learn.
+
+    When Louis was ten, he went to a special school for blind children in Paris. The school had a
+    few books, but they were not easy to use. Each page was printed with large raised letters that
+    students traced with their fingers. The books were huge and heavy, and reading them was very
+    slow. Louis wished he could read as quickly as sighted people did.
+
+    One day, a visitor named Charles Barbier came to the school. He had invented a code of raised
+    dots that could be read by touch in the dark. His code was clever, but it was also complicated.
+    Some letters needed so many dots that one fingertip could not feel them all at once.
+
+    Louis decided to make a better system. He worked on it patiently for several years.
+    By the time he was about fifteen, he had finished it. Every letter fit into a small space
+    called a cell. Each cell had room for six dots, arranged in two columns of three. By raising
+    different dots, Louis could make every letter of the alphabet, as well as numbers and marks
+    for punctuation. Because a cell was so small, a reader could feel a whole letter with one
+    touch.
+
+    Louis grew up to become a teacher at the same school. His students loved the raised-dot
+    alphabet because it let them read and write on their own.
+
+    Today, his system is called braille, in his honor. People all over the world use it to read
+    books, signs, and even the buttons in elevators.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, why were the books at the school hard to use?
+          choices: ["They were huge, heavy, and slow to read.", They had no pictures to explain words., They were in a different language.]
+          evidence: The books were huge and heavy, and reading them was very slow.
+        - ask: What was the problem with Charles Barbier's code? Use a detail from paragraph 3.
+          sample: Some letters needed so many dots that one fingertip could not feel them all at once.
+          evidence: Some letters needed so many dots that one fingertip could not feel them all at once.
+        - ask: In paragraph 4, how many dots fit in one braille cell?
+          choices: [six, three, ten]
+          evidence: Each cell had room for six dots, arranged in two columns of three.
+        - ask: Copy the sentence from paragraph 4 that tells why a reader could feel a letter with one touch.
+          sample: Because a cell was so small, a reader could feel a whole letter with one touch.
+          evidence: Because a cell was so small, a reader could feel a whole letter with one touch.
+        - ask: Why did Louis's students love the raised-dot alphabet?
+          choices: [It let them read and write on their own., It made their books bigger and heavier., It came with lots of pictures to feel.]
+          evidence: it let them read and write on their own
+
+- id: a13-coral-reefs
+  title: Cities Under the Sea
+  kind: article
+  text: |
+    A coral reef can look like a colorful underwater garden full of rocks and plants. But a coral
+    reef is not a garden at all. Corals are actually animals, and the reef is built by millions of
+    them working together over a very long time.
+
+    Each coral is made of tiny creatures called polyps. A polyp has a soft, tube-shaped body with a
+    ring of tentacles around its mouth. Most polyps are smaller than a pencil eraser. To protect its
+    soft body, each polyp builds a hard cup of stone around itself. Thousands of polyps live side by
+    side, joined together in a group called a colony.
+
+    When polyps grow old and their lives end, their stony cups remain. New polyps build on top of
+    them. Layer by layer, over hundreds and even thousands of years, the hard cups pile up into a
+    giant reef. Some reefs stretch for many miles along a coast.
+
+    Corals need just the right conditions to grow. Most reef-building corals live in warm, clear,
+    shallow ocean water. The reason is surprising. Inside each polyp live tiny plantlike partners
+    called algae. Like plants, these algae need sunlight to make food, and they share some of
+    that food with the coral. Sunlight cannot reach deep or muddy water, so corals there would go
+    hungry. The algae also give many corals their bright colors.
+
+    A healthy reef is like a busy city. Its cracks, caves, and branches give shelter to thousands of
+    kinds of sea creatures. Bright fish dart in and out of the coral. Crabs, sea stars, octopuses,
+    and sea turtles also find food and hiding places there.
+
+    Because reefs grow so slowly, people around the world are working to protect them. Divers and
+    scientists help keep the water clean and clear, so the reefs can keep growing for years to come.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, what are corals?
+          choices: [animals, plants, rocks]
+          evidence: Corals are actually animals, and the reef is built by millions of them
+        - ask: In paragraph 2, why does each polyp build a hard cup of stone?
+          choices: [to protect its soft body, to catch fish to eat, to hold its algae partners]
+          evidence: To protect its soft body, each polyp builds a hard cup of stone around itself.
+        - ask: How does a giant reef form over time? Use a detail from paragraph 3.
+          sample: New polyps build on top of old stony cups, and the cups pile up layer by layer into a reef.
+          evidence: Layer by layer, over hundreds and even thousands of years, the hard cups pile up into a giant reef.
+        - ask: Why can't reef-building corals grow in deep or muddy water?
+          choices: [Sunlight cannot reach their algae there., The water there is much too warm for them., Too many hungry fish live down there.]
+          evidence: Sunlight cannot reach deep or muddy water, so corals there would go hungry.
+        - ask: Give two creatures from paragraph 5 that find food and hiding places in a reef.
+          sample: Crabs and sea turtles find food and hiding places in a reef.
+          evidence: Crabs, sea stars, octopuses, and sea turtles also find food and hiding places there.
+
+- id: a14-bat-echolocation
+  title: Seeing With Sound
+  kind: article
+  text: |
+    Imagine trying to catch a tiny moth in the middle of a dark night. You would probably have trouble
+    seeing it at all. Many bats do this every night, and they do not need to depend on their eyes.
+    Instead, they use a special skill called echolocation, which means finding things by listening to
+    echoes.
+
+    An echo is a sound that bounces back after striking something. When you shout in a large, empty
+    gym, you might hear your voice return a moment later. Bats use echoes in the same way. As a bat
+    flies, it sends out a steady stream of very high squeaks and clicks. Most of these sounds are too
+    high for people to hear.
+
+    When the sounds reach an object, such as a tree branch or a flying insect, they bounce back toward
+    the bat. The bat's large ears catch the returning echoes. From these echoes, the bat can tell how
+    far away the object is, how big it is, and even which direction it is moving. An echo that returns
+    quickly means the object is close.
+
+    As a bat gets nearer to an insect, it makes its calls faster and faster. This gives it more
+    information as it closes in. In a split second, the bat snatches its meal, sometimes scooping it up
+    with its wing or tail. Then it flutters off and begins searching all over again.
+
+    People sometimes say that bats are blind, but that is not true. All bats can see, and some fruit
+    bats rely mostly on their eyes and noses to find ripe fruit. Echolocation simply helps many bats
+    find food in the darkness. Dolphins use echolocation too, and scientists have studied both animals
+    to learn more about how sound can be used to locate things.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what is an echo?
+          choices: [a sound that bounces back after striking something, a squeak that only bats can make when they fly at night, a sound that is too quiet for anyone to hear]
+          evidence: An echo is a sound that bounces back after striking something.
+        - ask: Give two details from paragraph 3 that a bat can learn from an echo.
+          sample: A bat can tell how far away an object is. It can also tell how big the object is.
+          evidence: the bat can tell how far away the object is, how big it is
+        - ask: What does it mean when an echo returns quickly?
+          choices: [The object is close to the bat., The object is very large., The object is moving away from it.]
+          evidence: An echo that returns quickly means the object is close.
+        - ask: Why does a bat make its calls faster as it gets nearer to an insect?
+          choices: [It gets more information as it closes in., It wants to warn all the other bats nearby., Its ears are starting to get tired.]
+          evidence: This gives it more information as it closes in.
+        - ask: Copy the words from paragraph 5 that tell how some fruit bats find their food.
+          sample: Some fruit bats "rely mostly on their eyes and noses to find ripe fruit."
+          evidence: some fruit bats rely mostly on their eyes and noses to find ripe fruit
+
+- id: a15-glaciers
+  title: Rivers of Ice
+  kind: article
+  text: |
+    A glacier is a huge mass of ice that moves slowly over land. Glaciers are sometimes called rivers
+    of ice. They form in very cold places, such as high mountains and the lands near the North and
+    South Poles. Some glaciers fit inside a single mountain valley, while others spread across enormous
+    areas of land.
+
+    Every glacier begins as snow. In some places, more snow falls in winter than melts in summer. Year
+    after year, new layers pile up on top of the old ones. The weight of all that snow presses down on
+    the layers below. Slowly, the fluffy flakes are squeezed into grainy snow and then into solid,
+    heavy ice. This process can take many years.
+
+    Once the ice becomes thick and heavy enough, it begins to move. Its own weight pulls it slowly
+    downhill or spreads it outward. Most glaciers creep along so slowly that you could not see them
+    move just by watching. Still, over months and years, they can travel a long way.
+
+    As a glacier moves, it acts like a giant bulldozer and a giant piece of sandpaper. It scrapes the
+    ground and picks up rocks, from tiny pebbles to boulders as big as houses. The rocks frozen into
+    the bottom of the ice grind against the land beneath. Over thousands of years, glaciers can carve
+    narrow river valleys into wide valleys shaped like the letter U.
+
+    Glaciers have shaped many places we know today. Long ago, during the Ice Age, enormous sheets of
+    ice covered the northern part of North America. When the ice finally melted, it left behind lakes,
+    hills, and valleys. The Great Lakes were carved partly by these sheets of ice. Glaciers also store
+    a large share of Earth's fresh water. When they melt a little in warm months, they feed rivers and
+    streams that plants, animals, and people depend on.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, how does snow slowly turn into glacier ice?
+          choices: [The weight of new snow presses on the layers below., Rain freezes on top of the old snow., Strong winds blow the loose snow into very tall piles.]
+          evidence: The weight of all that snow presses down on the layers below.
+        - ask: What makes a glacier begin to move? Use a detail from paragraph 3.
+          sample: A glacier begins to move once it is thick and heavy enough. Its own weight pulls it slowly downhill.
+          evidence: Its own weight pulls it slowly downhill or spreads it outward.
+        - ask: What is true about the places where glaciers form?
+          choices: [More snow falls in winter than melts in summer., Snow falls there only once every several years., All of the snow melts by the end of summer.]
+          evidence: more snow falls in winter than melts in summer
+        - ask: Copy the sentence from paragraph 4 that tells what shape of valley a glacier can carve.
+          sample: Over thousands of years, glaciers can carve narrow river valleys into wide valleys shaped like the letter U.
+          evidence: glaciers can carve narrow river valleys into wide valleys shaped like the letter U
+        - ask: In paragraph 5, how do melting glaciers help living things?
+          choices: [They feed rivers and streams., They make the land much colder., They carve brand new mountains.]
+          evidence: they feed rivers and streams that plants, animals, and people depend on
+
+- id: a16-wright-brothers
+  title: Wings Over Kitty Hawk
+  kind: article
+  text: |
+    For thousands of years, people watched birds and dreamed of flying. In the early 1900s, two
+    brothers from Dayton, Ohio, decided to turn that dream into a machine. Their names were Wilbur and
+    Orville Wright, and they ran a small bicycle shop where they built, sold, and repaired bikes.
+
+    Working with bicycles taught the brothers a great deal. They learned how to use light, strong
+    parts and how a rider keeps balance. They believed that a flying machine would also need careful
+    balance and control. While other inventors focused mostly on powerful engines, the Wrights wanted
+    to find a way for a pilot to steer and stay level in the air.
+
+    First, the brothers built large gliders, which are aircraft without engines. They tested them on
+    the windy sand dunes near Kitty Hawk, North Carolina. The steady winds there helped lift the
+    gliders, and the soft sand made landings gentler. Their early gliders did not fly as well as they
+    had hoped, so they went back to Ohio to solve the problem.
+
+    At home, the Wrights built a wind tunnel, a long box with a fan that blew air across small model
+    wings. They tested many small wing shapes to learn which ones lifted best. With this information,
+    they designed better wings. Then they built an airplane with a light engine and two propellers.
+
+    On December 17, 1903, near Kitty Hawk, Orville lay on the lower wing and started the engine. The
+    airplane rolled along a wooden rail, rose into the cold wind, and flew for about twelve seconds. It
+    traveled about 120 feet before landing in the sand. That short hop was the first time a powered
+    airplane carried a person in a controlled flight. The brothers took turns and made three more
+    flights that same day, and each one went farther than the one before.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what did the Wright brothers want to find?
+          choices: [a way for a pilot to steer and stay level, a stronger engine than anyone else had built, a faster way to build new bicycles]
+          evidence: the Wrights wanted to find a way for a pilot to steer and stay level in the air
+        - ask: How did working in a bicycle shop help the Wright brothers build an airplane?
+          sample: Working with bicycles taught them to use light, strong parts and how a rider keeps balance. A flying machine needed balance too.
+          evidence: They learned how to use light, strong parts and how a rider keeps balance.
+        - ask: Why did the brothers test their gliders near Kitty Hawk?
+          choices: [It had steady winds and soft sand., It was close to their bicycle shop., It had tall hills made of rock.]
+          evidence: The steady winds there helped lift the gliders, and the soft sand made landings gentler.
+        - ask: In paragraph 4, what did the brothers use the wind tunnel for?
+          choices: [testing which wing shapes lifted best, keeping the airplane out of the rain, building the engine for the airplane]
+          evidence: They tested many small wing shapes to learn which ones lifted best.
+        - ask: Give two details from paragraph 5 about the very first flight.
+          sample: The first flight lasted about twelve seconds. The airplane traveled about 120 feet before landing in the sand.
+          evidence: flew for about twelve seconds. It traveled about 120 feet before landing in the sand.
+
+- id: a17-camels
+  title: Built for the Desert
+  kind: article
+  text: |
+    Deserts are some of the hardest places on Earth to live. The days can be blazing hot, water is
+    scarce, and strong winds blow sand everywhere. Yet camels have lived in deserts for thousands of
+    years. Their bodies are built in clever ways that help them survive where many other animals could
+    not.
+
+    The most famous part of a camel is its hump. Some camels have one hump, and others have two. Many
+    people believe that a hump is full of water, but it actually stores fat. When food is hard to
+    find, a camel's body can use this fat for energy. A camel that has gone a long time without eating
+    may have a hump that droops or leans to one side.
+
+    Camels can go for many days without drinking. When they finally reach water, they can drink a
+    huge amount very quickly. Their bodies are also good at saving water. They lose very little water
+    when they breathe, and their bodies can warm up during the hot day without sweating much.
+
+    A camel's feet are another useful tool. They are wide and padded, so they spread out on soft sand
+    instead of sinking into it. This works a little like wearing snowshoes on deep snow. The thick
+    pads also protect the camel's feet from the hot ground.
+
+    Blowing sand could be a big problem for a camel's eyes and nose, but camels have answers for that
+    too. They have two rows of long eyelashes that help keep sand out of their eyes. They can also
+    close their nostrils tightly during a sandstorm. Because of all these special features, people in
+    desert lands have relied on camels for a very long time to carry goods and travelers across the
+    sand.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what does a camel's hump store?
+          choices: [fat for energy, water for dry days, air for sandstorms]
+          evidence: it actually stores fat
+        - ask: Why might a camel's hump droop or lean? Use a detail from paragraph 2.
+          sample: A camel's hump may droop when it has gone a long time without eating, because its body has used the fat for energy.
+          evidence: A camel that has gone a long time without eating may have a hump that droops
+        - ask: How do wide, padded feet help a camel?
+          choices: [They spread out so it does not sink., They help it dig deep for water., They let it run faster than most horses.]
+          evidence: they spread out on soft sand instead of sinking into it
+        - ask: In paragraph 5, what helps keep sand out of a camel's eyes?
+          choices: [two rows of long eyelashes, thick pads around its eyes, a hump that blocks the wind]
+          evidence: They have two rows of long eyelashes that help keep sand out of their eyes.
+        - ask: Give two details from the article that show how a camel's body saves water.
+          sample: A camel loses very little water when it breathes. Its body can warm up during the hot day without sweating much.
+          evidence: They lose very little water when they breathe
+
+- id: a18-rainforest-layers
+  title: Four Floors of a Forest
+  kind: article
+  text: |
+    A tropical rainforest is a warm, wet forest that gets rain almost every day. Scientists often
+    describe a rainforest as having four layers, a little like the floors of a tall building. Each
+    layer gets a different amount of sunlight, and each one is home to different plants and animals.
+
+    The lowest layer is the forest floor. Very little sunlight reaches the ground, so it is dark and
+    damp, even at noon. Fallen leaves, fruit, and branches cover the soil. Insects, worms, and fungi
+    break them down quickly, which returns food to the soil. Large animals such as anteaters and
+    tapirs wander here.
+
+    Above the floor is the understory. This layer is made of shrubs, young trees, and plants with very
+    large leaves. The big leaves help the plants catch the small patches of light that slip through
+    from above. Frogs, snakes, and many kinds of insects live in the understory, where the shade helps
+    them hide.
+
+    The next layer is the canopy, and it is the busiest part of the rainforest. The branches and
+    leaves of tall trees grow so close together that they form a thick roof over the forest. Most
+    rainforest animals live in the canopy because it has plenty of fruit, flowers, and leaves to eat.
+    Monkeys swing through the branches, toucans hop from limb to limb, and sloths hang upside down.
+
+    The highest layer is the emergent layer. Here, a few giant trees poke out above the canopy like
+    umbrellas. These trees get the most sunlight, but they also face strong winds and heat. Eagles
+    build nests in their tops, and bright butterflies flutter in the open air. From the forest floor
+    to the emergent layer, every level of the rainforest depends on the others.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, why is the forest floor so dark?
+          choices: [Very little sunlight reaches the ground., It rains there every single night of the year., The trees there have no leaves.]
+          evidence: Very little sunlight reaches the ground
+        - ask: Why do the plants in the understory have very large leaves?
+          sample: The plants have big leaves to catch the small patches of light that slip through from above.
+          evidence: The big leaves help the plants catch the small patches of light that slip through from above.
+        - ask: In paragraph 4, why do most rainforest animals live in the canopy?
+          choices: [It has plenty of food to eat., It is the darkest place to hide., It is the closest layer to rivers.]
+          evidence: Most rainforest animals live in the canopy because it has plenty of fruit, flowers, and leaves to eat.
+        - ask: Copy the sentence from paragraph 5 that tells what the tallest trees look like.
+          sample: Here, a few giant trees poke out above the canopy like umbrellas.
+          evidence: Here, a few giant trees poke out above the canopy like umbrellas.
+        - ask: Which layer is just above the forest floor?
+          choices: [the understory, the canopy, the emergent layer]
+          evidence: Above the floor is the understory.
+
+- id: a19-seeds-travel
+  title: Seeds on the Move
+  kind: article
+  text: |
+    A plant cannot walk, but its seeds can travel surprisingly far. If every seed simply dropped
+    beneath its parent plant, the young plants would be crowded together. They would have to compete
+    for sunlight, water, and space. Plants have developed many clever ways to send their seeds to new
+    places where they have a better chance to grow.
+
+    Some seeds ride the wind. A dandelion seed has a tiny tuft of white fluff on top that works like a
+    parachute. When the wind blows, the seeds float away across fields and yards. Maple trees have
+    seeds with flat wings. As they fall, they spin like little helicopters, which keeps them in the air
+    longer so the breeze can carry them farther.
+
+    Other seeds travel by water. A coconut holds a large seed inside a hard shell and a thick, light
+    husk. It can fall into the ocean and float for weeks. Sometimes the waves carry it to a faraway
+    beach, where it can sprout and grow into a new palm tree.
+
+    Animals help seeds travel too. Burrs are seed cases covered with tiny hooks. When a dog or a deer
+    brushes past, the burrs grab onto its fur and ride along until they fall off somewhere new. Birds
+    and other animals eat berries, and the seeds inside pass through their bodies and drop to the
+    ground far away. Squirrels bury acorns to eat later, but they forget some, and those acorns can
+    grow into oak trees.
+
+    A few plants launch their own seeds. The seed pods of some plants dry out and then burst open with
+    a snap, flinging the seeds through the air. A garden flower called the touch-me-not has pods that
+    pop open at the slightest touch. Whether by wind, water, animals, or bursting pods, seeds find
+    their way to new homes.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, why is it a problem if every seed drops right beneath its parent plant?
+          sample: The young plants would be crowded together. They would have to compete for sunlight, water, and space.
+          evidence: the young plants would be crowded together
+        - ask: How does a dandelion seed travel to a new place?
+          choices: [Its fluff works like a parachute in the wind., It floats on ocean waves for weeks., It hooks onto the fur of animals walking past.]
+          evidence: works like a parachute. When the wind blows, the seeds float away
+        - ask: In paragraph 2, what happens because maple seeds spin as they fall?
+          choices: [They stay in the air longer., They land right under the tree., They break open on the ground.]
+          evidence: they spin like little helicopters, which keeps them in the air longer
+        - ask: Give two ways that animals help seeds travel. Use details from paragraph 4.
+          sample: Burrs grab onto an animal's fur and ride along. Birds eat berries, and the seeds drop to the ground far away.
+          evidence: the burrs grab onto its fur and ride along until they fall off somewhere new
+        - ask: What happens to the pods of a touch-me-not?
+          choices: [They pop open at the slightest touch., They float across the ocean., They spin like little helicopters as they fall.]
+          evidence: pods that pop open at the slightest touch
+
+- id: a20-first-balloon-flights
+  title: The First Balloon Riders
+  kind: article
+  text: |
+    More than two hundred years ago in France, two brothers named Joseph and Etienne Montgolfier made
+    paper for a living. Joseph noticed something interesting about fires. Smoke and hot air from a fire
+    always rose upward. He wondered whether a large bag filled with hot air could rise too, and maybe
+    even carry something along with it.
+
+    The brothers began testing small bags made of cloth and paper. They held them over fires and
+    watched them float up to the ceiling. Hot air is lighter than the cooler air around it, so it
+    rises and takes the bag along. Soon the brothers built bigger and bigger balloons. In June 1783,
+    they launched a huge balloon in front of a crowd in their hometown, and it floated high into the
+    sky.
+
+    News of the flight spread quickly. The king of France wanted to see a balloon for himself. But
+    before any person rode in one, people wanted to know whether a living creature could breathe
+    safely high in the sky. The brothers decided to send up animals first.
+
+    In September 1783, near the king's palace at Versailles, a sheep, a duck, and a rooster were
+    placed in a basket hanging below a colorful balloon. A large crowd gathered to watch. The balloon
+    rose into the air and drifted for about eight minutes. Then it came down in a nearby forest, about
+    two miles away. All three animals were safe. The flight showed that living things could travel
+    through the air.
+
+    Just two months later, in November 1783, two men climbed aboard a Montgolfier balloon in Paris.
+    They floated over the rooftops of the city for about twenty-five minutes, feeding the fire with
+    straw to keep the air inside warm. They became the first people to travel through the sky in a
+    balloon. Today, hot-air balloons still work the same way, rising whenever the air inside them is
+    heated.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, what did Joseph notice about smoke and hot air?
+          choices: [They always rose upward., They turned paper dark., They sank toward the ground.]
+          evidence: Smoke and hot air from a fire always rose upward.
+        - ask: Why does a bag filled with hot air rise?
+          choices: [Hot air is lighter than cooler air., Paper is much lighter than cloth., The fire pushes the bag up with wind.]
+          evidence: Hot air is lighter than the cooler air around it
+        - ask: Why did the brothers send animals up before people? Use a detail from paragraph 3.
+          sample: People wanted to know whether a living creature could breathe safely high in the sky, so the brothers tested it with animals first.
+          evidence: people wanted to know whether a living creature could breathe safely high in the sky
+        - ask: Give two details from paragraph 4 about the animals' flight.
+          sample: The balloon drifted for about eight minutes. It came down about two miles away, and all three animals were safe.
+          evidence: drifted for about eight minutes
+        - ask: How did the two men keep the air in their balloon warm?
+          choices: [They fed the fire with straw., They wrapped it in heavy cloth., They flew close to the sun.]
+          evidence: feeding the fire with straw to keep the air inside warm
+
+- id: a21-octopus-problem-solvers
+  title: Clever Octopuses
+  kind: article
+  text: |
+    The octopus is one of the most curious creatures in the ocean. It has a soft, rounded body, two
+    large eyes, and eight long arms. Scientists who study octopuses have discovered that these animals
+    are remarkably smart. They can solve puzzles, remember what they have learned, and find surprising
+    ways to get what they want.
+
+    Each of an octopus's arms is lined with rows of round suckers. The suckers can grip tightly to
+    rocks, shells, and food. They can also taste and feel whatever they touch. An octopus can explore
+    a crack in a rock with one arm while its other arms hold on or search somewhere else.
+
+    An octopus can also change its color in less than a second. Special cells in its skin let it turn
+    red, brown, white, or speckled. Some octopuses can even change the bumpy texture of their skin to
+    look like rocks or coral. This helps them hide from sharks and other hungry animals, and it helps
+    them sneak up on crabs.
+
+    Because an octopus has no bones, it can squeeze its body through astonishingly small spaces. An
+    octopus can slip through almost any gap that is larger than its beak, which is the hardest part of
+    its body. This lets it escape from danger and crawl into tiny hiding places between rocks.
+
+    In aquariums, octopuses have amazed the people who care for them. Some have learned to twist the
+    lids off jars to reach a tasty crab inside. Others have figured out puzzles and mazes set up by
+    scientists. In the wild, some octopuses carry coconut shells or clam shells and use them as
+    portable shelters. Using an object in such a clever way suggests that an octopus can plan ahead.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what can an octopus's suckers do besides grip?
+          choices: [taste and feel what they touch, change the color of the skin, squirt water to help it swim fast]
+          evidence: They can also taste and feel whatever they touch.
+        - ask: Copy the sentence from paragraph 3 that tells how fast an octopus can change its color.
+          sample: An octopus can also change its color in less than a second.
+          evidence: An octopus can also change its color in less than a second.
+        - ask: Why can an octopus squeeze through very small spaces?
+          choices: [It has no bones., It has eight long arms., It can change its color.]
+          evidence: Because an octopus has no bones, it can squeeze its body through astonishingly small spaces.
+        - ask: In paragraph 5, why did some octopuses twist the lids off jars?
+          choices: [to reach a tasty crab inside, to make a new hiding place, to play a game with the people]
+          evidence: twist the lids off jars to reach a tasty crab inside
+        - ask: Give two ways that changing color helps an octopus.
+          sample: Changing color helps an octopus hide from sharks. It also helps the octopus sneak up on crabs.
+          evidence: This helps them hide from sharks and other hungry animals, and it helps them sneak up on crabs.
+
+- id: a22-ocean-tides
+  title: High Tide, Low Tide
+  kind: article
+  text: |
+    If you spend a whole day at the beach, you may notice something strange. In the morning, the waves
+    might reach far up the sand. By afternoon, the water may have pulled back, leaving wet sand,
+    shells, and small pools behind. This regular rise and fall of the ocean's surface is called the tide.
+
+    Tides are caused mainly by the Moon. The Moon and Earth pull on each other with a force called
+    gravity. The Moon's pull is strongest on the side of Earth that faces it. There, the ocean water is
+    tugged toward the Moon and forms a bulge, a place where the water piles up a little higher.
+
+    Surprisingly, there is a second bulge on the opposite side of Earth, facing away from the Moon. As
+    Earth spins, each beach passes through both bulges. When a beach is inside one of the bulges, it experiences high tide.
+    When it is between them, it experiences low tide. That is why most coasts get two high tides and two low
+    tides about every day.
+
+    The tides do not come at the same time each day. The Moon moves along its path around Earth while
+    Earth spins, so each high tide arrives a little later than it did the day before. People who fish,
+    sail, or explore the shore often check a tide chart to know when the water will be high or low.
+
+    The Sun pulls on the oceans too, but it is much farther away, so its effect is smaller. When the
+    Sun and Moon line up, during a new moon or full moon, their pulls work together. Then high tides
+    are extra high and low tides are extra low. At low tide, rocky shores reveal tide pools full of sea
+    stars, crabs, and snails, all waiting patiently for the water to return.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, what mainly causes the tides?
+          choices: [the pull of the Moon, strong winds over the sea, waves from big storms]
+          evidence: Tides are caused mainly by the Moon.
+        - ask: In paragraph 3, why do most coasts get two high tides about every day?
+          sample: Earth has two bulges of water. As Earth spins, each beach passes through both bulges.
+          evidence: As Earth spins, each beach passes through both bulges.
+        - ask: Why do people who fish or sail check a tide chart?
+          choices: [to know when the water will be high, to learn how far away the Moon is, to see which fish live near the shore]
+          evidence: to know when the water will be high or low
+        - ask: Copy the sentence from paragraph 5 that tells what happens when the Sun and Moon line up.
+          sample: When the Sun and Moon line up, during a new moon or full moon, their pulls work together.
+          evidence: When the Sun and Moon line up, during a new moon or full moon, their pulls work together.
+        - ask: Why does the Sun have a smaller effect on tides than the Moon?
+          choices: [The Sun is much farther away., The Sun only pulls during the day., The Sun is smaller than the Moon.]
+          evidence: it is much farther away, so its effect is smaller
+
+- id: a23-hummingbirds
+  title: Tiny Flying Jewels
+  kind: article
+  text: |
+    Hummingbirds are some of the smallest birds in the world. Many of them weigh less than a nickel.
+    They get their name from the soft humming sound their wings make as they fly. Their wings beat so
+    fast that they look like a blur to our eyes. Hummingbirds live only in North and South America, and
+    many have shiny feathers that sparkle in the sunlight.
+
+    These little birds are amazing fliers. A hummingbird can hover in one spot, the way a helicopter
+    does, while it feeds from a flower. It can also fly up, down, sideways, and even backward. No other
+    bird can fly backward as well as a hummingbird. Its wings move in a special pattern shaped like the
+    number eight, which makes these tricky moves possible.
+
+    All that flying takes a great deal of energy, so hummingbirds must eat often. Their favorite food
+    is nectar, a sweet liquid found inside flowers. A hummingbird pokes its long, thin beak into a
+    blossom and laps up the nectar with its tongue. Hummingbirds also eat tiny insects and spiders,
+    which help them stay strong.
+
+    As a hummingbird feeds, a yellow dust called pollen sticks to its head and beak. When it visits
+    the next flower, some of that pollen rubs off. This helps the flowers make seeds. In this way,
+    hummingbirds and flowers help each other. Many flowers that hummingbirds visit are red or orange
+    and shaped like tubes.
+
+    A mother hummingbird builds a nest about the size of a walnut shell. She weaves it from soft plant
+    fluff and binds it together with sticky spider silk. The silk stretches, so the nest can grow
+    bigger as the babies grow. She usually lays two tiny white eggs, each about the size of a jelly
+    bean.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, how did hummingbirds get their name?
+          choices: [from the sound their wings make, from the songs they sing at dawn, from the bees they follow]
+          evidence: They get their name from the soft humming sound their wings make as they fly.
+        - ask: Give two details from paragraph 2 that show hummingbirds are amazing fliers.
+          sample: A hummingbird can hover in one spot like a helicopter. It can also fly sideways and even backward.
+          evidence: A hummingbird can hover in one spot, the way a helicopter does
+        - ask: Why must hummingbirds eat so often?
+          choices: [Flying takes a great deal of energy., Their nests are far away from flowers., Nectar is very hard to find.]
+          evidence: All that flying takes a great deal of energy, so hummingbirds must eat often.
+        - ask: In paragraph 4, how do hummingbirds help flowers?
+          sample: Hummingbirds carry pollen from one flower to the next. This helps the flowers make seeds.
+          evidence: When it visits the next flower, some of that pollen rubs off. This helps the flowers make seeds.
+        - ask: Why can a hummingbird's nest grow bigger as the babies grow?
+          choices: [The spider silk in it stretches., The mother adds more twigs each day., The plant fluff swells in rain.]
+          evidence: The silk stretches, so the nest can grow bigger as the babies grow.
+
+- id: a24-earthworms-soil
+  title: Underground Helpers
+  kind: article
+  text: |
+    When you dig in a garden, you might find a pink, wriggling earthworm. It may not look like much,
+    but this small creature is one of the most important helpers a garden can have. Earthworms spend
+    almost their whole lives underground, and their work keeps soil healthy so plants can grow.
+
+    An earthworm has no eyes, ears, or lungs. Instead, it senses light and movement through its skin.
+    It even breathes through its skin, which must stay damp for this to work. That is why earthworms
+    live in moist soil and stay out of the hot sun. After a heavy rain, you may see many of them on the
+    surface.
+
+    As an earthworm moves, it digs tunnels through the soil. It pushes through the dirt by stretching
+    and squeezing its body, which is made of many ring-shaped sections. These tunnels are very helpful
+    to plants. They let air and rainwater travel deep into the ground, where roots can reach them. The
+    tunnels also loosen the soil, making room for roots to spread.
+
+    Earthworms are also nature's recyclers. They eat soil along with bits of fallen leaves and other old
+    plant material. After the food passes through the worm's body, it comes out as small, dark crumbs
+    called castings. Castings are full of nutrients, the natural substances that plants need to grow
+    strong. Many gardeners are happy to see lots of castings in their soil.
+
+    More than one hundred years ago, the scientist Charles Darwin spent many years studying earthworms.
+    He was amazed at how much soil they moved and mixed. Since then, many other scientists have agreed
+    that earthworms are powerful partners for farmers and gardeners. So the next time you spot a worm
+    on the sidewalk after a rain, you might gently move it back to the soil, where it can keep working.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 2, why do earthworms need to live in moist soil?
+          sample: Earthworms breathe through their skin, and their skin must stay damp for this to work.
+          evidence: It even breathes through its skin, which must stay damp for this to work.
+        - ask: How do earthworm tunnels help plants grow?
+          choices: [They let air and water reach the roots., They keep insects away from the leaves., They make the soil warmer at night.]
+          evidence: They let air and rainwater travel deep into the ground, where roots can reach them.
+        - ask: In paragraph 4, what are castings?
+          choices: ["small, dark crumbs left by worms", tunnels that worms dig in soil, bits of fallen leaves on the ground]
+          evidence: it comes out as small, dark crumbs called castings
+        - ask: Copy the sentence from paragraph 4 that tells what castings are full of.
+          sample: Castings are full of nutrients, the natural substances that plants need to grow strong.
+          evidence: Castings are full of nutrients, the natural substances that plants need to grow strong.
+        - ask: What did Charles Darwin spend many years studying?
+          choices: [earthworms, garden flowers, ocean animals]
+          evidence: Charles Darwin spent many years studying earthworms.
+
+- id: a25-seed-to-pumpkin
+  title: From Seed to Pumpkin
+  kind: article
+  text: |
+    A big orange pumpkin starts out as a flat, pale seed no bigger than your fingernail. Farmers and
+    gardeners usually plant pumpkin seeds in late spring, after the last frost, when the soil has
+    become warm. Pumpkins need plenty of sunshine, water, and space, because the plants will soon
+    spread across the ground.
+
+    About a week after planting, a tiny sprout pushes up through the soil. Its first two leaves are
+    smooth and rounded. Soon, rough, prickly leaves with jagged edges appear. The plant grows a long,
+    twisting vine that creeps along the ground. Thin, curly stems called tendrils wrap around anything
+    nearby to help hold the vine in place.
+
+    After several weeks, bright yellow flowers bloom on the vine. A pumpkin plant has two kinds of
+    flowers. Some are male flowers, which make a yellow powder called pollen. Others are female
+    flowers. You can tell a female flower apart because it has a tiny, round bump just below the
+    petals. That bump could someday become a pumpkin.
+
+    For the bump to grow, pollen must move from a male flower to a female flower. Bees do most of this
+    important job. As a bee crawls into a flower to drink nectar, pollen sticks to its fuzzy body.
+    When the bee visits a female flower, some pollen rubs off. Without bees, most of the little bumps
+    would shrivel and fall away instead of growing.
+
+    Once a flower is pollinated, the bump starts to swell. At first, the young pumpkin is small and
+    green. Over the summer, it grows bigger and heavier as the vine carries water and food to it. By
+    early fall, most pumpkins have turned orange, and their stems have become hard and dry. Then they
+    are ready to be picked. From seed to ripe pumpkin, the whole journey usually takes about three to
+    four months.
+  pages:
+    - focus: details
+      questions:
+        - ask: According to paragraph 1, when are pumpkin seeds usually planted?
+          choices: [in late spring when the soil is warm, in the middle of a cold winter, in the fall when the leaves start to drop]
+          evidence: plant pumpkin seeds in late spring, after the last frost, when the soil has become warm
+        - ask: What do the tendrils on a pumpkin vine do?
+          choices: [They wrap around things to hold the vine., They make the pollen for the yellow flowers., They turn the pumpkin orange.]
+          evidence: wrap around anything nearby to help hold the vine in place
+        - ask: Copy the sentence from paragraph 3 that tells how to spot a female flower.
+          sample: You can tell a female flower apart because it has a tiny, round bump just below the petals.
+          evidence: You can tell a female flower apart because it has a tiny, round bump just below the petals.
+        - ask: Explain how bees help a pumpkin grow. Use details from paragraph 4.
+          sample: Pollen sticks to a bee's fuzzy body. When the bee visits a female flower, the pollen rubs off, so the bump can grow into a pumpkin.
+          evidence: When the bee visits a female flower, some pollen rubs off.
+        - ask: How can you tell that a pumpkin is ready to be picked?
+          choices: ["It is orange, with a hard, dry stem.", It is small and still very green., Its yellow flowers have just opened.]
+          evidence: most pumpkins have turned orange, and their stems have become hard and dry

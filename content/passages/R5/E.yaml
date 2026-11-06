@@ -1,0 +1,671 @@
+# Otters Reading, section E "Paragraph Summaries" (pages 161–200): summing up paragraphs (RI.5.2, RL.5.2).
+# Original passages (ours), exactly 3 paragraphs each (numbered on the sheet). Schema: ws/passages.py.
+# Each passage serves 2 pages. Set 1 ("pick"): 2 multiple choice "Which sentence best sums up paragraph N?"
+# + 1 written "Write one sentence that sums up paragraph N." Set 2 ("write"): 2 written summaries of
+# paragraphs + 1 multiple choice "Which sentence best sums up the whole passage?" Every question names
+# "paragraph N" (its evidence comes from that paragraph) or "the whole passage" (or article / story).
+
+- id: e01-the-first-bicycles
+  title: The First Bicycles
+  kind: article
+  text: |
+    The earliest bicycles, built about two hundred years ago, had no pedals at all. Riders sat on a
+    wooden frame between two wheels and pushed against the ground with their feet.
+
+    Later inventors added pedals to the front wheel. To go faster, they made that wheel bigger and
+    bigger, until some front wheels were taller than an adult. These bikes were speedy, but riders sat
+    so high that a bump in the road could send them flying.
+
+    Finally, designers attached the pedals to a chain that turned the back wheel. Now both wheels could
+    be the same size, and riders sat low and safe. This design worked so well that most bicycles today
+    still follow it.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: [The first bicycles had no pedals; riders pushed with their feet., Bicycles are fun to ride with friends on weekends., Wooden frames were heavy and hard to carry uphill.]
+          evidence: had no pedals at all
+        - ask: Which sentence best sums up paragraph 2?
+          choices: [Big front wheels made bikes faster but less safe., Some adults long ago were not as tall as the wheels., Roads long ago had many bumps and holes in them.]
+          evidence: These bikes were speedy, but riders sat
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: A chain to the back wheel made bikes safe, and most bikes still use that design.
+          evidence: most bicycles today still follow it
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: The first bicycles had no pedals, so riders pushed along with their feet.
+          evidence: pushed against the ground with their feet
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Inventors added pedals and made the front wheel huge, which was fast but risky.
+          evidence: some front wheels were taller than an adult
+        - ask: Which sentence best sums up the whole article?
+          choices: [Bicycles changed step by step into the safe design we use today., Riders long ago needed strong legs to push their bikes along., The tallest bicycles were always the best and safest ones.]
+          evidence: This design worked so well that most bicycles today
+
+- id: e02-the-story-of-pencils
+  title: The Story of Pencils
+  kind: article
+  text: |
+    About five hundred years ago, people in England found a large supply of a soft, dark mineral called graphite. It left a clear gray mark, so it was useful for writing. However, the soft chunks broke easily and left messy smudges on people's hands.
+
+    To solve this problem, people wrapped the graphite in string or slid it into hollow wooden holders. Later, makers learned to grind the graphite into powder and mix it with clay. Baking the mixture made strong, smooth sticks that were much easier to write with.
+
+    Today, pencils are still made in much the same way. A thin graphite core is placed between two grooved strips of wood, which are glued together and cut into pencils. Even though people call it pencil lead, there is no lead inside at all.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["People found graphite, which marked well but broke easily.", "The mineral was found in England a long time ago.", "Pencils today are made from two strips of wood glued together."]
+          evidence: It left a clear gray mark, so it was useful for writing
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["People found ways to make graphite sticks stronger.", "Some people wrapped their pencils in bright string.", "Graphite left messy smudges on people's hands and clothes."]
+          evidence: Baking the mixture made strong, smooth sticks
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Pencils today are made by gluing a graphite core between strips of wood.
+          evidence: placed between two grooved strips of wood
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: People found graphite long ago, but the soft chunks broke and made a mess.
+          evidence: the soft chunks broke easily and left messy smudges
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: People wrapped graphite and later mixed it with clay to make strong sticks.
+          evidence: mix it with clay
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Pencils changed a lot from the first graphite chunks.", "Graphite is a soft and dark mineral.", "The first pencils were all made in one big, busy factory."]
+          evidence: Today, pencils are still made in much the same way
+
+- id: e03-ice-cream-cones
+  title: Ice Cream Cones
+  kind: article
+  text: |
+    Long ago, ice cream was usually served in small glass dishes or paper cups. Some street sellers handed out tiny glass cups, and customers licked them clean and gave them back. The cups were often not washed well before the next customer used them.
+
+    In the early 1900s, bakers began rolling thin, crisp waffles into cone shapes. A cone held the ice cream, and then the customer could eat the holder too. There were no dishes to wash and nothing to throw away, so cones quickly became a favorite at fairs.
+
+    Soon, factories built machines that baked and shaped thousands of cones each day. Some cones were pressed in metal molds, while others were rolled by machine while still warm. Today, people around the world enjoy cones, and many shops still bake fresh waffle cones that fill the air with a sweet smell.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Long ago, ice cream came in dishes or cups that were not always clean.
+          evidence: The cups were often not washed well
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Waffle cones you could eat made ice cream easy and neat.", "Fairs had many kinds of games and rides.", "Factories baked thousands of cones in metal molds each day."]
+          evidence: the customer could eat the holder too
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Machines made cones in large numbers for people everywhere.", "Fresh waffle cones fill the shops with a warm and sweet smell.", "Street sellers handed out ice cream in tiny glass cups."]
+          evidence: factories built machines that baked and shaped thousands of cones
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Bakers began making cones you could eat, so there were no dishes to wash.
+          evidence: There were no dishes to wash and nothing to throw away
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Factories began making many cones, and now people everywhere enjoy them.
+          evidence: Today, people around the world enjoy cones
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Cones took the place of dishes and became popular.", "Ice cream tastes best when it is very cold.", "Glass cups were always the very best way to serve ice cream."]
+          evidence: so cones quickly became a favorite at fairs
+
+- id: e04-how-zippers-began
+  title: How Zippers Began
+  kind: article
+  text: |
+    Before zippers, people closed their clothes and boots with buttons, hooks, or laces. These worked, but they took a long time. Tall boots could have more than twenty buttons, and people often used a special hook tool just to fasten them.
+
+    In the late 1800s, inventors tried to build a faster fastener. The early versions used rows of tiny hooks that a slider pulled together. Unfortunately, they often jammed or popped open at the wrong moment, so few people wanted to use them.
+
+    In the early 1900s, an engineer improved the design with small metal teeth that locked together tightly. The new fastener was first used on boots and small pouches. Over time, it spread to jackets, pants, and bags, and today zippers are found almost everywhere.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Closing clothes with buttons or laces used to be slow.", "Some tall boots had more than twenty buttons on them.", "Zippers today are found on many jackets, pants, and bags."]
+          evidence: These worked, but they took a long time
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: The first zippers were faster to use, but they often jammed or popped open.
+          evidence: they often jammed or popped open at the wrong moment
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Metal teeth made zippers work well, so they spread widely.", "The fastener was first used on boots and small pouches.", "Inventors in the late 1800s used rows of tiny little hooks."]
+          evidence: small metal teeth that locked together tightly
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Before zippers, people used buttons, hooks, and laces, which took a long time.
+          evidence: buttons, hooks, or laces
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: An engineer made zippers with metal teeth, and now they are used everywhere.
+          evidence: today zippers are found almost everywhere
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Zippers took many tries before they worked well.", "Buttons are better than zippers for tall boots.", "Zippers were invented by one person in a single day."]
+          evidence: an engineer improved the design
+
+- id: e05-how-mail-got-moving
+  title: How Mail Got Moving
+  kind: article
+  text: |
+    Long ago, sending a letter was slow and costly. Messengers carried letters on foot or on horseback, and a trip could take weeks. Often the person who got the letter had to pay for it. The price depended on how far it had come.
+
+    In 1840, Great Britain began selling the first sticky postage stamps. A sender bought a stamp, stuck it on the letter, and paid one low price for any distance in the country. The idea was so simple that many other countries soon started using stamps too.
+
+    Today, post offices handle huge piles of mail every day. Machines read the addresses and sort letters into bins for each neighborhood. Trucks and airplanes carry the mail across the country, and then a mail carrier delivers it right to the door.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Long ago, mail was slow and cost a lot to send.", "Messengers rode horses on many long, dusty trips.", "Machines sort letters into bins for each neighborhood."]
+          evidence: sending a letter was slow and costly
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Stamps made mail simple and cheap to send.", "Stamps were sticky on the back side.", "Great Britain had many busy cities at that time."]
+          evidence: paid one low price for any distance in the country
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Today, machines, trucks, and mail carriers move huge amounts of mail quickly.
+          evidence: Machines read the addresses and sort letters
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Long ago, letters were carried slowly, and they cost a lot to send.
+          evidence: a trip could take weeks
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Postage stamps let people pay one low price, and many countries used them.
+          evidence: many other countries soon started using stamps too
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Mail became faster and cheaper over time.", "Mail carriers walk a very long way each day.", "Letters are much more fun to get in the mail than to send."]
+          evidence: delivers it right to the door
+
+- id: e06-maps-through-time
+  title: Maps Through Time
+  kind: article
+  text: |
+    People have drawn maps for thousands of years. Some of the oldest known maps were scratched into clay tablets. They showed nearby rivers, fields, and towns, which helped people find their way and remember who owned each piece of land.
+
+    Later, sailors and explorers made maps of coastlines and oceans. Each voyage added new details, but mapmakers often had to guess about places no one had visited. As a result, some old maps show lands that are the wrong shape or size, and some even have large blank spaces.
+
+    Today, mapmakers use photos taken from airplanes and from satellites high above Earth. These pictures show roads, rivers, and buildings very clearly. Computers turn the photos into maps that people can carry on a phone and zoom in to see a single street.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Clay maps helped people know their land.", "Some towns long ago were built near rivers.", "Satellites take photographs high above Earth."]
+          evidence: Some of the oldest known maps were scratched into clay tablets
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Explorers mapped new places but had to guess a lot.", "Sailors liked to travel on calm, sunny days at sea.", "Old maps were drawn on clay tablets with sharp sticks."]
+          evidence: mapmakers often had to guess about places no one had visited
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Today, maps are made from photographs taken from the sky, so they are very exact.
+          evidence: photos taken from airplanes and from satellites
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: The first maps were scratched into clay and showed nearby land.
+          evidence: They showed nearby rivers, fields, and towns
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Explorers mapped coasts and oceans, but some of their maps had mistakes.
+          evidence: some old maps show lands that are the wrong shape or size
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Maps have grown more exact over time.", "Clay tablets are hard to carry around.", "Sailors drew the very first maps of the whole world."]
+          evidence: Computers turn the photos into maps
+
+- id: e07-telling-time
+  title: Telling Time
+  kind: article
+  text: |
+    Long ago, people used the sun to tell time. A sundial has a pointer that casts a shadow on a flat face marked with hours. As the sun moves across the sky, the shadow moves too. But a sundial cannot work on a cloudy day or at night.
+
+    To solve this problem, people in ancient times built water clocks. Water dripped slowly from one bowl into another bowl, which had lines marked on its side. By checking how high the water had risen, people could tell how much time had passed, even after dark.
+
+    Hundreds of years ago, clocks with gears and weights appeared in towers in Europe. Ringing bells told the whole town the hour. Later, clockmakers added swinging pendulums, which made clocks far more exact, and in time clocks became small enough to wear on a wrist.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: A sundial uses the sun's shadow to tell time, but it only works on sunny days.
+          evidence: A sundial has a pointer that casts a shadow
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Water clocks let people tell time without sunlight.", "Bowls were used to carry water home from the river each day.", "Clocks with gears were built in tall towers."]
+          evidence: people could tell how much time had passed, even after dark
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Clocks with gears got more exact and smaller over time.", "Ringing bells in tall towers told the whole town the hour.", "A sundial cannot work on a cloudy day or at night."]
+          evidence: made clocks far more exact
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: People built water clocks that measured time with dripping water, even at night.
+          evidence: Water dripped slowly from one bowl into another bowl
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Clocks with gears came next, and they became more exact and much smaller.
+          evidence: clocks became small enough to wear on a wrist
+        - ask: Which sentence best sums up the whole article?
+          choices: ["People found better ways to tell time.", "Sundials are the very best clocks anyone has ever made.", "Water was very hard to find long ago."]
+          evidence: people in ancient times built water clocks
+
+- id: e08-the-useful-umbrella
+  title: The Useful Umbrella
+  kind: article
+  text: |
+    The first umbrellas were made for shade, not rain. Thousands of years ago in places such as Egypt and China, servants held large shades over kings and other important people. Owning one was a sign that a person was rich and powerful.
+
+    In ancient China, people found a way to keep off the rain as well. They coated paper or silk umbrellas with oil or wax so that water would roll right off. Many of these waterproof umbrellas could fold up, which made them easy to carry.
+
+    In Europe, umbrellas for rain were slow to catch on. A few hundred years ago, men who carried them on wet streets were sometimes teased. Over time, though, people saw how handy umbrellas were. Today, they are everywhere, and some fold small enough to fit in a backpack.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["The first umbrellas shaded important people.", "Egypt and China are both very old lands with kings.", "Umbrellas were coated with oil or wax."]
+          evidence: The first umbrellas were made for shade, not rain
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: People in China made umbrellas that kept off rain and could fold up.
+          evidence: They coated paper or silk umbrellas with oil or wax
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Umbrellas for rain slowly became popular in Europe.", "Some umbrellas today are small enough to fit inside a backpack.", "Kings liked to stand in the shade on hot days."]
+          evidence: umbrellas for rain were slow to catch on
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: The first umbrellas were shades held over rich and important people.
+          evidence: servants held large shades over kings and other important people
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: People in Europe teased umbrella users at first, but later everyone used them.
+          evidence: people saw how handy umbrellas were
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Umbrellas went from sunshades to rain gear.", "Umbrellas were always meant to keep people dry in the rain.", "Only kings are allowed to carry umbrellas."]
+          evidence: Today, they are everywhere
+
+- id: e09-how-crayons-are-made
+  title: How Crayons Are Made
+  kind: article
+  text: |
+    Crayons are made mostly of wax mixed with a colored powder called pigment. The wax holds everything together and lets the crayon glide smoothly across paper. The pigment gives each crayon its color, from bright red to deep blue.
+
+    At a crayon factory, workers melt the wax in huge heated tanks and stir in the pigment. The warm liquid is poured into molds with hundreds of small holes. When the wax cools and hardens, the new crayons are pushed out of the molds all at once.
+
+    Next, each crayon is checked for broken tips or air bubbles, and any imperfect ones are melted down and used again. Machines wrap the good crayons in paper labels and sort them into boxes. Finally, the boxes are shipped to stores, ready for coloring.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Crayons are made of wax and colored powder.", "Deep blue is a popular crayon color.", "Crayons are poured into molds with hundreds of holes."]
+          evidence: Crayons are made mostly of wax mixed with a colored powder
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Melted wax and pigment are shaped in molds.", "The factory tanks are very large and hot.", "Crayons are wrapped in paper labels by machines."]
+          evidence: The warm liquid is poured into molds
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: The crayons are checked, wrapped, boxed, and sent to stores.
+          evidence: Machines wrap the good crayons in paper labels
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Crayons are made of wax that holds them together and pigment that gives color.
+          evidence: The pigment gives each crayon its color
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Workers melt wax with pigment and pour it into molds to make crayons.
+          evidence: workers melt the wax in huge heated tanks
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Crayons are mixed, molded, checked, and packed.", "Coloring is a fun thing to do with friends on rainy days.", "Crayons are made by hand, one at a time."]
+          evidence: the boxes are shipped to stores, ready for coloring
+
+- id: e10-the-handy-sandwich
+  title: The Handy Sandwich
+  kind: article
+  text: |
+    People have eaten food between pieces of bread for a very long time. Long ago, farmworkers carried bread with cheese or meat out into the fields. It was an easy meal to hold, and it did not need a plate or a fork.
+
+    The word sandwich comes from an English earl who lived in the 1700s. According to a popular story, he did not want to leave a card game to eat a meal. He asked for meat between two slices of bread, and soon other people began asking for "the same as Sandwich."
+
+    Today, there are countless kinds of sandwiches around the world. Some are hot and some are cold, and the bread can be a roll, a wrap, or a flat pocket. Many families pack sandwiches for school lunches because they are quick to make and easy to carry.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Bread with food inside has long been an easy meal.", "Farmworkers spent long, busy days working out in the fields.", "Sandwiches today can be hot or cold."]
+          evidence: It was an easy meal to hold
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["The sandwich got its name from an English earl.", "Card games were popular a long time ago.", "Sandwiches are quick and easy to pack for a school lunch."]
+          evidence: The word sandwich comes from an English earl
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Today, people everywhere eat many kinds of sandwiches.
+          evidence: there are countless kinds of sandwiches around the world
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: People have eaten bread with food inside for a long time because it is easy to hold.
+          evidence: People have eaten food between pieces of bread for a very long time
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: A story says an earl asked for meat in bread, and the sandwich was named after him.
+          evidence: He asked for meat between two slices of bread
+        - ask: Which sentence best sums up the whole article?
+          choices: ["The sandwich is an old, handy meal still loved today.", "Cheese is the very best food to put between two slices of bread.", "The sandwich was invented last century."]
+          evidence: they are quick to make and easy to carry
+
+- id: e11-how-rainbows-form
+  title: How Rainbows Form
+  kind: article
+  text: |
+    Sunlight looks white, but it is really a mixture of many colors. When light passes through glass or water, it bends. Each color bends a slightly different amount, so the colors spread apart into a band. Scientists call this band of colors a spectrum.
+
+    A rainbow forms when sunlight shines into falling raindrops. Each drop bends the light, bounces it off the back of the drop, and bends it again as it leaves. Millions of drops do this at the same time, and together they paint a curved band of color across the sky.
+
+    To see a rainbow, you must stand with the sun behind you and the rain in front of you. That is why rainbows often appear in the late afternoon after a storm. The colors always come in the same order, with red on the outside and violet on the inside.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Sunlight holds many colors that spread out when it bends.", "Glass and water are both clear.", "Rainbows often appear in the late afternoon after a storm."]
+          evidence: it is really a mixture of many colors
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Raindrops bend and bounce sunlight, and together they make a rainbow.
+          evidence: A rainbow forms when sunlight shines into falling raindrops
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["You see a rainbow when the sun is behind you.", "Red is always on the outside of a rainbow, and violet inside.", "Light bends when it passes through glass."]
+          evidence: stand with the sun behind you and the rain in front of you
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Sunlight is a mix of colors that spread apart when the light bends.
+          evidence: the colors spread apart into a band
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: You can see a rainbow when the sun is behind you and rain is in front of you.
+          evidence: That is why rainbows often appear in the late afternoon
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Raindrops split sunlight into a rainbow.", "Storms are common in the afternoon.", "Rainbows have their colors in a different order each time."]
+          evidence: together they paint a curved band of color across the sky
+
+- id: e12-why-leaves-change
+  title: Why Leaves Change
+  kind: article
+  text: |
+    In spring and summer, leaves are green because of a substance called chlorophyll. Chlorophyll helps leaves use sunlight to make food for the tree. A busy leaf has so much chlorophyll that the green covers up every other color inside it.
+
+    In the fall, the days grow shorter and cooler. Trees slow down and stop making new chlorophyll. As the green slowly fades away, yellow and orange colors that were hiding in the leaf all summer finally begin to show.
+
+    Some trees, such as many maples, also make bright red and purple colors in the fall. Sunny days and cool nights help these colors grow especially strong. Soon afterward, the leaves dry up and drop to the ground, and the tree rests until spring brings new buds.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Chlorophyll makes leaves green and helps make food.", "Trees grow lots of fresh new leaves in the spring and summer.", "Maple trees make bright red colors."]
+          evidence: leaves are green because of a substance called chlorophyll
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["In fall, the green fades and yellow and orange show.", "Fall days are shorter and cooler than the long days of summer.", "Leaves dry up and drop to the ground."]
+          evidence: yellow and orange colors that were hiding in the leaf
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Some trees make red and purple colors before their leaves fall off.
+          evidence: also make bright red and purple colors in the fall
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Leaves are green in summer because chlorophyll helps them make food.
+          evidence: Chlorophyll helps leaves use sunlight to make food for the tree
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: In the fall, trees stop making chlorophyll, so hidden yellow and orange show.
+          evidence: Trees slow down and stop making new chlorophyll
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Leaves change color as the green fades in fall.", "Leaves stay bright green all year long, even in the winter.", "Maples are the tallest trees in the forest."]
+          evidence: As the green slowly fades away
+
+- id: e13-how-snowflakes-form
+  title: How Snowflakes Form
+  kind: article
+  text: |
+    A snowflake begins high up in a cold cloud. There, a tiny speck of dust or pollen floats among countless water droplets. When the air is cold enough, water freezes onto the speck and forms a small ice crystal around it.
+
+    As the crystal drifts down, more water vapor freezes onto it. The crystal grows in six directions because of the way water molecules fit together when they freeze. That is why nearly every snowflake has six sides or six arms.
+
+    The shape of each flake depends on the temperature and moisture of the air it falls through. Some become flat plates, while others grow long needles or lacy branches. Because every flake takes its own path to the ground, it is very unlikely that two flakes look exactly alike.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: A snowflake starts when water freezes onto a speck of dust in a cold cloud.
+          evidence: water freezes onto the speck and forms a small ice crystal
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["The crystal grows six sides as more water freezes on.", "Water vapor is found in the air around us.", "Snowflakes can be flat plates, long needles, or lacy branches."]
+          evidence: The crystal grows in six directions
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Each flake is shaped by the air it falls through.", "Some snowflakes look like lacy branches.", "Tiny bits of pollen float among the water droplets in clouds."]
+          evidence: The shape of each flake depends on the temperature and moisture
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: As the crystal falls, it grows into a shape with six sides or arms.
+          evidence: nearly every snowflake has six sides or six arms
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Each flake's shape depends on the air it falls through, so flakes look different.
+          evidence: every flake takes its own path to the ground
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Snowflakes grow from tiny crystals into many shapes.", "Snow falls only on the very coldest days of the winter.", "All snowflakes look exactly the same."]
+          evidence: A snowflake begins high up in a cold cloud
+
+- id: e14-owls-at-night
+  title: Owls at Night
+  kind: article
+  text: |
+    Most owls hunt at night, and their bodies are built for the dark. Their large eyes gather even the faintest light. Owls cannot move their eyes in their sockets, so they turn their heads instead, and some can turn their heads very far around.
+
+    An owl's hearing is just as important as its sight. Its flat, round face works like a dish that guides sounds toward its ears. In some owls, one ear sits higher than the other, which helps the bird tell exactly where a tiny squeak is coming from.
+
+    Owls also fly almost without a sound. The edges of their wing feathers are soft and fringed, which quiets the rush of air as they flap. A mouse scurrying through the grass may not hear anything at all until the owl swoops down beside it.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["An owl's large eyes help it see in the dark.", "Owls turn their heads very far around to look behind them.", "Owls fly without making much sound."]
+          evidence: Their large eyes gather even the faintest light
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Owls have sharp hearing that helps them find food.", "Some owls have one ear that sits higher than the other one.", "Mice make tiny squeaking sounds in the grass."]
+          evidence: An owl's hearing is just as important as its sight
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Soft, fringed feathers let owls fly so quietly that mice cannot hear them.
+          evidence: Owls also fly almost without a sound
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Owls have big eyes that help them see in the dark when they hunt.
+          evidence: their bodies are built for the dark
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: An owl's face and ears help it hear exactly where sounds come from.
+          evidence: works like a dish that guides sounds toward its ears
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Owls have bodies made for hunting at night.", "Owls sleep in tall trees all night long and hunt in the day.", "Mice are the fastest animals in the field."]
+          evidence: Most owls hunt at night, and their bodies are built for the dark
+
+- id: e15-the-salmon-journey
+  title: The Salmon's Journey
+  kind: article
+  text: |
+    Many salmon begin life in small, cool streams. They hatch from eggs buried in the gravel and spend their first months hiding among the rocks. Then the young fish swim downstream, traveling through rivers all the way to the ocean.
+
+    In the ocean, salmon eat and grow for several years. They find plenty of small fish and shrimp to eat, and they travel far from shore. During this time, they become large, strong swimmers, ready for the hardest part of their journey.
+
+    When they are fully grown, salmon swim back to the very stream where they hatched. Scientists believe they find it partly by smell. They swim against the rushing current and even leap up small waterfalls to reach home, where they lay eggs of their own.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Young salmon hatch in streams, then swim to the ocean.", "Salmon eggs are buried deep in the gravel of small streams.", "Salmon leap up waterfalls to get home."]
+          evidence: Then the young fish swim downstream
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: In the ocean, salmon eat a lot and grow big and strong for several years.
+          evidence: In the ocean, salmon eat and grow for several years
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Grown salmon swim home to lay eggs where they hatched.", "Salmon have a strong sense of smell.", "Small fish and shrimp live in the ocean, far from the shore."]
+          evidence: salmon swim back to the very stream where they hatched
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Salmon hatch in streams and later swim down rivers to the ocean.
+          evidence: They hatch from eggs buried in the gravel
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Grown salmon swim back up to their home stream to lay their own eggs.
+          evidence: where they lay eggs of their own
+        - ask: Which sentence best sums up the whole article?
+          choices: ["Salmon travel to the ocean and later return home.", "Salmon spend their whole lives in the same small, cool stream.", "Waterfalls are the tallest in the mountains."]
+          evidence: swim back to the very stream where they hatched
+
+- id: e16-the-missing-book
+  title: The Missing Book
+  kind: story
+  text: |
+    Maya loved her library book about sharks, and she had already read it three times. On Friday morning, she suddenly remembered that it was due back that day. She looked on her desk and under her bed, but the book was nowhere to be found.
+
+    Maya searched the whole house before school. She checked the couch cushions, the kitchen table, and even the laundry basket. Finally, she peeked into her little brother's room. There was Leo, sitting on the floor and studying the shark pictures with a huge grin.
+
+    Maya laughed and sat down beside him. They read the book together one last time, and then she returned it to the library right on time. That afternoon, Maya cleared a special shelf for library books so they would always have a home.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Maya's library book was due, but she couldn't find it.", "Maya had read her shark book three times.", "Maya's little brother liked looking at the big shark pictures."]
+          evidence: the book was nowhere to be found
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Maya searched and found her brother with the book.", "The laundry basket was full of clothes.", "Maya made a special shelf for all of her library books."]
+          evidence: There was Leo, sitting on the floor
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Maya returned the book on time and made a shelf so it would not get lost again.
+          evidence: Maya cleared a special shelf for library books
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Maya needed to return her library book, but she could not find it.
+          evidence: she suddenly remembered that it was due back that day
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: After searching the house, Maya found Leo reading the book in his room.
+          evidence: Maya searched the whole house before school
+        - ask: Which sentence best sums up the whole story?
+          choices: ["Maya found her lost book and a way to keep books safe.", "Sharks are Maya's favorite animals.", "Leo hid the book on purpose so that Maya would be late."]
+          evidence: so they would always have a home
+
+- id: e17-the-tomato-garden
+  title: The Tomato Garden
+  kind: story
+  text: |
+    In April, Sam planted six tomato seeds in small pots by the kitchen window. Every morning he checked the soil, hoping to see green shoots. After a week, tiny sprouts finally poked through the dirt, and Sam cheered so loudly that the cat leaped off the counter.
+
+    All summer, Sam took care of his plants in the backyard. He watered them, pulled weeds, and tied the stems to tall stakes so they would not bend. Some afternoons were hot and tiring, but he never skipped a single day of work.
+
+    In August, the plants were covered with plump red tomatoes. Sam picked a basketful and helped his dad cook a big pot of sauce. At dinner, the whole family agreed it was the most delicious spaghetti they had ever tasted.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Sam planted seeds and was thrilled when they sprouted.", "Sam's cat leaped off the kitchen counter when Sam cheered.", "Sam picked a basket of plump red tomatoes."]
+          evidence: tiny sprouts finally poked through the dirt
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Sam worked hard all summer to take care of his tomato plants.
+          evidence: he never skipped a single day of work
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Sam's tomatoes became a sauce the family loved.", "Sam's dad likes to cook his spaghetti in a very big pot.", "Sam watered his plants and pulled weeds."]
+          evidence: the whole family agreed it was the most delicious spaghetti
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Sam planted tomato seeds in April and cheered when they sprouted.
+          evidence: Sam planted six tomato seeds in small pots
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Sam's plants grew many tomatoes, and he and his dad made a delicious sauce.
+          evidence: helped his dad cook a big pot of sauce
+        - ask: Which sentence best sums up the whole story?
+          choices: ["Sam's hard work turned seeds into a tasty meal.", "Tomatoes grow best in small pots by the kitchen window.", "Sam did not like working in the garden."]
+          evidence: All summer, Sam took care of his plants
+
+- id: e18-the-piano-recital
+  title: The Piano Recital
+  kind: story
+  text: |
+    Nora had practiced her piano piece for weeks, but on the day of the recital, her stomach felt full of butterflies. Her hands were cold, and she worried that she would forget the notes in front of everyone in the crowded hall.
+
+    Backstage, her teacher noticed her worried face. He told her to take three slow breaths and imagine herself playing at home in the living room. Nora closed her eyes and tried it, and gradually her shoulders began to relax.
+
+    When her name was called, Nora walked to the piano and began to play. She missed one note near the end, but she kept going just as she had practiced. When she finished, the audience clapped warmly, and Nora felt proud that she had been brave.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Nora was nervous on the day of her recital.", "Nora's hands felt cold before the show.", "Nora practiced at home in the living room every day."]
+          evidence: her stomach felt full of butterflies
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Nora's teacher helped her calm down.", "Nora closed her eyes and stood quietly backstage.", "The audience clapped for Nora."]
+          evidence: gradually her shoulders began to relax
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: Nora played her piece, kept going after a mistake, and felt proud.
+          evidence: she kept going just as she had practiced
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: On recital day, Nora was nervous that she would forget her notes.
+          evidence: she worried that she would forget the notes
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Nora's teacher showed her how to breathe slowly, and she began to calm down.
+          evidence: He told her to take three slow breaths
+        - ask: Which sentence best sums up the whole story?
+          choices: ["Nora faced her nerves and played bravely.", "Nora played every note perfectly.", "Nora's teacher played the piano piece for her in the hall."]
+          evidence: Nora felt proud that she had been brave
+
+- id: e19-the-new-neighbor
+  title: The New Neighbor
+  kind: story
+  text: |
+    When a moving truck parked next door, Jamal watched from his bedroom window. A boy about his age carried boxes into the house, but he looked shy and stayed close to his mom. Jamal wondered whether they might become friends.
+
+    The next day, Jamal grabbed his football and walked over to say hello. The new boy, Eli, explained that he had just moved from another state and did not know anyone yet. Jamal asked if he wanted to toss the ball around at the park.
+
+    The boys played catch until the streetlights came on. They discovered that they both loved comic books and pancakes. By the end of the week, Eli was coming over every afternoon, and Jamal could hardly remember a time before his new friend lived next door.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Jamal saw a shy new boy move in next door and hoped they could be friends.
+          evidence: Jamal wondered whether they might become friends
+        - ask: Which sentence best sums up paragraph 2?
+          choices: ["Jamal met the new boy and invited him to play.", "Eli had just moved there from another state and knew no one.", "Jamal has a football in his room."]
+          evidence: Jamal grabbed his football and walked over to say hello
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["Jamal and Eli quickly became good friends.", "The boys both love reading comic books and eating pancakes.", "The streetlights came on at night."]
+          evidence: Eli was coming over every afternoon
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Jamal said hello to Eli and asked him to play ball at the park.
+          evidence: Jamal asked if he wanted to toss the ball around at the park
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: The boys played and found they liked the same things, so they became close friends.
+          evidence: They discovered that they both loved comic books and pancakes
+        - ask: Which sentence best sums up the whole story?
+          choices: ["Jamal welcomed a shy new neighbor and made a friend.", "Moving to a new state is very easy.", "Eli stayed inside his new house all week long by himself."]
+          evidence: his new friend lived next door
+
+- id: e20-the-bake-sale
+  title: Cookies for Books
+  kind: story
+  text: |
+    Ava and her friends wanted to raise money to buy new books for their class library. They decided to hold a bake sale on Saturday morning in front of the school. Ava promised to bake three dozen of her famous oatmeal cookies.
+
+    On Friday night, Ava forgot to set the timer, and her first batch came out burnt and black. She almost gave up, but her grandma helped her mix a fresh batch. This time, Ava watched the oven carefully, and the cookies came out golden and perfect.
+
+    At the sale, Ava's cookies sold out in less than an hour. Together, the friends raised enough money to buy twelve new books for the class. When the books arrived, their teacher placed a thank-you card on the shelf with all of their names on it.
+  pages:
+    - focus: pick
+      questions:
+        - ask: Which sentence best sums up paragraph 1?
+          choices: ["Ava and her friends planned a bake sale to buy books.", "Ava makes famous oatmeal cookies.", "The sale was held on Saturday morning in front of the school."]
+          evidence: They decided to hold a bake sale
+        - ask: Write one sentence that sums up paragraph 2.
+          sample: Ava burned her first cookies, but with her grandma's help she made a good batch.
+          evidence: her grandma helped her mix a fresh batch
+        - ask: Which sentence best sums up paragraph 3?
+          choices: ["The sale was a success, and the class got new books.", "The teacher put a thank-you card with their names on a shelf.", "Ava forgot to set the oven timer."]
+          evidence: the friends raised enough money to buy twelve new books
+    - focus: write
+      questions:
+        - ask: Write one sentence that sums up paragraph 1.
+          sample: Ava and her friends planned a bake sale to raise money for class books.
+          evidence: wanted to raise money to buy new books
+        - ask: Write one sentence that sums up paragraph 3.
+          sample: The cookies sold fast, and the friends raised enough money for new books.
+          evidence: Ava's cookies sold out in less than an hour
+        - ask: Which sentence best sums up the whole story?
+          choices: ["Ava fixed a mistake and helped her class get books.", "Grandma likes to bake oatmeal cookies with Ava on Friday nights.", "The bake sale did not raise any money."]
+          evidence: When the books arrived

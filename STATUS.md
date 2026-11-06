@@ -77,6 +77,25 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   All 200 pages verify with 0 errors and 0 warnings; booklets per section + `owls-math-level.pdf` (202 pages) and
   `owls-math-level-answers.pdf` (14 pages). Child text ≥ 28px. Free preview pages 21, 71, 121, 171 wait for Owls Reading.
   ≥ 28px (the 20px floor wasn't needed). Free preview pages 1, 31, 141, 171: with Foxes Reading built, `ws preview foxes` now builds `out/previews/foxes.pdf` locally (10 pages; not uploaded).
+- **Otters Reading (R5, our own level, grade 5 reading for age 8, 200 pages)** (2026-11-06): `syllabus/english/R5.yaml`:
+  A Finding Details 1–50 (RI.5.1, RI.5.3: 25 nonfiction articles of 280–320 words) · B Clue Words 51–90 (L.5.4a context
+  clues, then L.5.5c words with two meanings) · C What's the Lesson? 91–130 (RL.5.2: 20 stories, 6 retold classic fables;
+  each `moral` is the theme) · D Like a Picture 131–160 (L.5.5a similes and metaphors, L.5.5b idioms, adages and proverbs,
+  then all kinds incl. personification and hyperbole) · E Paragraph Summaries 161–200 (RI.5.2: pick, then write, a
+  one-sentence summary of each of 3 numbered paragraphs). 100 original passages in `content/passages/R5/`, Flesch-Kincaid
+  4.5–6.5; 60 hand-checked figures of speech in `content/figurative/R5.yaml`. Drafts `syllabus/drafts/R5-passages.md` and
+  `R5-figurative.md` are written by `scripts/r5_drafts.py` (also the content checker: `--check X [--file F --start N]`);
+  approved by the orchestrator under the user's delegation. New sheet types `read_then_answer` (two-page spread: a
+  reading page with only the ~300-word text, then a questions page; rule `spread`), `clue_words`, `figurative_language`,
+  `paragraph_summary` (shared partial `_reading.html.j2`). `ws/passages.py` gained bold words per question set, numbered
+  paragraphs, "paragraph N" evidence checks and rule overrides for question/choice/title lengths (Foxes output
+  byte-identical). Page fit: ~300 words is all one Letter page holds at 20px, so A is 280–320 words (the plan said
+  300–350). Tests `tests/test_otters_reading.py`. The new
+  templates put the questions (and the spread's reading column) in a borderless `.card`, so the layout check also catches
+  questions running into the footer. All 200 pages verify with 0 errors and 0 warnings; booklets per section +
+  `otters-reading-level.pdf` (202 pages) + `otters-reading-level-answers.pdf` (36 pages, reading pages have no answers).
+  Free preview pages 1–2 (a whole spread), 51, 131: `ws preview otters` builds `out/previews/otters.pdf` (10 pages with
+  Otters Math; not uploaded).
 - **Foxes Reading (R3, our own level, grade 3 reading, 200 pages)** (2026-11-06): `syllabus/english/R3.yaml`:
   A Why They Did It 1–50 (RL.3.3) · B Word Builders 51–90 (un-, re-, -ful, -less, then compound words; L.3.4b,
   RF.3.3a; compounds are the L.2.4d on-ramp) · C Fables and Their Lessons 91–130 (RL.3.2) · D Why Did They? 131–170

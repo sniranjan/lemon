@@ -1,0 +1,968 @@
+# Otters Reading, section C "What's the Lesson?" (pages 91–130): theme in stories and fables (RL.5.2, RL.5.1).
+# Original stories (ours); ids with "classic" retell a public-domain fable in our own words. Schema:
+# ws/passages.py. Each story is a two-page spread: a reading page (the story, numbered paragraphs), then a
+# questions page with one question set of 5 questions (3 multiple choice, 2 written). `moral` is the theme
+# as a general statement; the "best states a theme" question's right choice matches it. `evidence`: words
+# copied exactly from the text (from the paragraph a question names, if it names one).
+
+- id: c01-classic-fox-grapes
+  title: The Fox and the Grapes
+  kind: story
+  moral: People sometimes pretend they never wanted something they could not have.
+  text: |
+    One hot afternoon in late summer, a red fox trotted along a dusty country road. He had
+    been hunting since sunrise without finding a single bite to eat, and his stomach growled with
+    every step. His tongue felt as dry as the dusty ground beneath his paws.
+
+    Just past a stone wall, he noticed an old vine climbing up a wooden fence. Hanging from its
+    highest branch was a heavy bunch of purple grapes. They were plump and round, and they gleamed in
+    the sunlight as if they had been polished. The hungry fox could almost taste their cool, delicious juice.
+
+    "Those grapes are exactly what I need," he declared, licking his lips.
+
+    He crouched low, wiggled his tail, and sprang into the air with all his strength. His teeth
+    snapped shut on nothing but air, and he landed in a clumsy heap. He shook off the dust and tried
+    again, jumping even higher, but once again he missed by a whisker. Determined, the fox backed up,
+    took a running start, and leaped a third time. His nose brushed a leaf, but the grapes swung
+    gently out of reach, as if they were teasing him.
+
+    By now the fox was panting heavily, and his legs felt wobbly. He glanced around to
+    make sure no one had been watching him fail. A curious sparrow perched on the fence tilted its
+    head at him.
+
+    The fox lifted his chin and pretended he did not care at all. "Those grapes are probably sour,"
+    he announced loudly. "I can tell just by looking at them. Only a foolish animal would waste his
+    valuable time on such disappointing fruit."
+
+    Then he turned and strolled away with his nose in the air, as if leaving had been his own idea
+    from the start. The sparrow, who could see the grapes up close, knew that they were ripe
+    and sweet.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - People may pretend not to want what they can't have.
+            - Trying hard will always earn you a reward in the end.
+            - It is wise to share your food with friends who are hungry.
+          evidence: The fox lifted his chin and pretended he did not care at all.
+        - ask: How does the fox respond when he first sees the grapes?
+          choices:
+            - He jumps for them again and again.
+            - He asks the sparrow to help him.
+            - He waits for the grapes to fall.
+          evidence: He crouched low, wiggled his tail, and sprang into the air with all his strength.
+        - ask: In paragraph 5, why does the fox glance around?
+          choices:
+            - He does not want anyone to see him fail.
+            - He is looking for a ladder to climb.
+            - He hopes to find more grapes nearby.
+          evidence: He glanced around to make sure no one had been watching him fail.
+        - ask: Are the grapes really sour? Use a detail from the last paragraph to explain.
+          sample: No, the grapes are not sour. The sparrow could see that they were ripe and sweet, so the fox was only pretending.
+          evidence: knew that they were ripe and sweet
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when the fox says the grapes are probably sour. He says this only because he cannot reach them.
+          evidence: '"Those grapes are probably sour,"'
+
+- id: c02-concert-violin
+  title: Maya's Violin Solo
+  kind: story
+  moral: Working hard and not giving up can help you do things that seem too difficult at first.
+  text: |
+    When Mr. Alvarez announced that Maya would play a short solo at the spring concert, her stomach
+    did a nervous flip. She loved her violin, but playing alone in front of the whole school felt
+    like standing on a stage with no curtain to hide behind.
+
+    That afternoon, Maya opened her case and tried the solo for the first time. Her bow wobbled, and a
+    high note came out as a squeak, like a door that needed oil. Her little brother covered his ears
+    and giggled. Maya felt her cheeks grow hot, and she put the violin away without finishing.
+
+    The next morning, she almost asked Mr. Alvarez to give the solo to someone else. Then she
+    remembered something her grandfather often said. "Every tree starts as a tiny seed," he would
+    tell her. "It grows a little each day."
+
+    So Maya made a plan. Every day after school, she practiced for twenty minutes before she did
+    anything else. She played the hard part slowly, one measure at a time, until her fingers knew
+    exactly where to go. When she made a mistake, she took a deep breath and started the line again.
+    On Saturdays, she played the whole solo for her family in the living room. Her brother stopped
+    giggling and began to clap.
+
+    By the week of the concert, the squeaky note sounded clear and sweet. Maya was still nervous, but
+    now she also felt ready.
+
+    On the night of the concert, the bright lights made the audience look like a dark sea. Maya's
+    hands trembled as she lifted her bow. She thought about all those afternoons of practice and began
+    to play. The music flowed out smoothly, just as it had in her living room.
+
+    When she finished, the room filled with applause. Maya looked out and spotted her grandfather in
+    the third row, smiling and nodding as if to say, "You grew."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Hard work and not giving up help you succeed.
+            - It is best to give hard jobs to someone else.
+            - Being nervous means you are not ready to try.
+          evidence: She thought about all those afternoons of practice and began to play.
+        - ask: How does Maya respond to the challenge of the solo?
+          choices:
+            - She practices a little every day.
+            - She asks to play in a group instead.
+            - She plays a much easier song.
+          evidence: Every day after school, she practiced for twenty minutes before she did anything else.
+        - ask: In paragraph 2, why does Maya put her violin away?
+          choices:
+            - She feels embarrassed by the squeaky note.
+            - Her teacher tells her to stop practicing.
+            - She has finished learning the whole solo.
+          evidence: Maya felt her cheeks grow hot, and she put the violin away without finishing.
+        - ask: How does Maya change from the start of the story to the end? Use a detail.
+          sample: At first Maya wants to give the solo away, but by the end she feels ready. She plays smoothly and the room fills with applause.
+          evidence: Maya was still nervous, but now she also felt ready.
+        - ask: How do Grandfather's words about a seed connect to the lesson of the story?
+          sample: A tree grows a little each day, and Maya's playing got better a little each day as she practiced.
+          evidence: '"It grows a little each day."'
+
+- id: c03-broken-flowerpot
+  title: The Blue Flowerpot
+  kind: story
+  moral: Telling the truth can take courage, but it helps build trust.
+  text: |
+    On a breezy Saturday morning, Theo was practicing his soccer kicks in the backyard. He placed the
+    ball carefully, took three long steps back, and kicked it as powerfully as he could. The ball
+    sailed high over the fence and landed with a terrible crack in Mrs. Okafor's garden.
+
+    Theo's heart thumped as he climbed onto the old picnic table and peeked over the fence. His ball
+    rested in the grass beside a scattered pile of blue pieces and spilled dirt. It had smashed Mrs. Okafor's
+    favorite flowerpot, the one with the yellow tulips that she watered every single morning.
+
+    Nobody seemed to be outside. For a moment, Theo considered leaving the ball where it was and
+    going inside to read comics. Mrs. Okafor might imagine that a squirrel or the wind had knocked the
+    pot over, and no one would ever discover the truth.
+
+    But Theo would know. He pictured Mrs. Okafor discovering the broken pot and wondering sadly what
+    had happened. His stomach felt tight and heavy, as if he had swallowed a stone.
+
+    He walked slowly next door and knocked, and when Mrs. Okafor opened the door, he took a deep breath.
+    "I kicked my ball over the fence," he said quietly, "and it broke your blue flowerpot. I'm really
+    sorry. I'd like to help fix it."
+
+    Mrs. Okafor looked surprised at first, and then her expression softened. "Thank you for telling me, Theo," she
+    said. "That pot was special, but honesty is even more special. It took courage to knock on my
+    door."
+
+    That afternoon, Theo and his dad bought a new pot with money from Theo's piggy bank. Theo helped
+    Mrs. Okafor replant the tulips, pressing the soil gently around their roots. Afterward, she handed
+    him a glass of lemonade and asked if he would like to help in her garden again. Theo grinned. The heavy stone in his stomach was gone.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Telling the truth takes courage and builds trust.
+            - Playing soccer near a garden is never a good idea.
+            - Neighbors should always keep their gardens fenced.
+          evidence: honesty is even more special. It took courage to knock on my door.
+        - ask: How does Theo respond after the flowerpot breaks?
+          choices:
+            - He tells Mrs. Okafor and offers to help.
+            - He hides the pieces under the picnic table.
+            - He asks his dad to talk to Mrs. Okafor.
+          evidence: '"and it broke your blue flowerpot. I''m really sorry. I''d like to help fix it."'
+        - ask: In paragraph 4, how does Theo feel when he thinks about keeping quiet?
+          choices:
+            - uneasy and guilty
+            - proud and relieved
+            - bored and sleepy
+          evidence: His stomach felt tight and heavy, as if he had swallowed a stone.
+        - ask: How do Theo's feelings change by the end of the story? Use a detail.
+          sample: At first Theo feels tight and heavy inside, but after he tells the truth he feels much better. The heavy stone in his stomach is gone.
+          evidence: The heavy stone in his stomach was gone.
+        - ask: Write a short summary of the story.
+          sample: Theo's ball breaks his neighbor's flowerpot. He tells her the truth, buys a new pot, and helps replant the tulips.
+          evidence: Theo helped Mrs. Okafor replant the tulips
+
+- id: c04-classic-town-country-mouse
+  title: The Two Mouse Cousins
+  kind: story
+  moral: A simple, peaceful life can be better than a fancy life full of worry.
+  text: |
+    Once there were two mice who were cousins. One lived in a cozy burrow beneath a farmer's barn,
+    and the other lived inside the walls of a grand house in the city. One autumn, the country mouse
+    invited her cousin to visit.
+
+    The country mouse proudly served the best food she had: barley seeds, a few dried peas, and a
+    crumb of cheese she had been saving for a special occasion. The town mouse nibbled politely, but
+    she wrinkled her nose. "How can you stand such plain food?" she asked. "Come home with me, and I
+    will show you how a mouse ought to live."
+
+    The country mouse was curious, so the next morning the two cousins set off for the city. When they
+    arrived, the town mouse led her cousin into an enormous dining room. The table was crowded with
+    leftovers from a feast: soft bread, sugary cakes, ripe strawberries, and a wedge of creamy cheese.
+    The country mouse's eyes grew wide.
+
+    The cousins had barely taken a bite when the door burst open. A servant marched in, clattering
+    dishes, and the mice dashed under a cabinet. A moment later, a large dog came bounding in, barking
+    and sniffing everywhere. The country mouse trembled in the darkness until the house was quiet
+    again.
+
+    Twice more that evening, the cousins crept out to eat, and twice more they had to scamper away and
+    hide. The country mouse never finished a single crumb.
+
+    At last she turned to her cousin. "Thank you for the visit," she said kindly. "Your
+    food is delicious, but I would rather eat plain seeds in peace than fancy cakes while I am worried
+    and afraid."
+
+    The very next morning, she hurried back to her quiet burrow beneath the barn. That night she ate a
+    simple supper of barley, curled up in her soft bed of straw, and slept peacefully until sunrise.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - A simple, peaceful life can beat a fancy, worried one.
+            - It is rude to refuse food that someone offers you.
+            - The city is always a better place to live than a farm.
+          evidence: I would rather eat plain seeds in peace than fancy cakes while I am worried
+        - ask: How does the country mouse respond to the trouble in the city?
+          choices:
+            - She decides to go back to her quiet home.
+            - She asks her cousin to share the cake with her.
+            - She stays in the city and learns to be brave.
+          evidence: The very next morning, she hurried back to her quiet burrow beneath the barn.
+        - ask: In paragraph 2, how does the town mouse feel about her cousin's food?
+          choices:
+            - She thinks it is too plain.
+            - She thinks it is too sweet.
+            - She thinks it is a wonderful feast.
+          evidence: '"How can you stand such plain food?"'
+        - ask: What does the country mouse learn from her visit? Use a detail from the story.
+          sample: She learns that she likes her quiet home better. In the city she never finished a single crumb because she kept having to hide.
+          evidence: The country mouse never finished a single crumb.
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The last paragraph shows it best. The country mouse eats a simple supper and sleeps peacefully, which she could not do in the city.
+          evidence: curled up in her soft bed of straw, and slept peacefully until sunrise
+
+- id: c05-new-student-words
+  title: Hello in Two Languages
+  kind: story
+  moral: Small acts of kindness can help people feel welcome, even across differences.
+  text: |
+    On the first Monday in October, Ms. Rivera introduced a new student to the fifth-grade class.
+    Her name was Mei, and her family had just moved from China. Mei stood beside the teacher's desk,
+    holding the straps of her backpack tightly, while twenty faces stared at her with curiosity.
+
+    Mei knew only a few English words. During math she could solve every problem, but during reading
+    she sat silently, studying the pages as if they were a puzzle with missing pieces. At lunch she
+    ate alone at the end of the table, and at recess she watched the other children from the bench.
+
+    Daniel noticed. He remembered visiting his cousins in another state and feeling lonely because he
+    did not know anyone there. He wondered how much harder it would be if he could not even speak the
+    language.
+
+    That evening, Daniel asked his mom to help him look up some words in Chinese. He practiced them in
+    front of the bathroom mirror until he could say them without stumbling. He learned "ni hao," which
+    means hello, and "xie xie," which means thank you. He even learned how to ask, "Do you want to
+    play?"
+
+    The next morning, Daniel took a deep breath and walked over to Mei's desk. "Ni hao," he said with
+    a shy smile.
+
+    Mei's eyes widened in surprise. Then a huge grin spread across her face, and she laughed and
+    answered him in Chinese. She pointed to her pencil and said its name in her language, then waited
+    for Daniel to tell her the English word.
+
+    After that, the two of them traded words every day. Daniel taught Mei words like "slide," "pizza,"
+    and "awesome," and Mei taught him how to count to ten in Chinese. By winter, Mei was chatting with
+    everyone at the lunch table, and Daniel could count all the way to one hundred in a brand-new
+    language.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Small acts of kindness help people feel welcome.
+            - Math is the easiest subject for new students.
+            - It is best to wait for others to talk to you first.
+          evidence: Then a huge grin spread across her face
+        - ask: How does Daniel respond when he sees Mei is lonely?
+          choices:
+            - He learns some words in her language.
+            - He asks the teacher to move her desk.
+            - He gives her his favorite book to read.
+          evidence: Daniel asked his mom to help him look up some words in Chinese.
+        - ask: In paragraph 3, why does Daniel understand how Mei feels?
+          choices:
+            - He once felt lonely where he knew no one.
+            - He also moved to a new country last year.
+            - He sat alone at lunch on his first day.
+          evidence: feeling lonely because he did not know anyone there
+        - ask: How does Mei change from the beginning of the story to the end? Use a detail.
+          sample: At first Mei sits alone and stays silent. By winter she is chatting with everyone at the lunch table.
+          evidence: By winter, Mei was chatting with everyone at the lunch table
+        - ask: How does Daniel's kindness help him as well as Mei? Explain.
+          sample: Daniel makes a new friend, and he learns to count to one hundred in a new language.
+          evidence: Daniel could count all the way to one hundred in a brand-new language
+
+- id: c06-twins-science-fair
+  title: Two Halves of a Project
+  kind: story
+  moral: People working together can often do more than either person could alone.
+  text: |
+    Kofi and Ama were twins, but they almost never agreed about anything. So when Mr. Bennett said
+    they would be partners for the science fair, they looked at each other and groaned.
+
+    Their project was supposed to answer a question about plants. Kofi wanted to build a machine that
+    would water seedlings automatically, with tubes, a timer, and a little pump. Ama wanted to test
+    whether plants grew better with music, sunlight, or both. They argued at breakfast and on the bus.
+    They argued at the kitchen table until their dad sent them to separate rooms.
+
+    Alone in his bedroom, Kofi sketched his machine, but he realized he had no idea what to measure.
+    Down the hall, Ama planned her experiment, but she worried about forgetting to water the plants on
+    weekends. Each of them had half of a project.
+
+    The next morning, Ama slid her notebook across the table without a word. Kofi read it carefully,
+    then pushed his drawings toward her. Slowly, they both began to smile. "Your machine could water
+    my plants exactly the same amount every day," Ama said. "That would make my experiment much
+    fairer."
+
+    "And your experiment gives my machine a real job," Kofi answered. For the next three weeks, the twins worked side by side. Kofi built the watering system out of
+    plastic bottles and straws, while Ama planted beans in six cups and recorded their height every
+    afternoon. When a tube leaked, Ama suggested sealing it with clay. When Ama's chart got confusing,
+    Kofi helped her turn it into a colorful graph.
+
+    On the day of the fair, a judge studied their display for a long time. "Two strong ideas that fit
+    together perfectly," she said, and she pinned a blue ribbon to their poster. Kofi and Ama gave each
+    other a high five, and for once, they agreed completely.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Working together can do more than working alone.
+            - Science fair projects work best when done alone.
+            - Brothers and sisters usually like the same things.
+          evidence: '"Two strong ideas that fit together perfectly,"'
+        - ask: How do the twins finally solve their problem?
+          choices:
+            - They combine their two ideas into one project.
+            - They each enter a different project in the fair.
+            - They let their dad choose the better of the ideas.
+          evidence: '"Your machine could water my plants exactly the same amount every day,"'
+        - ask: In paragraph 3, what does each twin discover while working alone?
+          choices:
+            - Each one has only half of a project.
+            - Each one has a project that is finished.
+            - Each one wants to quit the science fair.
+          evidence: Each of them had half of a project.
+        - ask: How do Kofi and Ama change by the end of the story? Use a detail.
+          sample: At first they argue about everything, but by the end they help each other. Ama fixes a leak with clay, and Kofi helps with her graph.
+          evidence: When a tube leaked, Ama suggested sealing it with clay.
+        - ask: Write a short summary of the story.
+          sample: Twins who always argue have to share a science project. They combine their ideas, work together, and win a blue ribbon.
+          evidence: she pinned a blue ribbon to their poster
+
+- id: c07-classic-oak-reed
+  title: The Oak and the Reed
+  kind: story
+  moral: Being flexible can be stronger than refusing to bend.
+  text: |
+    Beside a wide, slow river stood a magnificent oak tree. Its trunk was thick and rough, its
+    branches stretched toward the clouds, and it had stood in the same spot for more than a hundred
+    years. Birds built their nests among its leafy branches.
+
+    At the edge of the water grew a slender green reed. Whenever a breeze drifted across the river,
+    the reed swayed back and forth, bowing gracefully.
+
+    One afternoon, the oak looked down at the reed with pity. "You poor little thing," it rumbled. "The
+    slightest breeze pushes you around in every direction. Look at me instead, for I never bend for
+    anyone. I stand straight and proud, no matter what the weather brings."
+
+    "I may be small," the reed replied calmly, "but I do not mind bending at all."
+
+    That night, a powerful storm swept down the valley. Rain poured from the sky, and
+    the wind roared through the trees with tremendous force. The reed bent low, almost touching the
+    water, and let the wind rush over it. The oak, however, refused to bend. It held its branches
+    stiff and struggled against every gust with all its strength.
+
+    The wind continued growing stronger. Finally, with a long, tired groan, the old oak tipped over and
+    settled gently onto the soft, muddy riverbank, its roots pointing at the sky.
+
+    In the morning, the sun rose over a calm, sparkling river. The reed slowly lifted itself up, shook
+    the raindrops from its leaves, and stood tall once more. Beside it, the fallen oak lay quietly on
+    the bank. Already a family of rabbits had found a snug new home among its branches, and a robin
+    was singing from its trunk. Gazing thoughtfully at its old neighbor, the reed realized something important. Sometimes the
+    strongest thing you can do is bend a little and wait for the storm to pass.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Being flexible can be stronger than refusing to bend.
+            - The biggest and oldest one always wins in the end.
+            - Small things should always try to grow tall and big.
+          evidence: the strongest thing you can do is bend a little and wait for the storm to pass
+        - ask: How does the reed respond to the storm?
+          choices:
+            - It bends low and lets the wind rush over it.
+            - It holds itself stiff and straight against the wind.
+            - It hides safely under the branches of the oak.
+          evidence: The reed bent low, almost touching the water, and let the wind rush over it.
+        - ask: In paragraph 3, how does the oak feel about the reed?
+          choices:
+            - It feels sorry for the reed.
+            - It is jealous of the reed.
+            - It is afraid of the reed.
+          evidence: the oak looked down at the reed with pity
+        - ask: What happens to the oak because it will not bend? Use a detail from the story.
+          sample: The oak tips over in the storm because it stays stiff and struggles against the wind. It ends up lying on the muddy riverbank.
+          evidence: the old oak tipped over and settled gently onto the soft, muddy riverbank
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The morning after the storm shows it best. The reed stands tall again, but the oak that would not bend has fallen.
+          evidence: The reed slowly lifted itself up, shook the raindrops from its leaves, and stood tall once more.
+
+- id: c08-spelling-bee
+  title: More Than a Trophy
+  kind: story
+  moral: Doing your best and enjoying learning matter more than winning.
+  text: |
+    Ravi wanted to win the school spelling bee more than anything. The winner would receive a shiny
+    gold trophy, and Ravi could already picture it standing on the shelf above his bed.
+
+    For weeks, he studied the official word list every evening. He covered the words with his hand,
+    spelled them out loud, and checked himself again and again. But studying felt like a chore.
+    Whenever he missed a word, he groaned and slammed the book shut.
+
+    One evening, Ravi stumbled over the tricky word "chameleon." His grandmother, who was knitting nearby,
+    looked up. "Do you know what a chameleon is?" she asked.
+
+    Ravi shrugged. "Some kind of lizard, I think." Together they looked it up. Ravi discovered that a chameleon can change colors and move its eyes
+    in two different directions at once. The word came from old Greek words that meant "ground lion."
+    Ravi laughed out loud, and after that he could never forget how to spell it.
+
+    From then on, studying became a treasure hunt. Ravi searched for the stories hidden inside words.
+    He learned that "astronaut" came from words meaning "star sailor," and that "dinosaur" meant
+    "terrible lizard." He started writing his favorite discoveries in a small green notebook.
+
+    On the day of the spelling bee, Ravi spelled seven words correctly. Then he was given the word
+    "rhythm," and he forgot the first "h." His heart sank as he walked back to his seat. A girl named
+    Clara won the trophy, and Ravi clapped for her with everyone else.
+
+    That evening, his grandmother asked how he felt. Ravi considered the question carefully. He was a
+    little disappointed, but mostly he felt proud of himself. He had tried his hardest, and his green
+    notebook was nearly full. "I didn't win the trophy," he said, "but I won something better. Now I love words."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Doing your best and enjoying learning matter most.
+            - If you study hard enough, you will always win first place.
+            - Spelling bees are much too hard for most students.
+          evidence: '"but I won something better. Now I love words."'
+        - ask: How does Ravi respond when he misses the word "rhythm"?
+          choices:
+            - He claps for the winner with everyone else.
+            - He asks the judges to give him another chance.
+            - He throws his green notebook into the trash.
+          evidence: Ravi clapped for her with everyone else
+        - ask: In paragraph 2, how does Ravi feel about studying at first?
+          choices:
+            - It feels like a chore.
+            - It feels like a game.
+            - It feels too easy.
+          evidence: But studying felt like a chore.
+        - ask: How does Ravi's view of studying change? Use a detail from the story.
+          sample: At first studying felt like a chore, but later it became a treasure hunt. He wrote his favorite word stories in a notebook.
+          evidence: From then on, studying became a treasure hunt.
+        - ask: What does Ravi mean when he says he "won something better"? Explain.
+          sample: He means that learning to love words is better than a trophy. He feels proud because he tried his hardest.
+          evidence: He had tried his hardest, and his green notebook was nearly full.
+
+- id: c09-bike-savings
+  title: The Bike Jar
+  kind: story
+  moral: Giving to others can bring a joy that is even greater than getting.
+  text: |
+    For eight months, Lucia had been saving for a new bike. She kept her money in a glass jar on her
+    dresser, and every coin from chores, birthdays, and her lemonade stand went inside. Taped to the
+    jar was a picture of the bike she wanted, a shiny purple one with a bell.
+
+    By April, the jar held almost ninety dollars. Only ten more, and Lucia would have enough. She
+    counted the money every night before bed, smoothing out each wrinkled bill.
+
+    Then her mom mentioned that Grandma Rosa's birthday was coming up on Sunday. Lucia thought about
+    her grandmother, who lived alone in a small apartment across town. Grandma Rosa always had warm
+    cookies waiting when Lucia visited, and she knew every word to the old songs she sang while she
+    cooked. Lately, she had seemed a little lonely.
+
+    Lucia remembered something Grandma had said the last time they walked past the garden store. "I
+    miss having flowers on my windowsill," she had sighed. "My apartment feels so gray without them."
+
+    Lucia looked at her jar for a long time. Spending money would mean waiting longer for the bike.
+    Finally, she took out fifteen dollars. On Saturday, she and her mom bought a clay pot, a bag of
+    soil, and a pink geranium. Lucia painted the pot with yellow suns and wrote "For Grandma" on the
+    side.
+
+    When Grandma Rosa unwrapped the gift, her eyes filled with happy tears. She placed the geranium on
+    her windowsill right away, and the whole kitchen seemed to brighten. She hugged Lucia tightly and
+    sang her a birthday song of her own.
+
+    Riding home, Lucia realized she felt happier than she had in weeks. The bike would come in a few
+    more months, but the look on Grandma's face was something she would remember forever.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Giving to others can bring great joy.
+            - It is always best to save every penny.
+            - Flowers are the best gift for any birthday.
+          evidence: Lucia realized she felt happier than she had in weeks
+        - ask: What does Lucia decide to do with some of her savings?
+          choices:
+            - She spends some on a gift for Grandma.
+            - She buys the bike and visits Grandma later.
+            - She asks her mom to pay for the gift.
+          evidence: Finally, she took out fifteen dollars.
+        - ask: In paragraph 4, why does Lucia choose flowers for the gift?
+          choices:
+            - Grandma said she missed having flowers.
+            - Flowers were the cheapest gift in the store.
+            - Grandma asked for a pink geranium.
+          evidence: '"I miss having flowers on my windowsill,"'
+        - ask: Why is the choice hard for Lucia? Use a detail from the story.
+          sample: The choice is hard because she has saved for eight months. Spending money means she will have to wait longer for the bike.
+          evidence: Spending money would mean waiting longer for the bike.
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The last paragraph shows it best. Lucia feels happier than she has in weeks even though she still has no bike.
+          evidence: Lucia realized she felt happier than she had in weeks.
+
+- id: c10-drawing-laugh
+  title: The Purple Elephant
+  kind: story
+  moral: We should treat others the way we would want to be treated.
+  text: |
+    In art class, Mrs. Kim asked everyone to draw their favorite animal. Jamal drew a proud lion with
+    a golden mane. At the next table, Hana held up her paper. She had drawn an elephant, but it was
+    purple, with enormous ears and a trunk that curled like a spring.
+
+    Jamal laughed before he could stop himself, and several heads turned. "Elephants aren't purple,"
+    he said loudly. "That looks like a balloon with legs." A few other kids giggled too.
+
+    Hana's smile disappeared. She lowered her paper, folded it in half, and stared at the table for
+    the rest of the class. When the bell rang, she left without looking at anyone.
+
+    On the bus ride home, Jamal kept thinking about Hana's face. He remembered last year, when an older
+    boy had laughed at his handwriting in front of everyone. His cheeks had burned, and he had not
+    wanted to write anything for days. Now Jamal realized he had made Hana feel the very same way.
+
+    That night, he could not concentrate on his homework, so he finally took out a fresh sheet of
+    paper and some colored pencils.
+
+    The next morning, Jamal found Hana by her cubby. "I'm sorry I laughed at your elephant," he said.
+    "It wasn't funny, and it wasn't kind. I really liked how you drew the trunk." Then he handed her his
+    new drawing. It showed his golden lion and a purple elephant walking side by side under a bright
+    sun.
+
+    Hana studied the picture carefully for a moment before she slowly unfolded her own drawing and
+    smoothed out the crease. "Maybe in a story, elephants can be any color," she said with a small
+    smile. Later, the two of them asked Mrs. Kim if they could make a picture book together. They
+    called it "The Lion and the Purple Elephant."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices:
+            - Treat others the way you want to be treated.
+            - Drawings should always show animals in their real colors.
+            - It is best to keep your art to yourself in class.
+          evidence: Now Jamal realized he had made Hana feel the very same way.
+        - ask: How does Jamal try to make things right?
+          choices:
+            - He says sorry and gives Hana a new drawing.
+            - He tells Mrs. Kim that the other kids laughed.
+            - He gives Hana his lion drawing to keep.
+          evidence: '"I''m sorry I laughed at your elephant," he said.'
+        - ask: In paragraph 3, how does Hana feel after Jamal laughs?
+          choices:
+            - sad and embarrassed
+            - proud and excited
+            - angry and loud
+          evidence: Hana's smile disappeared.
+        - ask: What helps Jamal understand how Hana feels? Use a detail from paragraph 4.
+          sample: Jamal remembers when an older boy laughed at his handwriting. His cheeks burned, so he knows Hana feels the same way.
+          evidence: an older boy had laughed at his handwriting in front of everyone
+        - ask: Write a short summary of the story.
+          sample: Jamal laughs at Hana's purple elephant and makes her sad. He says sorry, draws her a picture, and they make a book together.
+          evidence: the two of them asked Mrs. Kim if they could make a picture book together
+
+- id: c11-classic-milkmaid-pail
+  title: The Milkmaid's Pail
+  kind: story
+  moral: Don't count on good things before they actually happen.
+  text: |
+    Early one summer morning, a young milkmaid named Polly milked the farm's gentle brown cow and filled a tall wooden pail to the brim. The milk was warm and creamy, and it would bring a fair price at the market in town. Polly balanced the heavy pail carefully on top of her head and set off down the dusty country road.
+
+    As she walked, her mind began to wander. "With the money from this milk, I will buy a dozen eggs," she said to herself. "The eggs will hatch into fluffy chicks, and the chicks will grow into fine hens." She smiled at the thought and walked a little faster.
+
+    Her daydream grew bigger with every step. The hens would lay many more eggs, which she would sell for even more money. Soon she would have enough to buy a beautiful new dress, the color of a summer sky, and she imagined wearing it to the fair, where everyone would turn to admire her.
+
+    "When the other girls notice my dress, I won't even glance at them," Polly decided. "I will simply toss my head like this." Without thinking, she proudly tossed her head to one side.
+
+    The pail tipped, wobbled, and tumbled to the ground, and the creamy milk splashed into the dust and soaked away in a moment. Polly stared at the empty pail. There would be no money, no eggs, no chicks, no hens, and no sky-blue dress.
+
+    Slowly, she picked up the pail and walked back toward the farm, where she explained everything to her mother. Her mother listened kindly and said, "Tomorrow there will be more milk. Carry it carefully, and think about the road in front of you instead of a dress you don't have yet." The next morning, Polly walked to market with both hands steadying the pail, and she sold every drop.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Don't count on good things before they happen., Hard work always makes people rich., New clothes are the best way to feel happy.]
+          evidence: think about the road in front of you instead of a dress you don't have yet
+        - ask: How does Polly respond after the milk spills?
+          choices: [She picks up the pail and goes home to explain., She blames the cow and refuses to milk it again., She hurries to town to buy eggs anyway.]
+          evidence: Slowly, she picked up the pail and walked back toward the farm
+        - ask: In paragraph 2, why does Polly walk a little faster?
+          choices: [She feels happy about her plan., She is late for the market., She sees the other girls ahead.]
+          evidence: She smiled at the thought and walked a little faster.
+        - ask: How is Polly different the next morning? Use a detail from the story.
+          sample: Polly pays attention to what she is doing. She walks to market with both hands steadying the pail and sells every drop.
+          evidence: Polly walked to market with both hands steadying the pail
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Polly tosses her head and spills the milk. She was so busy dreaming about a dress that she lost the milk she really had.
+          evidence: Without thinking, she proudly tossed her head to one side.
+
+- id: c12-deep-water
+  title: The Deep End
+  kind: story
+  moral: Courage grows step by step when you keep trying a little at a time.
+  text: |
+    On the first morning of summer camp, Amara stood at the edge of Willow Lake and watched the other campers splash toward the floating dock. The water near the shore was clear and shallow, but farther out it turned a deep, dark green. Just looking at it made her stomach twist into a knot. She pretended to tie her shoe so nobody would notice her hands trembling.
+
+    Her swim counselor, a tall, cheerful young woman named Rosa, noticed anyway. "You don't have to swim to the dock today," Rosa said. "How about we just get our feet wet?" Amara hesitated, then nodded. That afternoon, she waded in up to her knees and stayed there until the whistle blew.
+
+    Each day, Rosa gave her one small goal. On Tuesday, Amara practiced floating on her back while Rosa held a hand under her shoulders. On Wednesday, she put her face in the water and blew bubbles until she stopped flinching. By Thursday, she could kick across the shallow area holding a foam board, and she was surprised to find herself grinning.
+
+    On Friday, a wave from a passing canoe splashed over her head, and Amara scrambled back to shore, coughing and embarrassed. She almost decided to quit. Then she remembered how far she had already come since Monday, and she walked back into the lake.
+
+    On the last day of camp, Rosa swam beside her as Amara paddled toward the floating dock. Her arms ached and her heart pounded, but she kept going, one stroke after another. When her fingers finally touched the rough wooden edge, the whole group cheered.
+
+    Amara climbed onto the dock and looked back at the shore. The deep water still seemed big, but it no longer seemed impossible. Her courage had not arrived all at once. It had grown a little each day that she was willing to try.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Courage grows step by step when you keep trying., Summer camp is the best place to make friends., It is wiser to stay where the water is shallow.]
+          evidence: It had grown a little each day that she was willing to try.
+        - ask: How does Amara respond after the wave splashes her in paragraph 4?
+          choices: [She remembers her progress and goes back in., She quits swimming for the rest of camp., She asks Rosa to call her parents.]
+          evidence: Then she remembered how far she had already come since Monday
+        - ask: In paragraph 1, why does Amara pretend to tie her shoe?
+          choices: [She wants to hide that she is afraid., Her shoelace really came untied., She is waiting for Rosa to arrive.]
+          evidence: She pretended to tie her shoe so nobody would notice her hands trembling.
+        - ask: How does Amara change from the beginning of camp to the end? Use a detail from the story.
+          sample: At first Amara was too afraid to go in the deep water. By the end, she swam all the way to the floating dock.
+          evidence: When her fingers finally touched the rough wooden edge, the whole group cheered.
+        - ask: Write a short summary of the story in two or three sentences.
+          sample: Amara is afraid of deep water at summer camp. Her counselor gives her one small goal each day. By the last day, she swims to the dock.
+          evidence: Each day, Rosa gave her one small goal.
+
+- id: c13-classic-belling-cat
+  title: A Bell for the Cat
+  kind: story
+  moral: An idea is only good if someone can actually carry it out.
+  text: |
+    In the cellar of a big old farmhouse lived a large family of mice with cozy nests inside the walls. Their only problem was the farmer's gray cat, Smoky, who prowled the cellar every night so silently that the mice never heard him coming. Again and again, he pounced and sent them scurrying for their holes with their whiskers quivering.
+
+    At last, the oldest mouse called a meeting, and dozens of mice crowded around a candle stub to share their ideas. One suggested staying inside their holes all night, but the others grumbled that they would grow hungry. Another wanted to move to the barn, but it was cold and drafty.
+
+    Then a young mouse named Pip climbed onto a spool of thread. "I have the answer," he announced proudly. "We will tie a little bell around Smoky's neck, so whenever he comes near, the bell will jingle and warn us."
+
+    The mice squeaked and clapped their tiny paws, delighted with such a clever idea. They began discussing where to find a bell and how long the ribbon should be, and Pip beamed as everyone praised him.
+
+    Finally, the oldest mouse raised one paw, and the room grew quiet. "It is a fine plan," she said gently. "But tell me, which one of us will walk up to Smoky and tie the bell around his neck?"
+
+    Nobody answered. Pip looked down at his feet, and the other mice suddenly found reasons to study the ceiling or the floor. Not a single mouse volunteered for the job.
+
+    After a long silence, Pip spoke again, more quietly this time. "I suppose an idea is only useful if someone can actually do it," he admitted. The oldest mouse smiled. "That is a wise thing to learn," she said. "Now let's think of a plan we can truly carry out."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [An idea is only good if someone can carry it out., The youngest in a group always has the best ideas., Cats and mice can never become friends.]
+          evidence: an idea is only useful if someone can actually do it
+        - ask: How do the mice first respond to Pip's idea in paragraph 4?
+          choices: [They cheer and start making plans., They laugh and ignore him., They complain that bells are too loud.]
+          evidence: The mice squeaked and clapped their tiny paws
+        - ask: Why does no mouse volunteer to tie the bell?
+          choices: [They are all afraid to get close to Smoky., They cannot find a bell anywhere., They want Pip to get all the credit.]
+          evidence: which one of us will walk up to Smoky and tie the bell around his neck?
+        - ask: What does Pip learn by the end of the story? Use a detail from the story.
+          sample: Pip learns that a plan is only useful if someone can really do it. He says this quietly after no mouse will tie the bell.
+          evidence: Pip spoke again, more quietly this time.
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when the oldest mouse asks who will tie the bell. Nobody answers, so everyone sees the plan cannot work.
+          evidence: Nobody answered. Pip looked down at his feet
+
+- id: c14-class-hamster
+  title: Peanut's Long Weekend
+  kind: story
+  moral: Being responsible means doing your job even when you are busy.
+  text: |
+    When Ms. Okafor asked who wanted to take Peanut the hamster home for the weekend, Mateo's hand shot up first. He had been waiting all year for his turn. On Friday afternoon, he carried the cage carefully to his mom's car with a bag of food and a card listing Peanut's needs. "Fresh food and water every morning," the card said in big letters.
+
+    Saturday was the busiest day Mateo could remember. His cousins arrived early for a trip to the science museum, and afterward the whole family went to a picnic at the park. Mateo raced from one exciting thing to the next. He never once thought about the small cage sitting quietly on his bedroom desk.
+
+    That night, as Mateo climbed into bed, he heard a soft, scratchy sound. Peanut was standing on his back legs, nibbling at the bars of the cage. Mateo's stomach dropped. The food dish was empty, and the water bottle held only a few drops. He jumped up, filled both, and watched Peanut stuff his cheeks until they bulged.
+
+    Peanut was fine, but Mateo felt terrible. He lay awake, thinking about how much the little hamster depended on him. Wanting a job was easy, he realized. Remembering to do it on a busy day was the hard part.
+
+    The next morning, Mateo made a plan. He wrote a checklist and taped it to the cage. He set an alarm on the kitchen clock for eight o'clock each morning. He even asked his little sister to remind him at breakfast.
+
+    On Monday, Mateo told Ms. Okafor the whole truth, and she thanked him for being honest. "Everyone forgets sometimes," she said. "What matters is what you do next." A month later, when Peanut needed a home for spring break, Ms. Okafor chose Mateo again, and he did not miss a single day.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Being responsible means doing your job even when busy., Pets are always too much work for most children., A trip to the museum is more fun than a picnic.]
+          evidence: Remembering to do it on a busy day was the hard part.
+        - ask: What does Mateo do the morning after he forgets to feed Peanut?
+          choices: [He makes a checklist and sets an alarm., He takes Peanut back to school early., He asks his mom to care for Peanut.]
+          evidence: He wrote a checklist and taped it to the cage.
+        - ask: In paragraph 3, how can you tell that Peanut is very hungry?
+          choices: [He stuffs his cheeks until they bulge., He sleeps in his nest all night., He runs fast on his wheel.]
+          evidence: watched Peanut stuff his cheeks until they bulged
+        - ask: How does Mateo change after his mistake? Use a detail from the story.
+          sample: Mateo becomes more reliable. He makes a checklist and an alarm, and over spring break he does not miss a single day.
+          evidence: he did not miss a single day
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Mateo finds Peanut's empty food dish after his busy day. It shows that a job still matters even when you are busy.
+          evidence: The food dish was empty, and the water bottle held only a few drops.
+
+- id: c15-grandpa-garden
+  title: Grandpa's Slow Garden
+  kind: story
+  moral: Good things often take time, so patience is worth it.
+  text: |
+    In early spring, Grandpa Chen handed his granddaughter Mei a small paper packet of seeds and a trowel. He told her that this year she would grow her own garden. Mei imagined rows of bright flowers and baskets of ripe tomatoes, and she was so excited that she planted every seed before lunch.
+
+    The next morning, she ran outside in her pajamas, but the dirt looked exactly the same as before. She checked again after school and once more before dinner, and still nothing had changed. "Grandpa, I think the seeds are broken," she complained. He chuckled and handed her the watering can. "Seeds take their time," he said. "Our job is to take care of them while they grow."
+
+    For two long weeks, Mei watered the soil and pulled tiny weeds, though some days she grumbled about it. Then, one sunny morning, she spotted a row of tiny green loops pushing up through the dirt, and she knelt down so close that her nose nearly touched them.
+
+    All summer, the bean vines curled around their poles an inch at a time, and the tomatoes stayed small, hard, and green for weeks. When Mei wanted to pick them anyway, Grandpa gently explained that tomatoes picked too early would taste sour.
+
+    So Mei waited. She learned to notice small changes, like a new leaf or a bud that had opened overnight. Instead of asking whether the garden was finished, she started asking what had changed that day.
+
+    At the end of August, the first tomato finally turned a deep, glowing red. Mei picked it and took a bite beside her grandfather. It was warm from the sun and sweeter than any tomato she had ever tasted. "Was it worth the wait?" Grandpa asked. Mei smiled with juice on her chin. "Every single day of it," she said.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: ["Good things take time, so patience is worth it.", Store vegetables taste just as good as homegrown ones., Gardening is easy if you have the right tools.]
+          evidence: '"Was it worth the wait?" Grandpa asked.'
+        - ask: In paragraph 2, how does Mei respond when nothing grows at first?
+          choices: [She complains that the seeds are broken., She digs up the seeds to look at them., She plants new seeds in a sunnier spot.]
+          evidence: I think the seeds are broken," she complained.
+        - ask: Why does Grandpa tell Mei not to pick the green tomatoes?
+          choices: [They would taste sour., They belong to a neighbor., They are too heavy to carry.]
+          evidence: tomatoes picked too early would taste sour
+        - ask: How does Mei change during the summer? Use a detail from paragraph 5.
+          sample: Mei stops being impatient and starts noticing small changes. She asks what changed each day instead of whether the garden is finished.
+          evidence: she started asking what had changed that day
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Mei bites the first red tomato. It is sweeter than any tomato she has tasted, so the long wait was worth it.
+          evidence: sweeter than any tomato she had ever tasted
+
+- id: c16-classic-miller-donkey
+  title: The Miller's Donkey
+  kind: story
+  moral: You cannot please everyone, so think for yourself and make your own choices.
+  text: |
+    Long ago, a miller and his son set off for the market in town to sell their donkey. The road was long, so they walked beside the donkey at an easy pace, leading it by a rope, until they passed a group of girls drawing water at a well.
+
+    "Look at those two!" one girl laughed. "They have a perfectly good donkey, and they are both walking." The miller felt his cheeks grow warm. He did not want to seem foolish, so he lifted his son onto the donkey's back, and they continued on their way.
+
+    Soon they passed two old men sitting on a bench, and one of them shook his head disapprovingly. "The strong young boy rides while his poor father walks in the dust," he grumbled. Embarrassed, the son climbed down, and the miller took his place on the donkey.
+
+    A little farther on, a woman carrying a basket of eggs frowned and called the miller a selfish father for riding comfortably while his little boy struggled to keep up. So the miller pulled his son up behind him, and both of them rode the donkey together.
+
+    As they neared the town, a farmer called out from his field that the poor animal looked exhausted and that they should carry the donkey instead. The miller and his son looked at each other, then tied the donkey's legs to a long pole and tried to carry it across a narrow bridge. The donkey kicked and wriggled, slipped free, and trotted all the way home.
+
+    The miller and his son stood on the bridge, tired, empty-handed, and out of breath. At last, the miller began to laugh. "We tried to please everyone we met," he said, "and we ended up pleasing no one, not even ourselves. Next time, we will listen politely and then decide for ourselves."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: ["You can't please everyone, so think for yourself.", Animals are happier when people carry them., Older people always give the best advice.]
+          evidence: we will listen politely and then decide for ourselves
+        - ask: How does the miller respond each time someone criticizes them?
+          choices: [He changes what they are doing., He ignores them and keeps walking., He argues until they agree with him.]
+          evidence: So the miller pulled his son up behind him
+        - ask: In paragraph 2, why does the miller put his son on the donkey?
+          choices: [He does not want to seem foolish., His son's feet are tired., The road is too muddy to walk on.]
+          evidence: He did not want to seem foolish
+        - ask: What does the miller learn at the end of the story? Use a detail from paragraph 6.
+          sample: The miller learns that he cannot please everyone. He says that next time they will listen politely and then decide for themselves.
+          evidence: We tried to please everyone we met
+        - ask: Write a short summary of the story in two or three sentences.
+          sample: A miller and his son keep changing how they travel because of what strangers say. In the end they lose the donkey and learn to decide for themselves.
+          evidence: slipped free, and trotted all the way home
+
+- id: c17-pass-the-ball
+  title: The Open Teammate
+  kind: story
+  moral: Success feels even better when you share it with others.
+  text: |
+    Ravi was the fastest player on the Riverside Rockets, and everybody knew it. Whenever the ball came near him, he put his head down and sprinted toward the goal, dodging one defender after another. He loved hearing the crowd shout his name when the ball flew into the net. In Ravi's mind, a good game meant one thing: scoring as many goals as he could.
+
+    Lately, though, things weren't working. The other teams had figured out his plan. As soon as Ravi got the ball, two or three defenders crowded around him, and he lost it again and again. The Rockets had lost three games in a row, and Ravi's teammates had stopped smiling at practice.
+
+    After one especially frustrating game, Coach Linda sat down beside him on the bench. "When three players surround you, it means somebody on our team is wide open," she said. "Next time, lift your head and look around."
+
+    In the next game, Ravi dribbled down the field, and sure enough, defenders swarmed toward him. This time, he glanced up. His teammate Lucy was standing alone near the goal, waving her arms. For a moment, Ravi hesitated, because he wanted to take the shot himself. Then he took a breath and passed the ball across to her.
+
+    Lucy kicked it into the corner of the net. The Rockets burst into cheers and ran to hug her, and Lucy pointed straight at Ravi. "Great pass!" she shouted. To Ravi's surprise, the happy feeling in his chest was just as big as when he scored a goal himself.
+
+    The Rockets won that game, and the next one too. Ravi still scored goals, but now he also made more passes than anyone else on the team. He had discovered that a goal everyone helps to create feels even better than one you score alone.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Success feels better when you share it with others., The fastest player should always take the shot., Practice matters more than winning games.]
+          evidence: a goal everyone helps to create feels even better than one you score alone
+        - ask: What does Ravi do when the defenders swarm him in paragraph 4?
+          choices: [He passes the ball to Lucy., He shoots the ball from far away., He kicks the ball out of bounds.]
+          evidence: Then he took a breath and passed the ball across to her.
+        - ask: How does Ravi feel when Lucy scores the goal?
+          choices: [as happy as when he scores himself, jealous that Lucy got the goal, worried that the coach is upset]
+          evidence: the happy feeling in his chest was just as big as when he scored a goal himself
+        - ask: How does Ravi change from the beginning of the story to the end? Use a detail from the story.
+          sample: At first Ravi only wanted to score goals himself. By the end, he makes more passes than anyone else on the team.
+          evidence: now he also made more passes than anyone else on the team
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Lucy scores and points at Ravi. Ravi feels just as happy as if he had scored, so sharing the success feels good.
+          evidence: Lucy pointed straight at Ravi. "Great pass!" she shouted.
+
+- id: c18-lumpia-lunch
+  title: Lumpia Day
+  kind: story
+  moral: Be proud of who you are and where your family comes from.
+  text: |
+    Every morning, Isabel's grandmother packed her lunch. Isabel called her grandmother Lola, the word
+    for grandma in the Philippines, where Lola had grown up. Instead of a sandwich, Isabel's lunch box
+    held rice, sweet slices of mango, and crispy lumpia, which are small fried spring rolls filled with
+    vegetables and meat.
+
+    At her new school, though, Isabel noticed that most kids ate sandwiches or pizza. On her second
+    day, a boy at her table wrinkled his nose. "What is that?" he asked loudly. Isabel's face turned
+    hot. From then on, she ate quickly with her lunch box half closed, and some days she brought most of
+    her food back home untouched.
+
+    One evening, Lola found her in the kitchen. "You don't like my lumpia anymore?" she asked softly.
+    Isabel stared at the floor and explained what had happened. Lola didn't scold her. Instead, she
+    pulled out a chair, began rolling lumpia for the next day, and told stories while she worked. She
+    described cooking with her own mother in a small kitchen near the sea. The recipe, she said, had
+    been passed down through four generations.
+
+    Isabel listened, and slowly she began to help. Her first rolls came out lopsided, but Lola praised
+    every single one. By the end of the evening, Isabel felt that the food in her lunch box carried a
+    whole family history.
+
+    The next day, Isabel opened her lunch box all the way. When the same boy asked what she was eating,
+    she sat up straight. "Lumpia," she said. "It's my grandma's recipe, and my great-great-grandmother
+    made it too." When she offered him one, he took a bite and his eyes went wide. "These are amazing," he
+    said.
+
+    Soon, half the table was asking whether Lola could teach them how to make lumpia. Isabel smiled,
+    proud of her lunch and of the family who had made it.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Be proud of who you are and where your family is from., It is best to eat the same food as everyone else., Cooking is easier when someone helps you.]
+          evidence: proud of her lunch and of the family who had made it
+        - ask: In paragraph 2, how does Isabel first respond when the boy asks about her lunch?
+          choices: [She hides her lunch and eats quickly., She tells him all about lumpia., She asks Lola to pack sandwiches.]
+          evidence: she ate quickly with her lunch box half closed
+        - ask: Why does Lola tell stories while she rolls the lumpia?
+          choices: [to help Isabel see the family history in the food, to keep Isabel from getting bored in the kitchen, to teach Isabel how to read a recipe by herself]
+          evidence: been passed down through four generations
+        - ask: How is Isabel different by paragraph 5? Use a detail from the story.
+          sample: In paragraph 2 Isabel hides her lunch because she is embarrassed. In paragraph 5 she opens her lunch box all the way and proudly shares a lumpia.
+          evidence: The next day, Isabel opened her lunch box all the way.
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Isabel sits up straight and says the lumpia is her grandma's recipe. She is proud of her family instead of embarrassed.
+          evidence: she sat up straight. "Lumpia," she said.
+
+- id: c19-robot-team
+  title: The Robot That Stopped
+  kind: story
+  moral: Mistakes can help you learn and improve when you work to fix them.
+  text: |
+    For six weeks, the Maple Street Robotics Club worked on a small robot they named Bolt. Bolt was supposed to follow a black line across a table, pick up three colored blocks, and drop them into a bin. In the school library, Bolt performed perfectly almost every time, and Nadia, Ben, Hana, and Theo could hardly wait for the city competition.
+
+    On the big day, the gym was packed with teams, laptops, and buzzing robots. When the judge called their names, Nadia set Bolt carefully at the starting line and pressed the button. Bolt rolled forward, wobbled, and then drove straight off the line.
+
+    Back at their table, nobody spoke for a while. Hana's eyes were shiny, and Theo slumped in his chair. "We practiced so much," he muttered. "Maybe we're just not good at this." Nadia felt the same way, but she took a deep breath. "We have one more round after lunch," she said. "Let's figure out what went wrong."
+
+    They tested Bolt again and again on the practice table. Finally, Hana noticed that the gym had enormous, bright lights hanging from the ceiling, much brighter than the lights in the library. The glare on the table was confusing Bolt's light sensor, so it could no longer find the black line.
+
+    Working together, the team taped a small cardboard hood around the sensor to block out the extra light. Ben adjusted the code while Theo held the robot steady and Nadia tightened the last screw.
+
+    In the afternoon round, Bolt followed the line perfectly and dropped all three blocks into the bin. The team didn't win first place, but they earned a special award for problem solving. On the bus ride home, Theo grinned. "If Bolt hadn't failed this morning, we never would have learned about the lights," he said. "Next year, we'll test everything in a bright room first."
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Mistakes help you learn when you work to fix them., Robots are too hard for most kids to build., Winning first place is the only thing that matters.]
+          evidence: If Bolt hadn't failed this morning, we never would have learned about the lights
+        - ask: In paragraph 3, how does Nadia respond after the first round goes wrong?
+          choices: [She wants to find out what went wrong., She says the team should go home early., She blames Ben for writing bad code.]
+          evidence: Let's figure out what went wrong.
+        - ask: Why does Bolt drive off the line at the competition?
+          choices: [Bright lights confuse its light sensor., Its battery runs out of power too soon., The competition table is too small for it.]
+          evidence: The glare on the table was confusing Bolt's light sensor
+        - ask: What does the team learn from their mistake? Use a detail from paragraph 6.
+          sample: The team learns that bright lights can confuse their robot. Next year they plan to test everything in a bright room first.
+          evidence: Next year, we'll test everything in a bright room first.
+        - ask: Write a short summary of the story in two or three sentences.
+          sample: A robotics team's robot fails at a competition. They work together to find the problem and fix it, and the robot works in the next round.
+          evidence: Working together, the team taped a small cardboard hood around the sensor
+
+- id: c20-missing-invitation
+  title: The Missing Invitation
+  kind: story
+  moral: Saying sorry and forgiving each other keep friendships strong.
+  text: |
+    Priya and Hannah had been best friends since kindergarten. They sat together on the bus, traded books every Friday, and could make each other laugh with one look. So on Monday morning, when Priya overheard two classmates talking about Hannah's birthday party on Saturday, she felt as if the floor had dropped out from under her.
+
+    Hannah had had a party, and Priya hadn't been invited. All day, Priya avoided her friend and sat at a different lunch table. When Hannah caught up with her at recess and asked what was wrong, Priya crossed her arms. "Why don't you ask the people who came to your party?" she snapped, and she walked away.
+
+    That evening, while cleaning out her backpack, Priya found a bright purple envelope underneath a crumpled spelling test. Her name was on the front in Hannah's careful handwriting, and inside was an invitation to the party. Priya's heart sank. Hannah must have slipped it into her backpack weeks ago, and Priya had never noticed.
+
+    Priya thought about Hannah's confused face at recess and the sharp words she had said. She knew she needed to make things right, so she sat at the kitchen table and made a card with a drawing of the two of them on the bus.
+
+    The next morning, Priya handed Hannah the card. "I'm really sorry," she said. "I thought you left me out, but the invitation was in my backpack the whole time. I shouldn't have been mean to you." Hannah read the card slowly and admitted that she had felt sad when Priya walked away.
+
+    Then Hannah smiled. "I forgive you," she said. "Want to come over on Saturday? There's still some birthday cake in the freezer." Priya laughed and hugged her. She had learned that an honest apology, and a friend willing to forgive, could make a friendship even stronger than before.
+  pages:
+    - focus: theme
+      questions:
+        - ask: Which sentence best states a theme of the story?
+          choices: [Saying sorry and forgiving keep friendships strong., Birthday parties always cause trouble., You should never believe what classmates say.]
+          evidence: a friend willing to forgive, could make a friendship even stronger than before
+        - ask: How does Priya respond after she finds the invitation?
+          choices: [She makes a card and says sorry., She throws the invitation away., She waits for Hannah to say sorry first.]
+          evidence: she sat at the kitchen table and made a card
+        - ask: In paragraph 2, why does Priya avoid Hannah?
+          choices: [She thinks Hannah left her out., She is busy with her schoolwork., She forgot about their plans.]
+          evidence: Hannah had had a party, and Priya hadn't been invited.
+        - ask: How does Hannah show that she forgives Priya? Use a detail from paragraph 6.
+          sample: Hannah says "I forgive you" and invites Priya over on Saturday. She even offers her some leftover birthday cake.
+          evidence: '"I forgive you," she said. "Want to come over on Saturday?'
+        - ask: Which part of the story shows the lesson best? Explain.
+          sample: The best part is when Priya says sorry and Hannah forgives her. After that, their friendship is even stronger than before.
+          evidence: '"I''m really sorry," she said.'

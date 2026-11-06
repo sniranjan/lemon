@@ -71,6 +71,23 @@ full_sentence_answer:
   - "Show how each answer reuses the question's words. Spelling can wobble."
   - "Say each answer aloud first, then write it: capital letter, period."
   - "Ask your child to point to the sentence that helps with each answer."
+# Otters Reading (R5): one line each, so the passage keeps its room
+read_then_answer:
+  - "Read the article together first. Then ask: what surprised you?"
+  - "For each answer, ask: which paragraph tells you? Point to it."
+  - "Let your child read aloud. Stop after each paragraph to retell it."
+clue_words:
+  - "Cover a bold word. Which other words in the sentence give clues?"
+  - "Ask: what would make sense in place of the bold word?"
+  - "Say each bold word in a new sentence of your own together."
+figurative_language:
+  - "Ask: what picture does the bold phrase put in your head?"
+  - "Say what each bold phrase really means in plain words."
+  - "Make up a silly simile together: as quiet as a ...?"
+paragraph_summary:
+  - "A summary says who or what, and the big thing that happens."
+  - "Cover each paragraph and ask: what was it mostly about?"
+  - "Keep summaries short: one sentence, no small details."
 letter_team:
   - "Say the team's sound together (sh says shhh). Read each word slowly, sliding through the sounds, then let your child trace or write the team."
   - "Point to the dark letters and say their sound. Read the word together, then your child traces or writes the team. Praise every try."

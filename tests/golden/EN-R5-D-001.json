@@ -1,0 +1,103 @@
+{
+  "id": "EN-R5-D-001",
+  "subject": "english",
+  "level": "R5",
+  "section": "D",
+  "part": 1,
+  "sheet_type": "figurative_language",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 8667021836765966019,
+  "title": "A Night at the Lake",
+  "parent_tip": "Say what each bold phrase really means in plain words.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "d01-night-at-the-lake",
+      "set": 0,
+      "again": false,
+      "heading": "A Night at the Lake",
+      "paragraphs": [
+        "On the last night of summer camp, Rosa and her cabinmates hiked down to the lake to watch the sky. A blanket of fog had rolled across the water earlier in the evening, but now it was slowly drifting away toward the distant hills.",
+        "\"Look up,\" whispered their counselor, Ms. Patel. Overhead, the stars were diamonds scattered across black velvet. Rosa had never seen so many in her whole life. She tried to find the star pictures they had learned about that week.",
+        "A loon called from somewhere far out on the lake. Everyone stayed as quiet as a mouse, hoping to hear it again. Rosa stood like a frozen statue, barely breathing. Finally the strange, wavering call floated back across the dark water, and the girls grinned at one another."
+      ],
+      "text": "story",
+      "marks": [
+        "as quiet as a mouse",
+        "like a frozen statue"
+      ],
+      "segments": [
+        [
+          [
+            "On the last night of summer camp, Rosa and her cabinmates hiked down to the lake to watch the sky. A blanket of fog had rolled across the water earlier in the evening, but now it was slowly drifting away toward the distant hills.",
+            false
+          ]
+        ],
+        [
+          [
+            "\"Look up,\" whispered their counselor, Ms. Patel. Overhead, the stars were diamonds scattered across black velvet. Rosa had never seen so many in her whole life. She tried to find the star pictures they had learned about that week.",
+            false
+          ]
+        ],
+        [
+          [
+            "A loon called from somewhere far out on the lake. Everyone stayed ",
+            false
+          ],
+          [
+            "as quiet as a mouse",
+            true
+          ],
+          [
+            ", hoping to hear it again. Rosa stood ",
+            false
+          ],
+          [
+            "like a frozen statue",
+            true
+          ],
+          [
+            ", barely breathing. Finally the strange, wavering call floated back across the dark water, and the girls grinned at one another.",
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What does \"as quiet as a mouse\" mean?",
+      "choices": [
+        "very scared",
+        "very small",
+        "very quiet"
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "Is \"like a frozen statue\" a simile or a metaphor?",
+      "choices": [
+        "simile",
+        "idiom",
+        "metaphor"
+      ],
+      "answer": "A"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Why does the writer say Rosa stood \"like a frozen statue\"?",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. C (very quiet)",
+    "2. A (simile)",
+    "3. Sample: The writer wants to show that Rosa stood perfectly still so she could hear the loon."
+  ],
+  "new_words": [],
+  "review_words": []
+}

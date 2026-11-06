@@ -1,0 +1,78 @@
+{
+  "id": "EN-R5-A-002",
+  "subject": "english",
+  "level": "R5",
+  "section": "A",
+  "part": null,
+  "sheet_type": "read_then_answer",
+  "page_number": 2,
+  "variant": 1,
+  "seed": 13228803352720878117,
+  "title": "How Sea Otters Stay Warm",
+  "parent_tip": "Read the article together first. Then ask: what surprised you?",
+  "items": [
+    {
+      "kind": "look_back",
+      "role": "questions",
+      "passage": "a01-sea-otter-coats",
+      "set": 0,
+      "heading": "How Sea Otters Stay Warm",
+      "read_page": 1,
+      "text": "article"
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "According to paragraph 1, what keeps most sea mammals warm?",
+      "choices": [
+        "a thick layer of fat called blubber",
+        "a coat of very long and oily fur",
+        "the warm water near the coast"
+      ],
+      "answer": "A"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "What does the short, soft underfur do?",
+      "choices": [
+        "It helps the otter crack open shells.",
+        "It keeps the otter from sinking too deep.",
+        "It traps a layer of air next to the skin."
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "mc",
+      "n": 3,
+      "ask": "Why do sea otters need to eat so much food every day?",
+      "choices": [
+        "Their food is very small.",
+        "Staying warm takes a lot of energy.",
+        "They cannot find food in winter."
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "write",
+      "n": 4,
+      "ask": "Why does a sea otter spend hours grooming? Use a detail from paragraph 3.",
+      "lines": 2
+    },
+    {
+      "kind": "write",
+      "n": 5,
+      "ask": "Copy the sentence from paragraph 5 that tells why an otter wraps itself in kelp.",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. A (a thick layer of fat called blubber)",
+    "2. C (It traps a layer of air next to the skin.)",
+    "3. B (Staying warm takes a lot of energy.)",
+    "4. Sample: A sea otter grooms because its coat only works when it is clean. A dirty, matted coat would let cold water reach the skin.",
+    "5. Sample: The kelp keeps the sleeping otter from drifting away while it floats."
+  ],
+  "new_words": [],
+  "review_words": []
+}

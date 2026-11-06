@@ -1,0 +1,64 @@
+{
+  "id": "EN-R5-E-001",
+  "subject": "english",
+  "level": "R5",
+  "section": "E",
+  "part": null,
+  "sheet_type": "paragraph_summary",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 7525701931842741719,
+  "title": "The First Bicycles",
+  "parent_tip": "Keep summaries short: one sentence, no small details.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "e01-the-first-bicycles",
+      "set": 0,
+      "again": false,
+      "heading": "The First Bicycles",
+      "paragraphs": [
+        "The earliest bicycles, built about two hundred years ago, had no pedals at all. Riders sat on a wooden frame between two wheels and pushed against the ground with their feet.",
+        "Later inventors added pedals to the front wheel. To go faster, they made that wheel bigger and bigger, until some front wheels were taller than an adult. These bikes were speedy, but riders sat so high that a bump in the road could send them flying.",
+        "Finally, designers attached the pedals to a chain that turned the back wheel. Now both wheels could be the same size, and riders sat low and safe. This design worked so well that most bicycles today still follow it."
+      ],
+      "text": "article",
+      "numbered": true
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "Which sentence best sums up paragraph 1?",
+      "choices": [
+        "Wooden frames were heavy and hard to carry uphill.",
+        "Bicycles are fun to ride with friends on weekends.",
+        "The first bicycles had no pedals; riders pushed with their feet."
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "Which sentence best sums up paragraph 2?",
+      "choices": [
+        "Some adults long ago were not as tall as the wheels.",
+        "Roads long ago had many bumps and holes in them.",
+        "Big front wheels made bikes faster but less safe."
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Write one sentence that sums up paragraph 3.",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. C (The first bicycles had no pedals; riders pushed with their feet.)",
+    "2. C (Big front wheels made bikes faster but less safe.)",
+    "3. Sample: A chain to the back wheel made bikes safe, and most bikes still use that design."
+  ],
+  "new_words": [],
+  "review_words": []
+}

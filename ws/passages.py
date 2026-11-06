@@ -20,6 +20,7 @@ from __future__ import annotations
 import random
 import re
 from collections import Counter
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
@@ -62,6 +63,9 @@ class Question(_Strict):
 class QuestionSet(_Strict):
     focus: str
     questions: list[Question]
+    # words or phrases printed in bold on this page (Otters Reading: clue words, figurative language);
+    # each is copied exactly from the passage
+    words: list[str] = Field(default_factory=list)
 
 
 class Passage(_Strict):
@@ -69,6 +73,7 @@ class Passage(_Strict):
     title: str
     text: str
     moral: str | None = None
+    kind: Literal["story", "article"] | None = None   # labels the reading card (Otters Reading on)
     pages: list[QuestionSet]
 
     @property
@@ -137,12 +142,14 @@ def british_words(text: str) -> list[str]:
 def passage_problems(p: Passage, rules: dict, section: str) -> list[str]:
     """Content rules for one passage: length, readability, spelling, answerable questions."""
     out = []
+    max_ask, max_choice = rules.get("max_ask", MAX_ASK), rules.get("max_choice", MAX_CHOICE)
+    max_title = rules.get("max_title", MAX_TITLE)
     n = len(words(p.text))
     lo, hi = rules.get("passage_words", [120, 150])
     if not lo <= n <= hi:
         out.append(f"passage {p.id}: {n} words (needs {lo}–{hi})")
-    if len(p.title) > MAX_TITLE:
-        out.append(f"passage {p.id}: title is {len(p.title)} characters (max {MAX_TITLE})")
+    if len(p.title) > max_title:
+        out.append(f"passage {p.id}: title is {len(p.title)} characters (max {max_title})")
     fk_lo, fk_hi = rules.get("fk_grade", [2.5, 4.5])
     fk = fk_grade(p.text)
     if not fk_lo <= fk <= fk_hi:
@@ -154,8 +161,10 @@ def passage_problems(p: Passage, rules: dict, section: str) -> list[str]:
     flat = " ".join(p.text.split())
     n_q = rules.get("questions_per_page", 3)
     n_write = rules.get("written_answers", [1, 1])
-    if len(p.pages) != rules.get("pages_per_passage", 2):
-        out.append(f"passage {p.id}: serves {len(p.pages)} pages (needs {rules.get('pages_per_passage', 2)})")
+    # a two-page spread (rule `spread`) has one question set: the reading page, then its questions page
+    sets = rules.get("pages_per_passage", 2) // (2 if rules.get("spread") else 1)
+    if len(p.pages) != sets:
+        out.append(f"passage {p.id}: has {len(p.pages)} question sets (needs {sets})")
     for s in p.pages:
         if len(s.questions) != n_q:
             out.append(f"passage {p.id}: a page has {len(s.questions)} questions (needs {n_q})")
@@ -163,20 +172,48 @@ def passage_problems(p: Passage, rules: dict, section: str) -> list[str]:
         if not n_write[0] <= writes <= n_write[1]:
             out.append(f"passage {p.id}: a page has {writes} written answers (needs {n_write[0]}–{n_write[1]})")
         for q in s.questions:
-            if len(q.ask) > MAX_ASK:
-                out.append(f"passage {p.id}: question is {len(q.ask)} characters (max {MAX_ASK}): {q.ask!r}")
+            if len(q.ask) > max_ask:
+                out.append(f"passage {p.id}: question is {len(q.ask)} characters (max {max_ask}): {q.ask!r}")
             for c in q.choices or []:
-                if len(c) > MAX_CHOICE:
-                    out.append(f"passage {p.id}: choice is {len(c)} characters (max {MAX_CHOICE}): {c!r}")
+                if len(c) > max_choice:
+                    out.append(f"passage {p.id}: choice is {len(c)} characters (max {max_choice}): {c!r}")
             if " ".join(q.evidence.split()) not in flat:
                 out.append(f"passage {p.id}: evidence {q.evidence!r} is not in the passage")
             if q.kind == "write" and rules.get("starters") is not None and not q.starter:
                 out.append(f"passage {p.id}: every written question here needs a starter")
             if q.starter and not (q.sample or "").startswith(q.starter):
                 out.append(f"passage {p.id}: sample answer doesn't start with its starter {q.starter!r}")
+            out += [f"passage {p.id}: {m}" for m in paragraph_problems(p, q)]
+        for w in s.words:
+            if not find_phrase(w, p.text):
+                out.append(f"passage {p.id}: bold word {w!r} is not in the passage")
     if section == "C" and not p.moral:
         out.append(f"passage {p.id}: a fable needs its moral")
     return out
+
+
+_PARAGRAPH = re.compile(r"\bparagraphs? (\d)(?: and (\d))?\b", re.I)
+
+
+def find_phrase(phrase: str, text: str) -> re.Match | None:
+    """`phrase` as whole words in `text`, ignoring case and spacing (a line break may fall inside it)."""
+    pattern = r"\s+".join(re.escape(w) for w in phrase.split())
+    return re.search(r"(?<![\w'’-])" + pattern + r"(?![\w’-]|'\w)", text, re.I)
+
+
+def paragraph_problems(p: Passage, q: Question) -> list[str]:
+    """A question that names a paragraph ("In paragraph 2, ...") must find its evidence there."""
+    m = _PARAGRAPH.search(q.ask)
+    if not m:
+        return []
+    paras = p.paragraphs
+    nums = [int(g) for g in m.groups() if g]
+    if any(not 1 <= n <= len(paras) for n in nums):
+        return [f"question {q.ask!r} names a paragraph the passage doesn't have ({len(paras)})"]
+    ev = " ".join(q.evidence.split())
+    if not any(ev in paras[n - 1] for n in nums):
+        return [f"evidence for {q.ask!r} is not in paragraph {' or '.join(map(str, nums))}"]
+    return []
 
 
 def wordpart_problems(w: WordPart, known: set[str]) -> list[str]:
@@ -219,12 +256,16 @@ def plan_passages(level: Level, variant: int = 1) -> LevelPlan:
         if "passages" in rules:
             code = rules["passages"]
             if code not in queues:
-                queues[code] = [(p.id, k) for p in section_passages(level.level, code) for k in range(len(p.pages))]
+                # a spread (rule `spread`): every question set takes two pages, reading then questions
+                roles = ["read", "questions"] if rules.get("spread") else [None]
+                queues[code] = [(p.id, k, r) for p in section_passages(level.level, code)
+                                for k in range(len(p.pages)) for r in roles]
             if not queues[code]:
                 plan.waiting[page] = f"content/passages/{level.level}/{code}.yaml needs more passages"
                 continue
-            pid, k = queues[code].pop(0)
-            plan.pages[page] = PagePlan(page=page, extra={"passage": pid, "set": k})
+            pid, k, role = queues[code].pop(0)
+            extra = {"passage": pid, "set": k} if role is None else {"passage": pid, "set": k, "role": role}
+            plan.pages[page] = PagePlan(page=page, extra=extra)
         elif "affixes" in rules:
             rng = random.Random(page_seed(level.subject, level.level, spec.section, page, variant))
             n = rules.get("builds", 4)
@@ -251,20 +292,36 @@ def plan_passages(level: Level, variant: int = 1) -> LevelPlan:
 LETTERS = "ABC"
 
 
-def build_passage_items(ctx, write_lines: int) -> tuple[str, list[dict], list[str]]:
-    """(title, items, answer key) for one passage page: the passage, then its numbered questions.
+def mark_segments(paragraphs: list[str], marks: list[str]) -> list[list[list]]:
+    """Each paragraph as [text, bold] pieces, with the first appearance of every mark in bold."""
+    spans: list[tuple[int, int, int]] = []           # (paragraph, start, end)
+    for m in marks:
+        for i, para in enumerate(paragraphs):
+            hit = find_phrase(m, para)
+            if hit:
+                spans.append((i, hit.start(), hit.end()))
+                break
+    out = []
+    for i, para in enumerate(paragraphs):
+        pieces, at = [], 0
+        for _, a, b in sorted(s for s in spans if s[0] == i):
+            if a < at:
+                continue                               # overlapping marks: keep the first
+            if a > at:
+                pieces.append([para[at:a], False])
+            pieces.append([para[a:b], True])
+            at = b
+        if at < len(para):
+            pieces.append([para[at:], False])
+        out.append(pieces)
+    return out
 
-    Multiple-choice options are shuffled with the page's RNG; the key gives the letter and the
-    right option. Written answers get `write_lines` lines and a sample answer in the key.
-    """
-    entry = ctx.plan.for_page(ctx.spec.page).extra
-    p = passage_by_id(ctx.spec.level, ctx.rules["passages"], entry["passage"])
-    k = entry["set"]
-    items: list[dict] = [{"kind": "passage", "passage": p.id, "set": k, "again": k > 0,
-                          "heading": p.title, "paragraphs": p.paragraphs}]
-    key = []
+
+def question_items(ctx, qs: list[Question], write_lines: int) -> tuple[list[dict], list[str]]:
+    """Numbered question items and their answer key, choices shuffled with the page's RNG."""
+    items, key = [], []
     starters = ctx.rules.get("starters", True)
-    for n, q in enumerate(p.pages[k].questions, start=1):
+    for n, q in enumerate(qs, start=1):
         if q.kind == "mc":
             order = list(range(3))
             ctx.rng.shuffle(order)
@@ -278,29 +335,53 @@ def build_passage_items(ctx, write_lines: int) -> tuple[str, list[dict], list[st
                 item["starter"] = q.starter
             items.append(item)
             key.append(f"{n}. Sample: {q.sample}")
-    return p.title, items, key
+    return items, key
 
 
-def check_passage_sheet(sheet, write_lines: int) -> list[str]:
-    """What a passage page must hold: its planned passage, its questions in order, a matching key."""
-    from .syllabus import load_level, resolve_page
+def build_passage_items(ctx, write_lines: int, *, marks: bool = False,
+                        numbered: bool = False) -> tuple[str, list[dict], list[str]]:
+    """(title, items, answer key) for one passage page: the passage, then its numbered questions.
 
-    rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
-    head = sheet.items[0] if sheet.items else {}
-    if head.get("kind") != "passage":
-        return ["the first item must be the passage"]
-    try:
-        p = passage_by_id(sheet.level, rules["passages"], head["passage"])
-    except KeyError as e:
-        return [e.args[0]]
-    out = passage_problems(p, rules, rules["passages"])
-    if head["paragraphs"] != p.paragraphs or head["heading"] != p.title or sheet.title != p.title:
-        out.append(f"passage text on the sheet doesn't match {p.id}")
-    qs = p.pages[head["set"]].questions
-    asked = sheet.items[1:]
+    Multiple-choice options are shuffled with the page's RNG; the key gives the letter and the
+    right option. Written answers get `write_lines` lines and a sample answer in the key.
+    `marks`: the question set's `words` print in bold (the passage item gets `segments`);
+    `numbered`: paragraph numbers in the margin, for questions that name a paragraph.
+    """
+    entry = ctx.plan.for_page(ctx.spec.page).extra
+    p = passage_by_id(ctx.spec.level, ctx.rules["passages"], entry["passage"])
+    k = entry["set"]
+    head = {"kind": "passage", "passage": p.id, "set": k, "again": k > 0,
+            "heading": p.title, "paragraphs": p.paragraphs}
+    if p.kind:
+        head["text"] = p.kind
+    if numbered:
+        head["numbered"] = True
+    if marks:
+        head["marks"] = list(p.pages[k].words)
+        head["segments"] = mark_segments(p.paragraphs, p.pages[k].words)
+    qitems, key = question_items(ctx, p.pages[k].questions, write_lines)
+    return p.title, [head, *qitems], key
+
+
+def build_spread_items(ctx, write_lines: int) -> tuple[str, list[dict], list[str] | None]:
+    """One page of a two-page spread (rule `spread`): the reading page (the passage alone, numbered
+    paragraphs, no answers) or the questions page that follows it (no passage; it points back)."""
+    entry = ctx.plan.for_page(ctx.spec.page).extra
+    p = passage_by_id(ctx.spec.level, ctx.rules["passages"], entry["passage"])
+    k = entry["set"]
+    if entry["role"] == "read":
+        return p.title, [{"kind": "passage", "role": "read", "passage": p.id, "set": k, "heading": p.title,
+                          "paragraphs": p.paragraphs, "numbered": True, "text": p.kind or "passage"}], None
+    qitems, key = question_items(ctx, p.pages[k].questions, write_lines)
+    head = {"kind": "look_back", "role": "questions", "passage": p.id, "set": k, "heading": p.title,
+            "read_page": ctx.spec.page - 1, "text": p.kind or "passage"}
+    return p.title, [head, *qitems], key
+
+
+def _check_questions(sheet, asked: list[dict], qs: list[Question], write_lines: int, label: str) -> list[str]:
+    out = []
     if [i["ask"] for i in asked] != [q.ask for q in qs]:
-        out.append(f"questions on the sheet don't match {p.id} set {head['set'] + 1}")
-        return out
+        return [f"questions on the sheet don't match {label}"]
     key = []
     for n, (item, q) in enumerate(zip(asked, qs), start=1):
         if item["n"] != n:
@@ -319,3 +400,60 @@ def check_passage_sheet(sheet, write_lines: int) -> list[str]:
     if sheet.answer_key != key:
         out.append("answer key doesn't match the questions")
     return out
+
+
+def check_passage_sheet(sheet, write_lines: int) -> list[str]:
+    """What a passage page must hold: its planned passage, its questions in order, a matching key."""
+    from .syllabus import load_level, resolve_page
+
+    rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+    head = sheet.items[0] if sheet.items else {}
+    if head.get("kind") != "passage":
+        return ["the first item must be the passage"]
+    try:
+        p = passage_by_id(sheet.level, rules["passages"], head["passage"])
+    except KeyError as e:
+        return [e.args[0]]
+    out = passage_problems(p, rules, rules["passages"])
+    if head["paragraphs"] != p.paragraphs or head["heading"] != p.title or sheet.title != p.title:
+        out.append(f"passage text on the sheet doesn't match {p.id}")
+    if "segments" in head and (head["marks"] != p.pages[head["set"]].words
+                               or head["segments"] != mark_segments(p.paragraphs, head["marks"])):
+        out.append(f"bold words on the sheet don't match {p.id} set {head['set'] + 1}")
+    qs = p.pages[head["set"]].questions
+    return out + _check_questions(sheet, sheet.items[1:], qs, write_lines, f"{p.id} set {head['set'] + 1}")
+
+
+def check_spread_sheet(sheet, write_lines: int) -> list[str]:
+    """A spread page: the right passage for its place in the section (reading pages on the section's
+    odd pages, 1st, 3rd, ...; each questions page right after its reading page), and on a questions
+    page the questions and key of that passage."""
+    from .syllabus import load_level, resolve_page
+
+    level = load_level(sheet.subject, sheet.level)
+    rules = resolve_page(level, sheet.page_number).rules
+    if not rules.get("spread"):
+        return ["this section isn't set up for two-page spreads (rule `spread`)"]
+    head = sheet.items[0] if sheet.items else {}
+    try:
+        p = passage_by_id(sheet.level, rules["passages"], head.get("passage", ""))
+    except KeyError as e:
+        return [e.args[0]]
+    out = passage_problems(p, rules, rules["passages"])
+    offset = sheet.page_number - level.section(sheet.section).pages[0]
+    order = [q.id for q in section_passages(sheet.level, rules["passages"])]
+    role = "read" if offset % 2 == 0 else "questions"
+    if head.get("role") != role or order.index(p.id) != offset // 2 or head.get("set") != 0:
+        out.append(f"page {sheet.page_number} should be the {role} page of {order[offset // 2]}")
+        return out
+    if head["heading"] != p.title or sheet.title != p.title:
+        out.append(f"title on the sheet doesn't match {p.id}")
+    if role == "read":
+        if head.get("kind") != "passage" or head["paragraphs"] != p.paragraphs or not head.get("numbered"):
+            out.append(f"passage text on the sheet doesn't match {p.id}")
+        if len(sheet.items) != 1 or sheet.answer_key:
+            out.append("a reading page holds only the passage (its questions are on the next page)")
+        return out
+    if head.get("kind") != "look_back" or head.get("read_page") != sheet.page_number - 1:
+        out.append("a questions page must point back to the reading page before it")
+    return out + _check_questions(sheet, sheet.items[1:], p.pages[0].questions, write_lines, f"{p.id}")

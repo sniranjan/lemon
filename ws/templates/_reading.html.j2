@@ -1,0 +1,83 @@
+{# Otters Reading passage pages (read_then_answer, clue_words, figurative_language, paragraph_summary).
+   Builds on _passage.html.j2 (Foxes) without changing it: bold words, numbered paragraphs, a reading
+   page with the passage alone, and a questions page that points back to it. #}
+{% import "_passage.html.j2" as pq %}
+
+{% macro style() %}
+{{ pq.style() }}
+.read p b { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* numbered paragraphs: the number sits in the card's left padding */
+/* a little tighter than Foxes: grade 5 passages are longer */
+.read { padding: 12px 24px 8px; }
+.read p { line-height: 1.26; margin-bottom: 4px; }
+.read.numbered { padding-left: 46px; }
+.read.numbered p { position: relative; text-indent: 0; }
+.read .pn { position: absolute; left: -32px; top: 0; color: var(--accent); font-size: 20px; font-weight: 700; text-indent: 0; }
+.q .choices.stack { flex-direction: column; flex-wrap: nowrap; row-gap: 4px; }
+/* the questions box is a .card (no border) so the layout check catches questions running into the footer */
+.qs.card { border: none; border-radius: 0; gap: 4px; }
+.q .line { height: 38px; }
+{% endmacro %}
+
+{# The reading page of a spread: no card, so ~300 words fit at 20px. #}
+{% macro spread_style() %}
+{{ style() }}
+.tip { margin-top: 14px; }
+.body { margin-top: 16px; }
+/* the paragraph numbers hang in the page margin, so the text runs the full width */
+.article.card { flex: 1; min-height: 0; position: relative; overflow: visible; border: none; border-radius: 0; border-top: 3px solid var(--ink); padding: 18px 0 0 0; }
+.article .how { position: absolute; top: -13px; left: 22px; background: #fff; padding: 0 10px;
+                font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent); }
+.article p { font-size: 20px; line-height: 1.25; margin: 0 0 3px; position: relative; }
+.article .pn { position: absolute; left: -34px; top: 0; color: var(--accent); font-size: 20px; font-weight: 700; text-indent: 0; }
+.back { flex: none; font-size: 20px; line-height: 24px; font-weight: 700; color: var(--accent);
+        border-top: 3px solid var(--ink); padding-top: 6px; }
+.qs.spread { justify-content: space-evenly; margin-top: 6px; }
+.qs.spread .q .line { height: 40px; }
+.qs.spread .q .ask { line-height: 1.25; }
+{% endmacro %}
+
+{% macro para_text(item, i, para) %}{% if item.get("segments") %}{% for t, b in item.segments[i] %}{% if b %}<b>{{ t }}</b>{% else %}{{ t }}{% endif %}{% endfor %}{% else %}{{ para }}{% endif %}{% endmacro %}
+
+{% macro passage(item, then="Then answer the questions.", then_again="Then answer new questions.") %}
+{% set what = item.get("text", "passage") %}
+    <section class="read-wrap">
+      <div class="how">{% if item.again %}Read the {{ what }} again. {{ then_again }}{% else %}Read the {{ what }}. {{ then }}{% endif %}</div>
+      <div class="card read{% if item.get('numbered') %} numbered{% endif %}">
+{% for para in item.paragraphs %}
+      <p>{% if item.get("numbered") %}<span class="pn">{{ loop.index }}</span>{% endif %}{{ para_text(item, loop.index0, para) }}</p>
+{% endfor %}
+      </div>
+    </section>
+{% endmacro %}
+
+{% macro reading_page(item) %}
+    <section class="card article">
+      <div class="how">Read the {{ item.text }}. The questions are on the next page.</div>
+{% for para in item.paragraphs %}
+      <p><span class="pn">{{ loop.index }}</span>{{ para }}</p>
+{% endfor %}
+    </section>
+{% endmacro %}
+
+{% macro questions_page(item, questions) %}
+    <div class="back">Look back at the {{ item.text }} on page {{ item.read_page }} to answer.</div>
+    <div class="card qs spread">
+{% for q in questions %}
+{{ question(q) }}
+{% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro question(q, stack=False) %}
+      <div class="q">
+        <div class="ask"><span class="num">{{ q.n }}</span><span>{{ q.ask }}</span></div>
+{% if q.kind == "mc" %}
+        <div class="choices{% if stack %} stack{% endif %}">{% for c in q.choices %}<span class="choice"><span class="letter">{{ "ABC"[loop.index0] }}</span>{{ c }}</span>{% endfor %}</div>
+{% else %}
+{% for _ in range(q.lines) %}
+        <div class="line">{% if loop.first and q.get("starter") %}<span class="starter">{{ q.starter }}</span>{% endif %}</div>
+{% endfor %}
+{% endif %}
+      </div>
+{% endmacro %}

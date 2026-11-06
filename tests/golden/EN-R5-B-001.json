@@ -1,0 +1,112 @@
+{
+  "id": "EN-R5-B-001",
+  "subject": "english",
+  "level": "R5",
+  "section": "B",
+  "part": 1,
+  "sheet_type": "clue_words",
+  "page_number": 51,
+  "variant": 1,
+  "seed": 7643992768580392363,
+  "title": "The Desert Tortoise",
+  "parent_tip": "Ask: what would make sense in place of the bold word?",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "b01-the-desert-tortoise",
+      "set": 0,
+      "again": false,
+      "heading": "The Desert Tortoise",
+      "paragraphs": [
+        "The desert tortoise lives in some of the hottest, driest places in North America. Water is so scarce there that months can pass without a single rainstorm. To survive, the tortoise must be resourceful, which means it is good at finding clever ways to get what it needs.",
+        "When rain finally falls, a tortoise may dig a shallow basin in the dirt to catch the water. Then it drinks deeply and stores extra water in its body. During the hottest and coldest parts of the year, the tortoise is dormant. Like a sleeping bear, it rests quietly in a cool burrow underground and hardly moves at all.",
+        "In spring the tortoise becomes active again. It eats tender flowers and grasses, which give it both food and moisture. Because it moves so slowly and carefully, the tortoise uses very little energy. Its patient way of living helps it last for many years."
+      ],
+      "text": "article",
+      "marks": [
+        "scarce",
+        "resourceful",
+        "basin"
+      ],
+      "segments": [
+        [
+          [
+            "The desert tortoise lives in some of the hottest, driest places in North America. Water is so ",
+            false
+          ],
+          [
+            "scarce",
+            true
+          ],
+          [
+            " there that months can pass without a single rainstorm. To survive, the tortoise must be ",
+            false
+          ],
+          [
+            "resourceful",
+            true
+          ],
+          [
+            ", which means it is good at finding clever ways to get what it needs.",
+            false
+          ]
+        ],
+        [
+          [
+            "When rain finally falls, a tortoise may dig a shallow ",
+            false
+          ],
+          [
+            "basin",
+            true
+          ],
+          [
+            " in the dirt to catch the water. Then it drinks deeply and stores extra water in its body. During the hottest and coldest parts of the year, the tortoise is dormant. Like a sleeping bear, it rests quietly in a cool burrow underground and hardly moves at all.",
+            false
+          ]
+        ],
+        [
+          [
+            "In spring the tortoise becomes active again. It eats tender flowers and grasses, which give it both food and moisture. Because it moves so slowly and carefully, the tortoise uses very little energy. Its patient way of living helps it last for many years.",
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What does \"scarce\" mean in paragraph 1?",
+      "choices": [
+        "easy to drink",
+        "hard to find",
+        "very cold"
+      ],
+      "answer": "B"
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "What does \"basin\" mean in paragraph 2?",
+      "choices": [
+        "a tall pile of rocks",
+        "a kind of desert plant",
+        "a low dip that holds water"
+      ],
+      "answer": "C"
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Which words in paragraph 1 tell you what \"resourceful\" means?",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. B (hard to find)",
+    "2. C (a low dip that holds water)",
+    "3. Sample: The words \"good at finding clever ways to get what it needs\" tell what resourceful means."
+  ],
+  "new_words": [],
+  "review_words": []
+}
