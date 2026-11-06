@@ -9,7 +9,7 @@
   "variant": 1,
   "seed": 9759682696431843924,
   "title": "Take off the ending",
-  "parent_tip": "Act out each word: jump, then jumping! Point to the ending as you say it. Your child writes the whole new word.",
+  "parent_tip": "Ask: what was the word before it got its tail? Say both words together, then let your child write the root word in the box.",
   "items": [
     {
       "kind": "ending",
@@ -19,7 +19,11 @@
       "ending": "ing",
       "form": "catching",
       "tail": "ing",
-      "copies": 1
+      "copies": 1,
+      "split": [
+        "catch",
+        "ing"
+      ]
     },
     {
       "kind": "ending",
@@ -29,7 +33,11 @@
       "ending": "plural",
       "form": "harps",
       "tail": "s",
-      "copies": 2
+      "copies": 2,
+      "split": [
+        "harp",
+        "s"
+      ]
     },
     {
       "kind": "ending",
@@ -39,7 +47,11 @@
       "ending": "ed",
       "form": "smiled",
       "tail": "ed",
-      "copies": 1
+      "copies": 1,
+      "split": [
+        "smil",
+        "ed"
+      ]
     },
     {
       "kind": "ending",
@@ -49,7 +61,11 @@
       "ending": "ing",
       "form": "swimming",
       "tail": "ing",
-      "copies": 1
+      "copies": 1,
+      "split": [
+        "swimm",
+        "ing"
+      ]
     }
   ],
   "answer_key": [

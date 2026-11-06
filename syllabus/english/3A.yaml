@@ -58,10 +58,28 @@ sections:
       new_words_per_sheet: 0
       cards_per_sheet: 4
     parts:
-      - { part: 1, pages: [71, 80],   name: One and more,  rules: { endings: [plural], ending_mode: add } }
+      - part: 1
+        pages: [71, 80]
+        name: One and more
+        rules:
+          endings: [plural]
+          ending_mode: add
+          tips:
+            word_endings:
+              - "Count the pictures together: one cube, two cubes! Add s, or es after s, x, ch and sh. Your child writes the new word in the box."
+              - "Say the word for one, then for two. Listen together for the ending: cats, buses. Let your child write the word for two."
       - { part: 2, pages: [81, 90],   name: Adding ing,    rules: { endings: [ing], ending_mode: add } }
       - { part: 3, pages: [91, 100],  name: Adding ed,     rules: { endings: [ed], ending_mode: add } }
-      - { part: 4, pages: [101, 110], name: Take it off,   rules: { endings: [plural, ing, ed], ending_mode: take_off } }
+      - part: 4
+        pages: [101, 110]
+        name: Take it off
+        rules:
+          endings: [plural, ing, ed]
+          ending_mode: take_off
+          tips:
+            word_endings:
+              - "Read the word, then say it without the colored ending. Your child writes the root word. Watch for a lost e or an extra letter: smiled → smile, hopping → hop."
+              - "Ask: what was the word before it got its tail? Say both words together, then let your child write the root word in the box."
 
   # Clap each word, then write one syllable in each box; the last part counts the claps instead.
   - code: C

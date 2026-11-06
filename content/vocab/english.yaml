@@ -375,4 +375,4 @@
 - { word: roof,    picture: roof,    category: home,     level: 3A, sentences: ["The bird is on the roof.", "Can you see the roof?"] }
 - { word: hoop,    picture: hoop,    category: toys,     level: 3A, sentences: ["I play with my hoop.", "Can you roll the hoop?"] }
 - { word: goose,   picture: goose,   category: animals,  level: 3A, sentences: ["The goose can swim.", "Do you see the goose?"] }
-- { word: zoo,     picture: zoo,     category: nature,   level: 3A, sentences: ["We see a lion at the zoo.", "Can we go to the zoo?"] }
+- { word: zoo,     picture: zoo,     category: nature,   level: 3A, sentences: ["We see a giraffe at the zoo.", "Can we go to the zoo?"] }

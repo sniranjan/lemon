@@ -28,7 +28,7 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   H Taking Away 7 to 10 151–170 · I Add or Take Away 171–180 · J Missing Numbers and Families 181–200.
   New sheet type `fact_drill` (layouts horizontal / vertical / bridge number tracks / fact-family houses), tests in
   `tests/test_math_M1.py`. All 200 pages verify with 0 errors; booklets per section + `puppies-math-level.pdf`
-  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) waits for Puppies Reading.
+  (202 pages) and `-answers.pdf` files. Free preview (pages 1, 61, 111, 191) built with Puppies Reading (`ws preview puppies`; not uploaded yet).
   Kept separate from Kittens' `add_facts` on purpose; reconcile when the branches merge.
 - **Puppies Reading (EN 3A, 200 pages)** (2026-11-06): `syllabus/english/3A.yaml`, A Word Patterns 1–70 (7 parts:
   letter pairs, magic e, ai/ay, ee/ea, oa/ow/igh, bossy r, ou/ow/oi/oy/oo) · B Word Endings 71–110 (plurals, -ing, -ed,

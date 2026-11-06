@@ -1,7 +1,8 @@
 """Puppies Reading, Word Endings: add an ending to a known word, or take it off again.
 
 Each of the four cards shows the word's picture (twice for "one and more": cat, cats), then
-`add`: "jump + ing = ____" or `take_off`: "jumping − ing = ____", with a box to write the answer in.
+`add`: "jump + ing = ____" or `take_off`: "jump|ing → ____" (the ending marked in the word, the root word written; no subtraction,
+so "smiled → smile" and "swimming → swim" never read as wrong sums), with a box to write the answer in.
 Forms come from the hand-checked `endings` table in content/phonics/english.yaml; verify re-derives
 each one from the spelling rules (double the last letter, drop the final e, add es).
 """
@@ -30,6 +31,8 @@ class WordEndings(SheetType):
             items.append({"kind": "ending", "mode": mode, "word": c["word"], "picture": c["picture"],
                           "ending": c["ending"], "form": c["form"], "tail": c["tail"],
                           "copies": 2 if c["ending"] == "plural" else 1})
+            if mode == "take_off":   # "smil|ed → ☐": the ending is marked in the word, the root is written
+                items[-1]["split"] = [c["form"][: -len(c["tail"])], c["form"][-len(c["tail"]):]]
         answers = [i["form"] if mode == "add" else i["word"] for i in items]
         return SheetContent(title=TITLES[mode], parent_tip=ctx.tip(self.name), items=items, answer_key=answers,
                             new_words=list(entry.new_words), review_words=list(entry.review_words))
@@ -56,6 +59,8 @@ class WordEndings(SheetType):
                 issues.append(error(sheet, f"{base}: shows the ending {c['tail']!r}, should be {tail(base, ending, form)!r}"))
             if c["mode"] != rules["ending_mode"]:
                 issues.append(error(sheet, f"{base}: mode {c['mode']!r}, the part asks for {rules['ending_mode']!r}"))
+            if c["mode"] == "take_off" and c.get("split") != [form[: -len(c["tail"])], form[-len(c["tail"]):]]:
+                issues.append(error(sheet, f"{form!r}: the marked ending must be its last letters {c['tail']!r}"))
             if c["copies"] != (2 if ending == "plural" else 1):
                 issues.append(error(sheet, f"{base}: a plural shows its picture twice, a verb once"))
         words = [c["word"] for c in cards]
