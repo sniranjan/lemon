@@ -1,0 +1,70 @@
+{
+  "id": "EN-R7-E-002",
+  "subject": "english",
+  "level": "R7",
+  "section": "E",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 162,
+  "variant": 1,
+  "seed": 13445144225092065679,
+  "title": "The Big Ditch",
+  "parent_tip": "Why might a writer change a real event in a story?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "e01-erie-canal",
+      "set": 0,
+      "side": "questions",
+      "genre": "paired",
+      "page_before": 161,
+      "continued": []
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "Which detail in the story is also a fact in the history?",
+      "choices": [
+        "Ezra's uncle owned the governor's boat.",
+        "The barrel was poured out in Rochester.",
+        "The boat carried Lake Erie water to the ocean.",
+        "A band pulled the boat from the deck."
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which sentence comes from the story writer’s imagination, not from history?",
+      "choices": [
+        "That night he dreamed he rode the whole way himself",
+        "The Erie Canal opened on October 26, 1825.",
+        "Crowds gathered in towns along the route",
+        "Horses and mules walked on towpaths beside the canal"
+      ],
+      "answer": "A",
+      "columns": 1
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "The trip took nine days. How does the story handle it?",
+      "lines": 2
+    },
+    {
+      "kind": "paragraph",
+      "n": 4,
+      "ask": "Why might the author tell this event through a boy on a towpath? Use both texts.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. C (The boat carried Lake Erie water to the ocean.)",
+    "2. A (That night he dreamed he rode the whole way himself)",
+    "3. Sample: The story skips the nine days; Ezra sees the boat for only a moment and then rides the whole way in a dream. Full answer: notes the story leaves out the long trip and uses Ezra's dream to jump to the end.",
+    "4. Sample: The history gives facts like \"about 363 miles\" and \"83 locks,\" but it does not say how the day felt. The story lets a reader stand with Ezra, who \"climbed onto a fence post to see it\" as people cheered. It keeps real details, such as the Seneca Chief and the barrel of lake water. By using a made-up boy, the author can show the excitement without changing the main facts. Full answer: says the story adds feeling or a viewpoint the history lacks; cites a detail from each text."
+  ],
+  "new_words": [],
+  "review_words": []
+}

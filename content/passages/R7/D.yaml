@@ -62,3 +62,891 @@
           evidence:
             - like hands that know what's coming.
             - as if someone polished it while we watched.
+
+# Section D drafts, d02–d15 (merged into content/passages/R7/D.yaml by the orchestrator)
+
+- id: d02-city-wakes
+  title: The City Wakes Up
+  genre: poem
+  text: |
+    The city yawns at six o'clock
+    and stretches out its streets,
+    it rubs the fog from window eyes
+    and shakes its sleepy sheets.
+
+    The buses grumble down the hill,
+    old bears who want their beds,
+    while pigeons gossip on the wires
+    and bob their silver heads.
+
+    The bakery breathes a cinnamon cloud
+    across the corner light,
+    a warm invitation drifting out
+    to everyone in sight.
+
+    By eight the city is wide awake,
+    a hive of hums and hurry,
+    a thousand doors swing open wide,
+    a thousand feet that scurry.
+
+    And I am one small, humming bee
+    inside that busy hive,
+    my backpack bouncing on my back,
+    so glad to be alive.
+  pages:
+    - focus: personification, metaphor and connotation
+      questions:
+        - kind: mc
+          ask: What does “old bears” suggest about the buses?
+          choices:
+            - They are big, slow and grumpy in the morning.
+            - They are fast, shiny and new.
+            - They are empty and silent.
+            - They are painted brown like fur.
+          evidence: old bears who want their beds,
+        - kind: quote
+          ask: Which line gives the city a human action?
+          choices:
+            - The city yawns at six o'clock
+            - across the corner light,
+            - to everyone in sight.
+            - my backpack bouncing on my back,
+          evidence: The city yawns at six o'clock
+        - kind: write
+          ask: The pigeons “gossip.” What does that word suggest?
+          sample: It suggests the pigeons chatter busily and noisily, like neighbors trading news on a street corner.
+          rubric: explains gossip as busy, chatty talk and links it to the pigeons' noise or friendliness.
+          evidence: while pigeons gossip on the wires
+        - kind: paragraph
+          ask: What does the hive metaphor show? Quote the poem.
+          sample: >-
+            The poem calls the busy city "a hive of hums and hurry." This shows that everyone is working and
+            moving at once, like bees. The speaker says, "I am one small, humming bee," so the speaker feels
+            like a happy part of the crowd. The metaphor makes the busy morning feel cheerful instead of
+            stressful.
+          rubric: explains that the city is busy like a hive and the speaker feels part of it, with a quote.
+          evidence:
+            - a hive of hums and hurry,
+            - And I am one small, humming bee
+
+- id: d03-grandmas-kitchen
+  title: Grandma's Kitchen
+  genre: poem
+  text: |
+    Grandma's kitchen is not a room,
+    it is a harbor, snug and small,
+    where every pot has its own hook
+    and photos crowd the yellow wall.
+
+    The kettle hums a low old tune,
+    the oven glows like evening sun,
+    the table, scarred from fifty years,
+    remembers dinners, every one.
+
+    Some people call her kitchen cramped,
+    but I would pick another word.
+    I'd call it cozy, close, and full
+    of the best stories I have heard.
+
+    She wraps the leftovers in foil
+    like treasure for a pirate ship,
+    and sends me home with pockets warm
+    and gingerbread for every trip.
+
+    So when the world feels cold and wide,
+    I sail back to that harbor light,
+    where Grandma's laugh is a lantern
+    that keeps the windows glowing bright.
+  pages:
+    - focus: connotation and metaphor
+      questions:
+        - kind: mc
+          ask: Why does the speaker call the kitchen “a harbor”?
+          choices:
+            - It is a safe, sheltering place to come back to.
+            - It is right beside the ocean.
+            - It is full of toy boats.
+            - It is loud and busy like a port.
+          evidence: it is a harbor, snug and small,
+        - kind: quote
+          ask: Which line uses a simile?
+          choices:
+            - the oven glows like evening sun,
+            - The kettle hums a low old tune,
+            - where every pot has its own hook
+            - and photos crowd the yellow wall.
+          evidence: the oven glows like evening sun,
+        - kind: write
+          ask: Why does the speaker choose “cozy” over “cramped”?
+          sample: Both words mean small, but cramped sounds uncomfortable while cozy sounds warm and loving, which is how the speaker feels.
+          rubric: says both words mean small but cramped is negative and cozy is positive, matching the speaker's love.
+          evidence:
+            - Some people call her kitchen cramped,
+            - I'd call it cozy, close, and full
+        - kind: paragraph
+          ask: How do “harbor” and “lantern” show the speaker's feelings?
+          sample: >-
+            The speaker says the kitchen "is a harbor, snug and small." A harbor is where boats are safe from
+            rough water, so the kitchen feels like a safe place. The speaker also says "Grandma's laugh is a
+            lantern," which means her laugh gives light and guides the speaker home. Both words show that
+            Grandma's kitchen makes the speaker feel safe and loved.
+          rubric: explains that both words suggest safety, warmth or guidance and quotes the poem.
+          evidence:
+            - it is a harbor, snug and small,
+            - where Grandma's laugh is a lantern
+
+- id: d04-maple-street
+  title: The Maple on Our Street
+  genre: poem
+  text: |
+    All summer the maple was a green umbrella,
+    quiet, ordinary, holding shade for the dog.
+    Nobody looked up.
+
+    Then October struck a match,
+    and the maple caught at the tips,
+    a little orange, a little red,
+    until the whole tree was a bonfire
+    that gave off no smoke and no heat,
+    only light.
+
+    Neighbors stopped on the sidewalk
+    with their grocery bags and their strollers
+    to warm their eyes at it.
+
+    By November the fire burns low.
+    The leaves drift down like embers,
+    and we rake the glowing coals into piles
+    and leap into them, laughing,
+    and come up with sparks in our hair.
+
+    Now the maple stands bare,
+    a black sketch against the sky,
+    but I know the match is still in there,
+    waiting in the wood
+    for October to come around again.
+  pages:
+    - focus: extended metaphor
+      questions:
+        - kind: mc
+          ask: What is the main metaphor in this poem?
+          choices:
+            - The tree's fall colors are a fire.
+            - The tree is an umbrella all year.
+            - The leaves are a flock of birds.
+            - The wind is a painter.
+          evidence: until the whole tree was a bonfire
+        - kind: quote
+          ask: Which line shows people enjoying the tree's colors?
+          choices:
+            - to warm their eyes at it.
+            - Nobody looked up.
+            - a black sketch against the sky,
+            - quiet, ordinary, holding shade for the dog.
+          evidence: to warm their eyes at it.
+        - kind: write
+          ask: What does “a black sketch against the sky” suggest?
+          sample: The bare tree looks like a simple drawing in dark lines, plain and unfinished next to its bright fall colors.
+          rubric: explains that the bare branches look like dark, simple lines, plain compared with the bright leaves.
+          evidence: a black sketch against the sky,
+        - kind: paragraph
+          ask: How does the last stanza continue the fire metaphor?
+          sample: >-
+            In the last stanza the tree is bare, but the speaker says "the match is still in there, / waiting
+            in the wood." The match stands for the tree's ability to turn bright again. This shows the speaker
+            is not sad, because the colors will come back. The fire metaphor that started with "October struck
+            a match" ends with a promise of next year.
+          rubric: explains that the hidden match means the colors will return, with a quote from the last stanza.
+          evidence:
+            - but I know the match is still in there,
+            - Then October struck a match,
+
+- id: d05-cat-majesty
+  title: Her Majesty the Cat
+  genre: poem
+  text: |
+    Our cat does not sit on the windowsill.
+    She reigns there,
+    a queen on a velvet cushion of sun,
+    surveying her kingdom of backyard and birdbath.
+
+    She does not walk across the kitchen.
+    She glides,
+    tail raised like a royal banner,
+    past the humble dog, who wags anyway.
+
+    When she is hungry she does not ask.
+    She announces,
+    one long note at the bottom of the stairs
+    that means the court must rise and serve.
+
+    At night she does not jump on my bed.
+    She descends,
+    light as a rumor,
+    and curls against my knees like a warm loaf of bread,
+    purring a lullaby that has no words.
+
+    Then, for a moment,
+    she is not a queen at all,
+    just a small soft heartbeat
+    who chose me.
+  pages:
+    - focus: word choice and connotation
+      questions:
+        - kind: mc
+          ask: Why does the poet write “reigns” instead of “sits”?
+          choices:
+            - to show the cat acts proud and royal
+            - to show the cat is tired and sleepy
+            - to show the cat is lost
+            - to show the cat is afraid of birds
+          evidence: She reigns there,
+        - kind: quote
+          ask: Which line compares the cat to something plain and cozy?
+          choices:
+            - and curls against my knees like a warm loaf of bread,
+            - a queen on a velvet cushion of sun,
+            - tail raised like a royal banner,
+            - surveying her kingdom of backyard and birdbath.
+          evidence: and curls against my knees like a warm loaf of bread,
+        - kind: write
+          ask: What does “the humble dog, who wags anyway” suggest?
+          sample: Humble suggests the dog is plain and ordinary next to the proud cat, but he stays cheerful and friendly anyway.
+          rubric: explains humble as plain or modest beside the royal cat and notes the dog is still friendly.
+          evidence: past the humble dog, who wags anyway.
+        - kind: paragraph
+          ask: How does the last stanza change how we see the cat?
+          sample: >-
+            For most of the poem the cat is royal, "a queen on a velvet cushion of sun." The words reigns,
+            glides and announces make her seem grand and proud. In the last stanza she is "just a small soft
+            heartbeat / who chose me." The tone turns tender, and we see that the speaker loves the cat and
+            feels chosen by her.
+          rubric: contrasts the proud, royal cat with the small, loving cat at the end, with quotes.
+          evidence:
+            - a queen on a velvet cushion of sun,
+            - just a small soft heartbeat
+
+- id: d06-night-train
+  title: The Night Train
+  genre: poem
+  text: |
+    Clickety-clack, clickety-clack,
+    the night train hums along the track,
+    past sleeping farms and silver creeks,
+    past silos tall as mountain peaks.
+
+    Clickety-clack, the rails reply,
+    beneath a sprinkled sugar sky,
+    the engine whistles, long and low,
+    "Whoooo," to every town below.
+
+    Inside, our little cabin's bright,
+    a pocket full of yellow light;
+    I press my nose against the glass
+    and watch the dark fields slide and pass.
+
+    Then slower, slower, clickety... clack,
+    my eyelids droop along the track,
+    the rhythm rocks me like a song,
+    clickety-clack, the whole night long.
+
+    Clickety-clack, clickety-clack,
+    I'm sleeping now, I won't look back,
+    and in my dream the train runs on
+    to somewhere golden, called the dawn.
+  pages:
+    - focus: onomatopoeia, rhyme and rhythm
+      questions:
+        - kind: mc
+          ask: What sound does “clickety-clack” imitate?
+          choices:
+            - the wheels rolling over the rails
+            - a clock ticking in the cabin
+            - rain tapping on the window
+            - people clapping at a station
+          evidence: Clickety-clack, the rails reply,
+        - kind: quote
+          ask: Which line shows the rhythm slowing as the speaker gets sleepy?
+          choices:
+            - Then slower, slower, clickety... clack,
+            - past silos tall as mountain peaks.
+            - I press my nose against the glass
+            - beneath a sprinkled sugar sky,
+          evidence: Then slower, slower, clickety... clack,
+        - kind: write
+          ask: Why does the poem repeat “clickety-clack” so often?
+          sample: It copies the steady beat of the wheels, so the reader feels the rocking rhythm of the train.
+          rubric: links the repetition to the steady sound or rhythm of the train.
+          evidence: clickety-clack, the whole night long.
+        - kind: paragraph
+          ask: How do the rhyme and rhythm match the sleepy mood?
+          sample: >-
+            The poem is written in rhyming pairs of lines with a steady beat, like "track" and "back." The
+            beat feels like rocking, and the speaker says "the rhythm rocks me like a song." Soon "my eyelids
+            droop along the track," so the sound of the poem helps the speaker fall asleep. Reading it aloud
+            feels calm and sleepy, too.
+          rubric: explains that the steady rhyme and beat feel like rocking and connect to falling asleep, with a quote.
+          evidence:
+            - the rhythm rocks me like a song,
+            - my eyelids droop along the track,
+
+- id: d07-tin-roof
+  title: Rain on the Tin Roof
+  genre: poem
+  text: |
+    At first a tap, a tiny rap,
+    a finger knocking on the tin,
+    a pitter here, a patter there,
+    as if the rain wants to come in.
+
+    Then plink and plunk and plink again,
+    the drops grow bold, the drops grow loud,
+    a thousand pennies spilling down
+    from the deep pockets of a cloud.
+
+    Now drumming, thrumming, humming hard,
+    the roof becomes a kettledrum,
+    and Mom and I lie on the rug
+    and listen to the music come.
+
+    We do not need the radio,
+    we do not need a song to play;
+    the rain is the whole orchestra
+    on this gray, glad Saturday.
+
+    And when it slows to drip... drip... drop,
+    the sun peeks out to take a bow,
+    the gutters gurgle, swirl, and stop,
+    and all the yard is shining now.
+  pages:
+    - focus: onomatopoeia and internal rhyme
+      questions:
+        - kind: quote
+          ask: Which line uses internal rhyme?
+          choices:
+            - Now drumming, thrumming, humming hard,
+            - a finger knocking on the tin,
+            - from the deep pockets of a cloud.
+            - on this gray, glad Saturday.
+          evidence: Now drumming, thrumming, humming hard,
+        - kind: mc
+          ask: In lines 7–8, what are the raindrops compared to?
+          choices:
+            - coins spilling from a cloud's pockets
+            - a drummer warming up
+            - a guest knocking at the door
+            - an orchestra tuning up
+          evidence: a thousand pennies spilling down
+        - kind: write
+          ask: How do the sound words change from stanza 1 to stanza 3?
+          sample: In stanza 1 the words are soft, like pitter and patter, but by stanza 3 they are loud and strong, like drumming and thrumming.
+          rubric: says the sounds grow from soft to loud and names a sound word from each stanza.
+          evidence:
+            - a pitter here, a patter there,
+            - Now drumming, thrumming, humming hard,
+        - kind: paragraph
+          ask: Why does the speaker call the rain “the whole orchestra”?
+          sample: >-
+            The rain makes many different sounds, from "plink and plunk" to "drumming, thrumming." Together
+            they sound like many instruments playing at once. The speaker says "the rain is the whole
+            orchestra," so they do not need the radio. This shows the speaker enjoys the rain as music, not
+            as a gloomy day.
+          rubric: explains that the many rain sounds are like instruments and the speaker enjoys them, with a quote.
+          evidence:
+            - the rain is the whole orchestra
+            - Then plink and plunk and plink again,
+
+- id: d08-saturday-hoops
+  title: Saturday Hoops
+  genre: poem
+  text: |
+    Thump, thump, thump on the blacktop,
+    the ball keeps time like a heartbeat
+    as we gather at the park court,
+    sneakers squeaking, shoelaces flapping.
+
+    Maya dribbles low and lightning-fast,
+    a blur of braids and bright blue shorts,
+    dodging, darting, dancing left,
+    then pulling up for the long shot.
+
+    Every eye follows the arc,
+    the slow, silent, spinning rise,
+    the whole park holding its breath.
+
+    Swish.
+
+    Not a clang, not a clunk, not a bounce off the rim,
+    just swish, soft as a secret,
+    and the net sighs like a curtain in the wind.
+
+    We whoop and holler, slap high fives,
+    and Theo laughs and calls, good game,
+    because the score is something we forget,
+    but that swish, we keep.
+  pages:
+    - focus: alliteration, onomatopoeia and line breaks
+      questions:
+        - kind: quote
+          ask: Which line uses alliteration of the “d” sound?
+          choices:
+            - dodging, darting, dancing left,
+            - the whole park holding its breath.
+            - and the net sighs like a curtain in the wind.
+            - Every eye follows the arc,
+          evidence: dodging, darting, dancing left,
+        - kind: mc
+          ask: Why is “Swish.” set alone as its own stanza?
+          choices:
+            - It makes the reader pause, like the waiting crowd.
+            - It is the name of the team.
+            - It shows that the ball missed.
+            - It tells who won the game.
+          evidence: Swish.
+        - kind: write
+          ask: How do “clang” and “clunk” contrast with “swish”?
+          sample: Clang and clunk are hard, harsh sounds of a missed shot, while swish is soft and smooth, the sound of a perfect one.
+          rubric: says clang and clunk sound harsh or like a miss and swish sounds soft or perfect.
+          evidence: Not a clang, not a clunk, not a bounce off the rim,
+        - kind: paragraph
+          ask: What does the last stanza say matters most? Quote it.
+          sample: >-
+            The last stanza says the friends do not care much about winning. The speaker says "the score is
+            something we forget," which shows the points are not important. What they remember is "that
+            swish," the beautiful moment everyone shared. The poem shows that the fun of playing together
+            matters more than the score.
+          rubric: explains that the shared moment or fun matters more than the score, with a quote.
+          evidence:
+            - because the score is something we forget,
+            - but that swish, we keep.
+
+- id: d09-wind-wants
+  title: What the Wind Wants
+  genre: poem
+  text: |
+    The wind wants in. It whines and wheedles
+    around the doorframe, under the sill,
+    it whistles a note through the keyhole
+    and tugs at the curtains, never still.
+
+    The wind wants out. It roams the meadow,
+    rolling the tall grass, row on row,
+    it lifts the crows like loose black ribbons
+    and blows the cottonwood seeds like snow.
+
+    The wind wants up. It climbs the hillside,
+    it hauls the kites on their long, light lines,
+    it pushes the clouds like sailing boats
+    and hums in the tops of the swaying pines.
+
+    The wind wants home. At evening, slowly,
+    it settles down on the lake's low glow,
+    it smooths the water, soothes the willows,
+    and whispers, oh, oh, so soft and low.
+  pages:
+    - focus: repetition, assonance and alliteration
+      questions:
+        - kind: mc
+          ask: What does repeating “The wind wants” do in the poem?
+          choices:
+            - It shows the wind's wishes changing, like a restless person.
+            - It shows the wind is angry all day.
+            - It shows the wind never changes at all.
+            - It tells us the wind is really a bird.
+          evidence: The wind wants up. It climbs the hillside,
+        - kind: quote
+          ask: Which line repeats the long “o” sound the most?
+          choices:
+            - and whispers, oh, oh, so soft and low.
+            - it hauls the kites on their long, light lines,
+            - around the doorframe, under the sill,
+            - and tugs at the curtains, never still.
+          evidence: and whispers, oh, oh, so soft and low.
+        - kind: write
+          ask: In stanza 4, how do the sounds match the wind's mood?
+          sample: The soft s sounds and long o sounds are slow and quiet, which matches the calm wind settling down for the evening.
+          rubric: names soft or long sounds in stanza 4 and links them to a calm, quiet mood.
+          evidence: it smooths the water, soothes the willows,
+        - kind: paragraph
+          ask: How does the poet make the wind seem like a person?
+          sample: >-
+            The poet gives the wind human wishes and actions. At the start it "whines and wheedles" at the
+            door, like a child begging to come inside. Later it "hums in the tops of the swaying pines," as if
+            it is singing to itself. These details make the wind feel like a playful, restless person who
+            finally settles down.
+          rubric: explains the personification with at least one quoted human action of the wind.
+          evidence:
+            - The wind wants in. It whines and wheedles
+            - and hums in the tops of the swaying pines.
+
+- id: d10-marching-band
+  title: The Marching Band
+  genre: poem
+  text: |
+    Down Main Street on a summer day
+    the tubas blink in the sun,
+    and every flag on every porch
+    is waving to everyone.
+    Boom goes the bass drum, rat-a-tat-tat,
+    here comes the band, tip your hat!
+
+    The trumpets toot a silver tune,
+    the trombones slide and sway,
+    the little piccolo trills up high
+    like a sparrow out to play.
+    Boom goes the bass drum, rat-a-tat-tat,
+    here comes the band, tip your hat!
+
+    My sister marches at the back
+    with cymbals gold and wide,
+    and when she crashes them, CRASH,
+    I nearly burst with pride.
+    Boom goes the bass drum, rat-a-tat-tat,
+    here comes the band, tip your hat!
+
+    The music turns the corner now,
+    it fades to a far-off hum,
+    but my feet keep marching all the way home
+    to the beat of an invisible drum.
+    Boom goes the bass drum, soft and slow,
+    there goes the band, and home we go.
+  pages:
+    - focus: refrain, rhyme and onomatopoeia
+      questions:
+        - kind: mc
+          ask: What does the refrain do in this poem?
+          choices:
+            - It copies the steady beat of the marching band.
+            - It tells a new part of the story each time.
+            - It shows the band is lost.
+            - It makes the poem feel sad.
+          evidence: Boom goes the bass drum, rat-a-tat-tat,
+        - kind: quote
+          ask: Which line uses onomatopoeia?
+          choices:
+            - and when she crashes them, CRASH,
+            - with cymbals gold and wide,
+            - the trombones slide and sway,
+            - is waving to everyone.
+          evidence: and when she crashes them, CRASH,
+        - kind: write
+          ask: How does the refrain change at the end, and why?
+          sample: It changes from here comes the band to there goes the band and turns soft and slow, because the parade is ending.
+          rubric: notes the change (here to there, or soft and slow) and links it to the parade leaving.
+          evidence: there goes the band, and home we go.
+        - kind: paragraph
+          ask: How does the speaker feel about the parade? Quote it.
+          sample: >-
+            The speaker loves the parade and is proud of it. When the sister plays her cymbals, the speaker
+            says, "I nearly burst with pride." Even after the band is gone, the speaker keeps marching "to the
+            beat of an invisible drum." This shows the music is still alive in the speaker's feet and heart.
+          rubric: names a feeling such as pride or joy and supports it with a quote.
+          evidence:
+            - I nearly burst with pride.
+            - to the beat of an invisible drum.
+
+- id: d11-kite-icarus
+  title: Kite Weather
+  genre: poem
+  text: |
+    My kite is red and wilder than the breeze;
+    it tugs my hands as if it wants to go
+    beyond the steeple and the tallest trees,
+    beyond the gulls, the clouds, the sun's bright glow.
+    I let out string and watch it climb so high,
+    a scrap of fire against the empty blue,
+    like Icarus, who raced into the sky
+    on wings of wax and feathers, bright and new.
+    He flew so near the sun the wax grew warm,
+    the feathers loosened, drifting one by one,
+    and down he tumbled, a small and spinning form,
+    into the sea, his daring journey done.
+    So I reel in my kite a bit and stand,
+    still high, still free, but tethered to the land.
+  pages:
+    - focus: allusion and sonnet form
+      questions:
+        - kind: mc
+          ask: What does the story of Icarus warn about?
+          choices:
+            - Going too far or too high can lead to a fall.
+            - Kites should be made of wax.
+            - The sea is always cold.
+            - Birds are better at flying than people.
+          evidence: He flew so near the sun the wax grew warm,
+        - kind: quote
+          ask: Which line begins the sonnet's turn?
+          choices:
+            - So I reel in my kite a bit and stand,
+            - I let out string and watch it climb so high,
+            - beyond the steeple and the tallest trees,
+            - My kite is red and wilder than the breeze;
+          evidence: So I reel in my kite a bit and stand,
+        - kind: write
+          ask: In lines 13–14, what does the speaker decide?
+          sample: The speaker decides to pull the kite in a little so it can stay high and free but safely tied to the ground.
+          rubric: says the speaker reels the kite in to keep it high but safe or connected.
+          evidence: still high, still free, but tethered to the land.
+        - kind: paragraph
+          ask: How does the sonnet's form help tell its message?
+          sample: >-
+            The first eight lines show the kite climbing "like Icarus, who raced into the sky." The next four
+            lines tell how Icarus flew too close to the sun and fell. Then the rhyming couplet turns the poem,
+            when the speaker says, "So I reel in my kite a bit and stand." The form builds up the danger first
+            and saves the lesson for the end.
+          rubric: explains how the parts of the sonnet build to the closing couplet's turn, with a quote.
+          evidence:
+            - like Icarus, who raced into the sky
+            - So I reel in my kite a bit and stand,
+
+- id: d12-ode-old-oak
+  title: Ode to the Old Oak
+  genre: poem
+  text: |
+    O oak at the edge of our yard,
+    you were here before our street had a name,
+    your bark as rough and ridged as a map of mountains,
+    your roots gripping the earth like a fist that won't let go.
+
+    Like Atlas, the giant of the old Greek tale
+    who carried the whole sky upon his shoulders,
+    you lift the heavens on your branches,
+    the clouds resting in your crown,
+    the stars caught in your twigs at night.
+
+    You never complain, never sigh,
+    though storms lean on you and snow piles high.
+    You hold up the robins' nests, the squirrels' highways,
+    the tire swing where my brother and I
+    fly back and forth all summer.
+
+    O patient giant, O green-crowned strongman,
+    I lean my back against your trunk
+    and feel, for a moment, how heavy and how light
+    it is to hold a piece of the sky,
+    and I thank you, old friend, for holding it so well.
+  pages:
+    - focus: allusion and the ode
+      questions:
+        - kind: mc
+          ask: From the poem's clues, who was Atlas?
+          choices:
+            - a giant who held up the sky
+            - a sailor who drew maps
+            - a king who loved gold
+            - a boy who climbed trees
+          evidence: who carried the whole sky upon his shoulders,
+        - kind: write
+          ask: What does the Atlas allusion add to the oak?
+          sample: It makes the oak seem huge, strong and patient, as if its branches were holding up the whole sky.
+          rubric: says the allusion makes the tree seem strong, huge or patient, like a giant holding the sky.
+          evidence: Like Atlas, the giant of the old Greek tale
+        - kind: quote
+          ask: Which line shows that the tree helps animals?
+          choices:
+            - You hold up the robins' nests, the squirrels' highways,
+            - your bark as rough and ridged as a map of mountains,
+            - fly back and forth all summer.
+            - I lean my back against your trunk
+          evidence: You hold up the robins' nests, the squirrels' highways,
+        - kind: paragraph
+          ask: An ode praises its subject. How does this poem do that?
+          sample: >-
+            The speaker talks straight to the tree, calling it "O patient giant, O green-crowned strongman."
+            These grand names show deep respect. The speaker lists everything the oak holds, from nests to a
+            tire swing. The poem ends with thanks, "I thank you, old friend," which shows love and gratitude.
+          rubric: explains how the poem praises the tree (grand names, its work, thanks) with a quote.
+          evidence:
+            - O patient giant, O green-crowned strongman,
+            - and I thank you, old friend, for holding it so well.
+
+- id: d13-echo-haiku
+  title: Canyon Echo
+  genre: poem
+  text: |
+    Canyon walls of red,
+    I shout my name to the rocks
+    and wait for a voice.
+
+    Echo, the myths say,
+    could speak only the last words
+    that others had said.
+
+    "Hello," I call out.
+    "...lo, ...lo," the cliffs whisper back,
+    borrowing my words.
+
+    Is Echo still here,
+    tucked in the folds of the stone,
+    saving all our words?
+  pages:
+    - focus: allusion and haiku form
+      questions:
+        - kind: mc
+          ask: Based on stanza 2, what could Echo do?
+          choices:
+            - repeat only the last words others said
+            - sing any song she wanted
+            - talk with the animals
+            - turn words into stone
+          evidence: could speak only the last words
+        - kind: quote
+          ask: Which line shows the canyon acting like Echo?
+          choices:
+            - borrowing my words.
+            - Canyon walls of red,
+            - I shout my name to the rocks
+            - tucked in the folds of the stone,
+          evidence: borrowing my words.
+        - kind: write
+          ask: Why do short haiku suit a poem about echoes?
+          sample: Each haiku is short like a quick call, and together they feel like a voice going out and coming back.
+          rubric: links the short haiku form to calls, answers or the brief sound of an echo.
+          evidence: and wait for a voice.
+        - kind: paragraph
+          ask: What does the last haiku wonder, and why?
+          sample: >-
+            The last haiku asks, "Is Echo still here," hidden in the canyon. The speaker wonders this because
+            the cliffs repeat words just as Echo did in the myth. The question makes the canyon feel magical,
+            as if the old story might still be true. It is a playful way to explain why canyons echo.
+          rubric: explains that the speaker imagines Echo in the canyon because it repeats words, with a quote.
+          evidence:
+            - Is Echo still here,
+            - saving all our words?
+
+- id: d14-golden-touch
+  title: The Golden Touch
+  genre: poem
+  text: |
+    At six o'clock in late September
+    the sun reaches across the backyard
+    and touches everything.
+
+    The fence turns gold.
+    The tomatoes turn gold.
+    My little brother, chasing the dog in circles,
+    turns gold from his sneakers to his messy hair.
+
+    I think of King Midas from the old story,
+    who wished that everything he touched would turn to gold,
+    and got his wish.
+    His roses went stiff and shining.
+    His bread clinked like coins against his teeth.
+    His cup of water froze into a heavy yellow lump,
+    and the king, the richest man in the world,
+    was suddenly the hungriest, too.
+
+    But this light is a kinder touch.
+    It turns things gold, then gives them back:
+    the fence to its gray,
+    the tomatoes to their red,
+    my brother to his freckles and grass-stained knees.
+
+    Mom calls us in for corn on the cob,
+    and it is gold, too,
+    the kind of gold you can eat,
+    the kind that drips butter down your chin.
+  pages:
+    - focus: allusion and free verse
+      questions:
+        - kind: mc
+          ask: According to the poem, what did King Midas wish for?
+          choices:
+            - that everything he touched would turn to gold
+            - to be the hungriest man in the world
+            - to grow the finest roses
+            - to see a golden sunset
+          evidence: who wished that everything he touched would turn to gold,
+        - kind: quote
+          ask: Which line shows that Midas's wish was a problem?
+          choices:
+            - His bread clinked like coins against his teeth.
+            - The tomatoes turn gold.
+            - the kind of gold you can eat,
+            - and touches everything.
+          evidence: His bread clinked like coins against his teeth.
+        - kind: write
+          ask: Why is the sunlight “a kinder touch” than Midas's?
+          sample: The sunlight's gold only lasts a moment and then gives everything back the way it was.
+          rubric: says the sunlight's gold is brief and returns things to normal, unlike Midas's.
+          evidence: "It turns things gold, then gives them back:"
+        - kind: paragraph
+          ask: How does the Midas allusion help the poem's message?
+          sample: >-
+            Midas wanted gold so badly that he became "the hungriest, too," because he could not eat. This
+            shows that gold is not worth more than everyday things. At the end, the speaker enjoys corn,
+            "the kind of gold you can eat." The allusion helps the speaker see that the best gold is the
+            ordinary good things in life.
+          rubric: contrasts Midas's useless gold with the everyday gold the speaker enjoys, with a quote.
+          evidence:
+            - was suddenly the hungriest, too.
+            - the kind of gold you can eat,
+
+- id: d15-slow-steady
+  title: Slow and Steady
+  genre: poem
+  text: |
+    When Leo heard the whistle blow
+    at our school's spring fun run,
+    he bolted off like a rabbit, laughing,
+    "See you when you're done!"
+
+    And I just jogged my steady pace,
+    the way my coach had shown,
+    one foot, then the other foot,
+    a tortoise on my own.
+
+    You know the fable, old and wise:
+    the hare, so proud and fast,
+    lay down to nap beside the road,
+    and Tortoise plodded past.
+
+    Well, Leo stopped to tie his shoe,
+    then stopped to wave and chat,
+    then stopped to drink at every stand,
+    then stopped to pet a cat.
+
+    And I kept jogging, step by step,
+    past Leo and the cat,
+    and crossed the line before him.
+    Now how about that?
+
+    Now Leo runs beside me
+    each Saturday at nine;
+    we're slow and steady, side by side,
+    and we both reach the line.
+  pages:
+    - focus: allusion and ballad form
+      questions:
+        - kind: mc
+          ask: Who in the poem is like the hare in the fable?
+          choices:
+            - Leo, who is fast but keeps stopping
+            - the speaker, who jogs steadily
+            - the coach, who teaches running
+            - the cat beside the road
+          evidence: Well, Leo stopped to tie his shoe,
+        - kind: quote
+          ask: Which line shows the speaker acting like the tortoise?
+          choices:
+            - one foot, then the other foot,
+            - he bolted off like a rabbit, laughing,
+            - then stopped to pet a cat.
+            - each Saturday at nine;
+          evidence: one foot, then the other foot,
+        - kind: write
+          ask: Why does stanza 4 keep repeating “then stopped”?
+          sample: The repetition shows Leo stopping again and again, which is funny and explains why he falls behind.
+          rubric: says the repetition shows Leo stopping many times and links it to humor or falling behind.
+          evidence: then stopped to wave and chat,
+        - kind: paragraph
+          ask: What does the fable allusion add to this story?
+          sample: >-
+            The poem reminds us of the fable in which the hare naps and "Tortoise plodded past." Because we
+            know that story, we can guess that the steady speaker will pass Leo. The allusion makes the
+            ending feel like a fair lesson, not just luck. It shows that steady effort can beat speed that
+            keeps stopping.
+          rubric: explains that the fable predicts the ending or teaches that steady effort wins, with a quote.
+          evidence:
+            - and Tortoise plodded past.
+            - You know the fable, old and wise

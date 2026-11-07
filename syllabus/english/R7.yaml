@@ -7,7 +7,7 @@ title: Two central ideas, claims and evidence, word roots, poems, and fiction be
 # Every passage and poem is original (content/passages/R7/<section>.yaml); the Greek and Latin roots are
 # hand-checked in content/wordroots/R7.yaml. Drafts and their approval: syllabus/drafts/R7-*.md (written by
 # scripts/r7_drafts.py). Standards checked on thecorestandards.org (2026-11-06).
-preview_pages: [1, 2, 101, 162]   # a whole spread (reading page + questions), a word-roots page, a two-texts questions page
+preview_pages: [1, 2, 161, 162]   # two whole spreads: an article with its questions, and a story beside its history
 aims:
   - Find two central ideas in an article, trace how each develops, and write an objective summary (RI.7.2)
   - Trace an argument's claim and reasons, and judge whether its evidence is relevant and sufficient (RI.7.8)
@@ -24,7 +24,7 @@ rules:
   planner: passages
   spread: true
   answers: by_line            # answers PDF: one line per answer (sample answers + what a full answer has)
-  answers_height: 860
+  answers_height: 910          # fills each answers page (two written-answer spreads a page); estimate in ws/booklet.py
   rubrics: true               # every written answer carries a one-line rubric for the answer key (ws/spreads.py)
   passage_words: [290, 330]   # a reading page holds ~290 words at 20px; a longer end continues above the questions
   fk_grade: [6.5, 8.5]        # Flesch-Kincaid grade of every passage (ws/readability.py); poems are exempt
@@ -105,7 +105,7 @@ sections:
         passage_spread:
           - "Ask: what does this comparison make you see or feel?"
           - "Read the line aloud. Which sounds repeat? What do they add?"
-          - "Talk about the story or myth the poem points to, if it names one."
+          - "Talk about any myth or story the poem points to. What fits?"
 
   # A story set in the past beside a historical account of the same time (RL.7.9): what the story keeps,
   # what it invents or changes, and why an author might do that.

@@ -60,8 +60,1471 @@
           ask: Is the evidence sufficient? Explain in 3–4 sentences.
           sample: >-
             The evidence is strong for the first two reasons. The survey shows that "seventy percent said
-            they would walk or bike more," and the Route 9 detail shows a real safety problem. The third
-            reason is weaker, because it rests on a cousin's opinion and an unrelated fact about the 1830s.
+            they would walk or bike more," and the Route 9 detail shows a real safety problem. The third reason is weaker: "Hundreds of communities" is general, and the rest is a cousin's opinion and an unrelated fact.
             The writer also says the trail is cheaper without giving any costs.
           rubric: judges each reason; names the survey or Route 9 as strong; names the cousin, the history fact or the missing costs as weak.
           evidence: My cousin lives near one in Ohio
+
+- id: b02-school-garden
+  title: A Garden at School
+  genre: argument
+  text: |
+    The empty lot beside the gym at Cedar Grove Middle School is covered in patchy grass that almost
+    nobody uses. Our school should turn that space into a vegetable garden, because a garden would help
+    us learn science, get us to eat better food and teach us how to work together.
+
+    First, a garden is a living science lab. In a garden, we can watch seeds sprout, measure how fast
+    plants grow and test which kind of soil holds water best. Plants need sunlight, water and nutrients
+    to grow, and a garden lets us see each need up close instead of just reading about it in a science
+    book.
+
+    Second, a garden can change what we eat. Last spring, our student council asked 210 students, and
+    sixty-two percent said they would be more willing to try a vegetable they had grown themselves.
+    Experts agree that most young people do not eat enough vegetables, so even a small change in our
+    habits would matter.
+
+    Third, a garden builds teamwork. Watering, weeding and picking are jobs that no one person can do
+    alone for a whole season. My friend Leo helped in his grandmother's garden last summer, and he says
+    it was the most fun he has ever had. Wild tomatoes first grew in South America, long before anyone
+    planted them in gardens.
+
+    Some people argue that nobody will care for the garden during summer vacation. However, families
+    could sign up to water it for one week each, and crops like pumpkins and squash can be planted in
+    late spring and picked in the fall, when we are all back in class. A garden would give us something
+    to learn from and be proud of, so the school should start planning it this year.
+  pages:
+    - focus: claim, reasons, counterclaim, relevant evidence
+      questions:
+        - kind: mc
+          ask: What counterclaim does the writer answer?
+          choices:
+            - Nobody will care for the garden in summer.
+            - Vegetables cost too much to grow.
+            - The gym needs the empty lot.
+            - Students do not enjoy science class.
+          evidence: nobody will care for the garden during summer vacation
+        - kind: quote
+          ask: Which words are NOT relevant to the writer's claim?
+          choices:
+            - Wild tomatoes first grew in South America
+            - sixty-two percent said they would be more willing
+            - Plants need sunlight, water and nutrients to
+            - families could sign up to water it for one week each
+          evidence: Wild tomatoes first grew in South America
+        - kind: write
+          ask: Does Leo's story prove a garden builds teamwork?
+          sample: No, because it only shows that one person had fun in a family garden, not that students worked together.
+          rubric: says it is weak and explains it is one person's experience that does not show teamwork.
+          evidence: he says it was the most fun he has ever had
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The second reason is well supported, because the survey found that "sixty-two percent said they
+            would be more willing" to try vegetables they grew. The first reason is also reasonable, since
+            plants really do need sunlight, water and nutrients. The third reason is weak, because Leo's story
+            is about having fun, and the tomato fact has nothing to do with teamwork. So the claim is only
+            partly supported.
+          rubric: names the survey or the science reason as strong and Leo's story or the tomato fact as weak.
+          evidence: My friend Leo helped in his grandmother's garden last summer
+
+- id: b03-swim-lessons
+  title: Everyone Should Swim
+  genre: argument
+  text: |
+    Every summer, families in Harbor Point head to the lake, the town pool and the beach. Yet many kids
+    in our town have never learned to swim. Every student at Harbor Point Middle School should take
+    swimming lessons, because swimming is a key safety skill, a healthy form of exercise and a door to
+    many other activities.
+
+    First, swimming helps people stay safe around water. Water safety groups agree that knowing how to
+    swim, along with wearing a life jacket and having an adult nearby, greatly lowers the chance of
+    accidents in the water. In our class survey of 180 students at our school, one in four said they
+    could not swim the length of a pool. That means dozens of our classmates could be in trouble if they
+    slipped into deep water.
+
+    Second, swimming is excellent exercise. It works the arms, the legs and the muscles of the back at
+    the same time. Since the water holds up the body's weight, swimming is also gentle on the joints,
+    which is one reason doctors often suggest it for people of every age.
+
+    Third, swimming opens doors to other activities. Kids who can swim can join a swim team, paddle a
+    kayak or learn to snorkel. Our town's summer camp asks every camper to pass a swim test before going
+    out in a boat, and last summer twenty-three campers had to stay on shore because they could not pass
+    it.
+
+    Some people say lessons cost too much and take too much time. However, the community center already
+    offers free group lessons on Saturday mornings, and its beginner course lasts only eight weeks. The
+    school could also add a short swim unit to gym class. Swimming is a skill that lasts a lifetime, so
+    every student deserves the chance to learn it.
+  pages:
+    - focus: reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: Which reason does paragraph 3 give?
+          choices:
+            - Swimming is healthy exercise that is easy on joints.
+            - Swimming lessons are free on Saturdays.
+            - Swimming lets students join a team.
+            - Swimming keeps people safe near the lake.
+          evidence: Second, swimming is excellent exercise.
+        - kind: quote
+          ask: Which words support the reason in paragraph 4?
+          choices:
+            - twenty-three campers had to stay on shore
+            - one in four said they could not swim
+            - swimming is also gentle on the
+            - its beginner course lasts only eight weeks
+          evidence: twenty-three campers had to stay on shore
+        - kind: write
+          ask: Why is the school survey strong evidence?
+          sample: It comes from the writer's own school and gives a clear number, one in four students, who cannot swim a pool length.
+          rubric: says it is strong and gives a reason (real students at the school, a clear number).
+          evidence: one in four said they could not swim the
+        - kind: paragraph
+          ask: Is the writer's reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            The reasoning is sound, because each reason is backed by relevant evidence. The survey shows a
+            real problem, since "one in four said they could not swim the length of a pool." The camp example
+            shows what students miss when they cannot swim. The writer also answers the cost worry by pointing
+            to free lessons at the community center.
+          rubric: says the reasoning is sound, quotes one piece of evidence and explains how it supports a reason.
+          evidence: offers free group lessons on Saturday mornings
+
+- id: b04-instrument-library
+  title: Instruments to Borrow
+  genre: argument
+  text: |
+    The Willow Creek Public Library already lends books, movies, puzzles and even cake pans. It should
+    also lend musical instruments, so that every family in town can try music without spending a lot of
+    money. A shelf of instruments would save families money, help kids practice and be one of the most
+    popular things the library has.
+
+    First, instruments cost a lot. A new violin or trumpet for a student can cost hundreds of dollars,
+    and many families cannot pay that much just to find out if their child likes to play. At my school,
+    the band teacher asked 95 new band students how they got their instruments, and forty of them said
+    their families were renting one, which costs money every single month.
+
+    Second, borrowing would let kids practice at home. It takes months of steady practice to learn to
+    play well, and kids who can only play in band class have little time to get better. A borrowed
+    keyboard, guitar or flute would let a student practice each night, the way music teachers say they
+    should.
+
+    Third, a shelf of instruments would be very popular. Lots of people in town have told me they would
+    use it. I think it is the best idea the library could ever have, and my whole family agrees with me.
+
+    Some people worry that borrowed instruments would get broken or lost. Libraries already deal with
+    this problem for books and laptops by checking items when they come back and charging a fee for any
+    damage. Libraries in other parts of the country already lend instruments, and their programs have
+    lasted for years. Willow Creek should add instruments next year, so that the next great musician in
+    our town does not have to wait for a chance to play.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - The library should lend musical instruments.
+            - Families should rent instruments for band.
+            - The library should stop lending cake pans.
+            - Band class should meet every evening.
+          evidence: It should also lend musical instruments
+        - kind: quote
+          ask: Which words support the first reason?
+          choices:
+            - forty of them said
+            - Lots of people in town have told me
+            - my whole family agrees with me
+            - charging a fee for any damage
+          evidence: forty of them said
+        - kind: write
+          ask: Why is the evidence for reason 3 weak?
+          sample: It gives no numbers or names, only "Lots of people in town" and the writer's own family's opinion.
+          rubric: says it is weak and explains it is vague, has no numbers, or is only opinion.
+          evidence: Lots of people in town have told me they would
+        - kind: paragraph
+          ask: Does the writer prove the claim? Explain in 3–4 sentences.
+          sample: >-
+            The writer proves the first reason well, because the band survey found that "forty of them said
+            their families were renting one." The second reason makes sense, since steady practice at home is
+            how students improve. However, the third reason has no real evidence, only the writer's opinion
+            and the vague words "Lots of people in town" as proof. The claim is mostly but not fully supported.
+          rubric: names the band survey as strong and reason 3 as weak, with a quote.
+          evidence: I think it is the best idea the library could ever have
+
+- id: b05-recess-first
+  title: Recess Before Lunch
+  genre: argument
+  text: |
+    At Brookside Middle School, students eat lunch first and then go outside for recess. Our school
+    should switch the order and hold recess before lunch, because this change would cut food waste, help
+    students eat more of their healthy food and make the afternoon calmer.
+
+    First, recess before lunch would reduce food waste. Right now, many students gulp a few bites and
+    throw the rest away so they can rush outside. In March, our green team weighed the food thrown away
+    at lunch for two weeks. In the first week, with lunch first, students threw away 410 pounds of food,
+    and in the second week, when the principal let us try recess first, the total dropped to 290 pounds.
+
+    Second, students would eat more of the healthy food on their trays. Our team also counted the fruit
+    cups that were thrown away without being opened, and with recess first, that number fell from 160 to
+    95 in one week. Students who have already played are hungrier and less rushed, so they finish more
+    of their meals.
+
+    Third, the afternoon would be calmer. When recess comes right before class, students come back
+    inside hot and excited, but with recess first, they have a quiet lunch to settle down. Our four
+    afternoon teachers kept track of how often they had to remind students to focus, and the number went
+    down in the trial week.
+
+    Some people say students will be too hungry to play before lunch. However, the school nurse reported
+    no extra visits during the trial, and students still had a snack break in the morning. One week is a
+    short test, so the school should try it for a full month before it decides, but the early results
+    show that recess first is worth trying.
+  pages:
+    - focus: claim, reasons, strong evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's main purpose?
+          choices:
+            - To persuade the school to hold recess first
+            - To explain how the green team weighs food
+            - To describe a typical lunch period
+            - To complain about the cafeteria food
+          evidence: hold recess before lunch
+        - kind: quote
+          ask: Which words support the writer's second reason?
+          choices:
+            - that number fell from 160 to 95
+            - the total dropped to 290 pounds
+            - students come back inside hot
+            - reported no extra visits during the trial
+          evidence: that number fell from 160 to 95
+        - kind: write
+          ask: Why is weighing the food strong evidence?
+          sample: It is a real measurement that compares the same cafeteria with lunch first and with recess first.
+          rubric: says it is strong because it is measured, uses numbers, or compares the two schedules fairly.
+          evidence: students threw away 410 pounds of food
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence is strong, because the green team measured food waste and found that "the total
+            dropped to 290 pounds." The fruit cup count adds more support with real numbers, and the teachers' records point the same way. The writer also admits that one week is a short test. That honesty makes the argument
+            more convincing, not less.
+          rubric: judges sufficiency (enough for a longer trial, or not yet because one week is short); quotes a measurement.
+          evidence: One week is a short test
+
+- id: b06-aquariums
+  title: Why Aquariums Matter
+  genre: argument
+  text: |
+    Many people think of aquariums as places for a fun field trip and nothing more. In fact, good
+    aquariums do much more than entertain us. They help protect ocean animals in three ways: by teaching
+    the public, rescuing animals in trouble and helping scientists learn.
+
+    First, aquariums teach millions of people about the ocean each year. Most of us will never dive on a
+    coral reef, but at an aquarium we can see one up close. After our class went to the Bayview
+    Aquarium, we asked all 64 students in our grade what they had learned, and fifty-one said they
+    planned to use less plastic because of what they saw about ocean trash.
+
+    Second, many aquariums rescue animals. In some winters, sea turtles along the Atlantic coast are
+    stunned by sudden cold water and wash up on the beach. Aquarium teams warm the turtles slowly, care
+    for them and set them free in the ocean once they are strong and healthy again.
+
+    Third, aquariums help scientists. Researchers at aquariums study how sea creatures eat, grow and
+    raise their young, and some aquariums grow rare corals that can later be planted back on ocean
+    reefs. Also, everyone I know loves the otter exhibit, which proves that aquariums are good for
+    animals.
+
+    Critics argue that keeping animals in tanks is unfair, because the ocean is far larger than any tank
+    could be. This is a fair concern, and not every aquarium treats its animals well. However, the best
+    aquariums are checked by expert groups that set strict rules for space, food and care. Instead of
+    turning away from aquariums, we should visit and support the ones that meet these high standards.
+    That way, we help animals in tanks and in the wild.
+  pages:
+    - focus: claim, counterclaim, relevant evidence
+      questions:
+        - kind: mc
+          ask: Which counterclaim does the writer respond to?
+          choices:
+            - Keeping animals in tanks is unfair.
+            - Aquariums cost too much to visit.
+            - Field trips are a waste of time.
+            - Sea turtles do not need rescuing.
+          evidence: Critics argue that keeping animals in tanks is unfair
+        - kind: quote
+          ask: Which words are NOT relevant evidence?
+          choices:
+            - everyone I know loves the otter exhibit
+            - fifty-one said they planned to use less plastic
+            - Aquarium teams warm the turtles slowly
+            - some aquariums grow rare corals
+          evidence: everyone I know loves the otter exhibit
+        - kind: write
+          ask: How well does the writer answer the critics?
+          sample: Fairly well, because the writer admits the concern is fair and explains that expert groups check the best aquariums.
+          rubric: judges the response and mentions the admission or the expert checks.
+          evidence: This is a fair concern
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            Most of the reasoning is sound. The turtle rescues and the coral work show real ways that
+            aquariums protect animals, and the survey shows visitors changing their habits. The otter
+            sentence is weak, because "everyone I know loves the otter exhibit" is an opinion about visitors,
+            not proof that animals are helped. Without that sentence, the argument would be stronger.
+          rubric: names at least one strong piece and explains why the otter sentence is faulty reasoning.
+          evidence: which proves that aquariums are good for animals
+
+- id: b07-street-trees
+  title: Shade on Our Streets
+  genre: argument
+  text: |
+    On a hot July afternoon, the sidewalk on Elm Avenue lies in the shade of tall oak trees, while the
+    sidewalk on Station Street, two blocks away, has no trees at all. The city of Riverton should plant
+    more trees along its streets, because shade keeps streets cool, trees clean the air and shady
+    streets are better places to walk.
+
+    First, trees cool the streets beneath them. Dark asphalt soaks up sunlight and gets very hot, but
+    shade blocks much of that heat, and leaves give off water vapor that cools the air. For a science
+    project, I took the sidewalk temperature on both streets at three o'clock on five summer days. The
+    shady sidewalk on Elm Avenue averaged 21 degrees cooler than the sunny one on Station Street.
+
+    Second, trees make the air better to breathe. Leaves take in carbon dioxide and give off oxygen, and
+    they trap tiny bits of dust and soot. Scientists have studied this for many years, and they agree
+    that city trees help make the air cleaner.
+
+    Third, shady streets invite people to walk. Our neighborhood group counted walkers on both streets
+    during the same two hours on a Saturday morning, and Elm Avenue had almost three times as many.
+    Shade makes walking more pleasant in summer, and more walkers can mean fewer short trips by car.
+
+    Some people argue that trees cost money and that their roots can crack sidewalks. These are real
+    problems, but city tree experts can choose kinds of trees with gentle roots and plant them in wide
+    strips of soil. A young tree planted this year can shade the street for many years to come. Riverton
+    should begin with Station Street this fall, so that its sidewalk can one day feel as cool as Elm
+    Avenue's.
+  pages:
+    - focus: claim, reasons, strong evidence, counterclaim
+      questions:
+        - kind: mc
+          ask: What does the writer want the city to do?
+          choices:
+            - Plant more trees along its streets
+            - Repave the sidewalks on Station Street
+            - Cut down the oaks on Elm Avenue
+            - Close Station Street to cars
+          evidence: The city of Riverton should plant
+        - kind: quote
+          ask: Which words support the reason about walking?
+          choices:
+            - Elm Avenue had almost three times as many
+            - averaged 21 degrees cooler
+            - Leaves take in carbon dioxide
+            - plant them in wide strips of soil
+          evidence: Elm Avenue had almost three times as many
+        - kind: write
+          ask: Why is the writer's temperature test good evidence?
+          sample: The writer measured both streets at the same time on five days, so the comparison is fair and repeated.
+          rubric: says it is strong and mentions the fair comparison, repeated days or real numbers.
+          evidence: at three o'clock on five summer
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence is sufficient for this claim. The writer's own test found that the shaded sidewalk
+            "averaged 21 degrees cooler," which strongly supports the first reason. The air and walking
+            reasons are backed by well-known science and a real count. The writer also answers the worry about
+            roots with a practical solution.
+          rubric: says it is sufficient, quotes one piece and explains how it supports a reason.
+          evidence: averaged 21 degrees cooler
+
+- id: b08-weekend-homework
+  title: Free Weekends
+  genre: argument
+  text: |
+    Students at Lakeview Middle School often spend Sunday afternoons finishing worksheets instead of
+    resting. I believe weekend homework should be optional, so that we can rest, spend time with our
+    families and come back to school on Monday ready to learn.
+
+    First, students need rest. Sleep experts say that children need about nine to twelve hours of sleep each night, and teens need eight to ten. In our class survey of 28 students, nineteen said they had
+    stayed up past their bedtime on a Sunday night to finish their weekend work. Tired students have a
+    hard time paying attention, so a heavy weekend can make the lessons on Monday harder.
+
+    Second, weekends are family time. Many families use Saturday and Sunday to visit relatives, cook
+    meals, do chores or play outside together. When homework fills up those days, kids miss out on time
+    that helps them grow in other ways, like learning to cook or fix things.
+
+    Third, optional homework would not lower grades, as some people fear. My older brother's class had
+    no weekend homework last year, and his grades went up, so it is clear that dropping weekend homework
+    makes every student do better in school.
+
+    Some teachers worry that we will forget what we learned if we take two whole days off. But optional
+    homework still lets students practice if they choose to. Teachers could post review games and extra
+    reading online for anyone who wants more practice, and kids who need help could still get it. Making
+    weekend work optional would give us a real choice and teach us to plan our own time. The school
+    should try the new rule next term, and then ask students and teachers again to see how well it
+    worked.
+  pages:
+    - focus: reasons, counterclaim, sound reasoning
+      questions:
+        - kind: mc
+          ask: Which reason does paragraph 2 give?
+          choices:
+            - Students need rest and enough sleep.
+            - Families need help with chores.
+            - Review games are fun to play.
+            - Teachers give too many worksheets.
+          evidence: First, students need rest.
+        - kind: quote
+          ask: Which words show a hasty generalization?
+          choices:
+            - makes every student do better in school
+            - nineteen said they had stayed up past their bedtime
+            - Many families use Saturday and Sunday
+            - lets students practice if they choose to
+          evidence: makes every student do better in school
+        - kind: write
+          ask: Does the brother's class prove reason 3? Explain.
+          sample: No, because one student's grades in one class cannot show what would happen to every student.
+          rubric: says no and explains it is a single example used to make a claim about everyone.
+          evidence: My older brother's class had no weekend homework last
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            The first reason is sound, because sleep experts recommend at least eight hours, and the survey
+            found that "nineteen said they had stayed up past their bedtime." The second reason is reasonable
+            but has no evidence. The third reason is not sound, because one brother's grades cannot prove that
+            every student will do better. The writer would need more evidence about grades.
+          rubric: judges each reason; names the sleep survey as strong and the brother example as faulty.
+          evidence: nineteen said they had stayed up past their bedtime
+
+- id: b09-dog-park
+  title: A Park for Dogs
+  genre: argument
+  text: |
+    Our town of Pine Hollow has three playgrounds, two ball fields and a skate park, but it has no place
+    where dogs can run freely. The town should build a fenced dog park, because it would keep dogs healthy,
+    make our other parks better for families and bring neighbors together.
+
+    First, dogs need daily exercise. Veterinarians agree that most dogs need regular activity to stay fit
+    and calm, and a short walk on a leash is often not enough for energetic breeds. A fenced dog park would
+    let dogs run at full speed and play with other dogs without escaping into the street.
+
+    Second, a dog park would make our other parks better. Right now, some owners let their dogs off the
+    leash in Willow Park, where small children play. According to the town newsletter, the park office
+    received fourteen complaints about loose dogs last month alone. A dog park would give these owners a
+    proper place to go. Dogs were the first animals that people tamed, thousands of years ago.
+
+    Third, a dog park would bring neighbors together. Owners chat while their dogs play, and new neighbors
+    get to know each other. Our scout troop sent a survey to 120 households, and eighty-five of them said
+    they would visit a dog park at least once a week.
+
+    Some neighbors worry about barking and the cost of building a park. The town could place the dog park
+    on the empty field next to the recycling center, which is far from houses. Volunteers from our scout
+    troop have already offered to build benches and plant shade trees, which would lower the cost. A dog
+    park would be good for dogs, owners and families alike, so the town should approve it this year.
+  pages:
+    - focus: claim, reasons, relevant evidence
+      questions:
+        - kind: mc
+          ask: Why does the writer mention the recycling center?
+          choices:
+            - To answer the worry about barking
+            - To show that the town recycles well
+            - To prove that dogs need exercise
+            - To explain where children play
+          evidence: which is far from houses
+        - kind: quote
+          ask: Which words do NOT support the claim?
+          choices:
+            - Dogs were the first animals that people tamed
+            - A dog park would give these owners a proper place
+            - Owners chat while their dogs play
+            - most dogs need regular activity to stay fit
+          evidence: Dogs were the first animals that people tamed
+        - kind: write
+          ask: Does the survey support reason 3? Explain.
+          sample: Partly, because it shows people would visit often, but it does not show that neighbors would get to know each other.
+          rubric: judges the survey and explains that visiting is not the same as meeting neighbors.
+          evidence: eighty-five of them said
+        - kind: paragraph
+          ask: Is the evidence enough? Explain in 3–4 sentences.
+          sample: >-
+            Most of the evidence is relevant and strong. The newsletter reports "fourteen complaints about
+            loose dogs," which shows a real problem in Willow Park. The fact about dogs being tamed long ago
+            is true, but it does not show that the town needs a dog park. Overall the claim is well supported,
+            with one piece that should be cut.
+          rubric: names one strong piece with a quote and identifies the off-topic fact.
+          evidence: fourteen complaints about loose dogs
+
+- id: b10-nature-journal
+  title: Keep a Nature Journal
+  genre: argument
+  text: |
+    Every student at Oak Ridge Middle School should keep a nature journal, which is a notebook for
+    sketching and writing about the plants, birds, bugs and weather we see outside. I am sure that a
+    nature journal is the best way for anyone to learn about the world, and I will explain why in three
+    parts.
+
+    First, nature journals make students smarter. Last fall I started a journal of my own, and by spring
+    my science grade had gone up from a B to an A, which made my parents very proud. That proves that
+    journals work for every student, so there is no need to test the idea any further or ask other
+    students.
+
+    Second, keeping a journal is calming. My best friend Maya says she always feels calm when she draws
+    leaves in her notebook after school. Everyone knows that time outside is good for you, so I do not
+    need to give any more proof than that, and you should simply trust me.
+
+    Third, real scientists use journals. Many famous naturalists kept careful notebooks of what they
+    saw, and Charles Darwin filled notebooks with notes and sketches during his long voyage on the ship
+    Beagle. Also, paper was first made in China about two thousand years ago, and people have been
+    writing on it ever since.
+
+    Some people say students are too busy for one more assignment. But a journal takes only ten minutes
+    a day, and anyone who says they cannot find ten minutes is just making excuses. Nature journals are
+    simply wonderful. Every single school in the country should require them, starting with ours,
+    because there is no better way to learn about the world than to step outside and write down what you
+    see.
+  pages:
+    - focus: claim, weak evidence, unsound reasoning
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - Every student should keep a nature journal.
+            - Science grades at the school are too low.
+            - Paper was first made long ago in China.
+            - Students are too busy for homework.
+          evidence: should keep a nature journal
+        - kind: quote
+          ask: Which words are the most relevant evidence?
+          choices:
+            - Charles Darwin filled notebooks with notes and sketches
+            - my science grade had gone up from a B to an A
+            - she always feels calm when she draws leaves
+            - paper was first made in China
+          evidence: Charles Darwin filled notebooks with notes and sketches
+        - kind: write
+          ask: Does the writer's grade prove that journals work?
+          sample: No, because one student's grade could rise for many reasons, and it says nothing about every student.
+          rubric: says no and explains it is one example or that other things could explain the grade.
+          evidence: That proves that journals work for every student
+        - kind: paragraph
+          ask: Is this argument convincing? Explain in 3–4 sentences.
+          sample: >-
+            The argument is not convincing, because most of its evidence is weak. The writer uses one grade
+            and then says "That proves that journals work for every student," which is a hasty
+            generalization. The friend's feelings and the fact about paper do not prove anything about
+            journals. Only the Darwin example is relevant, and it is about a scientist, not about students.
+          rubric: says it is weak, quotes a weak piece and names why (anecdote, opinion, off-topic); may note Darwin.
+          evidence: Also, paper was first made in China
+
+- id: b11-field-trips
+  title: Worth the Bus Fare
+  genre: argument
+  text: |
+    At every spring meeting of the Fairview parent group, someone asks whether field trips are really
+    worth what they cost the school. My answer is yes. Buses and tickets do cost money, but field trips
+    let students see real things, help them remember what they learn and show them jobs they might want
+    one day as adults.
+
+    First, field trips let students see the real thing. Reading about a waterfall or an old grain mill
+    is not the same as standing next to one and hearing it roar as the water crashes onto the rocks
+    below. When our class went to the history museum, we held tools from a real blacksmith shop and felt
+    how heavy they were, which no picture in a book could show us.
+
+    Second, students remember field trips for years. Our class asked 140 eighth graders to name one
+    lesson they still remembered from fifth grade, and more than half named something they had learned
+    on a trip, while very few of them named a worksheet or a test from math class.
+
+    Third, field trips show students future jobs. At the water treatment plant, we met engineers and lab
+    workers, asked them about their work and watched them test samples of the water that flows from our
+    kitchen sinks. Several of my classmates told me afterward that they now want to become scientists
+    when they grow up.
+
+    Some parents argue that the money should buy new books instead. Books matter, but field trips do not
+    cost very much compared with the other things the school pays for each year, so the school can
+    afford both. The parent group should keep paying for at least two trips a year, because some lessons
+    can only be learned outside the classroom.
+  pages:
+    - focus: reasons, counterclaim, missing evidence
+      questions:
+        - kind: mc
+          ask: Which counterclaim does the writer answer?
+          choices:
+            - The money should buy new books instead.
+            - Students forget field trips quickly.
+            - Museums are too far away to visit.
+            - Field trips take too many school days.
+          evidence: the money should buy new books instead
+        - kind: quote
+          ask: Which words support the reason in paragraph 3?
+          choices:
+            - more than half named something they had learned
+            - we held tools from a real blacksmith shop
+            - we met engineers and lab workers
+            - the money should buy new books instead
+          evidence: more than half named something they had learned
+        - kind: write
+          ask: Is the writer's answer about cost convincing? Why?
+          sample: No, because the writer gives no prices or numbers, so we cannot tell if trips really cost little.
+          rubric: says it is weak and explains that no costs or numbers are given.
+          evidence: field trips do not cost very much
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence for the first two reasons is good. The survey found that "more than half named
+            something they had learned on a trip," which shows that trips are remembered. However, the
+            reason about jobs rests on what a few classmates said, and the reply about cost gives no numbers.
+            The writer needs real prices to prove that trips are worth the money.
+          rubric: names the survey or museum example as strong and the cost reply or job reason as weak.
+          evidence: Several of my classmates told me
+
+- id: b12-book-choice
+  title: Pick Your Own Book
+  genre: argument
+  text: |
+    At Maple Grove Middle School, teachers choose the book for every single book report this year. I
+    believe students should be allowed to choose their own books, because choice gets students to read
+    more, helps them put more effort into their reports and lets them find out what kind of reader they
+    are.
+
+    First, students read more when they choose. In a survey of 160 students at our school, seventy-four
+    percent said they would read more if they could pick their own books, and many said they would read
+    at home as well. Reading experts agree that students who read more often become stronger readers, so
+    more reading is a real benefit that will help us in every subject.
+
+    Second, choice leads to better work. Last term, Ms. Rivera let her class of 26 students choose their
+    own books for the first time. The number of reports turned in on time went from 20 to 25, and she
+    said that the reports were longer and more detailed than the ones her classes had written in past
+    years.
+
+    Third, choice helps students learn who they are as readers. My cousin hated reading until he picked
+    a book about sharks, and now he reads every night before bed and asks for new books on his birthday.
+    So any student who gets to choose will fall in love with books.
+
+    Some people worry that students will just pick easy books. That is a fair concern. However, teachers
+    could give a list of good books at many different levels and approve each choice, so that students
+    would still be challenged and would still read books worth talking about. Letting students choose
+    would turn book reports into something we look forward to, instead of something we dread.
+  pages:
+    - focus: claim, reasons, counterclaim, sufficient evidence
+      questions:
+        - kind: mc
+          ask: How does the writer answer the worry about easy books?
+          choices:
+            - Teachers could approve choices from a list.
+            - Easy books are fine for book reports.
+            - Students never pick easy books.
+            - Book reports should be shorter.
+          evidence: teachers could give a list of good books
+        - kind: quote
+          ask: Which words support the writer's second reason?
+          choices:
+            - turned in on time went from 20 to 25
+            - seventy-four percent said they would read more
+            - he picked a book about sharks
+            - students will just pick easy books
+          evidence: turned in on time went from 20 to 25
+        - kind: write
+          ask: Why is the cousin example weak evidence?
+          sample: It is one person's story, so it cannot show that every student who chooses will love books.
+          rubric: says it is a single anecdote used to make a claim about all students.
+          evidence: My cousin hated reading until he picked a book about sharks
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            Most of the reasoning is sound. The school survey and Ms. Rivera's class give real numbers, such
+            as reports on time going "from 20 to 25." The third reason is not sound, because one cousin's
+            story cannot prove that "any student who gets to choose will fall in love with books." The writer
+            also handles the worry about easy books fairly.
+          rubric: names the survey or class numbers as strong and the cousin story as a hasty generalization.
+          evidence: any student who gets to choose will fall in love with books
+
+- id: b13-reusable-trays
+  title: Trade Up Our Trays
+  genre: argument
+  text: |
+    Every school day, the cafeteria at Hillcrest Middle School throws away about 500 foam trays after
+    lunch. The school should switch to trays that can be washed and used again, because they would cut
+    down on trash, save money over time and set a very good example for our whole town.
+
+    First, reusable trays would mean much less trash. If we use 500 foam trays a day for 180 school
+    days, that adds up to 90,000 trays a year. Foam is hard to recycle in most places, and it takes a
+    very long time to break down in a landfill, so those trays will still be around long after we finish
+    school.
+
+    Second, the switch would save money. Our cafeteria manager told our class that she spends about
+    $4,000 a year on foam trays. A set of 600 sturdy plastic trays would cost about $3,000 and could
+    last for many years of daily use, so after the first year, the school would save most of the money
+    it now spends.
+
+    Third, reusable trays would set a good example. Students at my old school loved their bright blue
+    trays, so students everywhere would be happier with reusable ones. When people in town see our
+    school cutting its trash, they may try to do the same at home and at work.
+
+    Some people point out that washing trays takes water, power and staff time. That is true, and the
+    school should check those costs. However, the kitchen already runs a large dishwasher for pots and
+    pans, and the manager says it has room for more loads each day without adding new staff. The
+    cafeteria should try reusable trays this spring and see how well they work for students and staff.
+  pages:
+    - focus: reasons, reasoning steps, counterclaim
+      questions:
+        - kind: mc
+          ask: What reason does paragraph 3 give?
+          choices:
+            - The switch would save the school money.
+            - Foam takes a long time to break down.
+            - Washing trays uses water and power.
+            - Bright trays make lunch more fun.
+          evidence: Second, the switch would save money.
+        - kind: quote
+          ask: Which words are a hasty generalization?
+          choices:
+            - students everywhere would be happier
+            - that adds up to 90,000 trays a year
+            - she spends about $4,000 a year on foam trays
+            - it has room for more loads each day
+          evidence: students everywhere would be happier
+        - kind: write
+          ask: Is the step to 90,000 trays a year sound? Explain.
+          sample: Yes, because 500 trays a day for 180 school days really does equal 90,000 trays.
+          rubric: says it is sound and checks the math (500 times 180 is 90,000).
+          evidence: that adds up to 90,000 trays a year
+        - kind: paragraph
+          ask: Is the argument convincing overall? Explain in 3–4 sentences.
+          sample: >-
+            The argument is mostly convincing. The math about trash and the manager's figure that she
+            "spends about $4,000 a year on foam trays" are strong, relevant evidence. The claim about blue
+            trays is weak, because one school's students cannot speak for everyone. The writer also admits
+            that washing costs need checking, which is honest but leaves a gap.
+          rubric: names the trash math or cost figure as strong and the blue trays as weak; may note washing costs.
+          evidence: the school should check those costs
+
+- id: b14-dark-skies
+  title: Bring Back the Stars
+  genre: argument
+  text: |
+    On a clear night in Cedar Grove, you can count only a handful of stars. The rest are washed out by the
+    orange glow of our streetlights, which shine up and sideways as much as they shine down. The town should
+    replace them with shielded streetlights, because shielded lights would give us back the night sky, help
+    local wildlife and waste less energy.
+
+    First, shielded lights point their light down at the street instead of up into the sky. Scientists agree
+    that light pollution is the main reason most people in the United States can no longer see the Milky Way
+    from their homes. In March, my astronomy club counted the stars we could see inside one patch of sky. At
+    the edge of town we counted 46, but downtown we counted only 9.
+
+    Second, too much light at night confuses some animals. Many songbirds migrate at night and use the stars
+    to find their way, and bright city lights can pull them off course. Moths circle streetlights until they
+    are worn out instead of feeding and laying eggs. Because shielded lights send less glow into the sky,
+    they are easier on these night travelers.
+
+    Third, shielded lights save energy. When light escapes upward, the town is paying to light up the sky
+    instead of the sidewalk. My grandfather says the stars were much brighter when he was a boy.
+
+    Some people worry that darker skies would make streets less safe. However, shielded lights do not make
+    the street darker, because they put the same light on the road and sidewalk where people actually need it, with
+    less glare in drivers' eyes. The town council should start replacing our old streetlights this year so
+    that Cedar Grove can see its stars again.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What does the writer want the town to do?
+          choices:
+            - Install shielded streetlights.
+            - Turn off every streetlight.
+            - Build an astronomy club.
+            - Plant trees to block glow.
+          evidence: The town should
+        - kind: quote
+          ask: Which words support the reason about animals?
+          choices:
+            - bright city lights can pull them off course
+            - At the edge of town we counted 46
+            - the town is paying to light up the sky
+            - with less glare in drivers' eyes
+          evidence: bright city lights can pull them off course
+        - kind: write
+          ask: Does the grandfather's memory support reason 3? Why?
+          sample: No. It is one person's memory about the stars, and it says nothing about saving energy.
+          rubric: says it does not support reason 3 and explains it is off topic or only one person's memory.
+          evidence: My grandfather says the stars were much brighter when he was a boy
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The first two reasons have good support. The star count is strong because the club "counted 46"
+            at the edge of town but only 9 downtown. The third reason is weak, because the writer gives no
+            numbers about energy and uses the grandfather's memory instead. Overall the argument is mostly
+            convincing but needs real facts about saving energy.
+          rubric: judges each reason; names the star count or migrating birds as strong; names the grandfather or missing energy numbers as weak.
+          evidence: My grandfather says the stars were much brighter
+
+- id: b15-second-language
+  title: Start Languages Early
+  genre: argument
+  text: |
+    At Brookside Elementary, students study reading, math, science, art and music. But they do not learn a
+    second language until seventh grade. By then, many students feel shy about making strange new sounds in
+    front of their classmates. Our schools should teach a second language starting in kindergarten. Young
+    children learn languages easily, a new language helps us understand others, and many of our families
+    already speak more than one language.
+
+    First, young children are good at picking up the sounds of a language. Language experts have long
+    noticed that kids who start early are more likely to speak with a natural accent. Little kids also worry
+    less about making mistakes, so they are happy to practice out loud.
+
+    Second, learning another language helps students understand people whose lives are different from their
+    own. When students learn how people in another country greet each other, celebrate holidays and talk
+    about food, they start to see the world through someone else's eyes.
+
+    Third, our school is already full of languages. Last fall, the student council asked every class which
+    languages were spoken at home. Out of 410 students, 132 said their families speak a language besides
+    English, such as Spanish, Vietnamese, Arabic and Hindi. A language program would honor those families. It
+    would also let students teach their friends a few words.
+
+    Some people say elementary students already have too much to learn. However, a language class could
+    meet for just twenty minutes, three times a week, and songs and games make it feel like play. My older
+    sister took French in high school and found it very hard, which proves that high school is far too late
+    to start. Brookside should let every student begin a new language while it is still fun.
+  pages:
+    - focus: claim, reasons, counterclaim, sound reasoning
+      questions:
+        - kind: mc
+          ask: Which counterclaim does the writer answer?
+          choices:
+            - Kids have too much to learn.
+            - Classes cost too much money.
+            - Students dislike songs.
+            - Grade 7 is too early to start.
+          evidence: Some people say elementary students already have too much to learn
+        - kind: quote
+          ask: Which words support the third reason?
+          choices:
+            - Out of 410 students, 132 said their families speak
+            - they start to see the world through someone else's
+            - songs and games make it feel like play
+            - many students feel shy about making strange new sounds
+          evidence: Out of 410 students, 132 said their families speak
+        - kind: write
+          ask: Is the sister's experience good proof? Explain.
+          sample: No. One person finding French hard does not prove that high school is too late for everyone.
+          rubric: says it is weak and explains it is one example used to make a big conclusion.
+          evidence: My older sister took French in high school and found it very hard
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            Most of the reasoning is sound. The student council survey shows that "132 said their families
+            speak a language besides English," which strongly supports the third reason. The writer makes a
+            mistake in the last paragraph, though, by using one sister's hard French class to prove that high
+            school is too late. That step is a hasty generalization, so the ending is weaker than the rest.
+          rubric: names the survey or early-learning fact as sound; identifies the sister example as a hasty generalization.
+          evidence: which proves that high school is far too late
+
+- id: b16-board-games
+  title: Games for Rainy Days
+  genre: argument
+  text: |
+    When it rains at Hillcrest Middle School, recess moves indoors, and most of us spend it sitting at our
+    desks with nothing to do. Some students stare at the clock, and others get restless and noisy. Every
+    classroom should have a shelf of board games for indoor recess, because games keep students engaged,
+    build useful skills and help classmates get along.
+
+    First, board games give students something active to do with their minds. Last spring, our homeroom
+    tested this idea. For two weeks of rainy days we had no games, and our teacher wrote down how many times
+    she had to ask the class to quiet down. The average was eleven times per recess. For the next two weeks
+    a parent lent us six games, and the average dropped to three.
+
+    Second, many board games practice skills that we use in school. Players count spaces, add up scores,
+    plan several moves ahead and read rules carefully. Strategy games such as chess and checkers have been
+    taught for generations because they train players to think before they act. These are the same habits
+    teachers want us to bring to math and reading.
+
+    Third, games bring students together. A game needs at least two players, so students who usually sit
+    alone end up laughing with someone new. When our class finished the experiment, we surveyed all 26
+    students, and 22 said they had played a game with a classmate they had never talked to before.
+
+    Some people worry that games cost too much or will get lost. However, many families have games they no
+    longer use, and our class collected fourteen in one week just by asking. A simple sign-out sheet kept
+    every piece in its box. Hillcrest should ask for donated games and give every classroom a shelf before
+    the next rainy season begins.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the purpose of paragraph 2's experiment?
+          choices:
+            - To show games keep kids busy.
+            - To show teachers like rain.
+            - To show games cost too much.
+            - To show recess is too short.
+          evidence: the average dropped to three
+        - kind: quote
+          ask: Which words best support the reason in paragraph 4?
+          choices:
+            - 22 said they had played a game with a classmate
+            - Players count spaces, add up scores
+            - our class collected fourteen in one week
+            - The average was eleven times per recess
+          evidence: 22 said they had played a game with a classmate
+        - kind: write
+          ask: Why is the homeroom test strong evidence?
+          sample: It compares two weeks without games to two weeks with games and gives real numbers, eleven and three.
+          rubric: explains that it is a fair comparison with numbers from before and after.
+          evidence: The average was eleven times per recess
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            Yes, the evidence is sufficient for each reason. The homeroom test shows the number of reminders
+            dropped from eleven to three, and the survey found "22 said they had played a game with a
+            classmate they had never talked to before." The writer also answers the cost worry with a real
+            example of fourteen donated games. Only the reason about skills rests on general claims, so the
+            argument is convincing overall.
+          rubric: says the evidence is sufficient and names at least two specific pieces of support with a quote.
+          evidence: our class collected fourteen in one week just by asking
+
+- id: b17-compost
+  title: A Town Compost Bin
+  genre: argument
+  text: |
+    Every week, the families of Riverton set out trash bags full of banana peels, coffee grounds, eggshells
+    and grass clippings. All of it rides a truck to the landfill. Our town should start a community compost
+    program, because composting would shrink our trash, protect the air and give us rich soil for our gardens
+    and parks.
+
+    First, food scraps and yard waste make up a large share of what American households throw away. My
+    family tested this at home. For one week we put every food scrap in a separate bucket instead of the
+    trash, and our kitchen trash dropped from three full bags to just one and a half. If every home in
+    Riverton did the same, the landfill would fill up much more slowly.
+
+    Second, composting is better for the air. In a landfill, food scraps are buried so tightly that air
+    cannot reach them. As they break down without air, they give off methane, a gas that traps heat in the
+    atmosphere. In a compost pile that is turned regularly, scraps break down with plenty of air and produce
+    far less methane.
+
+    Third, compost is valuable. When scraps finish breaking down, they become a dark, crumbly material that
+    gardeners call "black gold" because it feeds plants and helps soil hold water. The town could spread it
+    in park flower beds or give it away free to residents each spring.
+
+    Some people say a compost program would cost too much. However, the town pays for every ton of trash it
+    sends to the landfill, so sending less trash would save Riverton a lot of money. Several neighboring
+    towns already have compost programs, and nobody there complains. The town council should set up a drop
+    off spot for food scraps this spring and let Riverton turn its garbage into something useful.
+  pages:
+    - focus: claim, reasons, counterclaim, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's second reason?
+          choices:
+            - Composting is better for the air.
+            - Compost costs less than trash bags.
+            - Gardeners need more black dirt.
+            - The landfill is too far away.
+          evidence: Second, composting is better for the air
+        - kind: quote
+          ask: Which words are an example from the writer's home?
+          choices:
+            - our kitchen trash dropped from three full bags
+            - they give off methane, a gas that traps heat
+            - gardeners call "black gold"
+            - the town pays for every ton of trash
+          evidence: our kitchen trash dropped from three full bags
+        - kind: write
+          ask: What is missing from the claim about saving money?
+          sample: The writer gives no numbers, such as how much the town pays per ton or what a compost program costs.
+          rubric: says the writer gives no costs or numbers, so the claim is not proven.
+          evidence: would save Riverton a lot of money
+        - kind: paragraph
+          ask: How well does the writer answer the counterclaim?
+          sample: >-
+            The writer answers the cost worry, but not very well. The writer says the program "would save
+            Riverton a lot of money," yet never gives the cost of a ton of trash or of the program. Saying that
+            "nobody there complains" in other towns is an opinion, not proof. The earlier reasons are stronger
+            than this answer, because they use a home test and a scientific fact.
+          rubric: judges the rebuttal as weak; points out the missing numbers or the unsupported "nobody complains" claim; uses a quote.
+          evidence: and nobody there complains
+
+- id: b18-lunch-menu
+  title: Let Students Plan Lunch
+  genre: argument
+  text: |
+    At Oak Ridge Middle School, a lot of lunch ends up in the trash. Students pick up their trays, eat a few
+    bites and dump the rest. Our school should invite students to help plan the lunch menu, because student
+    input would cut food waste, help students learn about nutrition and make the cafeteria a happier place.
+
+    First, students would eat more of the food they helped choose. For one week, the members of our environment
+    club stood by the trash cans and counted how many trays still had more than half the main dish on them.
+    On the day the cafeteria served bean and cheese tacos, only 31 trays were thrown out half full. On the
+    day it served fish sticks, 118 were. If students helped pick meals that are both healthy and popular,
+    far less food would go to waste.
+
+    Second, planning a menu is a lesson in nutrition. Schools that serve lunch must follow rules about
+    fruits, vegetables, grains and protein. A student menu committee would have to learn those rules and
+    balance them, just as a dietitian does. Students would understand why the cafeteria serves what it
+    serves, instead of just complaining about it.
+
+    Third, kids simply know best what tastes good. Everyone knows that adults and children have different
+    taste buds, so it is obvious that students should be in charge of choosing the food.
+
+    Some people worry that students would vote for pizza every day. However, the committee would still
+    have to meet the nutrition rules, and the cafeteria manager would make the final decisions. Students
+    would simply offer ideas and test new recipes. When people have a voice in a decision, they usually care
+    more about the result. Oak Ridge should form a student menu committee next semester and see how much less
+    food ends up in the trash.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: How does the writer answer the worry about pizza?
+          choices:
+            - The committee must still follow nutrition rules.
+            - Pizza is the healthiest school lunch.
+            - Students will never vote for pizza.
+            - The cafeteria will stop serving lunch.
+          evidence: the committee would still
+        - kind: quote
+          ask: Which sentence gives an opinion, not evidence?
+          choices:
+            - Third, kids simply know best what tastes good.
+            - On the day it served fish sticks, 118 were.
+            - A student menu committee would have to learn those rules
+            - and the cafeteria manager would make the final decisions
+          evidence: Third, kids simply know best what tastes good.
+        - kind: write
+          ask: What does the tray count show, and what doesn't it?
+          sample: It shows that far fewer trays were wasted on one meal than another, but it doesn't test meals that students chose.
+          rubric: explains that counted numbers link some meals to less waste; may note it doesn't test student-chosen meals.
+          evidence: only 31 trays were thrown out half full
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            The reasoning in the first two reasons is sound. The tray count shows that "only 31 trays were
+            thrown out half full" on taco day but 118 on fish stick day. The third reason is not sound,
+            because "Everyone knows" is not evidence and different taste buds do not prove students should be
+            in charge. The writer should have dropped that reason or supported it with facts.
+          rubric: names the tray count or nutrition rules as sound; explains why the third reason is opinion or faulty logic; quotes the text.
+          evidence: Everyone knows that adults and children have different
+
+- id: b19-public-piano
+  title: A Piano for the Square
+  genre: argument
+  text: |
+    The town square in Willow Bend has benches, a fountain and a big oak tree, but on most afternoons it is
+    nearly empty. People walk through it on their way somewhere else. The town should place a public piano in
+    the square, because a piano would bring people together, give everyone a chance to make music and make
+    downtown a livelier place.
+
+    First, a public piano gives strangers a reason to stop and talk. Many cities around the world have placed
+    pianos in parks, train stations and town squares, and they often draw small crowds of listeners. When
+    someone sits down to play, people who have never met gather around, clap and sometimes sing along.
+
+    Second, a piano gives everyone a chance to make music, not just people who can afford lessons or an
+    instrument. Last month, the library put an old piano in its lobby for a week. The librarians kept a
+    tally, and 57 different people played it, including children, teenagers and a retired music teacher
+    who played every single morning. Several kids came back three or four times to practice a song.
+
+    Third, music would make downtown busier, which would help local shops and cafes. Everyone loves music,
+    so the piano would be played from morning until night, and every store on the square would be packed
+    with customers.
+
+    Some people worry that rain would ruin the piano. However, the town could build a small roof over it
+    and cover the keys with a locked lid each night, as other towns do. A local piano tuner has already
+    offered to check it once a month for free. The piano could be an old one that a family no longer needs,
+    so it would cost very little. The town council should give Willow Bend's quiet square something to sing
+    about.
+  pages:
+    - focus: claim, reasons, counterclaim, sound reasoning
+      questions:
+        - kind: mc
+          ask: What is the writer's purpose in this argument?
+          choices:
+            - To persuade the town to add a public piano.
+            - To explain how to tune an old piano.
+            - To describe the history of the town square.
+            - To teach readers how to play a song.
+          evidence: The town should place a public piano in
+        - kind: quote
+          ask: Which words give the best evidence for reason 2?
+          choices:
+            - 57 different people played it
+            - Everyone loves music
+            - every store on the square would be packed
+            - a small roof over it
+          evidence: 57 different people played it
+        - kind: write
+          ask: What is wrong with the reasoning in paragraph 4?
+          sample: It jumps from "everyone loves music" to the idea that every store would be packed, without any proof.
+          rubric: says it is an overgeneralization or a big jump with no evidence.
+          evidence: Everyone loves music, so the piano would be played from morning until night
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence is sufficient for the second reason but not the third. The library tally showing
+            that "57 different people played it" in one week is specific and strong. The third reason only
+            claims that "every store on the square would be packed" without any numbers from shops. The writer
+            needs real facts about how pianos affect business to prove that part.
+          rubric: names the library tally as strong; names the store claim or "everyone loves music" as unsupported; quotes the text.
+          evidence: The librarians kept a
+
+- id: b20-robotics-club
+  title: A Room for Robots
+  genre: argument
+  text: |
+    The Pine Hill Middle School robotics club is the most exciting club in the whole school, and it deserves
+    better than borrowing a science classroom two afternoons a week. The school should give the robotics club
+    its own room, because the club is important, robots are the future and everyone agrees that it is the
+    right thing to do.
+
+    First, the robotics club is important. Our members build robots, write code and learn how machines work.
+    I have been a member for two years, and it is my favorite part of the week. Anyone who has watched our
+    robot climb a ramp can tell that this club matters more than the others.
+
+    Second, robots are the future. Factories already use robots to put together cars and pack boxes, and
+    some hospitals use them to deliver supplies down long hallways. The first robots were built many
+    decades ago, and they have only gotten more advanced since then. Since robots will be everywhere
+    someday, the school should support the robotics club before any other club.
+
+    Third, everyone agrees with this idea. I asked five of my friends in the club, and all five said we
+    should have our own room. My friend Dara says that the club is the best thing at Pine Hill, and she is
+    in charge of our robot's wiring, so she would know.
+
+    There is also a practical problem. Because we borrow a classroom, we have to take apart our robot at
+    the end of every meeting and pack every piece into bins. We lose about fifteen minutes each time just
+    setting up and cleaning up.
+
+    Some people might say other clubs need space too. But those clubs are not building robots. The school
+    should give us our own room starting next semester, because the robotics club is simply too important
+    to keep packing away.
+  pages:
+    - focus: claim, reasons, sound reasoning, insufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - The club needs its own room.
+            - Factories need more robots.
+            - Other clubs should meet less.
+            - Everyone should learn code.
+          evidence: The school should give the robotics club
+        - kind: quote
+          ask: Which words give the strongest, most relevant evidence?
+          choices:
+            - We lose about fifteen minutes each time
+            - Factories already use robots to put together cars
+            - I asked five of my friends in the club
+            - it is my favorite part of the week
+          evidence: We lose about fifteen minutes each time
+        - kind: write
+          ask: Does asking five club friends prove that everyone agrees?
+          sample: No. Five friends who are already in the club are a tiny group that is sure to agree.
+          rubric: says no and explains the sample is too small or only includes club members.
+          evidence: I asked five of my friends in the club
+        - kind: paragraph
+          ask: Is this argument convincing? Explain in 3–4 sentences.
+          sample: >-
+            The argument is mostly weak. The writer's reasons are opinions, such as calling it "the most
+            exciting club in the whole school," and facts about factory robots do not show this club needs a
+            room. The only strong evidence is that the club loses "about fifteen minutes" every meeting
+            packing up. The writer should have built the argument around that problem with more facts.
+          rubric: judges the argument as mostly weak; names an opinion or off-topic fact; names the fifteen minutes as the strongest evidence.
+          evidence: the most exciting club in the whole school
+
+- id: b21-pollinator-meadow
+  title: Let the Lawns Bloom
+  genre: argument
+  text: |
+    Lakeview has six town parks, and nearly every open space in them is mowed grass. Grass is great for
+    soccer and picnics, but large parts of these lawns are never used for either. The parks department
+    should turn some of that unused lawn into wildflower meadows, because meadows feed pollinators, save
+    the town money and give students a living place to learn.
+
+    First, meadows provide food for bees, butterflies and other pollinators. Many of the fruits and
+    vegetables people eat depend on insects to carry pollen from flower to flower. A mowed lawn offers these
+    insects almost nothing, since the grass is cut before anything blooms. Native wildflowers, on the other
+    hand, provide nectar and pollen from spring until fall.
+
+    Second, meadows cost less to care for. According to the parks department's own schedule, crews mow
+    about forty acres of park lawn every week from April through October. A meadow needs to be mowed only
+    once or twice a year to keep trees and shrubs from moving in. Last year, the department reported that
+    mowing was its largest summer expense after salaries, so even replacing one quarter of the lawn would
+    save a real amount of fuel and work time.
+
+    Third, meadows make great outdoor classrooms. Last year, our science class planted a small strip of
+    native flowers beside the school parking lot. By August, we had recorded nineteen kinds of insects
+    visiting it, compared with only four kinds on the nearby lawn.
+
+    Some residents worry that meadows look messy. However, the town can keep a neatly mowed edge along each
+    path and post a sign that explains the meadow's purpose, which shows that it is planned, not forgotten.
+    Soccer fields and picnic areas would stay just as they are. The parks department should choose its
+    least-used lawns and let them bloom next spring.
+  pages:
+    - focus: claim, reasons, counterclaim, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: Which concern does the writer answer at the end?
+          choices:
+            - Meadows might look messy.
+            - Meadows might cost too much.
+            - Bees might bother visitors.
+            - Meadows need lots of water.
+          evidence: Some residents worry that meadows look messy
+        - kind: quote
+          ask: Which words support the reason about cost?
+          choices:
+            - only once or twice a year
+            - nineteen kinds of insects
+            - from spring until fall
+            - a neatly mowed edge
+          evidence: only once or twice a year
+        - kind: write
+          ask: Why is the parking-lot flower strip strong evidence?
+          sample: It is a real test that compares the flowers to the lawn and counts insects on both, nineteen kinds versus four.
+          rubric: explains that it is a direct comparison with counted numbers from the writer's class.
+          evidence: compared with only four kinds on the nearby lawn
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            Yes, the reasoning is sound. Each reason is backed by relevant evidence, such as the fact that
+            crews mow "about forty acres of park lawn every week" while a meadow needs mowing only once or
+            twice a year. The class flower strip gives a fair comparison with real counts. The writer also
+            answers the messy-looking worry with a practical plan.
+          rubric: says the reasoning is sound; names at least two specific pieces of evidence; quotes the text.
+          evidence: about forty acres of park lawn every week
+
+- id: b22-cursive
+  title: Keep Cursive Alive
+  genre: argument
+  text: |
+    Many schools have stopped teaching cursive, the connected style of handwriting that our grandparents
+    learned in third grade. At Fairview Elementary, cursive lessons may soon be dropped to make more time
+    for typing. Schools should keep teaching cursive, because it helps students read historical documents,
+    gives them a fast way to write by hand and builds careful control of a pencil.
+
+    First, students who cannot read cursive are locked out of a lot of history. The Declaration of
+    Independence, many old letters and diaries, and countless family recipes and birthday cards were written
+    in cursive. Last month, my class visited the town historical society, and the volunteers there told us
+    that most of the documents in their collection are handwritten. Only the students who had learned
+    cursive could read them without help.
+
+    Second, cursive can be a quick way to write by hand. Because the letters connect, a writer does not have
+    to lift the pencil after every letter. Students still take notes, write rough drafts and answer test
+    questions on paper, so writing smoothly and quickly is still useful.
+
+    Third, practicing cursive builds fine motor skills, the small, careful hand movements used in drawing,
+    building models and playing instruments. My aunt has beautiful cursive handwriting, and she became a
+    successful architect, so cursive clearly leads to success.
+
+    Some people argue that cursive is outdated because almost everyone types now. It is true that typing is
+    an important skill, and students should learn it. However, learning to type does not mean we must stop
+    writing by hand. Students do not always have a computer in front of them, and a pencil never needs to
+    be charged. A few minutes of cursive practice each day would not crowd out typing. Fairview should keep
+    cursive and teach typing too, so that students can use both.
+  pages:
+    - focus: claim, counterclaim and rebuttal, sound reasoning
+      questions:
+        - kind: mc
+          ask: What counterclaim does the writer respond to?
+          choices:
+            - Cursive is outdated now.
+            - Cursive is too hard to learn.
+            - Old documents are boring.
+            - Typing takes too long.
+          evidence: Some people argue that cursive is outdated because almost everyone types now
+        - kind: quote
+          ask: Which words support the first reason?
+          choices:
+            - most of the documents in their collection are handwritten
+            - a pencil never needs to be charged
+            - she became a successful architect
+            - a writer does not have to lift the pencil
+          evidence: most of the documents in their collection are handwritten
+        - kind: write
+          ask: Is the aunt example sound reasoning? Explain.
+          sample: No. One person's success does not prove that cursive caused it, since many other things could explain it.
+          rubric: says it is faulty and explains that one example does not show cursive causes success.
+          evidence: so cursive clearly leads to success
+        - kind: paragraph
+          ask: How well does the writer rebut the counterclaim?
+          sample: >-
+            The writer rebuts the counterclaim fairly well. The writer first admits that "typing is an
+            important skill," which makes the argument seem fair. Then the writer explains that students do
+            not always have a computer and that a few minutes of cursive would not crowd out typing. The
+            rebuttal would be stronger with facts about how often students write by hand.
+          rubric: judges the rebuttal; notes the writer concedes typing matters and gives a reason; quotes the text.
+          evidence: It is true that typing is
+
+- id: b23-bike-repair-day
+  title: Fix-It Day for Bikes
+  genre: argument
+  text: |
+    Every morning, dozens of bikes are locked to the rack outside Elm Street Middle School. Many of them are
+    in rough shape, with soft tires, squeaky chains and brakes that barely grab. Our school should hold a
+    free bike-repair day each fall, because it would make riding safer, help more students bike to school
+    and teach skills that last a lifetime.
+
+    First, a repair day would make riding safer, since bicycle safety guides agree that riders should check their
+    brakes, tires and chain often, because worn brakes take longer to stop a bike. Last month, our
+    student council surveyed the 140 students who ride to school. Fifty-two said their brakes or tires needed
+    work, and most said they did not know how to fix them or could not afford a shop.
+
+    Second, a repair day would help more students ride. In the same survey, 38 students said they owned a bike
+    but had stopped riding it because something was broken, usually a flat tire or a slipping chain. Many of
+    those problems take less than half an hour to fix with the right tools.
+
+    Third, students would learn to care for their own bikes. At the repair day, volunteers would not just
+    fix bikes; they would show each rider how to patch a tube, oil a chain and adjust the brakes. Once
+    students learn these skills, they can keep their bikes working for years.
+
+    Some people worry that the school cannot afford tools and parts. However, the Elm Street Cycling Club, a
+    group of adult riders, has offered to bring its own tools and volunteers at no cost, and the
+    parent group has agreed to pay for basic parts like tubes and brake pads. Elm Street should hold its
+    first bike-repair day this October.
+  pages:
+    - focus: claim, reasons, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: What is the main point of paragraph 3?
+          choices:
+            - It would get more kids riding.
+            - Flat tires cannot be fixed.
+            - Students need new bikes.
+            - Bike shops cost too much.
+          evidence: Second, a repair day would help more students ride
+        - kind: quote
+          ask: Which words answer the worry about cost?
+          choices:
+            - has offered to bring its own tools and volunteers
+            - Fifty-two said their brakes or tires needed work
+            - show each rider how to patch a tube
+            - brakes that barely grab
+          evidence: has offered to bring its own tools and volunteers
+        - kind: write
+          ask: Why is the student council survey relevant evidence?
+          sample: It asks the actual students who ride to school, and it shows that many of their bikes need repairs.
+          rubric: explains that the survey comes from the students the repair day would help and shows a real need.
+          evidence: Fifty-two said their brakes or tires needed
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            Yes, the evidence is sufficient. The survey gives clear numbers, including that "38 students said
+            they owned a bike" but had stopped riding it. The safety reason is supported by advice from bicycle
+            safety guides. The writer also answers the cost worry with real offers from the cycling club and
+            the parent group.
+          rubric: says the evidence is sufficient; names the survey and at least one other support; quotes the text.
+          evidence: 38 students said they owned a bike
+
+- id: b24-free-museums
+  title: Museums Free for Kids
+  genre: argument
+  text: |
+    The Harbor City Science Museum has a real dinosaur skeleton, a planetarium and a room where you can make
+    lightning with a giant machine. Yet many children in our city have never been inside. Children's tickets
+    cost twelve dollars each. A family with three kids pays thirty-six dollars before the adults even buy
+    their own tickets. Museums should be free for children, because free entry would help every child learn
+    and would build the museum's future visitors.
+
+    First, museums teach in a way that books and screens cannot. Seeing a real fossil, touching a rock from
+    a volcano or watching a model of the planets move helps children remember what they learn. This is why
+    teachers take classes on field trips instead of only showing pictures.
+
+    Second, free entry works. The Smithsonian museums in Washington, D.C., charge no admission for anyone,
+    and they are some of the most visited museums in the country. Closer to home, our museum held a free
+    family day last spring, and the guards counted more than twice as many visitors as on a usual Saturday.
+
+    Third, children who visit museums often grow up to be museum lovers. My best friend went to the science
+    museum every month when she was little, and now she wants to be an astronomer. Children who come for
+    free today will bring their own families back as paying adults someday.
+
+    Some people say that museums need ticket money to stay open. That is true, but children's tickets are
+    only part of a museum's income. Adults would still pay, and many museums also earn money from
+    donations, gift shops and memberships. A city or business sponsor could cover the rest. The Harbor City
+    Science Museum should open its doors to every child, whether or not the family can afford a ticket.
+  pages:
+    - focus: claim, reasons, counterclaim, relevant and sufficient evidence
+      questions:
+        - kind: mc
+          ask: Why does the writer give ticket prices in paragraph 1?
+          choices:
+            - To show the cost adds up.
+            - To show the museum is cheap.
+            - To compare it to a movie.
+            - To explain the planetarium.
+          evidence: A family with three kids pays thirty-six dollars
+        - kind: quote
+          ask: Which words support the reason that free entry works?
+          choices:
+            - more than twice as many visitors
+            - now she wants to be an astronomer
+            - touching a rock from a volcano
+            - many museums also earn money from donations
+          evidence: more than twice as many visitors
+        - kind: write
+          ask: Is the best friend strong evidence for reason 3? Why?
+          sample: No. It is one child's story, and it does not show that most children who visit become museum lovers.
+          rubric: says it is weak and explains that a single example cannot prove what happens to most children.
+          evidence: My best friend went to the science museum every month
+        - kind: paragraph
+          ask: Is the reasoning sound? Explain in 3–4 sentences.
+          sample: >-
+            Most of the reasoning is sound. The free family day is strong evidence, because the guards
+            "counted more than twice as many visitors as on a usual Saturday." The third reason is weaker,
+            since it rests on one friend's story. The writer answers the money worry, but saying a sponsor
+            "could cover the rest" is a guess without numbers.
+          rubric: names the free day or the Smithsonian as strong; names the friend story or the sponsor guess as weak; quotes the text.
+          evidence: A city or business sponsor could cover the rest
+
+- id: b25-print-newspaper
+  title: Keep the Paper in Print
+  genre: argument
+  text: |
+    For thirty years, the Westbrook Middle School newspaper has been printed on real paper and stacked in a
+    rack by the front office. This year, the student staff is thinking about moving the paper online only.
+    Our newspaper should stay in print as well as online, because printed copies reach more readers, are
+    shared with families and are simply better than screens.
+
+    First, print reaches readers who would never visit a website. In October, the newspaper staff asked 200
+    students how they read the paper. Of those, 126 said they read the printed copy, usually during lunch or
+    homeroom, and only 41 said they had ever visited the website. If the printed paper disappeared, many of
+    those readers might stop reading altogether.
+
+    Second, printed papers travel home. Students carry copies home in their backpacks, and parents and
+    grandparents read about the science fair, the band concert and the soccer scores. Last year, the staff
+    left a stack of papers at the spring open house, and all 150 copies were gone within an hour.
+
+    Third, reading on paper is just better. Everyone knows that a newspaper feels more real when you can
+    hold it in your hands. Printing has a long history, too. Around 1450, Johannes Gutenberg built a printing
+    press with movable metal type in Europe, and books became much easier to make. That shows how important
+    printed pages are.
+
+    Some people say printing costs too much and wastes paper. It is true that printing has a cost. However,
+    the paper is printed only once a month, and the staff could print fewer copies and use recycled paper.
+    The website can still carry breaking news and photos that do not fit in print. Westbrook should keep
+    both, so that every reader can find the newspaper in the way that suits them best.
+  pages:
+    - focus: claim, reasons, relevant and irrelevant evidence
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - Keep it in print and online.
+            - Move it online only.
+            - Print it every week.
+            - Stop covering sports.
+          evidence: Our newspaper should stay in print as well as online
+        - kind: quote
+          ask: Which words are NOT relevant evidence for the claim?
+          choices:
+            - Johannes Gutenberg built a printing press
+            - 126 said they read the printed copy
+            - all 150 copies were gone within an hour
+            - the paper is printed only once a month
+          evidence: Johannes Gutenberg built a printing press
+        - kind: write
+          ask: Is the open house stack good evidence for reason 2?
+          sample: Yes, partly. It shows families wanted the paper, but it does not prove they read the copies they took.
+          rubric: judges the evidence and explains that it shows interest but is one event or does not prove reading.
+          evidence: all 150 copies were gone within an hour
+        - kind: paragraph
+          ask: Is the evidence sufficient? Explain in 3–4 sentences.
+          sample: >-
+            The evidence is sufficient for the first two reasons but not the third. The survey shows that
+            "126 said they read the printed copy," while only 41 had visited the website. The third reason
+            uses "Everyone knows," which is an opinion, and a fact about Gutenberg that has nothing to do with
+            a school paper today. The writer should drop or support that reason.
+          rubric: names the survey or open house as strong; names the opinion or the Gutenberg fact as weak or irrelevant; quotes the text.
+          evidence: Everyone knows that a newspaper feels more real

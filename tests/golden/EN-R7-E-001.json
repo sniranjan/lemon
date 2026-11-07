@@ -1,0 +1,73 @@
+{
+  "id": "EN-R7-E-001",
+  "subject": "english",
+  "level": "R7",
+  "section": "E",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 161,
+  "variant": 1,
+  "seed": 14341736410942839738,
+  "title": "The Big Ditch",
+  "parent_tip": "Read both aloud. Which one feels more like being there?",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "e01-erie-canal",
+      "set": 0,
+      "side": "read",
+      "genre": "paired",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [],
+      "turn": false,
+      "texts": [
+        {
+          "title": "Ezra and the Wedding of the Waters",
+          "type": "story",
+          "paragraphs": [
+            {
+              "n": 1,
+              "text": "Ezra had led his uncle's mule along the towpath all summer, so he knew every bend of the canal between the farm and the town of Rochester. On the October morning when the governor's boat passed, he climbed onto a fence post to see it. The Seneca Chief was painted bright white, and a band played on its deck while people cheered from both banks.",
+              "cont": false
+            },
+            {
+              "n": 2,
+              "text": "\"They're carrying a barrel of water from Lake Erie,\" his uncle explained, \"all the way to New York City. When they get there, they'll pour it into the ocean.\"",
+              "cont": false
+            },
+            {
+              "n": 3,
+              "text": "Ezra imagined the lake and the ocean shaking hands. He watched the boat glide slowly away until it shrank to a tiny white speck in the distance. That night he dreamed he rode the whole way himself, standing at the front of the boat as the barrel splashed into the sea.",
+              "cont": false
+            }
+          ]
+        },
+        {
+          "title": "The Erie Canal Opens",
+          "type": "history",
+          "paragraphs": [
+            {
+              "n": 1,
+              "text": "The Erie Canal opened on October 26, 1825. It ran about 363 miles across New York State, from Buffalo on Lake Erie to Albany on the Hudson River. Workers had spent eight years digging it, much of it by hand, and they built 83 locks to raise and lower boats.",
+              "cont": false
+            },
+            {
+              "n": 2,
+              "text": "To celebrate, Governor DeWitt Clinton boarded a boat called the Seneca Chief at Buffalo. Crowds gathered in towns along the route as it traveled east, and the trip to New York City took about nine days. There, Clinton poured a keg of Lake Erie water into the Atlantic Ocean. People called it the Wedding of the Waters.",
+              "cont": false
+            },
+            {
+              "n": 3,
+              "text": "Horses and mules walked on towpaths beside the canal, pulling the boats. The canal made shipping goods far cheaper and faster, and cities along its route, such as Rochester, grew quickly.",
+              "cont": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

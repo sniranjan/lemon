@@ -47,7 +47,7 @@ roots:
       - { word: predict, meaning: say what will happen before it does }
       - { word: contradict, meaning: say the opposite of what someone said }
       - { word: dictate, meaning: say words aloud for someone to write }
-      - { word: valedictorian, meaning: a student who gives a farewell speech }
+      - { word: valedictorian, meaning: "top student, gives the farewell speech" }
     sentences:
       - { word: contradict, text: "My little brother likes to ___ everything I say, just for fun." }
       - { word: valedictorian, text: "As ___, Maya gave the farewell speech at graduation." }
@@ -117,7 +117,7 @@ roots:
       - { word: philosophy, meaning: the love and study of wisdom }
       - { word: philanthropist, meaning: a person who gives to help others }
       - { word: bibliophile, meaning: a person who loves books }
-      - { word: philharmonic, meaning: an orchestra that loves harmony }
+      - { word: philharmonic, meaning: "music-loving; in orchestra names" }
     sentences:
       - { word: philanthropist, text: "A generous ___ paid for the new playground in the park." }
       - { word: philharmonic, text: "We heard the city's ___ orchestra play under the stars." }
@@ -235,7 +235,7 @@ roots:
       - { word: telescope, meaning: a tool for viewing faraway things }
       - { word: periscope, meaning: a tube with mirrors for seeing over things }
       - { word: kaleidoscope, meaning: a tube of mirrors and colored glass }
-      - { word: stethoscope, meaning: a tool for listening to the heart }
+      - { word: stethoscope, meaning: a doctor's tool for listening to the heart }
     sentences:
       - { word: periscope, text: "The submarine crew raised the ___ to look above the waves." }
       - { word: stethoscope, text: "The doctor used a ___ to listen to my heartbeat." }

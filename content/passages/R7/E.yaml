@@ -58,7 +58,7 @@
             - Crowds gathered in towns along the route
           evidence: That night he dreamed he rode the whole way himself
         - kind: write
-          ask: The trip took nine days. How does the story show that?
+          ask: The trip took nine days. How does the story handle it?
           sample: The story skips the nine days; Ezra sees the boat for only a moment and then rides the whole way in a dream.
           rubric: notes the story leaves out the long trip and uses Ezra's dream to jump to the end.
           evidence:
@@ -75,3 +75,1241 @@
           evidence:
             - climbed onto a fence post to see it
             - It ran about 363 miles across New York State
+
+- id: e02-brooklyn-bridge
+  title: The Great Bridge
+  genre: paired
+  texts:
+    - title: "Nora and the Rooster"
+      kind: story
+      text: |
+        Nora had watched the great bridge rise above the East River from her bedroom window for as long as
+        she could remember. On the morning it finally opened, she squeezed through the excited crowd with her
+        father, who had spent years working on the enormous cables.
+
+        A carriage rolled past carrying a woman with a rooster in her lap. Her father explained that Mrs.
+        Roebling had delivered her husband's instructions to the workers every single day while he stayed home.
+
+        To Nora's surprise, the woman stepped down and smiled at her. "Do you like my bridge?" she asked. Nora could only nod. That
+        evening, as fireworks burst above the towers, Nora decided that someday she would build something
+        magnificent herself.
+    - title: The Brooklyn Bridge Opens
+      kind: history
+      text: |
+        The Brooklyn Bridge opened on May 24, 1883, linking Manhattan and Brooklyn across the East River. It
+        took about fourteen years to build, and it was the longest suspension bridge in the world at the time.
+        It was also the first large bridge to hang from steel-wire cables.
+
+        John A. Roebling designed the bridge, and his son Washington Roebling became its chief engineer. When
+        Washington had to stay home and could not visit the site, his wife, Emily Warren Roebling, carried his
+        instructions to the builders. She studied engineering and answered many questions herself.
+
+        Shortly before the opening ceremony, Emily became the first person to ride across the bridge, holding
+        a rooster as a sign of victory. The President attended the celebration, and fireworks lit the sky
+        that night.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - Mrs. Roebling rode across holding a rooster.
+            - Nora's father designed the bridge.
+            - The bridge opened at night with no crowd.
+            - Mrs. Roebling lived in Nora's building.
+          evidence:
+            - a woman with a rooster in her lap
+            - holding a rooster as a sign of victory
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - "\"Do you like my bridge?\" she asked."
+            - The Brooklyn Bridge opened on May 24, 1883
+            - his son Washington Roebling became its chief engineer
+            - fireworks lit the sky that night
+          evidence: "\"Do you like my bridge?\" she asked."
+        - kind: write
+          ask: How do both texts show Emily Roebling's role?
+          sample: Both say she carried her husband's orders to the workers, but only the history says she studied engineering herself.
+          rubric: names the shared fact (she carried his orders) and one detail only the history gives.
+          evidence:
+            - delivered her husband's instructions to the workers every single day
+            - She studied engineering and answered many questions herself.
+        - kind: paragraph
+          ask: Why might the author invent a talk between Nora and Emily?
+          sample: >-
+            The history tells us Emily "studied engineering and answered many questions herself," but it does
+            not let us meet her. In the story, she smiles at Nora and asks, "Do you like my bridge?" This made-up
+            moment shows how proud she might have felt and lets a young reader imagine standing there. The
+            author keeps real facts, like the rooster and the fireworks, though it moves Emily's rooster ride to opening day so Nora can see it.
+          rubric: says the invented talk adds feeling or a personal view; cites a detail from each text.
+          evidence:
+            - "\"Do you like my bridge?\" she asked."
+            - She studied engineering and answered many questions herself.
+
+- id: e03-pony-express
+  title: Riding for the Mail
+  genre: paired
+  texts:
+    - title: "Sam at Willow Creek Station"
+      kind: story
+      text: |
+        Sam was twelve, too young to ride for the Pony Express, but he kept the horses ready at Willow Creek
+        Station. Every rider who galloped in would leap from one saddle to the next in under two minutes, and
+        Sam made sure the fresh horse was brushed, fed and waiting.
+
+        One windy afternoon, a rider named Charlie arrived with the leather mail cover slung over his saddle.
+        "Keep it moving, Sam," he grinned, tossing it onto the new horse.
+
+        That night Sam wrote in his journal that he would be the fastest
+        rider in the West one day. A few months later, though, a worker told him that a wire on tall poles could
+        now carry a message across the country in minutes, and the riders were no longer needed.
+    - title: The Pony Express
+      kind: history
+      text: |
+        The Pony Express began carrying mail in April 1860. Its route ran about 1,900 miles, from St. Joseph,
+        Missouri, to Sacramento, California. Before it started, a letter could take weeks or even months to
+        cross the West. The Pony Express often did it in about ten days.
+
+        The service worked like a relay. Riders changed to fresh horses at stations placed every ten to fifteen
+        miles, and each rider covered a long stretch before handing the mail to the next. The letters traveled
+        in a leather cover, called a mochila, that fit over the saddle. Riders were usually young and light so
+        the horses could run faster.
+
+        In October 1861, telegraph lines were joined across the country, and messages could travel in minutes.
+        The Pony Express closed soon after, having run for only about eighteen months.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - The mail rode in a leather cover on the saddle.
+            - Sam rode the whole route himself.
+            - Riders kept the same horse for the whole trip.
+            - The cross-country telegraph came first.
+          evidence:
+            - the leather mail cover slung over his saddle
+            - The letters traveled in a leather cover, called a mochila
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - Sam was twelve, too young to ride for the Pony Express
+            - The Pony Express began carrying mail in April 1860.
+            - Riders were usually young and light
+            - The Pony Express closed soon after
+          evidence: Sam was twelve, too young to ride for the Pony Express
+        - kind: write
+          ask: How does each text show why the Pony Express ended?
+          sample: The story shows a worker telling Sam about a wire on poles, while the history states that telegraph lines were joined in October 1861.
+          rubric: links the story's wire on poles to the telegraph in the history.
+          evidence:
+            - a wire on tall poles could now carry a message across the country in minutes
+            - In October 1861, telegraph lines were joined across the country
+        - kind: paragraph
+          ask: What does each text offer that the other does not?
+          sample: >-
+            The history gives exact facts, such as the route of "about 1,900 miles" and the eighteen months the
+            service lasted. The story cannot give all of that, but it shows what a station felt like as Sam
+            waited with a horse "brushed, fed and waiting." Sam and Charlie are made up, yet the relay and the
+            telegraph are real. Reading both helps me see the facts and also imagine the people.
+          rubric: names one thing each text offers (facts vs. a viewpoint or feeling); quotes each text.
+          evidence:
+            - brushed, fed and waiting
+            - Its route ran about 1,900 miles
+
+- id: e04-ferris-wheel
+  title: The Giant Wheel
+  genre: paired
+  texts:
+    - title: "Henry Rides to the Top"
+      kind: story
+      text: |
+        Henry had begged his mother for weeks to take him to the World's Fair in Chicago, and now he stood
+        beneath the biggest wheel anyone had ever seen. It turned so slowly that it seemed to be sleeping, yet
+        it was lifting hundreds of passengers into the summer sky.
+
+        The car they boarded was as large as a streetcar, with windows on every side, and Henry pressed his
+        nose against the glass as it climbed. The gleaming white buildings of the fair shrank beneath him,
+        while the lake stretched out blue and endless toward the horizon.
+
+        At the very top, a man in a gray suit leaned over and introduced himself as Mr. Ferris. "I wanted to
+        build something to beat the tower in Paris," he explained. Henry was too amazed to answer, but he never
+        forgot the view or the engineer who had imagined it.
+    - title: The First Ferris Wheel
+      kind: history
+      text: |
+        In 1893, Chicago hosted a world's fair called the World's Columbian Exposition. Its planners wanted an
+        attraction to rival the Eiffel Tower, which had been the star of the Paris fair four years earlier. An
+        engineer named George Washington Gale Ferris Jr. proposed a giant rotating wheel constructed of steel.
+
+        Although many people doubted it would work, the wheel opened to riders in June 1893. It stood about 264
+        feet tall and carried 36 enclosed cars, each roughly the size of a streetcar and able to hold up to
+        sixty people. A ride lasted about twenty minutes and cost fifty cents.
+
+        From the top, riders could see the entire fair and far across Lake Michigan. The wheel became one of
+        the most popular attractions at the fair, and similar wheels are still named after Ferris today.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - Each car was about the size of a streetcar.
+            - The wheel was built in Paris.
+            - Henry's mother designed the wheel.
+            - The ride was free for children.
+          evidence:
+            - The car they boarded was as large as a streetcar
+            - each roughly the size of a streetcar
+        - kind: quote
+          ask: Which words are most likely invented by the story writer?
+          choices:
+            - "At the very top, a man in a gray suit leaned over"
+            - It stood about 264 feet tall
+            - A ride lasted about twenty minutes and cost fifty cents.
+            - the wheel opened to riders in June 1893
+          evidence: "At the very top, a man in a gray suit leaned over"
+        - kind: write
+          ask: How do both texts explain why the wheel was built?
+          sample: Both say it was meant to match or beat the tower in Paris; the story puts this idea in Mr. Ferris's own words.
+          rubric: names the Paris tower goal from both texts and notes the story turns it into speech.
+          evidence:
+            - I wanted to build something to beat the tower in Paris
+            - Its planners wanted an attraction to rival the Eiffel Tower
+        - kind: paragraph
+          ask: Why might the author have Henry meet Mr. Ferris?
+          sample: >-
+            The history only tells us that Ferris "proposed a giant rotating wheel constructed of steel." In the story, Ferris speaks to Henry at the top and says he "wanted to build something to beat
+            the tower in Paris." This meeting is probably invented, but it turns a fact into a memorable moment.
+            It lets a reader feel the pride and wonder of that summer.
+          rubric: says the meeting is likely invented and explains what it adds; quotes both texts.
+          evidence:
+            - I wanted to build something to beat the tower in Paris
+            - proposed a giant rotating wheel constructed of steel
+
+- id: e05-first-flight
+  title: Twelve Seconds
+  genre: paired
+  texts:
+    - title: "Lucy on the Sand Hill"
+      kind: story
+      text: |
+        Lucy's family lived near the windy beaches of North Carolina, and all that cold December she had
+        watched two brothers from Ohio fiddle with their strange machine. It looked like a giant kite with an
+        engine, and her friends laughed whenever they saw it.
+
+        On the morning of December 17, Lucy climbed a sand hill and hid behind a clump of grass. One brother
+        lay flat on the lower wing while the other ran beside it. With a roar, the machine lifted off the sand
+        and wobbled through the air for a few seconds before it bumped back down.
+
+        Lucy jumped up and shouted, but the wind swallowed her voice. She ran home to tell everyone, and nobody believed her, even after a newspaper printed a jumbled report the next day.
+    - title: The Wright Brothers Fly
+      kind: history
+      text: |
+        Wilbur and Orville Wright ran a bicycle shop in Dayton, Ohio, but they spent years studying how birds
+        and gliders stayed in the air. They chose the sandy hills near Kitty Hawk, North Carolina, for their
+        tests because of the steady winds and soft ground.
+
+        On December 17, 1903, Orville made the first powered, controlled airplane flight. Lying on the lower
+        wing, he flew for about twelve seconds and traveled about 120 feet while Wilbur ran alongside. The
+        brothers made four flights that cold, windy day. The longest, by Wilbur, lasted fifty-nine seconds.
+
+        Only five local people came to watch, including a teenage boy, and one of them took a famous photograph of the first flight. Few
+        newspapers reported the event correctly at first, and many people did not believe it for years.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - The pilot lay flat on the lower wing.
+            - Lucy took a photograph of the flight.
+            - The machine flew for a whole hour.
+            - The brothers came from North Carolina.
+          evidence:
+            - One brother lay flat on the lower wing
+            - Lying on the lower wing, he flew for about twelve seconds
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - Lucy climbed a sand hill and hid behind a clump of grass
+            - The brothers made four flights that cold, windy day.
+            - Wilbur and Orville Wright ran a bicycle shop
+            - Only five local people came to watch
+          evidence: Lucy climbed a sand hill and hid behind a clump of grass
+        - kind: write
+          ask: How do both texts show people's doubt about the flight?
+          sample: In the story nobody believes Lucy, and the history says many people did not believe the flight for years.
+          rubric: gives the doubt shown in each text (Lucy not believed; people doubting for years).
+          evidence:
+            - nobody believed her
+            - many people did not believe it for years
+        - kind: paragraph
+          ask: Why might the author add Lucy, a witness the history omits?
+          sample: >-
+            The history says that only "five local people came to watch," so Lucy is an invented witness. The author
+            likely added her so readers could see the flight through the eyes of someone their own age. Her
+            hiding place and her shout that "the wind swallowed" make the moment feel exciting. The story still
+            keeps true facts, like the date, the cold wind and the pilot lying on the wing.
+          rubric: says Lucy is invented and explains what she adds; quotes both texts.
+          evidence:
+            - the wind swallowed her voice
+            - Only five local people came to watch
+
+- id: e06-prairie-school
+  title: One Room, Every Grade
+  genre: paired
+  texts:
+    - title: "Clara's First Day"
+      kind: story
+      text: |
+        Clara walked two miles across the prairie with her lunch pail, the tall grass brushing against her
+        skirt the whole way. The schoolhouse stood alone on a small rise, and inside it smelled of chalk and
+        wood smoke. Children of every size sat on long benches, from little Jacob, who was five, to Martin, who
+        was nearly fifteen.
+
+        Miss Hale called each grade to the front bench in turn. While the older students recited their
+        lessons, Clara practiced copying letters onto her slate, and when she got stuck, Martin quietly showed
+        her how to shape a capital S.
+
+        At noon, everyone drank from the same tin dipper. By the end of that single afternoon, Clara could read
+        a whole page of her reader, and Miss Hale rewarded her with a gold star.
+    - title: Prairie Schoolhouses
+      kind: history
+      text: |
+        In the late 1800s, many children on the American prairie went to one-room schoolhouses. A single teacher
+        taught every grade together in one room. Students might range from young children to teenagers, and
+        some walked or rode horses several miles to get there.
+
+        Teachers often called one grade at a time to a recitation bench at the front, while the others worked
+        quietly on their own lessons. Older students frequently helped younger ones. Children practiced
+        writing on small slates because paper was costly.
+
+        A wood or coal stove heated the room in winter, and a water bucket with a shared dipper stood near the
+        door. School terms were often planned around farm work, since many children were needed at home during
+        planting and harvest.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - Older students helped younger ones.
+            - Each grade had its own room.
+            - Students wrote in notebooks made of paper.
+            - The teacher worked only in the summer.
+          evidence:
+            - Martin quietly showed her how to shape a capital S
+            - Older students frequently helped younger ones.
+        - kind: quote
+          ask: Which story detail is most likely changed or stretched?
+          choices:
+            - Clara could read a whole page of her reader
+            - Clara practiced copying letters onto her slate
+            - everyone drank from the same tin dipper
+            - Miss Hale called each grade to the front bench
+          evidence: Clara could read a whole page of her reader
+        - kind: write
+          ask: How do both texts show students sharing one room?
+          sample: The story shows children from five to fifteen on long benches, and the history says students ranged from young children to teenagers.
+          rubric: gives the age range shown in each text.
+          evidence:
+            - from little Jacob, who was five, to Martin, who was nearly fifteen
+            - Students might range from young children to teenagers
+        - kind: paragraph
+          ask: Which story details are fact and which are fiction?
+          sample: >-
+            Many details in the story match the history, such as the slate, the front bench and the "shared
+            dipper." Clara, Martin and Miss Hale are invented people, though. Learning to read "a whole page" in
+            one day is probably stretched to make a happy ending. The author mixes real facts with made-up
+            characters so the old schoolhouse feels alive.
+          rubric: names at least one fact and one invented or stretched detail; quotes both texts.
+          evidence:
+            - Clara could read a whole page of her reader
+            - a water bucket with a shared dipper stood near the door
+
+- id: e07-balloon-1783
+  title: Three Passengers
+  genre: paired
+  texts:
+    - title: "Pierre and the Flying Sheep"
+      kind: story
+      text: |
+        Pierre had polished boots at the palace of Versailles for a year, but he had never seen anything like
+        the giant blue and gold balloon swaying above the courtyard. The king and queen watched from a platform
+        as the Montgolfier brothers fed a smoky fire of straw and wool beneath it.
+
+        Then Pierre spotted the passengers in the basket: a sheep, a duck and a rooster. "Will they come back?"
+        he whispered. The gardener beside him only shrugged, because nobody in the crowd knew the answer.
+
+        With a great cheer from the crowd, the balloon rose and drifted away over the trees. Pierre ran through
+        the woods for nearly an hour until he found the basket in a clearing. The sheep was calmly chewing
+        grass, and Pierre laughed so hard that he forgot all about his boots.
+    - title: The First Balloon Passengers
+      kind: history
+      text: |
+        Joseph-Michel and Jacques-Etienne Montgolfier were brothers from a family of paper makers in France. In
+        1782 and 1783 they showed that a large bag filled with hot air from a fire would rise into the sky.
+
+        On September 19, 1783, they launched a balloon at the palace of Versailles in front of the king and
+        queen of France and a large crowd. No one knew if living creatures could safely breathe high in the
+        air, so the first passengers were a sheep, a duck and a rooster in a basket. The fire was fed with
+        straw and wool.
+
+        The balloon flew for about eight minutes and came down in a nearby forest. The animals landed safely.
+        Two months later, the first people rode a Montgolfier balloon over Paris.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - A sheep, a duck and a rooster rode in the basket.
+            - Pierre rode in the balloon himself.
+            - The balloon came down in the palace courtyard.
+            - The flight happened over Paris at night.
+          evidence:
+            - "a sheep, a duck and a rooster"
+            - the first passengers were a sheep, a duck and a rooster in a basket
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - The sheep was calmly chewing grass
+            - The balloon flew for about eight minutes
+            - The animals landed safely.
+            - The fire was fed with straw and wool.
+          evidence: The sheep was calmly chewing grass
+        - kind: write
+          ask: What question about the animals do both texts raise?
+          sample: Both wonder whether the animals would be safe; Pierre asks if they will come back, and the history says no one knew if they could breathe up high.
+          rubric: names the safety question and shows where each text raises it.
+          evidence:
+            - "\"Will they come back?\""
+            - No one knew if living creatures could safely breathe high in the air
+        - kind: paragraph
+          ask: Why might the author let Pierre find the basket?
+          sample: >-
+            The history simply says the balloon "came down in a nearby forest" and the animals landed safely.
+            The story turns that fact into an adventure, with Pierre running through the woods and finding the
+            sheep "calmly chewing grass." Pierre is invented, but his worry and his laughter help readers feel
+            the surprise of the day. The author keeps the real passengers and place while adding a person to
+            follow.
+          rubric: explains what the invented search adds; quotes both texts.
+          evidence:
+            - The sheep was calmly chewing grass
+            - came down in a nearby forest
+
+- id: e08-golden-spike
+  title: The Last Spike
+  genre: paired
+  texts:
+    - title: "Li Wei at Promontory"
+      kind: story
+      text: |
+        Li Wei had carried water to the railroad crews for two long years, climbing through the mountains of
+        California beside his older brother. Now he stood in the dusty valley at Promontory Summit, where two
+        great engines faced each other nose to nose.
+
+        While a band played and men in fine coats made long speeches, Li Wei barely listened. He was
+        thinking of the snowy passes and the tunnels his brother had helped blast through solid rock.
+
+        At last, a gentleman lifted a silver hammer toward a shining golden spike. Before he swung, he turned
+        to Li Wei and said, "This belongs to you and your brother as much as to anyone." The hammer rang, a
+        telegraph clicked, and the whole crowd cheered as one.
+    - title: The Railroad Meets
+      kind: history
+      text: |
+        On May 10, 1869, the first railroad across the United States was completed at Promontory Summit in Utah
+        Territory. The Central Pacific Railroad had built east from Sacramento, California, while the Union
+        Pacific Railroad built west from Omaha, Nebraska.
+
+        Much of the hardest work was done by immigrants. Thousands of Chinese workers built the Central Pacific
+        line. They carved tunnels through the steep Sierra Nevada mountains. Many Irish workers helped
+        lay the Union Pacific tracks across the plains.
+
+        At the ceremony, two engines met nose to nose, and Leland Stanford tapped a golden spike into place. A
+        telegraph message carried a single word, "DONE," across the country. A trip from coast to coast, which
+        had once taken months, could now be made in about a week.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - Two engines met nose to nose.
+            - Li Wei built the railroad alone.
+            - The tracks met in Sacramento.
+            - The spike was made of silver.
+          evidence:
+            - two great engines faced each other nose to nose
+            - two engines met nose to nose
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - he turned to Li Wei and said
+            - Many Irish workers helped lay the Union Pacific tracks
+            - Leland Stanford tapped a golden spike into place
+            - the first railroad across the United States was completed
+          evidence: he turned to Li Wei and said
+        - kind: write
+          ask: How do both texts show the work of Chinese workers?
+          sample: The story mentions the tunnels Li Wei's brother helped make, and the history says Chinese workers cut tunnels through the Sierra Nevada.
+          rubric: links the brother's tunnels in the story to the Chinese workers' tunnels in the history.
+          evidence:
+            - the tunnels his brother had helped blast through solid rock
+            - Thousands of Chinese workers built the Central Pacific line
+        - kind: paragraph
+          ask: Why might the author invent the gentleman's words to Li Wei?
+          sample: >-
+            The history explains that "the hardest work was done by immigrants," but it describes the
+            ceremony only through Leland Stanford and the golden spike. In the story, the gentleman tells Li Wei,
+            "This belongs to you and your brother as much as to anyone." These words are probably invented. The
+            author may have added them to give the workers the thanks that the ceremony in the history never mentions.
+          rubric: says the words are invented and explains their purpose; quotes both texts.
+          evidence:
+            - This belongs to you and your brother as much as to anyone.
+            - the hardest work was done by immigrants
+
+- id: e09-statue-liberty
+  title: Pennies for Liberty
+  genre: paired
+  texts:
+    - title: "Rosa's Seven Pennies"
+      kind: story
+      text: |
+        Rosa read the newspaper aloud to her grandfather every evening in their small New York apartment. One
+        night in the spring of 1885, she found a notice asking readers for help. A great copper statue was
+        coming from France, but there was not enough money to build the stone base it would stand on.
+
+        Rosa emptied her tin bank onto the table and counted seven pennies, and the next morning she mailed
+        them to the newspaper with a short letter. A week later, her grandfather pointed at the page and
+        grinned, because her name was printed there among hundreds of others.
+
+        That summer, Rosa watched from the dock as a ship arrived carrying the statue in crates. She could not
+        see Liberty's face yet, but she knew a tiny part of it belonged to her.
+    - title: The Statue Comes to America
+      kind: history
+      text: |
+        The Statue of Liberty was a gift from the people of France to the people of the United States. The
+        sculptor Frédéric Auguste Bartholdi designed it, and Gustave Eiffel planned the iron frame that holds
+        up its thin copper skin.
+
+        Americans had agreed to build the pedestal, but money ran short. In 1885, the newspaper publisher Joseph
+        Pulitzer asked his readers to give whatever they could and promised to print the name of every donor.
+        More than 120,000 people gave, many of them less than a dollar, and schoolchildren sent in their
+        pennies.
+
+        That June, the statue reached New York by ship, packed in more than two hundred crates. Workers put it
+        together on its new pedestal, and it was dedicated on October 28, 1886.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - Donors' names were printed in the newspaper.
+            - Rosa paid for the whole pedestal.
+            - The statue arrived in one single piece.
+            - The statue was built in New York.
+          evidence:
+            - her name was printed there among hundreds of others
+            - promised to print the name of every donor
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - Rosa emptied her tin bank onto the table
+            - it was dedicated on October 28, 1886
+            - schoolchildren sent in their pennies
+            - packed in more than two hundred crates
+          evidence: Rosa emptied her tin bank onto the table
+        - kind: write
+          ask: How do both texts explain why the pedestal needed help?
+          sample: Both say there was not enough money for the stone base, so a newspaper asked readers to give.
+          rubric: names the money shortage from both texts and the newspaper's request.
+          evidence:
+            - there was not enough money to build the stone base it would stand on
+            - Americans had agreed to build the pedestal, but money ran short.
+        - kind: paragraph
+          ask: What does the story add to the facts in the history?
+          sample: >-
+            The history gives big numbers, such as the "120,000 people" who gave, which can be hard to picture.
+            The story shrinks that number down to one girl and her "seven pennies." Rosa is invented, but she
+            stands for the real schoolchildren who gave. Through her, readers can feel how proud a small donor
+            might have been.
+          rubric: says the story makes the facts personal through one invented giver; quotes both texts.
+          evidence:
+            - counted seven pennies
+            - More than 120,000 people gave
+
+- id: e10-ice-harvest
+  title: Ice in Summer
+  genre: paired
+  texts:
+    - title: "Tom and the Frozen Pond"
+      kind: story
+      text: |
+        All winter, Tom waited for the pond behind his family's farm in Massachusetts to freeze thick enough
+        to cut. When his father finally tested the ice and nodded with satisfaction, Tom raced to wake his
+        cousins before sunrise.
+
+        The men scraped away the snow and marked the frozen surface into a grid of squares. Then they cut the
+        blocks with long saws, and Tom helped guide them through a channel of open water with a wooden pole.
+       
+
+        In the icehouse, they packed the blocks tightly together and covered them with sawdust. On the hottest
+        afternoon of July, Tom opened the heavy door and touched a block that was still frozen solid, and he
+        felt as if he had saved a piece of winter.
+    - title: Harvesting Ice
+      kind: history
+      text: |
+        Before electric refrigerators became common, many families in New England kept food cold with ice
+        harvested from frozen ponds and lakes. The harvest took place during the coldest part of winter, once
+        the ice had grown thick enough to support workers and horses.
+
+        Workers first cleared away the snow. Horses then pulled special tools that carved a grid of grooves
+        into the surface, and men sawed along the lines with long ice saws. They guided the floating blocks
+        through open channels using poles with metal hooks.
+
+        The blocks were stored in icehouses with thick, insulated walls. Workers packed them closely and
+        covered them with sawdust or hay, which kept the warm air away. Stored this way, ice could last well
+        into the summer. Some New England ice was even shipped by boat as far as the Caribbean.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail in the story is also a fact in the history?
+          choices:
+            - The blocks were covered with sawdust.
+            - The ice was cut in the middle of summer.
+            - Tom's family shipped ice to the Caribbean.
+            - Each block was small enough to carry alone.
+          evidence:
+            - covered them with sawdust
+            - covered them with sawdust or hay
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - Tom raced to wake his cousins before sunrise
+            - Workers first cleared away the snow.
+            - ice could last well into the summer
+            - The blocks were stored in icehouses
+          evidence: Tom raced to wake his cousins before sunrise
+        - kind: write
+          ask: How do both texts show that stored ice could last?
+          sample: Tom touches a block that is still frozen in July, and the history says stored ice could last into the summer.
+          rubric: gives Tom's July block and the history's statement that ice lasted into summer.
+          evidence:
+            - Tom opened the heavy door and touched a block that was still frozen solid
+            - Stored this way, ice could last well into the summer.
+        - kind: paragraph
+          ask: Why might the author tell the ice harvest through Tom?
+          sample: >-
+            The history explains each step, such as how workers "sawed along the lines with long ice saws." The
+            story keeps those steps but adds Tom's excitement and his pride in July. When he feels that "he had
+            saved a piece of winter," readers understand why the hard work mattered. Tom is made up, but his
+            farm work matches the real facts.
+          rubric: says the story adds a viewpoint or feeling to real steps; quotes both texts.
+          evidence:
+            - he had saved a piece of winter
+            - men sawed along the lines with long ice saws
+
+- id: e11-library-company
+  title: Books for Everyone
+  genre: paired
+  texts:
+    - title: "Hannah and the Book Chest"
+      kind: story
+      text: |
+        Hannah's father worked for a printer, and on a warm summer evening in 1731 he brought her to a meeting of his friends at a Philadelphia tavern. A young printer named Benjamin Franklin explained his idea. "None of us can afford many books alone," he said, "but if each of us pays a little, we can share them all."
+
+        Hannah sat beside the fireplace, picturing a room filled with books about astronomy, plants, and faraway countries. When the men signed the agreement, she wished that she could sign it too.
+
+        Then, to her delight, the books arrived the very next week in a wooden chest. Hannah lifted the heavy lid herself to breathe in the smell of new paper and leather.
+    - title: A Library for Philadelphia
+      kind: history
+      text: |
+        In 1731, Benjamin Franklin and members of a club called the Junto started the Library Company of Philadelphia. The Junto was a group of young tradesmen who met each week to discuss ideas and improve themselves. Books were expensive in the colonies, and few families owned more than a handful.
+
+        Franklin's plan was simple. Each member paid money to join and a smaller amount every year after that. The group used the money to order books from London, and the first shipment arrived in 1732. Members could borrow the books and read them at home.
+
+        The idea spread, and other towns soon started libraries of their own. Franklin later wrote that such libraries helped ordinary people become better informed. The Library Company still exists today.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail appears in both texts?
+          choices:
+            - Members shared the cost of buying books.
+            - The books were stored in a tavern.
+            - Hannah signed her name with the men.
+            - The books came from Market Street.
+          evidence:
+            - "if each of us pays a little, we can share them all."
+            - Each member paid money to join and a smaller amount every year after that.
+        - kind: quote
+          ask: Which words change a fact from the history?
+          choices:
+            - the books arrived the very next week in a wooden chest
+            - the first shipment arrived in 1732
+            - Books were expensive in the colonies
+            - Members could borrow the books and read them at home
+          evidence: the books arrived the very next week in a wooden chest
+        - kind: write
+          ask: Why might the story make the books arrive so fast?
+          sample: The history says the first books came the next year, but the story makes it a week so it can show Hannah's excitement right away.
+          rubric: contrasts the week in the story with 1732 in the history and gives a reason for the change.
+          evidence:
+            - the books arrived the very next week in a wooden chest
+            - the first shipment arrived in 1732
+        - kind: paragraph
+          ask: What does each text offer a reader? Use both texts.
+          sample: >-
+            The history gives the facts, such as the Junto and the books ordered "from London." It explains
+            why the plan mattered, since "few families owned more than a handful" of books. The story keeps
+            Franklin and the shared cost but adds Hannah, who "wished that she could sign it too." Her
+            wish helps a reader feel how much books meant to people at that time.
+          rubric: names a fact the history gives and a feeling or viewpoint the story adds; quotes both texts.
+          evidence:
+            - wished that she could sign it too
+            - few families owned more than a handful
+
+- id: e12-philadelphia-zoo
+  title: Opening Day at the Zoo
+  genre: paired
+  texts:
+    - title: "Tobias Meets a Giraffe"
+      kind: story
+      text: |
+        Tobias had saved his pennies for weeks, and on the first day of July in 1874 his aunt finally took him across the city to Fairmount Park. A long line of families waited outside the new zoo, and the women held parasols against the summer sun. When the gate opened, Tobias hurried past the deer and the bears without even slowing down.
+
+        He stopped in front of a tall giraffe, which bent its long neck down until its dark eyes were level with his own. "Good morning," Tobias whispered, and the giraffe seemed to nod back politely.
+
+        His aunt laughed and said that no animal had ever had such fine manners, but Tobias did not care. All the way home on the crowded streetcar, he told every passenger that he and the giraffe were now old friends.
+    - title: America's First Zoo
+      kind: history
+      text: |
+        The Philadelphia Zoo opened to the public on July 1, 1874, and it is often called the first zoo in the United States. A group of citizens had received permission to build it in 1859, but years of delays held the project back.
+
+        The zoo was built on land in Fairmount Park, beside the Schuylkill River. Visitors arrived on foot, in horse-drawn streetcars, and even by boat. On opening day, thousands of people came through the gates to see animals that most of them had only read about in books.
+
+        Zoos at that time were quite different from zoos today. Many animals lived in small cages or pens, and keepers were still learning what each kind of creature needed. Over the years, the zoo changed how it cared for its animals and built larger, more natural spaces.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail from the story matches the history?
+          choices:
+            - Visitors rode streetcars to the zoo.
+            - The zoo opened on a winter morning.
+            - The zoo was built beside the ocean.
+            - Only children were allowed inside.
+          evidence:
+            - All the way home on the crowded streetcar
+            - Visitors arrived on foot, in horse-drawn streetcars, and even by boat.
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - the giraffe seemed to nod back politely
+            - thousands of people came through the gates
+            - The zoo was built on land in Fairmount Park
+            - The Philadelphia Zoo opened to the public on July 1, 1874
+          evidence: the giraffe seemed to nod back politely
+        - kind: write
+          ask: How do both texts show that the zoo was exciting?
+          sample: The story shows Tobias saving pennies for weeks, and the history says thousands of people came on opening day.
+          rubric: gives one detail from the story and one from the history that show excitement.
+          evidence:
+            - Tobias had saved his pennies for weeks
+            - thousands of people came through the gates
+        - kind: paragraph
+          ask: What does the history tell that the story leaves out?
+          sample: >-
+            The story keeps the date and Fairmount Park, but it focuses on one boy's happy day. The history
+            adds background, such as the "years of delays" before the zoo opened. It also explains that "Many
+            animals lived in small cages or pens," which the story never mentions. Together the texts show
+            both the fun of the day and how zoos have changed since then.
+          rubric: names facts only the history gives and explains what the story focuses on instead; quotes once.
+          evidence:
+            - Tobias did not care.
+            - Many animals lived in small cages or pens
+
+- id: e13-light-bulb
+  title: A Night of Bright Lamps
+  genre: paired
+  texts:
+    - title: "Clara Rides to Menlo Park"
+      kind: story
+      text: |
+        On the last night of 1879, Clara and her father rode a crowded train through the dark New Jersey countryside toward the small village of Menlo Park. Her father worked for a gas company, and he grumbled that electric lights were only a passing fad. Clara pressed her nose against the cold window and hoped he was wrong.
+
+        When they stepped off the train, she gasped, because glass bulbs glowed along the road and in the windows of a long wooden building. Inside, a man with rumpled hair and a stained vest switched the lamps on and off for the astonished visitors.
+
+        He noticed Clara and handed her a burned-out bulb to keep, promising that someday every house would have electric lamps. Clara carried it home in her mitten, and her father did not grumble once.
+    - title: Lights at Menlo Park
+      kind: history
+      text: |
+        Thomas Edison built his famous laboratory at Menlo Park, New Jersey, in 1876. There, he and a team of skilled workers tested hundreds of materials, searching for one that could glow inside a glass bulb without burning up quickly.
+
+        In late 1879, the team found that a thin thread of carbon, made from scorched paper, could shine for many hours when most of the air was pumped out of the bulb. Edison decided to show the public what his lamps could do.
+
+        Around New Year's Eve, he lit the laboratory and its grounds with dozens of electric lamps. The railroad ran extra trains, and thousands of curious visitors came. Most had only known candles, oil lamps, and gaslight. Within a few years, his company was building power stations.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which story detail is supported by the history?
+          choices:
+            - Visitors came to Menlo Park by train.
+            - Edison gave every child a bulb.
+            - The lamps glowed inside a gas company.
+            - The lab was in a big city.
+          evidence:
+            - rode a crowded train through the dark New Jersey countryside
+            - The railroad ran extra trains
+        - kind: quote
+          ask: Which sentence is most likely invented for the story?
+          choices:
+            - He noticed Clara and handed her a burned-out bulb to keep
+            - The railroad ran extra trains
+            - Edison decided to show the public what his lamps could do.
+            - glass bulbs glowed along the road
+          evidence: He noticed Clara and handed her a burned-out bulb to keep
+        - kind: write
+          ask: Why does the story give Clara's father a gas job?
+          sample: The history says most people only knew gaslight, so a gas worker who doubts electric light shows how new the idea was.
+          rubric: links the father's gas job to the gaslight people used and explains why that matters.
+          evidence:
+            - Her father worked for a gas company
+            - Most had only known candles, oil lamps, and gaslight.
+        - kind: paragraph
+          ask: Which story details are fact, and which are fiction?
+          sample: >-
+            The story keeps real facts, such as the date and the crowded trains to Menlo Park. The history
+            confirms that "The railroad ran extra trains" and that the lamps lit the grounds. Clara, her
+            father, and the gift of a bulb are made up. The invented promise that "someday every house would have
+            electric lamps" hints at what the history says came next, when power stations were built.
+          rubric: sorts at least one fact and one invented detail correctly and quotes both texts.
+          evidence:
+            - someday every house would have electric lamps
+            - The railroad ran extra trains
+
+- id: e14-ancient-olympics
+  title: Olive Leaves at Olympia
+  genre: paired
+  texts:
+    - title: "Nikos at the Summer Games"
+      kind: story
+      text: |
+        Nikos had walked for days with his older cousin to reach Olympia, where the great summer games were held. The valley was crowded with tents, cooking fires, and travelers from every corner of Greece, while merchants sold figs and honey cakes to the hungry visitors.
+
+        On the third morning, Nikos watched the runners line up for the footrace. They sprinted the length of the stadium while the crowd cheered from the grassy slopes, and the winner, a baker from a nearby town, raised both arms in joy.
+
+        Then Nikos imagined something wonderful. In his daydream, the judges called his own name, and he raced barefoot across the sand faster than any grown man. He felt the cool olive leaves of a winner's crown settle onto his hair.
+    - title: The Games at Olympia
+      kind: history
+      text: |
+        The ancient Olympic Games were held every four years at Olympia, in southern Greece. By tradition, the first games took place in 776 BCE, and they continued for more than a thousand years.
+
+        The oldest and most famous event was the stadion, a footrace of one length of the stadium, about 600 feet. The first recorded winner was said to be a cook named Koroibos. Later, the games added longer races, jumping, discus throwing, and chariot races.
+
+        Only free Greek men and boys could compete. Spectators came from cities across the Greek world, and a truce let them travel safely to and from the festival. Winners did not receive money at Olympia. Instead, each one received a simple wreath cut from a wild olive tree, and home cities often gave their winners great honors.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail do both texts include?
+          choices:
+            - Winners were crowned with olive leaves.
+            - Winners received bags of money.
+            - The games were held in winter.
+            - Only bakers could run the footrace.
+          evidence:
+            - the cool olive leaves of a winner's crown
+            - each one received a simple wreath cut from a wild olive tree
+        - kind: write
+          ask: Which race in the history matches the story's footrace?
+          sample: The stadion, because the runners in the story "sprinted the length of the stadium," and the stadion was one length of the stadium.
+          rubric: names the stadion and links the one-length race in both texts.
+          evidence:
+            - They sprinted the length of the stadium
+            - a footrace of one length of the stadium
+        - kind: quote
+          ask: Which words show an event that never really happened?
+          choices:
+            - the judges called his own name
+            - merchants sold figs and honey cakes
+            - travelers from every corner of Greece
+            - the first games took place in 776 BCE
+          evidence: the judges called his own name
+        - kind: paragraph
+          ask: Why might the author include a daydream? Use both texts.
+          sample: >-
+            The history explains that "Only free Greek men and boys could compete," but Nikos came only to
+            watch with his cousin. The daydream lets him race anyway, when "the judges called his own
+            name." This invented scene shows how exciting the games felt to the crowd. It also lets the
+            author add a wish without changing the real facts about the race.
+          rubric: explains that the daydream adds feeling or a wish without changing facts; quotes both texts.
+          evidence:
+            - the judges called his own name
+            - Only free Greek men and boys could compete.
+
+- id: e15-silk-road
+  title: Along the Silk Road
+  genre: paired
+  texts:
+    - title: "Mei Joins the Caravan"
+      kind: story
+      text: |
+        Mei was twelve when her uncle first allowed her to travel with his caravan. Each morning, she helped load the two-humped camels with bolts of shining silk and bundles of paper, and the animals groaned and complained as they set off across the desert.
+
+        At a busy oasis town, Mei watched her uncle trade silk for glass beads, silver, and pepper. The merchants there spoke many languages, and she quickly learned to say "thank you" in four of them.
+
+        That night, a traveler from the distant west described a city beside a blue sea. Mei decided that she would ride the whole road to its end and see that sea for herself. She fell asleep counting the stars above the sand.
+    - title: Roads of Silk and Ideas
+      kind: history
+      text: |
+        The Silk Road was not a single road but a huge network of trade routes. It linked China with Central Asia, India, Persia, and the lands around the Mediterranean Sea. A German geographer created the name in the 1800s, long after the routes were first used.
+
+        Merchants carried silk, spices, horses, glass, and metals along these routes. Two-humped camels were well suited to the cold, dry deserts of Central Asia, and oasis towns offered water, food, and places to rest and trade.
+
+        Few traders traveled the whole way. Instead, goods usually passed from merchant to merchant across thousands of miles. Ideas traveled too, and the skill of making paper, which began in China, gradually spread westward. Travelers also shared languages, music, foods, and inventions.
+  pages:
+    - focus: what the story keeps and what it changes
+      questions:
+        - kind: mc
+          ask: Which story detail is also a fact in the history?
+          choices:
+            - Two-humped camels carried goods.
+            - Every trader rode the whole road.
+            - The road was named by Mei's uncle.
+            - Oasis towns had no water.
+          evidence:
+            - she helped load the two-humped camels
+            - Two-humped camels were well suited to the cold, dry deserts of Central Asia
+        - kind: quote
+          ask: Which sentence from the history shows Mei's plan is rare?
+          choices:
+            - Few traders traveled the whole way.
+            - Ideas traveled too
+            - The Silk Road was not a single road
+            - oasis towns offered water, food, and places to rest
+          evidence: Few traders traveled the whole way.
+        - kind: write
+          ask: How do both texts show ideas moving with trade?
+          sample: Mei learns to say thank you in four languages, and the history says travelers shared languages and ideas such as papermaking.
+          rubric: gives a story detail and a history detail about sharing languages or ideas.
+          evidence:
+            - she quickly learned to say "thank you" in four of them
+            - Travelers also shared languages, music, foods, and inventions.
+        - kind: paragraph
+          ask: Why might the author give Mei such a big dream?
+          sample: >-
+            The history says "Few traders traveled the whole way," so Mei's plan to reach the sea would be
+            unusual. The author may give her this dream to show how huge the network was. Her wish to "ride
+            the whole road to its end" makes readers picture distant lands. The story keeps real details like
+            camels and paper, so the invented dream still fits the time.
+          rubric: connects Mei's dream to the history's point about traders and explains its purpose; quotes both.
+          evidence:
+            - ride the whole road to its end
+            - Few traders traveled the whole way.
+
+- id: e16-rural-mail
+  title: Mail at the Farm Gate
+  genre: paired
+  texts:
+    - title: "Lucy and the Thick Catalog"
+      kind: story
+      text: |
+        Every morning in the fall of 1896, Lucy walked down the dirt lane of her family's West Virginia farm to the new tin mailbox at its edge. Before that autumn, her father had ridden to town once a week to collect their letters, and the trip often took most of a day.
+
+        Now a carrier came right to their gate. Lucy waved whenever she saw his wagon rattling over the hill. One crisp morning, he handed her a thick catalog filled with pictures of shoes, stoves, fiddles, and bicycles.
+
+        Lucy spent the whole evening turning its thin pages by the lamp. She circled a red sled and imagined it arriving the next day on the mail wagon, wrapped in brown paper. Her mother smiled and reminded her that the order form had not even been mailed yet.
+    - title: Mail Comes to the Farm
+      kind: history
+      text: |
+        In the 1890s, most farm families in the United States had to travel to a town post office to pick up their mail. For people who lived miles away, a trip to town could mean hours on a muddy road.
+
+        That began to change on October 1, 1896, when the Post Office tested Rural Free Delivery on a few routes in West Virginia. Carriers on horseback or in wagons brought letters and newspapers straight to farm mailboxes. The service proved popular and became permanent in 1902.
+
+        Rural delivery helped mail-order catalogs reach many more homes. Families chose clothing, tools, and furniture from the pages and mailed their orders. However, large packages usually traveled by train to the nearest town until parcel service began in 1913.
+  pages:
+    - focus: what the story keeps and what it changes
+      questions:
+        - kind: mc
+          ask: Which detail appears in both texts?
+          choices:
+            - Carriers brought mail by wagon to farms.
+            - Farm families had no mailboxes at all.
+            - Packages came by mail in 1896.
+            - The carrier lived on Lucy's farm.
+          evidence:
+            - Lucy waved whenever she saw his wagon rattling over the hill.
+            - Carriers on horseback or in wagons brought letters and newspapers straight to farm mailboxes.
+        - kind: quote
+          ask: Which words show how the family got mail before?
+          choices:
+            - her father had ridden to town once a week
+            - She circled a red sled
+            - Lucy spent the whole evening turning its thin pages
+            - he handed her a thick catalog
+          evidence: her father had ridden to town once a week
+        - kind: write
+          ask: Why could the sled not come as Lucy imagines?
+          sample: Lucy pictures the sled on the mail wagon, but in 1896 large packages went by train because parcel service began in 1913.
+          rubric: explains that big packages did not come by mail until the 1913 parcel service.
+          evidence:
+            - imagined it arriving the next day on the mail wagon
+            - large packages usually traveled by train to the nearest town
+        - kind: paragraph
+          ask: How does the story make a fact feel personal?
+          sample: >-
+            The history states that carriers "brought letters and newspapers straight to farm mailboxes." The
+            story turns that fact into Lucy's daily walk to "the new tin mailbox" and her wave to the carrier.
+            Her daydream about the sled is invented, and her mother's reminder gently hints that it is not
+            realistic. In this way, the story shows what the change meant to one farm family.
+          rubric: explains how the story shows the effect of the change on a family; quotes both texts.
+          evidence:
+            - the new tin mailbox
+            - brought letters and newspapers straight to farm mailboxes
+
+- id: e17-sod-house
+  title: A House Made of Grass
+  genre: paired
+  texts:
+    - title: "Anna Builds a Soddy"
+      kind: story
+      text: |
+        Anna was nine when her family's wagon finally stopped on the wide Nebraska prairie in the spring of 1872. There were no trees in sight, only tall grass bending in the endless wind, and Anna wondered aloud where they would ever find enough wood for a house.
+
+        Her father laughed and handed her a spade. For several days, the whole family cut long strips of thick sod and stacked them like bricks, while Anna packed the cracks with mud and her little brother chased grasshoppers that hopped out of the walls.
+
+        The finished house was dark and smelled like earth, but it stayed cool on hot afternoons. Anna planted wildflowers on the roof, and by the end of summer their little house looked like a hill wearing a flower hat.
+    - title: Homes Made of Sod
+      kind: history
+      text: |
+        In 1862, Abraham Lincoln signed the Homestead Act. The law offered 160 acres of public land to settlers who would live on it for five years, build a home, and farm the land, for a small filing fee. Over the next decades, thousands of families moved to the Great Plains.
+
+        The plains had rich soil but very few trees, so lumber was scarce and expensive. Instead, many settlers built their first homes from sod, the thick layer of grass and tangled roots covering the soil. They sliced it into long bricks with a special plow and stacked the bricks into sturdy walls.
+
+        Sod houses, often called soddies, stayed warm in winter and comfortably cool in summer. However, their roofs frequently leaked during heavy rain, and dirt and insects could drop from the ceiling.
+  pages:
+    - focus: what the story keeps and what it changes
+      questions:
+        - kind: mc
+          ask: Which problem do both texts describe?
+          choices:
+            - The prairie had very few trees.
+            - The land cost a great deal of money.
+            - Sod houses were always too hot.
+            - Settlers had to live in wagons.
+          evidence:
+            - There were no trees in sight
+            - The plains had rich soil but very few trees
+        - kind: write
+          ask: How does cutting the sod differ in the two texts?
+          sample: Anna's family cuts the sod with a spade, but the history says settlers used a special plow to cut the bricks.
+          rubric: contrasts the spade in the story with the special plow in the history.
+          evidence:
+            - Her father laughed and handed her a spade.
+            - They sliced it into long bricks with a special plow
+        - kind: quote
+          ask: Which story detail does the history support?
+          choices:
+            - it stayed cool on hot afternoons
+            - Anna planted wildflowers on the roof
+            - her little brother chased grasshoppers
+            - looked like a hill wearing a flower hat
+          evidence: it stayed cool on hot afternoons
+        - kind: paragraph
+          ask: What does each text offer a reader? Use both texts.
+          sample: >-
+            The history explains the law behind the move, which offered "160 acres of public land" to
+            settlers. It also gives the hard facts about leaking roofs and falling dirt. The story shows one
+            summer through Anna's eyes and adds playful details, such as a house that "looked like a hill
+            wearing a flower hat." Reading both gives the facts and a sense of how a child might feel.
+          rubric: names what the history explains and what the story adds; quotes both texts.
+          evidence:
+            - looked like a hill wearing a flower hat
+            - 160 acres of public land
+
+- id: e18-moon-landing
+  title: The Moon on TV
+  genre: paired
+  texts:
+    - title: "Rosa Stays Up Late"
+      kind: story
+      text: |
+        On July 20, 1969, Rosa's whole family squeezed onto the couch in front of their small black-and-white television. Her grandmother, who had grown up riding in a horse-drawn cart, sat closest to the screen. Rosa was allowed to stay up far past her usual bedtime.
+
+        The picture was gray and blurry, but everyone leaned forward when a pale figure climbed slowly down the ladder of the spacecraft. Then the astronaut stepped onto the dusty surface, and the room went completely silent. Her grandmother squeezed Rosa's hand.
+
+        Afterward, Rosa ran outside to look up at the Moon. She was sure she could see a tiny silver spark where the spacecraft rested. She waved as hard as she could, certain that someone up there was waving back.
+    - title: Footsteps on the Moon
+      kind: history
+      text: |
+        On July 20, 1969, the Apollo 11 mission landed on the Moon. Its lunar module, the Eagle, touched down on a flat plain called the Sea of Tranquility. Hours later, two astronauts walked on the surface while a third crew member stayed in orbit.
+
+        A television camera on the Eagle sent grainy black-and-white pictures back to Earth. Hundreds of millions of people around the world watched the first steps live. For many American families, the walk happened late in the evening.
+
+        The two astronauts collected rocks and soil, set up science experiments, and planted a flag. They spent about two and a half hours outside. The spacecraft could not be seen from Earth, even with a telescope, but the rock samples it carried home are still studied today.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which story detail matches the history?
+          choices:
+            - The TV pictures were black and white.
+            - The landing happened in the morning.
+            - Rosa's family watched in color.
+            - Three astronauts walked on the Moon.
+          evidence:
+            - their small black-and-white television
+            - A television camera on the Eagle sent grainy black-and-white pictures back to Earth.
+        - kind: quote
+          ask: Which story detail does the history support?
+          choices:
+            - Rosa was allowed to stay up far past her usual bedtime.
+            - She was sure she could see a tiny silver spark
+            - someone up there was waving back
+            - Her grandmother squeezed Rosa's hand.
+          evidence: Rosa was allowed to stay up far past her usual bedtime.
+        - kind: write
+          ask: Could Rosa really see the spacecraft? Explain.
+          sample: No. Rosa imagines a silver spark, but the history says the spacecraft could not be seen from Earth, even with a telescope.
+          rubric: says no and cites the history's fact that the craft could not be seen from Earth.
+          evidence:
+            - She was sure she could see a tiny silver spark where the spacecraft rested.
+            - The spacecraft could not be seen from Earth, even with a telescope
+        - kind: paragraph
+          ask: Why might the author add the grandmother? Use both texts.
+          sample: >-
+            The history reports that "Hundreds of millions of people around the world watched the first steps
+            live." The story shows just one of those families. The grandmother "had grown up riding in a
+            horse-drawn cart," so her presence shows how fast the world had changed in one lifetime. This
+            invented character helps readers feel how amazing the moment was.
+          rubric: explains how the grandmother shows change or feeling; links it to a fact; quotes both texts.
+          evidence:
+            - had grown up riding in a horse-drawn cart
+            - Hundreds of millions of people around the world watched the first steps live.
+
+- id: e19-roman-aqueduct
+  title: Water for the City
+  genre: paired
+  texts:
+    - title: "Lucius and the Stone Arches"
+      kind: story
+      text: |
+        Lucius lived in a crowded apartment building in Rome, and every morning his mother sent him to the neighborhood fountain with a clay jar. The water poured from the mouth of a stone lion, clear and cold, and it never stopped running, day or night.
+
+        One afternoon, Lucius followed an old water engineer out past the city walls. They walked beside a row of tall stone arches that marched across the valley like giants. "The water travels for miles," the engineer said, "and the slope does all the work."
+
+        Lucius pressed his ear against a warm stone pillar and imagined he could hear the river rushing high above his head. That evening, he floated in a warm pool at the public baths and thought about the long journey of every drop.
+    - title: How Rome Got Its Water
+      kind: history
+      text: |
+        Ancient Rome needed huge amounts of fresh water, and the Romans solved this problem by building aqueducts. The first one, the Aqua Appia, was completed in 312 BCE. Over the following centuries, the city built about eleven major aqueducts.
+
+        An aqueduct was a channel that carried water from springs or rivers in the hills to the city. It sloped very gently, so gravity kept the water moving. Most of each channel ran underground, but where the land dipped, the Romans built rows of stone arches to cross valleys.
+
+        Inside Rome, the water flowed into public fountains, where people filled jars for their homes. It also supplied the great public baths, with hot, warm, and cold pools. Because the water ran constantly, the fountains overflowed and helped wash the streets clean.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which detail appears in both texts?
+          choices:
+            - The fountain water never stopped flowing.
+            - The aqueducts used pumps to move water.
+            - Every home had its own fountain.
+            - The arches were built inside the city.
+          evidence:
+            - it never stopped running, day or night
+            - Because the water ran constantly
+        - kind: write
+          ask: What does the history add about where the water ran?
+          sample: The story shows only the tall arches, but the history says most of each channel ran underground.
+          rubric: notes that the story shows arches while the history says most channels were underground.
+          evidence:
+            - a row of tall stone arches that marched across the valley
+            - Most of each channel ran underground
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - imagined he could hear the river rushing
+            - It sloped very gently
+            - the Romans built rows of stone arches
+            - people filled jars for their homes
+          evidence: imagined he could hear the river rushing
+        - kind: paragraph
+          ask: Why might the author invent the old engineer?
+          sample: >-
+            The history explains that each channel "sloped very gently, so gravity kept the water moving."
+            In the story, the engineer says the same idea aloud when he tells Lucius "the slope does all
+            the work." A made-up character lets the author explain a real fact through conversation. This
+            makes the science feel like part of an adventure instead of a list of facts.
+          rubric: says the engineer delivers a real fact in a lively way; quotes both texts.
+          evidence:
+            - the slope does all the work
+            - sloped very gently, so gravity kept the water moving
+
+- id: e20-polynesian-voyage
+  title: Steering by the Stars
+  genre: paired
+  texts:
+    - title: "Hina Reads the Sea"
+      kind: story
+      text: |
+        Hina had never been so far from land. For many days, the great double canoe had sailed north across the open Pacific, carrying her family, coconuts, taro plants, pigs, and chickens. Her grandfather, the navigator, hardly ever slept.
+
+        Each night, he pointed to the stars rising at the edge of the sea and named them one by one. During the day, he crouched in the hull and felt the long ocean swells rolling beneath the canoe. "The sea talks to us," he said, "if we pay attention."
+
+        One evening, Hina spotted a white seabird flying low over the waves in one steady direction. Her grandfather smiled and turned the canoe to follow it. When an island finally rose from the morning haze, Hina believed she had found it all by herself.
+    - title: Finding Hawaii by Stars
+      kind: history
+      text: |
+        Many centuries ago, Polynesian voyagers made some of the longest ocean journeys in early human history. Sailing in double-hulled canoes, they settled islands across a vast area of the Pacific. One of these was Hawaii, which lies thousands of miles from any continent.
+
+        These navigators used no compass or maps. Instead, they memorized where certain stars rose and set along the horizon. They also studied ocean swells, which could reveal the direction of land. Some seabirds fly out to sea to fish in the morning and return to land at night, so navigators watched their flight.
+
+        The voyagers carried taro, pigs, dogs, and chickens to start life on new islands. Navigators passed down their knowledge from teacher to student through memory and practice.
+  pages:
+    - focus: what the story keeps and what it invents
+      questions:
+        - kind: mc
+          ask: Which clue for finding land do both texts mention?
+          choices:
+            - the rising points of the stars
+            - a compass and a paper map
+            - the color of the water
+            - the sound of distant drums
+          evidence:
+            - he pointed to the stars rising at the edge of the sea
+            - they memorized where certain stars rose and set along the horizon
+        - kind: write
+          ask: Why does the grandfather follow the seabird in the evening?
+          sample: The history says some seabirds return to land at night, so a bird flying in the evening can point the way to an island.
+          rubric: explains that seabirds fly back to land at night, using the history.
+          evidence:
+            - Her grandfather smiled and turned the canoe to follow it.
+            - return to land at night, so navigators watched their flight
+        - kind: quote
+          ask: Which words come from the story writer's imagination?
+          choices:
+            - Hina believed she had found it all by herself
+            - They also studied ocean swells
+            - These navigators used no compass or maps.
+            - they settled islands across a vast area of the Pacific
+          evidence: Hina believed she had found it all by herself
+        - kind: paragraph
+          ask: How does the story show learning passed down? Use both.
+          sample: >-
+            The history says navigators "passed down their knowledge from teacher to student through memory
+            and practice." The story invents a grandfather and granddaughter to show this happening on one
+            canoe. He names the stars "one by one" and tells Hina that the sea talks if she pays attention.
+            The story turns a general fact into a warm scene between two people.
+          rubric: links the grandfather teaching Hina to the history's fact about passing down knowledge; quotes both.
+          evidence:
+            - named them one by one
+            - passed down their knowledge from teacher to student through memory and practice

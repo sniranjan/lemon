@@ -1,0 +1,92 @@
+{
+  "id": "EN-R7-C-001",
+  "subject": "english",
+  "level": "R7",
+  "section": "C",
+  "part": 1,
+  "sheet_type": "word_roots",
+  "page_number": 101,
+  "variant": 1,
+  "seed": 8458616240789384755,
+  "title": "Roots: bene and chron",
+  "parent_tip": "Split each word into root and rest. What do they add up to?",
+  "items": [
+    {
+      "kind": "roots",
+      "roots": [
+        {
+          "root": "bene",
+          "origin": "Latin",
+          "meaning": "good, well",
+          "example": "benefit"
+        },
+        {
+          "root": "chron",
+          "origin": "Greek",
+          "meaning": "time",
+          "example": "chronological"
+        }
+      ],
+      "review": false
+    },
+    {
+      "kind": "match",
+      "n": 1,
+      "words": [
+        "beneficial",
+        "benefactor",
+        "synchronize",
+        "chronometer"
+      ],
+      "meanings": [
+        "a person who gives money or help",
+        "helpful or good for you",
+        "a very exact clock",
+        "make things happen at the same time"
+      ],
+      "answers": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ]
+    },
+    {
+      "kind": "fill",
+      "n": 2,
+      "bank": [
+        "benefactor",
+        "beneficial",
+        "chronometer",
+        "synchronize"
+      ],
+      "sentences": [
+        {
+          "before": "Sleep is ",
+          "after": " for growing bodies and busy minds.",
+          "answer": "beneficial"
+        },
+        {
+          "before": "The swimmers ",
+          "after": " their kicks so the team moves as one.",
+          "answer": "synchronize"
+        }
+      ]
+    },
+    {
+      "kind": "explain",
+      "n": 3,
+      "root": "bene",
+      "meaning": "good, well",
+      "explain_word": "beneficiary",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. beneficial B · benefactor A · synchronize D · chronometer C",
+    "2. beneficial · synchronize",
+    "3. Sample: A beneficiary is a person who receives something good, such as a gift or help, because bene means good. Full answer: links bene (good) to a person who gets something good or helpful."
+  ],
+  "new_words": [],
+  "review_words": []
+}
