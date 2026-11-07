@@ -34,6 +34,11 @@ _SYLLABLES = {
 }
 
 
+def paragraphs(text: str) -> list[str]:
+    """Paragraphs split by a blank line, whitespace inside each normalized."""
+    return [" ".join(p.split()) for p in re.split(r"\n\s*\n", text.strip())]
+
+
 def words(text: str) -> list[str]:
     return _WORD.findall(text)
 

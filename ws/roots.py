@@ -23,10 +23,10 @@ from functools import lru_cache
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, ConfigDict, model_validator
+from pydantic import model_validator
 
 from .content import CONTENT_DIR
-from .models import Level
+from .models import Level, StrictModel
 from .plan import LevelPlan, PagePlan
 
 BLANK = "___"
@@ -35,27 +35,23 @@ MAX_MEANING = 44      # characters: a matching meaning stays on one line at 20px
 MAX_SENTENCE = 70     # characters: a fill-in sentence (with its blank line) takes at most two lines at 20px
 
 
-class _Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-
-class RootWord(_Strict):
+class RootWord(StrictModel):
     word: str
     meaning: str
 
 
-class RootSentence(_Strict):
+class RootSentence(StrictModel):
     word: str
     text: str
 
 
-class Explain(_Strict):
+class Explain(StrictModel):
     word: str
     sample: str
     rubric: str
 
 
-class Root(_Strict):
+class Root(StrictModel):
     root: str
     origin: Literal["Latin", "Greek"]
     meaning: str

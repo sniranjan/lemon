@@ -22,13 +22,15 @@ import re
 from collections import Counter
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import Field, model_validator
 
+from .content import find_by_id
 from .content import level_passages as load_passages
 from .content import wordparts
-from .models import Level
+from .models import Level, StrictModel
 from .plan import LevelPlan, PagePlan
 from .readability import fk_grade, words
+from .readability import paragraphs as split_paragraphs
 from .spreads import spread_queue
 from .sheet_types._common import page_rules
 
@@ -38,11 +40,7 @@ MAX_CHOICE = 40    # characters: a choice never wraps
 MAX_TITLE = 22     # characters: the title stays on one line in the header
 
 
-class _Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-
-class Question(_Strict):
+class Question(StrictModel):
     ask: str
     choices: list[str] | None = None    # multiple choice: the first is right
     sample: str | None = None           # written answer: a sample answer for the answer key
@@ -62,7 +60,7 @@ class Question(_Strict):
         return "mc" if self.choices else "write"
 
 
-class QuestionSet(_Strict):
+class QuestionSet(StrictModel):
     focus: str
     questions: list[Question]
     # words or phrases printed in bold on this page (Otters Reading: clue words, figurative language);
@@ -70,7 +68,7 @@ class QuestionSet(_Strict):
     words: list[str] = Field(default_factory=list)
 
 
-class Passage(_Strict):
+class Passage(StrictModel):
     id: str
     title: str
     text: str
@@ -80,10 +78,10 @@ class Passage(_Strict):
 
     @property
     def paragraphs(self) -> list[str]:
-        return [" ".join(p.split()) for p in re.split(r"\n\s*\n", self.text.strip())]
+        return split_paragraphs(self.text)
 
 
-class WordPart(_Strict):
+class WordPart(StrictModel):
     built: str
     affix: str
     base: str | None = None             # prefix/suffix words: the known word
@@ -99,10 +97,7 @@ def section_passages(level: str, section: str) -> list[Passage]:
 
 
 def passage_by_id(level: str, section: str, pid: str) -> Passage:
-    for p in section_passages(level, section):
-        if p.id == pid:
-            return p
-    raise KeyError(f"no passage {pid!r} in content/passages/{level}/{section}.yaml")
+    return find_by_id(section_passages(level, section), pid, "passage", level, section)
 
 
 def word_parts(level: str) -> list[WordPart]:

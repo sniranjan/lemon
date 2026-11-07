@@ -30,10 +30,13 @@ from __future__ import annotations
 import re
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, model_validator
+from pydantic import model_validator
 
+from .content import find_by_id
 from .content import level_passages as load_passages
+from .models import StrictModel
 from .readability import fk_grade, sentences, words
+from .readability import paragraphs as split_paragraphs
 
 LETTERS = "ABCD"
 MAX_TITLE = 24       # characters: the passage title stays on one line in the header
@@ -52,11 +55,7 @@ _LINE_REF = re.compile(r"\blines? (\d+)(?:\s*(?:and|–|-|to)\s*(\d+))?", re.I)
 _STANZA_REF = re.compile(r"\bstanza (\d+)", re.I)
 
 
-class _Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-
-class SpreadQuestion(_Strict):
+class SpreadQuestion(StrictModel):
     kind: Literal["mc", "quote", "write", "paragraph", "organizer"]
     ask: str
     choices: list[str] | None = None
@@ -89,13 +88,13 @@ class SpreadQuestion(_Strict):
         return [self.evidence] if isinstance(self.evidence, str) else list(self.evidence)
 
 
-class SpreadSet(_Strict):
+class SpreadSet(StrictModel):
     focus: str
     look_for: str | None = None
     questions: list[SpreadQuestion]
 
 
-class SubText(_Strict):
+class SubText(StrictModel):
     """One of two texts read side by side (genre `paired`): e.g. a story set in the past, then a
     historical account of the same time."""
     title: str
@@ -104,10 +103,10 @@ class SubText(_Strict):
 
     @property
     def paragraphs(self) -> list[str]:
-        return [" ".join(p.split()) for p in re.split(r"\n\s*\n", self.text.strip())]
+        return split_paragraphs(self.text)
 
 
-class SpreadPassage(_Strict):
+class SpreadPassage(StrictModel):
     id: str
     title: str
     # speech/essay/letter: Whales Reading rhetoric. Penguins Reading adds: argument (a made-up writer's case),
@@ -132,7 +131,7 @@ class SpreadPassage(_Strict):
     def paragraphs(self) -> list[str]:
         if self.texts is not None:
             return [para for t in self.texts for para in t.paragraphs]
-        return [" ".join(p.split()) for p in re.split(r"\n\s*\n", self.text.strip())]
+        return split_paragraphs(self.text)
 
     @property
     def full_text(self) -> str:
@@ -157,10 +156,7 @@ def section_spreads(level: str, section: str) -> list[SpreadPassage]:
 
 
 def spread_by_id(level: str, section: str, pid: str) -> SpreadPassage:
-    for p in section_spreads(level, section):
-        if p.id == pid:
-            return p
-    raise KeyError(f"no passage {pid!r} in content/passages/{level}/{section}.yaml")
+    return find_by_id(section_spreads(level, section), pid, "passage", level, section)
 
 
 def _flat(text: str) -> str:
