@@ -91,7 +91,7 @@ const LOOK: Record<string, Look> = {
   cubs: {
     mascot: "/pictures/bear.svg",
     color: "teal",
-    blurb: "Reading passages aloud with expression, plus two-digit adding and subtracting.",
+    blurb: "Reading passages aloud with expression, plus adding and subtracting up to 1,000.",
     preview: { kind: "read", lines: ["Mia sees a robin in the tree.", "It sings a happy song.", "It finds a worm to eat."], picture: "robin" },
   },
   foxes: {

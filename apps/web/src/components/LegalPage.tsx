@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 // (worker/shop.ts, src/lib/replay.ts, the Google tag in index.html).
 
 export const CONTACT = "hello@paperlessons.com";
-const UPDATED = "November 6, 2026";
+const UPDATED = "November 7, 2026";
 
 export const LEGAL_PATHS = ["/privacy", "/terms", "/refunds"] as const;
 export type LegalPath = (typeof LEGAL_PATHS)[number];

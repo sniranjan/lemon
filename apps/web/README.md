@@ -80,7 +80,6 @@ site and order-page URLs, which contain download tokens.
 ## Data
 
 ```bash
-npx wrangler d1 execute paperlessons --remote --command "select * from waitlist order by id desc limit 20"
 npx wrangler d1 execute paperlessons --remote --command "select level, email, amount_cents, downloads, created_at from orders order by id desc limit 20"
 ```
 

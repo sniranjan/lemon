@@ -258,7 +258,7 @@ function Footer() {
           )}
         </div>
         <p className="text-balance text-center text-sm font-semibold text-ink/60">
-          © {new Date().getFullYear()} Madras Labs LLC · Made with care for little learners
+          © {new Date().getFullYear()} Madras Labs LLC · Made with care for curious kids
         </p>
       </div>
     </footer>
