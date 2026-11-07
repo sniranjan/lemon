@@ -37,7 +37,7 @@ export type Level = Look & {
 export const SUBJECT_LABEL: Record<Subject, string> = {
   reading: "Reading",
   math: "Math",
-  pencil: "Pencil",
+  pencil: "Pencil skills",
 };
 
 /** Which subject a mini-sheet shows (its header label). */

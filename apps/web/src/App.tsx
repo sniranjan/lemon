@@ -169,7 +169,7 @@ const SUBJECTS = [
   {
     icon: Pencil,
     color: "bg-grape",
-    title: "Pencil warm-ups",
+    title: "Pencil skills",
     text: "In the first two levels: coloring and drawing lines from a dot to a picture, so little hands are ready to write.",
   },
 ];
@@ -197,7 +197,7 @@ function Subjects() {
 const FAQ = [
   {
     q: "What age is this for?",
-    a: "Ages 3 to 12. The work runs about two grades ahead of school, so a first grader works on third-grade reading and math, one small step at a time. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
+    a: "Ages 3 to 12. The work runs about two grades ahead of school, so a first grader works on third-grade reading and math, one small step at a time. Ages 3, 4 and 5 have two levels each (a child on pace does both in a year), and from age 6 there is one level a year. Start where your child feels confident, even if that's a little below their age. Easy is good: it builds the habit.",
   },
   {
     q: "Do I need a color printer?",

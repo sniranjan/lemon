@@ -109,7 +109,7 @@ for (const level of ladder) {
       product = await stripe("POST", "/products", {
         id,
         name: `${level.public_name}: the whole level (printable PDF)`,
-        description: `${level.public_title}. Reading and math, age ${level.age}. Printable PDF pages plus answer keys.`,
+        description: `${level.public_title}. ${level.strands.pencil ? "Reading, math and pencil skills" : "Reading and math"}, age ${level.age}. Printable PDF pages plus answer keys.`,
         metadata: { level: level.slug },
         tax_code: "txcd_10302000", // e-books / digital publications (only used if Stripe Tax is on)
       });
