@@ -9,7 +9,8 @@ text at the 20px floor, so the end of a longer passage continues at the top of t
 second time the reading page says what to look for ("Read it again. Look for ...").
 
 Content: `content/passages/<level>/<section>.yaml`, a list of passages, each with `id`, `title`,
-`text` (paragraphs split by a blank line), `genre` (`nonfiction` or `story`) and `pages`: the
+`text` (paragraphs split by a blank line), `genre` (`nonfiction` or `story`; Whales Reading adds `speech`,
+`essay` and `letter`, named on the page) and `pages`: the
 question sets. A set has a `focus`, an optional `look_for` (the second reading's prompt) and its
 `questions`. Question kinds:
 
@@ -109,12 +110,15 @@ class SubText(_Strict):
 class SpreadPassage(_Strict):
     id: str
     title: str
-    # Penguins Reading adds: argument (a made-up writer's case), poem (stanzas split by a blank line,
-    # one line of verse per line, numbered on the page) and paired (two `texts`, no `text`).
-    genre: Literal["nonfiction", "story", "argument", "poem", "paired"]
+    # speech/essay/letter: Whales Reading rhetoric. Penguins Reading adds: argument (a made-up writer's case),
+    # poem (stanzas split by a blank line, one line of verse per line, numbered on the page) and paired (two
+    # `texts`, no `text`).
+    genre: Literal["nonfiction", "story", "speech", "essay", "letter", "argument", "poem", "paired"]
     text: str | None = None
     texts: list[SubText] | None = None
     pages: list[SpreadSet]
+    story: str | None = None     # a story told in installments (Lions Reading C): its name ...
+    part: int | None = None      # ... and this installment's number, shown on the reading page
 
     @model_validator(mode="after")
     def _body(self) -> SpreadPassage:
@@ -216,6 +220,10 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
     lo_sets, hi_sets = rules.get("sets_per_passage", [1, 2])
     if not lo_sets <= len(p.pages) <= hi_sets:
         out.append(f"passage {p.id}: has {len(p.pages)} question sets (needs {lo_sets}–{hi_sets})")
+    if (p.story is None) != (p.part is None):
+        out.append(f"passage {p.id}: an installment needs both story and part")
+    if rules.get("needs_story") and p.story is None:
+        out.append(f"passage {p.id}: this section's passages are installments of one story (story, part)")
     genres = rules.get("genres")
     if genres and p.genre not in genres:
         out.append(f"passage {p.id}: genre {p.genre} isn't one of {genres}")
@@ -273,21 +281,36 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                 if not any(in_text(ev, q.choices[0]) or in_text(q.choices[0], ev) for ev in q.quotes):
                     out.append(f"{where}: a quote question's evidence must be its right choice")
             if q.kind == "paragraph":
+                # Whales Reading analytical paragraphs: rules `paragraph_sentences`, `paragraph_quotes`
+                # (how many quotes the sample needs) and `rubric_parts` (labels the rubric must name)
+                s_lo, s_hi = rules.get("paragraph_sentences", [3, 4])
                 n_sent = len(sentences(q.sample))
-                if not 3 <= n_sent <= 4:
-                    out.append(f"{where}: paragraph sample has {n_sent} sentences (needs 3–4)")
+                if not s_lo <= n_sent <= s_hi:
+                    out.append(f"{where}: paragraph sample has {n_sent} sentences (needs {s_lo}–{s_hi})")
+                if rules.get("max_rubric") and len(q.rubric) > rules["max_rubric"]:
+                    out.append(f"{where}: rubric is {len(q.rubric)} characters (max {rules['max_rubric']})")
                 quoted = _QUOTED.findall(q.sample)
                 if not quoted:
                     out.append(f"{where}: paragraph sample must quote the text in double quotes")
+                elif len(quoted) < rules.get("paragraph_quotes", 1):
+                    out.append(f"{where}: paragraph sample quotes the text {len(quoted)} time(s) "
+                               f"(needs {rules['paragraph_quotes']})")
                 for qt in quoted:
                     if p.genre == "poem":
                         qt = qt.replace(" / ", " ")      # a quote across two lines of a poem: "glittering / as if"
                     if not in_text(qt.strip(" ,."), p.full_text):
                         out.append(f"{where}: sample quotes {qt!r}, which is not in the passage")
+                for part in rules.get("rubric_parts", []):
+                    if f"{part}:" not in q.rubric:
+                        out.append(f"{where}: the rubric must name '{part}:'")
             if q.kind == "organizer":
                 for h in q.heads:
                     if len(h) > MAX_HEAD:
                         out.append(f"{where}: organizer head {h!r} is longer than {MAX_HEAD}")
+                if "paragraph_quotes" in rules:
+                    for qt in (m for v in q.samples for m in _QUOTED.findall(v)):
+                        if not in_text(qt.strip(" ,."), p.full_text):
+                            out.append(f"{where}: organizer sample quotes {qt!r}, which is not in the passage")
     return out
 
 
@@ -473,6 +496,8 @@ def build_spread_items(ctx) -> tuple[str, list[dict], list[str] | None]:
                 "again": k > 0, "look_for": s.look_for if k > 0 else None,
                 "paragraphs": first, "turn": bool(rest)}
         head.update(reading_extra(p))
+        if p.story:   # an installment (Lions Reading C): only then, so other levels' items are unchanged
+            head.update(story=p.story, part=p.part)
         return p.title, [head], None
     items: list[dict] = [{"kind": "questions", "passage": p.id, "set": k, "side": "questions",
                           "genre": p.genre, "page_before": ctx.spec.page - 1, "continued": rest}]
@@ -518,6 +543,8 @@ def check_spread_sheet(sheet) -> list[str]:
     if head["side"] == "read":
         if head["paragraphs"] != reading_split(p)[0] or any(head.get(f) != v for f, v in reading_extra(p).items()):
             out.append(f"passage text on the sheet doesn't match {p.id}")
+        if (head.get("story"), head.get("part")) != (p.story, p.part):
+            out.append(f"story and part on the sheet don't match {p.id}")
         if len(sheet.items) != 1 or sheet.answer_key:
             out.append("a reading page holds only the passage")
         return out

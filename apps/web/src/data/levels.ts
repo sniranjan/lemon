@@ -91,8 +91,8 @@ const LOOK: Record<string, Look> = {
   cubs: {
     mascot: "/pictures/bear.svg",
     color: "teal",
-    blurb: "Reading passages aloud with expression, plus two-digit adding and subtracting.",
-    preview: { kind: "read", lines: ["I see a big bear.", "The bear can swim.", "I like the bear."], picture: "bear" },
+    blurb: "Reading passages aloud with expression, plus adding and subtracting up to 1,000.",
+    preview: { kind: "read", lines: ["Mia sees a robin in the tree.", "It sings a happy song.", "It finds a worm to eat."], picture: "robin" },
   },
   foxes: {
     mascot: "/brand/fox.svg",
@@ -103,7 +103,7 @@ const LOOK: Record<string, Look> = {
   owls: {
     mascot: "/pictures/owl.svg",
     color: "grape",
-    blurb: "First chapter books, plus long multiplication and long division.",
+    blurb: "Longer stories told in chapters, plus long multiplication and long division.",
     preview: { kind: "facts", subject: "math", lines: ["23 × 14 =", "156 ÷ 6 =", "48 × 25 =", "912 ÷ 8 ="] },
   },
   otters: {

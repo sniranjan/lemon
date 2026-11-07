@@ -74,13 +74,12 @@ Preview PDFs must not show internal level codes or anything referencing other pr
 ## Session replay
 
 OpenReplay (self-hosted at `replay.cloudhut.io`), started in `src/lib/replay.ts`, on paperlessons.com only.
-Nothing is masked on purpose (text, inputs, network payloads), so replays show emails typed into the
-waitlist and order-page URLs, which contain download tokens.
+Nothing is masked on purpose (text, inputs, network payloads), so replays show anything typed on the
+site and order-page URLs, which contain download tokens.
 
 ## Data
 
 ```bash
-npx wrangler d1 execute paperlessons --remote --command "select * from waitlist order by id desc limit 20"
 npx wrangler d1 execute paperlessons --remote --command "select level, email, amount_cents, downloads, created_at from orders order by id desc limit 20"
 ```
 

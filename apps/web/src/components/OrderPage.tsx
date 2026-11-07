@@ -65,7 +65,7 @@ export function OrderPage() {
       }
       if (stop) return;
       if (!token) {
-        setState({ kind: "error", message: "We couldn't find that order. If you were charged, reply to your payment receipt and we'll sort it out." });
+        setState({ kind: "error", message: "We couldn't find that order. If you were charged, email hello@paperlessons.com and we'll sort it out." });
         return;
       }
       const r = await fetch(`/api/orders/${token}`);
@@ -113,6 +113,15 @@ export function OrderPage() {
           <>
             <h1 className="text-3xl font-bold">Hmm, something's missing</h1>
             <p className="mt-3 text-lg text-ink/80">{state.message}</p>
+            {!state.message.includes("@") && (
+              <p className="mt-2 text-lg text-ink/80">
+                Need help? Email{" "}
+                <a className="font-bold text-coral underline underline-offset-2" href="mailto:hello@paperlessons.com">
+                  hello@paperlessons.com
+                </a>
+                .
+              </p>
+            )}
             <Button asChild variant="coral" size="pill" className="mt-6">
               <a href="/">Back to paperlessons</a>
             </Button>

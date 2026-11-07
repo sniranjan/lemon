@@ -1,0 +1,60 @@
+{
+  "id": "EN-R8-A-001",
+  "subject": "english",
+  "level": "R8",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 15503518381757650369,
+  "title": "The Audition",
+  "parent_tip": "Ask how the passage feels: calm, tense, playful? Which words?",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "a01-the-audition",
+      "set": 0,
+      "side": "read",
+      "genre": "story",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [
+        {
+          "n": 1,
+          "text": "Priya arrived twenty minutes early on the morning of the audition, which she told herself was discipline and which was, in truth, nervousness wearing an elaborate disguise.",
+          "cont": false
+        },
+        {
+          "n": 2,
+          "text": "The cello lay inside its case like a sleeping animal, its varnish catching the gray light from the window. For three months she had practiced the same sixteen measures of a difficult sonata, until the notes no longer resembled music but a staircase she climbed every evening, counting each step so that she would not stumble.",
+          "cont": false
+        },
+        {
+          "n": 3,
+          "text": "Mr. Okafor appeared in the doorway holding a coffee mug and a clipboard. He was a tall man who moved deliberately, as if the entire world were a narrow hallway crowded with instruments he might accidentally bump. \"You're early,\" he observed, and it was not a question.",
+          "cont": false
+        },
+        {
+          "n": 4,
+          "text": "\"I wanted to warm up,\" Priya answered, but her voice emerged thinner than she intended, a reed instead of a bow.",
+          "cont": false
+        },
+        {
+          "n": 5,
+          "text": "When she began, the first phrase faltered. Her bow skidded across the lowest string with a sound like a door complaining on its hinges, and embarrassment crept up her neck. She stopped, breathed, and started again.",
+          "cont": false
+        },
+        {
+          "n": 6,
+          "text": "This time she abandoned the counting. She allowed the melody to lean forward the way it seemed to want to, slightly faster during the climb and gentler at the summit, and for eight measures she forgot the clipboard entirely.",
+          "cont": false
+        }
+      ],
+      "turn": true
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

@@ -153,6 +153,21 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   `penguins-reading-level.pdf` (202 pages) and `penguins-reading-level-answers.pdf` (51 pages; `answers_height: 910`).
   Preview pages 1–2 and 161–162 (two whole spreads); `ws preview penguins` builds `out/previews/penguins.pdf`
   (10 pages, with Penguins Math; not uploaded).
+- **Lions Reading (R8, our own level, grade 8 reading for age 11, 200 pages)** (2026-11-06): `syllabus/english/R8.yaml`:
+  A Close Reading 1–50 (figurative and connotative meaning, tone, analogies, allusions to well-known myths and tales;
+  RL.8.4, L.8.4a, L.8.5a/c) · B Weighing Arguments 51–100 (claims, relevant/irrelevant and sufficient evidence, point of
+  view and how the writer answers the other side; RI.8.8, RI.8.6) · C Growing Characters 101–150 (one original story,
+  "The Tower Clock", in 20 installments; theme and character development, dialogue that drives decisions; RL.8.2,
+  RL.8.3) · D Explain Why 151–200 (4–5-sentence evidence paragraphs; part 1 plans in Claim / Evidence / Reasoning boxes;
+  RL.8.1, RI.8.1, W.8.1, W.8.9). Codes checked on thecorestandards.org. 59 original texts (`content/passages/R8/`,
+  220–347 words, Flesch-Kincaid 7.68–9.36), all on Pandas' `passage_spread` (no new sheet type): optional `story`/`part`
+  and rules `needs_story`, `paragraph_sentences`, `max_rubric` added, Pandas output byte-identical. A Letter page holds
+  ~220–250 words of grade 8 text at 20px, so texts are shorter than the plan's "~600 words"; the story runs ~6,500 words.
+  Draft records `syllabus/drafts/R8-passages.md`, `R8-story.md` from `scripts/r8_drafts.py` (approved by the orchestrator
+  under the user's delegation). Tests `tests/test_lions_reading.py`. Verify 0 errors, 0 warnings; booklets per section +
+  `lions-reading-level.pdf` (202 pages) and `lions-reading-level-answers.pdf` (32 pages); no internal codes in PDF text.
+  Preview pages 1–2 and 151–152 (two whole spreads); `ws preview lions` builds `out/previews/lions.pdf` (10 pages, with
+  Lions Math; not uploaded).
 - **Lions Math (M8, our own level, grade 8 work for age 11, 200 pages)** (2026-11-06): `syllabus/math/M8.yaml`:
   A Exponents and Square Roots 1–30 (8.EE.1–2, 8.NS.2) · B Very Big and Very Small 31–50 (8.EE.3–4) · C Multi-Step
   Equations 51–100 (8.EE.7a–b) · D Lines and Slope 101–150 (8.EE.5–6, 8.F.1–4) · E Two Equations at Once 151–180
@@ -163,8 +178,8 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   system story frames `content/math/systems.yaml` (copy in test fixtures). Letters a, m, r never used (2a, m8, r5
   would read as codes). Child text ≥ 20px (`min_child_px`). Tests `tests/test_math_M8.py`. All 200 pages verify with
   0 errors and 0 warnings; booklets per section + `lions-math-level.pdf` (202 pages) and
-  `lions-math-level-answers.pdf` (16 pages); no internal codes in PDF text. Free preview pages 11, 61, 131, 181 wait
-  for Lions Reading.
+  `lions-math-level-answers.pdf` (16 pages); no internal codes in PDF text. Free preview pages 11, 61, 131, 181 are in
+  `ws preview lions` with Lions Reading.
 - **Pandas Math (M6, our own level, grade 6 work for age 9, 200 pages)** (2026-11-06): `syllabus/math/M6.yaml`:
   A Dividing Fractions 1–30 (6.NS.1) · B Ratios and Rates 31–70 (6.RP.1, 6.RP.2, 6.RP.3a/b/d) · C Percents 71–100
   (6.RP.3c) · D Below Zero 101–130 (6.NS.5–8) · E Letters for Numbers 131–170 (6.EE.1, 6.EE.2a/c) · F One-Step
@@ -295,7 +310,24 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Situations in `content/math/algebra_stories.yaml` (copy in test fixtures). Variables are never `a` and the
   general quadratic formula is never printed (digit + a would read as an internal code). Tests
   `tests/test_math_M9.py` (19 goldens). Verify 0 errors, 0 warnings; booklets per section + `whales-math-level.pdf`
-  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 wait for Whales Reading.
+  (202 pages) and `whales-math-level-answers.pdf` (27 pages). Preview pages 1, 41, 121, 181 (built with Whales Reading).
+- **Whales Reading (R9, our own level, grade 9 reading for age 12, 200 pages)** (2026-11-06): `syllabus/english/R9.yaml`:
+  A The Writer's Choices 1–50 (RL.9-10.5, RL.9-10.4: flashback, frame, in medias res, held-back facts, slowed or
+  compressed time, reverse order, circular endings; connotation and tone) · B Characters in Conflict 51–100
+  (RL.9-10.3) · C The Art of Persuasion 101–150 (RI.9-10.6, RI.9-10.8, W.9-10.9b: speeches, essays and letters on school start
+  times, libraries, inventing, volunteering, a park meadow, gardens, journals…, each with one deliberate weak spot in
+  its reasoning) · D Prove It in a Paragraph 151–200 (RL.9-10.1, W.9-10.1, W.9-10.9a: part 1 plans with a
+  Claim / Evidence / Explanation organizer, part 2 picks the strongest quote; then a 9-line paragraph). Codes checked
+  on thecorestandards.org. 52 original passages (`content/passages/R9/`, 240–287 words, Flesch-Kincaid 8.58–10.42),
+  each read on two spreads; drafts `syllabus/drafts/R9-passages.md` (`scripts/r9_drafts.py`, approved by the
+  orchestrator under the user's delegation); `scripts/r9_check.py` checks a section before generating. No new sheet
+  type: Pandas' `passage_spread`, extended with genres `speech` / `essay` / `letter` (named on the page) and rules
+  `paragraph_sentences`, `paragraph_quotes`, `rubric_parts` (Pandas output byte-identical). A Letter page at 20px holds
+  ~265 words of grade 9 prose, so passages stay near 260–290 words (≤ ~40 words end on the questions page). Tests
+  `tests/test_whales_reading.py` (5 goldens). Verify 0 errors, 0 warnings; booklets per section +
+  `whales-reading-level.pdf` (202 pages) and `whales-reading-level-answers.pdf` (38 pages, samples + rubrics); no
+  internal codes in PDF text. Free preview pages 101–102 and 171–172 (two whole spreads): `ws preview whales` builds `out/previews/whales.pdf`
+  (10 pages; not uploaded).
 
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in

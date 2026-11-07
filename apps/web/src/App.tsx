@@ -17,18 +17,18 @@ const bySlug = (s: string) => LEVELS.find((l) => l.slug === s)!;
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-clip">
+    <div className="flex min-h-screen flex-col overflow-x-clip">
       <Nav />
       {isOrderPage() ? (
-        <main>
+        <main className="flex-1">
           <OrderPage />
         </main>
       ) : isLegalPath(location.pathname) ? (
-        <main>
+        <main className="flex-1">
           <LegalPage path={location.pathname} />
         </main>
       ) : (
-        <main>
+        <main className="flex-1">
           <Hero />
           <HowItWorks />
           <Library />
@@ -121,13 +121,13 @@ const STEPS = [
     icon: Printer,
     color: "bg-sky",
     title: "Get the whole level",
-    text: "Hundreds of pages in one PDF, every page in order. Print it all at once, or a week's worth at a time. Black and white is fine.",
+    text: "Hundreds of pages as ready-to-print PDFs, every page in order, with answer keys for you. Print it all at once, or a week's worth at a time. Black and white is fine.",
   },
   {
     icon: Sun,
     color: "bg-sun",
     title: "A little every day",
-    text: "A few pages, about ten minutes. When three pages in a row feel easy, they're ready for the next step.",
+    text: "A few pages, about 10 to 20 minutes. When three pages in a row feel easy, your child is ready for the next step.",
   },
 ];
 
@@ -164,7 +164,7 @@ const SUBJECTS = [
     icon: Calculator,
     color: "bg-coral",
     title: "Math",
-    text: "From counting to ten all the way to times tables, fractions, percents and linear equations, one small step at a time.",
+    text: "From counting to ten all the way to times tables, fractions, percents, equations and first quadratics, one small step at a time.",
   },
   {
     icon: Pencil,
@@ -201,7 +201,7 @@ const FAQ = [
   },
   {
     q: "Do I need a color printer?",
-    a: "No. Every sheet is designed to read clearly in black and white. The few color-word sheets are marked so you can print just those in color.",
+    a: "No. Every sheet is designed to read clearly in black and white. The few pages that teach color words are listed on the cover of the reading PDF, so you can print just those in color if you like.",
   },
   {
     q: "How long does a day take?",
@@ -257,8 +257,8 @@ function Footer() {
             </button>
           )}
         </div>
-        <p className="text-sm font-semibold text-ink/60">
-          © {new Date().getFullYear()} Madras Labs LLC · Made with care for little learners
+        <p className="text-balance text-center text-sm font-semibold text-ink/60">
+          © {new Date().getFullYear()} Madras Labs LLC · Made with care for curious kids
         </p>
       </div>
     </footer>

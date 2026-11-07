@@ -54,7 +54,7 @@
 
 - slug: cubs
   public_name: Cubs
-  public_title: Reading aloud and two-digit adding and subtracting
+  public_title: Reading aloud and adding and subtracting to 1,000
   content_grade: "2"
   age: 5
   strands: { english: 2A, math: M2 }
@@ -68,7 +68,7 @@
 
 - slug: owls
   public_name: Owls
-  public_title: Chapter books, long multiplication and division
+  public_title: Stories in chapters, long multiplication and division
   content_grade: "4"
   age: 7
   strands: { english: R4, math: M4 }

@@ -1,0 +1,964 @@
+# Whales Reading, section B "Characters in Conflict" (pages 51–100): how complex characters with
+# conflicting motivations develop, interact with others, and move the plot and theme forward
+# (RL.9-10.3, RL.9-10.1, RL.9-10.2). Original stories (ours).
+# Schema: ws/spreads.py (passage_spread). b01–b12 serve 2 spreads (two question sets), b13 serves 1.
+# mc: 4 choices, the first is right. quote: 4 sentences copied exactly from the text, the first is right.
+# write: 2 lines + sample. paragraph: 3–4 sentences, sample quotes the text in double quotes + rubric.
+# `evidence`: words copied exactly from the passage.
+
+- id: b01-the-captains-armband
+  title: The Captain's Armband
+  genre: story
+  text: |
+    Jalen had worn the captain's armband for only three weeks, but he had already learned that it
+    weighed far more than the strip of yellow fabric suggested. On Thursday, after practice, Coach
+    Rivera asked him to stay behind and help decide who should start at forward in Saturday's
+    championship.
+
+    The obvious answer made his chest ache. Marcus, his best friend since kindergarten, had started
+    every game that season and had talked about this final for months. But Ana, who had joined the
+    team in September, was faster, passed more generously, and had scored in each of the last four
+    games.
+
+    Jalen stared at the clipboard while the coach waited. He imagined Marcus's face when the lineup was
+    posted, and then he imagined the rest of the team, who had trusted him to think about all of them
+    rather than only his oldest friend. A captain, he had been told on the first day, plays for the people beside him as well as for himself.
+
+    "Ana should start," he said finally, "but I want to tell Marcus myself before anyone sees the list."
+
+    That evening he found Marcus practicing free throws in his driveway and explained the decision
+    without excuses. Marcus was silent for a long moment, bouncing the ball harder than necessary. Then
+    he asked whether Jalen would help him practice his first touch, because he intended to earn the
+    position back before next season.
+
+    On Saturday, Marcus came off the bench in the second half and set up the winning goal, and Jalen
+    understood that loyalty and fairness had not been enemies after all.
+  pages:
+    - focus: conflicting motivations
+      questions:
+        - kind: mc
+          ask: Which two things pull Jalen in different directions?
+          choices:
+            - his loyalty to Marcus and his duty to the whole team
+            - his love of soccer and his fear of the coach
+            - his wish to play forward and his wish to rest
+            - his homework and the championship game
+          evidence: who had trusted him to think about all of them rather than only his oldest friend
+        - kind: quote
+          ask: Which sentence best shows that choosing Ana is painful for Jalen?
+          choices:
+            - The obvious answer made his chest ache.
+            - Jalen stared at the clipboard while the coach waited.
+            - Marcus was silent for a long moment, bouncing the ball harder than necessary.
+            - On Saturday, Marcus came off the bench in the second half and set up the winning goal
+          evidence: The obvious answer made his chest ache.
+        - kind: paragraph
+          ask: Why does Jalen insist on telling Marcus the news himself? Use a quote.
+          sample: >-
+            Jalen tells Marcus himself because he wants to stay a loyal friend even while making a fair
+            choice. He says, "I want to tell Marcus myself before anyone sees the list," so Marcus will
+            not be embarrassed. He then explains "without excuses," which shows he respects Marcus too
+            much to hide behind the coach.
+          rubric: a claim about Jalen's reason, an exact quote, and how it shows both loyalty and fairness
+          evidence: I want to tell Marcus myself before anyone sees the list
+    - focus: how characters change and move the plot
+      look_for: how Marcus responds, and what it changes
+      questions:
+        - kind: mc
+          ask: How does Marcus's response move the plot forward?
+          choices:
+            - He works to improve and helps the team win the final.
+            - He quits the team, so Jalen must play forward.
+            - He asks the coach to make him captain instead.
+            - He refuses to speak to Jalen for the season.
+          evidence: set up the winning goal
+        - kind: write
+          ask: What does "bouncing the ball harder than necessary" show about Marcus?
+          sample: It shows he is upset and frustrated even though he does not say it out loud.
+          evidence: bouncing the ball harder than necessary
+        - kind: paragraph
+          ask: What theme does the last sentence suggest? Explain with evidence from the story.
+          sample: >-
+            The last sentence suggests that being fair and being a loyal friend can work together. Jalen
+            fears they are opposites, but he learns that "loyalty and fairness had not been enemies after
+            all." Because he was honest, Marcus stayed on the team and "set up the winning goal."
+          rubric: a theme stated as a full idea, a quote from the ending, and how the events support it
+          evidence: loyalty and fairness had not been enemies after all
+
+- id: b02-the-front-page
+  title: The Front Page
+  genre: story
+  text: |
+    Rosa had edited the school newspaper for only a month when she finally found the story she had been
+    waiting for: the cafeteria was quietly throwing away nearly forty untouched lunches every day. She had
+    counted the trays herself for a week, interviewed the cooks, and photographed the overflowing bins behind the kitchen after every lunch period.
+
+    The problem was sitting in her notebook. Her best friend, Imani, worked as a student helper in the
+    cafeteria, and during the interview she had said, laughing, that the menu was so bad even the pigeons
+    refused the leftovers. The quote was funny, vivid, and exactly the kind of line that would make the
+    whole school read the article.
+
+    Rosa knew that the cooks would read it, too. They had always been kind to Imani, and Imani had spoken
+    carelessly, never imagining that a joke between friends would appear in print beneath her name.
+
+    "A real reporter prints what people say," insisted Graham, the assistant editor, tapping the page. "If
+    you cut it, you're protecting your friend instead of telling the truth."
+
+    Rosa considered his argument seriously, because part of it was correct. That evening she called
+    Imani, read her the quote, and asked whether she wanted to say something more accurate about the waste. She suspected that Graham would call the decision cowardly.
+
+    Imani was quiet for a moment, then explained that most students simply had too little time to eat.
+    Rosa printed that quote instead, along with her counts and photographs, and within two weeks the
+    principal had added ten minutes to every lunch period.
+  pages:
+    - focus: conflicting loyalties
+      questions:
+        - kind: mc
+          ask: Which two duties pull Rosa in different directions?
+          choices:
+            - printing the truth and protecting her friend
+            - finishing her homework and running the paper
+            - pleasing the principal and pleasing Graham
+            - taking photographs and writing headlines
+          evidence: you're protecting your friend instead of telling the truth
+        - kind: quote
+          ask: Which sentence best shows why Imani's joke tempts Rosa?
+          choices:
+            - The quote was funny, vivid, and exactly the kind of line that would make the whole school read the article.
+            - Rosa knew that the cooks would read it, too.
+            - Rosa considered his argument seriously, because part of it was correct.
+            - Imani was quiet for a moment, then explained that most students simply had too little time to eat.
+          evidence: The quote was funny, vivid, and exactly the kind of line that would make the whole school read the article.
+        - kind: write
+          ask: Why would printing Imani's joke be unfair to her?
+          sample: She said it carelessly as a joke between friends and never imagined it would be printed under her name.
+          evidence: never imagining that a joke between friends would appear in print beneath her name
+    - focus: how a choice moves the plot
+      look_for: how Rosa answers Graham's argument
+      questions:
+        - kind: mc
+          ask: How does Rosa's choice move the plot forward?
+          choices:
+            - Imani gives a truer quote that leads to a real change.
+            - Graham quits the newspaper staff in protest.
+            - The cooks refuse to speak to Rosa again.
+            - The article about the waste is never printed.
+          evidence: the principal had added ten minutes to every lunch period
+        - kind: write
+          ask: Why does the author say Rosa thought "part of it was correct"?
+          sample: It shows she takes Graham's point about truth seriously, so her final choice is thoughtful, not just loyal.
+          evidence: because part of it was correct
+        - kind: paragraph
+          ask: What does the story suggest about honesty and loyalty? Use a quote.
+          sample: >-
+            The story suggests that a person can be honest and loyal at the same time. Instead of cutting
+            the quote secretly, Rosa "asked whether she wanted to say something more accurate." The truer
+            quote helps everyone, because the principal "added ten minutes to every lunch period."
+          rubric: a claim about honesty and loyalty, an exact quote, and how Rosa's choice supports it
+          evidence: asked whether she wanted to say something more accurate
+
+- id: b03-grandpas-workshop
+  title: Grandpa's Workshop
+  genre: story
+  text: |
+    Ravi had announced at dinner that he would build his mother a bookshelf for her birthday, entirely
+    by himself, and the announcement had felt wonderful until he stood in his grandfather's workshop
+    surrounded by boards that refused to be square. Every shelf he attached leaned slightly, so the
+    whole frame looked as though it were bowing politely to the door.
+
+    His grandfather sat on a stool in the corner, sanding a chair leg and saying nothing, which Ravi
+    found more irritating than any advice could have been. One question would probably solve the
+    problem, but asking felt like admitting that his boast at dinner had been empty.
+
+    For two afternoons he measured, cut, and measured again, and for two afternoons the shelves tilted.
+    On the third afternoon he set down the saw, sat on an overturned bucket, and pressed his palms
+    against his eyes.
+
+    "When I was your age, I built a table with three short legs," his grandfather remarked without
+    looking up. "My father let me struggle for a week before I asked him for help."
+
+    Ravi lowered his hands. His grandfather held out a metal tool shaped like a capital L. He showed
+    Ravi how to check every corner before driving a single nail, explaining that even skilled builders
+    trusted the tool more than their eyes.
+
+    The finished bookshelf stood perfectly straight. When his mother asked whether he had really built
+    it alone, Ravi hesitated, then told her that he had built it with help, and he found that the truth
+    made the gift feel larger rather than smaller.
+  pages:
+    - focus: pride and the need for help
+      questions:
+        - kind: mc
+          ask: Why doesn't Ravi ask his grandfather for help at first?
+          choices:
+            - Asking would mean admitting his boast was empty.
+            - He thinks his grandfather cannot build furniture.
+            - He wants to finish before his mother gets home.
+            - His grandfather has told him not to ask.
+          evidence: asking felt like admitting that his boast at dinner had been empty
+        - kind: quote
+          ask: Which sentence best shows that Ravi has reached the end of his patience?
+          choices:
+            - On the third afternoon he set down the saw, sat on an overturned bucket, and pressed his palms against his eyes.
+            - The finished bookshelf stood perfectly straight.
+            - Ravi lowered his hands.
+            - His grandfather held out a metal tool shaped like a capital L.
+          evidence: On the third afternoon he set down the saw, sat on an overturned bucket, and pressed his palms against his eyes.
+        - kind: paragraph
+          ask: Why does the grandfather tell the story about his table? Use a quote.
+          sample: >-
+            The grandfather tells the story so Ravi will see that needing help is normal, not shameful.
+            He admits he once "built a table with three short legs," so even he made mistakes. He adds
+            that he struggled "for a week before I asked him for help," which gently invites Ravi to ask.
+          rubric: a claim about the grandfather's purpose, an exact quote, and how it connects to Ravi's pride
+          evidence: built a table with three short legs
+    - focus: how the character changes
+      look_for: how Ravi's idea of getting help changes
+      questions:
+        - kind: mc
+          ask: What does Ravi's answer to his mother show?
+          choices:
+            - He now sees accepting help as nothing to hide.
+            - He wants his grandfather to take all the credit.
+            - He is ashamed of how the bookshelf looks.
+            - He plans to build the next shelf alone.
+          evidence: the truth made the gift feel larger rather than smaller
+        - kind: write
+          ask: What does the image of the frame "bowing politely to the door" suggest?
+          sample: It shows, in a gentle and funny way, that the shelves were crooked and leaning.
+          evidence: bowing politely to the door
+        - kind: paragraph
+          ask: How does the grandfather's silence move the plot forward? Use evidence.
+          sample: >-
+            The grandfather's silence forces Ravi to struggle until he is ready to listen. While he sits
+            "saying nothing," Ravi keeps trying alone and fails for two afternoons. Only when Ravi "pressed
+            his palms against his eyes" does the grandfather speak, so his help arrives at the right moment.
+          rubric: a claim about the silence, an exact quote, and how it leads to the turning point
+          evidence: sanding a chair leg and saying nothing
+
+- id: b04-the-garden-plot
+  title: The Garden Plot
+  genre: story
+  text: |
+    During her first month in the new town, Hana kept the key to her old house on a string around her
+    neck, even though it no longer opened anything. Every evening she called her friends back home and
+    listened to them describe the bakery, the river trail, and the noisy lunch table, nodding as though
+    she could still see it all.
+
+    Her neighbor Dev, who was her age and apparently incapable of embarrassment, invited her three times
+    to help at the community garden behind the library. Three times Hana declined, explaining politely
+    that she was busy, although she suspected they both knew she was only sitting at her window.
+
+    Part of her was curious about the garden, about the town, and even about Dev, who whistled badly and
+    waved at everyone. Another part worried that enjoying this place would mean betraying the one she
+    had lost.
+
+    On a gray Saturday, Dev knocked again, holding two pairs of gloves. "The tomatoes need staking
+    before the rain," he said, "and I honestly can't do it alone."
+
+    Hana went, mostly because refusing a fourth time felt rude. She spent the morning tying vines to
+    wooden stakes while Dev explained which neighbor grew the enormous squash and which one sang to her beans. By noon her knees were muddy, and she had laughed twice without noticing.
+
+    That night she called her friends as usual, but this time she had something to describe, too.
+    Before bed, she took the key off its string and set it in a small dish on her dresser, where she
+    could still see it every morning.
+  pages:
+    - focus: conflicting feelings
+      questions:
+        - kind: mc
+          ask: Which two feelings pull against each other inside Hana?
+          choices:
+            - longing for her old home and curiosity about the new one
+            - anger at Dev and fear of the rain
+            - boredom with school and love of cooking
+            - pride in her garden and envy of her neighbors
+          evidence: Part of her was curious about the garden
+        - kind: quote
+          ask: Which sentence best explains why Hana keeps refusing Dev?
+          choices:
+            - Another part worried that enjoying this place would mean betraying the one she had lost.
+            - Hana went, mostly because refusing a fourth time felt rude.
+            - That night she called her friends as usual, but this time she had something to describe, too.
+            - On a gray Saturday, Dev knocked again, holding two pairs of gloves.
+          evidence: Another part worried that enjoying this place would mean betraying the one she had lost.
+        - kind: paragraph
+          ask: What does the old house key stand for, and how does its place change? Use a quote.
+          sample: >-
+            The key stands for Hana's attachment to her old home. At first she wears it even though it
+            "no longer opened anything," which shows she cannot let go. At the end she sets it "in a small
+            dish on her dresser," so she still honors the past without carrying it everywhere.
+          rubric: a claim about the symbol, quotes from the start and the end, and what the change shows
+          evidence: no longer opened anything
+    - focus: how another character presses on the conflict
+      look_for: how Dev's invitations change Hana
+      questions:
+        - kind: mc
+          ask: Why does Dev's fourth invitation finally work?
+          choices:
+            - He asks for real help, so saying no would feel rude.
+            - He offers to pay Hana for her work in the garden.
+            - Hana's parents insist that she go with him.
+            - Her old friends tell her to stop calling them.
+          evidence: refusing a fourth time felt rude
+        - kind: write
+          ask: How is Hana's evening call different at the end of the story?
+          sample: This time she has her own new things to talk about instead of only listening to her friends.
+          evidence: this time she had something to describe, too
+        - kind: paragraph
+          ask: What theme about change does Hana's story suggest? Use evidence.
+          sample: >-
+            The story suggests that loving a new place does not mean forgetting an old one. Hana fears
+            that enjoying the town would be "betraying the one she had lost." Yet after the garden she still
+            calls her friends, and now "she had something to describe, too," so both places can belong to her.
+          rubric: a theme as a full idea, an exact quote, and how Hana's change supports it
+          evidence: she had something to describe, too
+
+- id: b05-the-swim-team-secret
+  title: The Swim Team Secret
+  genre: story
+  text: |
+    Zara had made Olivia promise not to tell anyone that she was planning to quit the swim team, and
+    Olivia had promised without hesitation, because keeping each other's secrets was what best friends
+    did. Zara had been swimming since she was five, and her mother attended every meet with a stopwatch
+    and a notebook of times.
+
+    The trouble began on Tuesday, when Zara's mother stopped Olivia outside the pool and asked, with a
+    worried smile, whether something was bothering Zara. Her daughter had been skipping morning
+    practices, she explained, and refused to talk about it at dinner.
+
+    Olivia felt the promise tighten around her like a too-small coat. She could repeat Zara's secret and
+    ease her mother's worry, or she could protect her friend's trust and watch the misunderstanding grow
+    worse every day.
+
+    "I think you should ask Zara directly," Olivia said carefully, "and maybe ask what she would enjoy
+    doing instead." The answer was true and betrayed nothing, yet she walked home feeling as though she
+    had balanced on a narrow beam.
+
+    That evening she messaged Zara and told her exactly what had happened. She added that she would keep
+    the promise, but that she thought Zara's mother deserved to hear the truth from Zara herself. Then she stared at the ceiling for a long time, wondering whether she had done too much or too little.
+
+    Two days later, Zara reported that the conversation had been awkward, tearful, and ultimately a
+    relief. Her mother had confessed that she mostly loved watching her daughter do brave things, and
+    they had agreed that the climbing gym downtown might count.
+  pages:
+    - focus: conflicting loyalties
+      questions:
+        - kind: mc
+          ask: What conflict does Olivia face?
+          choices:
+            - keeping her promise versus easing a worried mother
+            - quitting the team versus pleasing her own coach
+            - winning a race versus letting Zara win
+            - going to the pool versus going to the climbing gym
+          evidence: She could repeat Zara's secret and ease her mother's worry
+        - kind: quote
+          ask: Which sentence best shows how the promise feels to Olivia?
+          choices:
+            - Olivia felt the promise tighten around her like a too-small coat.
+            - Zara had been swimming since she was five, and her mother attended every meet with a stopwatch and a notebook of times.
+            - That evening she messaged Zara and told her exactly what had happened.
+            - Two days later, Zara reported that the conversation had been awkward, tearful, and ultimately a relief.
+          evidence: Olivia felt the promise tighten around her like a too-small coat.
+        - kind: write
+          ask: How does Olivia's answer to Zara's mother stay loyal to both of them?
+          sample: She tells the truth without revealing the secret by suggesting the mother ask Zara herself.
+          evidence: I think you should ask Zara directly
+    - focus: how a choice moves the plot
+      look_for: how Olivia's choice moves the story
+      questions:
+        - kind: mc
+          ask: What happens because Olivia messages Zara?
+          choices:
+            - Zara has an honest talk with her mother.
+            - Zara's mother learns the secret from Olivia.
+            - Zara returns to every morning practice.
+            - Olivia decides to quit the swim team too.
+          evidence: the conversation had been awkward, tearful, and ultimately a relief
+        - kind: write
+          ask: What does "balanced on a narrow beam" suggest about Olivia's feelings?
+          sample: It suggests her answer felt risky, as if one wrong word would make her fall to one side.
+          evidence: balanced on a narrow beam
+        - kind: paragraph
+          ask: What does the story suggest about being a loyal friend? Use a quote.
+          sample: >-
+            The story suggests that a loyal friend keeps secrets but also pushes a friend toward honesty.
+            Olivia believes "keeping each other's secrets was what best friends did," and she keeps her
+            word. Still, she tells Zara that her mother "deserved to hear the truth from Zara herself."
+          rubric: a claim about loyalty, an exact quote, and how Olivia's actions support it
+          evidence: deserved to hear the truth from Zara herself
+
+- id: b06-the-spare-gear
+  title: The Spare Gear
+  genre: story
+  text: |
+    Samira's robotics team had spent six weeks building a machine that could stack plastic rings faster
+    than any robot in the regional competition, and on the morning of the final round they were ranked
+    first. While her teammates ran a last test, Samira wandered past the practice tables and noticed a
+    small blue gear lying beneath a chair.
+
+    She recognized it at once, because it belonged to the lifting arm of their closest rivals' robot, and
+    without it their machine would barely raise a ring above the floor. Their captain, a tall boy named
+    Elliot, was crawling under a different table, searching frantically.
+
+    Samira closed her hand around the gear. Nobody had seen her pick it up, and she reasoned that she
+    had not caused the problem and was not obligated to solve it. Her team had worked too hard to lose
+    to a robot that, at this moment, could not even lift.
+
+    Then she remembered her very first competition, when a stranger from another school had lent her
+    team a battery charger and refused to accept their thanks. That stranger had understood something
+    about winning that Samira was only beginning to see.
+
+    She walked over and held out the gear. Elliot stared at it, then at her, and thanked her so loudly
+    that half the room turned around, and two of his teammates rushed over to reattach the arm.
+
+    Elliot's team won the final round by four points. Samira's teammates groaned, but at the awards
+    ceremony Elliot asked whether the two teams might build something together next season, and
+    Samira, somewhat to her own surprise, said yes.
+  pages:
+    - focus: wanting to win versus fairness
+      questions:
+        - kind: mc
+          ask: What does Samira want that pulls against returning the gear?
+          choices:
+            - She wants her own team to win the competition.
+            - She wants to use the gear on her own robot.
+            - She wants Elliot to leave the competition room.
+            - She wants to join Elliot's team instead.
+          evidence: Her team had worked too hard to lose
+        - kind: quote
+          ask: Which sentence best shows Samira making an excuse to keep the gear?
+          choices:
+            - Nobody had seen her pick it up, and she reasoned that she had not caused the problem and was not obligated to solve it.
+            - Samira closed her hand around the gear.
+            - She walked over and held out the gear.
+            - Elliot's team won the final round by four points.
+          evidence: Nobody had seen her pick it up, and she reasoned that she had not caused the problem and was not obligated to solve it.
+        - kind: paragraph
+          ask: Why does the memory in paragraph 4 change Samira's mind? Use a quote.
+          sample: >-
+            The memory reminds Samira that real competitors help each other. A stranger once "lent her
+            team a battery charger" and wanted nothing back. She realizes he "understood something about
+            winning" that she is just learning, so she decides to be that kind of competitor.
+          rubric: a claim about the memory's effect, an exact quote, and how it links to her choice
+          evidence: lent her team a battery charger
+    - focus: how a choice advances plot and theme
+      look_for: what Samira's choice leads to
+      questions:
+        - kind: mc
+          ask: How does Samira's choice advance the plot?
+          choices:
+            - Elliot's team competes and wins, which leads to a partnership.
+            - Samira's team wins the final round by four points.
+            - Samira is removed from the competition.
+            - Elliot decides to quit robotics for good.
+          evidence: build something together next season
+        - kind: write
+          ask: Why might the author have Samira's team lose after she helps?
+          sample: It shows that doing the right thing can have a real cost, which makes her choice mean more.
+          evidence: Elliot's team won the final round by four points.
+        - kind: paragraph
+          ask: What theme about winning does the story develop? Use evidence.
+          sample: >-
+            The story suggests that winning fairly matters more than winning at any cost. Samira's team
+            loses, and her teammates "groaned," so honesty has a price. Yet Elliot asks if they "might
+            build something together next season," which shows her fairness earned something lasting.
+          rubric: a theme as a full idea, an exact quote, and how the ending supports it
+          evidence: build something together next season
+
+- id: b07-half-the-credit
+  title: Half the Credit
+  genre: story
+  text: |
+    When Ms. Alvarez assigned partners for the history project, Nia was paired with Grant, who sat in the
+    back row and seemed to treat every assignment as an optional suggestion. For two weeks Nia
+    researched the old canal, wrote the report, and painted the poster, while Grant contributed one
+    paragraph and a series of apologetic shrugs. Every time she asked about his section, he promised it was nearly finished.
+
+    The night before the presentation, Nia rehearsed what she would tell Ms. Alvarez. She would explain,
+    calmly and with evidence, that she had done nearly everything and that an equal grade would be
+    unfair. The speech felt justified, even satisfying, every time she practiced it in the mirror.
+
+    The next morning Grant arrived early, holding a folder. Inside were six careful sketches of the
+    canal locks, drawn from photographs in the library, and a note explaining that his family was moving
+    at the end of the month and that he had been packing boxes every evening.
+
+    "I know it isn't enough," he said quietly, "but I didn't want you to present it alone."
+
+    Nia looked at the sketches, which were better than anything on her poster, and felt her rehearsed
+    speech dissolve. She still believed fairness mattered, but she was no longer certain she had
+    understood the whole situation, or whether anyone ever could from the outside.
+
+    They presented together, and Grant's sketches became the part of the project the class asked the
+    most questions about. Afterward, Nia told Ms. Alvarez honestly who had written the report, and she
+    also told her who had drawn the best pictures.
+  pages:
+    - focus: motivations and new information
+      questions:
+        - kind: mc
+          ask: Why does Nia plan to speak to Ms. Alvarez?
+          choices:
+            - She believes an equal grade would be unfair.
+            - She wants Grant moved to another class.
+            - She wants more time to finish the poster.
+            - She thinks the canal topic is too hard.
+          evidence: an equal grade would be unfair
+        - kind: quote
+          ask: Which sentence best shows that Nia enjoys feeling wronged?
+          choices:
+            - The speech felt justified, even satisfying, every time she practiced it in the mirror.
+            - The next morning Grant arrived early, holding a folder.
+            - Nia looked at the sketches, which were better than anything on her poster, and felt her rehearsed speech dissolve.
+            - They presented together, and Grant's sketches became the part of the project the class asked the most questions about.
+          evidence: The speech felt justified, even satisfying, every time she practiced it in the mirror.
+        - kind: write
+          ask: What new information changes how Nia sees Grant?
+          sample: She learns his family is moving and he has been packing every evening, yet he still drew sketches.
+          evidence: his family was moving at the end of the month
+    - focus: how the character develops
+      look_for: how Nia balances fairness and kindness
+      questions:
+        - kind: mc
+          ask: How has Nia changed by the end of the story?
+          choices:
+            - She stays honest but now sees Grant more fully.
+            - She gives Grant all the credit for the report.
+            - She refuses to present the project with Grant.
+            - She decides that fairness no longer matters.
+          evidence: she was no longer certain she had understood the whole situation
+        - kind: write
+          ask: What does "a series of apologetic shrugs" suggest about Grant early on?
+          sample: It suggests he felt sorry but did not explain, so Nia thought he simply did not care.
+          evidence: a series of apologetic shrugs
+        - kind: paragraph
+          ask: How does Nia's last choice show that she values both fairness and kindness? Use a quote.
+          sample: >-
+            Nia's last choice is both fair and kind because she tells the whole truth. She tells Ms.
+            Alvarez "who had written the report," so her own work is credited. She also tells her "who had
+            drawn the best pictures," which gives Grant the credit he earned.
+          rubric: a claim about both values, an exact quote, and how the choice shows each one
+          evidence: who had drawn the best pictures
+
+- id: b08-the-blue-ribbon
+  title: The Blue Ribbon
+  genre: story
+  text: |
+    When Jonah's science fair project won a blue ribbon, the whole family seemed to rearrange itself
+    around his achievement. Their mother taped the ribbon to the refrigerator, their father called both
+    grandmothers, and Eli, who was three years older and had never won anything at the science fair,
+    discovered that he could smile and resent something at exactly the same time.
+
+    The project was a small water filter built from sand, gravel, and charcoal in a plastic bottle. Eli
+    privately thought it was simple, although he remembered, uncomfortably, that Jonah had tested it
+    forty-one times and recorded every result in a notebook.
+
+    That week Eli grew quietly unpleasant. He corrected Jonah's pronunciation at dinner and left the
+    room whenever the ribbon was mentioned. He even announced that he had better things to do than attend the district fair, where the filter would compete again.
+
+    On the morning of the district fair, Jonah knocked on Eli's door holding the notebook. He confessed
+    that he was terrified of explaining his results to judges he had never met, and he asked whether
+    Eli would listen while he practiced.
+
+    Eli almost said no. Instead he sat on the edge of the bed and listened to his brother explain each
+    trial, asking the hard questions a judge might ask, until Jonah could answer every one without
+    looking at the notebook. Then, to everyone's surprise, Eli climbed into the car for the fair.
+
+    Jonah won second place that afternoon. On the drive home, he handed the new ribbon to Eli, and Eli,
+    embarrassed and oddly moved, taped it to his own bedroom door.
+  pages:
+    - focus: jealousy and love
+      questions:
+        - kind: mc
+          ask: Which phrase best describes Eli's feelings about Jonah's first ribbon?
+          choices:
+            - proud and jealous at the same time
+            - completely happy for his brother
+            - worried that the filter was unsafe
+            - bored by the whole science fair
+          evidence: he could smile and resent something at exactly the same time
+        - kind: quote
+          ask: Which sentence best shows Eli acting on his jealousy?
+          choices:
+            - He corrected Jonah's pronunciation at dinner and left the room whenever the ribbon was mentioned.
+            - Eli almost said no.
+            - Jonah won second place that afternoon.
+            - The project was a small water filter built from sand, gravel, and charcoal in a plastic bottle.
+          evidence: He corrected Jonah's pronunciation at dinner and left the room whenever the ribbon was mentioned.
+        - kind: write
+          ask: Why does the author mention that Jonah tested the filter "forty-one times"?
+          sample: It shows Jonah earned the ribbon through hard work, so Eli's resentment is not really fair.
+          evidence: forty-one times
+    - focus: how the character changes
+      look_for: the moment Eli's feelings begin to shift
+      questions:
+        - kind: mc
+          ask: What does Jonah's request do for the plot?
+          choices:
+            - It gives Eli a chance to choose kindness over jealousy.
+            - It causes Jonah to lose at the district fair.
+            - It makes their parents angry at Eli.
+            - It reveals that Eli built the filter himself.
+          evidence: he asked whether Eli would listen while he practiced
+        - kind: write
+          ask: What does Eli taping the ribbon to his door show?
+          sample: It shows he now shares in Jonah's success and is proud of his brother.
+          evidence: taped it to his own bedroom door
+        - kind: paragraph
+          ask: How does Eli change from the beginning of the story to the end? Use two quotes.
+          sample: >-
+            Eli changes from a resentful brother to a proud one. At first he can "smile and resent
+            something at exactly the same time," so his jealousy hides behind politeness. By the end he
+            feels "embarrassed and oddly moved" and keeps the ribbon, showing that love has won out.
+          rubric: a claim about the change, a quote from the start and one from the end, and what caused it
+          evidence: embarrassed and oddly moved
+
+- id: b09-pepper-on-the-porch
+  title: Pepper on the Porch
+  genre: story
+  text: |
+    Every afternoon for a year, Carmen had walked Pepper, a gray-muzzled beagle who belonged to Mr.
+    Haddad, her elderly neighbor across the street. He paid her five dollars a walk, but Carmen suspected
+    that he valued the company more than the exercise, since he always had lemonade waiting when they
+    returned.
+
+    In May, Carmen's cousin invited her to spend July at a sailing camp on the lake, a place she had
+    dreamed about since she first saw photographs of white sails crowding the harbor. The invitation
+    thrilled her until she realized that Pepper would have no one to walk him for an entire month, and that Mr. Haddad's knees could no longer manage the hill.
+
+    She told herself that Mr. Haddad could hire someone else, and that a dog did not truly care who held
+    the leash. Yet when she imagined Pepper waiting by the screen door each afternoon, the excuse sounded
+    thin even inside her own head.
+
+    For several days she avoided the subject, walking Pepper in silence and leaving before the lemonade
+    was poured. Mr. Haddad noticed, and on Friday he asked gently whether something had changed.
+
+    Carmen told him everything at once, the camp and the sails and the guilt. Mr. Haddad laughed softly
+    and said that he had nearly missed a few adventures himself out of politeness.
+
+    Together they made a plan. Carmen trained her younger neighbor, Luis, on Pepper's favorite route,
+    and she promised to send Mr. Haddad a postcard every week. In August she returned sunburned and full
+    of stories, and Pepper greeted her as though she had been gone for a year.
+  pages:
+    - focus: two wishes in conflict
+      questions:
+        - kind: mc
+          ask: Which two wishes pull Carmen in different directions?
+          choices:
+            - going to sailing camp and staying loyal to Pepper
+            - earning more money and spending less time outside
+            - learning to sail and learning to train dogs
+            - visiting her cousin and avoiding the lake
+          evidence: Pepper would have no one to walk him for an entire month
+        - kind: quote
+          ask: Which sentence best shows Carmen doubting her own excuse?
+          choices:
+            - Yet when she imagined Pepper waiting by the screen door each afternoon, the excuse sounded thin even inside her own head.
+            - Together they made a plan.
+            - Carmen told him everything at once, the camp and the sails and the guilt.
+            - Mr. Haddad noticed, and on Friday he asked gently whether something had changed.
+          evidence: Yet when she imagined Pepper waiting by the screen door each afternoon, the excuse sounded thin even inside her own head.
+        - kind: paragraph
+          ask: Why does Carmen leave before the lemonade is poured? Use a quote.
+          sample: >-
+            Carmen leaves early because she feels guilty and does not want to face Mr. Haddad. The lemonade
+            stands for their friendship, since he "valued the company more than the exercise." By "leaving
+            before the lemonade was poured," she avoids the conversation she is dreading.
+          rubric: a claim about her reason, an exact quote, and how the lemonade connects to her guilt
+          evidence: leaving before the lemonade was poured
+    - focus: how another character helps resolve the conflict
+      look_for: how Mr. Haddad helps settle the conflict
+      questions:
+        - kind: mc
+          ask: How does Mr. Haddad's response move the story forward?
+          choices:
+            - It frees Carmen to plan a solution instead of hiding.
+            - It makes Carmen cancel her plans for camp.
+            - It ends their friendship for the summer.
+            - It convinces Carmen to adopt Pepper herself.
+          evidence: Together they made a plan.
+        - kind: write
+          ask: What does Mr. Haddad mean when he says he nearly missed adventures "out of politeness"?
+          sample: He means he once almost gave up exciting chances just to avoid letting others down.
+          evidence: nearly missed a few adventures himself out of politeness
+        - kind: paragraph
+          ask: What theme does the plan at the end suggest? Use evidence.
+          sample: >-
+            The plan suggests that loyalty and new adventures do not have to cancel each other out.
+            Carmen "trained her younger neighbor, Luis," so Pepper is cared for. She also sends "a postcard
+            every week," which keeps her connected to Mr. Haddad while she is away.
+          rubric: a theme as a full idea, an exact quote, and how the plan supports it
+          evidence: trained her younger neighbor, Luis
+
+- id: b10-the-long-way-home
+  title: The Long Way Home
+  genre: story
+  text: |
+    On the last day before winter break, Kofi's friends decided to celebrate at the arcade downtown, and
+    they insisted that he come along. Ordinarily he would have agreed instantly, but he had promised his
+    mother that he would meet his little sister, Ama, at the elementary school gate and walk her home.
+
+    His mother worked late on Fridays, and Ama, who was seven, was not allowed to walk the six blocks
+    alone. Kofi explained this to his friends, and they groaned with theatrical despair, as though he
+    had announced that he was moving to the moon. Kofi laughed along with them, but he did not change his answer, even when they began listing the games he would miss.
+
+    "Just bring her," said Daniel, his oldest friend, "or tell your mom you forgot, and Ama can wait in
+    the office for an hour."
+
+    Kofi pictured his sister sitting on the plastic office chair, swinging her legs and watching the
+    door. He also pictured his friends trading tokens and jokes without him, and that image surprised
+    him with its force.
+
+    He walked to the school gate. Ama ran toward him with a paper snowflake she had made, talking so
+    quickly about glitter that he could barely follow her, and the disappointment he had been carrying
+    began, slowly, to lighten.
+
+    That evening Daniel called to report that the arcade had been crowded and loud. Then, after a pause,
+    he asked whether Kofi and Ama wanted to go sledding with everyone on Saturday, since the hill behind
+    the library would surely be perfect after the snow.
+  pages:
+    - focus: a promise versus friends
+      questions:
+        - kind: mc
+          ask: Why is Kofi's choice hard for him?
+          choices:
+            - He wants to be with friends but promised to walk Ama home.
+            - He does not know the way to the arcade downtown.
+            - His mother has told him not to see Daniel.
+            - Ama wants to go to the arcade by herself.
+          evidence: he had promised his mother that he would meet his little sister
+        - kind: quote
+          ask: Which sentence best shows Kofi's fear of being left out?
+          choices:
+            - He also pictured his friends trading tokens and jokes without him, and that image surprised him with its force.
+            - He walked to the school gate.
+            - That evening Daniel called to report that the arcade had been crowded and loud.
+            - His mother worked late on Fridays, and Ama, who was seven, was not allowed to walk the six blocks alone.
+          evidence: He also pictured his friends trading tokens and jokes without him, and that image surprised him with its force.
+        - kind: write
+          ask: How does Daniel make Kofi's choice harder?
+          sample: He suggests Kofi lie to his mother or leave Ama waiting, which makes breaking the promise tempting.
+          evidence: tell your mom you forgot
+    - focus: how the choice changes things
+      look_for: what Kofi's choice changes for him
+      questions:
+        - kind: mc
+          ask: Which detail shows Kofi's disappointment starting to fade?
+          choices:
+            - Ama runs to him talking excitedly about her snowflake.
+            - Daniel reports that the arcade was crowded and loud.
+            - His mother comes home from work early.
+            - His friends groan when he explains his promise.
+          evidence: the disappointment he had been carrying began, slowly, to lighten
+        - kind: write
+          ask: Why does Daniel's phone call at the end matter?
+          sample: It shows Kofi's choice did not cost him his friend, because Daniel invites both him and Ama.
+          evidence: he asked whether Kofi and Ama wanted to go sledding with everyone
+        - kind: paragraph
+          ask: How does the author show that keeping the promise was worth it? Use a quote.
+          sample: >-
+            The author shows the promise was worth it through what Kofi gains. When Ama runs to him, his
+            disappointment "began, slowly, to lighten." Later Daniel invites "Kofi and Ama" sledding, so
+            Kofi keeps both his promise and his friends.
+          rubric: a claim, an exact quote, and how the ending rewards Kofi's choice
+          evidence: began, slowly, to lighten
+
+- id: b11-above-the-tree-line
+  title: Above the Tree Line
+  genre: story
+  text: |
+    Nadia had been planning the summit for a year, ever since she first saw a photograph of her father
+    standing on the bare rock at the top of Gray Eagle Peak, grinning beneath a sky so brilliantly blue that it looked painted onto the photograph. This summer, he had promised, the two of them would stand there together.
+
+    They left the trailhead before sunrise and climbed steadily through the pines. By midmorning, however,
+    her father had begun stopping every few minutes, rubbing his left knee and insisting cheerfully that
+    he was only admiring the view.
+
+    Above the tree line the wind sharpened, and the summit appeared at last, a gray point that seemed close
+    enough to touch. Nadia felt her whole body lean toward it. She also noticed that her father was walking
+    more slowly with every switchback, and that his cheerful explanations had stopped.
+
+    "Go on ahead," he said, lowering himself onto a boulder with a careful sigh, "because the trail is clearly marked, and I will happily wait right here for you."
+
+    For a long moment Nadia stood between the boulder and the summit, measuring the distance to each. She
+    could reach the top in under an hour, but she would be standing there alone, photographing a view she
+    had imagined sharing, while her father sat in the wind pretending he was fine.
+
+    She sat down beside him instead and unwrapped their sandwiches. They watched a hawk circle below them.
+    On the long walk down, her father leaned on her shoulder and began planning, with surprising energy and considerable detail, a slower, gentler route for the following summer.
+  pages:
+    - focus: conflicting wishes
+      questions:
+        - kind: mc
+          ask: Which two wishes pull against each other inside Nadia?
+          choices:
+            - reaching the summit and taking care of her father
+            - taking photographs and finding the hawk
+            - eating lunch and leaving before sunrise
+            - going home early and hiking somewhere new
+          evidence: measuring the distance to each
+        - kind: quote
+          ask: Which sentence best shows how much Nadia wants to reach the top?
+          choices:
+            - Nadia felt her whole body lean toward it.
+            - She sat down beside him instead and unwrapped their sandwiches.
+            - They left the trailhead before sunrise and climbed steadily through the pines.
+            - They watched a hawk circle below them.
+          evidence: Nadia felt her whole body lean toward it.
+        - kind: paragraph
+          ask: Why does it matter when the father's cheerful talk stops?
+          sample: >-
+            The change shows Nadia that her father is in more pain than he admits. At first he is
+            "insisting cheerfully that he was only admiring the view," which hides his knee. When "his
+            cheerful explanations had stopped," Nadia can no longer pretend he is fine.
+          rubric: a claim about what the change reveals, an exact quote, and how it raises the conflict
+          evidence: his cheerful explanations had stopped
+    - focus: how the character changes
+      look_for: what Nadia's choice shows about her
+      questions:
+        - kind: mc
+          ask: Why does Nadia decide not to climb to the summit alone?
+          choices:
+            - The view only mattered to her if they shared it.
+            - She is afraid of the wind above the tree line.
+            - The trail to the summit is closed for the day.
+            - Her father orders her to stay with him.
+          evidence: photographing a view she had imagined sharing
+        - kind: write
+          ask: How does the ending suggest the summit is not lost for good?
+          sample: Her father starts planning a slower route for next summer, so they may still reach it together.
+          evidence: a slower, gentler route for the following summer
+        - kind: paragraph
+          ask: How does Nadia's goal change from paragraph 1 to paragraph 6? Use two quotes.
+          sample: >-
+            At first Nadia's goal is the summit, because "the two of them would stand there together."
+            By the end, being together matters more than standing on top. She "sat down beside him
+            instead," choosing her father over the view she planned for a year.
+          rubric: a claim about the change, a quote from the start and one from the end, and what caused it
+          evidence: She sat down beside him instead
+
+- id: b12-the-battle-of-the-bands
+  title: The Battle of the Bands
+  genre: story
+  text: |
+    Diego's neighborhood band had practiced in his garage all spring for the town's battle of the bands,
+    and their best song was one his friend Teo had written in seventh grade about the creek behind their
+    street. It had three chords, a chorus everyone could sing, and lyrics that rhymed "water" with
+    "daughter" for no clear reason.
+
+    Two weeks before the contest, Diego watched recordings of last year's winners and noticed that every
+    winning band had played something loud, fast, and complicated. Teo's song suddenly sounded small.
+    Diego began rehearsing a well-known rock song instead, with an elaborate guitar solo that took him several hours each night to memorize.
+
+    Teo kept playing bass without complaint through every rehearsal, which somehow made Diego feel worse than any argument could have. When Diego finally asked
+    whether he minded, Teo shrugged and said that songs were allowed to change, but that he hoped the band
+    would still sound like itself.
+
+    That night Diego recorded both songs and listened to them in the dark. The new one was impressive, but the old one sounded like summer evenings beside the creek, when the entire street seemed to hum along. He realized that he had been trying to win with
+    a song he did not actually love.
+
+    On contest day the band played the creek song, with one change: the guitar solo, which Diego had
+    rewritten to fit the gentle melody, now arrived just before the final chorus, where it lifted the melody instead of overpowering it.
+
+    They placed third. When the judges asked about the song, Diego pointed at Teo, and the whole crowd sang
+    the chorus a second time, rhyming "water" with "daughter" as though it had always made perfect sense.
+  pages:
+    - focus: ambition versus friendship
+      questions:
+        - kind: mc
+          ask: What does Diego want that pulls against Teo's song?
+          choices:
+            - to impress the judges with a loud, complicated song
+            - to quit the band before the contest begins
+            - to play the drums instead of the guitar
+            - to keep the band a secret from the town
+          evidence: every winning band had played something loud, fast, and complicated
+        - kind: quote
+          ask: Which sentence best shows Diego starting to doubt Teo's song?
+          choices:
+            - Teo's song suddenly sounded small.
+            - They placed third.
+            - That night Diego recorded both songs and listened to them in the dark.
+            - Teo kept playing bass without complaint through every rehearsal, which somehow made Diego feel worse than any argument could have.
+          evidence: Teo's song suddenly sounded small.
+        - kind: paragraph
+          ask: What does Teo mean in paragraph 3? Use a quote.
+          sample: >-
+            Teo means the band can try new things as long as it keeps its own character. He says "songs
+            were allowed to change," so he does not forbid Diego's idea. But he hopes the band "would still
+            sound like itself," which gently warns Diego not to copy other bands.
+          rubric: a claim about Teo's meaning, an exact quote, and how it balances change and identity
+          evidence: would still sound like itself
+    - focus: the choice and the theme
+      look_for: the choice Diego makes, and why
+      questions:
+        - kind: mc
+          ask: Why does Diego go back to the creek song?
+          choices:
+            - He realizes he doesn't really love the new song.
+            - Teo refuses to play the rock song with him.
+            - He cannot learn the guitar solo in time.
+            - The judges ask for original songs only.
+          evidence: he had been trying to win with a song he did not actually love
+        - kind: write
+          ask: Why does the author have Diego keep the guitar solo in the final version?
+          sample: It shows Diego keeps the band's own song but adds something of his own, so it changes and stays itself.
+          evidence: rewritten to fit the gentle melody
+        - kind: paragraph
+          ask: How does Diego's final choice develop the story's theme? Use evidence.
+          sample: >-
+            Diego's choice shows that being true to yourself matters more than copying winners. He plays
+            the creek song and, when asked, "pointed at Teo," giving his friend the credit. The crowd sings
+            "as though it had always made perfect sense," so the band's own sound wins people over.
+          rubric: a theme as a full idea, an exact quote, and how the choice develops it
+          evidence: pointed at Teo
+
+- id: b13-lab-partners
+  title: Lab Partners
+  genre: story
+  text: |
+    When Mr. Osei announced that students could choose their own partners for the semester's chemistry
+    project, Malik felt a tap on his shoulder before he had even closed his notebook. It was Priscilla,
+    who had won the state science competition and who was already sketching a project on her laptop.
+
+    "We'd be unstoppable," she said, and Malik believed her. Yet across the room he could see Benji, his
+    partner for every project since fourth grade, waiting with his usual hopeful grin and a pencil tucked behind one ear.
+
+    Benji was not a strong student, since he mixed up formulas, forgot deadlines, and often needed Malik
+    to explain the same idea twice. But he was also the person who had sat with Malik for an entire lunch
+    period on the day Malik's family moved. He had said almost nothing, simply staying.
+
+    Malik told Priscilla he needed a minute. He weighed the certain grade against the uncertain one, and
+    he weighed a year of easy success against the look on Benji's face if he walked past him.
+
+    Then he crossed the room and sat down beside Benji, who immediately began describing an idea
+    involving vinegar, baking soda, and a balloon. It was not an original idea, but Malik found himself
+    listening seriously and suggesting ways to measure the gas. Benji's eyes widened with relief, though he tried to hide it.
+
+    Priscilla found another partner within seconds. Months later, when Malik and Benji presented their
+    careful, unspectacular project, Benji explained the chemistry without a single mistake, and Malik
+    realized that he had been teaching himself as much as his friend.
+  pages:
+    - focus: ambition versus loyalty
+      questions:
+        - kind: mc
+          ask: What does Malik weigh when he chooses a partner?
+          choices:
+            - a likely top grade against loyalty to an old friend
+            - his chemistry homework against his chores at home
+            - a project on gas against a project on plants
+            - Priscilla's laptop against his own notebook
+          evidence: He weighed the certain grade against the uncertain one
+        - kind: quote
+          ask: Which sentence best explains why Malik feels loyal to Benji?
+          choices:
+            - But he was also the person who had sat with Malik for an entire lunch period on the day Malik's family moved.
+            - Priscilla found another partner within seconds.
+            - Malik told Priscilla he needed a minute.
+            - It was not an original idea, but Malik found himself listening seriously and suggesting ways to measure the gas.
+          evidence: But he was also the person who had sat with Malik for an entire lunch period on the day Malik's family moved.
+        - kind: paragraph
+          ask: How does Malik's choice shape the plot and the theme?
+          sample: >-
+            Malik's choice turns the story from a race for a grade into a story about friendship. Because
+            he stays with Benji, Benji later explains the chemistry "without a single mistake." Malik
+            realizes he was "teaching himself as much as his friend," so loyalty rewards them both.
+          rubric: a claim about the choice, an exact quote, and how it develops a theme
+          evidence: teaching himself as much as his friend

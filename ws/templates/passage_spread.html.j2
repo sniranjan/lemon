@@ -49,10 +49,10 @@ h1 { font-size: 28px; }
 {% endblock %}
 {% block body %}
 {% set head = sheet.items[0] %}
-{% set what = {"nonfiction": "article", "argument": "argument", "poem": "poem", "paired": "two texts"}.get(head.genre, "story") %}
+{% set what = {"nonfiction": "article", "paired": "two texts"}.get(head.genre, head.genre) %}
 {% if head.side == "read" %}
     <section class="read-wrap">
-      <div class="how">{% if head.again %}Read again: {{ head.look_for }}{% elif head.genre == "poem" %}Read the poem aloud. The questions are on the next page.{% elif head.genre == "paired" %}Read both texts. The questions are on the next page.{% else %}Read the {{ what }}. The questions are on the next page.{% endif %}</div>
+      <div class="how">{% if head.again %}Read again: {{ head.look_for }}{% elif head.genre == "poem" %}Read the poem aloud. The questions are on the next page.{% elif head.genre == "paired" %}Read both texts. The questions are on the next page.{% elif head.get("story") %}{{ head.story }}, part {{ head.part }}. The questions are on the next page.{% else %}Read the {{ what }}. The questions are on the next page.{% endif %}</div>
 {% if head.genre == "poem" %}
       <div class="card read poem">
         <div class="poem-title">{{ sheet.title }}</div>

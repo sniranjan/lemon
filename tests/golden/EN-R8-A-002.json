@@ -1,0 +1,83 @@
+{
+  "id": "EN-R8-A-002",
+  "subject": "english",
+  "level": "R8",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 2,
+  "variant": 1,
+  "seed": 7532199344493229947,
+  "title": "The Audition",
+  "parent_tip": "For each answer, point to the exact words that prove it.",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "a01-the-audition",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 1,
+      "continued": [
+        {
+          "n": 7,
+          "text": "When the final note faded, the room was quiet enough to hear the radiator ticking. Mr. Okafor set down his mug. \"That second time,\" he said slowly, \"you stopped performing and started listening.\"",
+          "cont": false
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What does \"nervousness wearing an elaborate disguise\" suggest?",
+      "choices": [
+        "She arrives early every single day.",
+        "She is trying to trick her teacher.",
+        "She dressed up in a costume to play.",
+        "Her early arrival is really caused by worry."
+      ],
+      "answer": "D",
+      "columns": 1
+    },
+    {
+      "kind": "mc",
+      "n": 2,
+      "ask": "In paragraph 2, why is the music compared to a staircase?",
+      "choices": [
+        "Practice made it feel like a careful chore.",
+        "Priya practices on the stairs at home.",
+        "The music had become too easy for her.",
+        "The sonata gets louder as it goes on."
+      ],
+      "answer": "A",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 3,
+      "ask": "Which sentence best shows that Priya's playing changes?",
+      "choices": [
+        "Mr. Okafor set down his mug.",
+        "This time she abandoned the counting.",
+        "When she began, the first phrase faltered.",
+        "She stopped, breathed, and started again."
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "write",
+      "n": 4,
+      "ask": "What does \"a reed instead of a bow\" mean here?",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. D (Her early arrival is really caused by worry.)",
+    "2. A (Practice made it feel like a careful chore.)",
+    "3. B (This time she abandoned the counting.)",
+    "4. Sample: Her voice came out thin and weak instead of full and strong, because she was nervous."
+  ],
+  "new_words": [],
+  "review_words": []
+}
