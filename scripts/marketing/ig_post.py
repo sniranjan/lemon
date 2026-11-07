@@ -10,7 +10,8 @@ and checks the caption has 8–15 hashtags. Then publish it with ig_publish.py. 
 
 One layout, `announce`, adapts to what you give it:
   - headline (Fredoka, big), subline (handwritten, coral), optional chip (pill under the subline)
-  - pages: 0–3 real pages from the free preview PDFs (out/previews/<level>.pdf), as {level, page}
+  - pages: 0–3 real pages from the free preview PDFs (out/previews/<level>.pdf), as {level, page},
+    or any PNG in the post folder, as {file: card.png} (a gift card, a phone screenshot of the site)
   - mascots: 0–3 level slugs (chicks … whales), or pictures: 0–3 worksheet pictures (assets/pictures)
   - sticker + sticker_sub: the call to action in the corner ("Try it free" / "link in bio ↑")
   - background: cream (default) or sun, coral, teal, sky, grape, leaf
@@ -56,11 +57,21 @@ alt: >-
 """
 
 BG = {"cream": L.CREAM, **L.COLORS}
+FOLDER: Path | None = None  # the post being rendered; {file: ...} pages are read from here
 MAX_SLIDES = 10
 
 
 def esc(s: str) -> str:
     return htmllib.escape(str(s or ""))
+
+
+def page_src(p: dict) -> str:
+    if "file" in p:
+        path = FOLDER / p["file"]
+        if path.suffix != ".png" or not path.exists():
+            sys.exit(f"pages: {p['file']} must be a PNG in the post folder")
+        return L.data_uri(path)
+    return L.page_png(p["level"], int(p["page"]))
 
 
 def slide_html(spec: dict) -> str:
@@ -98,7 +109,7 @@ def slide_html(spec: dict) -> str:
         y += 100
 
     art = ""
-    srcs = [L.page_png(p["level"], int(p["page"])) for p in pages]
+    srcs = [page_src(p) for p in pages]
     if len(srcs) == 1:
         art += L.sheet(srcs[0], 230, y + 40, 620, 2.5, 1)
     elif len(srcs) == 2:
@@ -182,6 +193,8 @@ def rel(path: Path) -> str:
 
 
 def render(folder: Path) -> None:
+    global FOLDER
+    FOLDER = folder
     spec = yaml.safe_load((folder / "post.yaml").read_text())
     if spec.get("layout", "announce") != "announce":
         sys.exit("only layout: announce exists so far (add new layouts in ig_post.py)")
