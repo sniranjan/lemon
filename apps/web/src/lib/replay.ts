@@ -33,3 +33,13 @@ export function startReplay() {
     console.warn("replay failed to start", e);
   }
 }
+
+/** Stop recording (gift-code pages). */
+export function stopReplay() {
+  if (!started) return;
+  try {
+    tracker.stop();
+  } catch {
+    /* ignore */
+  }
+}

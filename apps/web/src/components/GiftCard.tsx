@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { pauseTracking } from "@/lib/consent";
 import { Loader2, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/Logo";
@@ -18,6 +19,7 @@ const MASCOTS = ["chicks", "bunnies", "foxes", "owls", "pandas", "whales"]
 export function GiftCard({ code }: { code: string }) {
   const [gift, setGift] = useState<GiftInfo | null | "missing">(null);
   useEffect(() => {
+    pauseTracking();
     getGift(code).then((g) => setGift(g.ok ? g : "missing"));
   }, [code]);
 
@@ -38,7 +40,9 @@ export function GiftCard({ code }: { code: string }) {
   }
 
   // Long names and messages get smaller type, so the card always stays on one page.
-  const nameLen = gift.recipientName.length + (gift.childName ? 8 : 0);
+  // The child's name leads when there is one ("a gift for Maya"); the grown-up's name otherwise.
+  const forName = gift.childName || gift.recipientName;
+  const nameLen = forName.length;
   const nameSize = nameLen > 34 ? "text-[2.35rem]" : nameLen > 20 ? "text-[2.9rem]" : "text-[3.6rem]";
   const long = nameLen > 20 || (gift.message?.length ?? 0) > 160;
   const what = gift.kind === "all" ? "Every level, ages 3 to 12" : `${formatPrice(gift.amountCents, gift.currency)} to spend on any level`;
@@ -75,8 +79,7 @@ export function GiftCard({ code }: { code: string }) {
         <div className={cn("relative", long ? "mt-[5%]" : "mt-[9%]")}>
           <p className="font-hand text-[2rem] text-coral">a gift for</p>
           <h1 className={cn("text-balance font-display font-bold leading-[1.02]", nameSize)}>
-            {gift.recipientName}
-            {gift.childName && <span className="block text-[0.62em] text-ink/80">and {gift.childName}</span>}
+            {forName}
           </h1>
           <p className={cn("mt-3 font-bold", gift.buyerName.length > 30 ? "text-[1.2rem]" : "text-[1.45rem]")}>from {gift.buyerName}</p>
         </div>

@@ -18,6 +18,8 @@
         gtag("js", new Date());
       };
       (function () {
+        // Pages that show a gift code (it works like cash) never load analytics.
+        if (/^\/(redeem|gift\/card\/)/.test(location.pathname)) return;
         var consent = document.cookie.match(/(?:^|; )pl_consent=(granted|denied)/);
         if (window.__PL_CONSENT_REQUIRED !== true || (consent && consent[1] === "granted")) window.__plLoadGtm();
       })();

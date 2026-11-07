@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { pauseTracking } from "@/lib/consent";
 import { Check, Gift, Loader2, Mail, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatPrice, getGift, longDate, postJson, useCatalog, type GiftInfo } from "@/lib/catalog";
@@ -15,7 +16,11 @@ const INPUT =
  * Every-level gifts open with one click; a gift amount shops the library with the balance applied.
  */
 export function RedeemPage() {
-  const [typed, setTyped] = useState(() => new URLSearchParams(location.search).get("code") ?? "");
+  // The code arrives as ?code= (email link, a fresh page load with no analytics) or #CODE; it is kept in the
+  // fragment afterwards, which analytics page views leave out.
+  const [typed, setTyped] = useState(
+    () => new URLSearchParams(location.search).get("code") ?? decodeURIComponent(location.hash.slice(1)),
+  );
   const [gift, setGift] = useState<GiftInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -28,11 +33,12 @@ export function RedeemPage() {
     setLoading(false);
     if (g.ok) {
       setGift(g);
-      history.replaceState(null, "", `/redeem?code=${g.code}`);
+      history.replaceState(null, "", `/redeem#${g.code}`);
     } else setError(g.error);
   }
 
   useEffect(() => {
+    pauseTracking();
     if (typed) load(typed);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
