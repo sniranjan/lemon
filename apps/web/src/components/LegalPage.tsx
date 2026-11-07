@@ -31,7 +31,8 @@ function Refunds() {
         <p className="text-3xl font-bold leading-tight sm:text-4xl">All sales are final. No refunds.</p>
         <p className="mt-2 text-lg font-semibold text-white/95">
           Our levels are digital downloads you get instantly, so we can't take them back. Once you buy a level,
-          we don't give refunds, exchanges or credit, for any reason.
+          we don't give refunds, exchanges or credit. The only exception is an accidental duplicate charge (see
+          below).
         </p>
       </div>
 
@@ -51,9 +52,9 @@ function Refunds() {
       <H>If something is actually broken</H>
       <p>
         If a file won't download, won't open, or is missing pages, email <Mail /> within the 7 days your download
-        link works and we'll fix it or send you a working file. An expired link isn't a reason for a refund either:
-        please save your files when you buy. That's a fix, not a refund. If you were charged twice for the same level by
-        mistake, tell us and we'll refund the duplicate charge.
+        link works and we'll fix it or send you a working file. That's a fix, not a refund. An expired link isn't a
+        reason for a refund either, so please save your files when you buy. If you were charged twice for the same
+        level by mistake, tell us and we'll refund the duplicate charge.
       </p>
 
       <H>Chargebacks</H>
@@ -103,7 +104,8 @@ function Terms() {
         <a className="font-bold text-coral underline underline-offset-2" href="/refunds">
           refund policy
         </a>{" "}
-        for the details and the one exception (files that don't work).
+        for the details, including what we do if a file doesn't work and the one exception (a duplicate charge by
+        mistake).
       </p>
 
       <H>How you may use the pages</H>
@@ -168,10 +170,10 @@ function Privacy() {
           name or email).
         </li>
         <li>
-          <strong>Session recordings:</strong> we record how visitors use the site (pages viewed, clicks, scrolling,
-          and what's typed into forms on the site, such as your email address) using OpenReplay, so we can see what's
-          confusing and fix it. Recordings are not masked. Please don't type anything into the site that you don't
-          want us to see.
+          <strong>Session recordings:</strong> we record how visitors use the site (pages viewed, including the
+          address of your private order page, clicks, scrolling, and anything typed on the site) using OpenReplay, so
+          we can see what's confusing and fix it. Recordings are not masked. Payment details are entered on Stripe's
+          checkout page, which we don't record.
         </li>
         <li>
           <strong>Analytics:</strong> we use Google Tag Manager and Google Analytics, which set cookies and collect

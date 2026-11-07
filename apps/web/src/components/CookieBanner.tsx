@@ -30,8 +30,8 @@ export function CookieBanner() {
         <div className="text-[0.95rem] leading-relaxed text-ink/85">
           <p className="text-lg font-bold text-ink">Can we use cookies?</p>
           <p className="mt-1">
-            With your OK we use Google Analytics and record how the site is used (session recording, including what's
-            typed into forms), so we can see what's confusing and fix it. Nothing loads until you choose. See our{" "}
+            With your OK we use Google Analytics and record how the site is used (session recording, including anything
+            typed on the site), so we can see what's confusing and fix it. Nothing loads until you choose. See our{" "}
             <a href="/privacy" className="font-bold text-coral underline underline-offset-2">
               privacy policy
             </a>
