@@ -47,10 +47,6 @@ def answer(i: dict) -> str:
     return f"{i['letter']} = {show(s)}"
 
 
-def _inner(rng) -> list[dict]:
-    return [X(1), N(nonzero_draw(rng, -9, 9))]
-
-
 def _build(rng, form: str, x: Fraction, special: str | None = None) -> tuple[list, list] | None:
     """One equation of `form` whose solution is x (or with no / every solution)."""
     if special == "none" or special == "all":

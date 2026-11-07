@@ -46,16 +46,6 @@ def merge(tokens: list) -> list:
     return out
 
 
-def number_tokens(value, stacked: bool = True) -> list:
-    """A number with its sign; a non-whole one as a stacked fraction (or "n/d" if not `stacked`)."""
-    v = q(value)
-    sign = MINUS if v < 0 else ""
-    a = abs(v)
-    if a.denominator == 1:
-        return [sign + str(a.numerator)]
-    return merge([sign, {"f": [a.numerator, a.denominator]}]) if stacked else [sign + f"{a.numerator}/{a.denominator}"]
-
-
 def text(tokens: list) -> str:
     """Tokens as one plain line (answer keys): fractions become n/d."""
     return "".join(t if isinstance(t, str) else f"{t['f'][0]}/{t['f'][1]}" for t in tokens)

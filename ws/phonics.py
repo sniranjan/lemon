@@ -49,10 +49,6 @@ def rhyme_group(data: dict, word: str) -> dict | None:
     return None
 
 
-def _vowels(s: str) -> set[int]:
-    return {i for i, c in enumerate(s) if c in "aeiou"}
-
-
 def shared_ending(a: str, b: str) -> str:
     """The spelled ending two rhyming words share, if it holds the whole vowel ("at" in cat/hat, "ear"
     in bear/pear); "" when the spelling differs (bear/chair, bed/bread)."""

@@ -223,11 +223,6 @@ _RADICAL = re.compile(r"R\((\d)\|([^()|]*(?:\([^()]*\)[^()|]*)*)\)")
 _ROOT_SIGN = {2: "√", 3: "∛", 4: "∜"}
 
 
-def radical(n: int, body: str) -> str:
-    """The ASCII markup for an n-th root: radical(2, "2x") = 'R(2|2x)'."""
-    return f"R({n}|{body})"
-
-
 def pretty(s: str) -> str:
     """ASCII → reader text: '-' → '−', '^12' → '¹²', '*' → '·', rational exponents '^(2/3)' → '²⁄³',
     roots 'R(2|72)' → '√72', 'R(3|2x)' → '∛(2x)'."""
@@ -281,11 +276,6 @@ class Mono:
     def from_json(cls, d: dict) -> Mono:
         """{"c": "3", "x": "2", "y": "-1/2"} → 3x²y^(−1/2)."""
         return cls.make(Fraction(d.get("c", "1")), {v: Fraction(x) for v, x in d.items() if v != "c"})
-
-    def to_json(self) -> dict:
-        out = {"c": _frac_text(self.coeff)}
-        out.update({v: _frac_text(e) for v, e in self.exps})
-        return out
 
     def __mul__(self, o: Mono) -> Mono:
         e = dict(self.exps)
