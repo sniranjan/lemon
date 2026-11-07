@@ -279,7 +279,7 @@ def post_levels(all_ready: bool = False) -> list[str]:
     groups = [
         (["chicks", "ducklings", "bunnies", "kittens"], "Ages 3 &amp; 4", "first words, counting, letters"),
         (["puppies", "cubs", "foxes"], "Ages 5 &amp; 6", "spelling, reading aloud, times tables"),
-        (["owls", "otters", "pandas"], "Ages 7 to 9", "chapter books, fractions, ratios"),
+        (["owls", "otters", "pandas"], "Ages 7 to 9", "stories in chapters, fractions, ratios"),
         (["penguins", "lions", "whales"], "Ages 10 to 12", "big ideas, equations, algebra"),
     ]
     slides = [level_road()]

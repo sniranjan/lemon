@@ -16,4 +16,4 @@ Print a few pages, sit down together, and see how they feel. When it fits, the w
 
 ## Alt text
 
-Cream background titled "Try any level free" with the handwritten line "print a few pages and see how they feel" and a label "A free preview for every level". The covers of three free previews (Chicks, Cubs and Foxes) are fanned out, with a chick and a fox peeking over them. A coral sticker says "Link in bio, paperlessons.com".
+Cream background titled "Try any level free" with the handwritten line "print a few pages and see how they feel" and a label "A free preview for every level". The covers of three free previews (Chicks, Whales and Foxes) are fanned out, with a chick and a whale peeking over them. A coral sticker says "Link in bio, paperlessons.com".

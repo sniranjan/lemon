@@ -1,7 +1,5 @@
 # Set 2, post 9 (the newest tile, top-left of the grid). Render:
 #   uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-09-try-free
-# Once the upper levels' previews exist, consider swapping the right-hand cover for whales (page 1) and
-# re-rendering, so the fan spans the whole ladder.
 layout: announce
 background: cream
 headline: "Try any level free"
@@ -9,9 +7,9 @@ subline: "print a few pages and see how they feel"
 chip: "A free preview for every level"
 pages:
   - {level: chicks, page: 1}
-  - {level: cubs, page: 1}
+  - {level: whales, page: 1}
   - {level: foxes, page: 1}
-mascots: [chicks, foxes]
+mascots: [chicks, whales]
 sticker: "Link in bio"
 sticker_sub: "paperlessons.com"
 
@@ -26,5 +24,5 @@ caption: |
 tags: "#printableworksheets #kidsworksheets #homelearning #freeprintables #freeworksheets #learnathome #homeschooling #printables #worksheetsforkids #paperlessons"
 alt: >-
   Cream background titled "Try any level free" with the handwritten line "print a few pages and see how they feel" and
-  a label "A free preview for every level". The covers of three free previews (Chicks, Cubs and Foxes) are fanned
-  out, with a chick and a fox peeking over them. A coral sticker says "Link in bio, paperlessons.com".
+  a label "A free preview for every level". The covers of three free previews (Chicks, Whales and Foxes) are fanned
+  out, with a chick and a whale peeking over them. A coral sticker says "Link in bio, paperlessons.com".

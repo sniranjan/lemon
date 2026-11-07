@@ -5,7 +5,7 @@
 Built 2026-11-06 to replace the launch set once the user has deleted the old posts in the app (see "Retired"
 below). Nine posts = three full grid rows, framed around the whole ladder: 13 levels, ages 3 to 12, reading +
 math about two grades ahead of school, a free preview for every level. No partial counts, no "coming soon".
-Preview: `set2-grid-preview.png` (profile view, each tile cropped to 3:4; unrendered posts show as grey tiles).
+Preview: `set2-grid-preview.png` (profile view, each tile cropped to 3:4).
 
 **Post in this order, oldest first** (the profile shows the newest top-left, so 09 ends up top-left):
 
@@ -15,8 +15,8 @@ Preview: `set2-grid-preview.png` (profile view, each tile cropped to 3:4; unrend
 | 2 | `set2-02-thirteen-levels/` | carousel: all 13 mascots on the climb, then 4 slides of level cards (age, grade work, "Free preview") | sky | launch script | ready |
 | 3 | `set2-03-ages-3-4/` | carousel: band cover + Chicks, Ducklings, Bunnies, Kittens (3 real pages each) | cream | ig_post | ready |
 | 4 | `set2-04-ages-5-6/` | carousel: band cover + Puppies, Cubs, Foxes | grape | ig_post | ready |
-| 5 | `set2-05-ages-7-8/` | carousel: band cover + Owls, Otters | cream | ig_post | **render after Owls + Otters previews exist** |
-| 6 | `set2-06-ages-9-12/` | carousel: 4 mascot badges + Pandas, Penguins, Lions, Whales | coral | ig_post | **render after those previews exist** |
+| 5 | `set2-05-ages-7-8/` | carousel: band cover + Owls, Otters | cream | ig_post | ready |
+| 6 | `set2-06-ages-9-12/` | carousel: 4 mascot badges + Pandas, Penguins, Lions, Whales | coral | ig_post | ready |
 | 7 | `set2-07-two-grades-ahead/` | "Age 6? Grade 3 work." ladder: ages 3/6/9/12 → grade work | cream | launch script | ready |
 | 8 | `set2-08-how-it-works/` | three steps: pick a level, get the whole level (one PDF), a little every day | sun | launch script | ready |
 | 9 | `set2-09-try-free/` | "Try any level free", preview covers fanned, link in bio | cream | ig_post | ready |
@@ -40,18 +40,16 @@ nothing while set 2 is the whole grid (09 is top-left anyway). Once newer posts 
   (`node apps/web/scripts/sync-pictures.mjs && node apps/web/scripts/sync-ladder.mjs`). In a worktree, also
   symlink the main checkout's `node_modules` (or `npm install`): the renders load Nunito from
   `node_modules/@fontsource/nunito`.
-- **05 and 06 are structure only.** Once the Owls, Otters, Pandas, Penguins, Lions and Whales previews are built:
-  look at each preview (`pdftoppm -r 30`), set the page numbers in `post.yaml` to good inner pages (page 1 is
-  the cover, the last page is the closing page), fix the page descriptions in `alt`, check every caption and
-  subline claim against what the previews actually teach (they were written from the ladder titles), render, look at every slide,
-  then re-run `instagram_launch.py set2` to refresh the grid preview. Optionally swap 09's right-hand cover to
-  Whales so the fan spans the ladder.
-- Do not publish any of set 2 before every level is on sale (the posts say every level has a free preview).
+- All nine are rendered (2026-11-06, all 13 levels on sale). Sublines and captions were checked against the
+  real preview pages and the current level titles; when a level's preview or title changes, re-check the page
+  numbers in its `post.yaml` (preview page 1 is the cover, the last page is the closing page), re-render, look at
+  every slide, then re-run `instagram_launch.py set2` for the grid preview.
+- Publish only after the user has deleted the old launch posts in the app (the API can't delete with our setup).
 
 **Posting plan:**
 - Day 1: 01 Hello, then 02 Thirteen levels about an hour later (the profile is never one lonely post).
 - Then one post a day, morning 7–8 am Eastern (or evening 8–9 pm): 03, 04, 05, 06, 07, 08, 09.
-  If 05/06 aren't rendered yet when their turn comes, wait; don't reorder (the checkerboard depends on it).
+  Don't reorder (the checkerboard depends on it).
 - Share each post to stories the same day.
 - After the set: 3 feed posts a week (e.g. Mon / Wed / Sat): real pages from one level per post
   (`ig_post.py`, one level's 3 best pages), new site features, and short parent tips. Post when something a
