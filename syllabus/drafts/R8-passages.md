@@ -12,7 +12,7 @@ Flesch-Kincaid grade 7.5–9.5 on every text. Allusions are to well-known myths 
 
 ## A Close Reading (pages 1–50): 13 passages, 25 spreads
 
-### The Audition (`a01-the-audition`, story, pages 1–4; 259 words, FK 8.5; 1 paragraph(s) end on the questions page; questions page 131/125 of 140 units)
+### The Audition (`a01-the-audition`, story, pages 1–4; 259 words, FK 8.5; 1 paragraph(s) end on the questions page; questions page 131/129 of 140 units)
 
 1. Priya arrived twenty minutes early on the morning of the audition, which she told herself was discipline and which was, in truth, nervousness wearing an elaborate disguise.
 
@@ -37,7 +37,7 @@ Set 1 (words and phrases):
 Set 2 (craft and tone), second reading: *words that show how Priya feels*:
 1. [mc] Which word best describes the tone of paragraphs 1–5? — **tense** / cheerful / angry / bored
 2. [mc] Why does the author say the bow sounded like "a door complaining"? — **to show the note sounded harsh and wrong** / to show the room had a squeaky door / to show Priya was angry at her cello / to show the music was soft and calm
-3. [quote] Which sentence shows that the scene becomes calmer? — **When the final note faded, the room was quiet enough to hear the radiator ticking.** / When she began, the first phrase faltered. / She stopped, breathed, and started again. / "You're early," he observed, and it was not a question.
+3. [quote] Which sentence shows that the scene becomes calmer? — **When the final note faded, the room was quiet enough to hear the radiator ticking.** / When she began, the first phrase faltered. / Her bow skidded across the lowest string with a sound like a door complaining on its hinges, and embarrassment crept up her neck. / "You're early," he observed, and it was not a question.
 4. [write] What does "stopped performing and started listening" mean? — sample: It means she stopped worrying about being judged and paid attention to the music itself.
 
 ### Before the Ovens Wake (`a02-before-the-ovens`, story, pages 5–8; 258 words, FK 8.71; 0 paragraph(s) end on the questions page; questions page 106/98 of 140 units)
@@ -135,7 +135,7 @@ Set 1 (words and phrases):
 Set 2 (craft and tone), second reading: *words that compare fast and slow work*:
 1. [mc] Why does Grandma Mei mention the tortoise and the hare? — **Slow, careful work wins.** / Lin likes animal stories. / Rabbits run faster than turtles. / Lin should sew a turtle.
 2. [mc] What is Grandma Mei's tone in paragraph 4? — **gently teasing** / harsh / worried / bored
-3. [quote] Which sentence shows that Lin's work has improved? — **When she held the fabric up to the lamp, the light did not slip through a single gap.** / Lin's first stitches raced across the cloth, long and crooked / Grandma Mei examined them without comment / Lin had volunteered to help finish a quilt for her cousin's new baby
+3. [quote] Which words show that Lin's work has improved? — **When she held the fabric up to the lamp, the light did not slip through a single gap.** / Lin's first stitches raced across the cloth, long and crooked / Grandma Mei examined them without comment / Lin had volunteered to help finish a quilt for her cousin's new baby
 4. [write] Why does the story end with light that "did not slip through"? — sample: It shows Lin's stitches are tight with no gaps, proving that her slow, careful work paid off.
 
 ### The Wolf Arrives (`a06-the-wolf-arrives`, nonfiction, pages 21–24; 227 words, FK 8.62; 0 paragraph(s) end on the questions page; questions page 88/92 of 140 units)
@@ -178,7 +178,7 @@ Set 1 (words and phrases):
 1. [mc] What does "the color of weak tea" say about the sky? — **It was pale and dim.** / It was bright blue. / It was stormy and black. / It was glowing orange.
 2. [mc] Which word has the most negative connotation? — **lurch** / glide / unhurried / dignified
 3. [mc] In paragraph 2, what does "precisely" mean? — **exactly** / loudly / slowly / rarely
-4. [write] What does "the morning had borrowed all my words" mean? — sample: The narrator was so amazed by the beautiful morning that she could not think of anything to say.
+4. [write] What does "the morning had borrowed all my words" mean? — sample: The morning was so beautiful that the narrator could not think of anything to say.
 
 Set 2 (craft and tone), second reading: *comparisons that describe the lake*:
 1. [mc] What does the library analogy suggest about the lake? — **It feels calm and private early.** / It is full of books to read. / It is closed to all visitors. / It is noisy in the morning.
@@ -201,7 +201,7 @@ Set 2 (craft and tone), second reading: *comparisons that describe the lake*:
 Set 1 (words and phrases):
 1. [mc] What does "a museum exhibit" suggest about the locker? — **It was neat and arranged.** / It was old and dusty. / It was full of paintings. / It was locked all day.
 2. [mc] In paragraph 2, what does "stealth" mean? — **quiet secrecy** / loud noise / great speed / bright color
-3. [mc] Why is Wes's note ironic by the end? — **Wes also mixed up jackets.** / Wes writes very neatly. / Wes plays the harmonica. / Wes likes peppermints.
+3. [mc] Why is Wes's note ironic by the end? — **Wes lost his jacket too.** / Wes writes very neatly. / Wes plays the harmonica. / Wes likes peppermints.
 4. [write] What does Mrs. Delgado's "knowing smile" suggest? — sample: It suggests she already knew Kofi had come to look for his lost jacket again.
 
 Set 2 (craft and tone), second reading: *words that show Kofi's one weakness*:
@@ -229,7 +229,7 @@ Set 1 (words and phrases):
 Set 2 (craft and tone), second reading: *comparisons that explain the journey*:
 1. [mc] Why call the journey a "Herculean task"? — **It is extremely hard.** / It is very short. / A hero leads the flock. / It takes twelve days.
 2. [mc] What does the cyclist analogy help explain? — **how geese save energy** / why geese honk so much / where geese build nests / how fast cyclists ride
-3. [quote] Which sentence best shows the writer admires the geese? — **I find something quietly admirable in that arrangement.** / Their famous V formation is not simply decoration. / When the leader tires, it drops back / Every October, a ragged V of Canada geese passes over the fields behind my school
+3. [quote] Which words best show the writer admires the geese? — **I find something quietly admirable in that arrangement.** / Their famous V formation is not simply decoration. / When the leader tires, it drops back / Every October, a ragged V of Canada geese passes over the fields behind my school
 4. [write] What is the writer's tone toward the geese? — sample: The tone is admiring and thoughtful; the writer stops everything to watch and praises how the geese share the work.
 
 ### The Costume Trunk (`a10-the-costume-trunk`, story, pages 37–40; 241 words, FK 8.94; 0 paragraph(s) end on the questions page; questions page 78/106 of 140 units)
@@ -275,7 +275,7 @@ Set 1 (words and phrases):
 Set 2 (craft and tone), second reading: *what the Midas story adds to the view*:
 1. [mc] Why does Grandfather call the lights the Midas touch? — **They make things look golden.** / They turn things into real gold. / He owns all the streetlights. / He wishes he were a king.
 2. [mc] What point does Grandmother make with the story? — **A golden gift can have a downside.** / Kings should not eat bread. / Midas was a kind and wise king. / The streetlights are too dim.
-3. [quote] Which sentence shows the writer sees both sides? — **I think they are both right.** / My grandfather calls the streetlights the Midas touch. / My record is eleven, a modest number / Some nights I keep a tally of the stars I can find above the rooftops.
+3. [quote] Which words show the writer sees both sides? — **I think they are both right.** / My grandfather calls the streetlights the Midas touch. / My record is eleven, a modest number / Some nights I keep a tally of the stars I can find above the rooftops.
 4. [write] What does "a small victory against all that gold" mean? — sample: Every star the writer finds feels like a win, because the golden city lights usually hide the stars.
 
 ### Moving Day (`a12-moving-day`, story, pages 45–48; 242 words, FK 8.59; 0 paragraph(s) end on the questions page; questions page 88/112 of 140 units)
@@ -299,7 +299,7 @@ Set 1 (words and phrases):
 Set 2 (craft and tone), second reading: *how Sami turns the drive into a story*:
 1. [mc] Why does Sami call the drive an odyssey? — **He pretends it is a long adventure.** / The drive took ten whole years. / They got lost on a real island. / The family traveled by boat.
 2. [mc] How do Sami's and the narrator's moods differ? — **He is playful; the narrator is sad.** / They are both very excited. / He is angry; the narrator is glad. / They are both bored and sleepy.
-3. [quote] Which sentence shows the narrator's mood begins to lift? — **For the first time all day, I did not feel like arguing.** / I spent most of the trip with my forehead against the window / the new house was smaller than I remembered / Cardboard boxes towered in every corner
+3. [quote] Which words show the narrator's mood begins to lift? — **For the first time all day, I did not feel like arguing.** / I spent most of the trip with my forehead against the window / the new house was smaller than I remembered / Cardboard boxes towered in every corner
 4. [write] Why might the author include the girl with lemon bars? — sample: She shows the new place can be friendly, which helps the narrator start to feel better about moving.
 
 ### The Tide Pool (`a13-the-tide-pool`, nonfiction, pages 49–50; 222 words, FK 7.68; 0 paragraph(s) end on the questions page; questions page 78 of 140 units)
@@ -334,8 +334,8 @@ Set 1 (words and phrases):
 
 Set 1 (claims and evidence):
 1. [mc] What is the writer's main claim? — **School should start at 8:30.** / Buses should leave earlier. / Clubs should meet at night. / Quizzes should be easier.
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **My cousin, who lives in another state, says her school serves pancakes every Friday morning.** / the office wrote only a handful of slips. / the average score on first-period math quizzes rose / nearly two thirds said they feel sleepy during first period
-3. [mc] Which reason is backed by the school's own records? — **Fewer late arrivals** / More alert students / Longer lunch periods / Earlier bus rides
+2. [quote] Which detail is NOT relevant evidence for the claim? — **My cousin, who lives in another state, says her school serves pancakes every Friday morning.** / the office wrote only a handful of slips. / the average score on first-period math quizzes rose / nearly two thirds said they feel sleepy during first period
+3. [mc] Which reason do the office's tardy slips support? — **Fewer late arrivals** / More alert students / Longer lunch periods / Earlier bus rides
 4. [write] Why is the March evidence stronger than one opinion? — sample: It comes from real school records of tardy slips and quiz scores, not just one person's impression.
 
 Set 2 (point of view), second reading: *how the writer treats the other side*:
@@ -358,13 +358,13 @@ Set 2 (point of view), second reading: *how the writer treats the other side*:
 
 Set 1 (claims and evidence):
 1. [mc] What is Maya's claim? — **Phones stay in lockers all day** / Phones are fine at lunch / The office should call parents / Phones help arrange rides
-2. [quote] Which sentence is NOT relevant evidence for Maya's claim? — **Maya's grandmother still keeps a phone with a curly cord on her kitchen wall.** / pulls attention away from the lesson / counted the tables where nobody was talking / most of our sixth graders admitted they check their phones
+2. [quote] Which detail is NOT relevant evidence for Maya's claim? — **Maya's grandmother still keeps a phone with a curly cord on her kitchen wall.** / pulls attention away from the lesson / counted the tables where nobody was talking / most of our sixth graders admitted they check their phones
 3. [mc] What evidence does Jonah give for his view? — **A flooded field last spring** / A class survey / A week in the cafeteria / A count of lunch tables
 4. [write] Is Jonah's one example enough to prove his point? Why? — sample: Not fully. The flooded field shows phones can help, but it is a single event, not proof that students need phones every day.
 
 Set 2 (point of view), second reading: *how each writer answers the other*:
 1. [mc] How does Maya answer Jonah's point about rides? — **Students could get phones in the last five minutes.** / Students should walk home instead of calling. / Coaches should stop sending messages. / Rides are not the school's problem.
-2. [quote] Which sentence shows a point both writers agree on? — **Both writers agree on one point: silence in class matters.** / Jonah answers that a complete ban goes too far. / Maya argues that phones belong in lockers all day. / the office cannot possibly call two hundred families
+2. [quote] Which words show a point both writers agree on? — **Both writers agree on one point: silence in class matters.** / Jonah answers that a complete ban goes too far. / Maya argues that phones belong in lockers all day. / the office cannot possibly call two hundred families
 3. [organizer] Show one point Maya makes and how Jonah answers it. — Maya's point: The office could announce schedule changes, as it did before phones.; Jonah's answer: The office cannot call two hundred families in five minutes.
 
 ### A Letter About Compost (`b03-compost-letter`, nonfiction, pages 59–62; 303 words, FK 8.19; 2 paragraph(s) end on the questions page; questions page 114/128 of 140 units)
@@ -383,7 +383,7 @@ Set 2 (point of view), second reading: *how each writer answers the other*:
 
 Set 1 (claims and evidence):
 1. [mc] What does the Green Team want? — **A cafeteria compost program** / A bigger school garden / More trash bins at lunch / Earthworms in every class
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Earthworms can eat roughly half their own weight in food every day.** / more than half of it was food scraps / it had already begun turning into dark, crumbly compost / their families had started separating food scraps at home
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Earthworms can eat roughly half their own weight in food every day.** / more than half of it was food scraps / it had already begun turning into dark, crumbly compost / their families had started separating food scraps at home
 3. [mc] What evidence supports the first reason? — **Trash weighed for a week** / A survey of families / A teacher's opinion / A fun fact about worms
 4. [write] How do the trial-run results make the letter stronger? — sample: They show the plan already worked in one classroom, where the bin made compost with no smell or insects.
 
@@ -391,7 +391,7 @@ Set 2 (point of view), second reading: *how the writer answers worried teachers*
 1. [mc] How does the writer treat the teachers' worry? — **takes it seriously** / laughs at it / ignores it / gives up the plan
 2. [quote] Which sentence answers the worry with evidence? — **The trial bin had a tight lid, and the custodian, Mrs. Ortiz, reported no smell and no insects during the three weeks.** / We understand the concern, and we looked into it carefully. / Our third reason is that habits spread. / Thank you for considering our proposal.
 3. [organizer] Show how the letter answers the other side. — Counterclaim: Compost bins will smell and attract insects.; Response: Use a tight lid and empty the bins every afternoon.; Evidence: The custodian found no smell or insects in the trial.
-4. [mc] Why does the writer offer to present at a meeting? — **to persuade the teachers** / to complain about trash / to ask for a garden job / to thank the custodian
+4. [mc] Why does the writer offer to present at a meeting? — **to win over the staff** / to complain about trash / to ask for a garden job / to thank the custodian
 
 ### No Class Pets (`b04-no-class-pets`, nonfiction, pages 63–66; 305 words, FK 8.91; 1 paragraph(s) end on the questions page; questions page 123/109 of 140 units)
 
@@ -409,7 +409,7 @@ Set 2 (point of view), second reading: *how the writer answers worried teachers*
 
 Set 1 (claims and evidence):
 1. [mc] What does the speaker want the council to do? — **Vote no on class pets** / Buy a new hamster / Clean cages on Fridays / Share markers fairly
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **I have had a goldfish named Captain since I was six, and he is the best listener in my family.** / the tally had reached more than forty interruptions / Our homeroom spent nearly all of its supply money on food / that job usually fell to the same two families
+2. [quote] Which detail is NOT relevant evidence for the claim? — **I have had a goldfish named Captain since I was six, and he is the best listener in my family.** / the tally had reached more than forty interruptions / Our homeroom spent nearly all of its supply money on food / that job usually fell to the same two families
 3. [mc] What is the main weakness of the speaker's evidence? — **It all comes from one homeroom.** / It comes from a big study. / It has no numbers at all. / It is only about goldfish.
 4. [write] Name one reason in the speech and its evidence. — sample: Pets cost too much. The homeroom spent nearly all its supply money on Pepper and had to share markers.
 
@@ -419,13 +419,13 @@ Set 2 (point of view), second reading: *words used to dismiss the other side*:
 3. [write] Is the speaker's answer to the other side convincing? Why? — sample: No. The speaker calls the idea silly and insults people instead of showing that pets do not teach responsibility.
 4. [mc] What could a pet supporter say back? — **Pets make school friendlier.** / Pets never distract anyone. / Hamster food costs nothing. / Weekends are too short.
 
-### Plant a Garden (`b05-plant-a-garden`, nonfiction, pages 67–70; 316 words, FK 8.8; 2 paragraph(s) end on the questions page; questions page 120/120 of 140 units)
+### Plant a Garden (`b05-plant-a-garden`, nonfiction, pages 67–70; 320 words, FK 8.68; 2 paragraph(s) end on the questions page; questions page 124/120 of 140 units)
 
 1. To the Editor: For six years, the empty lot on Hawthorne Street has collected nothing but weeds and broken bottles. The town council will soon decide what to build there, and I believe the best choice is a community garden, because a garden would feed families, bring neighbors together, and give students a place to learn outdoors.
 
 2. A garden would produce real food. Last summer my family grew tomatoes, beans and squash in four small boxes behind our apartment, and we kept a notebook of every harvest. By September we had picked more than sixty pounds of vegetables, enough to share with three neighbors. Forty boxes on Hawthorne Street could supply far more than that.
 
-3. A garden would also connect people. When our building organized a single planting day in May, residents who had lived on the same floor for years introduced themselves for the first time. Almost everyone I know agrees that gardens are wonderful. Mrs. Pham, who manages our building, noticed that neighbors began greeting each other in the hallway and trading recipes that summer.
+3. A garden would also connect people. When our building organized a single planting day in May, residents who had lived on the same floor for years introduced themselves for the first time. Hawthorne Street was named after a tree that once grew on the corner. Mrs. Pham, who manages our building, noticed that neighbors began greeting each other in the hallway and trading recipes that summer.
 
 4. Finally, a garden would be an outdoor classroom. The science teachers at the nearby middle school have said they would bring classes to measure plant growth and study soil, which they cannot easily do on the school's paved yard.
 
@@ -435,7 +435,7 @@ Set 2 (point of view), second reading: *words used to dismiss the other side*:
 
 Set 1 (claims and evidence):
 1. [mc] What is the writer's claim? — **The lot should be a garden.** / The lot should be for skating. / The lot should stay empty. / The lot should be a lawn.
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Almost everyone I know agrees that gardens are wonderful.** / we had picked more than sixty pounds of vegetables / neighbors began greeting each other in the hallway / they would bring classes to measure plant growth
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Hawthorne Street was named after a tree that once grew on the corner.** / we had picked more than sixty pounds of vegetables / neighbors began greeting each other in the hallway / they would bring classes to measure plant growth
 3. [mc] Why is the sixty-pound harvest limited evidence? — **It comes from one family's four boxes.** / It was measured in the middle of winter. / It was grown on the Hawthorne Street lot. / It comes from a survey of the whole town.
 4. [write] What evidence supports the idea of an outdoor classroom? — sample: Science teachers at the nearby middle school said they would bring classes to measure plant growth and study soil.
 
@@ -445,7 +445,7 @@ Set 2 (point of view), second reading: *how the writer treats the skate idea*:
 3. [organizer] Show how the writer answers the other side. — Counterclaim: Young people need a place to skate, and the nearest park is far away.; Response: Skating beside houses would be noisy; a garden is quiet and can have a lawn.
 4. [mc] What is the writer's purpose? — **to persuade the council** / to describe a skate park / to sell vegetables / to thank Mrs. Pham
 
-### A Place to Skate (`b06-a-place-to-skate`, nonfiction, pages 71–74; 305 words, FK 8.12; 1 paragraph(s) end on the questions page; questions page 120/116 of 140 units)
+### A Place to Skate (`b06-a-place-to-skate`, nonfiction, pages 71–74; 305 words, FK 8.12; 1 paragraph(s) end on the questions page; questions page 120/121 of 140 units)
 
 1. The student council proposes that the empty lot on Hawthorne Street become a skate area. We are sending it to the town council because the lot is the only open space near our school. Students need a safe place to be active in the afternoons.
 
@@ -461,14 +461,14 @@ Set 2 (point of view), second reading: *how the writer treats the skate idea*:
 
 Set 1 (claims and evidence):
 1. [mc] What does the student council propose? — **A skate area on the lot** / A garden on the lot / A bigger library / New sidewalks
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **The first skateboards were made by attaching roller skate wheels to wooden planks.** / nearly half said they ride a skateboard or scooter / he asks skaters to move away from the entrance / they could watch the area from their front windows
+2. [quote] Which detail is NOT relevant evidence for the claim? — **The first skateboards were made by attaching roller skate wheels to wooden planks.** / nearly half said they ride a skateboard or scooter / he asks skaters to move away from the entrance / they could watch the area from their front windows
 3. [mc] Which detail shows the lot is easy to supervise? — **Center staff can watch it.** / Half of students skate. / Skaters crowd the library. / Programs fill up fast.
 4. [organizer] Pick one reason and the evidence for it. — Claim: The lot should become a skate area.; Reason: Students have nowhere nearby to skate.; Evidence: Nearly half of sixth graders skate, mostly in parking lots.
 
 Set 2 (point of view), second reading: *words used about the garden idea*:
 1. [quote] Which words are loaded language about the garden? — **a garden is a boring, outdated idea** / the lot is close and easy to supervise / students have nowhere nearby to skate / We would be happy to help design it.
 2. [mc] Why is the answer to the garden side weak? — **It insults the idea without giving evidence.** / It uses too many survey numbers. / It agrees with the garden supporters. / It quotes the community center director.
-3. [write] How could the council answer the garden side more fairly? — sample: It could admit a garden has value, then use evidence such as the survey to show more students would use a skate area.
+3. [write] How could the student council answer the garden side more fairly? — sample: It could admit a garden has value, then use evidence such as the survey to show more students would use a skate area.
 4. [mc] Who is the proposal mainly written for? — **the town council** / retired neighbors / the librarian / skateboard makers
 
 ### Bring Your Bottle (`b07-bring-your-bottle`, nonfiction, pages 75–78; 305 words, FK 8.39; 2 paragraph(s) end on the questions page; questions page 122/118 of 140 units)
@@ -487,12 +487,12 @@ Set 2 (point of view), second reading: *words used about the garden idea*:
 
 Set 1 (claims and evidence):
 1. [mc] What rule does the flyer want? — **Only reusable bottles** / More bottled water / More trash bins / No vending machines
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Reusable bottles come in dozens of bright colors and fun patterns.** / more than three hundred bottles every single day / charges two dollars for each bottle of water / She has to empty them twice as often as any others
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Reusable bottles come in dozens of bright colors and fun patterns.** / more than three hundred bottles every single day / charges two dollars for each bottle of water / She has to empty them twice as often as any others
 3. [mc] Which detail is vague instead of exact? — **a lot of money over a year** / two dollars for each bottle / six filling stations / three hundred bottles
 4. [write] Is a one-week trial in two homerooms enough proof? Why? — sample: It is some evidence, but it is small and short. A longer trial with more classes would be more convincing.
 
 Set 2 (point of view), second reading: *loaded words aimed at people who disagree*:
-1. [quote] Which sentence uses loaded words instead of evidence? — **Those are just lazy excuses.** / Look at the numbers. / Think about the money, too. / She has to empty them twice as often as any others
+1. [quote] Which part uses loaded words instead of evidence? — **Those are just lazy excuses.** / Look at the numbers. / Think about the money, too. / She has to empty them twice as often as any others
 2. [mc] What does "mountains of trash" suggest? — **a huge, alarming amount** / trash piled on a hill / a small amount / trash that is clean
 3. [write] Is the answer to students who forget bottles convincing? — sample: No. It calls their worries lazy excuses and never says what to do if a bottle is forgotten or lost.
 4. [mc] Why does the flyer end with "Join the movement"? — **to get readers to act** / to explain the numbers / to thank the custodian / to describe a trial
@@ -511,21 +511,21 @@ Set 2 (point of view), second reading: *loaded words aimed at people who disagre
 
 Set 1 (claims and evidence):
 1. [mc] What is the writer's claim? — **Weekends should not be homework-free.** / Weekends should be homework-free. / Teachers should assign more work. / Projects should be done in one night.
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **My little brother, who is in second grade, gets no homework at all and spends his weekends building cardboard castles.** / weeknight assignments grew longer / they prefer to finish most of their homework on Saturday / students who spread the work over two weekends
+2. [quote] Which detail is NOT relevant evidence for the claim? — **My little brother, who is in second grade, gets no homework at all and spends his weekends building cardboard castles.** / weeknight assignments grew longer / they prefer to finish most of their homework on Saturday / students who spread the work over two weekends
 3. [mc] Which reason is supported by a trial run? — **Weeknights get harder.** / Students like choice. / Projects need time. / Families need rest.
 4. [write] What kind of evidence supports the third reason? — sample: A teacher's observation. Ms. Okonkwo has noticed that the best projects are spread over two weekends.
 
 Set 2 (point of view), second reading: *how the writer treats supporters of the ban*:
 1. [mc] How does the writer treat supporters of the ban? — **admits they have a fair point** / calls them lazy / ignores them / agrees with the ban
-2. [quote] Which sentence offers a compromise? — **Teachers could agree to assign no more than one hour of weekend work** / Yet a rule is not the only way to protect that time. / Finally, long projects need time. / Start with school nights.
+2. [quote] Which words offer a compromise? — **Teachers could agree to assign no more than one hour of weekend work** / Yet a rule is not the only way to protect that time. / Finally, long projects need time. / Start with school nights.
 3. [organizer] Show how the writer answers the other side. — Counterclaim: Students need weekend time to rest and be with family.; Response: Limit weekend work to one hour and never make it due Monday.
 4. [mc] Why does the writer say the idea "sounds generous"? — **to be fair before disagreeing** / to praise the parents' money / to show the ban is costly / to make fun of the idea
 
-### Uniforms or Not? (`b09-uniforms-or-not`, nonfiction, pages 83–86; 307 words, FK 8.94; 2 paragraph(s) end on the questions page; questions page 118/123 of 140 units)
+### Uniforms or Not? (`b09-uniforms-or-not`, nonfiction, pages 83–86; 302 words, FK 8.92; 2 paragraph(s) end on the questions page; questions page 114/123 of 140 units)
 
 1. Our school will soon decide whether to require uniforms next fall. Two members of the debate club, Talia and Marcus, agreed to argue opposite sides of the question in alternating paragraphs, each answering the points the other had just made.
 
-2. Talia argues that uniforms would save families time and money. She surveyed our sixth graders, and more than half said that choosing clothes is the most stressful part of their morning. She also compared prices and found that five uniform shirts cost less than many single shirts sold at the mall. Uniforms were common in schools long before anyone in our class was born.
+2. Talia argues that uniforms would save families time and money. She surveyed our sixth graders, and more than half said that choosing clothes is the most stressful part of their morning. She also compared prices and found that five uniform shirts cost less than many single shirts sold at the mall. Talia's favorite color is a deep forest green.
 
 3. Marcus answers that uniforms would take away an important form of self-expression. He points out that students already follow a dress code, so the real question is whether every student should look identical. When the art teacher, Mrs. Delgado, asked her classes to design their own school shirts, she was impressed by how much students cared about showing who they were through color and style.
 
@@ -537,7 +537,7 @@ Set 2 (point of view), second reading: *how the writer treats supporters of the 
 
 Set 1 (claims and evidence):
 1. [mc] What is Talia's claim? — **Uniforms save time and money** / Uniforms limit expression / Dress codes should end / Shoes should match
-2. [quote] Which sentence is NOT relevant evidence for Talia's side? — **Uniforms were common in schools long before anyone in our class was born.** / the most stressful part of their morning / five uniform shirts cost less than many single shirts / several complaints each month involve comments
+2. [quote] Which detail is NOT relevant evidence for Talia's side? — **Talia's favorite color is a deep forest green.** / the most stressful part of their morning / five uniform shirts cost less than many single shirts / several complaints each month involve comments
 3. [mc] What evidence does Marcus use first? — **an art teacher's observation** / a price comparison / a counselor's report / a class survey
 4. [write] Is one art project enough to prove Marcus's point? Why? — sample: Not completely. It shows students care about style, but one project in one class is a small amount of evidence.
 
@@ -562,7 +562,7 @@ Set 2 (point of view), second reading: *how each student answers the other*:
 
 Set 1 (claims and evidence):
 1. [mc] What does the writer ask the principal to do? — **Keep the library open later** / Close the library at lunch / Buy a computer for each home / Hold a book fair every month
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Our library building was originally a firehouse, and the brass pole is still on display near the reference shelves.** / about forty percent said they have no calm spot at home / the same students arrive every day at lunch / checked out nearly twice as many books as usual
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Our library building was originally a firehouse, and the brass pole is still on display near the reference shelves.** / about forty percent said they have no calm spot at home / the same students arrive every day at lunch / checked out nearly twice as many books as usual
 3. [mc] What evidence supports the third reason? — **a two-week book fair** / a computer sign-in sheet / a survey on quiet spots / the library's history
 4. [write] Why is the book fair evidence only partly convincing? — sample: A book fair is a special event, so students might not borrow as many books on ordinary late afternoons.
 
@@ -588,9 +588,9 @@ Set 2 (point of view), second reading: *how the writer handles the cost*:
 
 Set 1 (claims and evidence):
 1. [mc] What is the speaker's claim? — **Keep the long summer break.** / Switch to year-round school. / Make camps shorter. / Start school in July.
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Summer has always been my favorite season, especially the week when the strawberries ripen.** / more than half said their family takes its longest trip / hires about twenty older students as junior counselors / no break would be long enough to hold them
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Summer has always been my favorite season, especially the week when the strawberries ripen.** / more than half said their family takes its longest trip / hires about twenty older students as junior counselors / no break would be long enough to hold them
 3. [mc] Which reason is given without any evidence? — **Students need a real rest.** / Families travel in summer. / Camps need long breaks. / Camps hire older students.
-4. [write] Why is the camp director's statement useful evidence? — sample: The director runs the camp, so she knows how many students it hires and why it needs a long break.
+4. [write] Why is the camp director's statement useful evidence? — sample: The director runs the camp, so the director knows how many students it hires and why it needs a long break.
 
 Set 2 (point of view), second reading: *words used about the other side*:
 1. [quote] Which words are loaded language about the other side? — **That claim is nothing but a tired excuse** / My first reason is family time. / My second reason is summer programs. / Students work hard for nine months
@@ -614,7 +614,7 @@ Set 2 (point of view), second reading: *words used about the other side*:
 
 Set 1 (claims and evidence):
 1. [mc] What does the student council propose? — **Students help plan the menu** / Pizza every single day / A bigger cafeteria / No more casseroles
-2. [quote] Which sentence is NOT relevant evidence for the claim? — **Our school has the largest cafeteria in the district, with room for four hundred students.** / came back nearly untouched / more than half said they would buy lunch more often / connect the project to her unit on percentages
+2. [quote] Which detail is NOT relevant evidence for the claim? — **Our school has the largest cafeteria in the district, with room for four hundred students.** / came back nearly untouched / more than half said they would buy lunch more often / connect the project to her unit on percentages
 3. [mc] Which evidence comes from the school's own records? — **cafeteria sales** / a math teacher's offer / a survey of students / the cafeteria's size
 4. [write] What did the tray study show about student choices? — sample: Meals students had asked for were almost all eaten, but a casserole nobody requested was barely touched.
 
@@ -640,7 +640,7 @@ Set 2 (point of view), second reading: *how the council answers the staff's worr
 Set 1 (claims and evidence):
 1. [mc] What is Imani's claim? — **Buy new art supplies** / Take the field trip / Hold another bake sale / Visit the art museum
 2. [quote] Which detail is NOT relevant evidence for Imani's claim? — **Imani's older sister says the art room smelled like fresh paint when she was a student here.** / several colors have dried into hard, cracked blocks / it now fills two pages / about four hundred students in all
-3. [organizer] Give one piece of evidence for each side. — Imani's evidence: The art teacher's list of broken supplies fills two pages.; Rafael's evidence: Two thirds of sixth graders named the trip their favorite day.
+3. [organizer] Give one piece of evidence for each side. — Imani's evidence: The art teacher's list of broken supplies fills two pages.; Rafael's evidence: More than two thirds of sixth graders named the trip their favorite day.
 
 ## D Explain Why (pages 151–200): 13 passages, 25 spreads
 
@@ -817,7 +817,7 @@ Set 2 (evaluate a claim), second reading: *how each design handles the forces*:
 Set 1 (character motive):
 1. [quote] Which words best show that Samira was disappointed? — **her smile disappeared a little too quickly afterward** / congratulated Ellis immediately / Samira, standing in the second row / The director agreed to try it at the next rehearsal
 2. [mc] Which part of the song is hard for Ellis? — **the highest phrase** / the gentler verses / the soft opening / the very first note
-3. [paragraph] Explain why Ellis asks to turn the solo into a duet. Use two details from the story. — sample: Ellis asks for a duet because she knows Samira can sing the hardest part better than she can. In rehearsal, Samira "sang that phrase effortlessly under her breath," while Ellis's "own voice cracked and wavered." Ellis also noticed that Samira's "smile disappeared a little too quickly" when the list was posted. These details show that Ellis sees both her friend's talent and her disappointment. A duet lets the song sound its best and lets Samira share the moment. *Full answer:* Claim about Ellis's motive; two quotes (Samira's talent, her disappointment); explains the duet.
+3. [paragraph] Explain why Ellis asks to turn the solo into a duet. Use two details from the story. — sample: Ellis asks for a duet because she knows Samira can sing the hardest part better than she can. In rehearsal, Samira "sang that phrase effortlessly under her breath," while Ellis's "own voice cracked and wavered." A duet would let Ellis carry "the gentler verses that suited her voice." These details show that Ellis cares more about the song than about having the spotlight alone. A duet lets the song sound its best and lets Samira, who wanted the part too, share the moment. *Full answer:* Claim about Ellis's motive; two quotes (Samira's talent, Ellis's own struggle); explains the duet.
 
 Set 2 (theme), second reading: *how the duet sounds to others*:
 1. [mc] How do the other singers react to the duet? — **They stop and listen.** / They start to laugh. / They ask for a solo. / They leave the stage.

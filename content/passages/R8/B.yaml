@@ -43,7 +43,7 @@
       - Quizzes should be easier.
       evidence: Our school should move the first bell from 7:45 to 8:30
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - My cousin, who lives in another state, says her school serves pancakes every Friday morning.
       - the office wrote only a handful of slips.
@@ -51,7 +51,7 @@
       - nearly two thirds said they feel sleepy during first period
       evidence: My cousin, who lives in another state, says her school serves pancakes every Friday morning.
     - kind: mc
-      ask: Which reason is backed by the school's own records?
+      ask: Which reason do the office's tardy slips support?
       choices:
       - Fewer late arrivals
       - More alert students
@@ -139,7 +139,7 @@
       - Phones help arrange rides
       evidence: Maya argues that phones belong in lockers all day.
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for Maya's claim?
+      ask: Which detail is NOT relevant evidence for Maya's claim?
       choices:
       - Maya's grandmother still keeps a phone with a curly cord on her kitchen wall.
       - pulls attention away from the lesson
@@ -170,7 +170,7 @@
       - Rides are not the school's problem.
       evidence: students could collect their phones from their lockers during the last five minutes of the day
     - kind: quote
-      ask: Which sentence shows a point both writers agree on?
+      ask: Which words show a point both writers agree on?
       choices:
       - 'Both writers agree on one point: silence in class matters.'
       - Jonah answers that a complete ban goes too far.
@@ -228,7 +228,7 @@
       - Earthworms in every class
       evidence: start a composting program in our cafeteria
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - Earthworms can eat roughly half their own weight in food every day.
       - more than half of it was food scraps
@@ -280,7 +280,7 @@
     - kind: mc
       ask: Why does the writer offer to present at a meeting?
       choices:
-      - to persuade the teachers
+      - to win over the staff
       - to complain about trash
       - to ask for a garden job
       - to thank the custodian
@@ -328,7 +328,7 @@
       - Share markers fairly
       evidence: I urge you to vote no
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - I have had a goldfish named Captain since I was six, and he is the best listener in my family.
       - the tally had reached more than forty interruptions
@@ -394,8 +394,8 @@
     Hawthorne Street could supply far more than that.
 
     A garden would also connect people. When our building organized a single planting day in May,
-    residents who had lived on the same floor for years introduced themselves for the first time. Almost
-    everyone I know agrees that gardens are wonderful. Mrs. Pham, who manages our building, noticed that
+    residents who had lived on the same floor for years introduced themselves for the first time.
+    Hawthorne Street was named after a tree that once grew on the corner. Mrs. Pham, who manages our building, noticed that
     neighbors began greeting each other in the hallway and trading recipes that summer.
 
     Finally, a garden would be an outdoor classroom. The science teachers at the nearby middle school
@@ -421,13 +421,13 @@
       - The lot should be a lawn.
       evidence: the best choice is a community garden
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
-      - Almost everyone I know agrees that gardens are wonderful.
+      - Hawthorne Street was named after a tree that once grew on the corner.
       - we had picked more than sixty pounds of vegetables
       - neighbors began greeting each other in the hallway
       - they would bring classes to measure plant growth
-      evidence: Almost everyone I know agrees that gardens are wonderful.
+      evidence: Hawthorne Street was named after a tree that once grew on the corner.
     - kind: mc
       ask: Why is the sixty-pound harvest limited evidence?
       choices:
@@ -517,7 +517,7 @@
       - New sidewalks
       evidence: the empty lot on Hawthorne Street become a skate area
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - The first skateboards were made by attaching roller skate wheels to wooden planks.
       - nearly half said they ride a skateboard or scooter
@@ -563,7 +563,7 @@
       - It quotes the community center director.
       evidence: only a few retired neighbors would ever bother to visit
     - kind: write
-      ask: How could the council answer the garden side more fairly?
+      ask: How could the student council answer the garden side more fairly?
       sample: It could admit a garden has value, then use evidence such as the survey to show more students would use a skate area.
       evidence: Some adults want a community garden on the lot instead.
     - kind: mc
@@ -617,7 +617,7 @@
       - No vending machines
       evidence: only reusable water bottles should be allowed in our building
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - Reusable bottles come in dozens of bright colors and fun patterns.
       - more than three hundred bottles every single day
@@ -640,7 +640,7 @@
     look_for: loaded words aimed at people who disagree
     questions:
     - kind: quote
-      ask: Which sentence uses loaded words instead of evidence?
+      ask: Which part uses loaded words instead of evidence?
       choices:
       - Those are just lazy excuses.
       - Look at the numbers.
@@ -710,7 +710,7 @@
       - Projects should be done in one night.
       evidence: I believe it would be a mistake
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - My little brother, who is in second grade, gets no homework at all and spends his weekends building cardboard castles.
       - weeknight assignments grew longer
@@ -741,7 +741,7 @@
       - agrees with the ban
       evidence: they are right that weekends matter
     - kind: quote
-      ask: Which sentence offers a compromise?
+      ask: Which words offer a compromise?
       choices:
       - Teachers could agree to assign no more than one hour of weekend work
       - Yet a rule is not the only way to protect that time.
@@ -777,7 +777,7 @@
     Talia argues that uniforms would save families time and money. She surveyed our sixth graders, and
     more than half said that choosing clothes is the most stressful part of their morning. She also
     compared prices and found that five uniform shirts cost less than many single shirts sold at the
-    mall. Uniforms were common in schools long before anyone in our class was born.
+    mall. Talia's favorite color is a deep forest green.
 
     Marcus answers that uniforms would take away an important form of self-expression. He points out
     that students already follow a dress code, so the real question is whether every student should look
@@ -808,13 +808,13 @@
       - Shoes should match
       evidence: Talia argues that uniforms would save families time and money.
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for Talia's side?
+      ask: Which detail is NOT relevant evidence for Talia's side?
       choices:
-      - Uniforms were common in schools long before anyone in our class was born.
+      - Talia's favorite color is a deep forest green.
       - the most stressful part of their morning
       - five uniform shirts cost less than many single shirts
       - several complaints each month involve comments
-      evidence: Uniforms were common in schools long before anyone in our class was born.
+      evidence: Talia's favorite color is a deep forest green.
     - kind: mc
       ask: What evidence does Marcus use first?
       choices:
@@ -899,7 +899,7 @@
       - Hold a book fair every month
       evidence: our school library stay open until five o'clock on weekdays
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - Our library building was originally a firehouse, and the brass pole is still on display near the reference shelves.
       - about forty percent said they have no calm spot at home
@@ -991,7 +991,7 @@
       - Start school in July.
       evidence: I am here to argue against it
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - Summer has always been my favorite season, especially the week when the strawberries ripen.
       - more than half said their family takes its longest trip
@@ -1008,7 +1008,7 @@
       evidence: My third reason is rest.
     - kind: write
       ask: Why is the camp director's statement useful evidence?
-      sample: The director runs the camp, so she knows how many students it hires and why it needs a long break.
+      sample: The director runs the camp, so the director knows how many students it hires and why it needs a long break.
       evidence: its director told our class that the camp hires about twenty older students
   - focus: point of view
     look_for: words used about the other side
@@ -1085,7 +1085,7 @@
       - No more casseroles
       evidence: a committee of students help plan the cafeteria lunch menu
     - kind: quote
-      ask: Which sentence is NOT relevant evidence for the claim?
+      ask: Which detail is NOT relevant evidence for the claim?
       choices:
       - Our school has the largest cafeteria in the district, with room for four hundred students.
       - came back nearly untouched
@@ -1190,5 +1190,5 @@
       - Rafael's evidence
       samples:
       - The art teacher's list of broken supplies fills two pages.
-      - Two thirds of sixth graders named the trip their favorite day.
+      - More than two thirds of sixth graders named the trip their favorite day.
       evidence: keeps a list of broken supplies, and it now fills two pages

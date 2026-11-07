@@ -39,7 +39,7 @@
             - He has never left home before.
           evidence: his three closest friends were already designing the arm and the sensors
         - kind: quote
-          ask: Which sentence best reveals Hazel's dry sense of humor?
+          ask: Which words best reveal Hazel's dry sense of humor?
           choices:
             - I told her I've repaired stranger attachments.
             - Hazel hung her apron on a hook and smiled faintly.
@@ -48,7 +48,7 @@
           evidence: I told her I've repaired stranger attachments.
         - kind: write
           ask: How is Theo's phone different from the clocks in the shop?
-          sample: The phone shows the exact time silently, while the clocks tick loudly at different paces and needed repair.
+          sample: The phone shows the exact time silently, while the clocks tick, each at its own slightly different pace, and all came to the shop broken.
           evidence: which displayed the exact time without any noise at all
 
 - id: c02-the-screw-drawers
@@ -80,7 +80,7 @@
             - He cannot read the labels.
           evidence: then checked his messages, then sorted for ten more minutes while a video played quietly beside the tray
         - kind: quote
-          ask: Which sentence best shows why the sorting matters to Hazel?
+          ask: Which words best show why the sorting matters to Hazel?
           choices:
             - My hands aren't as steady as they used to be
             - Theo doubted that very much.
@@ -131,7 +131,7 @@
             - She is afraid of him.
           evidence: You're standing in the only useful part of the dock
         - kind: quote
-          ask: Which sentence best shows that June respects Hazel?
+          ask: Which words best show that June respects Hazel?
           choices:
             - Hazel has kept half the radios in this town alive for fifty years
             - She was a year or so older than Theo, with a sunburned nose
@@ -180,7 +180,7 @@
             - clean the library's windows
           evidence: I told them it would strike again for the picnic
         - kind: quote
-          ask: Which sentence best shows the clock matters to Hazel personally?
+          ask: Which words best show the clock matters to Hazel personally?
           choices:
             - My father kept this clock running when I was your age
             - The staircase was steep and narrow
@@ -229,7 +229,7 @@
             - to sell the old gears
           evidence: he would never get home in time for the contest
         - kind: quote
-          ask: Which sentence best states Hazel's reason for refusing?
+          ask: Which words best state Hazel's reason for refusing?
           choices:
             - We're here to make it right.
             - Theo pushed his food around his plate in silence.
@@ -260,10 +260,10 @@
             - quiet and rest
           evidence: He still believed his idea was more efficient
         - kind: quote
-          ask: Which sentence best shows Hazel's words have begun to affect Theo?
+          ask: Which words best show Hazel's words have begun to affect Theo?
           choices:
             - Hazel's answer lingered in his mind long after dinner
-            - Theo pushed his food around his plate in silence.
+            - "\"It's clever,\" she admitted."
             - It would look exactly the same
             - He sketched a diagram on the back of a receipt
           evidence: Hazel's answer lingered in his mind long after dinner
@@ -302,7 +302,7 @@
             - nervous and afraid
           evidence: Theo began reluctantly
         - kind: quote
-          ask: Which sentence best explains why one worn tooth matters?
+          ask: Which words best explain why one worn tooth matters?
           choices:
             - A clock is only as dependable as its smallest tooth.
             - These need cleaning before anything else can happen
@@ -404,7 +404,7 @@
             - June offered to pay him.
           evidence: Theo wanted, more than he cared to admit, to impress her
         - kind: quote
-          ask: Which sentence best shows the moment Theo makes his mistake?
+          ask: Which words best show the moment Theo makes his mistake?
           choices:
             - He turned the crown firmly, then more firmly, ignoring the stiff resistance under his fingertips
             - He opened the case with one of Hazel's tiny screwdrivers
@@ -455,11 +455,11 @@
             - Hazel told him to stay away.
           evidence: When June waved from a rowboat, he pretended to be absorbed in his phone
         - kind: quote
-          ask: Which sentence best shows that Theo's lie troubles him?
+          ask: Which words best show that Theo's lie troubles him?
           choices:
             - The lie came out more smoothly than he expected, which made him feel considerably worse.
             - His friends' messages kept arriving, cheerful and impatient
-            - I'm just tired," Theo said
+            - Theo said, avoiding her eyes
             - He began avoiding the dock.
           evidence: The lie came out more smoothly than he expected, which made him feel considerably worse.
         - kind: mc
@@ -538,7 +538,7 @@
             - Never borrow from neighbors.
           evidence: a mistake you show can be mended
         - kind: quote
-          ask: Which sentence best shows how Theo feels after he confesses?
+          ask: Which words best show how Theo feels after he confesses?
           choices:
             - For the first time in days, Theo felt the heavy silence lift.
             - Theo stared into his tea.
@@ -547,9 +547,9 @@
           evidence: For the first time in days, Theo felt the heavy silence lift.
         - kind: paragraph
           ask: How is the young Hazel like Theo? Use evidence from this part.
-          sample: Young Hazel and Theo both rushed a repair to impress someone and then hid the mistake. Hazel says she rushed the clock "because I wanted to show my father how fast I was." Theo, too, broke the watch and "lied to you about the part." Both learned that "a mistake you hide keeps growing, but a mistake you show can be mended." This shows that Theo is repeating Hazel's lesson and growing in the same way she did.
+          sample: Young Hazel and Theo both damaged something and then hid it. Hazel cracked the glass of a neighbor's clock and "concealed the clock in the cellar for an entire week." Theo broke June's watch and then "lied to you about the part." Both learned that "a mistake you hide keeps growing, but a mistake you show can be mended." This shows that Theo is repeating Hazel's lesson and growing in the same way she did.
           rubric: Claim about how they are alike; a quote about Hazel and one about Theo; explains the shared lesson.
-          evidence: because I wanted to show my father how fast I was
+          evidence: concealed the clock in the cellar for an entire week
 
 - id: c11-steady-hands
   title: Steady Hands
@@ -582,7 +582,7 @@
             - Hazel needs new glasses.
           evidence: you'll do the work, and I'll do the watching
         - kind: quote
-          ask: Which sentence best shows that Theo is learning patience?
+          ask: Which words best show that Theo is learning patience?
           choices:
             - stopping the moment he felt the faintest resistance
             - The new mainspring arrived in a small padded envelope
@@ -598,8 +598,8 @@
             - She asks him to leave.
           evidence: the guarded expression she usually wore had disappeared completely
         - kind: write
-          ask: How is this repair different from Theo's first try?
-          sample: This time he works slowly with Hazel's guidance and stops at any resistance, instead of forcing the crown to impress June.
+          ask: What does Theo do to avoid breaking the new spring?
+          sample: He works slowly over four evenings, stops when Hazel taps the bench, and turns the crown slowly, counting each click and stopping at the faintest resistance.
           evidence: counting each click and stopping the moment he felt the faintest resistance
 
 - id: c12-the-storm
@@ -633,7 +633,7 @@
             - She invited them to dinner.
           evidence: kept ticking as though nothing had changed
         - kind: quote
-          ask: Which sentence best shows how Theo feels about the ticking?
+          ask: Which words best show how Theo feels about the ticking?
           choices:
             - Theo found the sound unexpectedly comforting
             - Hazel lit candles with the calm efficiency
@@ -650,7 +650,7 @@
           evidence: one woman described setting her watch by it every morning on the way to school
         - kind: write
           ask: How does the storm help develop the story's theme?
-          sample: It shows that old things made with care can keep working when new shortcuts fail, which supports Hazel's way of repairing things.
+          sample: Theo's phone goes dark while the wind-up clocks keep ticking, and Mr. Ellis says the old things are still running when the new things give up. This shows that things made with care can last.
           evidence: how the old things are the ones still running when the new things give up
 
 - id: c13-small-things
@@ -684,10 +684,10 @@
             - He is ignoring Hazel.
           evidence: Theo began noticing things he would have ignored in June
         - kind: quote
-          ask: Which sentence best shows how Theo has changed in solving problems?
+          ask: Which words best show how Theo has changed in solving problems?
           choices:
             - Now he found that he enjoyed working the problem out slowly
-            - Your pallets are too wide," she said, tapping the page.
+            - she said, tapping the page
             - His friends replied with a single confused emoji.
             - He noticed that Hazel hummed while she worked
           evidence: Now he found that he enjoyed working the problem out slowly
@@ -735,7 +735,7 @@
             - She wants to go home.
           evidence: I'm perfectly fine," Hazel said, a little too sharply.
         - kind: quote
-          ask: Which sentence best shows why accepting help is hard for Hazel?
+          ask: Which words best show why accepting help is hard for Hazel?
           choices:
             - I've spent fifty years being the person who fixes things
             - Theo, carrying the toolbox behind her
@@ -808,7 +808,7 @@
             - Cranes are too expensive.
           evidence: The tower door is barely wider than you are
         - kind: quote
-          ask: Which sentence best shows Theo has learned to listen?
+          ask: Which words best show Theo has learned to listen?
           choices:
             - But instead of interrupting, he asked her to explain each part
             - Theo pulled the rope hand over hand
@@ -864,7 +864,7 @@
             - Hazel refuses to buy one.
           evidence: The company that had built the clock had closed more than a century ago
         - kind: quote
-          ask: Which sentence best shows Theo is tempted to give up?
+          ask: Which words best show Theo is tempted to give up?
           choices:
             - Maybe the battery motor wasn't such a terrible idea
             - He showed it to June
@@ -916,7 +916,7 @@
             - Hazel removes the crack.
           evidence: had to begin all over with a fresh piece of brass
         - kind: quote
-          ask: Which sentence best shows Theo chooses patience after a mistake?
+          ask: Which words best show Theo chooses patience after a mistake?
           choices:
             - instead he set it down, breathed slowly, and reached for the brass
             - He filed patiently every evening
@@ -947,7 +947,7 @@
             - It makes work more fun.
           evidence: rushing had never actually saved him any time
         - kind: quote
-          ask: Which sentence best shows how Theo's values have changed?
+          ask: Which words best show how Theo's values have changed?
           choices:
             - he found that he was prouder of that small piece of brass than of anything he had ever made with a screen
             - Hazel fixed it in place with a tiny brass pin
@@ -1042,7 +1042,7 @@
             - Hazel gives a speech.
           evidence: the bell rang out over the lake for the first time in twenty years
         - kind: quote
-          ask: Which sentence best shows that Theo's work succeeded?
+          ask: Which words best show that Theo's work succeeded?
           choices:
             - Theo's handmade tooth slipped past the pallet exactly as it was designed to
             - Families spread blankets beneath the maple trees
@@ -1059,7 +1059,7 @@
           evidence: Beside him, June wiped her eyes quickly and elbowed him in the ribs.
         - kind: write
           ask: Why is Hazel "smiling and crying at the same time"?
-          sample: She is overjoyed that her promise is kept and moved because the clock her father cared for is running again.
+          sample: She is overjoyed and deeply moved, because the bell rang out over the lake for the first time in twenty years, and she stands with one hand pressed against her heart.
           evidence: she was smiling and crying at the same time
 
 - id: c20-leaving-alder-bay
@@ -1084,12 +1084,12 @@
           ask: What does Hazel's gift of her first tools suggest?
           choices:
             - She trusts Theo to carry on.
-            - She no longer repairs clocks.
+            - She wants Theo to stay longer.
             - She wants Theo to sell them.
             - She has bought new tools.
           evidence: My hands aren't steady enough for them anymore, but yours are
         - kind: quote
-          ask: Which sentence best shows how Theo's feelings about Alder Bay changed?
+          ask: Which words best show how Theo's feelings about Alder Bay changed?
           choices:
             - now he found himself counting the months until he could return next summer
             - Downstairs, Hazel was waiting with a small canvas roll tied with a leather cord.
@@ -1120,7 +1120,7 @@
             - Contests matter more than towns.
           evidence: stop trying to make the robot look right before they had made it right
         - kind: quote
-          ask: Which sentence best shows Theo no longer depends on his screen?
+          ask: Which words best show Theo no longer depends on his screen?
           choices:
             - he had begun to tell the time by its bell without even glancing at his phone
             - Theo thanked her, then hugged her for a long time

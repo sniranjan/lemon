@@ -84,7 +84,7 @@
           choices:
             - When the final note faded, the room was quiet enough to hear the radiator ticking.
             - When she began, the first phrase faltered.
-            - She stopped, breathed, and started again.
+            - Her bow skidded across the lowest string with a sound like a door complaining on its hinges, and embarrassment crept up her neck.
             - "\"You're early,\" he observed, and it was not a question."
           evidence: the room was quiet enough to hear the radiator ticking
         - kind: write
@@ -370,7 +370,7 @@
           choices: [gently teasing, harsh, worried, bored]
           evidence: smiling at Lin's dismay
         - kind: quote
-          ask: Which sentence shows that Lin's work has improved?
+          ask: Which words show that Lin's work has improved?
           choices:
             - When she held the fabric up to the lamp, the light did not slip through a single gap.
             - Lin's first stitches raced across the cloth, long and crooked
@@ -488,7 +488,7 @@
           evidence: reflected the pines so precisely that I could not tell where the real trees ended
         - kind: write
           ask: What does "the morning had borrowed all my words" mean?
-          sample: The narrator was so amazed by the beautiful morning that she could not think of anything to say.
+          sample: The morning was so beautiful that the narrator could not think of anything to say.
           evidence: the morning had borrowed all my words, so I simply nodded
     - focus: craft and tone
       look_for: comparisons that describe the lake
@@ -549,11 +549,11 @@
         - kind: mc
           ask: Why is Wes's note ironic by the end?
           choices:
-            - Wes also mixed up jackets.
+            - Wes lost his jacket too.
             - Wes writes very neatly.
             - Wes plays the harmonica.
             - Wes likes peppermints.
-          evidence: who never loses anything
+          evidence: accidentally walked off with somebody else's jacket
         - kind: write
           ask: What does Mrs. Delgado's "knowing smile" suggest?
           sample: It suggests she already knew Kofi had come to look for his lost jacket again.
@@ -644,7 +644,7 @@
             - how fast cyclists ride
           evidence: much as a cyclist saves energy by riding close behind another rider
         - kind: quote
-          ask: Which sentence best shows the writer admires the geese?
+          ask: Which words best show the writer admires the geese?
           choices:
             - I find something quietly admirable in that arrangement.
             - Their famous V formation is not simply decoration.
@@ -790,7 +790,7 @@
             - The streetlights are too dim.
           evidence: Midas soon discovered that he could not eat golden bread
         - kind: quote
-          ask: Which sentence shows the writer sees both sides?
+          ask: Which words show the writer sees both sides?
           choices:
             - I think they are both right.
             - My grandfather calls the streetlights the Midas touch.
@@ -862,7 +862,7 @@
             - They are both bored and sleepy.
           evidence: watching familiar exits disappear behind us
         - kind: quote
-          ask: Which sentence shows the narrator's mood begins to lift?
+          ask: Which words show the narrator's mood begins to lift?
           choices:
             - For the first time all day, I did not feel like arguing.
             - I spent most of the trip with my forehead against the window

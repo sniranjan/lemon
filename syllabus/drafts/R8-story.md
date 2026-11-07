@@ -29,10 +29,10 @@ Flesch-Kincaid grade 7.5–9.5 on every text. Allusions are to well-known myths 
 Set 1 (character and setting):
 1. [mc] How does Theo feel when he first arrives in Alder Bay? — **unimpressed and eager to leave** / excited to explore the lake / nervous about meeting his friends / happy to have a quiet summer
 2. [mc] Why does Theo resent spending the summer in Alder Bay? — **He wants to help build the robot.** / He dislikes swimming in lakes. / His great-aunt is unkind to him. / He has never left home before.
-3. [quote] Which sentence best reveals Hazel's dry sense of humor? — **I told her I've repaired stranger attachments.** / Hazel hung her apron on a hook and smiled faintly. / Hazel Marsh was waiting on the sidewalk / Inside, the shop was dim and narrow
-4. [write] How is Theo's phone different from the clocks in the shop? — sample: The phone shows the exact time silently, while the clocks tick loudly at different paces and needed repair.
+3. [quote] Which words best reveal Hazel's dry sense of humor? — **I told her I've repaired stranger attachments.** / Hazel hung her apron on a hook and smiled faintly. / Hazel Marsh was waiting on the sidewalk / Inside, the shop was dim and narrow
+4. [write] How is Theo's phone different from the clocks in the shop? — sample: The phone shows the exact time silently, while the clocks tick, each at its own slightly different pace, and all came to the shop broken.
 
-### Part 2: The Screw Drawers (`c02-the-screw-drawers`, story, pages 103–104; 313 words, FK 7.74; 1 paragraph(s) end on the questions page; questions page 132 of 140 units)
+### Part 2: The Screw Drawers (`c02-the-screw-drawers`, story, pages 103–104; 313 words, FK 7.74; 1 paragraph(s) end on the questions page; questions page 127 of 140 units)
 
 1. On his first morning, Hazel set a wooden tray in front of Theo containing roughly a thousand screws, some no larger than a grain of rice, and a cabinet of tiny drawers labeled in her careful handwriting. "Sort them by size and thread," she instructed, handing him a magnifying glass. "When you finish, you'll know more about clocks than most adults."
 
@@ -48,7 +48,7 @@ Set 1 (character and setting):
 
 Set 1 (how an incident reveals character):
 1. [mc] Why does Theo sort the screws carelessly? — **He is distracted by his phone.** / Hazel told him to hurry. / The magnifying glass is broken. / He cannot read the labels.
-2. [quote] Which sentence best shows why the sorting matters to Hazel? — **My hands aren't as steady as they used to be** / Theo doubted that very much. / Several bounced across the workbench and vanished into the cracks of the old floorboards. / He typed a long, confident answer and felt, for a moment, like himself again.
+2. [quote] Which words best show why the sorting matters to Hazel? — **My hands aren't as steady as they used to be** / Theo doubted that very much. / Several bounced across the workbench and vanished into the cracks of the old floorboards. / He typed a long, confident answer and felt, for a moment, like himself again.
 3. [mc] What does Theo decide to do at the end? — **look for the lost screws** / explain why sorting is tedious / call his friends for help / leave the shop for the day
 4. [write] Summarize this part in two sentences, without opinions. — sample: Theo sorts screws carelessly while using his phone and loses some on the floor. When Hazel explains that she depends on the drawers, he begins looking for the lost screws.
 
@@ -70,7 +70,7 @@ Set 1 (how an incident reveals character):
 
 Set 1 (how dialogue reveals character):
 1. [mc] What does June's first line to Theo reveal about her? — **She is blunt and practical.** / She is shy and nervous. / She is lonely and sad. / She is afraid of him.
-2. [quote] Which sentence best shows that June respects Hazel? — **Hazel has kept half the radios in this town alive for fifty years** / She was a year or so older than Theo, with a sunburned nose / He watched her row with steady, efficient strokes / he described June to his friends as rude and bossy
+2. [quote] Which words best show that June respects Hazel? — **Hazel has kept half the radios in this town alive for fifty years** / She was a year or so older than Theo, with a sunburned nose / He watched her row with steady, efficient strokes / he described June to his friends as rude and bossy
 3. [mc] Why is Theo annoyed when June speaks to him? — **She already knows his plans.** / She takes his phone away. / She refuses to rent him a boat. / She laughs at his photograph.
 4. [write] Why might Theo leave out details when he describes June? — sample: He may secretly admire her loyalty and skill, but he does not want to admit it to his friends.
 
@@ -90,7 +90,7 @@ Set 1 (how dialogue reveals character):
 
 Set 1 (setting and the central problem):
 1. [mc] What problem does Hazel promise to solve? — **make the tower clock strike again** / find the key to the boiler room / plan the town's summer picnic / clean the library's windows
-2. [quote] Which sentence best shows the clock matters to Hazel personally? — **My father kept this clock running when I was your age** / The staircase was steep and narrow / Nobody could agree on whose job it was to fix it. / Gears as wide as bicycle wheels stood motionless
+2. [quote] Which words best show the clock matters to Hazel personally? — **My father kept this clock running when I was your age** / The staircase was steep and narrow / Nobody could agree on whose job it was to fix it. / Gears as wide as bicycle wheels stood motionless
 3. [mc] How does the tower affect Theo? — **Its size makes him silent.** / Its dust makes him leave. / Its height makes him dizzy. / Its noise makes him laugh.
 4. [write] Why is "I promised" not quite an answer to Theo's question? — sample: Hazel does not say whether she can fix it; she only says she has committed to trying.
 
@@ -110,13 +110,13 @@ Set 1 (setting and the central problem):
 
 Set 1 (how dialogue provokes a decision):
 1. [mc] Why does Theo propose the battery motor? — **to finish faster and go home** / to make the clock louder / to teach Hazel about robots / to sell the old gears
-2. [quote] Which sentence best states Hazel's reason for refusing? — **We're here to make it right.** / Theo pushed his food around his plate in silence. / It would save weeks. / He sketched a diagram on the back of a receipt
+2. [quote] Which words best state Hazel's reason for refusing? — **We're here to make it right.** / Theo pushed his food around his plate in silence. / It would save weeks. / He sketched a diagram on the back of a receipt
 3. [mc] What does Hazel mean by "inherited a shortcut"? — **left future people a weak fix** / given the town a new road / got money from a relative / found a faster way upstairs
 4. [write] Summarize this part in two sentences, without opinions. — sample: Theo suggests replacing the old works with a battery motor to save time. Hazel refuses because she wants the clock repaired properly so it will last.
 
 Set 2 (Theo so far), second reading: *how Theo reacts to Hazel's answer*:
 1. [mc] What does Theo value most at this point in the story? — **speed and efficiency** / patience and care / history and tradition / quiet and rest
-2. [quote] Which sentence best shows Hazel's words have begun to affect Theo? — **Hazel's answer lingered in his mind long after dinner** / Theo pushed his food around his plate in silence. / It would look exactly the same / He sketched a diagram on the back of a receipt
+2. [quote] Which words best show Hazel's words have begun to affect Theo? — **Hazel's answer lingered in his mind long after dinner** / "It's clever," she admitted. / It would look exactly the same / He sketched a diagram on the back of a receipt
 3. [paragraph] How is Theo starting to change? Use evidence from this part. — sample: Theo still wants to go home quickly, but he is starting to think about Hazel's values. At first he is proud of his plan and says "It would save weeks." After Hazel refuses, "Hazel's answer lingered in his mind long after dinner." That night, "instead of checking his messages, he lay awake listening to the shop's clocks tick below him." This shows he is beginning to pay attention to the clocks instead of his screen. *Full answer:* Claim about how Theo is changing; two quotes (before and after Hazel speaks); explains what each shows.
 
 ### Part 6: Every Tooth (`c06-every-tooth`, story, pages 113–114; 324 words, FK 8.7; 1 paragraph(s) end on the questions page; questions page 113 of 140 units)
@@ -135,7 +135,7 @@ Set 2 (Theo so far), second reading: *how Theo reacts to Hazel's answer*:
 
 Set 1 (how an incident changes Theo):
 1. [mc] How does Theo feel when he begins cleaning? — **reluctant and bored** / curious and excited / proud and confident / nervous and afraid
-2. [quote] Which sentence best explains why one worn tooth matters? — **A clock is only as dependable as its smallest tooth.** / These need cleaning before anything else can happen / The work was messy and repetitive / He set the worn gear aside on a clean rag
+2. [quote] Which words best explain why one worn tooth matters? — **A clock is only as dependable as its smallest tooth.** / These need cleaning before anything else can happen / The work was messy and repetitive / He set the worn gear aside on a clean rag
 3. [mc] What does Theo wonder about the robot at home? — **if its gears were checked** / if his friends miss him / if it will win the contest / if it needs a new motor
 4. [write] How does finding the worn tooth change the way Theo works? — sample: He starts cleaning the gears more carefully and checks each one in the light before he finishes.
 
@@ -161,7 +161,7 @@ Set 1 (how dialogue reveals character):
 3. [mc] What is new about how Theo answers June's questions? — **He admits he doesn't know.** / He refuses to answer. / He searches on his phone. / He pretends to know it all.
 4. [write] Why does Theo think June's last line is "almost a compliment"? — sample: June is usually blunt, so saying he is "less annoying" is her way of showing she likes him more now.
 
-### Part 8: The Pocket Watch (`c08-the-pocket-watch`, story, pages 117–118; 312 words, FK 9.21; 2 paragraph(s) end on the questions page; questions page 131 of 140 units)
+### Part 8: The Pocket Watch (`c08-the-pocket-watch`, story, pages 117–118; 312 words, FK 9.21; 2 paragraph(s) end on the questions page; questions page 126 of 140 units)
 
 1. A few days later June brought a small silver pocket watch into the shop, cradling it in both hands as if it were a bird's egg. It had belonged to her grandfather, who had given it to her on her last birthday, and it had stopped the previous week without any warning. "Hazel's at the hardware store," Theo told her, trying to sound experienced, "but I could examine it myself, if you want."
 
@@ -179,7 +179,7 @@ Set 1 (how dialogue reveals character):
 
 Set 1 (how an incident provokes a decision):
 1. [mc] Why does Theo try to repair the watch himself? — **He wants to impress June.** / Hazel asked him to do it. / He has fixed many watches. / June offered to pay him.
-2. [quote] Which sentence best shows the moment Theo makes his mistake? — **He turned the crown firmly, then more firmly, ignoring the stiff resistance under his fingertips** / He opened the case with one of Hazel's tiny screwdrivers / June nodded and thanked him, and she left the watch in his hands. / It had belonged to her grandfather
+2. [quote] Which words best show the moment Theo makes his mistake? — **He turned the crown firmly, then more firmly, ignoring the stiff resistance under his fingertips** / He opened the case with one of Hazel's tiny screwdrivers / June nodded and thanked him, and she left the watch in his hands. / It had belonged to her grandfather
 3. [mc] What does Theo decide to do after the spring breaks? — **hide what happened from June** / tell June the truth at once / buy June a new watch / ask June to wait outside
 4. [write] Summarize this part in two sentences, without opinions. — sample: Theo tries to repair June's grandfather's pocket watch while Hazel is out and breaks its mainspring by winding too hard. He does not tell June and says the repair will take longer.
 
@@ -201,11 +201,11 @@ Set 1 (how an incident provokes a decision):
 
 Set 1 (how guilt shapes Theo's actions):
 1. [mc] Why does Theo begin avoiding the dock? — **He is hiding his mistake.** / He is busy with the robot. / He dislikes the boats. / Hazel told him to stay away.
-2. [quote] Which sentence best shows that Theo's lie troubles him? — **The lie came out more smoothly than he expected, which made him feel considerably worse.** / His friends' messages kept arriving, cheerful and impatient / I'm just tired," Theo said / He began avoiding the dock.
+2. [quote] Which words best show that Theo's lie troubles him? — **The lie came out more smoothly than he expected, which made him feel considerably worse.** / His friends' messages kept arriving, cheerful and impatient / Theo said, avoiding her eyes / He began avoiding the dock.
 3. [mc] What does Hazel probably suspect at dinner? — **Theo is hiding something.** / Theo is ill and needs rest. / Theo dislikes her cooking. / Theo wants to go home now.
 4. [write] What do the ticking clocks seem to ask Theo at the end? — sample: They seem to ask how much longer he will wait before telling the truth about the watch.
 
-### Part 10: The Confession (`c10-the-confession`, story, pages 121–124; 347 words, FK 7.69; 2 paragraph(s) end on the questions page; questions page 111/134 of 140 units)
+### Part 10: The Confession (`c10-the-confession`, story, pages 121–124; 347 words, FK 7.69; 2 paragraph(s) end on the questions page; questions page 111/129 of 140 units)
 
 1. In the morning Theo took the pocket watch out of the drawer, wrapped it in a clean rag, and carried it next door before he could change his mind. June was untying a rowboat, and her smile faded when she noticed his expression. "I broke it," he said quickly, because he was afraid that if he slowed down he would stop. "I wound it too hard, the mainspring snapped, and then I lied to you about the part, which was probably the worst decision of the entire summer."
 
@@ -229,8 +229,8 @@ Set 1 (how dialogue reveals character):
 
 Set 2 (theme so far), second reading: *what Hazel's father told her*:
 1. [mc] Which theme do Hazel's story and Theo's choice share? — **Owning up lets mistakes mend.** / Fast work is always best. / Old clocks beat new phones. / Never borrow from neighbors.
-2. [quote] Which sentence best shows how Theo feels after he confesses? — **For the first time in days, Theo felt the heavy silence lift.** / Theo stared into his tea. / He confessed anyway, from the beginning / She did not shout, which somehow made it harder.
-3. [paragraph] How is the young Hazel like Theo? Use evidence from this part. — sample: Young Hazel and Theo both rushed a repair to impress someone and then hid the mistake. Hazel says she rushed the clock "because I wanted to show my father how fast I was." Theo, too, broke the watch and "lied to you about the part." Both learned that "a mistake you hide keeps growing, but a mistake you show can be mended." This shows that Theo is repeating Hazel's lesson and growing in the same way she did. *Full answer:* Claim about how they are alike; a quote about Hazel and one about Theo; explains the shared lesson.
+2. [quote] Which words best show how Theo feels after he confesses? — **For the first time in days, Theo felt the heavy silence lift.** / Theo stared into his tea. / He confessed anyway, from the beginning / She did not shout, which somehow made it harder.
+3. [paragraph] How is the young Hazel like Theo? Use evidence from this part. — sample: Young Hazel and Theo both damaged something and then hid it. Hazel cracked the glass of a neighbor's clock and "concealed the clock in the cellar for an entire week." Theo broke June's watch and then "lied to you about the part." Both learned that "a mistake you hide keeps growing, but a mistake you show can be mended." This shows that Theo is repeating Hazel's lesson and growing in the same way she did. *Full answer:* Claim about how they are alike; a quote about Hazel and one about Theo; explains the shared lesson.
 
 ### Part 11: Steady Hands (`c11-steady-hands`, story, pages 125–126; 318 words, FK 8.33; 2 paragraph(s) end on the questions page; questions page 118 of 140 units)
 
@@ -250,11 +250,11 @@ Set 2 (theme so far), second reading: *what Hazel's father told her*:
 
 Set 1 (how an incident reveals character):
 1. [mc] What does Hazel mean by "Your hands, my eyes"? — **Theo works while Hazel guides.** / Hazel will do all the work. / Theo should close his eyes. / Hazel needs new glasses.
-2. [quote] Which sentence best shows that Theo is learning patience? — **stopping the moment he felt the faintest resistance** / The new mainspring arrived in a small padded envelope / Hazel only nodded / June came by after closing the dock
+2. [quote] Which words best show that Theo is learning patience? — **stopping the moment he felt the faintest resistance** / The new mainspring arrived in a small padded envelope / Hazel only nodded / June came by after closing the dock
 3. [mc] How does June's attitude toward Theo change? — **She becomes open and warm.** / She becomes angry again. / She stops speaking to him. / She asks him to leave.
-4. [write] How is this repair different from Theo's first try? — sample: This time he works slowly with Hazel's guidance and stops at any resistance, instead of forcing the crown to impress June.
+4. [write] What does Theo do to avoid breaking the new spring? — sample: He works slowly over four evenings, stops when Hazel taps the bench, and turns the crown slowly, counting each click and stopping at the faintest resistance.
 
-### Part 12: The Storm (`c12-the-storm`, story, pages 127–128; 311 words, FK 8.99; 2 paragraph(s) end on the questions page; questions page 130 of 140 units)
+### Part 12: The Storm (`c12-the-storm`, story, pages 127–128; 311 words, FK 8.99; 2 paragraph(s) end on the questions page; questions page 125 of 140 units)
 
 1. Late in July a summer storm rolled across the lake, drumming on the roof and turning the streets of Alder Bay into shallow, glittering rivers. Just after supper the lights flickered twice and went out, and the whole town settled into a soft, unfamiliar darkness.
 
@@ -272,9 +272,9 @@ Set 1 (how an incident reveals character):
 
 Set 1 (setting and theme):
 1. [mc] Why do neighbors come to Hazel's shop? — **Her clocks still tell the time.** / She is selling new radios. / The library has closed early. / She invited them to dinner.
-2. [quote] Which sentence best shows how Theo feels about the ticking? — **Theo found the sound unexpectedly comforting** / Hazel lit candles with the calm efficiency / Around eight o'clock someone knocked on the door. / leaving him without music, messages, or even the time
+2. [quote] Which words best show how Theo feels about the ticking? — **Theo found the sound unexpectedly comforting** / Hazel lit candles with the calm efficiency / Around eight o'clock someone knocked on the door. / leaving him without music, messages, or even the time
 3. [mc] What do the neighbors' memories show about the tower clock? — **It was part of daily life.** / It was always running late. / It was too loud for children. / It was built quite recently.
-4. [write] How does the storm help develop the story's theme? — sample: It shows that old things made with care can keep working when new shortcuts fail, which supports Hazel's way of repairing things.
+4. [write] How does the storm help develop the story's theme? — sample: Theo's phone goes dark while the wind-up clocks keep ticking, and Mr. Ellis says the old things are still running when the new things give up. This shows that things made with care can last.
 
 ### Part 13: Small Things (`c13-small-things`, story, pages 129–130; 309 words, FK 8.36; 2 paragraph(s) end on the questions page; questions page 133 of 140 units)
 
@@ -294,7 +294,7 @@ Set 1 (setting and theme):
 
 Set 1 (character development):
 1. [mc] What does Theo's noticing of small things show? — **He is paying closer attention.** / He is bored and lonely. / He wants to leave sooner. / He is ignoring Hazel.
-2. [quote] Which sentence best shows how Theo has changed in solving problems? — **Now he found that he enjoyed working the problem out slowly** / Your pallets are too wide," she said, tapping the page. / His friends replied with a single confused emoji. / He noticed that Hazel hummed while she worked
+2. [quote] Which words best show how Theo has changed in solving problems? — **Now he found that he enjoyed working the problem out slowly** / she said, tapping the page / His friends replied with a single confused emoji. / He noticed that Hazel hummed while she worked
 3. [mc] What does Theo's message to his friends suggest? — **He has learned to check each part.** / He no longer cares about the robot. / He wants a new team to join. / He thinks the robot will lose.
 4. [write] Summarize this part in two sentences, without opinions. — sample: After the storm, Theo pays closer attention to the clocks, Hazel, the lake, and June's skill. He redraws a part slowly and advises his friends to test each robot gear.
 
@@ -316,7 +316,7 @@ Set 1 (character development):
 
 Set 1 (how dialogue reveals character):
 1. [mc] Why does Hazel answer "a little too sharply" at first? — **She is too proud to admit it.** / She is angry Theo is slow. / She dislikes the view. / She wants to go home.
-2. [quote] Which sentence best shows why accepting help is hard for Hazel? — **I've spent fifty years being the person who fixes things** / Theo, carrying the toolbox behind her / Theo sat beside her on the narrow step / When exactly did you become so remarkably sensible?
+2. [quote] Which words best show why accepting help is hard for Hazel? — **I've spent fifty years being the person who fixes things** / Theo, carrying the toolbox behind her / Theo sat beside her on the narrow step / When exactly did you become so remarkably sensible?
 3. [mc] What decision does Theo's idea of "a team" lead to? — **Hazel guides from the shop.** / Hazel quits the clock. / Theo works all alone. / Mr. Ellis hires a repairer.
 4. [write] Summarize this part in two sentences, without opinions. — sample: Hazel admits that she can no longer climb the tower stairs every day. Theo suggests working as a team, and they agree that she will supervise from the workshop.
 
@@ -341,7 +341,7 @@ Set 2 (how Hazel and Theo have changed), second reading: *what Hazel and Theo ad
 
 Set 1 (how an incident reveals character):
 1. [mc] Why does June laugh at Mr. Ellis's idea? — **A crane couldn't fit in the tower.** / She thinks he is joking. / She dislikes encyclopedias. / Cranes are too expensive.
-2. [quote] Which sentence best shows Theo has learned to listen? — **But instead of interrupting, he asked her to explain each part** / Theo pulled the rope hand over hand / They assembled the frame on Saturday morning / June turned pink and pretended to coil a rope.
+2. [quote] Which words best show Theo has learned to listen? — **But instead of interrupting, he asked her to explain each part** / Theo pulled the rope hand over hand / They assembled the frame on Saturday morning / June turned pink and pretended to coil a rope.
 3. [mc] What does June's reaction to Hazel's praise suggest? — **She is proud but shy about it.** / She disagrees with Hazel. / She is tired from the work. / She wants to leave the tower.
 4. [write] How does the lifting frame show June's skill? — sample: She designed it herself, planned for every problem, and the gear landed exactly on the X she had marked.
 
@@ -367,7 +367,7 @@ Set 1 (how an incident reveals character):
 
 Set 1 (how a setback provokes a decision):
 1. [mc] Why can't they simply buy a new escape wheel? — **The maker closed long ago.** / It costs too much money. / The store is far away. / Hazel refuses to buy one.
-2. [quote] Which sentence best shows Theo is tempted to give up? — **Maybe the battery motor wasn't such a terrible idea** / He showed it to June / Hazel picked up the wheel and turned it slowly / He was working carefully
+2. [quote] Which words best show Theo is tempted to give up? — **Maybe the battery motor wasn't such a terrible idea** / He showed it to June / Hazel picked up the wheel and turned it slowly / He was working carefully
 3. [mc] How does Hazel's correction change the problem? — **A tooth can be handmade.** / The clock can't be fixed. / A new wheel is coming. / The crack isn't serious.
 4. [write] What is Theo arguing with himself about at the end? — sample: He is deciding whether to give up or to take the time to make a new tooth by hand.
 
@@ -389,13 +389,13 @@ Set 1 (how a setback provokes a decision):
 
 Set 1 (how an incident reveals character):
 1. [mc] What happens on the fourth evening? — **Theo files too much.** / Theo finishes the tooth. / June breaks the template. / Hazel removes the crack.
-2. [quote] Which sentence best shows Theo chooses patience after a mistake? — **instead he set it down, breathed slowly, and reached for the brass** / He filed patiently every evening / June leaned over his shoulder. / On the ninth evening the new tooth slid into its slot
+2. [quote] Which words best show Theo chooses patience after a mistake? — **instead he set it down, breathed slowly, and reached for the brass** / He filed patiently every evening / June leaned over his shoulder. / On the ninth evening the new tooth slid into its slot
 3. [mc] What does June's last line show about her view of Theo? — **She sincerely admires his work.** / She is teasing him again. / She thinks the tooth is wrong. / She wants to file it herself.
 4. [write] Summarize this part in two sentences, without opinions. — sample: Over nine evenings, Theo files a new tooth by hand to match June's template, starting over once. The new tooth fits so well that it matches the others perfectly.
 
 Set 2 (Theo's growth so far), second reading: *how Theo handles mistakes now*:
 1. [mc] What has Theo learned about rushing? — **It only delays the work.** / It always saves time. / It impresses other people. / It makes work more fun.
-2. [quote] Which sentence best shows how Theo's values have changed? — **he found that he was prouder of that small piece of brass than of anything he had ever made with a screen** / Hazel fixed it in place with a tiny brass pin / Every tooth, the old and the new, matched perfectly. / She nodded as if she had expected nothing else
+2. [quote] Which words best show how Theo's values have changed? — **he found that he was prouder of that small piece of brass than of anything he had ever made with a screen** / Hazel fixed it in place with a tiny brass pin / Every tooth, the old and the new, matched perfectly. / She nodded as if she had expected nothing else
 3. [paragraph] Compare how Theo deals with a mistake here and with the pocket watch. — sample: Theo now handles mistakes with patience instead of hiding them. When he files too much, he does not give up; "instead he set it down, breathed slowly, and reached for the brass." He even remembers "the pocket watch and the sickening click of the broken spring." Because of that memory, he understands that "rushing had never actually saved him any time." This shows he has learned from his earlier mistake and grown more patient. *Full answer:* Claim about Theo's change; a quote about the new mistake and one recalling the watch; explains the growth.
 
 ### Part 18: The Message (`c18-the-message`, story, pages 143–144; 328 words, FK 8.27; 2 paragraph(s) end on the questions page; questions page 133 of 140 units)
@@ -438,9 +438,9 @@ Set 1 (how dialogue provokes a decision):
 
 Set 1 (how the plot reaches its climax):
 1. [mc] Why is this moment important to the whole town? — **The clock strikes again.** / The band plays a new song. / The library adds a room. / Hazel gives a speech.
-2. [quote] Which sentence best shows that Theo's work succeeded? — **Theo's handmade tooth slipped past the pallet exactly as it was designed to** / Families spread blankets beneath the maple trees / June gripped the railing beside the frame. / Hazel sat on a folding chair at the front
+2. [quote] Which words best show that Theo's work succeeded? — **Theo's handmade tooth slipped past the pallet exactly as it was designed to** / Families spread blankets beneath the maple trees / June gripped the railing beside the frame. / Hazel sat on a folding chair at the front
 3. [mc] What does June's last line reveal about her? — **She shows affection by teasing.** / She is still annoyed at Theo. / She wanted a battery motor. / She thinks the clock is slow.
-4. [write] Why is Hazel "smiling and crying at the same time"? — sample: She is overjoyed that her promise is kept and moved because the clock her father cared for is running again.
+4. [write] Why is Hazel "smiling and crying at the same time"? — sample: She is overjoyed and deeply moved, because the bell rang out over the lake for the first time in twenty years, and she stands with one hand pressed against her heart.
 
 ### Part 20: Leaving Alder Bay (`c20-leaving-alder-bay`, story, pages 147–150; 322 words, FK 8.66; 1 paragraph(s) end on the questions page; questions page 139/140 of 140 units)
 
@@ -455,12 +455,12 @@ Set 1 (how the plot reaches its climax):
 5. As the bus pulled away from the lake, Theo unrolled Hazel's tools across his knees and thought about his friends and their robot, which had placed fourth after a plastic gear wore out halfway through the contest. He already knew what he would suggest when he got home: that they examine every gear, test every part slowly, and stop trying to make the robot look right before they had made it right.
 
 Set 1 (theme and resolution):
-1. [mc] What does Hazel's gift of her first tools suggest? — **She trusts Theo to carry on.** / She no longer repairs clocks. / She wants Theo to sell them. / She has bought new tools.
-2. [quote] Which sentence best shows how Theo's feelings about Alder Bay changed? — **now he found himself counting the months until he could return next summer** / Downstairs, Hazel was waiting with a small canvas roll tied with a leather cord. / June met him at the bus stop with her sketchbook under her arm. / The tower clock struck eight as he zipped the bag closed
+1. [mc] What does Hazel's gift of her first tools suggest? — **She trusts Theo to carry on.** / She wants Theo to stay longer. / She wants Theo to sell them. / She has bought new tools.
+2. [quote] Which words best show how Theo's feelings about Alder Bay changed? — **now he found himself counting the months until he could return next summer** / Downstairs, Hazel was waiting with a small canvas roll tied with a leather cord. / June met him at the bus stop with her sketchbook under her arm. / The tower clock struck eight as he zipped the bag closed
 3. [mc] Why does June want Theo to remember the inside of the clock? — **to recall how it really works** / to help him draw a new robot / to show she is a better artist / to prove the tower is too tall
 4. [write] Summarize this part in two sentences, without opinions. — sample: Hazel gives Theo her first set of tools, and June gives him a drawing of the clock's works. On the bus home, Theo plans to help his robot team work more slowly and carefully.
 
 Set 2 (theme across the whole story), second reading: *Hazel's words from part 5 in the last line*:
 1. [mc] Which theme does the whole story develop? — **Things worth fixing take time.** / New tools are always better. / Summer is best spent at home. / Contests matter more than towns.
-2. [quote] Which sentence best shows Theo no longer depends on his screen? — **he had begun to tell the time by its bell without even glancing at his phone** / Theo thanked her, then hugged her for a long time / As the bus pulled away from the lake / They promised to write real letters, not just messages
+2. [quote] Which words best show Theo no longer depends on his screen? — **he had begun to tell the time by its bell without even glancing at his phone** / Theo thanked her, then hugged her for a long time / As the bus pulled away from the lake / They promised to write real letters, not just messages
 3. [paragraph] How has Theo changed since part 1? Use evidence from this part. — sample: Theo has changed from an impatient boy who wanted to leave into someone who values patience and care. In June "he had counted the days until he could leave," but now he is "counting the months until he could return next summer." He also packs "with a care that would have astonished his parents." Finally, he plans to tell his friends to "test every part slowly," which shows he has learned the lesson Hazel taught him. *Full answer:* Claim about Theo's change; two or three quotes showing before and after; explains how each shows growth.
