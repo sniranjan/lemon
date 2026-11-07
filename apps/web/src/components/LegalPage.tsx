@@ -210,7 +210,8 @@ function Privacy() {
           <strong>Gifts:</strong> your name and email, the recipient's name and email, the child's first name (if you
           add it, and only the first name), your message and the delivery date. We use them to email the recipient on
           that day, to show the gift on the gift card and redeem page, and to send you your receipt and gift card. When
-          a gift is opened we keep the email the download link went to, like any order.
+          a gift is opened we keep the email the download link went to, like any order. These gift details are also
+          passed to Stripe with the payment, so the gift can be created once you've paid.
         </li>
         <li>
           <strong>Free previews:</strong> which preview was downloaded and the country it was downloaded from (no

@@ -175,8 +175,7 @@ function Shop({ gift, reload }: { gift: GiftInfo; reload: () => void }) {
       <div className="sticker mt-8 bg-white p-6 sm:p-8">
         <h2 className="text-2xl font-bold">This gift is all used up</h2>
         <p className="mt-2 text-lg text-ink/80">
-          Every dollar has gone to levels. Need a download link again? Resend it below. If a checkout is still open in
-          another tab, finish it there, or come back in about 40 minutes.
+          Every dollar has gone to levels. Need a download link again? Resend it below.
         </p>
       </div>
     );
@@ -252,6 +251,11 @@ function Shop({ gift, reload }: { gift: GiftInfo; reload: () => void }) {
         </div>
       )}
 
+      {gift.heldCents > 0 && (
+        <p className="mt-4 text-sm font-semibold text-ink/70">
+          You have a checkout open for this gift. Starting a new one here closes it, so nothing is paid twice.
+        </p>
+      )}
       {forSale.length > 0 && <EmailField email={email} setEmail={setEmail} />}
       {forSale.length > 0 && (
         <Button type="submit" variant="coral" size="pill" disabled={busy || !quote} className="mt-5">

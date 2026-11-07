@@ -328,10 +328,9 @@ describe("spending a gift amount", () => {
     const meta = metadataOf(call);
     expect(meta).toMatchObject({ gift_code: code, gift_cents: "900", kind: "two", levels: "chicks,ducklings" });
 
-    // Not paid yet: the balance is still there, but held (another tab can't spend it).
+    // Not paid yet: the balance is still there, held by the open checkout.
     expect(gift(code).balance_cents).toBe(900);
-    expect(((await (await req(`/api/gift/${code}`)).json()) as { balanceCents: number }).balanceCents).toBe(0);
-    expect((await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" })).status).toBe(409);
+    expect(await (await req(`/api/gift/${code}`)).json()).toMatchObject({ balanceCents: 900, heldCents: 900 });
 
     // Tax may be added on top: the balance taken is our own number, not amount_total.
     const session = paidSession("cs_test_paytherest01", meta, { amount_total: 2150, customer_details: { email: "sam@example.com" } });
@@ -369,6 +368,42 @@ describe("spending a gift amount", () => {
     await webhook(session);
     expect(gift(code).balance_cents).toBe(0);
     expect(count("SELECT COUNT(*) AS n FROM gift_redemptions")).toBe(1);
+  });
+
+  it("backing out of Stripe and starting again closes the first checkout, so the balance is never spent twice", async () => {
+    const code = await creditGift(1000);
+    await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    const first = stripe.calls.filter((c) => c.path === "/v1/checkout/sessions").length;
+    const firstId = (t.db.prepare("SELECT session_id FROM gift_holds").get() as { session_id: string }).session_id;
+    expect(stripe.expired).toEqual([]);
+    // a cheaper cart the balance covers fully: the old checkout is closed, then the $0 order goes through
+    t.db.prepare("UPDATE gifts SET balance_cents = 1900 WHERE code = ?").run(code);
+    const r = await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    expect(await r.json()).toMatchObject({ ok: true, paid: 0 });
+    expect(stripe.expired).toEqual([firstId]);
+    expect(stripe.calls.filter((c) => c.path === "/v1/checkout/sessions").length).toBe(first);
+    expect(count("SELECT COUNT(*) AS n FROM gift_holds")).toBe(0);
+    expect(gift(code).balance_cents).toBe(0);
+  });
+
+  it("a second pay-the-rest checkout closes the first and holds the balance again", async () => {
+    const code = await creditGift(1000);
+    await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    const r = await post(`/api/gift/${code}/checkout`, { levels: ["chicks", "ducklings"], email: "sam@example.com" });
+    expect(await r.json()).toMatchObject({ ok: true, paid: TWO_CENTS - 1000 });
+    expect(stripe.expired).toHaveLength(1);
+    expect(count("SELECT COUNT(*) AS n FROM gift_holds")).toBe(1);
+    expect(gift(code).balance_cents).toBe(1000); // untouched until a payment succeeds
+  });
+
+  it("a checkout Stripe won't close (already paid) keeps its hold", async () => {
+    const code = await creditGift(1000);
+    await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    const hold = t.db.prepare("SELECT session_id FROM gift_holds").get() as { session_id: string };
+    stripe.completed.add(hold.session_id);
+    const r = await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    expect(r.status).toBe(409);
+    expect(count("SELECT COUNT(*) AS n FROM gift_holds")).toBe(1);
   });
 
   it("an abandoned checkout leaves the balance alone, and its hold lapses", async () => {

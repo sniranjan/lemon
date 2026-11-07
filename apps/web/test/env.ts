@@ -107,6 +107,8 @@ export type StripeCall = { method: string; path: string; body: URLSearchParams; 
 /** Stubs global fetch for api.stripe.com. Anything else, or an unknown Stripe path, throws. */
 export function stubStripe(sessions: Record<string, unknown> = {}) {
   const calls: StripeCall[] = [];
+  const expired: string[] = []; // sessions closed with /expire
+  const completed = new Set<string>(); // sessions Stripe refuses to expire (already paid)
   let n = 0;
   const fetchStub = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
     const url = new URL(String(input));
@@ -132,12 +134,18 @@ export function stubStripe(sessions: Record<string, unknown> = {}) {
       return json({ id, url: `https://checkout.stripe.test/${id}` });
     }
     if (method === "POST" && url.pathname === "/v1/coupons") return json({ id: `coupon_${++n}` });
+    const exp = url.pathname.match(/^\/v1\/checkout\/sessions\/(cs_\w+)\/expire$/);
+    if (method === "POST" && exp) {
+      if (completed.has(exp[1])) return json({ error: { message: "Only Checkout Sessions with a status in ['open'] can be expired." } }, 400);
+      expired.push(exp[1]);
+      return json({ id: exp[1], status: "expired" });
+    }
     const m = url.pathname.match(/^\/v1\/checkout\/sessions\/(cs_[\w]+)$/);
     if (method === "GET" && m) return sessions[m[1]] ? json(sessions[m[1]]) : json({ error: { message: "No such session" } }, 404);
     throw new Error(`unexpected Stripe call ${method} ${url.pathname}`);
   });
   vi.stubGlobal("fetch", fetchStub);
-  return { calls, sessions };
+  return { calls, sessions, expired, completed };
 }
 
 /** Every level for sale (PDFs in R2 for each slug). */

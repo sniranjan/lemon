@@ -57,6 +57,11 @@ export function createCheckoutSession(key: string, params: Record<string, unknow
   return call<CheckoutSession>(key, "POST", "/checkout/sessions", params, idempotencyKey);
 }
 
+/** Close an open Checkout Session so it can no longer be paid (Stripe errors if it already completed). */
+export function expireCheckoutSession(key: string, id: string) {
+  return call<CheckoutSession>(key, "POST", `/checkout/sessions/${encodeURIComponent(id)}/expire`, {});
+}
+
 /** A one-off coupon (used once) for "pay the rest" with a gift balance. */
 export function createCoupon(key: string, params: Record<string, unknown>, idempotencyKey?: string) {
   return call<{ id: string }>(key, "POST", "/coupons", params, idempotencyKey);

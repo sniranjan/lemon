@@ -97,7 +97,8 @@ Preview PDFs must not show internal level codes or anything referencing other pr
   only once). A gift amount pays for a cart (`src/lib/cart.ts`, shared with the redeem page): covered in full →
   the order is made with no Stripe; otherwise Checkout with a one-off `amount_off` coupon for the balance used.
   The balance is taken only when the webhook says it's paid (`gift_redemptions`, keyed on the session, so retries
-  are harmless); `gift_holds` stops a second tab spending the same balance while a checkout is open (40 minutes).
+  are harmless); `gift_holds` reserves the balance while a checkout is open (up to 40 minutes), and starting a
+  new checkout for the code first expires its earlier open sessions, so backing out of Stripe never locks it.
 - Codes never expire. Orders opened with a gift get the usual 7-day download link.
 - Deliver due gifts by hand (e.g. after an outage): the cron runs `deliverDueGifts`; locally,
   `curl "http://localhost:5173/cdn-cgi/handler/scheduled"` triggers it.

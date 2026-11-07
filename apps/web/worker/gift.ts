@@ -26,7 +26,7 @@ import {
   type ShopEnv,
 } from "./catalog";
 import { sendGiftBuyerEmail, sendGiftRecipientEmail, sendOrderEmail } from "./email";
-import { createCheckoutSession, createCoupon, newToken, type CheckoutSession } from "./stripe";
+import { createCheckoutSession, createCoupon, expireCheckoutSession, newToken, type CheckoutSession } from "./stripe";
 
 /** Links in emails sent by the cron (which has no request to take an origin from). */
 export const SITE = "https://paperlessons.com";
@@ -427,7 +427,9 @@ gift.get("/api/gift/:code", async (c) => {
       code: g.code,
       kind: g.kind,
       amountCents: g.amount_cents,
-      balanceCents: Math.max(0, g.balance_cents - (held?.held ?? 0)),
+      balanceCents: g.balance_cents,
+      // held by a checkout still open; starting a new checkout closes it and frees this again
+      heldCents: Math.min(g.balance_cents, held?.held ?? 0),
       currency: g.currency,
       buyerName: g.buyer_name,
       recipientName: g.recipient_name,
@@ -502,6 +504,27 @@ gift.post("/api/gift/:code/redeem", async (c) => {
 });
 
 /**
+ * A family that backs out of Stripe (or opens a second tab) starts a new checkout: close their earlier open
+ * sessions for this code so they can't be paid any more, and free what they held. A session Stripe won't
+ * close (already paid) keeps its hold; the webhook turns it into a redemption.
+ */
+async function releaseOpenHolds(env: ShopEnv, code: string) {
+  const open = await env.DB.prepare(
+    "SELECT id, session_id FROM gift_holds WHERE code = ? AND session_id IS NOT NULL AND expires_at > datetime('now')",
+  )
+    .bind(code)
+    .all<{ id: string; session_id: string }>();
+  for (const h of open.results) {
+    try {
+      await expireCheckoutSession(env.STRIPE_SECRET_KEY!, h.session_id);
+      await env.DB.prepare("DELETE FROM gift_holds WHERE id = ?").bind(h.id).run();
+    } catch (e) {
+      console.log(`gift ${code}: kept hold for ${h.session_id} (${String(e)})`);
+    }
+  }
+}
+
+/**
  * Gift amount → a cart of levels. Covered in full: the order is made here (no Stripe). Otherwise Stripe
  * Checkout for the rest, with the balance used as a one-off amount_off coupon; the balance is taken in the
  * webhook once that payment succeeds.
@@ -526,6 +549,7 @@ gift.post("/api/gift/:code/checkout", async (c) => {
     next: Object.fromEntries(forSale.map((s) => [s, nextFor(s, forSale)]).filter(([, n]) => n)) as Record<string, string>,
   });
   if (!quote) return c.json({ ok: false, error: "Pick at least one level that's for sale." }, 400);
+  await releaseOpenHolds(c.env, g.code);
   const held = await c.env.DB.prepare(`SELECT balance_cents - ${ACTIVE_HOLDS} AS available FROM gifts WHERE code = ?`)
     .bind(g.code)
     .first<{ available: number }>();

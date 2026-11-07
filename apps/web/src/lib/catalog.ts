@@ -62,6 +62,7 @@ export type GiftInfo = {
   kind: "all" | "credit";
   amountCents: number;
   balanceCents: number;
+  heldCents: number; // part of the balance an open checkout will use (a new checkout closes that one)
   currency: string;
   buyerName: string;
   recipientName: string;
