@@ -16,7 +16,7 @@ import re
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 PROBLEMS = 10
 PLAIN = 2
@@ -138,9 +138,7 @@ class OrderOfOperations(SheetType):
                             answer_key=[evaluate(i["expr"]) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         n, plain = r.get("problems", PROBLEMS), r.get("plain", PLAIN)
         if len(sheet.items) != n:

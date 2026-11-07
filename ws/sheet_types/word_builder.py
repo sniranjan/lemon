@@ -14,7 +14,7 @@ from __future__ import annotations
 from ..models import Issue, Sheet
 from ..passages import BLANK, LETTERS, affixes, affixes_kind, first_and_second, word_parts, wordpart_problems
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 OTHER_PATTERN = {"un": "{base} again", "re": "not {base}"}   # the other prefix's meaning, as a wrong choice
 PARTNER = {"ful": "less", "less": "ful"}
@@ -87,9 +87,7 @@ class WordBuilder(SheetType):
         return SheetContent(title=title, parent_tip=ctx.tip(self.name), items=items, answer_key=key)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         pool = word_parts(sheet.level)
         by_built = {w.built: w for w in pool}
         issues: list[Issue] = []

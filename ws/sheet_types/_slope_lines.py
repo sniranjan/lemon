@@ -24,7 +24,7 @@ from fractions import Fraction
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent
 from ._algebra import MINUS, clip, floats, fstr, lattice, line_tokens, show
-from ._common import error
+from ._common import error, page_rules, part_offset
 
 GRAPH = {"read_slope", "write_graph", "draw_line"}
 EIGHT = {"points", "read_mb"}
@@ -165,7 +165,7 @@ class Lines:
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r, spec = ctx.rules, ctx.spec
-        tasks = tasks_for(r, _page_index(spec.subject, spec.level, spec.page))
+        tasks = tasks_for(r, part_offset(spec.subject, spec.level, spec.page))
         items: list[dict] = []
         first_yes = ctx.rng.random() < 0.5 if "is_function" in tasks else True
         for k, task in enumerate(tasks):
@@ -182,13 +182,11 @@ class Lines:
                             answer_key=[answer(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         R = r["grid"]
         plo, phi = r["points"]
-        want = tasks_for(r, _page_index(sheet.subject, sheet.level, sheet.page_number))
+        want = tasks_for(r, part_offset(sheet.subject, sheet.level, sheet.page_number))
         if [i["task"] for i in sheet.items] != want:
             issues.append(error(sheet, f"tasks {[i['task'] for i in sheet.items]} should be {want}"))
         funcs = []
@@ -252,12 +250,3 @@ class Lines:
         if sheet.answer_key != expected:
             issues.append(error(sheet, f"answer key {sheet.answer_key} doesn't match the items {expected}"))
         return issues
-
-
-def _page_index(subject: str, level: str, page: int) -> int:
-    """Pages cycle through `mixes` from the first page of the part (or section)."""
-    from ..syllabus import load_level
-
-    sec = load_level(subject, level).section_for_page(page)
-    part = sec.part_for_page(page)
-    return page - (part.pages if part else sec.pages)[0]

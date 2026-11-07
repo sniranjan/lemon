@@ -26,7 +26,7 @@ from fractions import Fraction as F
 from ..algebra import Mono, rational_power, root_parts
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 ITEMS = 8
 X, Y = 1.37, 0.81   # float check values (letters are positive)
@@ -232,9 +232,7 @@ class ExponentRules(SheetType):
                             answer_key=[f"{i['n']}) {pretty_answer(i['answer'])}" for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         kinds = r["kinds"][: r.get("items", ITEMS)]
         if [i["kind"] for i in sheet.items] != kinds:

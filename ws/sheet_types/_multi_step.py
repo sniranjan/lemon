@@ -19,7 +19,7 @@ from fractions import Fraction
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent
 from ._algebra import equation_tokens, fstr, numbers_in, show, solve
-from ._common import error
+from ._common import error, nonzero_draw, page_rules
 
 PROBLEMS = 6
 BAD_LETTERS = {"a", "m", "r"}
@@ -47,60 +47,53 @@ def answer(i: dict) -> str:
     return f"{i['letter']} = {show(s)}"
 
 
-def _nz(rng, lo: int, hi: int) -> int:
-    while True:
-        v = rng.randint(lo, hi)
-        if v:
-            return v
-
-
 def _inner(rng) -> list[dict]:
-    return [X(1), N(_nz(rng, -9, 9))]
+    return [X(1), N(nonzero_draw(rng, -9, 9))]
 
 
 def _build(rng, form: str, x: Fraction, special: str | None = None) -> tuple[list, list] | None:
     """One equation of `form` whose solution is x (or with no / every solution)."""
     if special == "none" or special == "all":
-        k, b = rng.randint(2, 6), _nz(rng, -8, 8)
-        shift = 0 if special == "all" else _nz(rng, -5, 5)
+        k, b = rng.randint(2, 6), nonzero_draw(rng, -8, 8)
+        shift = 0 if special == "all" else nonzero_draw(rng, -5, 5)
         if rng.random() < 0.5:
             return [B(k, _inner_with(b))], [X(k), N(k * b + shift)]
         p = rng.randint(2, 6)
         q = rng.randint(1, 5)
         return [X(p), N(b), X(q)], [X(p + q), N(b + shift)]
     if form == "two_step":
-        p, c = _nz(rng, -9, 9), _nz(rng, -20, 20)
+        p, c = nonzero_draw(rng, -9, 9), nonzero_draw(rng, -20, 20)
         if abs(p) == 1:
             return None
         return [X(p), N(c)], [N(p * x + c)]
     if form == "like_terms":
-        p, s, c = rng.randint(2, 9), _nz(rng, -6, 9), _nz(rng, -20, 20)
+        p, s, c = rng.randint(2, 9), nonzero_draw(rng, -6, 9), nonzero_draw(rng, -20, 20)
         if p + s in (0, 1):
             return None
         left = [X(p), N(c), X(s)] if rng.random() < 0.5 else [X(p), X(s), N(c)]
         return left, [N((p + s) * x + c)]
     if form == "both_sides":
-        p, s, c = _nz(rng, -6, 9), _nz(rng, -6, 9), _nz(rng, -20, 20)
+        p, s, c = nonzero_draw(rng, -6, 9), nonzero_draw(rng, -6, 9), nonzero_draw(rng, -20, 20)
         if p == s or (x.denominator > 1 and (p - s) % x.denominator):
             return None
         return [X(p), N(c)], [X(s), N((p - s) * x + c)]
     if form == "distribute":
-        k, b = _nz(rng, -6, 7), _nz(rng, -9, 9)
+        k, b = nonzero_draw(rng, -6, 7), nonzero_draw(rng, -9, 9)
         if abs(k) == 1:
             return None
         return [B(k, _inner_with(b))], [N(k * (x + b))]
     if form == "distribute_like":
-        k, b, s = rng.randint(2, 7), _nz(rng, -9, 9), _nz(rng, -5, 6)
+        k, b, s = rng.randint(2, 7), nonzero_draw(rng, -9, 9), nonzero_draw(rng, -5, 6)
         if k + s == 0:
             return None
         return [B(k, _inner_with(b)), X(s)], [N(k * (x + b) + s * x)]
     if form == "distribute_right":
-        k, b, s = _nz(rng, -5, 7), _nz(rng, -9, 9), _nz(rng, -4, 6)
+        k, b, s = nonzero_draw(rng, -5, 7), nonzero_draw(rng, -9, 9), nonzero_draw(rng, -4, 6)
         if abs(k) == 1 or k == s:
             return None
         return [B(k, _inner_with(b))], [X(s), N(k * (x + b) - s * x)]
     if form == "distribute_both":
-        k, j, b, e = rng.randint(2, 7), rng.randint(2, 6), _nz(rng, -9, 9), _nz(rng, -9, 9)
+        k, j, b, e = rng.randint(2, 7), rng.randint(2, 6), nonzero_draw(rng, -9, 9), nonzero_draw(rng, -9, 9)
         if k == j:
             return None
         d = k * (x + b) - j * (x + e)
@@ -111,7 +104,7 @@ def _build(rng, form: str, x: Fraction, special: str | None = None) -> tuple[lis
         p = rng.randint(1, den - 1) if den > 2 else 1
         if Fraction(p, den).denominator != den or x.denominator > 1 or x % den:
             return None
-        s, c = rng.choice([0, 1, 2]), _nz(rng, -9, 9)
+        s, c = rng.choice([0, 1, 2]), nonzero_draw(rng, -9, 9)
         right = ([X(s)] if s else []) + [N(Fraction(p, den) * x - s * x + c)]
         return [X(Fraction(p, den)), N(c)], right
     raise ValueError(f"multi_step_equation: unknown form {form!r}")
@@ -174,9 +167,7 @@ class MultiStep:
                             answer_key=[answer(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         n = r.get("problems", PROBLEMS)
         items = sheet.items

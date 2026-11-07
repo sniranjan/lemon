@@ -23,7 +23,7 @@ from math import gcd
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _proportional
-from ._common import error
+from ._common import error, page_rules
 
 TABLES = 4
 COLUMNS = 5
@@ -96,9 +96,7 @@ class RatioTable(SheetType):
                             answer_key=[x for t in items for x in answers_for(t)])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if _proportional.is_proportional_mode(r):
             return _proportional.verify(sheet, r)
         count, cols = r.get("tables", TABLES), r.get("columns", COLUMNS)

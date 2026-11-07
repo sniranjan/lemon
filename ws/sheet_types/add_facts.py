@@ -23,7 +23,7 @@ import operator
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 OPS = {"+": operator.add, "-": operator.sub}
 OP_WORDS = {"+": "Add", "-": "Take away"}
@@ -87,9 +87,7 @@ class AddFacts(SheetType):
                             items=items, answer_key=answers_for(items))
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        s = fact_shape(resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules)
+        s = fact_shape(page_rules(sheet))
         items, issues = sheet.items, []
         if len(items) != s["count"]:
             issues.append(error(sheet, f"{len(items)} facts; the part asks for {s['count']}"))

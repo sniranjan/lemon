@@ -19,7 +19,7 @@ from math import isqrt
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._algebra import is_square, root_one_decimal
-from ._common import error
+from ._common import error, page_rules, part_offset
 
 GRAPH = {"distance"}
 MAX_RATIO = 3.5   # a drawn triangle's long leg is at most 3.5 times its short leg, so it stays readable
@@ -54,14 +54,6 @@ def per_page(mix: list[str]) -> int:
 def tasks_for(rules: dict, page_index: int) -> list[str]:
     mix = rules["mixes"][page_index % len(rules["mixes"])]
     return [mix[k % len(mix)] for k in range(per_page(mix))]
-
-
-def _page_index(subject: str, level: str, page: int) -> int:
-    from ..syllabus import load_level
-
-    sec = load_level(subject, level).section_for_page(page)
-    part = sec.part_for_page(page)
-    return page - (part.pages if part else sec.pages)[0]
 
 
 def _item(ctx: GenContext, task: str, right: bool = True) -> dict | None:
@@ -124,7 +116,7 @@ class Pythagorean(SheetType):
 
     def generate(self, ctx: GenContext) -> SheetContent:
         r, spec = ctx.rules, ctx.spec
-        tasks = tasks_for(r, _page_index(spec.subject, spec.level, spec.page))
+        tasks = tasks_for(r, part_offset(spec.subject, spec.level, spec.page))
         items: list[dict] = []
         first_yes = ctx.rng.random() < 0.5   # the right-triangle tests come in yes/no pairs, either order
         for k, task in enumerate(tasks):
@@ -139,11 +131,9 @@ class Pythagorean(SheetType):
                             answer_key=[answer(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
-        want = tasks_for(r, _page_index(sheet.subject, sheet.level, sheet.page_number))
+        want = tasks_for(r, part_offset(sheet.subject, sheet.level, sheet.page_number))
         if [i["task"] for i in sheet.items] != want:
             issues.append(error(sheet, f"tasks {[i['task'] for i in sheet.items]} should be {want}"))
         top, whole = r["max_side"], r["triples"]
@@ -191,4 +181,3 @@ class Pythagorean(SheetType):
         if sheet.answer_key != expected:
             issues.append(error(sheet, f"answer key {sheet.answer_key} doesn't match the problems {expected}"))
         return issues
-

@@ -13,7 +13,7 @@ from ..content import passages, vocab_by_word
 from ..models import Issue, Sheet
 from ..reading import in_text, mentions, sentences, word_count
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 QUESTION_WORDS = ("Who", "What", "Where", "When", "Why", "How")
 
@@ -44,9 +44,7 @@ class ReadAloud(SheetType):
                             review_words=list(entry.review_words))
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         issues: list[Issue] = []
         (item,) = [i for i in sheet.items if i["kind"] == "passage"]
         questions = [i for i in sheet.items if i["kind"] == "question"]

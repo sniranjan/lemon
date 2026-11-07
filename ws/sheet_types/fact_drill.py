@@ -27,7 +27,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules, part_offset
 
 COUNTS = {"horizontal": 12, "vertical": 12, "bridge": 10, "families": 3, "skip": 9, "arrays": 4, "pairs": 6}
 SKIP_FACTS = 8
@@ -39,12 +39,7 @@ BRIDGE_MAX = 3
 
 
 def _layout(subject: str, level: str, page: int, layouts: list[str]) -> str:
-    from ..syllabus import load_level
-
-    section = load_level(subject, level).section_for_page(page)
-    part = section.part_for_page(page)
-    first = (part.pages if part else section.pages)[0]
-    return layouts[(page - first) % len(layouts)]
+    return layouts[part_offset(subject, level, page) % len(layouts)]
 
 
 def _value(a: int, op: str, b: int) -> int:
@@ -277,9 +272,7 @@ class FactDrill(SheetType):
         return items
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         layout = _layout(sheet.subject, sheet.level, sheet.page_number, r["layouts"])
         issues: list[Issue] = []
         items = sheet.items

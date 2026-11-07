@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 
 def _gap_positions(ctx: GenContext, length: int, gaps: int) -> list[int]:
@@ -51,9 +51,7 @@ class NumberSequence(SheetType):
                             answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         lo, hi, length, gaps = r["min"], r["max"], r.get("length", 10), r["gaps"]
         issues = []
         if len(sheet.items) != r.get("rows", 4):

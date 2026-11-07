@@ -29,14 +29,10 @@ from ..algebra import Poly, parse, quadratic_roots, roots_text, squarefree
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._algebra_stories import algebra_stories, frame
-from ._common import error
+from ._common import error, nonzero_choice, page_rules
 
 RATIONAL_KINDS = {"monic", "rearrange", "lead", "double", "perfect", "scaled", "shifted", "formula_rational", "area"}
 IRRATIONAL_KINDS = {"radical", "shifted_radical", "formula_irrational"}
-
-
-def _nz(rng, lo, hi):
-    return rng.choice([k for k in range(lo, hi + 1) if k])
 
 
 def _x(c: int, var: str = "x") -> Poly:
@@ -62,7 +58,7 @@ def choose(kind: str, rng, r: dict) -> dict:
         kind = "formula_rational" if r.get("roots") == "rational" else "formula_irrational"
     if kind in ("monic", "rearrange"):
         while True:
-            p, q = _nz(rng, lo, hi), _nz(rng, lo, hi)
+            p, q = nonzero_choice(rng, lo, hi), nonzero_choice(rng, lo, hi)
             poly = _x(p) * _x(q)
             if p != q and p + q != 0:
                 break
@@ -71,7 +67,7 @@ def choose(kind: str, rng, r: dict) -> dict:
         c = int(poly.coeff())
         return {"lhs": (poly - Poly.const(c)).text(), "rhs": str(-c)}
     if kind == "double":
-        p = _nz(rng, lo, hi)
+        p = nonzero_choice(rng, lo, hi)
         return {"lhs": (_x(p) * _x(p)).text(), "rhs": "0"}
     if kind in ("lead", "formula_rational"):
         while True:
@@ -80,7 +76,7 @@ def choose(kind: str, rng, r: dict) -> dict:
                 j1, j2 = j, 1
             else:
                 j1, j2 = (j, 1) if kind == "lead" else (rng.choice(r["leads"]), 1)
-            p, q = _nz(rng, lo, hi), _nz(rng, lo, hi)
+            p, q = nonzero_choice(rng, lo, hi), nonzero_choice(rng, lo, hi)
             poly = Poly({(("x", 1),): j1, (): -p}) * Poly({(("x", 1),): j2, (): -q})
             if poly.content() == 1 and Fraction(p, j1) != Fraction(q, j2) and poly.coeff(("x", 1)) != 0:
                 return {"lhs": poly.text(), "rhs": "0"}
@@ -90,7 +86,7 @@ def choose(kind: str, rng, r: dict) -> dict:
         k, p = rng.randint(2, 5), rng.randint(2, min(hi, 7))
         return {"lhs": f"{k}x^2", "rhs": str(k * p * p)}
     if kind in ("shifted", "shifted_radical"):
-        h = _nz(rng, -6, 6)
+        h = nonzero_choice(rng, -6, 6)
         rhs = rng.randint(1, 8) ** 2 if kind == "shifted" else rng.choice([n for n in range(2, 51) if math.isqrt(n) ** 2 != n])
         return {"lhs": f"({_x(h).text()})^2", "rhs": str(rhs)}
     if kind == "radical":
@@ -99,7 +95,7 @@ def choose(kind: str, rng, r: dict) -> dict:
         clo, chi = r.get("coeff", [-9, 9])
         while True:
             A = rng.choice(r["leads"])
-            B, C = rng.randint(clo, chi), _nz(rng, clo, chi)
+            B, C = rng.randint(clo, chi), nonzero_choice(rng, clo, chi)
             disc = B * B - 4 * A * C
             if 0 < disc <= r.get("max_disc", 200) and math.isqrt(disc) ** 2 != disc and math.gcd(math.gcd(A, B), C) == 1:
                 return {"lhs": Poly({(("x", 2),): A, (("x", 1),): B, (): C}).text(), "rhs": "0"}
@@ -153,9 +149,7 @@ class QuadraticSolve(SheetType):
                             answer_key=[f"{i['n']}) {i['answer']}" for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         kinds = r.get("kinds", ["formula"])
         if len(sheet.items) != item_count(r):

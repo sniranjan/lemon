@@ -9,7 +9,7 @@ from __future__ import annotations
 from ..content import vocab_by_word
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error, word_items
+from ._common import error, page_rules, word_items
 
 
 @register("word_picture_sentence")
@@ -34,9 +34,7 @@ class WordPictureSentence(SheetType):
         )
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        limit = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules["max_sentence_words"]
+        limit = page_rules(sheet)["max_sentence_words"]
         issues = []
         for c in (i for i in sheet.items if i["kind"] == "card"):
             if c["word"].lower() not in c["sentence"].lower():

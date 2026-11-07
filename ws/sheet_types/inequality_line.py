@@ -20,7 +20,7 @@ from fractions import Fraction
 from ..algebra import Poly, parse
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, nonzero_choice, page_rules
 
 ITEMS = 5
 SIGNS = ["<", "<=", ">", ">="]
@@ -45,10 +45,6 @@ def answer_text(sign: str, s) -> str:
     return f"x {SHOW[sign]} {str(s).replace('-', '−')} ({dot} dot, shade {side})"
 
 
-def _nz(rng, lo, hi):
-    return rng.choice([k for k in range(lo, hi + 1) if k])
-
-
 def lin(p: int, q: int) -> str:
     return Poly({(("x", 1),): p, (): q}).text()
 
@@ -58,7 +54,7 @@ def choose(kind: str, rng, r: dict) -> dict:
     s = rng.randint(lo, hi)
     want = rng.choice(SIGNS)
     if kind in ("two_step", "two_step_negative"):
-        p, q = rng.randint(2, 6), _nz(rng, -12, 12)
+        p, q = rng.randint(2, 6), nonzero_choice(rng, -12, 12)
         if kind == "two_step_negative":
             p = -p
         sign = want if p > 0 else FLIP[want]
@@ -68,12 +64,12 @@ def choose(kind: str, rng, r: dict) -> dict:
         p1 = p2 + rng.randint(1, 4)
         if kind == "both_sides_negative":
             p1, p2 = p2, p1
-        q2 = _nz(rng, -12, 12)
+        q2 = nonzero_choice(rng, -12, 12)
         q1 = (p2 - p1) * s + q2
         sign = want if p1 > p2 else FLIP[want]
         return {"lhs": lin(p1, q1), "sign": sign, "rhs": lin(p2, q2)}
     if kind == "distribute":
-        k, q = rng.randint(2, 5), _nz(rng, -6, 6)
+        k, q = rng.randint(2, 5), nonzero_choice(rng, -6, 6)
         return {"lhs": f"{k}({lin(1, q)})", "sign": want, "rhs": str(k * (s + q))}
     raise ValueError(f"unknown inequality_line kind {kind!r}")
 
@@ -99,9 +95,7 @@ class InequalityLine(SheetType):
                             answer_key=[f"{i['n']}) {i['answer']}" for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         lo, hi = r.get("answer", [-9, 9])
         if len(sheet.items) != r.get("items", ITEMS):

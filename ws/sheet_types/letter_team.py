@@ -12,7 +12,7 @@ from ..content import phonics, vocab_by_word
 from ..models import Issue, Sheet
 from ..phonics import split_team, team_spec, usable
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 
 @register("letter_team")
@@ -35,9 +35,7 @@ class LetterTeam(SheetType):
                             new_words=list(entry.new_words), review_words=list(entry.review_words))
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         data, bank = phonics(), vocab_by_word()
         issues = []
         if len(sheet.items) != rules["rows_per_sheet"]:

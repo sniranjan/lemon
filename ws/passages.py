@@ -30,6 +30,7 @@ from .models import Level
 from .plan import LevelPlan, PagePlan
 from .readability import fk_grade, words
 from .spreads import spread_queue
+from .sheet_types._common import page_rules
 
 BLANK = "___"
 MAX_ASK = 60       # characters: one line at 20px
@@ -425,9 +426,7 @@ def _check_questions(sheet, asked: list[dict], qs: list[Question], write_lines: 
 
 def check_passage_sheet(sheet, write_lines: int) -> list[str]:
     """What a passage page must hold: its planned passage, its questions in order, a matching key."""
-    from .syllabus import load_level, resolve_page
-
-    rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+    rules = page_rules(sheet)
     head = sheet.items[0] if sheet.items else {}
     if head.get("kind") != "passage":
         return ["the first item must be the passage"]

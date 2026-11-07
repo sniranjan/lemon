@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 SHOWN_AT_START = 2
 
@@ -56,9 +56,7 @@ class SkipCount(SheetType):
                             answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         steps, lo, hi = r["steps"], r["min"], r["max"]
         length, gaps = r.get("length", 8), r["gaps"]
         issues, answers = [], []

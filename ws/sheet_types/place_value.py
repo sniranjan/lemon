@@ -18,7 +18,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 MODES = ("blocks", "expanded", "compare")
 FORMS = ("parts_to_number", "number_to_parts", "units_to_number", "name_to_number")
@@ -150,9 +150,7 @@ class PlaceValue(SheetType):
                             answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         lo, hi, mode = r["min"], r["max"], r["mode"]
         issues, answers = [], []
         numbers = [n for i in sheet.items for n in ([i["left"], i["right"]] if i["kind"] == "compare" else [i["n"]])]

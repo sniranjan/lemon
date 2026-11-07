@@ -20,7 +20,7 @@ from pathlib import Path
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error, new_numbers
+from ._common import error, new_numbers, page_rules
 
 TRACE_FONT = Path(__file__).resolve().parents[2] / "assets" / "fonts" / "Andika-Regular.ttf"
 
@@ -96,9 +96,7 @@ class NumberTrace(SheetType):
         return SheetContent(title="Trace the numbers", parent_tip=ctx.tip(self.name), items=items)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         numbers = [i["n"] for i in sheet.items]
         issues = check_range(sheet, numbers, r["min"], r["max"])
         if len(numbers) != r.get("rows", 4):

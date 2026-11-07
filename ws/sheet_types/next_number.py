@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 
 def _need_new(rules: dict, count: int) -> int:
@@ -65,9 +65,7 @@ class NextNumber(SheetType):
                             answer_key=[n + 1 for n in shown])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         lo, top, count = r["min"], r["max"], r.get("count", 10)
         shown = [i["n"] for i in sheet.items]
         answers = [n + 1 for n in shown]

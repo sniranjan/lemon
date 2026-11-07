@@ -18,7 +18,7 @@ from ..algebra import Poly, pretty
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._algebra_stories import algebra_stories, frame
-from ._common import error
+from ._common import error, page_rules
 
 ITEMS = 5
 
@@ -81,9 +81,7 @@ class SlopeIntercept(SheetType):
                             answer_key=[f"{i['n']}) {i['answer']}" for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         if len(sheet.items) != r.get("items", ITEMS):
             issues.append(error(sheet, f"{len(sheet.items)} problems; this part has {r.get('items', ITEMS)}"))

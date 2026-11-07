@@ -23,7 +23,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from ._rational import MINUS, evaluate, fmt, parse
 
 MAX_TRIES = 2000
@@ -186,9 +186,7 @@ class RationalStory(SheetType):
                                         for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         items = sheet.items
         issues: list[Issue] = []
         if len(items) != len(r["tags"]):
