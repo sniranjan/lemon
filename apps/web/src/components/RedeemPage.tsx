@@ -90,11 +90,11 @@ function GiftView({ gift, reload }: { gift: GiftInfo; reload: () => void }) {
   return (
     <>
       <div className="sticker relative bg-sun p-6 sm:p-8">
-        <p className="font-hand text-2xl text-coral">a gift for {gift.recipientName}</p>
+        <p className="font-hand text-2xl text-coral">a gift for {gift.recipientName || "you"}</p>
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
           {gift.kind === "all" ? "Every level, ages 3 to 12" : `${usd(gift.amountCents)} to spend on any level`}
         </h1>
-        <p className="mt-1 text-lg font-bold">from {gift.buyerName}</p>
+        {gift.buyerName && <p className="mt-1 text-lg font-bold">from {gift.buyerName}</p>}
         {gift.message && (
           <blockquote className="mt-4 rounded-2xl border-[3px] border-ink bg-white px-5 py-4 text-lg leading-relaxed whitespace-pre-line">
             {gift.message}

@@ -64,11 +64,12 @@ export type GiftInfo = {
   balanceCents: number;
   heldCents: number; // part of the balance an open checkout will use (a new checkout closes that one)
   currency: string;
-  buyerName: string;
-  recipientName: string;
+  buyerName: string | null;
+  recipientName: string | null;
   childName: string | null;
   message: string | null;
-  deliverOn: string;
+  delivery: "self" | "email"; // self = the buyer passes it on (no email, no date)
+  deliverOn: string | null;
   delivered: boolean;
   redeemed: boolean;
   orders: { name: string; createdAt: string; expiresAt: string; expired: boolean; centsUsed: number }[];

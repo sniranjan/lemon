@@ -3,8 +3,12 @@
 // Buying:   gift form on our site → POST /api/gift/checkout (validates everything; the details travel in the
 //           Checkout Session's metadata, since Managed Payments rejects custom_text) → Stripe → webhook creates
 //           the `gifts` row (recordGift) and emails the buyer a receipt + printable card. Never download links.
-// Delivery: on deliver_on (a UTC date) the recipient gets the message and a redeem link. "Today" is sent from
-//           the webhook straight away; later dates by the daily cron (deliverDueGifts, wrangler triggers.crons).
+// Delivery: two ways. "I'll give it myself" (self-share, the default): no recipient email and no date; the buyer
+//           gets a share page and an email with the code, the card link and a ready-to-paste message, and passes
+//           it on however they like. "Email it to them": on deliver_on (a UTC date) the recipient gets the
+//           message and a redeem link. "Today" is sent from the webhook straight away; later dates by the daily
+//           cron (deliverDueGifts, wrangler triggers.crons). Self-share gifts are never delivered by us.
+//           Every name (theirs, the child's, the buyer's) and the message are optional.
 // Redeeming (/redeem): an every-level gift becomes one order for all 13 levels, once. A gift amount pays for
 //           a cart of levels: covered in full → the order is made here, no Stripe; otherwise Stripe charges the
 //           rest with a one-off amount_off coupon. The balance is only taken once that payment succeeds
@@ -25,6 +29,7 @@ import {
   type Prices,
   type ShopEnv,
 } from "./catalog";
+import { cardUrl, dollars, giftWhat, shareText } from "../src/lib/giftShare";
 import { sendGiftBuyerEmail, sendGiftRecipientEmail, sendOrderEmail } from "./email";
 import { createCheckoutSession, createCoupon, expireCheckoutSession, getCheckoutSession, newToken, type CheckoutSession } from "./stripe";
 
@@ -108,18 +113,22 @@ export function validEmail(v: unknown): string | null {
 export type GiftForm = {
   kind: "all" | "credit";
   amountCents: number;
-  buyerName: string;
-  recipientName: string;
-  recipientEmail: string;
+  delivery: "self" | "email";
+  buyerName: string | null;
+  recipientName: string | null;
+  /** Only for delivery = email (with deliverOn); null for a gift the buyer passes on themselves. */
+  recipientEmail: string | null;
   childName: string | null;
   message: string | null;
-  deliverOn: string;
+  deliverOn: string | null;
 };
 
 type Invalid = { ok: false; field: string; error: string };
 
 /**
- * Check a gift form. `today` is the UTC date. The delivery date may be one day before it (the buyer's "today"
+ * Check a gift form. `delivery` is "self" (the buyer passes it on: no email, no date) or "email" (we email the
+ * recipient on deliverOn). A form without `delivery` (a page loaded before self-share existed) is "email".
+ * Names, the child's name and the message are optional either way. `today` is the UTC date. The delivery date may be one day before it (the buyer's "today"
  * west of UTC) up to 90 days out (+1 for time zones east of UTC). `allCents` is the every-level price, or null
  * when it isn't for sale.
  */
@@ -141,16 +150,16 @@ export function validateGift(body: unknown, today: string, allCents: number | nu
     if (!preset && !custom) return bad("amountCents", "Pick an amount, or type a whole-dollar amount from $10 to $250.");
   } else return bad("kind", "Pick a gift.");
 
+  let delivery: GiftForm["delivery"];
+  if (b.delivery === "self") delivery = "self";
+  else if (b.delivery === "email" || b.delivery === undefined) delivery = "email";
+  else return bad("delivery", "Pick how they should get the gift.");
+
   const buyerName = line(b.buyerName, NAME_MAX);
-  if (!buyerName) return bad("buyerName", "Please add your name, so they know who it's from.");
   if (buyerName.length > NAME_MAX) return bad("buyerName", `Your name can be up to ${NAME_MAX} characters.`);
 
   const recipientName = line(b.recipientName, NAME_MAX);
-  if (!recipientName) return bad("recipientName", "Who is the gift for?");
   if (recipientName.length > NAME_MAX) return bad("recipientName", `Their name can be up to ${NAME_MAX} characters.`);
-
-  const recipientEmail = validEmail(b.recipientEmail);
-  if (!recipientEmail) return bad("recipientEmail", "Please check their email address.");
 
   const child = line(b.childName, CHILD_MAX);
   if (child.length > CHILD_MAX) return bad("childName", `The child's first name can be up to ${CHILD_MAX} characters.`);
@@ -159,25 +168,38 @@ export function validateGift(body: unknown, today: string, allCents: number | nu
   const message = messageText(b.message);
   if ([...message].length > MESSAGE_MAX) return bad("message", `The message can be up to ${MESSAGE_MAX} characters.`);
 
-  const deliverOn = String(b.deliverOn ?? "");
-  if (!DATE.test(deliverOn) || Number.isNaN(Date.parse(`${deliverOn}T00:00:00Z`)) || addDays(deliverOn, 0) !== deliverOn) {
-    return bad("deliverOn", "Please pick a delivery date.");
-  }
-  if (deliverOn < addDays(today, -1) || deliverOn > addDays(today, DAYS_AHEAD + 1)) {
-    return bad("deliverOn", `Pick a delivery date from today to ${DAYS_AHEAD} days from now.`);
+  // "I'll give it myself": an email or date left over from switching modes is dropped, not an error.
+  let recipientEmail: string | null = null;
+  let deliverOn: string | null = null;
+  if (delivery === "email") {
+    recipientEmail = validEmail(b.recipientEmail);
+    if (!recipientEmail) return bad("recipientEmail", "Please check their email address.");
+    deliverOn = String(b.deliverOn ?? "");
+    if (!DATE.test(deliverOn) || Number.isNaN(Date.parse(`${deliverOn}T00:00:00Z`)) || addDays(deliverOn, 0) !== deliverOn) {
+      return bad("deliverOn", "Please pick a delivery date.");
+    }
+    if (deliverOn < addDays(today, -1) || deliverOn > addDays(today, DAYS_AHEAD + 1)) {
+      return bad("deliverOn", `Pick a delivery date from today to ${DAYS_AHEAD} days from now.`);
+    }
   }
 
   return {
     ok: true,
-    gift: { kind, amountCents, buyerName, recipientName, recipientEmail, childName: child || null, message: message || null, deliverOn },
+    gift: {
+      kind,
+      amountCents,
+      delivery,
+      buyerName: buyerName || null,
+      recipientName: recipientName || null,
+      recipientEmail,
+      childName: child || null,
+      message: message || null,
+      deliverOn,
+    },
   };
 }
 
-export const dollars = (cents: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: cents % 100 ? 2 : 0 }).format(cents / 100);
-
-/** "every level, ages 3 to 12" / "$50 to spend on any level". */
-const giftWhat = (kind: string, amountCents: number) => (kind === "all" ? "every level, ages 3 to 12" : `${dollars(amountCents)} to spend on any level`);
+export { dollars };
 
 /** What the site shows about gifts (in /api/catalog). */
 export function giftCatalog(env: ShopEnv, prices: Prices) {
@@ -202,13 +224,13 @@ type GiftRow = {
   amount_cents: number;
   balance_cents: number;
   currency: string;
-  buyer_name: string;
+  buyer_name: string | null;
   buyer_email: string | null;
-  recipient_name: string;
-  recipient_email: string;
+  recipient_name: string | null;
+  recipient_email: string | null; // null (with deliver_on) = the buyer passes the gift on themselves
   child_name: string | null;
   message: string | null;
-  deliver_on: string;
+  deliver_on: string | null;
   delivered_at: string | null;
   resent_at: string | null;
   created_at: string;
@@ -216,9 +238,13 @@ type GiftRow = {
 
 const giftByCode = (db: D1Database, code: string) => db.prepare("SELECT * FROM gifts WHERE code = ?").bind(code).first<GiftRow>();
 
+/** An emailed gift has a recipient email and a date; a self-share gift has neither. */
+const emailed = (g: Pick<GiftRow, "recipient_email" | "deliver_on">) => g.recipient_email != null && g.deliver_on != null;
+
 /**
  * Store a paid gift purchase (idempotent: keyed on the session id) and return its code. The first time, the
- * buyer gets the receipt + gift card email. A gift due today (or earlier) is delivered right away.
+ * buyer gets the receipt + share kit email (code, card link, ready-to-paste message). An emailed gift due today
+ * (or earlier) is delivered right away; a self-share gift is never delivered by us.
  */
 export async function recordGift(env: ShopEnv, s: CheckoutSession, origin: string, today = todayUTC()): Promise<string | null> {
   // Only a real payment makes a gift (promotion codes are off for gifts, so "no_payment_required" never should).
@@ -226,11 +252,16 @@ export async function recordGift(env: ShopEnv, s: CheckoutSession, origin: strin
   const m = s.metadata!;
   const kind = m.gift_kind === "all" ? "all" : "credit";
   const cents = Number(m.gift_cents);
-  if (!Number.isInteger(cents) || cents <= 0 || !m.recipient_email || !m.deliver_on) {
+  // Email mode = both recipient_email and deliver_on; self-share = neither (sessions started before self-share
+  // existed always carry both, so they stay emailed gifts). Exactly one of them is bad metadata.
+  if (!Number.isInteger(cents) || cents <= 0 || Boolean(m.recipient_email) !== Boolean(m.deliver_on)) {
     console.error("gift session with bad metadata", s.id);
     return null;
   }
-  const buyerEmail = s.customer_details?.email?.toLowerCase() ?? null;
+  // Checkout always collects the buyer's email (customer_details.email, required in payment mode);
+  // customer_email is a fallback (we don't set it for gifts today).
+  const buyerEmail = (s.customer_details?.email || s.customer_email || null)?.toLowerCase() ?? null;
+  if (!buyerEmail) console.error(`gift session ${s.id} has no buyer email: the thanks page is their only copy`);
   let inserted = false;
   for (let attempt = 0; attempt < 4 && !inserted; attempt++) {
     try {
@@ -246,13 +277,13 @@ export async function recordGift(env: ShopEnv, s: CheckoutSession, origin: strin
           cents,
           cents,
           CURRENCY,
-          m.buyer_name || "A friend",
+          m.buyer_name || null,
           buyerEmail,
-          m.recipient_name || "you",
-          m.recipient_email,
+          m.recipient_name || null,
+          m.recipient_email || null,
           m.child_name || null,
           m.message || null,
-          m.deliver_on,
+          m.deliver_on || null,
         )
         .run();
       inserted = r.meta.changes > 0;
@@ -264,14 +295,16 @@ export async function recordGift(env: ShopEnv, s: CheckoutSession, origin: strin
   }
   const row = await env.DB.prepare("SELECT * FROM gifts WHERE session_id = ?").bind(s.id).first<GiftRow>();
   if (!row) return null;
-  const sendNow = row.deliver_on <= today;
+  const sendNow = emailed(row) && row.deliver_on! <= today;
   if (inserted && buyerEmail) {
+    const url = cardUrl(origin, row.code);
     await sendGiftBuyerEmail(env.EMAIL, {
       ...giftEmailFields(row),
       to: buyerEmail,
       amount: dollars(row.amount_cents),
-      cardUrl: `${origin}/gift/card/${row.code}`,
-      deliverOn: row.deliver_on,
+      cardUrl: url,
+      shareText: shareText({ kind: row.kind, amountCents: row.amount_cents, childName: row.child_name, buyerName: row.buyer_name, code: row.code, url }),
+      deliverOn: emailed(row) ? row.deliver_on : null,
       sentNow: sendNow,
     });
   }
@@ -289,25 +322,26 @@ const giftEmailFields = (g: GiftRow) => ({
 });
 
 /**
- * Email the recipient, once. The row is claimed first (delivered_at set only if still empty), so a webhook
+ * Email the recipient, once (emailed gifts only: a self-share gift has no address and is never claimed). The row is claimed first (delivered_at set only if still empty), so a webhook
  * retry and the cron can't both send; if the send fails the claim is undone and tomorrow's cron tries again.
  */
 export async function deliverGift(env: ShopEnv, code: string, origin = SITE): Promise<boolean> {
-  const claim = await env.DB.prepare("UPDATE gifts SET delivered_at = datetime('now') WHERE code = ? AND delivered_at IS NULL")
+  const claim = await env.DB.prepare("UPDATE gifts SET delivered_at = datetime('now') WHERE code = ? AND delivered_at IS NULL AND recipient_email IS NOT NULL AND deliver_on IS NOT NULL",
+  )
     .bind(code)
     .run();
   if (claim.meta.changes !== 1) return false;
   const g = await giftByCode(env.DB, code);
   const sent =
-    g != null &&
+    g?.recipient_email != null &&
     (await sendGiftRecipientEmail(env.EMAIL, { ...giftEmailFields(g), to: g.recipient_email, redeemUrl: `${origin}/redeem?code=${g.code}` }));
   if (!sent) await env.DB.prepare("UPDATE gifts SET delivered_at = NULL WHERE code = ?").bind(code).run();
   return sent;
 }
 
-/** The daily cron: every gift due on or before `today` (UTC) that hasn't gone out yet. */
+/** The daily cron: every emailed gift due on or before `today` (UTC) that hasn't gone out yet (never self-share ones). */
 export async function deliverDueGifts(env: ShopEnv, today = todayUTC(), origin = SITE): Promise<number> {
-  const due = await env.DB.prepare("SELECT code FROM gifts WHERE delivered_at IS NULL AND deliver_on <= ? ORDER BY id LIMIT 500")
+  const due = await env.DB.prepare("SELECT code FROM gifts WHERE delivered_at IS NULL AND recipient_email IS NOT NULL AND deliver_on IS NOT NULL AND deliver_on <= ? ORDER BY id LIMIT 500")
     .bind(today)
     .all<{ code: string }>();
   let sent = 0;
@@ -364,17 +398,20 @@ gift.post("/api/gift/checkout", async (c) => {
   const origin = new URL(c.req.url).origin;
   const name = g.kind === "all" ? "Paper Lessons gift: every level" : `Paper Lessons gift: ${dollars(g.amountCents)}`;
   // Metadata values are at most 500 characters; every field here is capped well below that.
+  // Empty fields are left out (a self-share gift carries no recipient_email / deliver_on: that is the mode).
   const metadata: Record<string, string | undefined> = {
     gift: "buy",
     gift_kind: g.kind,
     gift_cents: String(g.amountCents),
-    buyer_name: g.buyerName,
-    recipient_name: g.recipientName,
-    recipient_email: g.recipientEmail,
+    buyer_name: g.buyerName ?? undefined,
+    recipient_name: g.recipientName ?? undefined,
+    recipient_email: g.recipientEmail ?? undefined,
     child_name: g.childName ?? undefined,
     message: g.message ?? undefined,
-    deliver_on: g.deliverOn,
+    deliver_on: g.deliverOn ?? undefined,
   };
+  const forWhom = g.recipientName || g.childName;
+  const forLine = forWhom ? `For ${forWhom}: ` : "";
   try {
     const session = await createCheckoutSession(c.env.STRIPE_SECRET_KEY!, {
       mode: "payment",
@@ -390,8 +427,8 @@ gift.post("/api/gift/checkout", async (c) => {
               tax_code: "txcd_10302000",
               description:
                 g.kind === "all"
-                  ? `For ${g.recipientName}: all 13 levels of printable reading and math pages, ages 3 to 12. Code never expires.`
-                  : `For ${g.recipientName}: ${dollars(g.amountCents)} to spend on any level. Code never expires.`,
+                  ? `${forLine}all 13 levels of printable reading and math pages, ages 3 to 12. Code never expires.`
+                  : `${forLine}${dollars(g.amountCents)} to spend on any level. Code never expires.`,
             },
           },
         },
@@ -437,6 +474,7 @@ gift.get("/api/gift/:code", async (c) => {
       recipientName: g.recipient_name,
       childName: g.child_name,
       message: g.message,
+      delivery: emailed(g) ? "email" : "self",
       deliverOn: g.deliver_on,
       delivered: Boolean(g.delivered_at),
       redeemed: g.kind === "all" && orders.results.length > 0,

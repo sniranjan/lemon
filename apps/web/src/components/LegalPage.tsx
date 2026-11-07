@@ -122,8 +122,9 @@ function Terms() {
       <ul className="list-disc space-y-2 pl-6">
         <li>
           You can buy a gift for another family: every level, or a gift amount to spend on any level. You get a
-          receipt and a printable gift card with the gift code; the person you name gets an email with your message on
-          the day you choose (today or up to 90 days ahead). You don't get download links yourself.
+          receipt, the gift code and a gift card link to share or print. You can pass it on yourself, however you like,
+          or ask us to email it with your message on the day you choose (today or up to 90 days ahead). You don't get
+          download links yourself.
         </li>
         <li>
           <strong>Gift codes never expire</strong> and can be used at paperlessons.com/redeem. An every-level gift is
@@ -135,8 +136,8 @@ function Terms() {
           anything other than levels on this site, and any amount left on a code stays there.
         </li>
         <li>
-          <strong>All sales are final, gifts included: no refunds.</strong> Please check the recipient's email address
-          before you pay.
+          <strong>All sales are final, gifts included: no refunds.</strong> If we're emailing the gift, please check
+          the recipient's email address before you pay. Keep the code safe: anyone who has it can open the gift.
         </li>
         <li>
           Opening a gift works just like buying: the download link works for 7 days and then expires, and the pages
@@ -207,9 +208,10 @@ function Privacy() {
           straight to Stripe; we never see them.
         </li>
         <li>
-          <strong>Gifts:</strong> your name and email, the recipient's name and email, the child's first name (if you
-          add it, and only the first name), your message and the delivery date. We use them to email the recipient on
-          that day, to show the gift on the gift card and redeem page, and to send you your receipt and gift card. When
+          <strong>Gifts:</strong> your email, and only if you add them: your name, the recipient's name, the child's
+          first name (only the first name) and your message. If you ask us to email the gift, also the recipient's
+          email and the delivery date. We use them to email the recipient on that day (only then), to show the gift
+          on the gift card and redeem page, and to send you your receipt and gift code. When
           a gift is opened we keep the email the download link went to, like any order. These gift details are also
           passed to Stripe with the payment, so the gift can be created once you've paid.
         </li>

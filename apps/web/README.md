@@ -31,14 +31,14 @@ npm test                    # Worker unit tests (vitest; D1 = node:sqlite with t
 | `POST /api/stripe/webhook` | Stripe `checkout.session.completed` → row in D1 `orders` (signature checked) |
 | `GET /api/orders/session/:sid` | thanks page → order token (asks Stripe directly if the webhook hasn't landed) |
 | `GET /api/orders/:token` | the order and its files; `GET /api/orders/:token/files/:file` downloads one |
-| `POST /api/gift/checkout` | gift form (kind, amount, names, recipient email, child's first name, message, delivery date) → validated → Stripe Checkout URL |
+| `POST /api/gift/checkout` | gift form (kind, amount, `delivery: self \| email`, optional names, child's first name and message; recipient email + delivery date only for `email`) → validated → Stripe Checkout URL |
 | `GET /api/gift/session/:sid` | gift thanks page → gift code (asks Stripe directly if the webhook hasn't landed) |
 | `GET /api/gift/:code` | a gift for the redeem page and the gift card: kind, balance, names, message, orders (no emails or tokens) |
 | `POST /api/gift/:code/redeem` | every-level gift + `{ email }` → one order for all 13 levels, once |
 | `POST /api/gift/:code/checkout` | gift amount + `{ levels, email }` → order with no Stripe if the balance covers it, else Checkout for the rest |
 | `POST /api/gift/:code/resend` | emails the still-valid download links of this code's orders again (at most every 2 minutes) |
 
-Pages: `/gift` (form), `/gift/thanks`, `/gift/card/:code` (printable, one Letter page), `/redeem?code=…`.
+Pages: `/gift` (form), `/gift/thanks` (the buyer's share page), `/gift/card/:code` (the recipient's landing page with "Open your gift"; printable, one Letter page; `?print=1` opens the print dialog), `/redeem?code=…` or `/redeem#CODE`. These pages show a code, so analytics never start on them (`onGiftCodePage` in `src/lib/consent.ts` and the check in `index.html`).
 
 ## Free previews
 
@@ -89,8 +89,14 @@ Preview PDFs must not show internal level codes or anything referencing other pr
 - **Two kinds:** every level (the `bundle_all` price, $99) or a gift amount ($19 / $29 / $50, or $10–$250 in
   whole dollars). Gift details travel in the Checkout Session's metadata (Managed Payments rejects `custom_text`);
   the price is inline `price_data`; promotion codes are off for gifts.
+- **Two ways to deliver:** "I'll give it myself" (`delivery: self`, the default) has no recipient email and no
+  date (`recipient_email` and `deliver_on` are NULL, migration 0007); the buyer shares it from the thanks page or
+  the email. "Email it to them" (`delivery: email`) needs both. Every name and the message are optional: the card
+  falls back to "a gift for you" with no "from" line, the recipient email to "Hi there".
 - **Webhook** (`metadata.gift = buy`) → row in `gifts` with a code like `HAPY-BDAY-MAYA` (no 0/O/1/I/L). The buyer
-  gets a receipt + gift card link (never download links). A gift due today is emailed to the recipient right away,
+  (the email Stripe Checkout collects, `customer_details.email`) gets a receipt + share kit: the code, the card
+  link and a ready-to-forward message (`src/lib/giftShare.ts`, same text as the thanks page; never download
+  links). Self-share gifts are never sent by us (the cron and `deliverGift` skip them). An emailed gift due today is emailed to the recipient right away,
   From "Paper Lessons"; later dates go out with the **daily cron** (`triggers.crons` `0 14 * * *`, 9 am Eastern).
   A failed send is retried by the next day's cron.
 - **Redeeming:** an every-level gift becomes one order for all 13 levels (order `session_id = gift-all-<code>`, so

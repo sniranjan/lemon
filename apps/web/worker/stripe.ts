@@ -12,6 +12,7 @@ export type CheckoutSession = {
   amount_total: number | null;
   currency: string | null;
   customer_details: { email: string | null } | null;
+  customer_email?: string | null;
   metadata: Record<string, string> | null;
 };
 

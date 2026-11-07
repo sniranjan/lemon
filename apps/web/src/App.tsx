@@ -241,7 +241,7 @@ const FAQ = [
   },
   {
     q: "Can I give this as a gift?",
-    a: "Yes! Give every level (no need to guess their age) or a gift amount from $10 to $250. You add a message and pick the day, and we email them on that day. You also get a gift card to print and tuck into a birthday card. Gift codes never expire, have no cash value and, like everything here, can't be refunded.",
+    a: "Yes! Give every level (no need to guess their age) or a gift amount from $10 to $250. Give it yourself (you get the code and a link to send by text, WhatsApp or email, plus a card to print), or we email it to them on the day you pick. Names and a message are up to you. Gift codes never expire, have no cash value and, like everything here, can't be refunded.",
   },
   {
     q: "What if a level feels too hard?",

@@ -70,66 +70,87 @@ export async function sendOrderEmail(
 export type GiftEmail = {
   code: string;
   what: string; // "every level, ages 3 to 12" or "$50 to spend on any level"
-  buyerName: string;
-  recipientName: string;
+  // Every name is optional: a gift with none still reads naturally ("Hi there", no "from" line).
+  buyerName: string | null;
+  recipientName: string | null;
   childName: string | null;
   message: string | null;
 };
 
+const box = (inner: string) =>
+  `<div style="font-size:16px;line-height:1.55;background:#fff;border:3px solid #1f2a44;border-radius:16px;padding:14px 16px;margin:0 0 20px">${inner}</div>`;
+
 /**
- * To the buyer, once paid: a receipt and the printable gift card (with the code). Never any download links:
- * the files are for the family who gets the gift.
+ * To the buyer, once paid: a receipt and the share kit (the code, the gift card link and a ready-to-forward
+ * message), so they can pass the gift on however they like. Emailed gifts also say when the email goes out.
+ * Never any download links: the files are for the family who gets the gift.
  */
 export async function sendGiftBuyerEmail(
   mailer: SendEmail | undefined,
-  g: GiftEmail & { to: string; amount: string; cardUrl: string; deliverOn: string; sentNow: boolean },
+  g: GiftEmail & { to: string; amount: string; cardUrl: string; shareText: string; deliverOn: string | null; sentNow: boolean },
 ): Promise<boolean> {
   if (!mailer) return false;
-  const when = g.sentNow
-    ? `We've just emailed ${g.recipientName} your message and a link to open the gift.`
-    : `We'll email ${g.recipientName} your message and a link to open the gift on ${longDate(g.deliverOn)}.`;
-  const subject = `Your gift for ${g.recipientName} is ready`;
+  const name = g.recipientName;
+  const them = name ?? "them";
+  const forWhom = g.childName || name;
+  const when = g.deliverOn
+    ? g.sentNow
+      ? `We've just emailed ${them} your message and a link to open the gift. You can also share it yourself below.`
+      : `We'll email ${them} your message and a link to open the gift on ${longDate(g.deliverOn)}. Want to share it sooner? Everything you need is below.`
+    : "It's yours to give: send the link below by text, WhatsApp or email, or print the card and tuck it into a birthday card.";
+  const subject = g.deliverOn
+    ? name ? `Your gift for ${name} is ready` : "Your gift is ready"
+    : name ? `Your gift for ${name} is ready to share` : "Your gift is ready to share";
+  const thanks = `Thank you! You gave ${forWhom ? `${forWhom} ` : "a gift of "}${g.what} (${g.amount}).`;
   const text = [
-    `Thank you! You gave ${g.recipientName} ${g.what} (${g.amount}).`,
+    thanks,
     "",
     when,
     "",
     `Gift code: ${g.code}`,
-    `Print the gift card: ${g.cardUrl}`,
+    `Gift card (open, share or print): ${g.cardUrl}`,
     "",
-    "Tuck the card into a birthday card if you like. The code never expires.",
-    "All sales are final: gifts can't be refunded or exchanged for cash.",
+    "Ready to forward:",
+    g.shareText,
+    "",
+    "The code never expires. All sales are final: gifts can't be refunded or exchanged for cash.",
     "",
     "Paper Lessons · hello@paperlessons.com",
   ].join("\n");
   const html = shell(
-    `  <h1 style="font-size:26px;margin:24px 0 8px">Your gift for ${esc(g.recipientName)} is ready</h1>
-  <p style="font-size:16px;line-height:1.5;margin:0 0 12px">Thank you! You gave <b>${esc(g.recipientName)}</b> ${esc(g.what)} (${esc(g.amount)}).</p>
+    `  <h1 style="font-size:26px;margin:24px 0 8px">${esc(subject)}</h1>
+  <p style="font-size:16px;line-height:1.5;margin:0 0 12px">${esc(thanks)}</p>
   <p style="font-size:16px;line-height:1.5;margin:0 0 20px">${esc(when)}</p>
   <p style="font-size:15px;margin:0 0 4px">Gift code</p>
   <p style="font-family:Menlo,Consolas,monospace;font-size:24px;font-weight:800;letter-spacing:2px;margin:0 0 20px">${esc(g.code)}</p>
-  ${button(g.cardUrl, "Print the gift card")}
+  <p style="font-size:15px;margin:0 0 4px">Gift card link</p>
+  <p style="font-size:16px;margin:0 0 16px"><a href="${esc(g.cardUrl)}" style="color:#e4572e;font-weight:800">${esc(g.cardUrl)}</a></p>
+  ${button(g.cardUrl, "Open, share or print the card")}
+  <p style="font-size:15px;font-weight:800;margin:0 0 6px">Ready to forward</p>
+  ${box(esc(g.shareText))}
   <p style="font-size:15px;line-height:1.5;background:#ffefc2;border-radius:12px;padding:12px 14px;margin:0 0 20px">
-  Tuck the card into a birthday card if you like. The code never expires.
-  All sales are final: gifts can't be refunded or exchanged for cash.</p>`,
+  The code never expires. All sales are final: gifts can't be refunded or exchanged for cash.</p>`,
     "Paper Lessons",
   );
   return send(mailer, GIFT_FROM, g.to, subject, text, html, "gift receipt");
 }
 
-/** To the recipient, on the delivery date: the buyer's message and a link to open the gift. */
+/** To the recipient, on the delivery date (emailed gifts only): the buyer's message and a link to open the gift. */
 export async function sendGiftRecipientEmail(
   mailer: SendEmail | undefined,
   g: GiftEmail & { to: string; redeemUrl: string },
 ): Promise<boolean> {
   if (!mailer) return false;
-  const subject = `${g.buyerName} sent you a gift from Paper Lessons`;
+  const from = g.buyerName;
+  const subject = from ? `${from} sent you a gift from Paper Lessons` : "You've been sent a gift from Paper Lessons";
+  const hi = g.recipientName ? `Hi ${g.recipientName}` : "Hi there";
   const forWhom = g.childName ? `for you and ${g.childName}` : "for you";
+  const lead = `${from ? `${from} sent a gift` : "Here's a gift"} ${forWhom}`;
   const text = [
-    `Hi ${g.recipientName},`,
+    `${hi},`,
     "",
-    `${g.buyerName} sent a gift ${forWhom}: ${g.what} of Paper Lessons, printable reading and math pages for kids.`,
-    ...(g.message ? ["", g.message, `- ${g.buyerName}`] : []),
+    `${lead}: ${g.what} of Paper Lessons, printable reading and math pages for kids.`,
+    ...(g.message ? ["", g.message, ...(from ? [`- ${from}`] : [])] : []),
     "",
     `Open your gift: ${g.redeemUrl}`,
     `Gift code: ${g.code}. It never expires, so open it whenever you're ready.`,
@@ -137,10 +158,10 @@ export async function sendGiftRecipientEmail(
     "Paper Lessons · hello@paperlessons.com",
   ].join("\n");
   const html = shell(
-    `  <h1 style="font-size:26px;margin:24px 0 8px">${esc(g.buyerName)} sent you a gift</h1>
-  <p style="font-size:16px;line-height:1.5;margin:0 0 20px">Hi ${esc(g.recipientName)}! ${esc(g.buyerName)} sent a gift ${esc(forWhom)}:
+    `  <h1 style="font-size:26px;margin:24px 0 8px">${from ? `${esc(from)} sent you a gift` : "You've been sent a gift"}</h1>
+  <p style="font-size:16px;line-height:1.5;margin:0 0 20px">${esc(hi)}! ${esc(lead)}:
   <b>${esc(g.what)}</b> of Paper Lessons, printable reading and math pages for kids.</p>
-  ${g.message ? `<div style="font-size:17px;line-height:1.55;background:#fff;border:3px solid #1f2a44;border-radius:16px;padding:14px 16px;margin:0 0 20px">${paragraphs(g.message)}<br><span style="color:#5b6478">- ${esc(g.buyerName)}</span></div>` : ""}
+  ${g.message ? box(`<span style="font-size:17px">${paragraphs(g.message)}</span>${from ? `<br><span style="color:#5b6478">- ${esc(from)}</span>` : ""}`) : ""}
   ${button(g.redeemUrl, "Open your gift")}
   <p style="font-size:15px;line-height:1.5;margin:0 0 20px">Gift code: <b style="font-family:Menlo,Consolas,monospace;letter-spacing:1px">${esc(g.code)}</b><br>
   It never expires, so open it whenever you're ready.</p>`,

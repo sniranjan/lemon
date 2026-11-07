@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { pauseTracking } from "@/lib/consent";
-import { Loader2, Printer } from "lucide-react";
+import { Gift, Loader2, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/Logo";
 import { formatPrice, getGift, type GiftInfo } from "@/lib/catalog";
+import { giftFor } from "@/lib/giftShare";
 import { LEVELS } from "@/data/levels";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +14,10 @@ const MASCOTS = ["chicks", "bunnies", "foxes", "owls", "pandas", "whales"]
   .filter(Boolean) as string[];
 
 /**
- * /gift/card/<code>: the printable gift card, one US Letter page in our paper style. On screen it shows as a
- * sheet with a Print button; in print only the sheet is printed (the site's header and footer are hidden).
+ * /gift/card/<code>: the printable gift card, one US Letter page in our paper style. It is also the page the
+ * buyer shares, so on screen it greets the recipient with an "Open your gift" button (→ /redeem#CODE). In print
+ * only the sheet is printed (the site's header and footer and that greeting are hidden). ?print=1 opens the
+ * print dialog straight away (the share page's "Print or save as PDF").
  */
 export function GiftCard({ code }: { code: string }) {
   const [gift, setGift] = useState<GiftInfo | null | "missing">(null);
@@ -22,6 +25,13 @@ export function GiftCard({ code }: { code: string }) {
     pauseTracking();
     getGift(code).then((g) => setGift(g.ok ? g : "missing"));
   }, [code]);
+  const ready = gift !== null && gift !== "missing";
+  useEffect(() => {
+    if (!ready || new URLSearchParams(location.search).get("print") !== "1") return;
+    history.replaceState(null, "", location.pathname);
+    const t = setTimeout(() => window.print(), 400); // let the fonts and mascots settle first
+    return () => clearTimeout(t);
+  }, [ready]);
 
   if (gift === null) {
     return (
@@ -34,17 +44,52 @@ export function GiftCard({ code }: { code: string }) {
     return (
       <section className="px-4 py-24 text-center">
         <h1 className="text-3xl font-bold">We couldn't find that gift card</h1>
-        <p className="mt-3 text-lg text-ink/80">Check the link in your email, or write to hello@paperlessons.com.</p>
+        <p className="mt-3 text-lg text-ink/80">Check the link you were sent, or write to hello@paperlessons.com.</p>
       </section>
     );
   }
 
+  const forName = giftFor(gift);
+  return (
+    <section className="gift-card-page px-4 py-10 print:p-0">
+      <div className="sticker mx-auto mb-6 flex max-w-[816px] flex-col gap-4 bg-sun p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6 print:hidden">
+        <div>
+          <p className="font-hand text-2xl leading-none text-coral">{forName ? `hi ${forName}!` : "hello!"}</p>
+          <p className="mt-1 text-xl font-bold leading-snug">
+            {gift.buyerName ? `${gift.buyerName} sent you a gift.` : "Someone sent you a gift."} It's ready when you are.
+          </p>
+        </div>
+        <Button asChild variant="coral" size="pill" className="shrink-0">
+          <a href={`/redeem#${gift.code}`}>
+            <Gift className="size-5" /> Open your gift
+          </a>
+        </Button>
+      </div>
+
+      <div className="mx-auto mb-4 flex max-w-[816px] flex-wrap items-center justify-between gap-3 print:hidden">
+        <p className="font-semibold text-ink/75">Want it on paper? Print it, or save it as a PDF.</p>
+        <Button variant="paper" size="pill" onClick={() => window.print()}>
+          <Printer className="size-5" /> Print or save as PDF
+        </Button>
+      </div>
+
+      <GiftSheet gift={gift} />
+    </section>
+  );
+}
+
+/**
+ * The card itself. `fixed` draws it at its full 816 × 1056 size whatever the screen (for the scaled-down preview
+ * on the share page); otherwise it is fluid on screen and exactly one Letter page in print.
+ */
+export function GiftSheet({ gift, fixed }: { gift: GiftInfo; fixed?: boolean }) {
   // Long names and messages get smaller type, so the card always stays on one page.
-  // The child's name leads when there is one ("a gift for Maya"); the grown-up's name otherwise.
-  const forName = gift.childName || gift.recipientName;
+  // The child's name leads when there is one ("a gift for Maya"); the grown-up's name otherwise; "you" with neither.
+  const forName = giftFor(gift) ?? "you";
   const nameLen = forName.length;
   const nameSize = nameLen > 34 ? "text-[2.35rem]" : nameLen > 20 ? "text-[2.9rem]" : "text-[3.6rem]";
   const long = nameLen > 20 || (gift.message?.length ?? 0) > 160;
+  const buyer = gift.buyerName;
   const what = gift.kind === "all" ? "Every level, ages 3 to 12" : `${formatPrice(gift.amountCents, gift.currency)} to spend on any level`;
   const detail =
     gift.kind === "all"
@@ -52,69 +97,66 @@ export function GiftCard({ code }: { code: string }) {
       : "Printable reading and math pages for ages 3 to 12, from first words and counting to fractions and algebra.";
 
   return (
-    <section className="gift-card-page px-4 py-10 print:p-0">
-      <div className="mx-auto mb-6 flex max-w-[816px] flex-wrap items-center justify-between gap-3 print:hidden">
-        <p className="text-lg font-semibold text-ink/80">Print it on plain paper, then fold it or tuck it into a card.</p>
-        <Button variant="coral" size="pill" onClick={() => window.print()}>
-          <Printer className="size-5" /> Print
-        </Button>
+    <article
+      aria-label={`Gift card for ${forName}`}
+      className={cn(
+        "gift-sheet relative mx-auto flex flex-col overflow-hidden rounded-[1.5rem] border-[3px] border-ink bg-white px-[7%] py-[7%] shadow-[6px_6px_0_0_var(--ink)] print:rounded-none print:border-0 print:shadow-none",
+        fixed ? "h-[1056px] w-[816px]" : "w-full max-w-[816px] sm:aspect-[8.5/11]",
+      )}
+    >
+      {/* paper decorations */}
+      <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-sun" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-20 -left-20 size-72 rounded-full bg-sky/25" />
+
+      <header className="relative flex items-center gap-3">
+        <LogoMark className="size-14" />
+        <span className="text-[2.6rem] leading-none whitespace-nowrap">
+          <span className="font-display font-bold tracking-tight text-ink">paper</span>
+          <span className="inline-block -rotate-3 translate-y-0.5 font-hand text-[1.12em] text-coral">lessons</span>
+        </span>
+      </header>
+
+      <div className={cn("relative", long ? "mt-[5%]" : "mt-[9%]")}>
+        <p className="font-hand text-[2rem] text-coral">a gift for</p>
+        <h1 className={cn("text-balance font-display font-bold leading-[1.02]", nameSize)}>{forName}</h1>
+        {buyer && <p className={cn("mt-3 font-bold", buyer.length > 30 ? "text-[1.2rem]" : "text-[1.45rem]")}>from {buyer}</p>}
       </div>
 
-      <article
-        aria-label={`Gift card for ${gift.recipientName}`}
-        className="gift-sheet relative mx-auto flex w-full sm:aspect-[8.5/11] max-w-[816px] flex-col overflow-hidden rounded-[1.5rem] border-[3px] border-ink bg-white px-[7%] py-[7%] shadow-[6px_6px_0_0_var(--ink)] print:rounded-none print:border-0 print:shadow-none"
-      >
-        {/* paper decorations */}
-        <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-sun" />
-        <div aria-hidden="true" className="pointer-events-none absolute -bottom-20 -left-20 size-72 rounded-full bg-sky/25" />
+      {gift.message ? (
+        <blockquote
+          className={cn(
+            "relative mt-[4%] max-w-[88%] -rotate-1 rounded-2xl border-[3px] border-ink bg-cream px-6 py-4 whitespace-pre-line",
+            gift.message.length > 160 ? "text-[1.05rem] leading-normal" : "text-[1.3rem] leading-relaxed",
+          )}
+        >
+          {gift.message}
+        </blockquote>
+      ) : (
+        // No message: our own little note, so the card never looks empty.
+        <p className="relative mt-[5%] max-w-[80%] -rotate-1 font-hand text-[2.1rem] leading-tight text-ink/80">
+          little lessons, one page at a time: to read, count and grow with, a few pages a day.
+        </p>
+      )}
 
-        <header className="relative flex items-center gap-3">
-          <LogoMark className="size-14" />
-          <span className="text-[2.6rem] leading-none whitespace-nowrap">
-            <span className="font-display font-bold tracking-tight text-ink">paper</span>
-            <span className="inline-block -rotate-3 translate-y-0.5 font-hand text-[1.12em] text-coral">lessons</span>
-          </span>
-        </header>
+      <div className={cn("relative", fixed ? "mt-auto" : "mt-10 sm:mt-auto")}>
+        <p className="text-[1.6rem] font-bold leading-tight">{what}</p>
+        <p className="mt-1 max-w-[80%] text-[1.05rem] font-semibold text-ink/75">{detail}</p>
 
-        <div className={cn("relative", long ? "mt-[5%]" : "mt-[9%]")}>
-          <p className="font-hand text-[2rem] text-coral">a gift for</p>
-          <h1 className={cn("text-balance font-display font-bold leading-[1.02]", nameSize)}>
-            {forName}
-          </h1>
-          <p className={cn("mt-3 font-bold", gift.buyerName.length > 30 ? "text-[1.2rem]" : "text-[1.45rem]")}>from {gift.buyerName}</p>
+        <div className="mt-5 rounded-2xl border-[3px] border-dashed border-ink bg-white px-6 py-4">
+          <p className="text-sm font-extrabold uppercase tracking-[0.15em] text-ink/60">Your gift code</p>
+          <p className="mt-1 font-display text-[2.7rem] font-bold leading-none tracking-[0.14em]">{gift.code}</p>
+          <p className="mt-3 text-[1.15rem] font-bold">
+            Open it at <span className="text-coral">paperlessons.com/redeem</span>
+          </p>
+          <p className="text-[0.95rem] font-semibold text-ink/65">The code never expires. Open it whenever you're ready.</p>
         </div>
 
-        {gift.message && (
-          <blockquote
-            className={cn(
-              "relative mt-[4%] max-w-[88%] -rotate-1 rounded-2xl border-[3px] border-ink bg-cream px-6 py-4 whitespace-pre-line",
-              gift.message.length > 160 ? "text-[1.05rem] leading-normal" : "text-[1.3rem] leading-relaxed",
-            )}
-          >
-            {gift.message}
-          </blockquote>
-        )}
-
-        <div className="relative mt-10 sm:mt-auto">
-          <p className="text-[1.6rem] font-bold leading-tight">{what}</p>
-          <p className="mt-1 max-w-[80%] text-[1.05rem] font-semibold text-ink/75">{detail}</p>
-
-          <div className="mt-5 rounded-2xl border-[3px] border-dashed border-ink bg-white px-6 py-4">
-            <p className="text-sm font-extrabold uppercase tracking-[0.15em] text-ink/60">Your gift code</p>
-            <p className="mt-1 font-display text-[2.7rem] font-bold leading-none tracking-[0.14em]">{gift.code}</p>
-            <p className="mt-3 text-[1.15rem] font-bold">
-              Open it at <span className="text-coral">paperlessons.com/redeem</span>
-            </p>
-            <p className="text-[0.95rem] font-semibold text-ink/65">The code never expires. Open it whenever you're ready.</p>
-          </div>
-
-          <div aria-hidden="true" className="mt-5 flex items-end gap-3">
-            {MASCOTS.map((m, i) => (
-              <img key={m} src={m} alt="" className="size-12 rounded-full border-[3px] border-ink bg-white p-1" style={{ transform: `rotate(${(i % 2 ? 6 : -6)}deg)` }} />
-            ))}
-          </div>
+        <div aria-hidden="true" className="mt-5 flex items-end gap-3">
+          {MASCOTS.map((m, i) => (
+            <img key={m} src={m} alt="" className="size-12 rounded-full border-[3px] border-ink bg-white p-1" style={{ transform: `rotate(${i % 2 ? 6 : -6}deg)` }} />
+          ))}
         </div>
-      </article>
-    </section>
+      </div>
+    </article>
   );
 }

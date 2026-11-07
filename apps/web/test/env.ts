@@ -13,11 +13,16 @@ const MIGRATIONS = fileURLToPath(new URL("../migrations", import.meta.url));
 type Row = Record<string, unknown>;
 const plain = (r: unknown) => (r ? { ...(r as Row) } : null);
 
+/** Apply the migrations in order to `db`: all of them, or those whose file name sorts within [from, to]. */
+export function migrate(db: DatabaseSync, { from = "", to = "\uffff" }: { from?: string; to?: string } = {}) {
+  for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith(".sql")).sort()) {
+    if (f >= from && f.slice(0, to.length) <= to) db.exec(readFileSync(path.join(MIGRATIONS, f), "utf8"));
+  }
+}
+
 export function makeD1() {
   const db = new DatabaseSync(":memory:");
-  for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith(".sql")).sort()) {
-    db.exec(readFileSync(path.join(MIGRATIONS, f), "utf8"));
-  }
+  migrate(db);
   class Stmt {
     constructor(readonly sql: string, readonly params: unknown[] = []) {}
     bind(...params: unknown[]) {

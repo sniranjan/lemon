@@ -78,11 +78,12 @@ describe("gift form validation", () => {
     expect(validateGift(FORM, TODAY, null)).toMatchObject({ ok: false, field: "kind" });
   });
 
-  it("needs both names and a real recipient email", () => {
-    expect(ok({ buyerName: "  " })).toMatchObject({ ok: false, field: "buyerName" });
-    expect(ok({ recipientName: "" })).toMatchObject({ ok: false, field: "recipientName" });
+  it("names are optional (empty means none), but capped; an emailed gift needs a real recipient email", () => {
+    const v = ok({ buyerName: "  ", recipientName: "" });
+    expect(v.ok && v.gift).toMatchObject({ buyerName: null, recipientName: null, delivery: "email" });
     expect(ok({ recipientEmail: "sam@" })).toMatchObject({ ok: false, field: "recipientEmail" });
     expect(ok({ buyerName: "x".repeat(61) })).toMatchObject({ ok: false, field: "buyerName" });
+    expect(ok({ recipientName: "x".repeat(61) })).toMatchObject({ ok: false, field: "recipientName" });
   });
 
   it("keeps names to one clean line (they go into the email Subject)", () => {
