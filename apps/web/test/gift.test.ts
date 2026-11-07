@@ -259,6 +259,12 @@ describe("cart and pay-the-rest math", () => {
     expect(quoteCart(["unicorns"], P)).toBeNull();
   });
 
+  it("finds the pack of two when the catalog lists levels alphabetically (as /api/catalog does)", () => {
+    const abc = { ...P, forSale: [...SLUGS].sort() };
+    expect(quoteCart(["ducklings", "bunnies"], abc)).toEqual({ kind: "two", slugs: ["ducklings", "bunnies"], cents: TWO_CENTS });
+    expect(quoteCart(["bunnies", "chicks"], abc)).toMatchObject({ kind: "pick", cents: 2 * LEVEL_CENTS });
+  });
+
   it("uses the balance up to the total, never leaving less than Stripe's 50-cent minimum to pay", () => {
     expect(planPayment(1900, 5000)).toEqual({ use: 1900, rest: 0 });
     expect(planPayment(2900, 1000)).toEqual({ use: 1000, rest: 1900 });

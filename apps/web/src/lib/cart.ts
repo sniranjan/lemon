@@ -31,8 +31,11 @@ export function quoteCart(picked: string[], p: CartPrices): CartQuote | null {
     return { kind: "all", slugs: [...p.forSale], cents: all.cents };
   }
   const two = p.bundles.two;
-  if (two && slugs.length === 2 && p.next[slugs[0]] === slugs[1] && two.cents < sum) {
-    return { kind: "two", slugs, cents: two.cents };
+  if (two && slugs.length === 2 && two.cents < sum) {
+    // forSale may come in any order (the catalog lists it alphabetically), so check both ways
+    const [a, b] = slugs;
+    if (p.next[a] === b) return { kind: "two", slugs: [a, b], cents: two.cents };
+    if (p.next[b] === a) return { kind: "two", slugs: [b, a], cents: two.cents };
   }
   return { kind: slugs.length === 1 ? "level" : "pick", slugs, cents: sum };
 }
