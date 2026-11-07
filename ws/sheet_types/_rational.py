@@ -14,7 +14,8 @@ import ast
 import operator
 from fractions import Fraction
 
-MINUS = "−"
+from . import _numbers
+from ._numbers import MINUS, is_terminating, parse  # noqa: F401 (re-exported)
 
 _BIN = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
         ast.Div: operator.truediv, ast.Pow: operator.pow}
@@ -22,61 +23,15 @@ _CMP = {ast.Lt: operator.lt, ast.LtE: operator.le, ast.Gt: operator.gt, ast.GtE:
         ast.Eq: operator.eq, ast.NotEq: operator.ne}
 
 
-def parse(s: str | int) -> Fraction:
-    """'3/4', '2 1/2', '1.25', '-3', '−3', 7 -> Fraction."""
-    if isinstance(s, int):
-        return Fraction(s)
-    t = str(s).strip().replace(MINUS, "-")
-    sign = -1 if t.startswith("-") else 1
-    t = t.lstrip("-")
-    if " " in t:
-        whole, frac = t.split(" ", 1)
-        return sign * (int(whole) + Fraction(frac))
-    return sign * Fraction(t)
-
-
-def is_terminating(x: Fraction) -> bool:
-    d = x.denominator
-    for p in (2, 5):
-        while d % p == 0:
-            d //= p
-    return d == 1
-
-
 def fmt(x: Fraction, style: str = "fraction") -> str:
     """Answer-key text. style 'fraction': 5, 3/4, 2 1/3 (simplest form, mixed if above 1);
     'improper': 7/3; 'decimal': 1.25 (must terminate); 'money': 2.50."""
-    x = Fraction(x)
-    sign = "-" if x < 0 else ""
-    x = abs(x)
-    if style in ("decimal", "money"):
-        if not is_terminating(x):
-            raise ValueError(f"{x} has no exact decimal")
-        places = 0
-        while (x * 10 ** places).denominator != 1:
-            places += 1
-        if style == "money":
-            if places > 2:
-                raise ValueError(f"{x} isn't a whole number of cents")
-            places = 2 if places else 0     # $3 or $2.50, never $2.5
-        n = x * 10 ** places
-        digits = str(n.numerator)
-        if places:
-            digits = digits.rjust(places + 1, "0")
-            return f"{sign}{digits[:-places]}.{digits[-places:]}"
-        return f"{sign}{digits}"
-    if x.denominator == 1:
-        return f"{sign}{x.numerator}"
-    if style == "improper" or x < 1:
-        return f"{sign}{x.numerator}/{x.denominator}"
-    w = x.numerator // x.denominator
-    r = x - w
-    return f"{sign}{w} {r.numerator}/{r.denominator}"
+    if style not in ("decimal", "money"):
+        style = "fraction" if style == "improper" else "mixed"
+    return _numbers.fmt(Fraction(x), style)
 
 
-def show(s: str) -> str:
-    """A stored number as printed: '-3' -> '−3' (the true minus sign)."""
-    return str(s).replace("-", MINUS)
+show = _numbers.minus   # a stored number as printed: '-3' -> '−3' (the true minus sign)
 
 
 def parts(s: str | Fraction) -> dict:

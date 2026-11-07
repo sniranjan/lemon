@@ -19,7 +19,9 @@ import re
 from dataclasses import dataclass
 from fractions import Fraction
 
-MINUS = "−"
+from .sheet_types._numbers import MINUS
+from .sheet_types._numbers import fmt as _frac_text   # 3, -1/2
+from .sheet_types._numbers import show as _signed     # −1/2
 SUP = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
 
 Monomial = tuple[tuple[str, int], ...]   # sorted (variable, exponent) pairs; () is the constant term
@@ -132,10 +134,6 @@ class Poly:
             term = num + body
             parts.append(("-" if sign == "-" else "") + term if i == 0 else f" {sign} {term}")
         return "".join(parts)
-
-
-def _frac_text(f: Fraction) -> str:
-    return str(f.numerator) if f.denominator == 1 else f"{f.numerator}/{f.denominator}"
 
 
 # --- parser ------------------------------------------------------------------------------
@@ -452,12 +450,3 @@ def roots_text(roots: list[QRoot], var: str = "x") -> str:
     if r.s == 1:
         return f"{var} = {core}"
     return f"{var} = ({core})/{r.s}" if r.p else f"{var} = {core}/{r.s}"
-
-
-def _signed(f: Fraction) -> str:
-    return _frac_text(f).replace("-", MINUS)
-
-
-def fmt_int(n: int) -> str:
-    """A whole number with a real minus sign."""
-    return str(n).replace("-", MINUS)

@@ -16,6 +16,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ._common import error
+from ._numbers import minus as fmt
 
 R = 6
 FLIP = {"<": ">", ">": "<", "<=": ">=", ">=": "<=", "=": "="}
@@ -61,10 +62,6 @@ def equation(item: dict) -> str:
     if item["form"] == "standard":
         return standard_form(*item["abc"], item["sign"])
     return slope_form(Fraction(item["slope"]), item["b"], item["sign"])
-
-
-def fmt(n) -> str:
-    return str(n).replace("-", "−")
 
 
 def answer_for(item: dict) -> str:

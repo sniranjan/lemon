@@ -17,7 +17,8 @@ from __future__ import annotations
 from fractions import Fraction
 from math import isqrt
 
-MINUS = "−"
+from . import _numbers
+from ._numbers import MINUS
 
 
 def q(value) -> Fraction:
@@ -26,13 +27,12 @@ def q(value) -> Fraction:
 
 def fstr(value) -> str:
     """Fraction → "3" or "-1/2" (how numbers are stored)."""
-    v = q(value)
-    return str(v.numerator) if v.denominator == 1 else f"{v.numerator}/{v.denominator}"
+    return _numbers.fmt(q(value))
 
 
 def show(value) -> str:
     """Fraction → printed plain text with a real minus sign: "−1/2"."""
-    return fstr(value).replace("-", MINUS)
+    return _numbers.show(q(value))
 
 
 def merge(tokens: list) -> list:
