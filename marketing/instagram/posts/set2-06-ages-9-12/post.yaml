@@ -1,8 +1,5 @@
-# Set 2, post 6. NOT RENDERED YET: needs out/previews/pandas.pdf, penguins.pdf, lions.pdf and whales.pdf.
-# Before rendering, look at the previews (pdftoppm -r 30) and set the page numbers below to good inner pages
-# (page 1 is the preview cover, the last page is the closing page). Then fix the page descriptions in `alt`.
-# Slide 1 is the four mascots only (no pages), so it renders without the previews.
-# Render: uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-06-ages-9-12
+# Set 2, post 6. Render: uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-06-ages-9-12
+# Preview pages (pandas/penguins/lions/whales.pdf): 1 cover, 2–5 reading, 6–9 math, 10 closing page.
 layout: announce
 background: coral
 headline: "Ages 9 to 12"
@@ -14,27 +11,27 @@ sticker: ""
 slides:
   - background: coral
     headline: "Pandas"
-    subline: "inference, ratios, percents"
+    subline: "central ideas, ratios, rates"
     chip: "Age 9 · Grade 6 work"
-    pages: [{level: pandas, page: 3}, {level: pandas, page: 2}, {level: pandas, page: 6}]
+    pages: [{level: pandas, page: 7}, {level: pandas, page: 2}, {level: pandas, page: 8}]
     mascots: [pandas]
   - background: coral
     headline: "Penguins"
-    subline: "arguments, negative numbers"
+    subline: "two texts, negative numbers"
     chip: "Age 10 · Grade 7 work"
-    pages: [{level: penguins, page: 3}, {level: penguins, page: 2}, {level: penguins, page: 6}]
+    pages: [{level: penguins, page: 7}, {level: penguins, page: 4}, {level: penguins, page: 9}]
     mascots: [penguins]
   - background: coral
     headline: "Lions"
     subline: "close reading, linear equations"
     chip: "Age 11 · Grade 8 work"
-    pages: [{level: lions, page: 3}, {level: lions, page: 2}, {level: lions, page: 6}]
+    pages: [{level: lions, page: 6}, {level: lions, page: 2}, {level: lions, page: 8}]
     mascots: [lions]
   - background: coral
     headline: "Whales"
     subline: "author's craft, quadratics"
     chip: "Age 12 · Grade 9 work"
-    pages: [{level: whales, page: 3}, {level: whales, page: 2}, {level: whales, page: 6}]
+    pages: [{level: whales, page: 8}, {level: whales, page: 2}, {level: whales, page: 9}]
     mascots: [whales]
     sticker: "Try it free"
     sticker_sub: "link in bio ↑"
@@ -42,7 +39,7 @@ slides:
 caption: |
   Ages 9 to 12: Pandas, Penguins, Lions and Whales 🐼🐧🦁🐳
 
-  The top of the climb. Pandas reads for central ideas and works with ratios and percents. Penguins weighs arguments and solves two-step equations. Lions reads closely and works with linear equations. Whales studies author's craft and takes on polynomials and quadratics.
+  The top of the climb. Pandas reads articles for the central idea and works with ratios, rates and the coordinate plane. Penguins compares two texts on one topic and works with negative numbers, percent change and inequalities. Lions reads closely, explains with evidence, and graphs lines and solves equations. Whales reads speeches and stories for the author's craft and takes on factoring and the quadratic formula.
 
   Still one printable page at a time, still about two grades ahead of school.
 
@@ -53,11 +50,14 @@ alt: >-
   label "Grade 6 to grade 9 work". Four round badges show a panda, a penguin, a lion and a whale, each with its name
   underneath.
 
-  Slide 2: "Pandas", "inference, ratios, percents", "Age 9, Grade 6 work". Three real pages from Pandas.
+  Slide 2: "Pandas", "central ideas, ratios, rates", "Age 9, Grade 6 work". Three real pages: unit-rate word problems,
+  an article called "Engineers of the Pond", and plotting points on a coordinate plane.
 
-  Slide 3: "Penguins", "arguments, negative numbers", "Age 10, Grade 7 work". Three real pages from Penguins.
+  Slide 3: "Penguins", "two texts, negative numbers", "Age 10, Grade 7 work". Three real pages: multiplying negative
+  numbers, two texts about the Erie Canal, and inequalities on number lines.
 
-  Slide 4: "Lions", "close reading, linear equations", "Age 11, Grade 8 work". Three real pages from Lions.
+  Slide 4: "Lions", "close reading, linear equations", "Age 11, Grade 8 work". Three real pages: exponent rules, a
+  story called "The Audition", and graphing lines.
 
-  Slide 5: "Whales", "author's craft, quadratics", "Age 12, Grade 9 work". Three real pages from Whales. A sticker
-  says "Try it free, link in bio".
+  Slide 5: "Whales", "author's craft, quadratics", "Age 12, Grade 9 work". Three real pages: factoring trinomials, a
+  speech called "Start the Day at Eight", and the quadratic formula. A sticker says "Try it free, link in bio".

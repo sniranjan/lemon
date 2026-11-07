@@ -1,30 +1,28 @@
-# Set 2, post 5. NOT RENDERED YET: needs out/previews/owls.pdf and otters.pdf (copy them from the main checkout).
-# Before rendering, look at the previews (pdftoppm -r 30) and set the page numbers below to good inner pages
-# (page 1 is the preview cover, the last page is the closing page). Then fix the page descriptions in `alt`.
-# Render: uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-05-ages-7-8
+# Set 2, post 5. Render: uv run python scripts/marketing/ig_post.py render marketing/instagram/posts/set2-05-ages-7-8
+# Preview pages (owls.pdf / otters.pdf): 1 cover, 2–5 reading, 6–9 math, 10 closing page.
 layout: announce
 background: cream
 headline: "Ages 7 & 8"
-subline: "chapter books, fractions, decimals"
+subline: "stories in chapters, fractions, decimals"
 chip: "Grade 4 and grade 5 work"
 pages:
   - {level: owls, page: 2}
-  - {level: otters, page: 2}
-  - {level: owls, page: 6}
+  - {level: otters, page: 8}
+  - {level: otters, page: 7}
 mascots: [owls, otters]
 sticker: ""
 slides:
   - background: cream
     headline: "Owls"
-    subline: "chapter books, long division"
+    subline: "stories in chapters, long division"
     chip: "Age 7 · Grade 4 work"
-    pages: [{level: owls, page: 3}, {level: owls, page: 2}, {level: owls, page: 6}]
+    pages: [{level: owls, page: 7}, {level: owls, page: 2}, {level: owls, page: 8}]
     mascots: [owls]
   - background: cream
     headline: "Otters"
     subline: "finding details, fractions, decimals"
     chip: "Age 8 · Grade 5 work"
-    pages: [{level: otters, page: 3}, {level: otters, page: 2}, {level: otters, page: 6}]
+    pages: [{level: otters, page: 7}, {level: otters, page: 2}, {level: otters, page: 8}]
     mascots: [otters]
     sticker: "Try it free"
     sticker_sub: "link in bio ↑"
@@ -32,18 +30,20 @@ slides:
 caption: |
   Ages 7 and 8: Owls and Otters 🦉🦦
 
-  Owls reads chapter-book passages and works through long multiplication and division. Otters hunts for details in longer texts and takes on fractions and decimals.
+  Owls reads stories in chapters, answers questions about them, and works through long multiplication and division. Otters reads articles for the details that matter and takes on fractions, decimals and volume.
 
   Real pages, one small step at a time, about two grades ahead of school. A few pages a day is plenty.
 
   Swipe through, then print a free preview of either level at the link in bio.
 tags: "#printableworksheets #kidsworksheets #homelearning #thirdgrade #fourthgrade #readingcomprehension #mathpractice #homeschooling #printables #paperlessons"
 alt: >-
-  Slide 1: Cream background titled "Ages 7 & 8" with the handwritten line "chapter books, fractions, decimals" and a
-  label "Grade 4 and grade 5 work". Three real worksheet pages from Owls and Otters are fanned out, with an owl and an
-  otter peeking over them.
+  Slide 1: Cream background titled "Ages 7 & 8" with the handwritten line "stories in chapters, fractions, decimals"
+  and a label "Grade 4 and grade 5 work". Three real worksheet pages are fanned out (chapter 1 of a story called "A Box
+  in the Attic", adding decimals, and adding fractions), with an owl and an otter peeking over them.
 
-  Slide 2: "Owls", "chapter books, long division", "Age 7, Grade 4 work". Three real pages from Owls.
+  Slide 2: "Owls", "stories in chapters, long division", "Age 7, Grade 4 work". Three real pages: two-digit
+  multiplication, the story "A Box in the Attic", and three-digit division.
 
-  Slide 3: "Otters", "finding details, fractions, decimals", "Age 8, Grade 5 work". Three real pages from Otters. A
-  sticker says "Try it free, link in bio".
+  Slide 3: "Otters", "finding details, fractions, decimals", "Age 8, Grade 5 work". Three real pages: adding
+  fractions, an article called "How Sea Otters Stay Warm", and adding decimals. A sticker says "Try it free, link in
+  bio".
