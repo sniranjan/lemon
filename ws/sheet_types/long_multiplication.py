@@ -22,13 +22,10 @@ from __future__ import annotations
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error, page_rules
+from .column_arithmetic import digit
 
 LAYOUTS = ("expanded", "carry", "partials")
 MAX_TRIES = 20000
-
-
-def digit(n: int, col: int) -> int:
-    return n // 10 ** col % 10
 
 
 def width(n: int) -> int:

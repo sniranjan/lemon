@@ -13,15 +13,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error, page_rules
-
-
-def _gap_positions(ctx: GenContext, length: int, gaps: int) -> list[int]:
-    for _ in range(1000):
-        picked = sorted(ctx.rng.sample(range(1, length), gaps))
-        if all(b - a > 1 for a, b in zip(picked, picked[1:])):
-            return picked
-    raise ValueError(f"can't place {gaps} separate gaps in {length} boxes")
+from ._common import error, page_rules, separate_gaps
 
 
 @register("number_sequence")
@@ -45,7 +37,7 @@ class NumberSequence(SheetType):
         items = []
         for s in starts:
             cells = list(range(s, s + length))
-            items.append({"kind": "track", "cells": cells, "gaps": _gap_positions(ctx, length, gaps)})
+            items.append({"kind": "track", "cells": cells, "gaps": separate_gaps(ctx.rng, 1, length, gaps)})
         answers = [i["cells"][g] for i in items for g in i["gaps"]]
         return SheetContent(title="Missing numbers", parent_tip=ctx.tip(self.name), items=items,
                             answer_key=answers)

@@ -66,6 +66,15 @@ def part_offset(subject: str, level: str, page: int) -> int:
     return page - (part.pages if part else sec.pages)[0]
 
 
+def separate_gaps(rng: random.Random, first: int, length: int, gaps: int, who: str = "") -> list[int]:
+    """`gaps` sorted box positions in first…length−1, no two side by side (number tracks)."""
+    for _ in range(1000):
+        picked = sorted(rng.sample(range(first, length), gaps))
+        if all(b - a > 1 for a, b in zip(picked, picked[1:])):
+            return picked
+    raise ValueError(f"{who}can't place {gaps} separate gaps in {length} boxes")
+
+
 def nonzero_draw(rng: random.Random, lo: int, hi: int, avoid=(0,)) -> int:
     """randint(lo, hi) again until it misses `avoid` (draws a varying number of times)."""
     while True:
