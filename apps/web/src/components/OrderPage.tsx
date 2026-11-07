@@ -3,13 +3,17 @@ import { Download, FileText, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LEVELS } from "@/data/levels";
 
+type OrderFile = { name: string; size: number; url: string };
 type Order = {
   ok: true;
+  kind?: "level" | "two" | "all";
+  name?: string;
   level: { slug: string; name: string; title: string; age: number };
+  levels?: { slug: string; name: string; title: string; age: number; files: OrderFile[] }[];
   email: string | null;
   purchasedAt: string;
   expiresAt: string | null;
-  files: { name: string; size: number; url: string }[];
+  files: OrderFile[];
 };
 
 type State =
@@ -134,37 +138,58 @@ export function OrderPage() {
   );
 }
 
+function FileList({ files }: { files: OrderFile[] }) {
+  return (
+    <ul className="mt-3 flex flex-col gap-3">
+      {files.map((f) => (
+        <li key={f.name}>
+          <a
+            href={f.url}
+            className="flex items-center gap-3 rounded-xl border-[3px] border-ink bg-cream px-4 py-3 font-bold transition-transform hover:-translate-y-0.5"
+          >
+            <FileText className="size-6 shrink-0 text-coral" />
+            <span className="flex-1">{fileLabel(f.name)}</span>
+            <span className="text-sm text-ink/60">{fileSize(f.size)}</span>
+            <Download className="size-5 shrink-0" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function Ready({ order }: { order: Order }) {
-  const look = LEVELS.find((l) => l.slug === order.level.slug);
+  const groups = order.levels?.length ? order.levels : [{ ...order.level, files: order.files }];
+  const many = groups.length > 1;
+  const look = LEVELS.find((l) => l.slug === groups[0].slug);
+  const name = order.name ?? order.level.name;
   return (
     <>
       <div className="flex items-center gap-4">
         {look && <img src={look.mascot} alt="" className="size-16 rounded-full border-[3px] border-ink bg-cream p-1.5" />}
         <div>
           <p className="font-hand text-2xl text-coral">thank you!</p>
-          <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{order.level.name} is all yours</h1>
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
+            {name} {many ? "are" : "is"} all yours
+          </h1>
         </div>
       </div>
       <p className="mt-4 text-lg text-ink/80">
-        {order.level.title}. Print the pages a few at a time, or all at once, and keep the answer keys for yourself.
+        {many ? "Each level has its own books below." : `${order.level.title}.`} Print the pages a few at a time, or all
+        at once, and keep the answer keys for yourself.
       </p>
 
       {order.files.length ? (
-        <ul className="mt-6 flex flex-col gap-3">
-          {order.files.map((f) => (
-            <li key={f.name}>
-              <a
-                href={f.url}
-                className="flex items-center gap-3 rounded-xl border-[3px] border-ink bg-cream px-4 py-3 font-bold transition-transform hover:-translate-y-0.5"
-              >
-                <FileText className="size-6 shrink-0 text-coral" />
-                <span className="flex-1">{fileLabel(f.name)}</span>
-                <span className="text-sm text-ink/60">{fileSize(f.size)}</span>
-                <Download className="size-5 shrink-0" />
-              </a>
-            </li>
-          ))}
-        </ul>
+        groups.map((g) => (
+          <div key={g.slug} className="mt-6">
+            {many && (
+              <h2 className="text-xl font-bold">
+                {g.name} <span className="text-base font-semibold text-ink/60">· age {g.age} · {g.title}</span>
+              </h2>
+            )}
+            <FileList files={g.files} />
+          </div>
+        ))
       ) : (
         <p className="mt-6 rounded-xl border-2 border-dashed border-ink/50 p-4 font-bold">
           Your files are being prepared. Check back on this page shortly.

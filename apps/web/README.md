@@ -55,6 +55,9 @@ Preview PDFs must not show internal level codes or anything referencing other pr
 - **Products and prices live in Stripe.** One product per level (`level_<slug>`) with a price whose lookup
   key is `level_<slug>`; the site reads prices from Stripe. To change a price, add a new price to the
   product in the dashboard and move the lookup key to it (tick "transfer lookup key").
+- **Bundles:** `bundle_two` ($29, a level plus the next one on the ladder) and `bundle_all` ($99, every level
+  for sale), products + prices by lookup key, created by the setup script. One order can cover several levels
+  (`orders.levels` comma list, `orders.kind` level | two | all); the order page groups files by level.
 - **Setup (once, re-runnable):** put the key in `~/.config/paperlessons/stripe.env` as
   `STRIPE_SECRET_KEY=sk_live_…` (chmod 600, outside the repo), then:
   ```bash

@@ -30,8 +30,47 @@ export function Library() {
             <LevelCard key={level.slug} level={level} index={i} catalog={catalog} />
           ))}
         </div>
+        {catalog.bundles.all && <EverythingBundle catalog={catalog} />}
       </div>
     </section>
+  );
+}
+
+/** One price for every level on sale (the "all" bundle). */
+function EverythingBundle({ catalog }: { catalog: Catalog }) {
+  const all = catalog.bundles.all!;
+  const separately = catalog.forSale.reduce((sum, s) => sum + (catalog.prices[s]?.cents ?? 0), 0);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  return (
+    <div className="sticker relative mx-auto mt-14 flex max-w-4xl flex-col items-center gap-5 bg-sun px-6 py-8 text-center sm:flex-row sm:text-left">
+      <div className="flex-1">
+        <p className="font-hand text-2xl text-coral">the whole climb</p>
+        <h3 className="mt-1 text-3xl font-bold leading-tight">Every level, ages 3 to 12</h3>
+        <p className="mt-2 text-lg text-ink/80">
+          All {all.levels} levels in one go, for brothers and sisters or a whole school year and beyond.
+          {separately > all.cents && <> That's {formatPrice(separately, all.currency)} if bought one at a time.</>}
+        </p>
+      </div>
+      <button
+        type="button"
+        disabled={busy}
+        onClick={async () => {
+          setBusy(true);
+          setError(await startCheckout(null, "all"));
+          setBusy(false);
+        }}
+        className={cn(FLOAT, "inline-flex shrink-0 items-center gap-2 bg-white px-6 py-3 text-lg disabled:opacity-70")}
+      >
+        {busy ? <Loader2 className="size-5 animate-spin" /> : <ShoppingBag className="size-5" />} Get all {all.levels} ·{" "}
+        {formatPrice(all.cents, all.currency)}
+      </button>
+      {error && (
+        <p role="alert" className="w-full text-sm font-bold text-coral sm:absolute sm:-bottom-8 sm:left-6">
+          {error}
+        </p>
+      )}
+    </div>
   );
 }
 
@@ -39,6 +78,9 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
   const [open, setOpen] = useState(false);
   const hasPreview = catalog.previews.includes(level.slug);
   const price = catalog.forSale.includes(level.slug) ? catalog.prices[level.slug] : undefined;
+  const nextSlug = price ? catalog.next[level.slug] : undefined;
+  const pack = nextSlug && catalog.bundles.two ? catalog.bundles.two : undefined;
+  const nextName = nextSlug ? LEVELS.find((l) => l.slug === nextSlug)?.name : undefined;
   const ready = level.status === "ready";
   return (
     <article
@@ -65,8 +107,11 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
       {/* While peeking, the buttons float on the sheet so they're easy to reach (the pocket drops out of the way).
           With reduced motion only visibility transitions: it must never flip instantly, or Tab from the card
           hides these buttons before focus can land on them. */}
-      <div className="invisible absolute inset-x-12 bottom-[132px] z-20 flex translate-y-3 flex-col items-stretch gap-2.5 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-[visibility]">
+      <div className="invisible absolute inset-x-12 bottom-[124px] z-20 flex translate-y-3 flex-col items-stretch gap-2 opacity-0 transition-all duration-300 peek:visible peek:translate-y-0 peek:opacity-100 motion-reduce:transition-[visibility]">
         {price && <BuyButton level={level} price={formatPrice(price.cents, price.currency)} floating />}
+        {pack && nextName && (
+          <PackButton level={level} nextName={nextName} price={formatPrice(pack.cents, pack.currency)} />
+        )}
         <PreviewButton level={level} hasPreview={hasPreview} floating />
       </div>
 
@@ -129,7 +174,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
 }
 
 /** Big "pill-pop" buttons (ink border + offset shadow, like the header's Shop levels) for the floating row. */
-const FLOAT = "pill-pop justify-center rounded-full px-4 py-1.5 text-[0.95rem]";
+const FLOAT = "pill-pop justify-center rounded-full px-4 py-1 text-[0.95rem]";
 
 function PreviewButton({ level, hasPreview, floating }: { level: Level; hasPreview: boolean; floating?: boolean }) {
   if (hasPreview) {
@@ -183,6 +228,31 @@ function BuyButton({ level, price, floating }: { level: Level; price: string; fl
         )}
       >
         {busy ? <Loader2 className="size-4 animate-spin" /> : <ShoppingBag className="size-4" />} Buy {price}
+      </button>
+      {error && <ErrorToast message={error} onClose={() => setError(null)} />}
+    </>
+  );
+}
+
+/** A level plus the next one on the ladder (the "two" bundle). */
+function PackButton({ level, nextName, price }: { level: Level; nextName: string; price: string }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  return (
+    <>
+      <button
+        type="button"
+        disabled={busy}
+        onClick={async (e) => {
+          e.stopPropagation();
+          setBusy(true);
+          setError(await startCheckout(level.slug, "two"));
+          setBusy(false);
+        }}
+        aria-label={`Buy ${level.name} and ${nextName} together for ${price}`}
+        className={cn(FLOAT, "inline-flex items-center gap-1 whitespace-nowrap bg-white px-3 text-[0.8rem] disabled:opacity-70")}
+      >
+        {busy && <Loader2 className="size-4 animate-spin" />} + {nextName}: both {price}
       </button>
       {error && <ErrorToast message={error} onClose={() => setError(null)} />}
     </>

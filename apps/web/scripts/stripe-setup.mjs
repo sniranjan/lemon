@@ -133,6 +133,28 @@ for (const level of ladder) {
   }
 }
 
+// Bundles: one product + price each, found by lookup key (worker/shop.ts).
+const BUNDLES = [
+  { id: "bundle_two", price: 2900, name: "Two-level pack (printable PDFs)",
+    description: "A level and the next one on the ladder: printable reading and math PDFs plus answer keys." },
+  { id: "bundle_all", price: 9900, name: "Every level, ages 3 to 12 (printable PDFs)",
+    description: "All 13 levels, Chicks to Whales: printable reading and math PDFs plus answer keys." },
+];
+for (const b of BUNDLES) {
+  let product = null;
+  try { product = await stripe("GET", `/products/${b.id}`); } catch (e) { if (e.status !== 404) throw e; }
+  if (!product) {
+    console.log(`+ product ${b.id}: ${b.name}`);
+    if (apply) await stripe("POST", "/products", { id: b.id, name: b.name, description: b.description, metadata: { bundle: b.id }, tax_code: "txcd_10302000" });
+  }
+  const prices = await stripe("GET", "/prices", { lookup_keys: [b.id], active: true });
+  if (prices.data.length) console.log(`  price ${b.id}: ${(prices.data[0].unit_amount / 100).toFixed(2)} (exists)`);
+  else {
+    console.log(`+ price ${b.id}: ${(b.price / 100).toFixed(2)} USD`);
+    if (apply) await stripe("POST", "/prices", { product: b.id, unit_amount: b.price, currency: "usd", lookup_key: b.id, metadata: { bundle: b.id } });
+  }
+}
+
 const hooks = await stripe("GET", "/webhook_endpoints", { limit: 100 });
 const hook = hooks.data.find((h) => h.url === WEBHOOK_URL);
 if (hook) {
