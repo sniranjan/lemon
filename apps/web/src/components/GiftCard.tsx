@@ -142,18 +142,18 @@ export function GiftSheet({ gift, fixed }: { gift: GiftInfo; fixed?: boolean }) 
         <p className="text-[1.6rem] font-bold leading-tight">{what}</p>
         <p className="mt-1 max-w-[80%] text-[1.05rem] font-semibold text-ink/75">{detail}</p>
 
-        <div className="mt-5 rounded-2xl border-[3px] border-dashed border-ink bg-white px-6 py-4">
+        <div className={cn("mt-5 rounded-2xl border-[3px] border-dashed border-ink bg-white py-4", fixed ? "px-6" : "px-4 sm:px-6")}>
           <p className="text-sm font-extrabold uppercase tracking-[0.15em] text-ink/60">Your gift code</p>
-          <p className="mt-1 font-display text-[2.7rem] font-bold leading-none tracking-[0.14em]">{gift.code}</p>
+          <p className={cn("mt-1 font-display font-bold leading-none whitespace-nowrap", fixed ? "text-[2.7rem] tracking-[0.14em]" : "text-[1.4rem] tracking-[0.06em] min-[400px]:text-[1.75rem] min-[400px]:tracking-[0.08em] sm:text-[2.7rem] sm:tracking-[0.14em]")}>{gift.code}</p>
           <p className="mt-3 text-[1.15rem] font-bold">
             Open it at <span className="text-coral">paperlessons.com/redeem</span>
           </p>
           <p className="text-[0.95rem] font-semibold text-ink/65">The code never expires. Open it whenever you're ready.</p>
         </div>
 
-        <div aria-hidden="true" className="mt-5 flex items-end gap-3">
+        <div aria-hidden="true" className={cn("mt-5 flex items-end", fixed ? "gap-3" : "gap-2 sm:gap-3")}>
           {MASCOTS.map((m, i) => (
-            <img key={m} src={m} alt="" className="size-12 rounded-full border-[3px] border-ink bg-white p-1" style={{ transform: `rotate(${i % 2 ? 6 : -6}deg)` }} />
+            <img key={m} src={m} alt="" className={cn(fixed ? "size-12" : "size-9 min-[400px]:size-10 sm:size-12", "rounded-full border-[3px] border-ink bg-white p-1")} style={{ transform: `rotate(${i % 2 ? 6 : -6}deg)` }} />
           ))}
         </div>
       </div>
