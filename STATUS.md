@@ -362,3 +362,6 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   (later fixes may be overwritten). Chicks batches are `draw_7A_batchN.py`, Ducklings ones
   `draw_batchN.py`; copy the helpers from `draw_7A_batch5.py` (it merges both sets) into a new script.
 - `scripts/pictures/zoom.py out.png name …` renders chosen pictures large for a close look.
+- 2026-11-06: lid (was a serving dome) and wig (was a rainbow costume wig) redrawn with
+  `scripts/pictures/redraw_lid_wig.py`; they show on Bunnies Reading pages 143, 148, 161, 163, 168, 169, 196
+  and Kittens Reading pages 103 and 137.
