@@ -1265,13 +1265,13 @@
             - Bamboo grows slowly, and builders prefer steel.
           evidence: Yet this quick-growing plant is also tough enough that people have used it to build houses, bridges, and even the frameworks that surround skyscrapers while they are being built.
         - kind: quote
-          ask: Which sentence supports the idea about bamboo's speed?
+          ask: Which words support the idea about bamboo’s speed?
           choices:
-            - A new stalk often reaches its full height
+            - three feet in a single day
             - Each stalk, called a culm, is a hollow tube
             - the joints keep it from buckling
             - builders use bamboo for houses, floors, and footbridges
-          evidence: A new stalk often reaches its full height
+          evidence: three feet in a single day
         - kind: write
           ask: How does paragraph 3 connect the two central ideas?
           sample: Paragraph 3 describes bamboo's fast growth but ends by saying its walls harden over the next years, which leads into the idea of its strength.
