@@ -297,12 +297,12 @@ top:     { source: original, licence: original }
 mug:     { source: original, licence: original }
 pan:     { source: original, licence: original }
 jet:     { source: original, licence: original }
-wig:     { source: original, licence: original }
+wig:     { source: original, licence: original }   # redrawn 2026-11-06: curly wig on a faceless stand
 log:     { source: original, licence: original }
 nut:     { source: original, licence: original }
 map:     { source: original, licence: original }
 web:     { source: original, licence: original }
-lid:     { source: original, licence: original }
+lid:     { source: original, licence: original }   # redrawn 2026-11-06: pot lid tilted above a small pot
 jam:     { source: original, licence: original }
 tub:     { source: original, licence: original }
 
