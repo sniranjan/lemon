@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import shop, { type ShopEnv } from "./shop";
-import gift, { deliverDueGifts, todayUTC } from "./gift";
+import gift from "./gift";
 
 type Env = ShopEnv & { ASSETS: Fetcher };
 
@@ -115,8 +115,4 @@ export { app };
 
 export default {
   fetch: app.fetch,
-  /** Daily cron (wrangler.jsonc triggers.crons): email the recipients whose gift is due. */
-  async scheduled(_controller, env, ctx) {
-    ctx.waitUntil(deliverDueGifts(env, todayUTC()));
-  },
 } satisfies ExportedHandler<Env>;

@@ -2,12 +2,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import ladder from "../src/data/ladder.json";
 import { planPayment, quoteCart } from "../src/lib/cart";
 import { resetPriceCache } from "../worker/catalog";
-import { addDays, deliverDueGifts, newGiftCode, normalizeCode, todayUTC, validateGift } from "../worker/gift";
+import { newGiftCode, normalizeCode, validateGift } from "../worker/gift";
 import { app } from "../worker/index";
 import { ALL_CENTS, LEVEL_CENTS, TWO_CENTS, ctx, makeEnv, sign, stubStripe, type StripeCall } from "./env";
 
 const SLUGS = ladder.map((l) => l.slug);
-const TODAY = todayUTC();
 
 let t: ReturnType<typeof makeEnv>;
 let stripe: ReturnType<typeof stubStripe>;
@@ -38,12 +37,9 @@ async function webhook(session: unknown, type = "checkout.session.completed") {
 
 const FORM = {
   kind: "all",
-  buyerName: "Priya",
-  recipientName: "Sam Lee",
-  recipientEmail: "sam@example.com",
   childName: "Maya",
   message: "Happy birthday, Maya!\nLove, Priya",
-  deliverOn: TODAY,
+  buyerName: "Priya",
 };
 
 /** Buy a gift through the real routes: form → Checkout Session → signed webhook. Returns its code. */
@@ -62,11 +58,11 @@ const gift = (code: string) => t.db.prepare("SELECT * FROM gifts WHERE code = ?"
 const count = (sql: string, ...p: string[]) => Number((t.db.prepare(sql).get(...p) as { n: number }).n);
 
 describe("gift form validation", () => {
-  const ok = (over: Record<string, unknown>) => validateGift({ ...FORM, ...over }, TODAY, ALL_CENTS);
+  const ok = (over: Record<string, unknown>) => validateGift({ ...FORM, ...over }, ALL_CENTS);
 
   it("accepts the every-level gift at the every-level price", () => {
     const v = ok({});
-    expect(v.ok && v.gift).toMatchObject({ kind: "all", amountCents: ALL_CENTS, childName: "Maya", recipientEmail: "sam@example.com" });
+    expect(v.ok && v.gift).toEqual({ kind: "all", amountCents: ALL_CENTS, childName: "Maya", message: "Happy birthday, Maya!\nLove, Priya", buyerName: "Priya" });
   });
 
   it("accepts the preset amounts and whole-dollar custom amounts from $10 to $250", () => {
@@ -75,27 +71,26 @@ describe("gift form validation", () => {
   });
 
   it("refuses the every-level gift when its price isn't available", () => {
-    expect(validateGift(FORM, TODAY, null)).toMatchObject({ ok: false, field: "kind" });
+    expect(validateGift(FORM, null)).toMatchObject({ ok: false, field: "kind" });
   });
 
-  it("names are optional (empty means none), but capped; an emailed gift needs a real recipient email", () => {
-    const v = ok({ buyerName: "  ", recipientName: "" });
-    expect(v.ok && v.gift).toMatchObject({ buyerName: null, recipientName: null, delivery: "email" });
-    expect(ok({ recipientEmail: "sam@" })).toMatchObject({ ok: false, field: "recipientEmail" });
+  it("the buyer's name is optional (empty means none), but capped", () => {
+    const v = ok({ buyerName: "  " });
+    expect(v.ok && v.gift.buyerName).toBeNull();
+    expect(ok({ buyerName: "x".repeat(60) }).ok).toBe(true);
     expect(ok({ buyerName: "x".repeat(61) })).toMatchObject({ ok: false, field: "buyerName" });
-    expect(ok({ recipientName: "x".repeat(61) })).toMatchObject({ ok: false, field: "recipientName" });
   });
 
-  it("keeps names to one clean line (they go into the email Subject)", () => {
-    const v = ok({ buyerName: "Priya\r\nBcc: evil@example.com", recipientName: "Sam\u0000 Lee" });
+  it("keeps the name to one clean line (it goes into the email Subject)", () => {
+    const v = ok({ buyerName: "Priya\r\nBcc: evil@example.com" });
     expect(v.ok && v.gift.buyerName).toBe("Priya Bcc: evil@example.com");
-    expect(v.ok && v.gift.recipientName).toBe("Sam Lee");
   });
 
   it("stores only a child's first name, and it's optional", () => {
     expect(ok({ childName: "Maya Lee" })).toMatchObject({ ok: false, field: "childName" });
     expect(ok({ childName: "" }).ok && (ok({ childName: "" }) as { gift: { childName: unknown } }).gift.childName).toBeNull();
     expect(ok({ childName: "Anne-Marie" }).ok).toBe(true);
+    expect(ok({ childName: "x".repeat(31) })).toMatchObject({ ok: false, field: "childName" });
   });
 
   it("caps the message at 300 characters", () => {
@@ -103,12 +98,16 @@ describe("gift form validation", () => {
     expect(ok({ message: "a".repeat(301) })).toMatchObject({ ok: false, field: "message" });
   });
 
-  it("delivers today up to 90 days out (one day of slack for time zones)", () => {
-    expect(ok({ deliverOn: addDays(TODAY, -1) }).ok).toBe(true); // already "tomorrow" in UTC for the buyer
-    expect(ok({ deliverOn: addDays(TODAY, 90) }).ok).toBe(true);
-    expect(ok({ deliverOn: addDays(TODAY, -2) })).toMatchObject({ ok: false, field: "deliverOn" });
-    expect(ok({ deliverOn: addDays(TODAY, 92) })).toMatchObject({ ok: false, field: "deliverOn" });
-    expect(ok({ deliverOn: "2026-02-30" })).toMatchObject({ ok: false, field: "deliverOn" });
+  it("ignores what the old form sent (their name and email, how and when to deliver)", () => {
+    const v = ok({ recipientName: "Sam Lee", recipientEmail: "not an email", delivery: "email", deliverOn: "nope" });
+    expect(v).toEqual({ ok: true, gift: { kind: "all", amountCents: ALL_CENTS, childName: "Maya", message: "Happy birthday, Maya!\nLove, Priya", buyerName: "Priya" } });
+  });
+
+  it("works with nothing personal at all", () => {
+    expect(validateGift({ kind: "credit", amountCents: 2900 }, ALL_CENTS)).toEqual({
+      ok: true,
+      gift: { kind: "credit", amountCents: 2900, childName: null, message: null, buyerName: null },
+    });
   });
 
   it("makes readable codes and reads them back however they're typed", () => {
@@ -122,18 +121,19 @@ describe("gift form validation", () => {
 
 describe("POST /api/gift/checkout", () => {
   it("rejects a bad form with the field to fix, without calling Stripe for a session", async () => {
-    const r = await post("/api/gift/checkout", { ...FORM, recipientEmail: "nope" });
+    const r = await post("/api/gift/checkout", { ...FORM, childName: "Maya Lee" });
     expect(r.status).toBe(400);
-    expect(await r.json()).toMatchObject({ ok: false, field: "recipientEmail" });
+    expect(await r.json()).toMatchObject({ ok: false, field: "childName" });
     expect(stripe.calls.some((c) => c.path === "/v1/checkout/sessions")).toBe(false);
   });
 
   it("starts Checkout with an inline price, the details in metadata, and no promotion codes", async () => {
-    const r = await post("/api/gift/checkout", { ...FORM, kind: "credit", amountCents: 5000 });
+    const r = await post("/api/gift/checkout", { ...FORM, kind: "credit", amountCents: 5000, recipientEmail: "sam@example.com", deliverOn: "2026-12-01" });
     expect(await r.json()).toMatchObject({ ok: true, url: expect.stringContaining("checkout.stripe.test") });
     const call = stripe.calls.find((c) => c.path === "/v1/checkout/sessions")!;
     expect(call.body.get("line_items[0][price_data][unit_amount]")).toBe("5000");
     expect(call.body.get("line_items[0][price_data][currency]")).toBe("usd");
+    expect(call.body.get("line_items[0][price_data][product_data][description]")).toBe("For Maya: $50 to spend on any level. Code never expires.");
     expect(call.body.has("allow_promotion_codes")).toBe(false);
     expect(call.body.has("custom_text[submit][message]")).toBe(false);
     expect(call.body.get("success_url")).toBe("https://paperlessons.test/gift/thanks?session_id={CHECKOUT_SESSION_ID}");
@@ -141,13 +141,17 @@ describe("POST /api/gift/checkout", () => {
       gift: "buy",
       gift_kind: "credit",
       gift_cents: "5000",
-      buyer_name: "Priya",
-      recipient_name: "Sam Lee",
-      recipient_email: "sam@example.com",
       child_name: "Maya",
       message: "Happy birthday, Maya!\nLove, Priya",
-      deliver_on: TODAY,
+      buyer_name: "Priya",
     });
+  });
+
+  it("leaves empty fields out of the metadata", async () => {
+    await post("/api/gift/checkout", { kind: "credit", amountCents: 2900 });
+    const call = stripe.calls.find((c) => c.path === "/v1/checkout/sessions")!;
+    expect(metadataOf(call)).toEqual({ gift: "buy", gift_kind: "credit", gift_cents: "2900" });
+    expect(call.body.get("line_items[0][price_data][product_data][description]")).toBe("$29 to spend on any level. Code never expires.");
   });
 
   it("charges the every-level price from Stripe for the every-level gift", async () => {
@@ -163,34 +167,35 @@ describe("POST /api/gift/checkout", () => {
 });
 
 describe("webhook: creating the gift", () => {
-  it("creates the gift once, emails the buyer a card (no download links), and delivers 'today' right away", async () => {
+  it("creates the gift once and emails only the buyer: receipt, code and the card PDF (no download links)", async () => {
     const { code, session } = await buyGift();
-    expect(gift(code)).toMatchObject({ kind: "all", amount_cents: ALL_CENTS, balance_cents: ALL_CENTS, buyer_email: "buyer@example.com", child_name: "Maya" });
-    expect(gift(code).delivered_at).not.toBeNull();
+    expect(gift(code)).toMatchObject({
+      kind: "all", amount_cents: ALL_CENTS, balance_cents: ALL_CENTS, buyer_email: "buyer@example.com", buyer_name: "Priya", child_name: "Maya",
+      recipient_name: null, recipient_email: null, deliver_on: null, delivered_at: null,
+    });
 
-    const [buyer, recipient] = t.mail.sent;
-    expect(t.mail.sent).toHaveLength(2);
+    expect(t.mail.sent).toHaveLength(1);
+    const [buyer] = t.mail.sent;
     expect(buyer.to).toBe("buyer@example.com");
-    expect(buyer.text).toContain(code);
-    expect(buyer.text).toContain(`/gift/card/${code}`);
-    expect(buyer.text + buyer.html).not.toContain("/orders/");
-
-    expect(recipient.to).toBe("sam@example.com");
-    expect(recipient.from).toEqual({ name: "Paper Lessons", email: "hello@paperlessons.com" });
-    expect(recipient.subject).toBe("Priya sent you a gift from Paper Lessons");
-    expect(recipient.text).toContain("Happy birthday, Maya!");
-    expect(recipient.text).toContain(`/redeem?code=${code}`);
-    expect(recipient.html).toContain("Happy birthday, Maya!<br>Love, Priya");
+    expect(buyer.from).toEqual({ name: "Paper Lessons", email: "hello@paperlessons.com" });
+    expect(buyer.subject).toBe("Your gift card for Maya is ready");
+    for (const body of [buyer.text, buyer.html]) {
+      expect(body).toContain(code);
+      expect(body).toContain("paperlessons.com/redeem");
+      expect(body).not.toContain("/orders/");
+    }
+    expect(buyer.text).toContain("Thank you! You gave Maya every level, ages 3 to 12 ($99).");
+    expect(buyer.text).toContain("Your gift card is attached as a PDF");
 
     // Stripe repeats webhooks: nothing new happens.
     await webhook(session);
     await webhook(session, "checkout.session.async_payment_succeeded");
     expect(count("SELECT COUNT(*) AS n FROM gifts")).toBe(1);
-    expect(t.mail.sent).toHaveLength(2);
+    expect(t.mail.sent).toHaveLength(1);
   });
 
   it("the buyer's return page gets the code even before the webhook, and the webhook then adds nothing", async () => {
-    await post("/api/gift/checkout", { ...FORM, deliverOn: addDays(TODAY, 10) });
+    await post("/api/gift/checkout", FORM);
     const call = stripe.calls.find((c) => c.path === "/v1/checkout/sessions")!;
     const session = paidSession("cs_test_thanksfirst01", metadataOf(call));
     stripe.sessions[session.id] = session;
@@ -199,7 +204,7 @@ describe("webhook: creating the gift", () => {
     expect(code).toMatch(/^\w{4}-\w{4}-\w{4}$/);
     await webhook(session);
     expect(count("SELECT COUNT(*) AS n FROM gifts")).toBe(1);
-    expect(t.mail.sent).toHaveLength(1); // buyer only: delivery is in 10 days
+    expect(t.mail.sent).toHaveLength(1);
   });
 
   it("ignores unpaid sessions, and bad signatures are refused", async () => {
@@ -216,45 +221,22 @@ describe("webhook: creating the gift", () => {
   it("the public gift lookup shows no email addresses or order tokens", async () => {
     const { code } = await buyGift();
     const text = await (await req(`/api/gift/${code.toLowerCase()}`)).text();
-    expect(JSON.parse(text)).toMatchObject({ ok: true, code, kind: "all", recipientName: "Sam Lee", buyerName: "Priya", redeemed: false });
+    const d = JSON.parse(text);
+    expect(d).toMatchObject({ ok: true, code, kind: "all", childName: "Maya", buyerName: "Priya", recipientName: null, redeemed: false });
+    expect(d).not.toHaveProperty("delivery");
+    expect(d).not.toHaveProperty("deliverOn");
     expect(text).not.toMatch(/@example\.com/);
     expect((await req("/api/gift/AAAA-BBBB-CCCC")).status).toBe(404);
   });
 });
 
-describe("delivery scheduling (cron)", () => {
-  it("emails the recipient on the delivery date, once", async () => {
-    const on = addDays(TODAY, 5);
-    const { code } = await buyGift({ ...FORM, deliverOn: on });
-    expect(t.mail.sent.map((m) => m.to)).toEqual(["buyer@example.com"]);
-    expect(gift(code).delivered_at).toBeNull();
-
-    expect(await deliverDueGifts(t.env, addDays(on, -1))).toBe(0);
-    expect(await deliverDueGifts(t.env, on)).toBe(1);
-    expect(t.mail.sent.at(-1)!.to).toBe("sam@example.com");
-    expect(gift(code).delivered_at).not.toBeNull();
-    expect(await deliverDueGifts(t.env, addDays(on, 1))).toBe(0);
-    expect(t.mail.sent).toHaveLength(2);
-  });
-
-  it("tries again the next day if sending failed", async () => {
-    const on = addDays(TODAY, 3);
-    const { code } = await buyGift({ ...FORM, deliverOn: on });
-    t.mail.failNext();
-    expect(await deliverDueGifts(t.env, on)).toBe(0);
-    expect(gift(code).delivered_at).toBeNull();
-    expect(await deliverDueGifts(t.env, addDays(on, 1))).toBe(1);
-    expect(gift(code).delivered_at).not.toBeNull();
-  });
-
-  it("the Worker's scheduled handler delivers what's due today", async () => {
-    await buyGift({ ...FORM, deliverOn: addDays(TODAY, 30) });
-    t.db.prepare("UPDATE gifts SET deliver_on = ?").run(TODAY);
+describe("no scheduled delivery", () => {
+  it("the Worker has no scheduled handler and wrangler.jsonc clears the cron triggers", async () => {
     const { default: worker } = await import("../worker/index");
-    const waits: Promise<unknown>[] = [];
-    await worker.scheduled!({} as ScheduledController, t.env as never, { ...ctx, waitUntil: (p: Promise<unknown>) => waits.push(p) } as never);
-    await Promise.all(waits);
-    expect(t.mail.sent.at(-1)!.to).toBe("sam@example.com");
+    expect("scheduled" in worker).toBe(false);
+    const { readFileSync } = await import("node:fs");
+    const config = readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8");
+    expect(config).toMatch(/"triggers":\s*\{\s*"crons":\s*\[\]\s*\}/);
   });
 });
 

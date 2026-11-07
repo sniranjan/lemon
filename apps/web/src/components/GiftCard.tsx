@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { pauseTracking } from "@/lib/consent";
-import { Gift, Loader2, Printer } from "lucide-react";
+import { Download, Gift, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/Logo";
 import { formatPrice, getGift, type GiftInfo } from "@/lib/catalog";
-import { giftFor } from "@/lib/giftShare";
+import { cardPdfUrl, giftFor } from "@/lib/giftShare";
 import { LEVELS } from "@/data/levels";
 import { cn } from "@/lib/utils";
 
@@ -14,10 +14,9 @@ const MASCOTS = ["chicks", "bunnies", "foxes", "owls", "pandas", "whales"]
   .filter(Boolean) as string[];
 
 /**
- * /gift/card/<code>: the printable gift card, one US Letter page in our paper style. It is also the page the
- * buyer shares, so on screen it greets the recipient with an "Open your gift" button (→ /redeem#CODE). In print
- * only the sheet is printed (the site's header and footer and that greeting are hidden). ?print=1 opens the
- * print dialog straight away (the share page's "Print or save as PDF").
+ * /gift/card/<code>: the gift card on screen, in our paper style, with an "Open your gift" button (→ /redeem#CODE)
+ * and the same card as a PDF to download (worker/giftCard.ts draws it). Printing the page still prints just the
+ * sheet (the site's header and footer and the greeting are hidden).
  */
 export function GiftCard({ code }: { code: string }) {
   const [gift, setGift] = useState<GiftInfo | null | "missing">(null);
@@ -25,13 +24,6 @@ export function GiftCard({ code }: { code: string }) {
     pauseTracking();
     getGift(code).then((g) => setGift(g.ok ? g : "missing"));
   }, [code]);
-  const ready = gift !== null && gift !== "missing";
-  useEffect(() => {
-    if (!ready || new URLSearchParams(location.search).get("print") !== "1") return;
-    history.replaceState(null, "", location.pathname);
-    const t = setTimeout(() => window.print(), 400); // let the fonts and mascots settle first
-    return () => clearTimeout(t);
-  }, [ready]);
 
   if (gift === null) {
     return (
@@ -67,9 +59,11 @@ export function GiftCard({ code }: { code: string }) {
       </div>
 
       <div className="mx-auto mb-4 flex max-w-[816px] flex-wrap items-center justify-between gap-3 print:hidden">
-        <p className="font-semibold text-ink/75">Want it on paper? Print it, or save it as a PDF.</p>
-        <Button variant="paper" size="pill" onClick={() => window.print()}>
-          <Printer className="size-5" /> Print or save as PDF
+        <p className="font-semibold text-ink/75">Want it on paper? Download the card and print it.</p>
+        <Button asChild variant="paper" size="pill">
+          <a href={cardPdfUrl(gift.code)} download>
+            <Download className="size-5" /> Download gift card (PDF)
+          </a>
         </Button>
       </div>
 
@@ -80,11 +74,11 @@ export function GiftCard({ code }: { code: string }) {
 
 /**
  * The card itself. `fixed` draws it at its full 816 × 1056 size whatever the screen (for the scaled-down preview
- * on the share page); otherwise it is fluid on screen and exactly one Letter page in print.
+ * on the thanks page); otherwise it is fluid on screen and exactly one Letter page in print.
  */
 export function GiftSheet({ gift, fixed }: { gift: GiftInfo; fixed?: boolean }) {
   // Long names and messages get smaller type, so the card always stays on one page.
-  // The child's name leads when there is one ("a gift for Maya"); the grown-up's name otherwise; "you" with neither.
+  // "a gift for Maya" (an older gift's grown-up name stands in); "you" with no name.
   const forName = giftFor(gift) ?? "you";
   const nameLen = forName.length;
   const nameSize = nameLen > 34 ? "text-[2.35rem]" : nameLen > 20 ? "text-[2.9rem]" : "text-[3.6rem]";

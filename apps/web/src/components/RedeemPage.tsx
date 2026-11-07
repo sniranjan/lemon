@@ -3,6 +3,7 @@ import { pauseTracking } from "@/lib/consent";
 import { Check, Gift, Loader2, Mail, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatPrice, getGift, longDate, postJson, useCatalog, type GiftInfo } from "@/lib/catalog";
+import { giftFor } from "@/lib/giftShare";
 import { planPayment, quoteCart } from "@/lib/cart";
 import { LEVELS } from "@/data/levels";
 import { cn } from "@/lib/utils";
@@ -12,7 +13,7 @@ const INPUT =
   "h-12 w-full rounded-xl border-[3px] border-ink bg-cream px-4 text-lg font-semibold outline-none placeholder:text-ink/35 focus-visible:ring-4 focus-visible:ring-sky";
 
 /**
- * /redeem (or /redeem?code=…, the link in the gift email): type a code, see the gift, open it.
+ * /redeem (or /redeem?code=…, or /redeem#CODE from the on-screen gift card): type a code, see the gift, open it.
  * Every-level gifts open with one click; a gift amount shops the library with the balance applied.
  */
 export function RedeemPage() {
@@ -90,7 +91,7 @@ function GiftView({ gift, reload }: { gift: GiftInfo; reload: () => void }) {
   return (
     <>
       <div className="sticker relative bg-sun p-6 sm:p-8">
-        <p className="font-hand text-2xl text-coral">a gift for {gift.recipientName || "you"}</p>
+        <p className="font-hand text-2xl text-coral">a gift for {giftFor(gift) ?? "you"}</p>
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
           {gift.kind === "all" ? "Every level, ages 3 to 12" : `${usd(gift.amountCents)} to spend on any level`}
         </h1>

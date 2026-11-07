@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { CalendarDays, Check, Copy, Gift, HandHeart, Link2, Loader2, Mail, Printer, Share2, Sparkles } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Check, Copy, Download, Gift, Loader2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GiftSheet } from "@/components/GiftCard";
-import { addDaysLocal, formatPrice, getGift, localToday, longDate, postJson, useCatalog, type GiftInfo } from "@/lib/catalog";
+import { formatPrice, getGift, postJson, useCatalog, type GiftInfo } from "@/lib/catalog";
 import { pauseTracking } from "@/lib/consent";
-import { cardUrl, giftFor, shareText } from "@/lib/giftShare";
+import { cardPdfUrl, giftFor } from "@/lib/giftShare";
 import { LEVELS } from "@/data/levels";
 import { cn } from "@/lib/utils";
 
@@ -16,14 +16,9 @@ type Form = {
   kind: "all" | "credit";
   amount: number | "other";
   other: string;
-  buyerName: string;
-  recipientName: string;
-  recipientEmail: string;
   childName: string;
   message: string;
-  delivery: "self" | "email";
-  when: "today" | "later";
-  deliverOn: string;
+  buyerName: string;
 };
 
 /** /gift: the gift form. Everything is checked here and again by the Worker before Stripe Checkout. */
@@ -34,21 +29,15 @@ export function GiftPage() {
   const params = new URLSearchParams(location.search);
   const forLevel = LEVELS.find((l) => l.slug === params.get("for"));
   const forPrice = forLevel ? catalog.prices[forLevel.slug]?.cents : undefined;
-  const today = useMemo(localToday, []);
   const levelCents = Object.values(catalog.prices)[0]?.cents;
 
   const [f, setF] = useState<Form>(() => ({
     kind: params.get("kind") === "credit" || forLevel ? "credit" : "all",
     amount: 1900,
     other: "",
-    buyerName: "",
-    recipientName: "",
-    recipientEmail: "",
     childName: "",
     message: "",
-    delivery: "self",
-    when: "today",
-    deliverOn: addDaysLocal(today, 7),
+    buyerName: "",
   }));
   // A level card's "give as a gift": start at that level's price.
   useEffect(() => {
@@ -72,12 +61,9 @@ export function GiftPage() {
     const d = await postJson("/api/gift/checkout", {
       kind: f.kind,
       amountCents,
-      buyerName: f.buyerName,
-      recipientName: f.recipientName,
       childName: f.childName,
       message: f.message,
-      delivery: f.delivery,
-      ...(f.delivery === "email" ? { recipientEmail: f.recipientEmail, deliverOn: f.when === "today" ? today : f.deliverOn } : {}),
+      buyerName: f.buyerName,
     });
     if (d.ok && d.url) return window.location.assign(d.url);
     setError({ field: d.field, message: d.error ?? "Couldn't start checkout." });
@@ -93,8 +79,8 @@ export function GiftPage() {
           <p className="font-hand text-2xl text-coral">for birthdays and holidays</p>
           <h1 className="mt-1 text-balance text-4xl font-bold sm:text-5xl">Give paper lessons</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-ink/80">
-            A gift for another family: printable reading and math pages for kids from 3 to 12. Pass it on yourself
-            with a link or a printed card, or we email it to them on the day you choose.
+            A gift for another family: printable reading and math pages for kids from 3 to 12. You get a gift card
+            to print or send, the moment you pay.
           </p>
         </div>
 
@@ -156,95 +142,37 @@ export function GiftPage() {
           </Step>
 
           <Step n={2} title="Who is it for?">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Their name" hint="Optional." error={bad("recipientName")}>
-                <input value={f.recipientName} onChange={(e) => set("recipientName", e.target.value)} maxLength={60} autoComplete="off" placeholder="Sam" className={INPUT} />
-              </Field>
-              <Field label="Child's first name" hint="Optional. Just the first name." error={bad("childName")}>
+            <div className="sm:max-w-[calc(50%-0.5rem)]">
+              <Field label="Child's first name" hint="Optional" error={bad("childName")}>
                 <input value={f.childName} onChange={(e) => set("childName", e.target.value)} maxLength={30} autoComplete="off" placeholder="Maya" className={INPUT} />
               </Field>
-              <Field label="Your name" hint="Optional. So they know who it's from." error={bad("buyerName")}>
-                <input value={f.buyerName} onChange={(e) => set("buyerName", e.target.value)} maxLength={60} autoComplete="name" placeholder="Priya" className={INPUT} />
-              </Field>
             </div>
-            <p className="mt-3 text-sm font-semibold text-ink/70">All optional. With no names, the card simply says "a gift for you".</p>
+            <p className="mt-3 text-sm font-semibold text-ink/70">Just the first name, for the card. With none, it says "a gift for you".</p>
           </Step>
 
-          <Step n={3} title="Add a message">
-            <Field label="Your message" hint={`Optional · ${[...f.message].length} / ${MESSAGE_MAX}`} error={bad("message")}>
-              <textarea
-                value={f.message}
-                onChange={(e) => set("message", [...e.target.value].slice(0, MESSAGE_MAX).join(""))}
-                rows={4}
-                placeholder="Happy birthday, Maya! A little something for rainy afternoons."
-                className={cn(INPUT, "h-auto resize-y py-3 leading-relaxed")}
-              />
-            </Field>
-          </Step>
-
-          <Step n={4} title="How should they get it?" last>
-            <div className="grid gap-4 sm:grid-cols-2" role="radiogroup" aria-label="How they get the gift">
-              <Choice selected={f.delivery === "self"} onSelect={() => set("delivery", "self")} className="bg-cream">
-                <span className="flex items-center gap-2 text-xl font-bold">
-                  <HandHeart className="size-6 text-coral" /> I'll give it myself
-                </span>
-                <span className="text-[0.95rem] font-semibold text-ink/80">
-                  Send a link by text, WhatsApp or email, or print the card. No need to know their email.
-                </span>
-              </Choice>
-              <Choice selected={f.delivery === "email"} onSelect={() => set("delivery", "email")} className="bg-cream">
-                <span className="flex items-center gap-2 text-xl font-bold">
-                  <Mail className="size-6 text-coral" /> Email it to them
-                </span>
-                <span className="text-[0.95rem] font-semibold text-ink/80">We email them your message and the gift, today or on a day you pick.</span>
-              </Choice>
-            </div>
-            {f.delivery === "self" ? (
-              <p className="mt-3 text-sm font-semibold text-ink/70">
-                You'll get a page and an email with the code and a link to share however you like.
-              </p>
-            ) : (
-              <div className="mt-5 flex flex-col gap-4">
-                <div className="sm:max-w-[calc(50%-0.5rem)]">
-                  <Field label="Their email" hint="We send the gift here." error={bad("recipientEmail")}>
-                    <input type="email" value={f.recipientEmail} onChange={(e) => set("recipientEmail", e.target.value)} maxLength={254} autoComplete="off" placeholder="sam@example.com" className={INPUT} />
-                  </Field>
-                </div>
-                <div>
-            <div className="flex flex-wrap items-center gap-2" role="radiogroup" aria-label="Delivery day">
-              <Chip on={f.when === "today"} onClick={() => set("when", "today")}>
-                <Mail className="size-4" /> Today
-              </Chip>
-              <Chip on={f.when === "later"} onClick={() => set("when", "later")}>
-                <CalendarDays className="size-4" /> Pick a day
-              </Chip>
-              {f.when === "later" && (
-                <input
-                  type="date"
-                  value={f.deliverOn}
-                  min={today}
-                  max={addDaysLocal(today, 90)}
-                  onChange={(e) => set("deliverOn", e.target.value)}
-                  aria-label="Delivery date"
-                  aria-invalid={bad("deliverOn")}
-                  className="cursor-pointer rounded-full border-[3px] border-ink bg-white px-3 py-1 font-extrabold aria-invalid:border-coral"
+          <Step n={3} title="Add a message" last>
+            <div className="flex flex-col gap-4">
+              <Field label="Your message" hint={`Optional · ${[...f.message].length} / ${MESSAGE_MAX}`} error={bad("message")}>
+                <textarea
+                  value={f.message}
+                  onChange={(e) => set("message", [...e.target.value].slice(0, MESSAGE_MAX).join(""))}
+                  rows={4}
+                  placeholder="Happy birthday, Maya! A little something for rainy afternoons."
+                  className={cn(INPUT, "h-auto resize-y py-3 leading-relaxed")}
                 />
-              )}
-            </div>
-            <p className="mt-2 text-sm font-semibold text-ink/70">
-              {f.when === "today"
-                ? "They'll get an email as soon as you've paid."
-                : `They'll get an email on the morning of ${longDate(f.deliverOn)}. Up to 90 days ahead.`}
-            </p>
-                </div>
+              </Field>
+              <div className="sm:max-w-[calc(50%-0.5rem)]">
+                <Field label="From" hint="Optional · your name" error={bad("buyerName")}>
+                  <input value={f.buyerName} onChange={(e) => set("buyerName", e.target.value)} maxLength={60} autoComplete="name" placeholder="Priya" className={INPUT} />
+                </Field>
               </div>
-            )}
+            </div>
           </Step>
 
           <div className="mt-8 flex flex-col items-start gap-3 border-t-2 border-dashed border-ink/25 pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-sm text-sm font-semibold text-ink/70">
-              You'll get a receipt, the gift code and a card to share or print. Gift codes never expire. All sales are final: no refunds, no
-              cash value. <a href="/terms#gifts" className="underline underline-offset-2">Gift terms</a>
+              You'll get a gift card PDF to print or send, right after you pay and by email. Gift codes never expire. All sales are
+              final: no refunds, no cash value. <a href="/terms#gifts" className="underline underline-offset-2">Gift terms</a>
             </p>
             <Button type="submit" variant="coral" size="pill" disabled={busy || !open} className="shrink-0">
               {busy ? <Loader2 className="size-5 animate-spin" /> : <Gift className="size-5" />}
@@ -345,8 +273,8 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
 }
 
 /**
- * /gift/thanks?session_id=…: Stripe's return address for a gift. Waits for the gift, then shows the share kit:
- * the code, the card link (copy / share), a ready-to-paste message, print, and a small preview of the card.
+ * /gift/thanks?session_id=…: Stripe's return address for a gift. Waits for the gift, then shows the card and a
+ * big button to download it as a PDF (the same file the buyer's email carries), and the code to copy.
  * It shows the code, so analytics stay off here (consent.ts onGiftCodePage, index.html).
  */
 export function GiftThanks() {
@@ -418,12 +346,12 @@ async function copyText(text: string): Promise<boolean> {
   }
 }
 
-function CopyButton({ text, label, variant = "paper" }: { text: string; label: string; variant?: "paper" | "coral" | "sun" }) {
+function CopyButton({ text, label }: { text: string; label: string }) {
   const [done, setDone] = useState(false);
   return (
     <Button
       type="button"
-      variant={variant}
+      variant="paper"
       size="pill-sm"
       onClick={async () => {
         if (await copyText(text)) {
@@ -443,106 +371,54 @@ const PREVIEW_W = 250;
 const PREVIEW_SCALE = PREVIEW_W / 816;
 
 function GiftReady({ gift }: { gift: GiftInfo }) {
-  const url = cardUrl(location.origin, gift.code);
-  const message = shareText({ kind: gift.kind, amountCents: gift.amountCents, childName: gift.childName, buyerName: gift.buyerName, code: gift.code, url });
-  const canShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
   const forName = giftFor(gift);
-  const them = gift.recipientName ?? "them";
-  const mailto = `mailto:?subject=${encodeURIComponent("A little gift for you")}&body=${encodeURIComponent(message)}`;
+  const pdf = cardPdfUrl(gift.code);
 
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="mx-auto max-w-3xl">
       <div className="text-center">
         <p className="font-hand text-2xl text-coral">thank you!</p>
-        <h1 className="text-balance text-3xl font-bold leading-tight sm:text-4xl">
-          {forName ? `Your gift for ${forName} is ready` : "Your gift is ready"}
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-lg text-ink/80">
-          {gift.delivery === "email"
-            ? gift.delivered
-              ? `We've emailed ${them} your message and a link to open the gift. You can share it yourself too.`
-              : `We'll email ${them} your message and a link to open the gift on ${longDate(gift.deliverOn!)}. Want to share it sooner? It's all here.`
-            : "It's yours to give: send the link, share the code, or print the card."}{" "}
-          We've emailed you all of this too.
+        <h1 className="text-balance text-3xl font-bold leading-tight sm:text-4xl">Your gift card is ready</h1>
+        <p className="mx-auto mt-3 max-w-xl text-lg text-ink/80">
+          {forName ? `Print it for ${forName}, ` : "Print it "}
+          or send the PDF on by email or text.
         </p>
       </div>
 
-      <div className="mt-8 grid items-start gap-6 md:grid-cols-[1fr_auto]">
-        <div className="sticker flex min-w-0 flex-col gap-6 bg-white p-5 sm:p-7">
+      <div className="sticker mt-8 grid items-center gap-6 bg-white p-5 sm:grid-cols-[auto_1fr] sm:gap-8 sm:p-8">
+        <a
+          href={pdf}
+          aria-label="Download the gift card (PDF)"
+          className="mx-auto block overflow-hidden rounded-[0.6rem] transition-transform hover:-translate-y-0.5"
+          style={{ width: PREVIEW_W + 4, height: 1056 * PREVIEW_SCALE + 4 }}
+        >
+          <div aria-hidden="true" style={{ width: 816, transform: `scale(${PREVIEW_SCALE})`, transformOrigin: "top left" }}>
+            <GiftSheet gift={gift} fixed />
+          </div>
+        </a>
+
+        <div className="flex min-w-0 flex-col gap-6">
+          <Button asChild variant="coral" size="pill" className="w-full sm:w-auto sm:self-start">
+            <a href={pdf} download>
+              <Download className="size-5" /> Download gift card (PDF)
+            </a>
+          </Button>
+
           <div className="rounded-2xl border-[3px] border-dashed border-ink bg-cream p-5 text-center">
             <p className="text-sm font-extrabold uppercase tracking-wide text-ink/60">Gift code</p>
-            <p className="mt-1 font-display text-[1.5rem] font-bold leading-tight tracking-[0.08em] whitespace-nowrap min-[400px]:text-[1.75rem] sm:text-[2.6rem] sm:tracking-[0.1em]">{gift.code}</p>
+            <p className="mt-1 font-display text-[1.5rem] font-bold leading-tight tracking-[0.08em] whitespace-nowrap min-[400px]:text-[1.75rem] sm:text-[2rem] sm:tracking-[0.1em]">{gift.code}</p>
             <div className="mt-3 flex justify-center">
               <CopyButton text={gift.code} label="Copy code" />
             </div>
+            <p className="mt-3 text-sm font-semibold text-ink/65">They open it at paperlessons.com/redeem. It never expires.</p>
           </div>
 
-          <div>
-            <p className="flex items-center gap-2 font-extrabold">
-              <Link2 className="size-5 text-coral" /> Share link
-            </p>
-            <p className="mt-1 text-sm font-semibold text-ink/65">Their gift card, with a button to open it.</p>
-            <p className="mt-2 rounded-xl border-[3px] border-ink bg-cream px-4 py-2.5 font-semibold break-all">{url}</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              <CopyButton text={url} label="Copy link" variant="sun" />
-              {canShare && (
-                <Button
-                  type="button"
-                  variant="coral"
-                  size="pill-sm"
-                  onClick={() => navigator.share({ title: "A little gift for you", text: message }).catch(() => {})}
-                >
-                  <Share2 className="size-4" /> Share
-                </Button>
-              )}
-              <Button asChild variant="paper" size="pill-sm">
-                <a href={mailto}>
-                  <Mail className="size-4" /> Email it
-                </a>
-              </Button>
-            </div>
-          </div>
+          <p className="font-semibold text-ink/75">We've emailed it to you too, with your receipt.</p>
 
-          <div>
-            <p className="font-extrabold">Ready to paste</p>
-            <p className="mt-1 text-sm font-semibold text-ink/65">Send it by text, WhatsApp or email, or change it to your own words.</p>
-            <blockquote className="mt-2 -rotate-[0.5deg] rounded-2xl border-[3px] border-ink bg-white px-4 py-3 leading-relaxed shadow-[4px_4px_0_0_var(--ink)]">
-              {message}
-            </blockquote>
-            <div className="mt-3">
-              <CopyButton text={message} label="Copy message" />
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-3 border-t-2 border-dashed border-ink/25 pt-5">
-            <Button asChild variant="coral" size="pill">
-              <a href={`/gift/card/${gift.code}?print=1`} target="_blank" rel="noopener">
-                <Printer className="size-5" /> Print or save as PDF
-              </a>
-            </Button>
-            <Button asChild variant="paper" size="pill">
-              <a href="/gift">
-                <Sparkles className="size-5" /> Give another
-              </a>
-            </Button>
-          </div>
-        </div>
-
-        <figure className="mx-auto flex flex-col items-center gap-2 md:sticky md:top-24">
-          <a
-            href={`/gift/card/${gift.code}`}
-            target="_blank"
-            rel="noopener"
-            aria-label="Open the gift card"
-            className="block overflow-hidden rounded-[0.6rem] transition-transform hover:-translate-y-0.5"
-            style={{ width: PREVIEW_W + 4, height: 1056 * PREVIEW_SCALE + 4 }}
-          >
-            <div aria-hidden="true" style={{ width: 816, transform: `scale(${PREVIEW_SCALE})`, transformOrigin: "top left" }}>
-              <GiftSheet gift={gift} fixed />
-            </div>
+          <a href="/gift" className="inline-flex items-center gap-1.5 self-start font-extrabold text-ink/80 underline-offset-4 hover:text-coral hover:underline">
+            <Sparkles className="size-4 text-coral" /> Give another
           </a>
-          <figcaption className="text-sm font-bold text-ink/65">What they'll see</figcaption>
-        </figure>
+        </div>
       </div>
     </div>
   );

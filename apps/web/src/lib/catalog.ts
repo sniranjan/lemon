@@ -65,12 +65,9 @@ export type GiftInfo = {
   heldCents: number; // part of the balance an open checkout will use (a new checkout closes that one)
   currency: string;
   buyerName: string | null;
-  recipientName: string | null;
+  recipientName: string | null; // older gifts only (a grown-up's name; the card falls back to it)
   childName: string | null;
   message: string | null;
-  delivery: "self" | "email"; // self = the buyer passes it on (no email, no date)
-  deliverOn: string | null;
-  delivered: boolean;
   redeemed: boolean;
   orders: { name: string; createdAt: string; expiresAt: string; expired: boolean; centsUsed: number }[];
 };
@@ -96,17 +93,6 @@ export async function getGift(code: string): Promise<GiftInfo | { ok: false; err
   } catch {
     return { ok: false, error: OFFLINE };
   }
-}
-
-const ymd = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-
-/** Today in the visitor's own time zone, YYYY-MM-DD (what a date input expects). */
-export const localToday = () => ymd(new Date());
-
-export function addDaysLocal(iso: string, days: number): string {
-  const d = new Date(`${iso}T12:00:00`);
-  d.setDate(d.getDate() + days);
-  return ymd(d);
 }
 
 /** "2026-11-20" or "2026-11-13 14:41:14" (UTC, from D1) → "November 20, 2026". */

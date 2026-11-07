@@ -85,7 +85,14 @@ export function makeR2(keys: string[]) {
   return r2 as unknown as R2Bucket;
 }
 
-export type Sent = { from: { name: string; email: string }; to: string; subject: string; text: string; html: string };
+export type Sent = {
+  from: { name: string; email: string };
+  to: string;
+  subject: string;
+  text: string;
+  html: string;
+  attachments?: { disposition: string; filename: string; type: string; content: Uint8Array }[];
+};
 
 export function makeMailer() {
   const sent: Sent[] = [];
