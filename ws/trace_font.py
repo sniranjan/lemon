@@ -53,10 +53,6 @@ GAP = 36          # between letters in a word
 REPEAT_GAP = 46   # between copies of a letter in a practice row
 
 
-def has_glyph(ch: str) -> bool:
-    return ch in GLYPHS
-
-
 def missing_glyphs(text: str) -> list[str]:
     return sorted({ch for ch in text if ch != " " and ch not in GLYPHS})
 

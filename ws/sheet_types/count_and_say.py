@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import NUMBER_WORDS, error, new_numbers, pick_numbers, pick_objects
+from ._common import NUMBER_WORDS, error, new_numbers, page_rules, pick_numbers, pick_objects
 
 ROWS = 3
 
@@ -17,9 +17,7 @@ def count_rows(ctx: GenContext, rows: int = ROWS) -> list[dict]:
 
 
 def check_counts(sheet: Sheet) -> list[Issue]:
-    from ..syllabus import load_level, resolve_page
-
-    rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+    rules = page_rules(sheet)
     issues = []
     for item in sheet.items:
         if not rules["min"] <= item["n"] <= rules["max"]:

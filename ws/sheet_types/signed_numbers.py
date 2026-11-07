@@ -26,7 +26,7 @@ from fractions import Fraction
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _signed_ops
-from ._common import error
+from ._common import error, page_rules
 from ._rational import fmt, parse, show
 
 LINES, FACTS = 5, 12
@@ -147,9 +147,7 @@ class SignedNumbers(SheetType):
                             answer_key=[i["answer"] for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if _signed_ops.is_operations(r):
             return _signed_ops.verify(sheet)
         lo, hi = r["range"]

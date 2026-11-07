@@ -12,13 +12,11 @@ from ..content import phonics
 from ..models import Issue, Sheet
 from ..spelling import gapped, pattern_letters, pattern_span
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 
 def _rules(sheet: Sheet) -> dict:
-    from ..syllabus import load_level, resolve_page
-
-    return resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+    return page_rules(sheet)
 
 
 @register("pattern_words")

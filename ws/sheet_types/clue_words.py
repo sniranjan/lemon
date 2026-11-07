@@ -12,7 +12,7 @@ from __future__ import annotations
 from ..models import Issue, Sheet
 from ..passages import build_passage_items, check_passage_sheet, find_phrase
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 WRITE_LINES = 2
 
@@ -41,8 +41,6 @@ class ClueWords(SheetType):
         return SheetContent(title=title, parent_tip=ctx.tip(self.name), items=items, answer_key=key)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         msgs = check_passage_sheet(sheet, WRITE_LINES) + marks_problems(sheet, rules)
         return [error(sheet, m) for m in msgs]

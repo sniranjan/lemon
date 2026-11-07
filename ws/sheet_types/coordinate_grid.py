@@ -24,7 +24,7 @@ from __future__ import annotations
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _lines
-from ._common import error
+from ._common import error, page_rules
 from ._slope_lines import Lines
 from ._systems import Systems
 from ._rational import show
@@ -64,9 +64,7 @@ def answer_for(i: dict) -> str:
 
 
 def _mode(sheet: Sheet) -> str | None:
-    from ..syllabus import load_level, resolve_page
-
-    return resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules.get("mode")
+    return page_rules(sheet).get("mode")
 
 
 MODES = {"lines": Lines, "systems": Systems}
@@ -145,9 +143,7 @@ class CoordinateGrid(SheetType):
     def verify(self, sheet: Sheet) -> list[Issue]:
         if _mode(sheet) in MODES:
             return MODES[_mode(sheet)]().verify(sheet)
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if "graphs" in r:
             return _lines.verify_graphs(sheet, r)
         R = r.get("range", 6)

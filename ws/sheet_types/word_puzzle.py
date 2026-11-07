@@ -14,7 +14,7 @@ from ..content import grammar, vocab_by_word
 from ..models import Issue, Sheet
 from ..reading import VOWELS, crossword_grid
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 
 @register("word_puzzle")
@@ -45,9 +45,7 @@ class WordPuzzle(SheetType):
                             review_words=list(entry.review_words))
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         allowed = set(grammar()["puzzle_words"])
         lo, hi = rules["word_length"]
         bank = vocab_by_word()

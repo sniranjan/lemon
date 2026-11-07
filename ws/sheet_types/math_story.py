@@ -13,7 +13,7 @@ from __future__ import annotations
 from ..content import math_objects, math_stories
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from .column_arithmetic import SIGN, answer, problem_ok
 
 STORIES = 3
@@ -60,9 +60,7 @@ class MathStory(SheetType):
                             answer_key=[sentence(i["op"], i["a"], i["b"]) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         frames = math_stories()["frames"]
         issues, answers = [], []
         if len(sheet.items) != r.get("stories", STORIES):

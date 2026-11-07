@@ -23,7 +23,7 @@ from fractions import Fraction
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _tidy
-from ._common import error
+from ._common import error, page_rules
 from ._rational import evaluate, pretty
 
 MAX_TRIES = 3000
@@ -192,10 +192,9 @@ class ExpressionEval(SheetType):
                             answer_key=[i["answer"] for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
         from ..verify import banned_words
 
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if _tidy.is_tidy(r):
             return _tidy.verify(sheet, r)
         task = r["task"]

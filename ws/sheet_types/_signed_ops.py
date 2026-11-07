@@ -32,7 +32,7 @@ from fractions import Fraction
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent
-from ._common import error
+from ._common import error, page_spec
 from ._linear import compute, decimal_places, decimal_text, fmt, page_index, parse, repeating, show, show_fact, tokens
 
 COUNTS = {"line": 6, "grid": 12, "pattern": 6, "chain": 8, "convert": 8}
@@ -267,9 +267,7 @@ def generate(ctx: GenContext, name: str) -> SheetContent:
 
 
 def verify(sheet: Sheet) -> list[Issue]:
-    from ..syllabus import load_level, resolve_page
-
-    spec = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number)
+    spec = page_spec(sheet)
     spec = spec.model_copy(update={"sheet_type": sheet.sheet_type})
     r, layout = page_rules(spec)
     issues: list[Issue] = []

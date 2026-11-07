@@ -14,7 +14,7 @@ import re
 from ..models import Issue, Sheet
 from ..passages import build_passage_items, check_passage_sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 WRITE_LINES = 2
 _TARGET = re.compile(r"\bparagraph \d\b|\bwhole (passage|article|story)\b", re.I)
@@ -29,9 +29,7 @@ class ParagraphSummary(SheetType):
         return SheetContent(title=title, parent_tip=ctx.tip(self.name), items=items, answer_key=key)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         msgs = check_passage_sheet(sheet, WRITE_LINES)
         head = sheet.items[0] if sheet.items else {}
         n = rules.get("paragraphs", 3)

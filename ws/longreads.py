@@ -28,11 +28,11 @@ from __future__ import annotations
 import re
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, model_validator
+from pydantic import model_validator
 
-from .content import level_passages
-from .models import Level
-from .passages import BRITISH, LETTERS, MAX_ASK, MAX_CHOICE
+from .content import find_by_id, level_passages
+from .models import Level, StrictModel
+from .passages import BRITISH, LETTERS, MAX_ASK, MAX_CHOICE, Question, question_items  # noqa: F401 (question_items re-exported)
 from .plan import LevelPlan, PagePlan
 from .readability import fk_grade, words
 
@@ -41,41 +41,22 @@ MAX_STEP = 26           # characters in one diagram box
 HEADING = "## "
 
 
-class _Strict(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-
-class LRQuestion(_Strict):
-    ask: str
-    choices: list[str] | None = None
-    sample: str | None = None
-    starter: str | None = None
+class LRQuestion(Question):
+    """A passages.Question (3 choices or a sample answer) whose evidence may be several quotes."""
     evidence: str | list[str]
-
-    @model_validator(mode="after")
-    def _one_kind(self) -> LRQuestion:
-        if (self.choices is None) == (self.sample is None):
-            raise ValueError(f"question {self.ask!r} needs either choices or a sample answer")
-        if self.choices is not None and (len(self.choices) != 3 or len(set(self.choices)) != 3):
-            raise ValueError(f"question {self.ask!r} needs 3 different choices")
-        return self
-
-    @property
-    def kind(self) -> str:
-        return "mc" if self.choices else "write"
 
     @property
     def quotes(self) -> list[str]:
         return [self.evidence] if isinstance(self.evidence, str) else list(self.evidence)
 
 
-class LRSet(_Strict):
+class LRSet(StrictModel):
     focus: str
     targets: list[str] = []
     questions: list[LRQuestion]
 
 
-class Figure(_Strict):
+class Figure(StrictModel):
     kind: Literal["steps", "cycle", "table", "bars", "timeline"]
     title: str
     caption: str
@@ -107,13 +88,13 @@ class Figure(_Strict):
                 *(c for r in self.rows or [] for c in r), self.unit or ""]
 
 
-class SubText(_Strict):
+class SubText(StrictModel):
     title: str
     text: str
     kind: str = "article"      # article, journal, letter, interview, story: shown under the title
 
 
-class LongRead(_Strict):
+class LongRead(StrictModel):
     id: str
     title: str
     kind: Literal["story", "article"] = "story"
@@ -172,10 +153,7 @@ def section_reads(level: str, section: str) -> list[LongRead]:
 
 
 def read_by_id(level: str, section: str, rid: str) -> LongRead:
-    for p in section_reads(level, section):
-        if p.id == rid:
-            return p
-    raise KeyError(f"no read {rid!r} in content/passages/{level}/{section}.yaml")
+    return find_by_id(section_reads(level, section), rid, "read", level, section)
 
 
 # --- content checks -----------------------------------------------------------------------
@@ -330,26 +308,6 @@ def head_item(p: LongRead, k, targets: list[str] | None = None) -> dict:
     if targets:
         item["targets"] = list(targets)
     return item
-
-
-def question_items(ctx, qs: list[LRQuestion], lines: int) -> tuple[list[dict], list[str]]:
-    items, key = [], []
-    starters = ctx.rules.get("starters", True)
-    for n, q in enumerate(qs, start=1):
-        if q.kind == "mc":
-            order = list(range(3))
-            ctx.rng.shuffle(order)
-            right = LETTERS[order.index(0)]
-            items.append({"kind": "mc", "n": n, "ask": q.ask, "choices": [q.choices[i] for i in order],
-                          "answer": right})
-            key.append(f"{n}. {right} ({q.choices[0]})")
-        else:
-            item = {"kind": "write", "n": n, "ask": q.ask, "lines": lines}
-            if q.starter and starters:
-                item["starter"] = q.starter
-            items.append(item)
-            key.append(f"{n}. Sample: {q.sample}")
-    return items, key
 
 
 def planned_read(ctx) -> tuple[LongRead, object]:

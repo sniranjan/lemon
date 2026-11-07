@@ -10,7 +10,7 @@ from ..content import vocab_by_word
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ..trace_font import andika_has, missing_glyphs
-from ._common import error
+from ._common import error, page_rules
 
 
 @register("word_trace")
@@ -25,9 +25,7 @@ class WordTrace(SheetType):
                             new_words=list(entry.new_words), review_words=list(entry.review_words))
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         issues = []
         if len(sheet.items) != rules.get("trace_words", 3):
             issues.append(error(sheet, f"expected {rules.get('trace_words', 3)} words, got {len(sheet.items)}"))

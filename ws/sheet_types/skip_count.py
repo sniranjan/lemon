@@ -13,17 +13,9 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules, separate_gaps
 
 SHOWN_AT_START = 2
-
-
-def _gap_positions(ctx: GenContext, length: int, gaps: int) -> list[int]:
-    for _ in range(1000):
-        picked = sorted(ctx.rng.sample(range(SHOWN_AT_START, length), gaps))
-        if all(b - a > 1 for a, b in zip(picked, picked[1:])):
-            return picked
-    raise ValueError(f"skip_count: can't place {gaps} separate gaps in {length} boxes")
 
 
 def starts(step: int, lo: int, hi: int, length: int) -> list[int]:
@@ -49,16 +41,14 @@ class SkipCount(SheetType):
             s = rng.choice(options)
             used.add((step, s))
             items.append({"kind": "skip", "step": step, "cells": [s + step * i for i in range(length)],
-                          "gaps": _gap_positions(ctx, length, gaps)})
+                          "gaps": separate_gaps(ctx.rng, SHOWN_AT_START, length, gaps, "skip_count: ")})
         answers = [i["cells"][g] for i in items for g in i["gaps"]]
         names = " and ".join(f"{s}s" for s in steps)
         return SheetContent(title=f"Count by {names}", parent_tip=ctx.tip(self.name), items=items,
                             answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         steps, lo, hi = r["steps"], r["min"], r["max"]
         length, gaps = r.get("length", 8), r["gaps"]
         issues, answers = [], []

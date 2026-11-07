@@ -329,6 +329,15 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   internal codes in PDF text. Free preview pages 101–102 and 171–172 (two whole spreads): `ws preview whales` builds `out/previews/whales.pdf`
   (10 pages; not uploaded).
 
+- **Code cleanup (2026-11-06).** Removed duplicate code left by the parallel builds:
+  - a shared exact-number core (`ws/sheet_types/_numbers.py`);
+  - `_common` page-rules, part-offset, nonzero and gap helpers (60 inline rule lookups gone);
+  - one strict model, question base and by-id/paragraph helpers for the reading loaders;
+  - six dead functions removed.
+  No sheet type was renamed or merged; CLAUDE.md §7 "Shared helpers" says which look-alike pairs stay
+  separate and why. All 10,800 sheets (every level, variants 1 and 2) were regenerated before and
+  after: JSON and HTML are byte-identical, verify results are unchanged, and pytest passes.
+
 ## Next steps
 1. Chicks word bank: done (batch 5, 2026-11-06). New words in later levels: plural words go in `plural:` in
    `content/phrases/english.yaml` (stories and phrases then avoid "... is ...").

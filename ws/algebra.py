@@ -19,7 +19,9 @@ import re
 from dataclasses import dataclass
 from fractions import Fraction
 
-MINUS = "−"
+from .sheet_types._numbers import MINUS
+from .sheet_types._numbers import fmt as _frac_text   # 3, -1/2
+from .sheet_types._numbers import show as _signed     # −1/2
 SUP = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
 
 Monomial = tuple[tuple[str, int], ...]   # sorted (variable, exponent) pairs; () is the constant term
@@ -134,10 +136,6 @@ class Poly:
         return "".join(parts)
 
 
-def _frac_text(f: Fraction) -> str:
-    return str(f.numerator) if f.denominator == 1 else f"{f.numerator}/{f.denominator}"
-
-
 # --- parser ------------------------------------------------------------------------------
 
 _TOKEN = re.compile(r"\s*(?:(\d+)|([a-z])|(.))")
@@ -225,11 +223,6 @@ _RADICAL = re.compile(r"R\((\d)\|([^()|]*(?:\([^()]*\)[^()|]*)*)\)")
 _ROOT_SIGN = {2: "√", 3: "∛", 4: "∜"}
 
 
-def radical(n: int, body: str) -> str:
-    """The ASCII markup for an n-th root: radical(2, "2x") = 'R(2|2x)'."""
-    return f"R({n}|{body})"
-
-
 def pretty(s: str) -> str:
     """ASCII → reader text: '-' → '−', '^12' → '¹²', '*' → '·', rational exponents '^(2/3)' → '²⁄³',
     roots 'R(2|72)' → '√72', 'R(3|2x)' → '∛(2x)'."""
@@ -283,11 +276,6 @@ class Mono:
     def from_json(cls, d: dict) -> Mono:
         """{"c": "3", "x": "2", "y": "-1/2"} → 3x²y^(−1/2)."""
         return cls.make(Fraction(d.get("c", "1")), {v: Fraction(x) for v, x in d.items() if v != "c"})
-
-    def to_json(self) -> dict:
-        out = {"c": _frac_text(self.coeff)}
-        out.update({v: _frac_text(e) for v, e in self.exps})
-        return out
 
     def __mul__(self, o: Mono) -> Mono:
         e = dict(self.exps)
@@ -452,12 +440,3 @@ def roots_text(roots: list[QRoot], var: str = "x") -> str:
     if r.s == 1:
         return f"{var} = {core}"
     return f"{var} = ({core})/{r.s}" if r.p else f"{var} = {core}/{r.s}"
-
-
-def _signed(f: Fraction) -> str:
-    return _frac_text(f).replace("-", MINUS)
-
-
-def fmt_int(n: int) -> str:
-    """A whole number with a real minus sign."""
-    return str(n).replace("-", MINUS)

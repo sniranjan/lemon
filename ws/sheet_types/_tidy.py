@@ -24,7 +24,7 @@ from math import gcd
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent
-from ._common import error
+from ._common import error, nonzero_draw
 from ._linear import MINUS, Lin, fmt, fmt_lin, lin, read_lin, tokens
 
 TEMPLATE = "expression_eval_tidy.html.j2"
@@ -87,46 +87,39 @@ def answer_for(task: str, src: str) -> str:
     return fmt_lin(lin(src), style_for(task))
 
 
-def _nz(rng, lo: int, hi: int, avoid=(0,)) -> int:
-    while True:
-        k = rng.randint(lo, hi)
-        if k not in avoid:
-            return k
-
-
 def _make(rng, task: str, n: int, r: dict) -> str | None:
     lo, hi = r["coef_range"]
     v = rng.choice(LETTERS)
     if task == "combine":
         if n % 2 == 0:
             v1, v2 = rng.choice(PAIRS)
-            terms = [_term(_nz(rng, lo, hi), v1), _term(_nz(rng, lo, hi), v2),
-                     _term(_nz(rng, lo, hi), v1), _term(_nz(rng, lo, hi), v2)]
+            terms = [_term(nonzero_draw(rng, lo, hi), v1), _term(nonzero_draw(rng, lo, hi), v2),
+                     _term(nonzero_draw(rng, lo, hi), v1), _term(nonzero_draw(rng, lo, hi), v2)]
         else:
-            terms = [_term(_nz(rng, lo, hi), v), _term(_nz(rng, lo, hi)),
-                     _term(_nz(rng, lo, hi), v), _term(_nz(rng, lo, hi))]
+            terms = [_term(nonzero_draw(rng, lo, hi), v), _term(nonzero_draw(rng, lo, hi)),
+                     _term(nonzero_draw(rng, lo, hi), v), _term(nonzero_draw(rng, lo, hi))]
         rng.shuffle(terms)
         src = join(terms)
     elif task == "expand":
-        k = _nz(rng, lo, hi, (0, 1))
-        p, q = _nz(rng, 1, 9), _nz(rng, -9, 9)
+        k = nonzero_draw(rng, lo, hi, (0, 1))
+        p, q = nonzero_draw(rng, 1, 9), nonzero_draw(rng, -9, 9)
         inner = join([_term(p, v), _term(q)])
         src = f"-({inner})" if k == -1 else f"{k}*({inner})"
     elif task == "expand_combine":
-        k = _nz(rng, lo, hi, (0, 1, -1))
-        p, q = _nz(rng, 1, 5), _nz(rng, -9, 9)
-        m, c = _nz(rng, lo, hi), _nz(rng, -9, 9)
+        k = nonzero_draw(rng, lo, hi, (0, 1, -1))
+        p, q = nonzero_draw(rng, 1, 5), nonzero_draw(rng, -9, 9)
+        m, c = nonzero_draw(rng, lo, hi), nonzero_draw(rng, -9, 9)
         src = join([f"{k}*({join([_term(p, v), _term(q)])})", _term(m, v), _term(c)])
     elif task == "factor":
         g = rng.randint(2, 9)
-        p, q = rng.randint(1, 9), _nz(rng, -9, 9)
+        p, q = rng.randint(1, 9), nonzero_draw(rng, -9, 9)
         if gcd(p, abs(q)) != 1:
             return None
         src = join([_term(g * p, v), _term(g * q)])
     elif task == "fractions":
         def frac():
             d = rng.choice(FRACTION_DENS)
-            return Fraction(_nz(rng, -d * 2 + 1, d * 2 - 1), d)
+            return Fraction(nonzero_draw(rng, -d * 2 + 1, d * 2 - 1), d)
         a, b, c = frac(), frac(), frac()
         if a.denominator == 1 or b.denominator == 1 or c.denominator == 1:
             return None

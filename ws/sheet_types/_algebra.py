@@ -17,7 +17,8 @@ from __future__ import annotations
 from fractions import Fraction
 from math import isqrt
 
-MINUS = "−"
+from . import _numbers
+from ._numbers import MINUS
 
 
 def q(value) -> Fraction:
@@ -26,13 +27,12 @@ def q(value) -> Fraction:
 
 def fstr(value) -> str:
     """Fraction → "3" or "-1/2" (how numbers are stored)."""
-    v = q(value)
-    return str(v.numerator) if v.denominator == 1 else f"{v.numerator}/{v.denominator}"
+    return _numbers.fmt(q(value))
 
 
 def show(value) -> str:
     """Fraction → printed plain text with a real minus sign: "−1/2"."""
-    return fstr(value).replace("-", MINUS)
+    return _numbers.show(q(value))
 
 
 def merge(tokens: list) -> list:
@@ -44,16 +44,6 @@ def merge(tokens: list) -> list:
         elif t != "":
             out.append(t)
     return out
-
-
-def number_tokens(value, stacked: bool = True) -> list:
-    """A number with its sign; a non-whole one as a stacked fraction (or "n/d" if not `stacked`)."""
-    v = q(value)
-    sign = MINUS if v < 0 else ""
-    a = abs(v)
-    if a.denominator == 1:
-        return [sign + str(a.numerator)]
-    return merge([sign, {"f": [a.numerator, a.denominator]}]) if stacked else [sign + f"{a.numerator}/{a.denominator}"]
 
 
 def text(tokens: list) -> str:

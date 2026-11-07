@@ -42,3 +42,48 @@ def pick_objects(rng: random.Random, count: int) -> list[dict]:
 
 def error(sheet: Sheet, message: str) -> Issue:
     return Issue(sheet_id=sheet.id, severity="error", message=message)
+
+
+def page_spec(sheet: Sheet):
+    """The syllabus page a stored sheet was built for (verify re-reads its merged rules)."""
+    from ..syllabus import load_level, resolve_page
+
+    return resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number)
+
+
+def page_rules(sheet: Sheet) -> dict:
+    """The merged level → section → part rules of a stored sheet's page."""
+    return page_spec(sheet).rules
+
+
+def part_offset(subject: str, level: str, page: int) -> int:
+    """How many pages come before this one in its part (or section, if it has no parts); layouts
+    and mixes cycle from the part's first page."""
+    from ..syllabus import load_level
+
+    sec = load_level(subject, level).section_for_page(page)
+    part = sec.part_for_page(page)
+    return page - (part.pages if part else sec.pages)[0]
+
+
+def separate_gaps(rng: random.Random, first: int, length: int, gaps: int, who: str = "") -> list[int]:
+    """`gaps` sorted box positions in first…length−1, no two side by side (number tracks)."""
+    for _ in range(1000):
+        picked = sorted(rng.sample(range(first, length), gaps))
+        if all(b - a > 1 for a, b in zip(picked, picked[1:])):
+            return picked
+    raise ValueError(f"{who}can't place {gaps} separate gaps in {length} boxes")
+
+
+def nonzero_draw(rng: random.Random, lo: int, hi: int, avoid=(0,)) -> int:
+    """randint(lo, hi) again until it misses `avoid` (draws a varying number of times)."""
+    while True:
+        k = rng.randint(lo, hi)
+        if k not in avoid:
+            return k
+
+
+def nonzero_choice(rng: random.Random, lo: int, hi: int) -> int:
+    """One draw: a choice from lo…hi without 0. Not interchangeable with `nonzero_draw`: the two
+    use the RNG differently, so swapping them changes every later number on the page."""
+    return rng.choice([k for k in range(lo, hi + 1) if k])

@@ -35,7 +35,7 @@ from math import gcd, lcm
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from ._exact import as_mixed, frac_str, is_simplest, operand, value
 
 PROBLEMS = 8
@@ -283,9 +283,7 @@ class FractionOps(SheetType):
         return issues
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if r["op"] == "div":
             return self._verify_divide(sheet, r)
         issues: list[Issue] = []

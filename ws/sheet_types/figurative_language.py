@@ -17,7 +17,7 @@ from ..content import figurative
 from ..models import Issue, Sheet
 from ..passages import Passage, build_passage_items, check_passage_sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from .clue_words import marks_problems
 
 WRITE_LINES = 2
@@ -70,9 +70,7 @@ class FigurativeLanguage(SheetType):
 
     def verify(self, sheet: Sheet) -> list[Issue]:
         from ..passages import passage_by_id
-        from ..syllabus import load_level, resolve_page
-
-        rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        rules = page_rules(sheet)
         msgs = check_passage_sheet(sheet, WRITE_LINES) + marks_problems(sheet, rules)
         if not msgs:
             p = passage_by_id(sheet.level, rules["passages"], sheet.items[0]["passage"])

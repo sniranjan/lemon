@@ -18,7 +18,7 @@ from decimal import Decimal
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._algebra import MINUS
-from ._common import error
+from ._common import error, page_rules
 
 PROBLEMS = 8
 OPS = ("multiply", "divide", "times_bigger")
@@ -123,9 +123,7 @@ class SciNotation(SheetType):
                             answer_key=[answer(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         n = r.get("problems", PROBLEMS)
         if len(sheet.items) != n:

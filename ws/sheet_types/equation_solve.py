@@ -23,7 +23,7 @@ from fractions import Fraction
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
 from . import _two_step
-from ._common import error
+from ._common import error, page_rules
 from ._multi_step import MultiStep
 from ._rational import fmt, parse
 
@@ -64,9 +64,7 @@ def answer_text(i: dict) -> str:
 
 
 def _mode(sheet: Sheet) -> str | None:
-    from ..syllabus import load_level, resolve_page
-
-    return resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules.get("mode")
+    return page_rules(sheet).get("mode")
 
 
 MODES = {"multi_step": MultiStep}
@@ -127,9 +125,7 @@ class EquationSolve(SheetType):
     def verify(self, sheet: Sheet) -> list[Issue]:
         if _mode(sheet) in MODES:
             return MODES[_mode(sheet)]().verify(sheet)
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         if _two_step.is_two_step(r):
             return _two_step.verify(sheet, r)
         items = sheet.items

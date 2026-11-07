@@ -18,7 +18,7 @@ import random
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 TASKS = ("pairs", "multiples", "circle", "prime")
 MULTIPLES_COUNT = 8
@@ -112,9 +112,7 @@ class FactorPairs(SheetType):
                             answer_key=[answer_text(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         lo, hi = r["numbers"]
         if [i["kind"] for i in sheet.items] != list(r["tasks"]):

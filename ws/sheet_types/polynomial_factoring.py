@@ -23,7 +23,7 @@ import re
 from ..algebra import Poly, parse, pretty
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, nonzero_choice, page_rules
 
 ITEMS = 8
 _SPLIT = re.compile(r"^([^()]*)((?:\([^()]*\)(?:\^\d)?)+)$")
@@ -89,10 +89,6 @@ def problems(f: Poly) -> list[str]:
     return out
 
 
-def _nz(rng, lo, hi):
-    return rng.choice([k for k in range(lo, hi + 1) if k])
-
-
 def choose(kind: str, rng, r: dict) -> tuple[Poly, list[Poly]]:
     lo, hi = r.get("root", [-9, 9])
     x = Poly.var("x")
@@ -102,14 +98,14 @@ def choose(kind: str, rng, r: dict) -> tuple[Poly, list[Poly]]:
         while True:
             if kind == "gcf2":
                 k = rng.randint(1, 2)
-                inner = Poly({(("x", k),): rng.randint(1, 9), (): _nz(rng, -9, 9)})
+                inner = Poly({(("x", k),): rng.randint(1, 9), (): nonzero_choice(rng, -9, 9)})
             else:
-                inner = Poly({(("x", 2),): rng.randint(1, 5), (("x", 1),): _nz(rng, -7, 7), (): _nz(rng, -7, 7)})
+                inner = Poly({(("x", 2),): rng.randint(1, 5), (("x", 1),): nonzero_choice(rng, -7, 7), (): nonzero_choice(rng, -7, 7)})
             if not problems(inner):
                 return gcf, [inner]
     if kind in ("monic", "monic_gcf"):
         while True:
-            p, q = _nz(rng, lo, hi), _nz(rng, lo, hi)
+            p, q = nonzero_choice(rng, lo, hi), nonzero_choice(rng, lo, hi)
             if p + q != 0:
                 break
         gcf = Poly.const(rng.randint(2, 5) if kind == "monic_gcf" else 1)
@@ -117,7 +113,7 @@ def choose(kind: str, rng, r: dict) -> tuple[Poly, list[Poly]]:
     if kind in ("lead", "lead_gcf"):
         while True:
             lead = rng.choice(r["leads"])
-            p, q = _nz(rng, lo, hi), _nz(rng, lo, hi)
+            p, q = nonzero_choice(rng, lo, hi), nonzero_choice(rng, lo, hi)
             f1, f2 = lin(lead, p), lin(1, q)
             if math.gcd(lead, p) == 1 and (f1 * f2).content() == 1 and lead * q + p != 0:
                 gcf = Poly.const(rng.randint(2, 3) if kind == "lead_gcf" else 1)
@@ -166,9 +162,7 @@ class PolynomialFactoring(SheetType):
                             answer_key=[f"{i['n']}) {pretty(i['answer'])}" for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         count = r.get("items", ITEMS)
         if len(sheet.items) != count:

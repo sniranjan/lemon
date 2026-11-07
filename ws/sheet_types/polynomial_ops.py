@@ -19,7 +19,7 @@ from __future__ import annotations
 from ..algebra import Poly, parse, pretty
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, nonzero_choice
 
 ROW_ITEMS = 5
 BOX_ITEMS = 4
@@ -44,22 +44,18 @@ def layout_for(r: dict, page: int, first: int) -> str:
     return r.get("layout", "rows")
 
 
-def _nz(rng, lo: int, hi: int) -> int:
-    return rng.choice([k for k in range(lo, hi + 1) if k])
-
-
 def choose(kind: str, rng, r: dict) -> dict:
     lo, hi = r.get("coeff", [-9, 9])
-    nz = lambda a=lo, b=hi: _nz(rng, a, b)
+    nz = lambda a=lo, b=hi: nonzero_choice(rng, a, b)
     if kind in ("add", "subtract"):
         def tri():
             return Poly({(("x", 2),): rng.randint(1, hi), (("x", 1),): nz(), (): nz()}).text()
         op = "+" if kind == "add" else "-"
         return {"q": f"({tri()}) {op} ({tri()})"}
     if kind == "monomial":
-        k, e = _nz(rng, -6, 6), rng.choice([1, 1, 2])
+        k, e = nonzero_choice(rng, -6, 6), rng.choice([1, 1, 2])
         while k in (1, -1):
-            k = _nz(rng, -6, 6)
+            k = nonzero_choice(rng, -6, 6)
         mono = Poly({(("x", e),): k}).text()
         tri = Poly({(("x", 2),): rng.randint(1, 6), (("x", 1),): nz(), (): nz()}).text()
         return {"q": f"{mono}({tri})"}

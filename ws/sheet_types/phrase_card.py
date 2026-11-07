@@ -13,7 +13,7 @@ from ..models import Issue, Sheet
 from ..phrases import check_phrase
 from ..registry import GenContext, SheetContent, SheetType, register
 from ..syllabus import level_rank
-from ._common import error
+from ._common import error, page_rules
 
 _SPLIT = re.compile(r"([A-Za-z']+)")
 
@@ -34,9 +34,7 @@ def phrase_items(ctx: GenContext, kind: str) -> tuple[list[dict], list[str], lis
 
 
 def check_phrase_items(sheet: Sheet, kind: str, limit_rule: str) -> list[Issue]:
-    from ..syllabus import load_level, resolve_page
-
-    rules = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+    rules = page_rules(sheet)
     rank = level_rank(sheet.level)
     known = {w: e for w, e in vocab_by_word().items() if level_rank(e.level) <= rank}
     issues = []

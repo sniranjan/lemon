@@ -14,7 +14,9 @@ Source = Literal["chart", "ours"]
 SUBJECT_PREFIX: dict[str, str] = {"english": "EN", "math": "MA", "pencil": ""}
 
 
-class _Strict(BaseModel):
+class StrictModel(BaseModel):
+    """A content or syllabus model that rejects unknown keys (typos in YAML fail loudly)."""
+
     model_config = ConfigDict(extra="forbid")
 
 
@@ -52,7 +54,7 @@ def _check_standards(v: list[str]) -> list[str]:
     return v
 
 
-class Part(_Strict):
+class Part(StrictModel):
     part: int
     pages: PageRange
     name: str | None = None
@@ -73,7 +75,7 @@ class Part(_Strict):
         return _check_standards(v)
 
 
-class Section(_Strict):
+class Section(StrictModel):
     code: str
     name: str                 # internal (planning) name
     public_name: str          # what parents and children see: our own name (CLAUDE.md §15)
@@ -119,7 +121,7 @@ class Section(_Strict):
         return None
 
 
-class Level(_Strict):
+class Level(StrictModel):
     subject: Subject
     level: str                # internal code (7A, 6A, ZI): never printed on anything a buyer sees
     title: str
@@ -161,7 +163,7 @@ class Level(_Strict):
         raise KeyError(f"page {page} is outside {self.level} (pages 1–{self.pages})")
 
 
-class LadderLevel(_Strict):
+class LadderLevel(StrictModel):
     """One public level (syllabus/ladder.yaml): a reading strand + a math strand (+ pencil early on)."""
 
     slug: str
@@ -180,7 +182,7 @@ class LadderLevel(_Strict):
         return self
 
 
-class PageSpec(_Strict):
+class PageSpec(StrictModel):
     """Everything a generator needs to know about one page, resolved from the syllabus."""
 
     subject: Subject
@@ -195,7 +197,7 @@ class PageSpec(_Strict):
     progress: float = 0.0
 
 
-class VocabEntry(_Strict):
+class VocabEntry(StrictModel):
     word: str
     picture: str | None = None   # None: a describing word (big, hot) shown through its noun's picture
     category: str
@@ -206,13 +208,13 @@ class VocabEntry(_Strict):
     needs_color: bool = False   # only makes sense printed in color (color words)
 
 
-class Issue(_Strict):
+class Issue(StrictModel):
     sheet_id: str
     severity: Severity
     message: str
 
 
-class Sheet(_Strict):
+class Sheet(StrictModel):
     id: str
     subject: Subject
     level: str

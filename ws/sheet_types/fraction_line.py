@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 LINES = 5
 GRADE3_DENOMINATORS = {2, 3, 4, 6, 8}
@@ -60,9 +60,7 @@ class FractionLine(SheetType):
         return SheetContent(title=r["title"], parent_tip=ctx.tip(self.name), items=items, answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         items = sheet.items
         lines = r.get("lines", LINES)

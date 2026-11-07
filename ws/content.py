@@ -115,6 +115,14 @@ def level_passages(level: str, section: str) -> tuple[dict, ...]:
     return tuple(yaml.safe_load(path.read_text()) or []) if path.exists() else ()
 
 
+def find_by_id(items, pid: str, what: str, level: str, section: str):
+    """The parsed passage (or read) with this id from one section's file."""
+    for p in items:
+        if p.id == pid:
+            return p
+    raise KeyError(f"no {what} {pid!r} in content/passages/{level}/{section}.yaml")
+
+
 @lru_cache(maxsize=None)
 def wordparts(level: str) -> dict:
     """Prefixes, suffixes and compound words to build: content/wordparts/<level>.yaml."""

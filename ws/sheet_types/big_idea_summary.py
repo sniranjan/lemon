@@ -11,7 +11,7 @@ from __future__ import annotations
 from ..longreads import check_read_sheet, head_item, planned_read, question_items
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 WRITE_LINES = 2
 
@@ -27,13 +27,11 @@ class BigIdeaSummary(SheetType):
                             answer_key=key)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
         issues = [error(sheet, m) for m in check_read_sheet(sheet, WRITE_LINES)]
         qs = sheet.items[1:]
         if not qs or qs[-1]["kind"] != "write":
             issues.append(error(sheet, "the last question is the one-sentence big idea"))
-        starters = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules.get("starters", False)
+        starters = page_rules(sheet).get("starters", False)
         if qs and qs[-1]["kind"] == "write" and bool(qs[-1].get("starter")) != bool(starters):
             issues.append(error(sheet, "sentence starters belong in part 1 only"))
         return issues

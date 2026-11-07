@@ -24,7 +24,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 
 REMAINDERS = ("none", "all", "mixed")
 MAX_TRIES = 20000
@@ -113,9 +113,7 @@ class DivisionHouse(SheetType):
                             answer_key=[answer_text(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         issues: list[Issue] = []
         mode = r.get("remainder", "none")
         n = r.get("problems", 4)

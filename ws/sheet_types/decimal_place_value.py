@@ -13,7 +13,7 @@ from decimal import ROUND_HALF_UP, Decimal
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from ._exact import dec, dec_str, from_hundredths
 
 COUNTS = {"compare": 4, "round": 3, "value": 3}
@@ -127,9 +127,7 @@ class DecimalPlaceValue(SheetType):
                             answer_key=[answer(i) for i in items])
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         counts = r.get("counts", COUNTS)
         issues: list[Issue] = []
         got = {t: sum(i["task"] == t for i in sheet.items) for t in COUNTS}

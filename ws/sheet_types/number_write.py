@@ -17,7 +17,7 @@ from __future__ import annotations
 
 from ..models import Issue, Sheet
 from ..registry import GenContext, SheetContent, SheetType, register
-from ._common import error
+from ._common import error, page_rules
 from .number_trace import check_range
 
 MODES = ("copy", "fill")
@@ -72,9 +72,7 @@ class NumberWrite(SheetType):
                             items=items, answer_key=answers)
 
     def verify(self, sheet: Sheet) -> list[Issue]:
-        from ..syllabus import load_level, resolve_page
-
-        r = resolve_page(load_level(sheet.subject, sheet.level), sheet.page_number).rules
+        r = page_rules(sheet)
         mode, lo, hi = r.get("mode", "copy"), r["min"], r["max"]
         length = r["run"] if mode == "copy" else r.get("length", 10)
         kind = "copy" if mode == "copy" else "track"
