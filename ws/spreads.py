@@ -9,7 +9,8 @@ text at the 20px floor, so the end of a longer passage continues at the top of t
 second time the reading page says what to look for ("Read it again. Look for ...").
 
 Content: `content/passages/<level>/<section>.yaml`, a list of passages, each with `id`, `title`,
-`text` (paragraphs split by a blank line), `genre` (`nonfiction` or `story`) and `pages`: the
+`text` (paragraphs split by a blank line), `genre` (`nonfiction` or `story`; Whales Reading adds `speech`,
+`essay` and `letter`, named on the page) and `pages`: the
 question sets. A set has a `focus`, an optional `look_for` (the second reading's prompt) and its
 `questions`. Question kinds:
 
@@ -86,7 +87,7 @@ class SpreadSet(_Strict):
 class SpreadPassage(_Strict):
     id: str
     title: str
-    genre: Literal["nonfiction", "story"]
+    genre: Literal["nonfiction", "story", "speech", "essay", "letter"]   # speech/essay/letter: Whales Reading rhetoric
     text: str
     pages: list[SpreadSet]
     story: str | None = None     # a story told in installments (Lions Reading C): its name ...
@@ -189,8 +190,10 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                 if not in_text(q.evidence, q.choices[0]) and not in_text(q.choices[0], q.evidence):
                     out.append(f"{where}: a quote question's evidence must be its right choice")
             if q.kind == "paragraph":
-                n_sent = len(sentences(q.sample))
+                # Whales Reading analytical paragraphs: rules `paragraph_sentences`, `paragraph_quotes`
+                # (how many quotes the sample needs) and `rubric_parts` (labels the rubric must name)
                 s_lo, s_hi = rules.get("paragraph_sentences", [3, 4])
+                n_sent = len(sentences(q.sample))
                 if not s_lo <= n_sent <= s_hi:
                     out.append(f"{where}: paragraph sample has {n_sent} sentences (needs {s_lo}–{s_hi})")
                 if rules.get("max_rubric") and len(q.rubric) > rules["max_rubric"]:
@@ -198,13 +201,23 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                 quoted = _QUOTED.findall(q.sample)
                 if not quoted:
                     out.append(f"{where}: paragraph sample must quote the text in double quotes")
+                elif len(quoted) < rules.get("paragraph_quotes", 1):
+                    out.append(f"{where}: paragraph sample quotes the text {len(quoted)} time(s) "
+                               f"(needs {rules['paragraph_quotes']})")
                 for qt in quoted:
                     if not in_text(qt.strip(" ,."), p.text):
                         out.append(f"{where}: sample quotes {qt!r}, which is not in the passage")
+                for part in rules.get("rubric_parts", []):
+                    if f"{part}:" not in q.rubric:
+                        out.append(f"{where}: the rubric must name '{part}:'")
             if q.kind == "organizer":
                 for h in q.heads:
                     if len(h) > MAX_HEAD:
                         out.append(f"{where}: organizer head {h!r} is longer than {MAX_HEAD}")
+                if "paragraph_quotes" in rules:
+                    for qt in (m for v in q.samples for m in _QUOTED.findall(v)):
+                        if not in_text(qt.strip(" ,."), p.text):
+                            out.append(f"{where}: organizer sample quotes {qt!r}, which is not in the passage")
     return out
 
 

@@ -1,0 +1,991 @@
+# Whales Reading, section A "The Writer's Choices" (pages 1–50): how structure, the order of events,
+# pacing and word choice shape meaning (RL.9-10.5, RL.9-10.4). Original stories (ours).
+# Schema: ws/spreads.py (passage_spread). Each passage serves 2 spreads (two question sets).
+# mc: 4 choices, the first is right. quote: 4 sentences copied exactly from the text, the first is right.
+# write: 2 lines + sample. paragraph: 3–4 sentences, sample quotes the text in double quotes + rubric.
+# `evidence`: words copied exactly from the passage.
+
+- id: a01-the-second-bell
+  title: The Second Bell
+  genre: story
+  text: |
+    When the second bell rang, the auditorium fell silent, and Priya stood motionless in the wings
+    with her hands pressed flat against her skirt, as if she could iron the trembling out of them.
+    Somewhere beyond the velvet curtain, two hundred strangers were settling into their seats.
+
+    Eight months earlier, she had nearly quit. Her teacher had assigned a sonata whose middle section
+    moved so rapidly that her fingers tangled every time she attempted it. Night after night she
+    repeated the same twelve measures, deliberately slow at first and then gradually faster, until the
+    metronome's patient clicking followed her into her dreams.
+
+    In March, the measures finally untangled. Priya would always remember that evening precisely: rain
+    streaking the window, the lamp humming, and her hands suddenly moving as though they belonged to
+    someone far more confident.
+
+    Now, in the dim wings, that memory seemed impossibly distant, until her teacher rested a hand on
+    her shoulder and whispered, "Breathe, Priya. You already know how this ends."
+
+    Onstage, the lights were warmer than she had expected, and the piano looked unexpectedly small
+    beneath them. The opening went smoothly. The middle section arrived like a wave she had watched
+    building for months, and instead of resisting it, she rode it until the twelve measures that had
+    once defeated her passed in a few seconds.
+
+    When the final chord faded, the applause arrived all at once, a sound like heavy rain on a tin
+    roof. Priya bowed, and for a moment she imagined she could hear a metronome, still clicking
+    patiently, somewhere far behind her.
+  pages:
+    - focus: structure and order of events
+      questions:
+        - kind: mc
+          ask: Why does the author open in the wings and then jump back eight months?
+          choices:
+            - to build tension before showing what the moment cost her
+            - to show the recital matters less than her brother's complaints
+            - to explain how the auditorium was built
+            - to prove that Priya never practiced the hard section
+          evidence: Eight months earlier, she had nearly quit.
+        - kind: quote
+          ask: Which sentence best shows the story returning from the past to the present?
+          choices:
+            - Now, in the dim wings, that memory seemed impossibly distant
+            - In March, the measures finally untangled.
+            - Eight months earlier, she had nearly quit.
+            - The opening went smoothly.
+          evidence: Now, in the dim wings, that memory seemed impossibly distant
+        - kind: paragraph
+          ask: How does the flashback change the way we read the recital at the end? Use a quote.
+          sample: >-
+            The flashback turns the recital into the end of a long struggle instead of a single
+            performance. Because we know she "repeated the same twelve measures" night after night, the
+            moment they "passed in a few seconds" feels like a victory. Without the flashback, those
+            seconds would seem ordinary.
+          rubric: a claim about the effect, an exact quote from the flashback or the recital, and why it changes the ending
+          evidence: passed in a few seconds
+    - focus: word choice and tone
+      look_for: the words that make the music feel alive
+      questions:
+        - kind: mc
+          ask: In paragraph 2, what does the word "tangled" suggest about Priya's playing?
+          choices:
+            - Her fingers felt knotted and stuck, like string that won't come loose.
+            - She played the piece slowly on purpose.
+            - Her piano was old and out of tune.
+            - She was playing two pieces at once.
+          evidence: her fingers tangled every time she attempted it
+        - kind: write
+          ask: The author compares the middle section to "a wave." What does that comparison show?
+          sample: It shows the music was powerful and building, and that Priya went with it instead of resisting it.
+          evidence: The middle section arrived like a wave she had watched
+        - kind: paragraph
+          ask: Why does the story end with the sound of a metronome? Explain with evidence.
+          sample: >-
+            The metronome stands for all the patient practice behind the recital. Earlier, its "patient
+            clicking followed her into her dreams," so it reminds us of the hard work. Hearing it "still
+            clicking patiently" at the end shows that the practice is part of her success.
+          rubric: a claim about what the metronome stands for, a quote from earlier and one from the end, and the link between them
+          evidence: still clicking patiently
+
+- id: a02-feeding-clementine
+  title: Feeding Clementine
+  genre: story
+  text: |
+    March 3 — The jar of flour and water that Aunt Lucia mailed me arrived today, wrapped in three
+    layers of newspaper. Tucked inside was a note that said only, "Feed her every morning, and she
+    will feed you for years." I named the starter Clementine, because any creature that comes with
+    instructions deserves a proper name.
+
+    March 6 — Nothing has happened, unless you count a faint sour smell that my brother insists is
+    evidence of a science experiment gone terribly wrong. I stirred in fresh flour anyway, feeling
+    slightly ridiculous about whispering encouragement to a jar on the kitchen counter.
+
+    March 9 — Bubbles appeared overnight. Tiny ones clung to the glass like beads of sweat at first,
+    and then larger ones rose and popped with a sound I could hear only with my ear pressed against
+    the lid.
+
+    March 14 — My first loaf was a disaster, as flat and stubborn as a paving stone, and twice as
+    heavy. My father bravely ate two slices and declared it "very rustic," which is the kindest word
+    anyone has ever invented for failure.
+
+    March 21 — I waited much longer this time, letting the dough rise slowly until it trembled when
+    I nudged the bowl with one finger. When I finally lifted the lid of the pot, the golden crust
+    had split open along the top like a smile.
+
+    March 22 — This morning I mailed a small jar of Clementine to my friend Dev, wrapped carefully
+    in three layers of newspaper, with a note that I wrote myself: "Feed her every morning, and she
+    will feed you for years."
+  pages:
+  - focus: 'structure: dated entries and a circular ending'
+    questions:
+    - kind: mc
+      ask: Why does the author tell this story as a series of dated notes?
+      choices:
+      - to show slow progress and setbacks over several weeks
+      - to explain exactly how a large bakery is run
+      - to prove that sourdough is easy to make in one day
+      - to hide who is telling the story from the reader
+      evidence: Nothing has happened, unless you count a faint sour smell
+    - kind: quote
+      ask: Which sentence marks the turning point, when the narrator finally succeeds?
+      choices:
+      - When I finally lifted the lid of the pot, the golden crust had split open along the top like a smile.
+      - I named the starter Clementine, because any creature that comes with instructions deserves a proper name.
+      - Bubbles appeared overnight.
+      - I stirred in fresh flour anyway, feeling slightly ridiculous about whispering encouragement to a jar on the
+        kitchen counter.
+      evidence: When I finally lifted the lid of the pot, the golden crust had split open along the top like a smile.
+    - kind: paragraph
+      ask: Why does the last entry repeat the words of Aunt Lucia's note? Use a quote.
+      sample: The repeated note shows that the narrator has become the teacher, passing on what Aunt Lucia taught.
+        Aunt Lucia's note promised the starter would "feed you for years," and now the narrator sends Clementine to
+        Dev "with a note that I wrote myself." The ending circles back to the beginning, so the gift keeps moving
+        from person to person.
+      rubric: a claim about the repeated words, a quote from the first or last entry, and what the circle shows
+      evidence: with a note that I wrote myself
+  - focus: word choice and tone
+    look_for: words that make the starter seem alive
+    questions:
+    - kind: mc
+      ask: Why does the father call the flat first loaf "very rustic"?
+      choices:
+      - He is being kind about a loaf that failed.
+      - He thinks the bread tastes like a farm.
+      - He wants to open a bakery of his own.
+      - He refuses to eat any of it.
+      evidence: My father bravely ate two slices
+    - kind: write
+      ask: The narrator names the starter and whispers to it. What do these word choices suggest?
+      sample: They suggest the narrator treats the starter like a living pet and cares for it patiently.
+      evidence: whispering encouragement to a jar
+    - kind: paragraph
+      ask: How does the simile "like a smile" in the March 21 entry change the tone? Use a quote.
+      sample: The simile makes the ending feel joyful, as if the bread itself is pleased. Earlier the loaf was "as
+        flat and stubborn as a paving stone," which sounds heavy and gloomy. When the crust "split open along the
+        top like a smile," the mood turns to happiness and success.
+      rubric: a claim about the tone, the simile and an earlier comparison quoted exactly, and how the mood changes
+      evidence: the golden crust had split open along the top like a smile
+
+- id: a03-the-staircase
+  title: The Staircase
+  genre: story
+  text: |
+    Halfway up the competition wall, with her left hand jammed into a crack no wider than a pencil,
+    Jada realized that her right foot had nowhere left to go. The crowd below had gone quiet in the
+    particular way that crowds do when they suspect someone is about to slip, and the rope at her
+    harness swung gently, patient and indifferent.
+
+    She had not wanted to enter at all. Her coach had signed her up after watching her solve a
+    difficult practice route that every older climber in the gym had abandoned. Jada had spent the
+    following week inventing excuses that nobody, including Jada herself, believed for a moment.
+
+    The route in front of her was called the Staircase, which seemed like a joke, because none of
+    its holds resembled anything a person could actually stand on. She had studied it for six
+    minutes during the preview, tracing each move in the air with her fingers while the other
+    climbers chatted and stretched.
+
+    Now, pressed against the wall, she remembered one detail she had noticed then: a small, rounded
+    hold far to the right, nearly hidden behind a larger one. Shifting her weight slowly, she swung
+    her right foot outward, found the hidden hold with the edge of her shoe, and felt the entire
+    route rearrange itself in her mind.
+
+    The final moves came quickly. When she slapped the top hold with both hands, the gym erupted,
+    and the rope that had seemed so indifferent lowered her gently to the floor. Her coach stood
+    waiting there, grinning as though he had known all along.
+  pages:
+  - focus: 'structure: starting in the middle'
+    questions:
+    - kind: mc
+      ask: Why does the story begin with Jada stuck halfway up the wall?
+      choices:
+      - to create suspense before explaining how she got there
+      - to show that Jada has never climbed before
+      - to describe how the climbing gym was built
+      - to show that her coach is angry with her
+      evidence: Jada realized that her right foot had nowhere left to go
+    - kind: quote
+      ask: Which sentence first takes the story back to the time before the climb?
+      choices:
+      - She had not wanted to enter at all.
+      - The final moves came quickly.
+      - Her coach stood waiting there, grinning as though he had known all along.
+      - Jada had spent the following week inventing excuses that nobody, including Jada herself, believed for a moment.
+      evidence: She had not wanted to enter at all.
+    - kind: paragraph
+      ask: How does a detail Jada noticed during the preview pay off at the climax? Use a quote.
+      sample: The preview detail turns her careful study into the key that solves the climb. During the preview she
+        was "tracing each move in the air with her fingers," which shows her patience. At the crucial moment she "found
+        the hidden hold with the edge of her shoe," so a small detail saves her climb.
+      rubric: a claim linking the preview to the climax, a quote from each part, and how the early detail sets up
+        the solution
+      evidence: found the hidden hold with the edge of her shoe
+  - focus: word choice and tone
+    look_for: how the rope is described, start to end
+    questions:
+    - kind: mc
+      ask: The rope is "patient and indifferent." What does this suggest at that moment?
+      choices:
+      - The rope doesn't care whether Jada succeeds or slips.
+      - The rope is tangled around Jada's feet.
+      - The rope is cheering Jada on.
+      - The rope is too short to reach the floor.
+      evidence: the rope at her harness swung gently, patient and indifferent
+    - kind: write
+      ask: Why does the author say the route seemed to "rearrange itself in her mind"?
+      sample: It shows that finding one hidden hold suddenly made the whole route make sense to her.
+      evidence: felt the entire route rearrange itself in her mind
+    - kind: paragraph
+      ask: How does the description of the rope change from the beginning to the end, and why? Use a quote.
+      sample: At first the rope seems cold, but at the end it seems kind, because Jada's fear has turned into success.
+        Early on it swings "patient and indifferent," as if nothing matters. After she reaches the top, it "lowered
+        her gently to the floor," which sounds caring. The change in the rope mirrors the change in Jada's feelings.
+      rubric: a claim about the change, a quote from the start and the end, and how it mirrors Jada's feelings
+      evidence: lowered her gently to the floor
+
+- id: a04-grandfathers-compass
+  title: Grandfather's Compass
+  genre: story
+  text: |
+    Every autumn, when the maple outside the kitchen window turned the color of a ripe peach, my
+    grandfather took his brass compass from the drawer and told the same story. This year, for the
+    first time, he asked me to tell it to him instead.
+
+    In the story, he is fourteen years old and paddling a borrowed canoe across a northern lake with
+    his older cousin, Arturo. Arturo has promised to show him a rocky island where loons nest every
+    spring. In the middle of the afternoon, a thick fog rolls across the water, swallowing the
+    shoreline so completely that the boys can no longer tell which direction is home.
+
+    Arturo panics a little, as cousins sometimes do, but my grandfather remembers the compass that
+    their uncle pressed into his hand that morning with a gruff warning to keep it dry. He steadies
+    the needle on his knee and points the bow toward the south. Then he paddles in silence for two
+    long hours, until the dock appears through the mist like a gray pencil line.
+
+    They never found the island that summer, and the canoe had to be returned the following week,
+    but my grandfather kept the compass for sixty years. He carried it on every fishing trip and
+    every family vacation, even after maps began appearing on telephones.
+
+    When I finished the story, he was quiet for a while, turning the compass over in his weathered
+    palm. Then he placed it in my hand, closed my fingers around it, and told me, in the same gruff
+    tone his uncle had used, to keep it dry.
+  pages:
+  - focus: 'structure: a story inside a story'
+    questions:
+    - kind: mc
+      ask: How is this story structured?
+      choices:
+      - An old story is framed by a scene in the present.
+      - Events are told in the exact order they happened.
+      - Two characters take turns narrating each paragraph.
+      - The whole story is told in a series of letters.
+      evidence: This year, for the first time, he asked me to tell it to him instead.
+    - kind: quote
+      ask: Which sentence brings the reader back from the canoe story to the present?
+      choices:
+      - When I finished the story, he was quiet for a while, turning the compass over in his weathered palm.
+      - Arturo has promised to show him a rocky island where loons nest every spring.
+      - He steadies the needle on his knee and points the bow toward the south.
+      - He carried it on every fishing trip and every family vacation, even after maps began appearing on telephones.
+      evidence: When I finished the story, he was quiet for a while, turning the compass over in his weathered palm.
+    - kind: paragraph
+      ask: Why does the narrator tell the story this year instead of the grandfather? Use a quote.
+      sample: The switch shows that the story and the compass are being passed to a new generation. The grandfather
+        "asked me to tell it to him instead," so the narrator now carries the memory. At the end the grandfather "placed
+        it in my hand," handing over the compass just as he handed over the story.
+      rubric: a claim about the switch, a quote from the frame, and how it connects to the compass
+      evidence: he asked me to tell it to him instead
+  - focus: word choice and tone
+    look_for: words that sound old, worn, or gruff
+    questions:
+    - kind: mc
+      ask: Why is the canoe story told in the present tense ("he is fourteen")?
+      choices:
+      - It makes the old memory feel as if it is happening now.
+      - It shows that the canoe trip is happening today.
+      - It means the narrator was in the canoe too.
+      - It shows the grandfather has forgotten the story.
+      evidence: he is fourteen years old
+    - kind: write
+      ask: The dock appears "like a gray pencil line." What does this simile show?
+      sample: It shows the dock was faint and thin in the fog, barely visible at first.
+      evidence: like a gray pencil line
+    - kind: paragraph
+      ask: How does the phrase "keep it dry" connect three generations? Use a quote.
+      sample: The repeated phrase links three people who have each been trusted with the compass. The uncle gave it
+        "with a gruff warning to keep it dry," and the grandfather repeats it "in the same gruff tone his uncle had
+        used." The words become a family tradition as much as an instruction.
+      rubric: a claim about the repeated phrase, quotes from both uses, and what the repetition shows
+      evidence: in the same gruff tone his uncle had used
+
+- id: a05-the-empty-seat
+  title: The Empty Seat
+  genre: story
+  text: |
+    Throughout the entire spring concert, Rosa kept glancing at the third seat in the front row,
+    which remained stubbornly empty even as every other chair in the auditorium filled with parents,
+    grandparents, and restless younger siblings.
+
+    She had placed a folded program on that seat herself an hour before the doors opened, smoothing
+    it flat with the care of someone setting a table for an important guest. During the warm-up, her
+    friend Mei asked who the seat was for, and Rosa only shrugged and said that it belonged to
+    someone who was traveling a long way.
+
+    The choir sang four songs before Rosa's solo, and during each one her eyes drifted toward the
+    doors at the back of the room. Twice they opened, and twice the person who entered was a
+    stranger who apologized to the usher and slipped into a seat along the wall.
+
+    When the director finally nodded to her, Rosa stepped forward and drew a breath that felt far
+    too small for the song she was about to sing. Just then the doors opened a third time. A small
+    woman in a long blue coat hurried down the aisle, clutching a suitcase with an airport tag still
+    attached to the handle.
+
+    Rosa had not seen her grandmother in four years, not since the family had moved north from the
+    coast. She sang the first verse in her grandmother's language, exactly as she had rehearsed it
+    in her bedroom every night for a month. From the stage, she watched the woman in the blue coat
+    press both hands to her heart.
+  pages:
+  - focus: 'structure: a fact held back'
+    questions:
+    - kind: mc
+      ask: Why does the author wait until the last paragraph to say who the seat is for?
+      choices:
+      - to keep readers wondering and make the reveal more moving
+      - because Rosa has forgotten whom she invited
+      - to show that the seat was really meant for Mei
+      - because the director asked Rosa to keep a secret
+      evidence: Rosa had not seen her grandmother in four years
+    - kind: quote
+      ask: Which sentence best builds suspense about the empty seat?
+      choices:
+      - The choir sang four songs before Rosa's solo, and during each one her eyes drifted toward the doors at the
+        back of the room.
+      - She sang the first verse in her grandmother's language, exactly as she had rehearsed it in her bedroom every
+        night for a month.
+      - From the stage, she watched the woman in the blue coat press both hands to her heart.
+      - Rosa had not seen her grandmother in four years, not since the family had moved north from the coast.
+      evidence: The choir sang four songs before Rosa's solo, and during each one her eyes drifted toward the doors
+        at the back of the room.
+    - kind: paragraph
+      ask: What clues early in the story hint that the guest is special? Use a quote.
+      sample: Rosa's careful actions hint that the guest matters deeply to her. She placed the program "with the care
+        of someone setting a table for an important guest." She also says the person is "traveling a long way," which
+        matches the suitcase with the airport tag at the end.
+      rubric: a claim about the clues, one or two exact quotes from the first half, and how they point to the reveal
+      evidence: with the care of someone setting a table for an important guest
+  - focus: word choice and tone
+    look_for: words that show how Rosa feels
+    questions:
+    - kind: mc
+      ask: What does the phrase "stubbornly empty" suggest about the seat?
+      choices:
+      - The empty seat seems to resist Rosa's hopes.
+      - The seat is broken and can't be used.
+      - Rosa doesn't want anyone to sit there.
+      - The seat is saved for the choir director.
+      evidence: which remained stubbornly empty
+    - kind: write
+      ask: Rosa draws "a breath that felt far too small." What feeling does this show?
+      sample: It shows she is nervous, and the song feels huge compared to her courage.
+      evidence: drew a breath that felt far too small for the song
+    - kind: paragraph
+      ask: How does the final image of the grandmother set the mood of the ending? Use a quote.
+      sample: The final image makes the ending feel warm and emotional. The grandmother "hurried down the aisle,"
+        which shows how much she wanted to arrive in time. When she presses "both hands to her heart," we see that
+        Rosa's song has deeply moved her.
+      rubric: a claim about the mood, an exact quote about the grandmother, and how it creates that mood
+      evidence: press both hands to her heart
+
+- id: a06-seeds-from-1974
+  title: Seeds from 1974
+  genre: story
+  text: |
+    In the spring of 1974, a young woman named Ines knelt in a narrow backyard in a city she had
+    lived in for only three weeks, and she pressed a handful of tomato seeds into soil that she had
+    carried home in old coffee cans.
+
+    This spring, her granddaughter Lucy knelt in a raised garden bed at the edge of her school's
+    parking lot, and she pressed seeds from a paper envelope labeled "Ines, 1974" into soil that her
+    class had hauled in wheelbarrows.
+
+    Ines watered her seedlings with a chipped teapot, because she had not yet saved enough money for
+    a watering can. While she worked, she spoke to them softly in the language of the town she had
+    left behind.
+
+    Lucy watered hers with a hose that sputtered and coughed, and she read aloud to them from her
+    science notebook. She did it mostly because her classmates found it funny, and partly because
+    her grandmother had once told her that plants appreciate conversation.
+
+    By August, Ines had more tomatoes than her small family could possibly eat. She carried bowls of
+    them up and down her street, knocking on doors and introducing herself to strangers who soon
+    became friends.
+
+    By June, Lucy's class had harvested enough tomatoes to fill two cafeteria trays. Lucy saved the
+    seeds from the ripest one and dried them carefully on a paper towel on the classroom windowsill.
+
+    That evening she brought the seeds home to her grandmother in a brand-new envelope. Her
+    grandmother held it for a long time before writing her own name beneath Lucy's in careful,
+    slanting letters.
+  pages:
+  - focus: 'structure: two timelines side by side'
+    questions:
+    - kind: mc
+      ask: Why does the author switch back and forth between Ines and Lucy?
+      choices:
+      - to compare two gardeners and show what connects them
+      - to show that Ines and Lucy have never met
+      - to explain how tomatoes are grown on big farms
+      - to show that Lucy dislikes working in the garden
+      evidence: This spring, her granddaughter Lucy knelt
+    - kind: quote
+      ask: Which sentence shows the two timelines finally coming together?
+      choices:
+      - That evening she brought the seeds home to her grandmother in a brand-new envelope.
+      - By August, Ines had more tomatoes than her small family could possibly eat.
+      - By June, Lucy's class had harvested enough tomatoes to fill two cafeteria trays.
+      - Ines watered her seedlings with a chipped teapot, because she had not yet saved enough money for a watering
+        can.
+      evidence: That evening she brought the seeds home to her grandmother in a brand-new envelope.
+    - kind: paragraph
+      ask: What is the effect of the old seed envelope on the story's structure? Use a quote.
+      sample: The envelope is the thread that ties the two timelines together. Lucy plants seeds that Ines saved long
+        ago, so the old garden grows again in a new place. At the end, her grandmother writes "her own name beneath
+        Lucy's," turning the envelope into a family record.
+      rubric: a claim about the envelope, an exact quote, and how it links past and present
+      evidence: writing her own name beneath Lucy's
+  - focus: word choice and tone
+    look_for: how each gardener cares for her plants
+    questions:
+    - kind: mc
+      ask: What do the "chipped teapot" and the hose that "sputtered and coughed" have in common?
+      choices:
+      - Both are humble, imperfect tools used with care.
+      - Both are brand-new and expensive.
+      - Both belong to Lucy's school.
+      - Both are used for cooking tomatoes.
+      evidence: a hose that sputtered and coughed
+    - kind: write
+      ask: How does Ines use her tomatoes to make a new city feel like home?
+      sample: She shares bowls of tomatoes with her neighbors and turns strangers into friends.
+      evidence: introducing herself to strangers who soon became friends
+    - kind: paragraph
+      ask: Why might the author end with "careful, slanting letters"? Use a quote.
+      sample: The phrase suggests the grandmother's age and how much the moment means to her. She "held it for a long
+        time" before writing, which shows she is moved. Her "careful, slanting letters" show that she treats signing
+        the envelope as something precious.
+      rubric: a claim about the ending phrase, exact quotes from the last paragraph, and what they show
+      evidence: careful, slanting letters
+
+- id: a07-six-seconds
+  title: Six Seconds
+  genre: story
+  text: |
+    The referee placed the ball on the white spot, and the noise of the crowd drained away until
+    Amara could hear only her own breathing and the soft flutter of the net behind the goalkeeper.
+
+    She took four steps back, exactly as she had practiced. In the stretched-out silence, every
+    detail seemed to arrive separately: a single blade of grass bending under the ball, a smear of
+    chalk on her left shoe, a cloud sliding across the sun so that the shadows on the field briefly
+    softened.
+
+    The goalkeeper bounced on her toes with her arms spread wide. Amara noticed that she leaned very
+    slightly toward the right side of the goal, the way someone leans toward a door they expect to
+    open.
+
+    For a fraction of a second, Amara thought about the summer afternoons she had spent kicking a
+    ball against her uncle's garage. She had aimed at a square of blue tape until the tape peeled
+    away, and her uncle had patiently replaced it every time.
+
+    Then she ran forward, planted her left foot beside the ball, and swung her right leg through it
+    with everything she had, the way she had done a thousand times against the garage wall.
+
+    The ball curled low and left, away from the goalkeeper's lean, and slipped into the corner of
+    the net before anyone in the stadium had finished drawing a breath.
+
+    Afterward, her teammates told her that the whole penalty had lasted perhaps six seconds. Amara
+    knew better, because she had felt every one of those seconds stretch out like an entire summer.
+  pages:
+  - focus: 'structure: a moment slowed down'
+    questions:
+    - kind: mc
+      ask: How does the author handle time in this story?
+      choices:
+      - A few seconds are slowed down and stretched out.
+      - Many years are summed up in a few sentences.
+      - The events are told in reverse order.
+      - Two separate games are told side by side.
+      evidence: the whole penalty had lasted perhaps six seconds
+    - kind: quote
+      ask: Which words best show time slowing down?
+      choices:
+      - In the stretched-out silence, every detail seemed to arrive separately
+      - The goalkeeper bounced on her toes with her arms spread wide.
+      - She took four steps back, exactly as she had practiced.
+      - Afterward, her teammates told her that the whole penalty had lasted perhaps six seconds.
+      evidence: In the stretched-out silence, every detail seemed to arrive separately
+    - kind: paragraph
+      ask: Why does the author place a memory of the garage in the middle of the kick? Use a quote.
+      sample: The memory shows that this moment rests on years of practice. Amara remembers aiming "at a square of
+        blue tape until the tape peeled away," which shows how hard she worked. Placing it just before the kick suggests
+        that her past practice carries her through.
+      rubric: a claim about the memory's placement, an exact quote, and how it connects to the kick
+      evidence: at a square of blue tape until the tape peeled away
+  - focus: word choice and tone
+    look_for: the small details Amara notices
+    questions:
+    - kind: mc
+      ask: The goalkeeper leans "toward a door they expect to open." What does this show?
+      choices:
+      - The goalkeeper has guessed which way the ball will go.
+      - The goalkeeper wants to leave the field.
+      - The goalkeeper is tired and needs a rest.
+      - The goalkeeper hears someone at a door.
+      evidence: the way someone leans toward a door they expect to open
+    - kind: write
+      ask: Why does the noise of the crowd "drain away" at the start?
+      sample: It shows how completely Amara focuses, shutting out everything except the kick.
+      evidence: the noise of the crowd drained away
+    - kind: paragraph
+      ask: Explain the last sentence. Why does Amara say she "knew better"? Use a quote.
+      sample: Amara means that the kick felt far longer to her than it really was. Her teammates say it lasted "perhaps
+        six seconds," but to her each second seemed to "stretch out like an entire summer." The comparison connects
+        the kick to her summers of practice, so the moment holds much more than six seconds.
+      rubric: a claim about the meaning, exact quotes from the last paragraph, and how the comparison works
+      evidence: stretch out like an entire summer
+
+- id: a08-seven-summers
+  title: Seven Summers
+  genre: story
+  text: |
+    The first summer, when Kenji was six, the tree house was nothing more than three planks wedged
+    between two branches of the old oak behind Mrs. Halvorsen's garage. Kenji was too frightened to
+    climb past the second rung.
+
+    The second summer, Mrs. Halvorsen added a railing and a rope ladder, and she taught him to
+    hammer a nail without bending it, holding his wrist steady until the rhythm belonged to him.
+
+    By the third summer there was a roof, slightly crooked, and by the fourth there was a window cut
+    in the shape of a half moon. Through it, Kenji watched thunderstorms roll across the valley
+    while Mrs. Halvorsen read aloud from books about sailors and explorers.
+
+    The fifth and sixth summers blurred together in a pleasant haze of sawdust, lemonade, and
+    arguments about whether a tree house truly needed a mailbox. It did, they eventually agreed, and
+    Kenji painted it bright green.
+
+    The seventh summer, Mrs. Halvorsen moved to an apartment near her daughter, and the house with
+    the garage was sold to a family Kenji had never met. On the last afternoon, she handed him the
+    hammer with the taped handle and told him that a good builder always leaves something for the
+    next one.
+
+    In September, a small girl with a missing front tooth stood at the bottom of the oak, staring
+    upward at the half-moon window. Kenji walked over from next door, knelt beside her, and showed
+    her how to hold the rope ladder steady. She was too frightened to climb past the second rung, so
+    he told her there was no hurry at all.
+  pages:
+  - focus: 'structure: years in a few pages'
+    questions:
+    - kind: mc
+      ask: How does the author fit seven years into such a short story?
+      choices:
+      - Each summer gets a short summary, and some are combined.
+      - The story describes a single afternoon in detail.
+      - The story is told through a series of letters.
+      - The narrator lists every day of every summer.
+      evidence: The fifth and sixth summers blurred together
+    - kind: quote
+      ask: Which words show two summers combined to speed up time?
+      choices:
+      - The fifth and sixth summers blurred together in a pleasant haze of sawdust, lemonade, and arguments
+      - It did, they eventually agreed, and Kenji painted it bright green.
+      - Kenji was too frightened to climb past the second rung.
+      - On the last afternoon, she handed him the hammer with the taped handle
+      evidence: The fifth and sixth summers blurred together in a pleasant haze of sawdust, lemonade, and arguments
+    - kind: paragraph
+      ask: Why does the story end with a new child at the bottom of the oak? Use a quote.
+      sample: The ending shows Kenji becoming the teacher that Mrs. Halvorsen was for him. The girl is "too frightened
+        to climb past the second rung," exactly as Kenji was in the first summer. By showing her how "to hold the
+        rope ladder steady," he passes on what he learned.
+      rubric: a claim about the ending, a quote that echoes the opening, and what the echo shows
+      evidence: showed her how to hold the rope ladder steady
+  - focus: word choice and tone
+    look_for: the hammer, the window, and the ladder
+    questions:
+    - kind: mc
+      ask: 'What does Mrs. Halvorsen mean: "a good builder always leaves something for the next one"?'
+      choices:
+      - People should pass on what they make and know.
+      - Builders should leave their tools lying around.
+      - The tree house still needs one more wall.
+      - Kenji must build a tree house of his own.
+      evidence: a good builder always leaves something for the next one
+    - kind: write
+      ask: What does holding Kenji's wrist "until the rhythm belonged to him" suggest?
+      sample: It suggests she helped him patiently until he could hammer well on his own.
+      evidence: until the rhythm belonged to him
+    - kind: paragraph
+      ask: How does the phrase "no hurry at all" connect to Mrs. Halvorsen's way of teaching? Use a quote.
+      sample: The phrase shows that Kenji teaches with the same patience she showed him. She held "his wrist steady
+        until the rhythm belonged to him," never rushing him. When Kenji tells the girl there is "no hurry at all,"
+        he repeats her gentle approach.
+      rubric: a claim about the connection, a quote about each teacher, and how they match
+      evidence: there was no hurry at all
+
+- id: a09-bakery-at-dawn
+  title: Bakery at Dawn
+  genre: story
+  text: |
+    At five in the morning, before the streetlights switched off, the bakery on Fulton Avenue was
+    the only bright window on the block. The flour drifting through the air above the long wooden
+    table glittered like snow caught in a flashlight beam.
+
+    Nadia had begged for months to work a morning shift with her uncle Samir, who had owned the
+    bakery since before she was born. Now that she was finally standing beside him in an apron that
+    reached her ankles, she discovered that baking at dawn was mostly a matter of waiting.
+
+    They waited for the ovens to reach the right temperature, and they waited for the dough to rise
+    beneath damp cloths. Most of all, they waited for the bread to bake, while Samir hummed old
+    songs and wiped the counters until they shone.
+
+    Around six o'clock, the first customers began tapping on the glass: a bus driver who always
+    ordered two rolls, a nurse finishing a night shift, and an elderly man who bought one loaf of
+    rye and never said a word. Samir greeted each of them by name, and Nadia noticed that he slipped
+    an extra roll into the bus driver's bag without mentioning it.
+
+    By seven, her feet ached and her hair was dusted white. Still, she understood something she had
+    not understood before. The bakery was not really about bread; it was about the people who came
+    for it in the dark.
+
+    The next morning, at five o'clock, Nadia was back at the long wooden table, watching the flour
+    drift through the air and glitter like snow caught in a flashlight beam.
+  pages:
+  - focus: 'structure: an ending that echoes the opening'
+    questions:
+    - kind: mc
+      ask: What is the effect of ending with almost the same image as the opening?
+      choices:
+      - It shows Nadia has found a place she wants to return to.
+      - It shows that nothing at all happened in the story.
+      - It shows that the bakery has closed for good.
+      - It shows that Nadia is lost and confused.
+      evidence: The next morning, at five o'clock, Nadia was back at the long wooden table
+    - kind: quote
+      ask: Which sentence states the idea that Nadia learns?
+      choices:
+      - The bakery was not really about bread; it was about the people who came for it in the dark.
+      - They waited for the ovens to reach the right temperature, and they waited for the dough to rise beneath damp
+        cloths.
+      - Most of all, they waited for the bread to bake, while Samir hummed old songs and wiped the counters until
+        they shone.
+      - By seven, her feet ached and her hair was dusted white.
+      evidence: The bakery was not really about bread; it was about the people who came for it in the dark.
+    - kind: write
+      ask: Why does the author repeat the word "waited" in paragraph 3?
+      sample: The repetition slows the story down and shows how much of baking is patient waiting.
+      evidence: They waited for the ovens to reach the right temperature
+  - focus: word choice and tone
+    look_for: the light and the people in the dark
+    questions:
+    - kind: mc
+      ask: In paragraph 1, what does "snow caught in a flashlight beam" suggest?
+      choices:
+      - The bakery feels quiet, bright, and almost magical.
+      - The bakery is cold and needs more heat.
+      - It is actually snowing inside the bakery.
+      - The flour is spoiled and must be thrown out.
+      evidence: glittered like snow caught in a flashlight beam
+    - kind: write
+      ask: What does the extra roll in the bus driver's bag reveal about Samir?
+      sample: It shows that he is quietly generous and cares about his customers without needing credit.
+      evidence: slipped an extra roll into the bus driver's bag without mentioning it
+    - kind: paragraph
+      ask: How do the details about the customers show that the bakery is "about the people"? Use a quote.
+      sample: The customers' details show that the bakery is a small community. Samir "greeted each of them by name,"
+        so they are more than buyers to him. Even the quiet man who "never said a word" has a place in the morning
+        routine.
+      rubric: a claim about the customers, exact quotes about them, and how they support the idea
+      evidence: Samir greeted each of them by name
+
+- id: a10-low-swallows
+  title: Low Swallows
+  genre: story
+  text: |
+    On the morning of the outdoor art show, Ms. Beaumont studied the sky over the town square for a
+    long moment and remarked, to nobody in particular, that the swallows were flying very low.
+
+    Elena barely heard her. She was too busy arranging her six watercolor paintings along the edge
+    of a borrowed table, adjusting each frame until the paintings formed a perfect line from the
+    harbor at sunrise to the harbor at night.
+
+    By noon the square was crowded with families, and a man with a camera photographed her harbor
+    series twice. Elena noticed that the air had grown heavy and still, the way a kitchen feels
+    before a kettle begins to whistle. She was too pleased, however, to think about what that might
+    mean.
+
+    At two o'clock, a cool breeze swept across the square, lifting the corners of the paper
+    tablecloths. Ms. Beaumont, who taught art at the middle school, appeared beside Elena's table
+    carrying a stack of plastic sleeves she had brought from home that morning.
+
+    "Watercolors and rain are old enemies," she said calmly, and together they slid each painting
+    into a sleeve just as the first fat drops darkened the cobblestones.
+
+    The show moved into the library across the square, where the paintings were hung along a row of
+    bookshelves under warm yellow lamps. Elena decided that the harbor at night looked even better
+    indoors. Later, she asked Ms. Beaumont how she had known to bring the plastic sleeves.
+
+    Ms. Beaumont pointed through the window at a swallow sheltering under the library's roof and
+    smiled without saying anything at all.
+  pages:
+  - focus: 'structure: hints planted early'
+    questions:
+    - kind: mc
+      ask: Why does the author mention the low-flying swallows in the first paragraph?
+      choices:
+      - to quietly hint that rain is coming later
+      - to show that Ms. Beaumont dislikes birds
+      - to explain why the square was so crowded
+      - to describe the subject of Elena's paintings
+      evidence: the swallows were flying very low
+    - kind: quote
+      ask: Which sentence is another hint that the weather is about to change?
+      choices:
+      - Elena noticed that the air had grown heavy and still, the way a kitchen feels before a kettle begins to whistle.
+      - By noon the square was crowded with families, and a man with a camera photographed her harbor series twice.
+      - Elena barely heard her.
+      - Later, she asked Ms. Beaumont how she had known to bring the plastic sleeves.
+      evidence: Elena noticed that the air had grown heavy and still, the way a kitchen feels before a kettle begins
+        to whistle.
+    - kind: paragraph
+      ask: How does the foreshadowing make the ending satisfying? Use a quote.
+      sample: The early hints make the ending feel earned instead of random. Ms. Beaumont noticed that "the swallows
+        were flying very low," a detail readers may skip just as Elena did. When she points at "a swallow sheltering
+        under the library's roof," we realize the answer was there all along.
+      rubric: a claim about the effect, a quote from the opening and one from the end, and how they connect
+      evidence: a swallow sheltering under the library's roof
+  - focus: word choice and tone
+    look_for: how the weather is described
+    questions:
+    - kind: mc
+      ask: Ms. Beaumont says watercolors and rain are "old enemies." What does she mean?
+      choices:
+      - Rain can easily ruin watercolor paintings.
+      - She painted pictures of rain long ago.
+      - Watercolors were invented before umbrellas.
+      - Rain makes painting outdoors more fun.
+      evidence: Watercolors and rain are old enemies
+    - kind: write
+      ask: What does comparing the air to a kitchen before a kettle whistles suggest?
+      sample: It suggests that something is about to happen soon, the way a kettle is about to boil.
+      evidence: the way a kitchen feels before a kettle begins to whistle
+    - kind: paragraph
+      ask: Why does the story end with Ms. Beaumont smiling "without saying anything at all"? Use a quote.
+      sample: The silent smile lets the reader, not the character, solve the puzzle. Elena asks how she "had known
+        to bring the plastic sleeves," and the answer is the bird she points at. Her quiet smile rewards readers who
+        noticed the swallows at the start.
+      rubric: a claim about the silent ending, an exact quote, and how it rewards the reader
+      evidence: smiled without saying anything at all
+
+- id: a11-again
+  title: Again
+  genre: story
+  text: |
+    Every Saturday that spring, Malik carried his chessboard to the stone tables at the edge of the
+    park, where an old man in a tweed cap named Mr. Esposito defeated him in fewer than twenty
+    moves.
+
+    Mr. Esposito never gloated and never explained. He simply reset the pieces with his long,
+    careful fingers and said, "Again," in a voice so mild that it was impossible to feel insulted,
+    though Malik frequently tried.
+
+    On the last Saturday in May, Malik lost in eleven moves, his worst game yet. He packed his
+    pieces into their box so roughly that a bishop bounced onto the gravel. Mr. Esposito picked it
+    up, polished it on his sleeve, and handed it back with a remark that Malik pretended not to
+    hear: "You are playing my moves, not yours."
+
+    A year later, on a bright Saturday in May, Malik returned to the stone tables. He had spent the
+    winter studying old games in library books and playing against his cousin, his math teacher, and
+    occasionally himself, trying to discover which moves felt like his own.
+
+    Mr. Esposito was sitting exactly where he had always sat, wearing the same tweed cap, as if the
+    year had passed only for Malik. They played for nearly an hour while pigeons strutted beneath
+    the table and a small crowd gathered to watch.
+
+    When Malik finally cornered his opponent's king, Mr. Esposito studied the board for a long time.
+    Then he reset the pieces with his long, careful fingers, looked up with an expression that was
+    almost a smile, and said, "Again."
+  pages:
+  - focus: 'structure: a jump in time'
+    questions:
+    - kind: mc
+      ask: What happens between paragraph 3 and paragraph 4?
+      choices:
+      - The story skips ahead a whole year.
+      - The story goes back to Malik's first game.
+      - Malik plays a second game that same day.
+      - Mr. Esposito tells a story about his past.
+      evidence: A year later, on a bright Saturday in May
+    - kind: quote
+      ask: Which words best show what Malik did during the skipped time?
+      choices:
+      - He had spent the winter studying old games in library books
+      - Mr. Esposito never gloated and never explained.
+      - They played for nearly an hour while pigeons strutted beneath the table and a small crowd gathered to watch.
+      - When Malik finally cornered his opponent's king, Mr. Esposito studied the board for a long time.
+      evidence: He had spent the winter studying old games in library books
+    - kind: paragraph
+      ask: Why does the story end with the same word Mr. Esposito always says? Use a quote.
+      sample: Ending with "Again" shows that the word now means something new. At first, Mr. Esposito said it after
+        beating Malik, "in a voice so mild" that Malik could not even feel insulted. At the end he says it after losing,
+        with "an expression that was almost a smile," so the word becomes an invitation between equals.
+      rubric: a claim about the repeated word, a quote from each use, and how its meaning changes
+      evidence: an expression that was almost a smile
+  - focus: word choice and character
+    look_for: words that describe Mr. Esposito
+    questions:
+    - kind: mc
+      ask: 'What does Mr. Esposito mean: "You are playing my moves, not yours"?'
+      choices:
+      - Malik copies his opponent instead of finding his own style.
+      - Malik keeps moving Mr. Esposito's pieces by mistake.
+      - Malik should let Mr. Esposito win the game.
+      - Malik needs to buy a brand-new chessboard.
+      evidence: You are playing my moves, not yours
+    - kind: write
+      ask: Why does the author say the year seemed to have "passed only for Malik"?
+      sample: Mr. Esposito looks exactly the same, while Malik has changed and improved a lot.
+      evidence: as if the year had passed only for Malik
+    - kind: paragraph
+      ask: How does Malik's reaction to losing in paragraph 3 show who he was then? Use a quote.
+      sample: In paragraph 3, Malik is impatient and frustrated. He packed his pieces "so roughly that a bishop bounced
+        onto the gravel," which shows his temper. He also "pretended not to hear" the advice, so he was not yet ready
+        to learn.
+      rubric: a claim about Malik, exact quotes from paragraph 3, and what they reveal
+      evidence: so roughly that a bishop bounced onto the gravel
+
+- id: a12-backward-from-first
+  title: Backward from First
+  genre: story
+  text: |
+    The trophy stood slightly crooked on the kitchen table, with a gold plate that read "First
+    Place, Regional Science Fair." Zoe's mother had already photographed it from eleven different
+    angles.
+
+    The night before the fair, Zoe had sat on the garage floor at midnight, gluing the last label
+    onto her display board while her father held a flashlight and pretended he was not tired. The
+    board leaned against the lawnmower, covered in charts that she had redrawn three times.
+
+    A week before that, the experiment had failed completely. Her little water filters, built from
+    sand, charcoal, and gravel layered inside plastic bottles, produced water that was murkier than
+    when it went in, and Zoe had sat down on the back steps and refused to speak to anyone for an
+    entire hour.
+
+    A month before that, she had chosen the project after visiting her grandfather's farm, where the
+    well water tasted faintly of rust and her grandfather joked that it built character.
+
+    And at the very beginning, long before any of it, there had been a rainy afternoon when Zoe was
+    eight. She had poured muddy water through a coffee filter and watched, astonished, as a clear
+    thin stream trickled into the cup below. She had run through the house shouting that she had
+    invented clean water, and nobody had the heart to tell her otherwise.
+
+    Looking at the trophy now, Zoe thought less about the gold plate than about that coffee filter.
+    She decided that the most important part of any experiment is the moment when somebody first
+    wonders whether it might work.
+  pages:
+  - focus: 'structure: told in reverse'
+    questions:
+    - kind: mc
+      ask: In what order does the author tell the events?
+      choices:
+      - from the most recent event back to the very beginning
+      - from the beginning straight through to the end
+      - in two timelines that switch back and forth
+      - in a random order that doesn't matter
+      evidence: And at the very beginning, long before any of it
+    - kind: quote
+      ask: Which sentence signals that the story is moving further into the past?
+      choices:
+      - A week before that, the experiment had failed completely.
+      - Looking at the trophy now
+      - Zoe's mother had already photographed it from eleven different angles.
+      - The board leaned against the lawnmower, covered in charts that she had redrawn three times.
+      evidence: A week before that, the experiment had failed completely.
+    - kind: paragraph
+      ask: Why might the author tell Zoe's story backward? Use a quote.
+      sample: Telling it backward makes the trophy less important than where it came from. We start with the prize
+        and keep moving back to "a rainy afternoon when Zoe was eight." By ending there, the author shows that the
+        real beginning was curiosity, the day she believed she "had invented clean water."
+      rubric: a claim about the effect, an exact quote from the beginning or the end, and what the order shows
+      evidence: a rainy afternoon when Zoe was eight
+  - focus: word choice and tone
+    look_for: how Zoe feels at each step
+    questions:
+    - kind: mc
+      ask: Why does Zoe's grandfather joke that the rusty water "built character"?
+      choices:
+      - He makes light of a real problem with humor.
+      - He thinks the water is perfectly clean.
+      - He wants Zoe to give up her project.
+      - He believes rust makes people grow taller.
+      evidence: her grandfather joked that it built character
+    - kind: write
+      ask: How did Zoe react when her filters failed a week before the fair?
+      sample: She was so discouraged that she sat on the back steps and would not talk for an hour.
+      evidence: refused to speak to anyone for an entire hour
+    - kind: paragraph
+      ask: What idea does the last sentence state, and how does the coffee filter support it? Use a quote.
+      sample: The last sentence says that curiosity is the most important part of any experiment. Zoe thinks "less
+        about the gold plate than about that coffee filter." The eight-year-old who watched "a clear thin stream"
+        in amazement is where her whole project really began.
+      rubric: a claim about the idea, exact quotes about the trophy and the filter, and how they connect
+      evidence: less about the gold plate than about that coffee filter
+
+- id: a13-five-rooms
+  title: Five Rooms
+  genre: story
+  text: |
+    The kitchen went first. Ayaan's mother wrapped every plate in newspaper while his father labeled
+    boxes in thick black letters, and by noon the room where the family had eaten ten years of
+    breakfasts echoed like an empty gymnasium.
+
+    The living room went next. When the sofa was carried out, Ayaan found two library cards, a
+    marble, and a birthday candle shaped like the number seven, all hidden in the dust where the
+    cushions used to rest.
+
+    His little sister's room took the longest, because she insisted on saying goodbye to each
+    glow-in-the-dark star before peeling it carefully from the ceiling. She tucked the stars into an
+    envelope and announced that she would put them on her new ceiling in exactly the same shapes.
+
+    His own room took only twenty minutes. Ayaan stood in the doorway afterward, studying the pale
+    rectangle on the wall where his map of the world had hung, and realized he had never noticed how
+    much sunlight came through the window in the afternoon.
+
+    The last room was the porch. The whole family sat on the steps together, eating cold pizza from
+    the box, because every chair was already loaded in the truck. Nobody said much, but nobody
+    hurried either, and the sun sank slowly behind the maple at the end of the yard.
+
+    At the new house that evening, the rooms were bare and smelled of fresh paint. Ayaan's sister
+    climbed onto a stepladder with her envelope of stars, and Ayaan held the ladder steady while she
+    arranged them, one by one, in exactly the same shapes.
+  pages:
+  - focus: 'structure: one room at a time'
+    questions:
+    - kind: mc
+      ask: How does the author organize this moving-day story?
+      choices:
+      - Each paragraph covers one room, in the order it was emptied.
+      - Each paragraph is a different family member's diary.
+      - The story moves backward from the new house.
+      - The story switches between two different families.
+      evidence: The kitchen went first.
+    - kind: quote
+      ask: Which sentence sets up the ending in the new house?
+      choices:
+      - She tucked the stars into an envelope and announced that she would put them on her new ceiling in exactly
+        the same shapes.
+      - The last room was the porch.
+      - His own room took only twenty minutes.
+      - The living room went next.
+      evidence: She tucked the stars into an envelope and announced that she would put them on her new ceiling in
+        exactly the same shapes.
+    - kind: paragraph
+      ask: How does the ending show that the family carries home with them? Use a quote.
+      sample: The ending shows that home is made of people and memories, not rooms. The sister arranges her stars
+        "in exactly the same shapes," rebuilding her old ceiling. Ayaan "held the ladder steady," so the family's
+        care for each other moves to the new house too.
+      rubric: a claim about home, an exact quote from the ending, and how it shows what the family keeps
+      evidence: held the ladder steady

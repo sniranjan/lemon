@@ -1,0 +1,63 @@
+{
+  "id": "EN-R9-A-002",
+  "subject": "english",
+  "level": "R9",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 2,
+  "variant": 1,
+  "seed": 4726811883787620445,
+  "title": "The Second Bell",
+  "parent_tip": "Pick one strong word. What does it hint that a plain one can't?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "a01-the-second-bell",
+      "set": 0,
+      "side": "questions",
+      "genre": "story",
+      "page_before": 1,
+      "continued": []
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "Why does the author open in the wings and then jump back eight months?",
+      "choices": [
+        "to show the recital matters less than her brother's complaints",
+        "to explain how the auditorium was built",
+        "to build tension before showing what the moment cost her",
+        "to prove that Priya never practiced the hard section"
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which sentence best shows the story returning from the past to the present?",
+      "choices": [
+        "The opening went smoothly.",
+        "Eight months earlier, she had nearly quit.",
+        "Now, in the dim wings, that memory seemed impossibly distant",
+        "In March, the measures finally untangled."
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "paragraph",
+      "n": 3,
+      "ask": "How does the flashback change the way we read the recital at the end? Use a quote.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. C (to build tension before showing what the moment cost her)",
+    "2. C (Now, in the dim wings, that memory seemed impossibly distant)",
+    "3. Sample: The flashback turns the recital into the end of a long struggle instead of a single performance. Because we know she \"repeated the same twelve measures\" night after night, the moment they \"passed in a few seconds\" feels like a victory. Without the flashback, those seconds would seem ordinary. Full answer: a claim about the effect, an exact quote from the flashback or the recital, and why it changes the ending"
+  ],
+  "new_words": [],
+  "review_words": []
+}

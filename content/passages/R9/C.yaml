@@ -1,0 +1,1005 @@
+# Whales Reading, section C "The Art of Persuasion" (pages 101–150): an author's point of view and
+# the rhetoric that advances it (RI.9-10.6), and evaluating the argument: is the reasoning valid, is
+# the evidence relevant and sufficient (RI.9-10.8). Original speeches, essays and letters (ours), each
+# by a fictional speaker arguing a kid-sized, non-political point. Every text has one deliberate weak
+# spot (a hasty generalization, a bandwagon appeal, an either/or, an unsupported claim, an irrelevant
+# statistic or a false cause) that the second question set asks the reader to find and judge.
+# Schema: ws/spreads.py (passage_spread). Passages c01–c12 serve 2 spreads, c13 one (25 spreads).
+# mc: 4 choices, the first is right. quote: 4 sentences copied exactly from the text, the first is right.
+# write: 2 lines + sample. paragraph: 3–4 sentences, sample quotes the text in double quotes + rubric.
+# `evidence`: words copied exactly from the passage.
+
+- id: c01-start-at-eight
+  title: Start the Day at Eight
+  genre: speech
+  text: |
+    Good morning, classmates and teachers. At seven-fifteen every weekday, while the sky is still the
+    color of dishwater, most of us are already sitting at our desks, trying to understand the water
+    cycle with eyes that refuse to stay open.
+
+    How much can anyone learn while half asleep? Our student council surveyed 240 students last month,
+    and nearly three out of four said they feel tired during first period at least three days a week.
+    Teachers have noticed the same pattern: yawns during attendance, blank stares during explanations,
+    and homework questions answered with uncomfortable silence.
+
+    My cousin attends a school in another state that moved its first bell to eight o'clock last year.
+    She told me that her grades improved almost immediately, which proves that a later start would
+    raise grades at our school as well.
+
+    Some people argue that a later start would push back sports practices and leave less time for
+    homework in the evening. That concern is fair, but the schedule committee has already shown that
+    practices could begin at three-forty-five instead of three-fifteen, a difference of only half an
+    hour. Athletes would lose almost nothing, and everyone else would gain mornings that begin with
+    genuine concentration instead of exhaustion.
+
+    A later start would not make school easier; it would make us readier. We would arrive alert instead
+    of exhausted, curious instead of cranky, and prepared instead of merely present.
+
+    On Thursday evening, the school board will hear comments from the public. Please come, bring your
+    parents, and ask the board to let our school day begin when our minds actually do.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What is the speaker's main purpose?
+          choices:
+            - to urge a later school start
+            - to explain the council survey
+            - to complain about homework
+            - to describe a cousin's school
+          evidence: ask the board to let our school day begin when our minds actually do
+        - kind: quote
+          ask: Which sentence uses parallel structure to sum up the speaker's point?
+          choices:
+            - We would arrive alert instead of exhausted, curious instead of cranky, and prepared instead of merely present.
+            - How much can anyone learn while half asleep?
+            - Good morning, classmates and teachers.
+            - On Thursday evening, the school board will hear comments from the public.
+          evidence: We would arrive alert instead of exhausted, curious instead of cranky, and prepared instead of merely present.
+        - kind: paragraph
+          ask: How does the speaker answer the worry about sports practices? Is the answer convincing?
+          sample: >-
+            The speaker admits the worry is real, saying "That concern is fair," which sounds reasonable.
+            Then the speaker answers it with a specific fact: practices would move back "a difference of
+            only half an hour." The answer is convincing because it shows the cost is small.
+          rubric: names the counterclaim, quotes the rebuttal, and judges whether the fact answers the worry
+          evidence: a difference of only half an hour
+    - focus: evaluating the argument
+      look_for: the claim with the weakest support
+      questions:
+        - kind: mc
+          ask: Which part of the argument has the weakest support?
+          choices:
+            - the claim that a cousin's grades prove grades would rise here
+            - the survey of 240 students about feeling tired
+            - the plan to start practices at three-forty-five
+            - the invitation to the school board meeting
+          evidence: which proves that a later start would raise grades at our school as well
+        - kind: write
+          ask: Why is the student survey stronger evidence than the story about the cousin?
+          sample: The survey asked 240 students at this school, while the cousin is only one person at a different school.
+          evidence: Our student council surveyed 240 students last month
+        - kind: paragraph
+          ask: Does the cousin's story prove that a later start would raise grades at this school? Explain.
+          sample: >-
+            The cousin's story does not prove it, because it is one example from another school. Her
+            grades "improved almost immediately," but many other things could explain that. Saying this
+            "proves that a later start would raise grades" is a hasty generalization from a single case.
+          rubric: a clear judgment, a quote from the cousin paragraph, and why one example is not enough
+          evidence: She told me that her grades improved almost immediately
+
+- id: c02-keep-the-lights-on
+  title: Keep the Lights On
+  genre: letter
+  text: |
+    To the Editor: Last week the town council proposed closing the Linden Public Library at five
+    o'clock instead of eight to save money on electricity and staff. As the librarian who has unlocked
+    those doors every morning for nineteen years, I urge the council to reconsider.
+
+    Consider who actually uses the library after five. On a typical Tuesday night, I see students
+    finishing research projects, parents reading picture books with toddlers, and adults practicing for
+    job interviews on our public computers. For many of these visitors, the evening is the only free
+    time they have, because school and work fill their days.
+
+    Where else can a ninth grader without a home computer type an essay at seven o'clock? Where else can
+    a tired parent find a free story time after a long shift? For families without internet access or a
+    quiet place to study, the library is not a luxury but an essential public resource.
+
+    Our library owns more than forty thousand books, more than any other building in Linden. That
+    collection represents decades of careful selection by dedicated librarians and generous donors.
+
+    The council says the change would save about twelve thousand dollars a year. That is a real amount
+    of money, and I do not dismiss it. However, our Friends of the Library group has offered to raise
+    half of that sum through a used-book sale, which would sharply reduce the cost of staying open.
+
+    A library that closes at five serves only the people who are free at three. Please keep the lights
+    on until eight, and let the whole town keep reading.
+  pages:
+    - focus: point of view and rhetoric
+      questions:
+        - kind: mc
+          ask: What does the writer want the library to do?
+          choices:
+            - stay open until eight
+            - close at five to save money
+            - buy more new books
+            - move to a bigger building
+          evidence: Please keep the lights on until eight
+        - kind: quote
+          ask: Which sentence is a rhetorical question that appeals to the reader's feelings?
+          choices:
+            - Where else can a tired parent find a free story time after a long shift?
+            - Consider who actually uses the library after five.
+            - That is a real amount of money, and I do not dismiss it.
+            - Our library owns more than forty thousand books, more than any other building in Linden.
+          evidence: Where else can a tired parent find a free story time after a long shift?
+        - kind: paragraph
+          ask: How does the writer earn readers' trust? Use evidence from the letter.
+          sample: >-
+            The writer builds trust by showing long experience as the librarian who "has unlocked those
+            doors every morning for nineteen years." The writer also treats the other side fairly by saying
+            "I do not dismiss it" about the money. Readers trust someone who knows the library and is honest.
+          rubric: a claim about the writer's credibility, one or two exact quotes, and how each builds trust
+          evidence: unlocked those doors every morning for nineteen years
+    - focus: evaluating the argument
+      look_for: a fact that does not help the case
+      questions:
+        - kind: mc
+          ask: Which detail does the least to support keeping the library open in the evening?
+          choices:
+            - the library owns more than forty thousand books
+            - students finish research projects on Tuesday nights
+            - adults practice for job interviews on the computers
+            - the Friends of the Library offered to raise money
+          evidence: Our library owns more than forty thousand books
+        - kind: write
+          ask: Why doesn't the number of books support the claim about evening hours?
+          sample: The library would keep its books either way; the number says nothing about who needs it at night.
+          evidence: Our library owns more than forty thousand books, more than any other building in Linden.
+        - kind: paragraph
+          ask: How does the writer answer the council's argument about money? Is the answer strong?
+          sample: >-
+            The writer admits the savings are "a real amount of money," so the council is not ignored.
+            The answer is that a used-book sale could "raise half of that sum," which cuts the cost. This
+            answer is fairly strong, but it covers only half of the money.
+          rubric: names the council's reason, quotes the writer's answer, and judges whether it is enough
+          evidence: raise half of that sum through a used-book sale
+
+- id: c03-make-something-new
+  title: Make Something New
+  genre: speech
+  text: |
+    Thank you for inviting me to your invention fair. I spent thirty-one years designing bridges, and
+    every one of them began the same way: with somebody looking at a problem and refusing to accept
+    that it could not be solved.
+
+    Walking through this gym today, I have seen a backpack that lights up for cyclists, a lunch tray
+    that sorts food scraps for composting, and a bird feeder that keeps squirrels away. Not one of
+    these inventions is perfect, but every single one of them is a beginning. Each started with a
+    student who noticed something irritating, inconvenient, or wasteful and decided to do something
+    about it.
+
+    Some of you may think that inventing is only for geniuses with expensive laboratories. I understand
+    that worry, but most useful inventions start with ordinary materials and an ordinary irritation.
+    The first model of my favorite bridge design was built from craft sticks on my kitchen table.
+
+    Inventing teaches lessons that no textbook can. It teaches you to observe carefully, to test
+    patiently, and to fail without quitting. When your first model collapses, you learn more than you
+    would from a hundred correct answers. Engineers, scientists, and artists depend on exactly these
+    habits throughout their professional lives.
+
+    In the end, there are only two kinds of people: those who make things and those who simply use what
+    others make. I hope every one of you chooses to be a maker.
+
+    So here is my challenge. Before the school year ends, find one small problem in your home, your
+    school, or your neighborhood, and build something, however clumsy, that might solve it.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What does the speaker most want the students to do?
+          choices:
+            - build something that might solve a small problem
+            - become engineers who design large bridges
+            - buy better materials for the next invention fair
+            - fix the inventions that are not yet perfect
+          evidence: find one small problem in your home
+        - kind: quote
+          ask: Which sentence answers a counterclaim that some listeners might have?
+          choices:
+            - I understand that worry, but most useful inventions start with ordinary materials and an ordinary irritation.
+            - Thank you for inviting me to your invention fair.
+            - So here is my challenge.
+            - I hope every one of you chooses to be a maker.
+          evidence: I understand that worry, but most useful inventions start with ordinary materials and an ordinary irritation.
+        - kind: paragraph
+          ask: Why does the speaker mention the craft sticks on the kitchen table? Use a quote.
+          sample: >-
+            The speaker tells this small story to prove that inventing does not need a fancy laboratory.
+            The speaker's bridge design began with "craft sticks on my kitchen table," which shows that even an
+            expert starts simply. This makes inventing feel possible for every student listening.
+          rubric: a claim about the anecdote's purpose, an exact quote, and its effect on the audience
+          evidence: built from craft sticks on my kitchen table
+    - focus: evaluating the argument
+      look_for: a choice that leaves out other options
+      questions:
+        - kind: mc
+          ask: What is the flaw in saying there are "only two kinds of people"?
+          choices:
+            - It ignores that most people both make and use things.
+            - It uses too many numbers to prove its point.
+            - It tells a story that happened long ago.
+            - It repeats the same words three times.
+          evidence: there are only two kinds of people
+        - kind: write
+          ask: In paragraph 4, what does the phrase "fail without quitting" suggest about failure?
+          sample: It suggests failure is a normal step in learning, and that the important thing is to keep going.
+          evidence: to fail without quitting
+        - kind: paragraph
+          ask: Is the speaker's argument stronger in paragraph 4 or paragraph 5? Explain with evidence.
+          sample: >-
+            The argument is stronger in paragraph 4, which gives a reason anyone can test. Inventing
+            teaches you "to observe carefully, to test patiently, and to fail without quitting," and the
+            bridge story supports that. Paragraph 5 only offers an either/or choice that ignores people who
+            do both.
+          rubric: picks one paragraph, quotes it, and explains why its reasoning holds up better
+          evidence: to observe carefully, to test patiently, and to fail without quitting
+
+- id: c04-save-the-meadow
+  title: Save the Meadow
+  genre: speech
+  text: |
+    Good evening, neighbors; my name is Nora Quinlan, and for six years I have spent my Saturday
+    mornings pulling weeds, repairing trails, and picking up litter in Alder Creek Park. Tonight I am
+    asking you to vote against the plan to pave its northern meadow for a sixty-car parking lot.
+
+    Picture that meadow on a June evening, when children chase fireflies through the tall grass, families
+    spread blankets beneath the cottonwoods, and herons wade where the creek bends. Once asphalt covers
+    that ground, none of it will return.
+
+    The meadow also does quiet, practical work. During heavy storms, it soaks up rainwater that would
+    otherwise rush into the creek and flood the houses along Mill Street. After a storm last spring, our
+    volunteers measured the creek, and beside the meadow it rose two feet less than beside the paved
+    lot downstream. In other words, the meadow functions as a natural sponge, protecting property that
+    would be expensive and difficult to repair.
+
+    Supporters of the plan say visitors need more parking, and they are right that the lot fills up on
+    summer weekends. However, the town already owns an empty lot two blocks away, which could serve
+    visitors for a fraction of the cost. A clearly marked walking path along Elm Avenue could connect
+    that lot to the park entrance in less than five minutes.
+
+    Alder Creek is the most beautiful park in the entire state, and everyone knows it.
+
+    We protect the places we love not only because they are useful, but because they make us who we
+    are. Vote no on the parking plan, and keep the meadow wild for the next generation of firefly
+    chasers.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: Why does the speaker describe children, families and herons in paragraph 2?
+          choices:
+            - to show what paving would end
+            - to explain how floods happen
+            - to show the lot is too full
+            - to locate the empty town lot
+          evidence: Once asphalt covers that ground, none of it will return.
+        - kind: quote
+          ask: Which sentence appeals mainly to logic rather than to feelings?
+          choices:
+            - During heavy storms, it soaks up rainwater that would otherwise rush into the creek and flood the houses along Mill Street.
+            - Alder Creek is the most beautiful park in the entire state, and everyone knows it.
+            - Once asphalt covers that ground, none of it will return.
+            - Picture that meadow on a June evening
+          evidence: During heavy storms, it soaks up rainwater that would otherwise rush into the creek and flood the houses along Mill Street.
+        - kind: paragraph
+          ask: How does the speaker use both feelings and facts to argue for the meadow? Quote each.
+          sample: >-
+            The speaker first appeals to feelings with the image of children who "chase fireflies through
+            the tall grass." Then the speaker turns to facts, reporting that the creek "rose two feet less" beside
+            the meadow. Using both makes the case appeal to the heart and the mind.
+          rubric: one quote that appeals to feeling, one that gives a fact, and why using both helps
+          evidence: rose two feet less than beside the paved lot downstream
+    - focus: evaluating the argument
+      look_for: a claim that is never backed up
+      questions:
+        - kind: mc
+          ask: Which claim does the speaker give no evidence for?
+          choices:
+            - Alder Creek is the most beautiful park in the state.
+            - The meadow soaks up rainwater during storms.
+            - The current lot fills up on summer weekends.
+            - The town owns an empty lot two blocks away.
+          evidence: Alder Creek is the most beautiful park in the entire state, and everyone knows it.
+        - kind: write
+          ask: How does the speaker answer people who say visitors need more parking?
+          sample: The speaker agrees the lot fills up, but says the town's empty lot two blocks away could be used instead.
+          evidence: the town already owns an empty lot two blocks away
+        - kind: paragraph
+          ask: Which reason in the speech is the strongest? Explain why it is better supported than the others.
+          sample: >-
+            The strongest reason is that the meadow prevents floods. The volunteers measured that the
+            creek "rose two feet less than beside the paved lot downstream," which is real evidence. In
+            contrast, saying it is "the most beautiful park in the entire state" is only an opinion.
+          rubric: names one reason, quotes its evidence, and compares it with a weaker claim
+          evidence: rose two feet less than beside the paved lot downstream
+
+- id: c05-why-i-volunteer
+  title: Why I Volunteer
+  genre: essay
+  text: |
+    Every Saturday morning, I spend two hours sorting cans and boxes at the Eastside Food Pantry. When I
+    started last year, I expected the work to feel like a chore to finish before my weekend could
+    begin. Instead, it has become the part of the week I look forward to most, and I believe every
+    student should find a way to volunteer.
+
+    The first reason is simple: volunteering connects you to people you would never otherwise meet. At
+    the pantry, I have worked beside a retired bus driver, a college student studying chemistry, and a
+    grandmother who knows the price of every vegetable in the county. Their stories have taught me more
+    about our community's history and challenges than any textbook could.
+
+    Volunteering also builds skills that matter. I have learned to organize a storeroom, to explain a
+    task clearly to new helpers, and to stay calm when a delivery arrives an hour late. Teachers, coaches,
+    and employers consistently describe abilities like these as essential, whatever career a student
+    eventually chooses.
+
+    Some students argue that they are too busy with homework, sports, and family responsibilities to
+    volunteer. I understand, because my own schedule is crowded too, but volunteering does not require
+    a huge commitment; even one hour a month at an animal shelter or a park cleanup makes a difference.
+
+    Almost everyone in my grade volunteers somewhere now, so you should too.
+
+    Most importantly, volunteering changes how you see yourself. When a family thanks you for a box of
+    groceries, you realize that your time has real value. Find one hour, choose one cause, and give it a
+    try.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What is the writer's main claim?
+          choices:
+            - Students should volunteer.
+            - Pantries need more cans.
+            - Students are too busy to help.
+            - Volunteering ruins weekends.
+          evidence: I believe every student should find a way to volunteer
+        - kind: quote
+          ask: Which sentence best shows the writer responding to an opposing view?
+          choices:
+            - I understand, because my own schedule is crowded too, but volunteering does not require a huge commitment
+            - Volunteering also builds skills that matter.
+            - Every Saturday morning, I spend two hours sorting cans and boxes at the Eastside Food Pantry.
+            - Most importantly, volunteering changes how you see yourself.
+          evidence: I understand, because my own schedule is crowded too, but volunteering does not require a huge commitment
+        - kind: paragraph
+          ask: How does the writer's own experience at the pantry make the essay more persuasive?
+          sample: >-
+            The writer's experience makes the essay believable because it comes from real Saturdays at the
+            pantry. The writer first expected "a chore," but it became "the part of the week I look
+            forward to most." This change shows readers that they might feel the same way.
+          rubric: a claim about the writer's experience, one or two exact quotes, and their effect on readers
+          evidence: the part of the week I look forward to most
+    - focus: evaluating the argument
+      look_for: a reason that relies on the crowd
+      questions:
+        - kind: mc
+          ask: What is wrong with the reasoning in paragraph 5?
+          choices:
+            - It says you should do something just because others do.
+            - It gives too many examples of skills to learn.
+            - It describes the food pantry in too much detail.
+            - It admits that students have busy schedules.
+          evidence: Almost everyone in my grade volunteers somewhere now, so you should too.
+        - kind: write
+          ask: What evidence does the writer give that volunteering builds useful skills?
+          sample: The writer learned to organize a storeroom, explain tasks to new helpers, and stay calm when deliveries were late.
+          evidence: I have learned to organize a storeroom
+        - kind: paragraph
+          ask: Would the essay be stronger without paragraph 5? Explain your answer with evidence.
+          sample: >-
+            The essay would be stronger without paragraph 5. The claim that "Almost everyone in my grade
+            volunteers somewhere now" is a bandwagon appeal, not a reason. The other paragraphs give real reasons, such
+            as learning "to stay calm when a delivery arrives an hour late."
+          rubric: a clear judgment, a quote from paragraph 5 and one stronger reason, and why
+          evidence: Almost everyone in my grade volunteers somewhere now
+
+- id: c06-dear-mateo
+  title: Dear Mateo
+  genre: letter
+  text: |
+    Dear Mateo, your mother tells me you are deciding whether to join the school orchestra next fall,
+    and that you worry the cello will take too much of your time. Since you asked for my opinion, I will
+    give it to you honestly, the way I always have.
+
+    When I was your age, I begged my parents for a trumpet, and for the first six months I sounded like a
+    goose with a head cold. Yet I kept playing, partly out of stubbornness and partly to prove my
+    neighbors wrong, and by spring I could play a whole melody without a single squeak.
+
+    Learning an instrument teaches patience in a way that few other activities can. Nobody becomes
+    skillful in a week; you improve one measure at a time, and you learn to trust that small efforts add
+    up. That lesson has guided me through everything from restoring an overgrown garden to managing a
+    small business of my own.
+
+    Everyone who plays an instrument is better at math, so your grades will soar.
+
+    I know you worry about losing time for soccer and friends. That concern is reasonable, but rehearsals
+    happen during the school day, and twenty minutes of practice at home is less time than you now spend
+    choosing what to watch.
+
+    Music also gives you a way to belong, because in an orchestra your part matters, but only together
+    with everyone else's. Musicians learn to listen carefully, to adjust to one another, and to contribute
+    without overwhelming their neighbors, which are valuable abilities anywhere.
+
+    Try it for one year, my dear, and if you still dislike it after that, you will have lost very little.
+    With love, Grandma Lucia
+  pages:
+    - focus: purpose and tone
+      questions:
+        - kind: mc
+          ask: Which word best describes the tone of Grandma Lucia's letter?
+          choices:
+            - warm and encouraging
+            - angry and demanding
+            - bored and distant
+            - nervous and confused
+          evidence: Try it for one year, my dear
+        - kind: write
+          ask: Why does Grandma Lucia describe herself sounding like "a goose with a head cold"?
+          sample: The funny picture shows that she was bad at first too, so Mateo shouldn't fear being a beginner.
+          evidence: I sounded like a goose with a head cold
+        - kind: paragraph
+          ask: How does Grandma Lucia answer Mateo's worry about time? Is her answer persuasive?
+          sample: >-
+            She first calls Mateo's concern "reasonable," so Mateo feels heard. Then she points out that
+            rehearsals happen "during the school day" and that practice takes less time than choosing what
+            to watch. Her answer is persuasive because it compares the cost to a habit Mateo already has.
+          rubric: names Mateo's worry, quotes her answer, and judges how well it answers it
+          evidence: rehearsals happen during the school day
+    - focus: evaluating the argument
+      look_for: a promise that goes too far
+      questions:
+        - kind: mc
+          ask: Which claim in the letter is least supported?
+          choices:
+            - Everyone who plays an instrument is better at math.
+            - Learning an instrument takes patience.
+            - Rehearsals happen during the school day.
+            - She improved on the trumpet by spring.
+          evidence: Everyone who plays an instrument is better at math, so your grades will soar.
+        - kind: write
+          ask: What reason does Grandma Lucia give for saying that music helps you belong?
+          sample: In an orchestra each part matters, but only when it joins everyone else's part.
+          evidence: in an orchestra your part matters, but only together with everyone else's
+        - kind: paragraph
+          ask: Should Mateo trust the promise that "your grades will soar"? Explain using the letter.
+          sample: >-
+            Mateo should not believe it, because the letter gives no evidence for it. The claim that
+            "Everyone who plays an instrument is better at math" is far too broad. Her stronger reasons
+            are about patience and belonging, which she supports with her own trumpet story.
+          rubric: a clear judgment, the exact claim quoted, and why it is not supported
+          evidence: Everyone who plays an instrument is better at math
+
+- id: c07-grow-a-garden-here
+  title: Grow a Garden Here
+  genre: speech
+  text: |
+    Good evening, and thank you for staying after such a long day. I teach seventh-grade science, and
+    tonight I am proposing that we transform the empty lot behind the gym into a school garden.
+
+    Right now, that lot holds mostly gravel, broken chalk, and a lonely basketball hoop without a net.
+    With a few raised beds, a rain barrel, and a small shed, it could become an outdoor classroom where
+    students investigate soil, insects, weather, and plant growth with their own hands instead of only
+    reading about them in textbooks.
+
+    I have watched what happens when students learn this way. Last spring, my class grew bean plants on
+    the windowsill, and a student who rarely spoke in class began measuring her plant every morning and
+    recording the results without being asked. Imagine what an entire garden could accomplish.
+
+    A school garden in southern Florida produced more than nine hundred pounds of vegetables in a single
+    year.
+
+    Some parents have asked who would care for the garden during summer vacation. That is a fair
+    question, and I have an answer: twelve families have already volunteered to take turns watering,
+    and the community center has offered to lend us its volunteers in July.
+
+    The cost is modest. Our estimate for lumber, soil, seeds, and tools is about two thousand dollars,
+    and the hardware store on Main Street has promised to donate a third of the supplies.
+
+    A garden teaches patience, responsibility, and wonder all at once. Help us plant it this spring,
+    and let our students watch something grow because of their own careful work.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What is the speaker asking the audience to do?
+          choices:
+            - support a school garden
+            - repair the basketball hoop
+            - buy vegetables from Florida
+            - grow beans on windowsills
+          evidence: tonight I am proposing that we transform the empty lot behind the gym into a school garden
+        - kind: quote
+          ask: Which sentence answers a question that some parents have raised?
+          choices:
+            - That is a fair question, and I have an answer
+            - The cost is modest.
+            - Imagine what an entire garden could accomplish.
+            - Right now, that lot holds mostly gravel
+          evidence: That is a fair question, and I have an answer
+        - kind: paragraph
+          ask: Why does the speaker tell the story about the quiet student and her bean plant?
+          sample: >-
+            The story shows that hands-on learning can change how a student acts. A student "who rarely
+            spoke in class" began measuring her plant "without being asked." The speaker uses this small
+            example to make listeners imagine what a whole garden could do.
+          rubric: a claim about the anecdote's purpose, an exact quote, and its effect on the audience
+          evidence: without being asked
+    - focus: evaluating the argument
+      look_for: a number that does not fit this school
+      questions:
+        - kind: mc
+          ask: Why is the Florida garden a weak piece of evidence?
+          choices:
+            - Its climate and size may be nothing like this school's.
+            - It produced too few vegetables to count.
+            - It was described by a seventh-grade student.
+            - It was paid for by the hardware store.
+          evidence: A school garden in southern Florida produced more than nine hundred pounds of vegetables
+        - kind: write
+          ask: What evidence shows the garden would be cared for in the summer?
+          sample: Twelve families volunteered to water it, and the community center will lend volunteers in July.
+          evidence: twelve families have already volunteered to take turns watering
+        - kind: paragraph
+          ask: Is the speaker's argument about cost convincing? Use evidence to explain.
+          sample: >-
+            The argument about cost is convincing because it uses specific numbers. The speaker estimates
+            "about two thousand dollars" and says the hardware store will "donate a third of the
+            supplies." These details show that the plan has been carefully worked out.
+          rubric: a clear judgment, one or two exact quotes about cost, and why they persuade or not
+          evidence: about two thousand dollars
+
+- id: c08-read-to-a-little-one
+  title: Read to a Little One
+  genre: essay
+  text: |
+    On Wednesday afternoons, I walk across the parking lot to Brookside Elementary and read picture books
+    to a five-year-old named Felix. He usually chooses the same story about a bear who loses his hat, and
+    he laughs at the same pages every single time. After three months of these visits, I am convinced
+    that every middle school student should read aloud to a younger child.
+
+    Reading aloud gives young children something they cannot get from a screen: a patient listener who
+    answers their questions. When Felix asks why the bear does not simply buy a new hat, we stop and
+    discuss it, and those conversations teach him that stories are for thinking, not only for watching.
+
+    The benefits flow in both directions. Reading to Felix has made me a more expressive reader, because
+    I have learned to slow down, change my voice for each character, and pause before the surprise on
+    the next page. Older students who struggle with reading often gain confidence when their audience
+    believes they are experts.
+
+    Some teachers worry that the program would take time away from our own lessons. However, the visits
+    last only thirty minutes a week and could replace part of our weekly study hall, which most of us
+    spend waiting for the bell.
+
+    If we do not start a reading-buddy program, these children will grow up hating books.
+
+    Our principal will decide in March whether to expand the program to every eighth-grade class. Please
+    sign the petition in the front office, and give a younger child a reason to look forward to
+    Wednesdays.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What does the writer want readers to do?
+          choices:
+            - sign the petition
+            - skip study hall
+            - buy Felix a book
+            - teach kindergarten
+          evidence: Please sign the petition in the front office
+        - kind: write
+          ask: In paragraph 2, what does the writer mean by "stories are for thinking, not only for watching"?
+          sample: Stories are meant to be talked about and questioned, not just enjoyed without thinking.
+          evidence: stories are for thinking, not only for watching
+        - kind: paragraph
+          ask: How does the writer show that reading aloud helps the older student too? Use a quote.
+          sample: >-
+            The writer says "The benefits flow in both directions" and then gives a personal example. The
+            writer has become "a more expressive reader" by changing voices and pausing for surprises. This
+            shows that the program helps both the reader and the listener.
+          rubric: a claim about the older reader's benefit, an exact quote, and how it supports the argument
+          evidence: The benefits flow in both directions.
+    - focus: evaluating the argument
+      look_for: a sentence that offers only two choices
+      questions:
+        - kind: mc
+          ask: What is the flaw in paragraph 5?
+          choices:
+            - It pretends there are only two possible outcomes.
+            - It uses a statistic that is out of date.
+            - It quotes a teacher who disagrees.
+            - It gives too much detail about Felix.
+          evidence: If we do not start a reading-buddy program, these children will grow up hating books.
+        - kind: quote
+          ask: Which sentence best answers the teachers' worry about lost lesson time?
+          choices:
+            - However, the visits last only thirty minutes a week and could replace part of our weekly study hall
+            - The benefits flow in both directions.
+            - Some teachers worry that the program would take time away from our own lessons.
+            - Please sign the petition in the front office
+          evidence: However, the visits last only thirty minutes a week
+        - kind: paragraph
+          ask: Is the claim in paragraph 5 reasonable? Explain using evidence from the essay.
+          sample: >-
+            The claim is not reasonable, because it offers only two outcomes. Saying these children "will
+            grow up hating books" ignores parents, teachers, and libraries that also share stories. The
+            writer's argument is stronger with real examples, like Felix laughing "at the same
+            pages every single time."
+          rubric: a clear judgment, a quote from paragraph 5, and why the either/or reasoning fails
+          evidence: these children will grow up hating books
+
+- id: c09-what-losing-taught-us
+  title: What Losing Taught Us
+  genre: speech
+  text: |
+    Good evening, players, families, and the parents who drove us to every away game. Tonight I want to
+    talk about the season we actually had, not the one we imagined back in August.
+
+    We lost our first four games, including one miserable afternoon when we fell nine to nothing in the
+    pouring rain, on a field so muddy that our goalkeeper lost a shoe in the first ten minutes. On the
+    bus ride home nobody spoke, and I wondered privately whether this team would ever believe in itself,
+    because discouragement had settled over everyone like the cold drizzle streaking the windows.
+
+    But something changed after that game. Instead of blaming the weather or the referee, you started
+    asking more useful questions about your own performance. Why did we keep surrendering the ball in the middle of the field,
+    and why did our defenders freeze whenever the other team passed quickly? You stayed after practice, studied recordings of
+    your own mistakes, and repeated the same passing drill until your legs ached.
+
+    Every champion in history lost before learning to win.
+
+    By October, we were a different team: we did not win the league, but we won six of our last eight
+    games and lost the final match by a single goal against the strongest team in the region. More
+    importantly, you learned how to respond when things go badly, which is a skill you will need long
+    after you stop playing soccer.
+
+    So when you look at your trophy tonight, remember the muddy field and the missing shoe. Losing did
+    not define this season; learning did. Next August, let's bring that same determination back to the
+    field.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What is the coach's main point?
+          choices:
+            - Losing taught the team to improve.
+            - The referee made unfair calls.
+            - Muddy fields are bad for soccer.
+            - The team should have won the league.
+          evidence: Losing did not define this season; learning did.
+        - kind: quote
+          ask: Which sentence marks the turning point of the season?
+          choices:
+            - But something changed after that game.
+            - Losing did not define this season; learning did.
+            - Every champion in history lost before learning to win.
+            - Good evening, players, families, and the parents who drove us to every away game.
+          evidence: But something changed after that game.
+        - kind: paragraph
+          ask: Why does the coach include the detail about the goalkeeper's shoe? Explain its effect.
+          sample: >-
+            The detail about the goalkeeper who "lost a shoe in the first ten minutes" makes the worst
+            loss vivid and even a little funny. At the end, the coach asks players to "remember the muddy
+            field and the missing shoe," so the image becomes a symbol of how far they came. The small,
+            specific detail makes the team's growth easy to remember.
+          rubric: a claim about the detail's effect, quotes from the start and the end, and the link
+          evidence: our goalkeeper lost a shoe in the first ten minutes
+    - focus: evaluating the argument
+      look_for: a sweeping claim with no evidence
+      questions:
+        - kind: mc
+          ask: Why is paragraph 4 the weakest part of the speech?
+          choices:
+            - It makes a huge claim about all champions without proof.
+            - It describes the team's season in too much detail.
+            - It asks questions that the players could not answer.
+            - It thanks the parents for driving to away games.
+          evidence: Every champion in history lost before learning to win.
+        - kind: write
+          ask: What evidence does the coach give that the team really improved?
+          sample: The team won six of its last eight games and lost the final by only one goal.
+          evidence: we won six of our last eight games
+        - kind: paragraph
+          ask: Does the coach need paragraph 4 to prove the point? Explain with evidence.
+          sample: >-
+            The coach does not need paragraph 4, because the team's own season proves the point. They
+            lost their first four games but later "won six of our last eight games." That real evidence is
+            far stronger than the sweeping claim about "Every champion in history."
+          rubric: a clear judgment, a quote of real evidence and of the sweeping claim, and a comparison
+          evidence: Every champion in history lost before learning to win.
+
+- id: c10-walk-with-us
+  title: Walk With Us
+  genre: letter
+  text: |
+    Dear Principal Grant, we are writing on behalf of the Maple Street Walking Group, eleven families
+    who have walked our children to Cedar Hill School together every morning since September. We would
+    like the school to hold a walk-to-school day every Friday and to encourage families to leave their
+    cars at home.
+
+    Each morning our group gathers at the corner of Maple and Fourth at seven-thirty. The children talk,
+    trade jokes, and notice details they would never see from a back seat: a robin's nest in a hedge,
+    frost patterns on a mailbox, a neighbor's new puppy. By the time they reach the school doors, they
+    have already enjoyed conversation, exercise, and fresh air.
+
+    Fewer cars would also make drop-off safer and quicker. The line in front of the school often
+    stretches around the block, and impatient drivers sometimes pull into the crosswalk. Every family
+    that walks removes one car from that line.
+
+    Half the families on our street already walk, so clearly it is the right choice for everyone.
+
+    We recognize that walking is not possible for every family, since some children live too far away
+    and some parents must drive directly to work. For those families, we suggest a "park and walk" spot
+    at the library, three blocks from school, where volunteers would accompany children for the final
+    stretch.
+
+    Starting small would cost the school almost nothing. We ask only for an announcement in the
+    newsletter and a few volunteers in bright vests. Please help us make Friday mornings a little
+    slower, a little friendlier, and a lot safer. Sincerely, the Maple Street Walking Group
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What are the families asking the principal to do?
+          choices:
+            - hold a Friday walk day
+            - build a bigger parking lot
+            - move the school closer
+            - close the crosswalk
+          evidence: hold a walk-to-school day every Friday
+        - kind: quote
+          ask: Which sentence uses repetition to make the request memorable?
+          choices:
+            - Please help us make Friday mornings a little slower, a little friendlier, and a lot safer.
+            - Each morning our group gathers at the corner of Maple and Fourth at seven-thirty.
+            - Starting small would cost the school almost nothing.
+            - Every family that walks removes one car from that line.
+          evidence: a little slower, a little friendlier, and a lot safer
+        - kind: paragraph
+          ask: How do the writers answer families who cannot walk the whole way? Is the answer fair?
+          sample: >-
+            The writers admit that "walking is not possible for every family," which shows respect. They
+            suggest a "park and walk" spot at the library so those children can still join. The answer is
+            fair because it includes families instead of blaming them.
+          rubric: names the problem, quotes their solution, and judges whether it is fair
+          evidence: walking is not possible for every family
+    - focus: evaluating the argument
+      look_for: a reason that follows the crowd
+      questions:
+        - kind: mc
+          ask: What is wrong with the reasoning in paragraph 4?
+          choices:
+            - Something is not right just because many people do it.
+            - It gives a number that is far too small.
+            - It admits that some families must drive.
+            - It describes the morning walk too vividly.
+          evidence: Half the families on our street already walk, so clearly it is the right choice for everyone.
+        - kind: write
+          ask: Which reason in the letter is about safety? What evidence supports it?
+          sample: Fewer cars would make drop-off safer, because drivers now pull into the crosswalk.
+          evidence: impatient drivers sometimes pull into the crosswalk
+        - kind: paragraph
+          ask: Which reason in the letter is the most convincing? Explain why, using evidence.
+          sample: >-
+            The safety reason is the most convincing. The writers explain that the line "stretches around
+            the block" and that drivers "pull into the crosswalk," which are real problems. That reason is
+            much stronger than saying half the street already walks.
+          rubric: picks one reason, quotes its evidence, and compares it with a weaker reason
+          evidence: stretches around the block
+
+- id: c11-why-i-keep-a-journal
+  title: Why I Keep a Journal
+  genre: essay
+  text: |
+    For the past three years, I have ended almost every day the same way: with a spiral notebook, a
+    pencil, and ten quiet minutes before bed. I began keeping a journal because a teacher assigned it,
+    but I continued because it became the most valuable habit I have, and I think every student should
+    try it.
+
+    A journal is a place to think slowly in a world that moves quickly. During the day, thoughts arrive
+    and vanish before I can examine them, and writing forces me to finish my thoughts instead of
+    abandoning them halfway. When I write them down, I discover what I actually believe,
+    which is often different from what I said out loud at lunch.
+
+    Journals also preserve memories. Rereading entries from sixth grade, I found details I had completely
+    forgotten: the smell of the gym on the first day of school, the joke my brother told at dinner, the
+    nervousness before my first piano lesson. Without the journal, those moments would have disappeared.
+
+    People who keep journals make better decisions than people who do not.
+
+    Some students say they do not have time to write every night, or that they have nothing interesting
+    to say. I disagree with both objections. Ten minutes is shorter than most of the videos we watch,
+    and an ordinary day becomes interesting the moment you describe it carefully.
+
+    You do not need an expensive notebook or perfect sentences; you only need to begin. Tonight, before
+    you sleep, write down one thing that surprised you today, and notice where the words lead.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: What is the writer's purpose?
+          choices:
+            - to urge students to keep a journal
+            - to complain about a teacher's assignment
+            - to describe the gym on the first day
+            - to explain how to buy a good notebook
+          evidence: I think every student should try it
+        - kind: quote
+          ask: Which sentence uses a contrast to show why a journal is useful?
+          choices:
+            - A journal is a place to think slowly in a world that moves quickly.
+            - Journals also preserve memories.
+            - I disagree with both objections.
+            - Without the journal, those moments would have disappeared.
+          evidence: A journal is a place to think slowly in a world that moves quickly.
+        - kind: paragraph
+          ask: How do the details in paragraph 3 support the writer's claim about memories?
+          sample: >-
+            The details prove that writing things down saves moments we would forget. The writer found
+            "the smell of the gym on the first day of school" and a brother's joke in old entries. These
+            small, specific memories show that "Without the journal, those moments would have disappeared."
+          rubric: a claim about the details, one or two exact quotes, and how they support the claim
+          evidence: the smell of the gym on the first day of school
+    - focus: evaluating the argument
+      look_for: a claim that is never backed up
+      questions:
+        - kind: mc
+          ask: Which claim in the essay has no support at all?
+          choices:
+            - Journal keepers make better decisions.
+            - Writing helps the writer find beliefs.
+            - Old entries hold forgotten details.
+            - Ten minutes is shorter than most videos.
+          evidence: People who keep journals make better decisions than people who do not.
+        - kind: write
+          ask: How does the writer answer students who say they have nothing interesting to say?
+          sample: The writer says an ordinary day becomes interesting as soon as you describe it carefully.
+          evidence: an ordinary day becomes interesting the moment you describe it carefully
+        - kind: paragraph
+          ask: What would the writer need to prove that journal keepers "make better decisions"? Explain.
+          sample: >-
+            The writer would need evidence that compares people who keep journals with people who do not.
+            Right now, "People who keep journals make better decisions" is only a sentence with no example
+            or study behind it. Even one story of a decision the journal helped with would make it stronger.
+          rubric: names the unsupported claim, quotes it, and says what evidence would support it
+          evidence: People who keep journals make better decisions than people who do not.
+
+- id: c12-fix-it-dont-toss-it
+  title: Fix It, Don't Toss It
+  genre: speech
+  text: |
+    Good evening. Three years ago, my granddaughter's toaster stopped working, and she was about to throw
+    it in the trash. Instead, we opened it together on her kitchen table, found a loose wire, and
+    repaired it in twenty minutes. That small repair gave me an idea, and tonight I am asking for your
+    help to turn it into a monthly repair café at this library.
+
+    A repair café is simple. Once a month, volunteers who know how to mend clothing, adjust bicycles,
+    sharpen tools, or fix small appliances set up tables, and anyone in town can bring a broken item.
+    The volunteers do not just fix things; they demonstrate how, so knowledge passes from one person to
+    the next.
+
+    Our throwaway habits are expensive. Families replace lamps, chairs, and jackets that need only a
+    screw, a stitch, or a new cord, and every repaired item means one less thing in the landfill and one
+    less purchase for a family on a tight budget.
+
+    Our town has more hardware stores per person than any other town in the county.
+
+    Some residents worry that repairs could be unsafe or that inexperienced volunteers might make things
+    worse. That is a reasonable concern, so every volunteer would be trained, and electrical repairs
+    would be inspected by a licensed electrician who has already offered his Saturdays.
+
+    Repair is more than a skill; it is a way of respecting the things we own and the people who made
+    them. Join us on the first Saturday of next month, bring something broken, and leave with something
+    fixed.
+  pages:
+    - focus: purpose and rhetoric
+      questions:
+        - kind: mc
+          ask: Why does the speaker begin with the story of the toaster?
+          choices:
+            - to show how the idea began
+            - to sell toasters to families
+            - to warn about loose wires
+            - to praise the kitchen table
+          evidence: That small repair gave me an idea
+        - kind: quote
+          ask: Which sentence is the speaker's call to action?
+          choices:
+            - Join us on the first Saturday of next month, bring something broken, and leave with something fixed.
+            - A repair café is simple.
+            - Our throwaway habits are expensive.
+            - That is a reasonable concern, so every volunteer would be trained
+          evidence: Join us on the first Saturday of next month, bring something broken, and leave with something fixed.
+        - kind: write
+          ask: What does the speaker mean by saying repair is "a way of respecting the things we own"?
+          sample: Fixing something shows we value it and the work that went into making it, instead of wasting it.
+          evidence: it is a way of respecting the things we own
+    - focus: evaluating the argument
+      look_for: a fact that does not prove anything
+      questions:
+        - kind: mc
+          ask: Which detail is irrelevant to the argument for a repair café?
+          choices:
+            - the number of hardware stores per person
+            - the loose wire inside the toaster
+            - the training for every volunteer
+            - the licensed electrician on Saturdays
+          evidence: Our town has more hardware stores per person than any other town in the county.
+        - kind: write
+          ask: How does the speaker answer the worry that repairs could be unsafe?
+          sample: The speaker says every volunteer would be trained and a licensed electrician would inspect electrical repairs.
+          evidence: every volunteer would be trained
+        - kind: paragraph
+          ask: Is the speaker's evidence relevant and sufficient? Judge two pieces of it.
+          sample: >-
+            Most of the evidence is relevant, such as the toaster story, in which they "found a loose wire,
+            and repaired it in twenty minutes," showing that repairs can be quick and easy. However, the fact that the town has "more hardware
+            stores per person" has nothing to do with whether a repair café would work. The argument would
+            be stronger with that sentence removed.
+          rubric: judges two pieces of evidence, quotes both, and explains why each helps or does not
+          evidence: more hardware stores per person
+
+- id: c13-twenty-quiet-minutes
+  title: Twenty Quiet Minutes
+  genre: speech
+  text: |
+    Good morning, everyone. Think about the last time you read a book for twenty minutes without a
+    single interruption: no notification, no announcement, no one asking you a question. For many of us,
+    that moment is difficult to remember, and that is exactly why I am proposing a school-wide quiet
+    reading time every morning.
+
+    The plan is simple. From eight-ten to eight-thirty, every student and every adult in the building,
+    including the principal and the cafeteria staff, would set everything aside and read something they
+    chose themselves: a novel, a magazine, a comic, or even a cookbook.
+
+    Quiet reading builds the kind of concentration that the rest of the day demands. In a building full
+    of bells and noise, twenty calm minutes could help us settle our minds before mathematics, science,
+    and everything else. Too often, we rush from one class to the next without ever pausing to collect
+    our thoughts.
+
+    Last year, Ms. Chen's class read silently every morning, and that same year our school won the
+    regional spelling bee, so quiet reading clearly made us better spellers.
+
+    Some students may complain that twenty minutes is too long to sit still. I understand, but we
+    already spend that much time each morning wandering the hallways, finishing breakfast, and talking
+    about nothing in particular, so we would simply spend those minutes on something worthwhile.
+
+    Most importantly, reading for pleasure reminds us that books are not only assignments. When we choose
+    our own pages, we discover what we love. Vote yes on Friday, and give every one of us twenty quiet
+    minutes to start the day.
+  pages:
+    - focus: rhetoric and reasoning
+      questions:
+        - kind: mc
+          ask: Why does the speaker open by asking listeners to remember twenty uninterrupted minutes?
+          choices:
+            - to make them notice how rare quiet reading is
+            - to prove that the school has too many bells
+            - to describe the regional spelling bee
+            - to explain what the cafeteria staff reads
+          evidence: For many of us, that moment is difficult to remember
+        - kind: mc
+          ask: What is the flaw in the sentence about the spelling bee?
+          choices:
+            - Two things happening together doesn't prove one caused the other.
+            - It describes too many kinds of reading material.
+            - It admits that students may not want to sit still.
+            - It names the time when quiet reading would begin.
+          evidence: so quiet reading clearly made us better spellers
+        - kind: paragraph
+          ask: Is the speech convincing overall? Judge one strong reason and one weak one, with quotes.
+          sample: >-
+            The speech is mostly convincing. Its strong reason is that we already spend the time "wandering
+            the hallways, finishing breakfast," so quiet reading costs little. Its weak reason claims the
+            spelling bee win means "quiet reading clearly made us better spellers," which confuses timing
+            with cause.
+          rubric: an overall judgment, one quoted strong reason, one quoted weak reason, and why each is so
+          evidence: so quiet reading clearly made us better spellers

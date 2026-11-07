@@ -1,0 +1,947 @@
+# Whales Reading, section D "Prove It in a Paragraph" (pages 151–200): analytical paragraphs with a
+# claim, cited evidence and explanation (RL.9-10.1, W.9-10.1, W.9-10.9a). Original stories (ours).
+# Schema: ws/spreads.py (passage_spread). Two questions a page:
+# - part 1 (pages 151–170, the first 5 passages): an organizer (Claim / Evidence / Explanation) to plan,
+#   then the paragraph;
+# - part 2 (pages 171–200): a quote question (the strongest evidence for a claim), then the paragraph.
+# A paragraph sample has 5–7 sentences and quotes the text at least twice (exact words, in double
+# quotes); its rubric names the Claim:, Evidence: and Explanation: a full answer has.
+
+- id: d01-the-borrowed-camera
+  title: The Borrowed Camera
+  genre: story
+  text: |
+    Theo had borrowed his sister's camera without asking, which was the first mistake, and he had
+    carried it to the creek without its protective case, which was the second. By the time he noticed
+    the thin white scratch across the lens, the afternoon light had already faded from gold to ordinary
+    gray.
+
+    All evening he rehearsed explanations in the privacy of his bedroom. He could claim the scratch had
+    always been there, or that a branch had brushed against the camera while it rested on the porch
+    railing. Each version sounded perfectly reasonable when he whispered it to the ceiling, and each one
+    made his stomach tighten a little more.
+
+    Marisol had saved for that camera for almost a year, mowing lawns and walking the neighbors' dogs
+    through two humid summers. She photographed everything that other people ignored: puddles, fogged
+    bus windows, and their grandfather's weathered hands shelling peas.
+
+    At breakfast, Theo set the camera beside her cereal bowl before he could lose his nerve. "I took it
+    to the creek, and I scratched the lens," he said, keeping his eyes fixed on the table, "so I'm going
+    to pay for a new one."
+
+    Marisol turned the camera over slowly, studying the damage with an expression he could not read,
+    while the silence stretched so long that Theo began counting the seconds.
+
+    "You could have lied," she said at last, and Theo admitted that he had practiced several times.
+
+    To his astonishment, his sister laughed. Then she handed him the strap and announced that, since he
+    was paying for the lens anyway, he might as well learn how to use the camera properly.
+  pages:
+    - focus: a character's choice
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: why does Theo tell the truth? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Theo tells the truth because lying feels worse than facing Marisol.
+            - "\"each one made his stomach tighten a little more\""
+            - His guilt grows with every excuse, so honesty is the only relief.
+          evidence: each one made his stomach tighten a little more
+        - kind: paragraph
+          ask: Write your paragraph. Why does Theo tell the truth? Quote the story twice.
+          sample: >-
+            Theo tells the truth because he cannot live with his own excuses. All evening he invents
+            lies, but "each one made his stomach tighten a little more." His body reacts to every lie
+            before anyone else hears it. He also knows how hard Marisol worked, since she saved "for
+            almost a year" to buy the camera. That knowledge makes a lie feel even worse. In the end,
+            confessing is the only way Theo can feel at peace.
+          rubric: >-
+            Claim: one clear reason Theo confesses. Evidence: two exact quotes, such as his stomach
+            tightening and Marisol saving for a year. Explanation: how each quote shows his guilt growing.
+          evidence: each one made his stomach tighten a little more
+    - focus: how a relationship changes
+      look_for: how Marisol reacts, and why
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does Marisol's view of Theo change? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Marisol comes to trust Theo more because he was honest.
+            - "\"You could have lied,\" she said"
+            - She notices his honesty and rewards it by teaching him.
+          evidence: You could have lied
+        - kind: paragraph
+          ask: Write your paragraph. How does Marisol's view of Theo change? Quote the story twice.
+          sample: >-
+            Marisol's view of Theo changes from doubt to trust because he chooses honesty. At first she
+            studies the damage "with an expression he could not read," so her feelings are uncertain.
+            When she says, "You could have lied," she shows that she noticed the choice he made. Her
+            laugh and her offer to teach him prove that she now trusts him with her camera. The scratch
+            costs Theo money, but his honesty earns him something more valuable.
+          rubric: >-
+            Claim: how Marisol's view changes. Evidence: two exact quotes, one from before and one after
+            the confession. Explanation: why the confession causes the change.
+          evidence: You could have lied
+
+- id: d02-the-workbench
+  title: The Workbench
+  genre: story
+  text: |
+    When Grandpa Hiro moved into a small apartment across town, he gave Kenji the workbench that had
+    stood in his garage for forty years, its surface scarred with saw marks and pale rings from
+    countless cups of coffee.
+
+    Kenji was thrilled and immediately decided to build a bookshelf, sketching the design on a napkin
+    during dinner. The next morning he cut every board in a single hurried hour, and by noon he
+    discovered that none of the shelves fit between the sides.
+
+    Frustrated, he slammed the drawer of the workbench and heard something slide inside. It was a
+    notebook filled with Grandpa's careful handwriting, page after page of measurements, crossed-out
+    numbers, and small drawings of joints viewed from every angle. On the inside cover, in faded
+    pencil, someone had written three words: Measure twice, cut once.
+
+    Kenji called his grandfather that evening and confessed that he had wasted half the lumber.
+    Grandpa Hiro chuckled and explained that the notebook was full of his own mistakes, and that the
+    bench remembered every one of them.
+
+    The following weekend, Kenji started over with a fresh notebook beside the bench. He measured
+    each board twice, sometimes three times, and he wrote the numbers down before picking up the saw.
+    The bookshelf took him three Saturdays instead of one morning, but every shelf slid into place
+    with a satisfying click.
+
+    When Grandpa Hiro came to visit, he ran his thumb along a new saw mark on the old surface and
+    nodded slowly, as though the workbench had told him the whole story.
+  pages:
+    - focus: what an object stands for
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: what does the workbench stand for? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - The workbench stands for learning patiently from mistakes.
+            - "\"the bench remembered every one of them\""
+            - The bench carries Grandpa's lessons and now Kenji's too.
+          evidence: the bench remembered every one of them
+        - kind: paragraph
+          ask: Write your paragraph. What does the workbench stand for? Quote the story twice.
+          sample: >-
+            The workbench stands for the patience a person learns by making mistakes. Its surface is
+            "scarred with saw marks," which shows that years of work, and errors, are recorded on it.
+            Grandpa Hiro even says "the bench remembered every one of them," so the bench holds his
+            lessons. When Kenji adds a new saw mark, he joins that history of learning. The workbench
+            is more than furniture, because it passes patience from one generation to the next.
+          rubric: >-
+            Claim: what the workbench stands for. Evidence: two exact quotes, such as its scarred surface
+            and the bench remembering mistakes. Explanation: how each quote connects the bench to learning.
+          evidence: the bench remembered every one of them
+    - focus: how a character changes
+      look_for: how Kenji works before and after the notebook
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does Kenji change in this story? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Kenji changes from hurried to patient.
+            - "\"He measured each board twice\""
+            - Grandpa's notebook teaches him to slow down and plan.
+          evidence: He measured each board twice
+        - kind: paragraph
+          ask: Write your paragraph. How does Kenji change from the start to the end? Quote the story twice.
+          sample: >-
+            Kenji changes from an impatient builder into a careful one. At first he cuts "every board in a
+            single hurried hour," and none of the shelves fit. After reading the notebook, "He measured
+            each board twice, sometimes three times," which shows a completely new approach. The
+            notebook proves that even an expert made mistakes, so Kenji is willing to slow down. His
+            patience pays off when every shelf fits perfectly.
+          rubric: >-
+            Claim: how Kenji changes. Evidence: two exact quotes, one about the hurried first try and one
+            about measuring twice. Explanation: what causes the change and why it matters.
+          evidence: He measured each board twice
+
+- id: d03-the-handoff
+  title: The Handoff
+  genre: story
+  text: |
+    Nadia was the fastest runner on the relay team, and everyone knew it, including Nadia herself.
+    During practice she ran the anchor leg, waiting at the end of the exchange zone for Bea, who was
+    steady but noticeably slower, to deliver the baton.
+
+    The trouble was that Nadia never trusted the handoff. She kept glancing backward, reaching for the
+    baton too early, and twice that week it clattered onto the track while the coach winced on the
+    sidelines.
+
+    "You keep looking back because you secretly think Bea won't get there," the coach observed after
+    practice, "but a handoff works only when both runners genuinely believe in each other."
+
+    Nadia wanted to argue, but she remembered how Bea had stayed late every afternoon to practice her
+    starts, running the curve again and again after everyone else had gone home. She had always
+    assumed that Bea was simply slow, but she had never considered how hard Bea was working.
+
+    The next day, Nadia asked Bea to practice the exchange with her before warm-ups. They agreed on a
+    single word that Bea would call out, and Nadia promised to keep her eyes forward until she heard
+    it, although the first few attempts felt uncomfortably like stepping off a ledge in the dark.
+
+    At the district meet, Nadia heard Bea's voice, stretched her hand back without turning, and felt
+    the baton land firmly in her palm. She crossed the line first, and when she turned around, Bea was
+    the first teammate to reach her, laughing and out of breath.
+  pages:
+    - focus: why a character struggles
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: why does Nadia struggle with the handoff? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Nadia struggles because she doesn't trust Bea.
+            - "\"Nadia never trusted the handoff\""
+            - She looks back too early, so the baton drops.
+          evidence: Nadia never trusted the handoff
+        - kind: paragraph
+          ask: Write your paragraph. Why does Nadia struggle with the handoff? Quote the story twice.
+          sample: >-
+            Nadia struggles with the handoff because she does not trust her teammate. The story states
+            directly that "Nadia never trusted the handoff," so the problem is in her attitude, not her
+            speed. Because of that doubt, she keeps "reaching for the baton too early," and it falls.
+            Her pride as "the fastest runner" makes her assume that Bea will be the weak link. Until she
+            learns to trust Bea, her speed cannot help the team.
+          rubric: >-
+            Claim: the reason Nadia struggles. Evidence: two exact quotes, such as never trusting the
+            handoff and reaching too early. Explanation: how her lack of trust causes the dropped baton.
+          evidence: Nadia never trusted the handoff
+    - focus: how a relationship changes
+      look_for: what Nadia learns about Bea
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does Nadia's view of Bea change? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Nadia moves from doubting Bea to trusting her.
+            - "\"she had never considered how hard Bea was working\""
+            - Seeing Bea's effort makes Nadia respect her.
+          evidence: she had never considered how hard Bea was working
+        - kind: paragraph
+          ask: Write your paragraph. How does Nadia's view of Bea change? Quote the story twice.
+          sample: >-
+            Nadia's view of Bea changes from doubt to trust once she notices Bea's effort. She had
+            "assumed that Bea was simply slow," which shows how little she respected her. Then she
+            realizes "she had never considered how hard Bea was working," and her attitude shifts. At the
+            meet she reaches back "without turning," proving that she finally trusts Bea completely.
+            Respect for a teammate's effort turns two separate runners into a real team.
+          rubric: >-
+            Claim: how Nadia's view of Bea changes. Evidence: two exact quotes, one showing doubt and one
+            showing trust. Explanation: what Nadia realizes and how it changes her actions.
+          evidence: she had never considered how hard Bea was working
+
+- id: d04-the-snow-day-bakery
+  title: The Snow Day Bakery
+  genre: story
+  text: |
+    The blizzard arrived overnight, burying the town under two feet of snow and closing every school,
+    office, and store along Maple Street except one. Luis's mother owned the corner bakery, and she had
+    decided at dawn that the ovens would stay on.
+
+    Luis had planned to spend the day sledding with his friends on the hill behind the library, but
+    instead he found himself in a flour-dusted apron, shaping rolls while the windows fogged and the
+    radio reported that the plows were struggling to keep the main roads open.
+
+    "Who is going to buy bread today when nobody can even reach the door?" he grumbled.
+
+    His mother slid another tray into the oven and pointed toward the street, where a single orange
+    plow was grinding slowly past. She reminded him that those drivers had been working since
+    midnight while every restaurant in town stayed closed.
+
+    By noon, Luis understood. The bakery had become a warm island in a white, silent town, as plow
+    drivers stamped snow from their boots and wrapped their frozen hands around paper cups of cocoa.
+    A nurse walking home from an exhausting double shift accepted a bag of rolls with tears in her
+    eyes, and an elderly neighbor arrived on snowshoes simply because she wanted company.
+
+    Late in the afternoon, Luis's friends finally appeared, red-cheeked and soaked from sledding, and
+    Luis was surprised to discover that he did not envy them at all. He poured them cocoa, handed each
+    one an apron, and put them to work.
+  pages:
+    - focus: how the setting shapes a choice
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does the blizzard make the bakery important? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - The storm turns the bakery into a shelter for the town.
+            - "\"The bakery had become a warm island\""
+            - With everything closed, people need a warm place.
+          evidence: The bakery had become a warm island
+        - kind: paragraph
+          ask: Write your paragraph. How does the blizzard make the bakery important? Quote the story twice.
+          sample: >-
+            The blizzard turns an ordinary bakery into the heart of the town. Because the snow closed
+            every store "except one," the bakery is the only place left for people to go. The story calls
+            it "a warm island in a white, silent town," which shows how much it stands out against the
+            cold. Plow drivers, a nurse, and a lonely neighbor all come for warmth and company. Without
+            the storm, the bakery would just sell bread, but the storm makes it a shelter.
+          rubric: >-
+            Claim: how the setting makes the bakery important. Evidence: two exact quotes, such as the
+            closed stores and the warm island. Explanation: why the storm changes the bakery's role.
+          evidence: The bakery had become a warm island
+    - focus: how a character's attitude changes
+      look_for: how Luis feels in the morning and at the end
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does Luis's attitude change? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Luis goes from resentful to proud of the work.
+            - "\"he did not envy them at all\""
+            - Seeing people helped makes the work feel worth it.
+          evidence: he did not envy them at all
+        - kind: paragraph
+          ask: Write your paragraph. How does Luis's attitude change during the day? Quote the story twice.
+          sample: >-
+            Luis's attitude changes from resentment to pride as he sees how the bakery helps people. In
+            the morning he "grumbled" and doubted that anyone would come. By noon, the story says "Luis
+            understood," after watching tired drivers and a grateful nurse arrive. At the end, "he did not
+            envy them at all," even though his friends had spent the day sledding. Helping others has
+            become more satisfying to him than having fun.
+          rubric: >-
+            Claim: how Luis's attitude changes. Evidence: two exact quotes, one from the morning and one
+            from the end. Explanation: what he sees that changes his mind.
+          evidence: he did not envy them at all
+
+- id: d05-the-unfinished-mural
+  title: The Unfinished Mural
+  genre: story
+  text: |
+    For six weeks, Iris and the other members of the art club had been painting a mural on the long
+    brick wall beside the community garden, transforming it into a river that wound past sunflowers,
+    herons, and children wading in the shallows.
+
+    Iris wanted it to be perfect. She repainted the same heron's wing four times, and when the
+    younger kids added lopsided fish in the bottom corner, she quietly painted over two of them that
+    evening after everyone had gone home.
+
+    On the final Saturday, Mr. Abernathy, who had tended the garden for thirty years, studied the wall
+    while leaning on his rake. He pointed at a blank rectangle of brick near the end of the river,
+    where the paint simply stopped.
+
+    "Leave that part empty," he suggested. "Next year a new group of kids will want a place to add
+    their own fish."
+
+    Iris protested that an empty patch would make the whole mural look unfinished. Mr. Abernathy
+    smiled and explained that the garden had never been finished either, since every spring someone
+    planted something he would never have chosen, and it was always better for it.
+
+    That night Iris returned to the wall with a small brush. She did not touch the empty rectangle.
+    Instead, she carefully repainted the two lopsided fish she had covered, matching their crooked
+    fins and uneven stripes as closely as she could remember. When the club gathered for photographs
+    the next morning, the younger kids pointed at their fish proudly, and Iris found that the crooked
+    ones had become her favorite part.
+  pages:
+    - focus: what a title means
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: why is the story called “The Unfinished Mural”? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - The title shows that leaving room for others is good.
+            - "\"the garden had never been finished either\""
+            - Like the garden, the mural stays open to new people.
+          evidence: the garden had never been finished either
+        - kind: paragraph
+          ask: Write your paragraph. Why is the story called “The Unfinished Mural”? Quote the story twice.
+          sample: >-
+            The title shows that being unfinished can be a good thing when it leaves room for others. Mr.
+            Abernathy wants a blank space so new kids will have "a place to add their own fish." He
+            compares the mural to his garden, which "had never been finished either," and was "always
+            better for it." The empty rectangle is an invitation, not a mistake. The title teaches that
+            the best shared projects are never fully closed.
+          rubric: >-
+            Claim: what the title means. Evidence: two exact quotes, such as the place for new fish and
+            the unfinished garden. Explanation: why being unfinished is a strength here.
+          evidence: the garden had never been finished either
+    - focus: how a character changes
+      look_for: what Iris does with the crooked fish
+      questions:
+        - kind: organizer
+          ask: "Plan a paragraph: how does Iris change? Fill in each box."
+          heads: [Claim, Evidence, Explanation]
+          samples:
+            - Iris learns to value others' work over perfection.
+            - "\"she carefully repainted the two lopsided fish\""
+            - She undoes her mistake and honors the younger kids.
+          evidence: she carefully repainted the two lopsided fish
+        - kind: paragraph
+          ask: Write your paragraph. How does Iris change by the end of the story? Quote the story twice.
+          sample: >-
+            Iris changes from wanting a perfect mural to valuing everyone's contribution. At first, "Iris
+            wanted it to be perfect," so she secretly painted over the younger kids' fish. After talking
+            with Mr. Abernathy, "she carefully repainted the two lopsided fish she had covered." She
+            even matches their "crooked fins," which shows respect for the kids' work. By the end, the
+            imperfect fish are her favorite part, proving that her idea of beauty has grown.
+          rubric: >-
+            Claim: how Iris changes. Evidence: two exact quotes, one about wanting perfection and one
+            about repainting the fish. Explanation: what causes the change and what it shows.
+          evidence: she carefully repainted the two lopsided fish
+
+- id: d06-second-chair
+  title: Second Chair
+  genre: story
+  text: |
+    When the orchestra director finally posted the seating chart, Ana found her name in the second chair of
+    the violin section, directly beside her best friend June, whose name sat at the very top.
+
+    Ana smiled and congratulated June in the hallway, but on the bus ride home she stared out the
+    window and replayed her audition, counting every note she had played slightly out of tune. She and
+    June had taken lessons together since they were seven, and Ana had always assumed they were equals.
+
+    For the next two weeks, Ana practiced with a grim determination that surprised even her parents.
+    She told herself that she simply wanted to improve, but privately she was waiting for June to make
+    a mistake.
+
+    Then, at a Thursday rehearsal, June froze during her first solo. Her bow trembled above the strings,
+    and the silence in the room grew heavier with every second that passed.
+
+    Without really deciding to, Ana leaned over and quietly hummed the opening phrase, just loudly
+    enough for June to hear. June blinked, caught the melody, and played the rest of the solo
+    beautifully.
+
+    Afterward, June hugged her so tightly that Ana nearly dropped her violin. Walking home, Ana realized
+    that the moment June faltered, she had felt no satisfaction at all, only an urgent wish to help.
+    She still wanted the first chair someday, but now she wanted to earn it honestly, not by watching
+    her friend stumble.
+  pages:
+    - focus: a character's mixed motives
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Ana is secretly jealous of June?
+          choices:
+            - She told herself that she simply wanted to improve, but privately she was waiting for June to make a mistake.
+            - Ana smiled and congratulated June in the hallway
+            - She and June had taken lessons together since they were seven
+            - June blinked, caught the melody, and played the rest of the solo beautifully.
+          evidence: privately she was waiting for June to make a mistake
+        - kind: paragraph
+          ask: Write a paragraph. What does Ana feel about June's first chair? Quote the story twice.
+          sample: >-
+            Ana feels jealous of June's success, even though she hides it. In public she "smiled and
+            congratulated June," but on the bus she replays every note she missed. Her jealousy becomes
+            clear when the story reveals that "privately she was waiting for June to make a mistake."
+            This shows that her friendly words cover up a competitive feeling. Ana's feelings are mixed,
+            because she loves her friend but resents losing to her.
+          rubric: >-
+            Claim: what Ana feels and that it is hidden. Evidence: two exact quotes, one public and one
+            private. Explanation: how the contrast between them reveals her jealousy.
+          evidence: privately she was waiting for June to make a mistake
+    - focus: how a character changes
+      look_for: what Ana does when June freezes
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Ana has changed by the end?
+          choices:
+            - She still wanted the first chair someday, but now she wanted to earn it honestly, not by watching her friend stumble.
+            - For the next two weeks, Ana practiced with a grim determination that surprised even her parents.
+            - Her bow trembled above the strings, and the silence in the room grew heavier with every second that passed.
+            - Ana smiled and congratulated June in the hallway
+          evidence: she wanted to earn it honestly, not by watching her friend stumble
+        - kind: paragraph
+          ask: Write a paragraph. How does helping June change Ana? Quote the story twice.
+          sample: >-
+            Helping June changes Ana from a jealous rival into a loyal friend. When June freezes, Ana
+            hums the melody before she can think, acting "Without really deciding to." This shows that her care for June is deeper
+            than her jealousy. Afterward she notices that she felt "no satisfaction at all, only an
+            urgent wish to help." This surprises her, because she had been hoping June would fail. Ana
+            still has ambition, but she now wants to win honestly.
+          rubric: >-
+            Claim: how Ana changes. Evidence: two exact quotes, such as humming without deciding and
+            feeling no satisfaction. Explanation: what the moment reveals about her true feelings.
+          evidence: only an urgent wish to help
+
+- id: d07-the-lighthouse-logbook
+  title: The Lighthouse Logbook
+  genre: story
+  text: |
+    Ezra spent the first week of summer with his grandmother in a small coastal town where the main
+    attraction was a retired lighthouse that she helped manage as a volunteer.
+
+    He expected the lighthouse to be thrilling, full of stories about shipwrecks and daring rescues.
+    Instead, his grandmother handed him a cracked leather logbook and asked him to copy its entries
+    into the museum's computer, one page at a time.
+
+    The entries were almost painfully ordinary. A keeper named Thomas Reyes had written the same few
+    lines every night for eleven years: the hour he lit the lamp, the direction of the wind, and
+    whether fog had rolled in from the bay. Occasionally he added a small remark, such as a note that
+    the gulls were noisy or that his daughter had learned to whistle.
+
+    By the third afternoon, Ezra complained that nothing ever happened in the logbook. His grandmother
+    looked up from the ticket counter with a patient smile. She pointed out that nothing ever happened
+    because Thomas Reyes lit the lamp every single night, without exception.
+
+    Ezra returned to the logbook with different eyes. He noticed that on stormy nights, the
+    handwriting grew larger and shakier, as though the keeper wrote while the tower swayed. He
+    noticed that not one evening was ever skipped.
+
+    On his last day, Ezra climbed the spiral stairs to the empty lamp room and watched the sun
+    sink into the bay. He imagined Thomas Reyes standing in the same spot, striking a match, and quietly
+    keeping hundreds of strangers safe without any of them knowing his name.
+  pages:
+    - focus: the theme
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that small, steady work can matter greatly?
+          choices:
+            - She pointed out that nothing ever happened because Thomas Reyes lit the lamp every single night, without exception.
+            - Ezra spent the first week of summer with his grandmother in a small coastal town
+            - By the third afternoon, Ezra complained that nothing ever happened in the logbook.
+            - He expected the lighthouse to be thrilling, full of stories about shipwrecks and daring rescues.
+          evidence: nothing ever happened because Thomas Reyes lit the lamp every single night
+        - kind: paragraph
+          ask: Write a paragraph. What is the theme of this story? Quote the story twice.
+          sample: >-
+            The theme of the story is that quiet, faithful work can protect people even when no one
+            notices it. At first, Ezra finds the logbook "almost painfully ordinary." His grandmother
+            explains that "nothing ever happened because Thomas Reyes lit the lamp every single night,"
+            so the boring entries are actually proof of success. The keeper kept strangers safe "without
+            any of them knowing his name." The story shows that heroism can look like routine.
+          rubric: >-
+            Claim: a theme stated as a full idea. Evidence: two exact quotes, such as the grandmother's
+            explanation and the strangers not knowing his name. Explanation: how the quotes build the theme.
+          evidence: nothing ever happened because Thomas Reyes lit the lamp every single night
+    - focus: how a character's view changes
+      look_for: how Ezra sees the logbook at first and later
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Ezra begins reading more carefully?
+          choices:
+            - He noticed that on stormy nights, the handwriting grew larger and shakier, as though the keeper wrote while the tower swayed.
+            - The entries were almost painfully ordinary.
+            - By the third afternoon, Ezra complained that nothing ever happened in the logbook.
+            - Ezra spent the first week of summer with his grandmother in a small coastal town
+          evidence: the handwriting grew larger and shakier
+        - kind: paragraph
+          ask: Write a paragraph. How does Ezra's view of the logbook change? Quote the story twice.
+          sample: >-
+            Ezra's view of the logbook changes from boredom to respect. At first he expects "shipwrecks
+            and daring rescues," so the plain entries disappoint him. After his grandmother's comment,
+            he reads "with different eyes" and notices that the handwriting grew shaky on stormy nights.
+            Those details show him the courage hidden in the routine. By the end, Ezra admires the keeper
+            he once found dull.
+          rubric: >-
+            Claim: how Ezra's view changes. Evidence: two exact quotes, one about his first expectations
+            and one about reading more closely. Explanation: what causes the change.
+          evidence: Ezra returned to the logbook with different eyes
+
+- id: d08-counting-tide-pools
+  title: Counting Tide Pools
+  genre: story
+  text: |
+    Every spring, a group of volunteers gathered at the rocky point to count the creatures living in
+    the tide pools, and this year Mei had finally been invited to join them.
+
+    She arrived with a clipboard and a confident plan to finish her section before lunch. Mrs. Delgado,
+    a retired science teacher who had led the count for twenty years, handed her a small square frame
+    made of plastic pipe and told her to place it over a single pool and look.
+
+    Mei counted three anemones and a crab in less than a minute and announced that she was finished.
+    Mrs. Delgado knelt beside her, said nothing, and simply waited.
+
+    Slowly the pool began to reveal itself, as though it had been holding its breath until its visitors
+    grew still. A tiny shrimp, nearly transparent, drifted out from beneath a ledge where Mei had seen
+    only shadow and sand. A snail that Mei had mistaken for a pebble began to glide across the rock.
+    Within ten minutes, her tally had grown from four creatures to nineteen, and she had started to
+    whisper so that she would not disturb them.
+
+    "The pool doesn't change," Mrs. Delgado said quietly, brushing sand from her knees as she stood.
+    "Your attention does."
+
+    Mei did not finish her section before lunch. She did not finish it before the afternoon tide came
+    back in, either, but as the cold water rose over the rocks, she found herself looking at the
+    ordinary world in a new way, noticing the tiny lives hidden in places she had walked past for years
+    without a second glance.
+  pages:
+    - focus: the theme
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that the story is about paying close attention?
+          choices:
+            - Within ten minutes, her tally had grown from four creatures to nineteen
+            - She arrived with a clipboard and a confident plan to finish her section before lunch.
+            - Mrs. Delgado knelt beside her, said nothing, and simply waited.
+            - Every spring, a group of volunteers gathered at the rocky point to count the creatures living in the tide pools
+          evidence: her tally had grown from four creatures to nineteen
+        - kind: paragraph
+          ask: Write a paragraph. What does Mei learn from the tide pool? Quote the story twice.
+          sample: >-
+            Mei learns that the world is full of hidden life if a person slows down enough to see it. At
+            first she counts quickly and finds only four creatures. After waiting, "her tally had grown
+            from four creatures to nineteen," which proves that her first look missed most of the pool.
+            Mrs. Delgado sums up the lesson: "Your attention does." The pool never changed, but Mei's
+            patience did.
+          rubric: >-
+            Claim: what Mei learns. Evidence: two exact quotes, such as the tally growing and Mrs.
+            Delgado's words. Explanation: how waiting changes what Mei sees.
+          evidence: her tally had grown from four creatures to nineteen
+    - focus: how a mentor teaches
+      look_for: what Mrs. Delgado does, and doesn't do
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Mrs. Delgado teaches by example, not by lecturing?
+          choices:
+            - Mrs. Delgado knelt beside her, said nothing, and simply waited.
+            - Mei counted three anemones and a crab in less than a minute and announced that she was finished.
+            - A snail that Mei had mistaken for a pebble began to glide across the rock.
+            - Mei did not finish her section before lunch.
+          evidence: Mrs. Delgado knelt beside her, said nothing, and simply waited.
+        - kind: paragraph
+          ask: Write a paragraph. How does Mrs. Delgado teach Mei? Quote the story twice.
+          sample: >-
+            Mrs. Delgado teaches Mei by showing patience instead of explaining it. When Mei rushes, she
+            "said nothing, and simply waited," which lets Mei discover the lesson herself. Her silence
+            works because Mei soon begins to notice creatures she had missed. Only afterward does she
+            offer one short sentence: "Your attention does." Her method is powerful because Mei learns
+            through her own eyes.
+          rubric: >-
+            Claim: how Mrs. Delgado teaches. Evidence: two exact quotes, such as her silent waiting and
+            her one sentence. Explanation: why this method works on Mei.
+          evidence: said nothing, and simply waited
+
+- id: d09-the-practice-words
+  title: The Practice Words
+  genre: story
+  text: |
+    Rafael had exactly one hour of free time after school, and his younger brother Mateo seemed
+    determined to ruin it by asking for help with his reading homework every single afternoon.
+
+    Mateo read slowly, pressing his finger beneath each word and sounding out even the short ones.
+    Rafael would sigh, finish the sentence for him, and then glance hopefully toward the video game
+    waiting on the couch.
+
+    One afternoon, Mateo closed his book in the middle of a page and pushed it away. "You always say
+    the words before I can," he mumbled, and he walked out to the backyard alone.
+
+    Rafael sat at the kitchen table for a long time. He remembered being Mateo's age and struggling with
+    the same thick reading books. He also remembered their father sitting beside him every evening,
+    waiting patiently, never once reading a word for him.
+
+    The next afternoon, Rafael set a timer for twenty minutes and made a rule for himself: he would not
+    say a single word aloud unless Mateo asked. It was harder than he expected, and twice he had to
+    press his lips together to keep from jumping in.
+
+    By the end of the month, Mateo was reading whole pages without stopping. One evening he read an
+    entire chapter aloud at dinner, and when their father applauded, Mateo turned and pointed proudly
+    across the table at his older brother, as though Rafael had done something remarkable by doing
+    almost nothing at all.
+  pages:
+    - focus: why a character changes his behavior
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Rafael's memory makes him change?
+          choices:
+            - He also remembered their father sitting beside him every evening, waiting patiently, never once reading a word for him.
+            - Rafael sat at the kitchen table for a long time.
+            - Mateo read slowly, pressing his finger beneath each word and sounding out even the short ones.
+            - By the end of the month, Mateo was reading whole pages without stopping.
+          evidence: never once reading a word for him
+        - kind: paragraph
+          ask: Write a paragraph. Why does Rafael change how he helps Mateo? Quote the story twice.
+          sample: >-
+            Rafael changes how he helps because Mateo's frustration reminds him of his own childhood.
+            Mateo complains, "You always say the words before I can," which shows Rafael that his
+            impatience is the real problem. Rafael then remembers their father "waiting patiently, never
+            once reading a word for him." That memory gives him a better model to follow. He changes
+            because he finally sees reading through his brother's eyes.
+          rubric: >-
+            Claim: why Rafael changes. Evidence: two exact quotes, such as Mateo's complaint and the
+            memory of their father. Explanation: how each one pushes Rafael to change.
+          evidence: never once reading a word for him
+    - focus: what the ending means
+      look_for: why Mateo points at Rafael
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that holding back was hard for Rafael?
+          choices:
+            - It was harder than he expected, and twice he had to press his lips together to keep from jumping in.
+            - Rafael sat at the kitchen table for a long time.
+            - Mateo read slowly, pressing his finger beneath each word and sounding out even the short ones.
+            - One evening he read an entire chapter aloud at dinner
+          evidence: twice he had to press his lips together to keep from jumping in
+        - kind: paragraph
+          ask: Write a paragraph. What does the last sentence suggest about helping? Quote the story twice.
+          sample: >-
+            The last sentence suggests that the best help is sometimes stepping back. Rafael's new rule
+            was not to say a word "unless Mateo asked," and following it was "harder than he expected."
+            Yet Mateo points at him as if he "had done something remarkable by doing almost nothing at
+            all." The phrase shows that Rafael's restraint was the real gift. Helping someone grow can
+            mean letting them do the work.
+          rubric: >-
+            Claim: what the ending suggests. Evidence: two exact quotes, such as the rule and the final
+            phrase. Explanation: why doing almost nothing was the right kind of help.
+          evidence: doing almost nothing at all
+
+- id: d10-pins-on-the-map
+  title: Pins on the Map
+  genre: story
+  text: |
+    When Zainab's family moved from the city to a small river town, she brought a map of her old
+    neighborhood and pinned it above her new desk, marking every place she missed with a red pin: the
+    library with the spiral staircase, the bakery on the corner, and the park where she had learned to
+    ride a bicycle.
+
+    For the first month, she studied that map every evening as though it were a window she could climb
+    back through. The river town felt impossibly slow, with one grocery store, one traffic light, and a
+    library that closed at five o'clock.
+
+    Her grandmother, who had moved countries twice before Zainab was born, noticed the map but did not
+    mention it. Instead, she began inviting Zainab on long afternoon walks, always choosing a different
+    direction.
+
+    They discovered a footbridge where herons stood motionless in the shallows, and an orchard where
+    the owner let them fill a paper bag with fallen apples for free. They found a bench beside the
+    river where an old man played the harmonica every Sunday, and he taught Zainab the first few notes
+    of a song his own grandmother had taught him.
+
+    One evening, Zainab bought a second map, this one of the river town, and pinned it beside the
+    first. She pressed a blue pin into the footbridge, another into the orchard, and a third into the
+    riverside bench.
+
+    Her grandmother paused in the doorway and studied the two maps side by side. "You don't have to
+    take down the first one," she said gently. "A heart has room for more than one home."
+  pages:
+    - focus: what an object stands for
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that the first map shows Zainab's homesickness?
+          choices:
+            - For the first month, she studied that map every evening as though it were a window she could climb back through.
+            - The river town felt impossibly slow, with one grocery store, one traffic light, and a library that closed at five o'clock
+            - They discovered a footbridge where herons stood motionless in the shallows
+            - Instead, she began inviting Zainab on long afternoon walks, always choosing a different direction.
+          evidence: as though it were a window she could climb back through
+        - kind: paragraph
+          ask: Write a paragraph. What do the two maps stand for? Quote the story twice.
+          sample: >-
+            The two maps stand for Zainab's old home and her new one, and the fact that she can love
+            both. At first she treats the city map "as though it were a window she could climb back
+            through," which shows how badly she wants to return. The second map, full of blue pins, shows
+            that she has found places to love in the river town. Her grandmother explains the meaning
+            directly: "A heart has room for more than one home." Together, the maps show that moving
+            forward does not require forgetting.
+          rubric: >-
+            Claim: what the two maps stand for. Evidence: two exact quotes, such as the window comparison
+            and the grandmother's last line. Explanation: how each map shows a stage of Zainab's feelings.
+          evidence: A heart has room for more than one home.
+    - focus: how a character helps another change
+      look_for: what Grandmother does instead of talking
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Grandmother helps Zainab without lecturing?
+          choices:
+            - Instead, she began inviting Zainab on long afternoon walks, always choosing a different direction.
+            - The river town felt impossibly slow, with one grocery store, one traffic light, and a library that closed at five o'clock
+            - She pressed a blue pin into the footbridge, another into the orchard, and a third into the riverside bench.
+            - Her grandmother paused in the doorway and studied the two maps side by side.
+          evidence: she began inviting Zainab on long afternoon walks
+        - kind: paragraph
+          ask: Write a paragraph. How does Grandmother help Zainab feel at home? Quote the story twice.
+          sample: >-
+            Grandmother helps Zainab by showing her the new town instead of telling her to like it. She
+            "noticed the map but did not mention it," which shows that she respects Zainab's sadness.
+            She then takes Zainab on walks, "always choosing a different direction," so they discover new
+            places together. Because of these walks, Zainab finds a footbridge, an orchard, and a new
+            friend. Grandmother's patient method works because Zainab discovers her new home for herself.
+          rubric: >-
+            Claim: how Grandmother helps. Evidence: two exact quotes, such as not mentioning the map and
+            the walks in new directions. Explanation: why her quiet approach works.
+          evidence: always choosing a different direction
+
+- id: d11-the-handwritten-recipe
+  title: The Handwritten Recipe
+  genre: story
+  text: |
+    Sofia had decided to surprise her grandmother by making dumplings from the old recipe card that
+    lived in a tin box on the kitchen shelf, its edges soft and stained from decades of use.
+
+    The trouble began with the first line. The card asked for "a good handful" of flour, "enough"
+    water, and filling "until it looks right," and Sofia, who measured everything carefully, stared at
+    those instructions in growing dismay.
+
+    Her first batch of dough was so sticky that it clung to her fingers, and her second crumbled
+    apart the moment she tried to fold it. By late afternoon, flour covered the counter, the floor, and
+    a surprising amount of her hair.
+
+    When her grandmother came home, Sofia confessed that the surprise had failed and that the recipe
+    was impossible to follow. Her grandmother laughed, washed her hands, and stood beside her at the
+    counter without picking up the card at all.
+
+    "This recipe was never meant to be read," she explained, pressing Sofia's palm into the dough.
+    "My mother wrote it down for me, but I learned it from her hands, not her handwriting."
+
+    They worked side by side until dark, and Sofia slowly began to feel the moment when the dough
+    turned smooth and the folds held their shape. That night, before she went to bed, she took out a
+    fresh card and wrote her own version beneath her grandmother's, adding one new line at the bottom:
+    "Make these with someone you love."
+  pages:
+    - focus: what a title means
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that the recipe can't be learned from writing alone?
+          choices:
+            - My mother wrote it down for me, but I learned it from her hands, not her handwriting.
+            - Her first batch of dough was so sticky that it clung to her fingers
+            - By late afternoon, flour covered the counter, the floor, and a surprising amount of her hair.
+            - They worked side by side until dark
+          evidence: I learned it from her hands, not her handwriting.
+        - kind: paragraph
+          ask: Write a paragraph. What does the title "The Handwritten Recipe" mean by the end? Quote the story twice.
+          sample: >-
+            By the end, the title means a recipe that carries love between generations, not just
+            instructions. The card's vague words, such as "until it looks right," show that it cannot be
+            followed like a math formula. Grandmother explains that she learned it "from her hands, not
+            her handwriting," so the real recipe is passed on in person. When Sofia adds the line "Make
+            these with someone you love," the handwritten card becomes a family message. The title
+            points to the connection the recipe creates.
+          rubric: >-
+            Claim: what the title means by the end. Evidence: two exact quotes, such as the vague
+            instructions and the hands, not handwriting. Explanation: how the card's meaning changes.
+          evidence: I learned it from her hands, not her handwriting.
+    - focus: how a character's thinking changes
+      look_for: how Sofia feels about measuring
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Sofia likes exact instructions at first?
+          choices:
+            - Sofia, who measured everything carefully, stared at those instructions in growing dismay
+            - Her grandmother laughed, washed her hands, and stood beside her at the counter without picking up the card at all.
+            - By late afternoon, flour covered the counter, the floor, and a surprising amount of her hair.
+            - They worked side by side until dark
+          evidence: Sofia, who measured everything carefully
+        - kind: paragraph
+          ask: Write a paragraph. How does Sofia's idea of following a recipe change? Quote the story twice.
+          sample: >-
+            Sofia changes from trusting only exact measurements to trusting what she can feel. At the
+            start she is a girl "who measured everything carefully," so the vague card fills her with
+            dismay. Working beside her grandmother, she learns to "feel the moment when the dough turned
+            smooth." This shows that she now relies on her senses and experience. By the end, cooking has
+            become something she learns with people, not just from paper.
+          rubric: >-
+            Claim: how Sofia's thinking changes. Evidence: two exact quotes, one about careful measuring
+            and one about feeling the dough. Explanation: what causes the change.
+          evidence: feel the moment when the dough turned smooth
+
+- id: d12-the-quiet-goalkeeper
+  title: The Quiet Goalkeeper
+  genre: story
+  text: |
+    Hana had been the goalkeeper for her soccer team for two seasons, and she was known for two
+    things: remarkable reflexes and almost complete silence on the field.
+
+    Her coach had asked her many times to direct the defenders in front of her, since the goalkeeper
+    can see the whole field while everyone else sees only a piece of it. Hana understood the logic, but
+    whenever she opened her mouth to shout, her voice seemed to shrink back into her throat.
+
+    During a close game in October, she watched an opposing forward drift unnoticed toward the far
+    post. She saw the danger seconds before anyone else did, but she said nothing, and the forward
+    scored easily while the defenders looked around in confusion.
+
+    After the game, her teammate Grace sat beside her on the bench. Grace admitted that she often felt
+    lost on defense and explained that she would much rather hear Hana yelling than guess where to run.
+    "You're our eyes," she said, "and we need you to be loud enough for every one of us to hear."
+
+    That week, Hana practiced calling out names in her empty backyard, feeling ridiculous at first and
+    then gradually more confident as the evenings passed. At the next game her shouts were hesitant, but by the second half
+    they were sharp and clear, sending defenders exactly where they needed to be.
+
+    The team won by a single goal. Afterward, Grace jogged over, grinning, and complained that her ears
+    were still ringing, and Hana laughed louder than anyone had ever heard her laugh before.
+  pages:
+    - focus: how a character changes
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Hana's silence causes a problem for the team?
+          choices:
+            - She saw the danger seconds before anyone else did, but she said nothing
+            - Hana had been the goalkeeper for her soccer team for two seasons
+            - The team won by a single goal.
+            - After the game, her teammate Grace sat beside her on the bench.
+          evidence: but she said nothing
+        - kind: paragraph
+          ask: Write a paragraph. How does Hana change during the story? Quote the story twice.
+          sample: >-
+            Hana changes from a silent goalkeeper into a confident leader. At first, when she tried to
+            shout, "her voice seemed to shrink back into her throat," so she kept quiet even when she saw
+            danger. After practicing, her calls became "sharp and clear, sending defenders exactly where
+            they needed to be." This shows that her voice has finally caught up with her skill. Her loud
+            laugh at the end proves that she has become more confident off the field, too.
+          rubric: >-
+            Claim: how Hana changes. Evidence: two exact quotes, one about her shrinking voice and one
+            about her sharp, clear calls. Explanation: what causes the change and what it shows.
+          evidence: sharp and clear, sending defenders exactly where they needed to be
+    - focus: how one character influences another
+      look_for: what Grace says, and why it matters
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Grace's words help Hana find her voice?
+          choices:
+            - That week, Hana practiced calling out names in her empty backyard, feeling ridiculous at first and then gradually more confident
+            - Hana had been the goalkeeper for her soccer team for two seasons
+            - The team won by a single goal.
+            - After the game, her teammate Grace sat beside her on the bench.
+          evidence: Hana practiced calling out names in her empty backyard
+        - kind: paragraph
+          ask: Write a paragraph. Why do Grace's words work when the coach's didn't? Quote the story twice.
+          sample: >-
+            Grace's words work because they come from a teammate who admits she needs help. The coach
+            explained "the logic," but Hana already understood it, so logic was not enough. Grace instead
+            confesses that she "often felt lost on defense," which shows Hana that her silence affects a
+            real friend. When Grace says, "You're our eyes," Hana sees her voice as a gift to the team.
+            Personal need, not a rule, finally gives Hana a reason to speak.
+          rubric: >-
+            Claim: why Grace's words work. Evidence: two exact quotes, such as the coach's logic and
+            Grace's confession. Explanation: how the difference between them changes Hana.
+          evidence: You're our eyes
+
+- id: d13-the-repair-cafe
+  title: The Repair Cafe
+  genre: story
+  text: |
+    On the first Saturday of every month, the community center became a repair cafe, where neighbors
+    brought broken lamps, torn jackets, and wobbly chairs, and volunteers tried to fix them for free.
+
+    Oliver had volunteered mainly because he enjoyed taking things apart, and he was assigned to the
+    electronics table beside Mr. Tanaka, a retired engineer who hummed while he worked.
+
+    Their first customer was Mrs. Patel, who carried a small wooden radio wrapped carefully in a dish
+    towel. It had belonged to her husband, she explained, and it had been silent for nearly a year.
+    Oliver privately thought that a new radio would cost less than the time it would take to repair
+    this one, and he almost said so aloud.
+
+    Mr. Tanaka, however, opened the back of the radio as gently as if he were opening a letter. He
+    showed Oliver a loose wire, a cracked knob, and a layer of dust so thick it looked like felt,
+    and he patiently let Oliver solder the wire back into place himself.
+
+    When Oliver turned the dial, the radio crackled, hesitated, and then filled the room with an old
+    jazz song. Mrs. Patel pressed her hand over her mouth, and for a long moment no one at the table
+    said anything at all.
+
+    On the way home, Oliver realized he had been wrong about what they were repairing. The radio had
+    only needed a wire, but Mrs. Patel had needed someone to believe that her husband's radio was worth
+    the trouble.
+  pages:
+    - focus: the theme
+      questions:
+        - kind: quote
+          ask: Which sentence is the strongest evidence that Oliver first sees the radio only as an object?
+          choices:
+            - Oliver privately thought that a new radio would cost less than the time it would take to repair this one
+            - Their first customer was Mrs. Patel, who carried a small wooden radio wrapped carefully in a dish towel.
+            - On the first Saturday of every month, the community center became a repair cafe
+            - When Oliver turned the dial, the radio crackled, hesitated, and then filled the room with an old jazz song.
+          evidence: a new radio would cost less than the time it would take to repair this one
+        - kind: paragraph
+          ask: Write a paragraph. What does Oliver learn about repairing things? Quote the story twice.
+          sample: >-
+            Oliver learns that repairing something can matter because of what it means to a person, not
+            what it costs. At first he thinks "a new radio would cost less than the time it would take to
+            repair this one," so he sees the radio only as a machine. Mr. Tanaka opens it "as gently as if
+            he were opening a letter," which shows respect for its meaning. At the end, Oliver realizes
+            that Mrs. Patel "had needed someone to believe" the radio was worth saving. The real repair
+            was to her hope, not just to a wire.
+          rubric: >-
+            Claim: what Oliver learns. Evidence: two exact quotes, such as his first thought about cost
+            and his final realization. Explanation: how his view of the radio changes.
+          evidence: had needed someone to believe that her husband's radio was worth the trouble
