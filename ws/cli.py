@@ -94,6 +94,9 @@ def verify(
         typer.echo("nothing generated yet", err=True)
         raise typer.Exit(1)
     issues = verify_sheets(sheets)
+    from .standards import check_ladder
+
+    issues += check_ladder()[0]   # two grades ahead: standards vs content_grade, FK ranges (whole ladder)
     if layout:
         layout_issues, pngs = verify_layout(sheets)
         issues += layout_issues

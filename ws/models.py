@@ -41,7 +41,7 @@ def _check_tiling(ranges: list[PageRange], start: int, end: int, what: str) -> N
 _STANDARD = re.compile(
     r"(K|[1-8])\.[A-Z][A-Za-z]*\.\d+[a-z]?"                     # math K–8: K.CC.1, 3.OA.7, 4.NBT.5
     r"|(RL|RI|RF|W|SL|L)\.(K|[1-8]|9-10|11-12)\.\d+[a-z]?"      # ELA: RL.3.2, L.K.5c, RL.9-10.5
-    r"|[NAFGS]-[A-Z]{2,4}\.[A-Z]?\.?\d+[a-z]?"                 # high-school math: A-REI.4, N-RN.1
+    r"|(HS[NAFGS][.-]|[NAFGS]-)[A-Z]{2,4}\.[A-Z]?\.?\d+[a-z]?"             # high-school math: A-REI.4, N-RN.1, HSN-RN.A.1, HSN.RN.A.1
 )
 
 
@@ -86,6 +86,10 @@ class Section(_Strict):
     # Common Core codes this section teaches (CLAUDE.md §15), e.g. [K.CC.1, K.NBT.1]. Chicks is Pre-K
     # work, which has no Common Core codes, so its sections may leave this empty.
     standards: list[str] = Field(default_factory=list)
+    # A warm-up or review section whose standards may all sit more than one grade below the level's
+    # content_grade (ws/standards.py). Say why in a YAML comment next to the flag.
+    on_ramp: bool = False
+    review: bool = False
 
     @field_validator("standards")
     @classmethod

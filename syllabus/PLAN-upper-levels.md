@@ -145,6 +145,10 @@ Topic names alone don't make reading harder; the text has to be harder too.
   non-review section's standards are below the level's `content_grade`.
 - Every reading passage must score a Flesch-Kincaid grade ≥ `content_grade` (and not far above it).
   `ws verify` checks this for each passage.
+- Built (`ws/standards.py`, CLAUDE.md §8 "Two grades ahead"). As enforced: the floor is "no section more
+  than one grade below `content_grade`" (not "below"), and passages score within grade − 0.5 … grade + 1.5
+  (so the FK floor is half a grade under the target). Cubs Read Aloud passages have no FK range yet
+  (a warning).
 - The `content_grade` and grade chips on the site come from those tags, so the site can't claim more
   than the sheets teach.
 

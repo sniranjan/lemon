@@ -398,6 +398,18 @@ Checks run per **(level, variant)**, so a `--variant 2` repeat is never a "dupli
   in black and white.
 - Banned words live in `content/banned.yaml` (matched case-insensitively, whole words) and are
   checked on every sheet's text and on booklet covers, logs and answer pages.
+- **Two grades ahead** (`ws/standards.py`, whole ladder, every `ws verify` run and
+  `tests/test_standards.py`): a standard's grade comes from its code (`K.CC.1` → K, `RL.4.2` → 4,
+  `RL.9-10.5` → 9, high-school math `A-REI.4` / `N-RN.A.1` / `HSN-RN.A.1` → 9); a section's grade is its
+  highest tag (section + parts). Per public level, over its reading and math strands: **reach** — the
+  highest tag ≥ `content_grade` (upper bound of a range like "1–2"); **floor** — no section's grade is more
+  than one below `content_grade` (lower bound) unless the section sets `on_ramp: true` or `review: true`
+  (with a YAML comment saying why); every section is tagged. Every page whose sheet type scores passages
+  with Flesch-Kincaid must set `fk_grade: [lo, hi]` explicitly with grade − 1 ≤ lo ≤ grade and
+  grade + 1 ≤ hi ≤ grade + 2 (R3–R9 use [grade − 0.5, grade + 1.5]); passage pages with no FK scorer (Cubs
+  Read Aloud) are a warning. Chicks (Pre-K) and pencil strands are exempt. Errors name the public level
+  and section (`Foxes Math, "Times Tables 2, 5, 10" (M3-B): …`). `uv run python -m ws.standards` prints the
+  per-level table.
 
 **Content checks (all types)**
 - Schema valid; sheet ID unique; page number inside the section's range.
@@ -645,7 +657,9 @@ app much later. This repo is a monorepo: the generator stays at the root (Python
   (Cubs age 5 → grade 2, Foxes 6 → 3 … Whales 12 → 9). Ages 3–5 have two levels a year; the second one
   reaches the target. Every syllabus section carries `standards:` (Common Core codes it teaches; Chicks is
   Pre-K work, which has no Common Core codes, so its sections may leave it empty), checked
-  against `content_grade`, and reading passages get a readability floor. The audit and the plan for
+  against `content_grade` by `ws verify` (§8 "Two grades ahead": the level's top tag reaches the grade, no
+  section sits more than one grade below it unless marked `on_ramp`/`review`), and reading passages
+  from Foxes on are scored against an `fk_grade` range of grade − 0.5 … grade + 1.5. The audit and the plan for
   Foxes → Whales are in `syllabus/PLAN-upper-levels.md`.
   Public section names must also be our own. Internal codes (7A, sheet IDs like `EN-7A-A-001`) may
   stay inside the generator, but anything a buyer sees (sheet headers, page pills, footers, PDF names,
