@@ -1,4 +1,4 @@
-import { ArrowDown, BookOpen, Calculator, Gift, Pencil, Printer, Sprout, Sun } from "lucide-react";
+import { ArrowDown, BookOpen, Calculator, Gift, Pencil, Printer, Sprout, Sun, Ticket } from "lucide-react";
 import { GiftPage, GiftThanks } from "@/components/GiftPage";
 import { GiftCard } from "@/components/GiftCard";
 import { RedeemPage } from "@/components/RedeemPage";
@@ -61,17 +61,30 @@ export default function App() {
 function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b-[3px] border-ink bg-cream/90 backdrop-blur print:hidden">
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-2 px-4 sm:gap-4 sm:px-6">
         <Logo />
-        <nav className="flex items-center gap-1 text-[0.95rem] font-extrabold sm:gap-2">
+        <nav className="flex shrink-0 items-center gap-1 text-[0.9rem] sm:text-[0.95rem] font-extrabold sm:gap-2">
           <a href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-white md:inline">
             How it works
           </a>
-          <a href="/gift" aria-label="Give a gift" className="inline-flex items-center gap-1.5 rounded-full px-2 py-2 hover:bg-white sm:px-3">
-            <Gift className="size-5 text-coral sm:size-4" /> <span className="hidden sm:inline">Give a gift</span>
+          <a href="/gift" aria-label="Give a gift" className="hidden items-center gap-1.5 whitespace-nowrap rounded-full px-2 py-2 hover:bg-white sm:inline-flex lg:px-3">
+            <Gift className="size-5 text-coral lg:size-4" /> <span className="hidden lg:inline">Give a gift</span>
           </a>
-          <Button asChild variant="sun" size="pill-sm">
-            <a href="/#library">Shop levels</a>
+          <a
+            href="/redeem"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border-2 border-ink bg-white px-2 py-1 hover:bg-sun/30 sm:px-3"
+          >
+            <Ticket className="size-4 text-teal" />
+            <span>
+              Redeem<span className="hidden lg:inline"> a gift</span>
+            </span>
+          </a>
+          <Button asChild variant="sun" size="pill-sm" className="px-3 sm:px-4">
+            <a href="/#library">
+              <span>
+                Shop<span className="hidden min-[460px]:inline"> levels</span>
+              </span>
+            </a>
           </Button>
         </nav>
       </div>
@@ -112,6 +125,12 @@ function Hero() {
               </a>
             </Button>
           </div>
+          <p className="mt-4 font-bold text-ink/70">
+            Got a gift code?{" "}
+            <a href="/redeem" className="text-coral underline decoration-2 underline-offset-4 hover:text-ink">
+              Redeem it here
+            </a>
+          </p>
         </div>
 
         {/* A small fan of sheets. */}

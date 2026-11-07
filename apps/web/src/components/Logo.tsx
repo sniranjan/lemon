@@ -21,8 +21,8 @@ export function Logo({ className, size = "md" }: { className?: string; size?: "m
   const big = size === "lg";
   return (
     <a href="/" aria-label="paperlessons home" className={cn("group inline-flex items-center gap-2", className)}>
-      <LogoMark className={cn(big ? "size-14" : "size-8 sm:size-10", "transition-transform group-hover:-rotate-6")} />
-      <span className={cn("leading-none whitespace-nowrap", big ? "text-5xl" : "text-[1.55rem] sm:text-[1.9rem]")}>
+      <LogoMark className={cn(big ? "size-14" : "size-7 min-[400px]:size-8 sm:size-10", "transition-transform group-hover:-rotate-6")} />
+      <span className={cn("leading-none whitespace-nowrap", !big && "max-[349px]:hidden", big ? "text-5xl" : "text-[1.25rem] min-[400px]:text-[1.55rem] sm:text-[1.9rem]")}>
         <span className="font-display font-bold tracking-tight text-ink">paper</span>
         <span className="font-hand text-coral inline-block -rotate-3 translate-y-0.5 text-[1.12em]">lessons</span>
       </span>
