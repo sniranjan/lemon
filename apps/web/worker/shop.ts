@@ -1,97 +1,36 @@
 // Selling whole levels as PDFs: Stripe Checkout (hosted page) → order row in D1 → download page.
 //
-// What's for sale is whatever is in R2: a level is buyable once `levels/<slug>/` holds its PDFs
-// (uploaded from the generator's booklets) AND its Stripe price exists (lookup key `level_<slug>`,
-// created by scripts/stripe-setup.mjs; change prices in the Stripe dashboard by moving the lookup key
-// to a new price). Bundles use lookup keys `bundle_two` (a level plus the next one) and `bundle_all` (every
-// level). Checkout stays off until the Stripe secrets are set:
+// What's for sale and prices: worker/catalog.ts. Gifts (buying for another family, redeeming a code): worker/gift.ts.
+// Checkout stays off until the Stripe secrets are set:
 //   npx wrangler secret put STRIPE_SECRET_KEY
 //   npx wrangler secret put STRIPE_WEBHOOK_SECRET
 import { Hono } from "hono";
-import ladder from "../src/data/ladder.json";
+import {
+  BUNDLE_KEYS,
+  LEVELS,
+  allPrices,
+  buyableLevels,
+  checkoutOn,
+  levelFiles,
+  levelsForSale,
+  nextFor,
+  orderName,
+  orderTitle,
+  parseKind,
+  FILE,
+  type Kind,
+  type ShopEnv,
+} from "./catalog";
 import { sendOrderEmail } from "./email";
-import { createCheckoutSession, getCheckoutSession, newToken, pricesByLookupKey, verifyWebhook, type CheckoutSession } from "./stripe";
+import { applyGiftPayment, giftCatalog, isGiftPurchase, recordGift } from "./gift";
+import { createCheckoutSession, getCheckoutSession, newToken, verifyWebhook, type CheckoutSession } from "./stripe";
 
-export type ShopEnv = {
-  DB: D1Database;
-  FILES: R2Bucket;
-  STRIPE_SECRET_KEY?: string;
-  STRIPE_WEBHOOK_SECRET?: string;
-  EMAIL?: SendEmail;
-};
+export type { ShopEnv } from "./catalog";
 
-const LEVELS = new Map(ladder.map((l) => [l.slug, l]));
-const ORDER = ladder.map((l) => l.slug);
-type Kind = "level" | "two" | "all";
-const BUNDLE_KEYS: Record<Exclude<Kind, "level">, string> = { two: "bundle_two", all: "bundle_all" };
 const TOKEN = /^[A-Za-z0-9_-]{20,64}$/;
-const FILE = /^[a-z0-9][a-z0-9.-]{0,80}\.pdf$/;
 const SESSION = /^cs_[A-Za-z0-9_]{10,200}$/;
 
 const shop = new Hono<{ Bindings: ShopEnv }>();
-
-const checkoutOn = (env: ShopEnv) => Boolean(env.STRIPE_SECRET_KEY);
-
-type LevelPrice = { id: string; cents: number; currency: string };
-type Prices = { bySlug: Map<string, LevelPrice>; bundles: Map<string, LevelPrice> };
-let priceCache: { at: number; prices: Prices } | null = null;
-const NO_PRICES: Prices = { bySlug: new Map(), bundles: new Map() };
-
-/** Level prices (lookup key `level_<slug>`) and bundle prices, cached for 5 minutes per isolate. */
-async function allPrices(env: ShopEnv): Promise<Prices> {
-  if (!env.STRIPE_SECRET_KEY) return NO_PRICES;
-  if (priceCache && Date.now() - priceCache.at < 300_000) return priceCache.prices;
-  try {
-    const keys = [...ORDER.map((s) => `level_${s}`), ...Object.values(BUNDLE_KEYS)];
-    const found = await pricesByLookupKey(env.STRIPE_SECRET_KEY, keys);
-    const prices: Prices = { bySlug: new Map(), bundles: new Map() };
-    for (const p of found) {
-      if (p.unit_amount == null || !p.lookup_key) continue;
-      const price = { id: p.id, cents: p.unit_amount, currency: p.currency };
-      if (p.lookup_key.startsWith("level_")) prices.bySlug.set(p.lookup_key.slice("level_".length), price);
-      else prices.bundles.set(p.lookup_key, price);
-    }
-    priceCache = { at: Date.now(), prices };
-  } catch (e) {
-    console.error(e);
-    if (!priceCache) return NO_PRICES;
-  }
-  return priceCache!.prices;
-}
-
-const levelPrices = async (env: ShopEnv) => (await allPrices(env)).bySlug;
-
-/** The level after `slug` on the ladder, if it is also for sale. */
-function nextFor(slug: string, forSale: string[]): string | undefined {
-  const next = ORDER[ORDER.indexOf(slug) + 1];
-  return next && forSale.includes(next) ? next : undefined;
-}
-
-/** "Chicks", "Chicks and Ducklings", "All 13 levels". */
-function orderName(kind: Kind, slugs: string[]): string {
-  if (kind === "all") return `All ${slugs.length} levels`;
-  return slugs.map((s) => LEVELS.get(s)!.name).join(" and ");
-}
-
-/** Slugs with whole-level PDFs in R2. */
-async function levelsForSale(files: R2Bucket): Promise<string[]> {
-  const listed = await files.list({ prefix: "levels/", delimiter: "/" });
-  return listed.delimitedPrefixes.map((p) => p.slice("levels/".length, -1)).filter((s) => LEVELS.has(s));
-}
-
-async function levelFiles(files: R2Bucket, slug: string) {
-  const listed = await files.list({ prefix: `levels/${slug}/` });
-  return listed.objects
-    .map((o) => ({ name: o.key.slice(`levels/${slug}/`.length), size: o.size }))
-    .filter((f) => FILE.test(f.name))
-    .sort((a, b) => rank(a.name) - rank(b.name) || a.name.localeCompare(b.name));
-}
-
-/** Reading, then math, then pencil; each subject's level book before its answer key. */
-function rank(name: string): number {
-  const subject = ["reading", "math", "pencil"].findIndex((s) => name.includes(s));
-  return (subject < 0 ? 3 : subject) * 2 + (name.includes("answers") ? 1 : 0);
-}
 
 /** What the library needs in one request: previews, what's buyable, and each level's price. */
 shop.get("/api/catalog", async (c) => {
@@ -119,6 +58,7 @@ shop.get("/api/catalog", async (c) => {
           .map(([k, p]) => [k, { cents: p!.cents, currency: p!.currency, levels: k === "all" ? forSale.length : 2 }]),
       ),
       next: Object.fromEntries(forSale.map((s) => [s, nextFor(s, forSale)]).filter(([, n]) => n)),
+      gifts: giftCatalog(c.env, all),
     },
     200,
     { "cache-control": "public, max-age=60" },
@@ -129,15 +69,14 @@ shop.post("/api/checkout", async (c) => {
   if (!checkoutOn(c.env)) return c.json({ ok: false, error: "Checkout isn't open yet." }, 503);
   const body = await c.req.json<{ level?: string; bundle?: string }>().catch(() => ({}) as { level?: string; bundle?: string });
   const kind: Kind = body.bundle === "two" || body.bundle === "all" ? body.bundle : "level";
-  const [prices, withFiles] = await Promise.all([allPrices(c.env), levelsForSale(c.env.FILES)]);
-  const forSale = withFiles.filter((s) => prices.bySlug.has(s)).sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+  const { prices, forSale } = await buyableLevels(c.env);
   let slugs: string[] = [];
   if (kind === "all") slugs = forSale;
   else {
     const slug = String(body.level ?? "");
     if (forSale.includes(slug)) slugs = kind === "two" ? [slug, nextFor(slug, forSale)].filter(Boolean) as string[] : [slug];
   }
-  const price = kind === "level" ? prices.bySlug.get(slugs[0] ?? "") : prices.bundles.get(BUNDLE_KEYS[kind]);
+  const price = kind === "level" ? prices.bySlug.get(slugs[0] ?? "") : prices.bundles.get(BUNDLE_KEYS[kind as "two" | "all"]);
   if (!price || !slugs.length || (kind === "two" && slugs.length !== 2) || (kind === "all" && slugs.length < 2)) {
     return c.json({ ok: false, error: kind === "level" ? "That level isn't for sale yet." : "That bundle isn't available." }, 404);
   }
@@ -164,11 +103,11 @@ shop.post("/api/checkout", async (c) => {
  * Store a paid session as an order (idempotent) and return its download token. The first time an order is
  * stored, the buyer gets an email with the download link, which expires 7 days after purchase.
  */
-async function recordOrder(env: ShopEnv, s: CheckoutSession, origin: string): Promise<string | null> {
+export async function recordOrder(env: ShopEnv, s: CheckoutSession, origin: string): Promise<string | null> {
   // "no_payment_required" = a 100%-off promotion code, which is still a real order.
   if (s.payment_status === "unpaid" || s.status !== "complete") return null;
   const slugs = (s.metadata?.levels ?? s.metadata?.level ?? "").split(",").filter((x) => LEVELS.has(x));
-  const kind: Kind = s.metadata?.kind === "two" || s.metadata?.kind === "all" ? s.metadata.kind : "level";
+  const kind = parseKind(s.metadata?.kind);
   if (!slugs.length) return null;
   const email = s.customer_details?.email?.toLowerCase() ?? null;
   const inserted = await env.DB.prepare(
@@ -180,16 +119,27 @@ async function recordOrder(env: ShopEnv, s: CheckoutSession, origin: string): Pr
     .bind(s.id)
     .first<{ token: string; expires_at: string }>();
   if (row && email && inserted.meta.changes > 0) {
-    const single = slugs.length === 1 ? LEVELS.get(slugs[0])! : null;
     await sendOrderEmail(env.EMAIL, {
       to: email,
       levelName: orderName(kind, slugs),
-      levelTitle: single ? single.title : kind === "all" ? "every level, ages 3 to 12" : "two levels in a row",
+      levelTitle: orderTitle(kind, slugs),
       url: `${origin}/orders/${row.token}`,
       expiresAt: row.expires_at,
+      gift: Boolean(s.metadata?.gift_code),
     });
   }
   return row?.token ?? null;
+}
+
+/**
+ * A paid session, from the webhook or from a return page that got there first. Every step is idempotent
+ * (keyed on the session id), so both paths can run, in any order, any number of times.
+ */
+async function handlePaidSession(env: ShopEnv, s: CheckoutSession, origin: string) {
+  if (isGiftPurchase(s)) return { gift: await recordGift(env, s, origin) };
+  const token = await recordOrder(env, s, origin);
+  if (token) await applyGiftPayment(env, s);
+  return { token };
 }
 
 shop.post("/api/stripe/webhook", async (c) => {
@@ -201,7 +151,7 @@ shop.post("/api/stripe/webhook", async (c) => {
   }
   const event = JSON.parse(raw) as { type: string; data: { object: CheckoutSession } };
   if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
-    await recordOrder(c.env, event.data.object, new URL(c.req.url).origin);
+    await handlePaidSession(c.env, event.data.object, new URL(c.req.url).origin);
   }
   return c.json({ received: true });
 });
@@ -214,8 +164,24 @@ shop.get("/api/orders/session/:sid", async (c) => {
   if (row) return c.json({ ok: true, token: row.token });
   if (!checkoutOn(c.env)) return c.json({ ok: false, error: "Not found" }, 404);
   try {
-    const token = await recordOrder(c.env, await getCheckoutSession(c.env.STRIPE_SECRET_KEY!, sid), new URL(c.req.url).origin);
+    const { token } = await handlePaidSession(c.env, await getCheckoutSession(c.env.STRIPE_SECRET_KEY!, sid), new URL(c.req.url).origin);
     if (token) return c.json({ ok: true, token });
+    return c.json({ ok: false, pending: true, error: "We're still confirming your payment." }, 202);
+  } catch {
+    return c.json({ ok: false, error: "Not found" }, 404);
+  }
+});
+
+/** A gift buyer's return page asks for the gift code (same fallback as orders). */
+shop.get("/api/gift/session/:sid", async (c) => {
+  const sid = c.req.param("sid");
+  if (!SESSION.test(sid)) return c.json({ ok: false, error: "Not found" }, 404);
+  const row = await c.env.DB.prepare("SELECT code FROM gifts WHERE session_id = ?").bind(sid).first<{ code: string }>();
+  if (row) return c.json({ ok: true, code: row.code });
+  if (!checkoutOn(c.env)) return c.json({ ok: false, error: "Not found" }, 404);
+  try {
+    const { gift } = await handlePaidSession(c.env, await getCheckoutSession(c.env.STRIPE_SECRET_KEY!, sid), new URL(c.req.url).origin);
+    if (gift) return c.json({ ok: true, code: gift });
     return c.json({ ok: false, pending: true, error: "We're still confirming your payment." }, 202);
   } catch {
     return c.json({ ok: false, error: "Not found" }, 404);
@@ -270,7 +236,7 @@ shop.get("/api/orders/:token", async (c) => {
     {
       ok: true,
       kind: order.kind ?? "level",
-      name: orderName((order.kind as Kind) ?? "level", slugs),
+      name: orderName(parseKind(order.kind ?? undefined), slugs),
       level: { slug: first.slug, name: first.name, title: first.title, age: first.age },
       levels: groups,
       email: order.email,

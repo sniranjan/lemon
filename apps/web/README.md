@@ -12,6 +12,8 @@ npm install                 # once, at the repo root
 npm run db:migrate:local    # once, creates the local D1 tables
 npm run dev                 # local site + Worker + local D1/R2 (http://localhost:5173)
 npm run deploy              # build, apply D1 migrations remotely, deploy
+npm run typecheck           # TypeScript, site + Worker + tests
+npm test                    # Worker unit tests (vitest; D1 = node:sqlite with the migrations, Stripe stubbed)
 ```
 
 `npm run dev` / `build` first copy the worksheet pictures from `../../assets/pictures` into
@@ -29,6 +31,14 @@ npm run deploy              # build, apply D1 migrations remotely, deploy
 | `POST /api/stripe/webhook` | Stripe `checkout.session.completed` → row in D1 `orders` (signature checked) |
 | `GET /api/orders/session/:sid` | thanks page → order token (asks Stripe directly if the webhook hasn't landed) |
 | `GET /api/orders/:token` | the order and its files; `GET /api/orders/:token/files/:file` downloads one |
+| `POST /api/gift/checkout` | gift form (kind, amount, names, recipient email, child's first name, message, delivery date) → validated → Stripe Checkout URL |
+| `GET /api/gift/session/:sid` | gift thanks page → gift code (asks Stripe directly if the webhook hasn't landed) |
+| `GET /api/gift/:code` | a gift for the redeem page and the gift card: kind, balance, names, message, orders (no emails or tokens) |
+| `POST /api/gift/:code/redeem` | every-level gift + `{ email }` → one order for all 13 levels, once |
+| `POST /api/gift/:code/checkout` | gift amount + `{ levels, email }` → order with no Stripe if the balance covers it, else Checkout for the rest |
+| `POST /api/gift/:code/resend` | emails the still-valid download links of this code's orders again (at most every 2 minutes) |
+
+Pages: `/gift` (form), `/gift/thanks`, `/gift/card/:code` (printable, one Letter page), `/redeem?code=…`.
 
 ## Free previews
 
@@ -73,6 +83,28 @@ Preview PDFs must not show internal level codes or anything referencing other pr
   `npx wrangler d1 execute paperlessons --remote --command "UPDATE orders SET expires_at = datetime('now','+7 days') WHERE email = '…'"`
 - **Local testing:** put test values in `.dev.vars` (git-ignored); `stripe listen --forward-to
   localhost:5173/api/stripe/webhook` prints a webhook secret for local use.
+
+## Gifts (worker/gift.ts)
+
+- **Two kinds:** every level (the `bundle_all` price, $99) or a gift amount ($19 / $29 / $50, or $10–$250 in
+  whole dollars). Gift details travel in the Checkout Session's metadata (Managed Payments rejects `custom_text`);
+  the price is inline `price_data`; promotion codes are off for gifts.
+- **Webhook** (`metadata.gift = buy`) → row in `gifts` with a code like `HAPY-BDAY-MAYA` (no 0/O/1/I/L). The buyer
+  gets a receipt + gift card link (never download links). A gift due today is emailed to the recipient right away,
+  From "Paper Lessons"; later dates go out with the **daily cron** (`triggers.crons` `0 14 * * *`, 9 am Eastern).
+  A failed send is retried by the next day's cron.
+- **Redeeming:** an every-level gift becomes one order for all 13 levels (order `session_id = gift-all-<code>`, so
+  only once). A gift amount pays for a cart (`src/lib/cart.ts`, shared with the redeem page): covered in full →
+  the order is made with no Stripe; otherwise Checkout with a one-off `amount_off` coupon for the balance used.
+  The balance is taken only when the webhook says it's paid (`gift_redemptions`, keyed on the session, so retries
+  are harmless); `gift_holds` stops a second tab spending the same balance while a checkout is open (40 minutes).
+- Codes never expire. Orders opened with a gift get the usual 7-day download link.
+- Deliver due gifts by hand (e.g. after an outage): the cron runs `deliverDueGifts`; locally,
+  `curl "http://localhost:5173/cdn-cgi/handler/scheduled"` triggers it.
+
+```bash
+npx wrangler d1 execute paperlessons --remote --command "select code, kind, amount_cents, balance_cents, deliver_on, delivered_at from gifts order by id desc limit 20"
+```
 
 ## Session replay
 

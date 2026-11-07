@@ -57,6 +57,16 @@ function Refunds() {
         level by mistake, tell us and we'll refund the duplicate charge.
       </p>
 
+      <H>Gifts</H>
+      <p>
+        Gifts are final too. We don't refund a gift, or exchange it for cash, whether or not it has been opened. Gift
+        codes never expire, so the family can open theirs whenever they're ready. See the{" "}
+        <a className="font-bold text-coral underline underline-offset-2" href="/terms#gifts">
+          gift terms
+        </a>
+        .
+      </p>
+
       <H>Chargebacks</H>
       <p>
         Please talk to us before disputing a charge with your bank. If a charge is disputed, we may turn off the
@@ -107,6 +117,37 @@ function Terms() {
         for the details, including what we do if a file doesn't work and the one exception (a duplicate charge by
         mistake).
       </p>
+
+      <h2 id="gifts" className="mt-10 scroll-mt-24 text-2xl font-bold">Gifts</h2>
+      <ul className="list-disc space-y-2 pl-6">
+        <li>
+          You can buy a gift for another family: every level, or a gift amount to spend on any level. You get a
+          receipt and a printable gift card with the gift code; the person you name gets an email with your message on
+          the day you choose (today or up to 90 days ahead). You don't get download links yourself.
+        </li>
+        <li>
+          <strong>Gift codes never expire</strong> and can be used at paperlessons.com/redeem. An every-level gift is
+          opened once and becomes one order for all 13 levels. A gift amount can be spent over several orders until it
+          runs out; if an order costs more than what's left, you pay the rest at checkout.
+        </li>
+        <li>
+          <strong>Gifts have no cash value.</strong> They can't be exchanged for cash, resold or used to pay for
+          anything other than levels on this site, and any amount left on a code stays there.
+        </li>
+        <li>
+          <strong>All sales are final, gifts included: no refunds.</strong> Please check the recipient's email address
+          before you pay.
+        </li>
+        <li>
+          Opening a gift works just like buying: the download link works for 7 days and then expires, and the pages
+          are for the children in that family's home, under the rules below. "Resend my files" on the redeem page
+          emails a link again while it still works.
+        </li>
+        <li>
+          Treat a gift code like cash: anyone who has it can open the gift. We can't replace a code someone else
+          has already used.
+        </li>
+      </ul>
 
       <H>How you may use the pages</H>
       <ul className="list-disc space-y-2 pl-6">
@@ -164,6 +205,12 @@ function Privacy() {
           <strong>Orders:</strong> your email address, the level you bought, the amount, and how many times your files
           were downloaded. We use your email to send you your download link (one email per order). Card details go
           straight to Stripe; we never see them.
+        </li>
+        <li>
+          <strong>Gifts:</strong> your name and email, the recipient's name and email, the child's first name (if you
+          add it, and only the first name), your message and the delivery date. We use them to email the recipient on
+          that day, to show the gift on the gift card and redeem page, and to send you your receipt and gift card. When
+          a gift is opened we keep the email the download link went to, like any order.
         </li>
         <li>
           <strong>Free previews:</strong> which preview was downloaded and the country it was downloaded from (no

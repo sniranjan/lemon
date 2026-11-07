@@ -1,5 +1,6 @@
 // Minimal Stripe client for Workers: plain fetch + WebCrypto, no SDK.
-// Only what checkout needs: create a Checkout Session, read one back, and verify webhook signatures.
+// Only what checkout needs: create a Checkout Session (and a one-off coupon), read one back, and verify
+// webhook signatures.
 
 const API = "https://api.stripe.com/v1";
 
@@ -52,8 +53,13 @@ export async function pricesByLookupKey(key: string, lookupKeys: string[]): Prom
   return out;
 }
 
-export function createCheckoutSession(key: string, params: Record<string, unknown>) {
-  return call<CheckoutSession>(key, "POST", "/checkout/sessions", params);
+export function createCheckoutSession(key: string, params: Record<string, unknown>, idempotencyKey?: string) {
+  return call<CheckoutSession>(key, "POST", "/checkout/sessions", params, idempotencyKey);
+}
+
+/** A one-off coupon (used once) for "pay the rest" with a gift balance. */
+export function createCoupon(key: string, params: Record<string, unknown>, idempotencyKey?: string) {
+  return call<{ id: string }>(key, "POST", "/coupons", params, idempotencyKey);
 }
 
 export function getCheckoutSession(key: string, id: string) {

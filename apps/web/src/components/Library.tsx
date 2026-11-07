@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, Loader2, ShoppingBag, Sparkles } from "lucide-react";
+import { Download, Gift, Loader2, ShoppingBag, Sparkles } from "lucide-react";
 import { formatPrice, startCheckout, useCatalog, type Catalog } from "@/lib/catalog";
 import { gradeLabel, LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
 import { SheetPreview } from "@/components/SheetPreview";
@@ -65,6 +65,9 @@ function EverythingBundle({ catalog }: { catalog: Catalog }) {
         {busy ? <Loader2 className="size-5 animate-spin" /> : <ShoppingBag className="size-5" />} Get all {all.levels} ·{" "}
         {formatPrice(all.cents, all.currency)}
       </button>
+      <a href="/gift?kind=all" className={cn(FLOAT, "inline-flex shrink-0 items-center gap-2 bg-coral px-6 py-3 text-lg text-white")}>
+        <Gift className="size-5" /> Give as a gift
+      </a>
       {error && (
         <p role="alert" className="w-full text-sm font-bold text-coral sm:absolute sm:-bottom-8 sm:left-6">
           {error}
@@ -113,6 +116,15 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
           <PackButton level={level} nextName={nextName} price={formatPrice(pack.cents, pack.currency)} />
         )}
         <PreviewButton level={level} hasPreview={hasPreview} floating />
+        {price && (
+          <a
+            href={`/gift?for=${level.slug}`}
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center justify-center gap-1 self-center rounded-full bg-white/90 px-3 py-0.5 text-[0.8rem] font-extrabold underline-offset-2 hover:underline"
+          >
+            <Gift className="size-3.5 text-coral" /> Give as a gift
+          </a>
+        )}
       </div>
 
       {/* The pocket: slides down on hover / tap to reveal the sheet. */}

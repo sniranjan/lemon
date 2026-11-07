@@ -133,3 +133,19 @@
 @media (prefers-reduced-motion: reduce) {
   .card-rise, .mascot-bob, .float, .path-draw { animation: none !important; }
 }
+
+/* The printable gift card (/gift/card/<code>): exactly one US Letter page, colors kept. */
+@media print {
+  @page { size: letter; margin: 0; }
+  html, body { background: #fff !important; }
+  .gift-card-page, .gift-card-page * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .gift-sheet {
+    width: 8.5in !important;
+    height: 11in !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

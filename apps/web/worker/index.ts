@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import shop, { type ShopEnv } from "./shop";
+import gift, { deliverDueGifts, todayUTC } from "./gift";
 
 type Env = ShopEnv & { ASSETS: Fetcher };
 
@@ -77,6 +78,8 @@ app.get("/media/social/:name", async (c) => {
 
 // Checkout, orders and downloads (worker/shop.ts).
 app.route("/", shop);
+// Gifts: buying one, the gift card, redeeming a code (worker/gift.ts).
+app.route("/", gift);
 
 app.all("/api/*", (c) => c.json({ ok: false, error: "Not found" }, 404));
 
@@ -108,4 +111,12 @@ app.all("*", async (c) => {
   return new Response(page.body, { status: page.status, headers });
 });
 
-export default app;
+export { app };
+
+export default {
+  fetch: app.fetch,
+  /** Daily cron (wrangler.jsonc triggers.crons): email the recipients whose gift is due. */
+  async scheduled(_controller, env, ctx) {
+    ctx.waitUntil(deliverDueGifts(env, todayUTC()));
+  },
+} satisfies ExportedHandler<Env>;

@@ -5,6 +5,8 @@
   "compatibility_date": "2026-10-01",
   "assets": { "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": true },
   "observability": { "enabled": true },
+  // Daily at 14:00 UTC (6 am Pacific, 9 am Eastern): email the gifts due today (worker/gift.ts deliverDueGifts).
+  "triggers": { "crons": ["0 14 * * *"] },
   "routes": [
     // Custom domains: Cloudflare creates and manages the DNS records for these hostnames.
     { "pattern": "paperlessons.com", "custom_domain": true },

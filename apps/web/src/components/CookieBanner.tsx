@@ -21,7 +21,7 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label="Cookie choices"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border-[3px] border-ink bg-white p-5 shadow-[0_6px_0_0_var(--ink)] sm:bottom-5"
+      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-2xl border-[3px] border-ink bg-white p-5 shadow-[0_6px_0_0_var(--ink)] sm:bottom-5 print:hidden"
     >
       <div className="flex items-start gap-3">
         <span className="grid size-10 shrink-0 place-items-center rounded-full border-2 border-ink bg-sun">

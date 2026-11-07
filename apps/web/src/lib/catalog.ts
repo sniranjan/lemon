@@ -7,6 +7,8 @@ export type Catalog = {
   // "two" = a level plus the next one (next[slug] says which); "all" = every level for sale
   bundles: Partial<Record<"two" | "all", { cents: number; currency: string; levels: number }>>;
   next: Record<string, string>;
+  // gifts are open once checkout is; allCents = the every-level gift's price (null if not on sale)
+  gifts?: { open: boolean; allCents: number | null; presets: number[]; min: number; max: number };
 };
 
 const EMPTY: Catalog = { previews: [], forSale: [], prices: {}, bundles: {}, next: {} };
@@ -49,4 +51,64 @@ export async function startCheckout(level: string | null, bundle?: "two" | "all"
   } catch {
     return "Couldn't reach the shop. Check your connection and try again.";
   }
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// Gifts (worker/gift.ts)
+
+export type GiftInfo = {
+  ok: true;
+  code: string;
+  kind: "all" | "credit";
+  amountCents: number;
+  balanceCents: number;
+  currency: string;
+  buyerName: string;
+  recipientName: string;
+  childName: string | null;
+  message: string | null;
+  deliverOn: string;
+  delivered: boolean;
+  redeemed: boolean;
+  orders: { name: string; createdAt: string; expiresAt: string; expired: boolean; centsUsed: number }[];
+};
+
+export type ApiResult = { ok: boolean; error?: string; field?: string; url?: string; token?: string; redeemed?: boolean };
+
+const OFFLINE = "Couldn't reach the shop. Check your connection and try again.";
+
+/** POST JSON to the Worker; network trouble comes back as an ordinary error. */
+export async function postJson(path: string, body: unknown): Promise<ApiResult> {
+  try {
+    const r = await fetch(path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+    return (await r.json()) as ApiResult;
+  } catch {
+    return { ok: false, error: OFFLINE };
+  }
+}
+
+export async function getGift(code: string): Promise<GiftInfo | { ok: false; error: string }> {
+  try {
+    const r = await fetch(`/api/gift/${encodeURIComponent(code)}`);
+    return (await r.json()) as GiftInfo | { ok: false; error: string };
+  } catch {
+    return { ok: false, error: OFFLINE };
+  }
+}
+
+const ymd = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/** Today in the visitor's own time zone, YYYY-MM-DD (what a date input expects). */
+export const localToday = () => ymd(new Date());
+
+export function addDaysLocal(iso: string, days: number): string {
+  const d = new Date(`${iso}T12:00:00`);
+  d.setDate(d.getDate() + days);
+  return ymd(d);
+}
+
+/** "2026-11-20" or "2026-11-13 14:41:14" (UTC, from D1) → "November 20, 2026". */
+export function longDate(s: string): string {
+  const iso = s.length === 10 ? `${s}T12:00:00Z` : `${s.replace(" ", "T")}Z`;
+  return new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(new Date(iso));
 }

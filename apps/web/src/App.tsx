@@ -1,4 +1,7 @@
-import { ArrowDown, BookOpen, Calculator, Pencil, Printer, Sprout, Sun } from "lucide-react";
+import { ArrowDown, BookOpen, Calculator, Gift, Pencil, Printer, Sprout, Sun } from "lucide-react";
+import { GiftPage, GiftThanks } from "@/components/GiftPage";
+import { GiftCard } from "@/components/GiftCard";
+import { RedeemPage } from "@/components/RedeemPage";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -15,11 +18,24 @@ const isOrderPage = () => location.pathname === "/thanks" || location.pathname.s
 
 const bySlug = (s: string) => LEVELS.find((l) => l.slug === s)!;
 
+/** Gift pages: the form, Stripe's return page, the printable card and the redeem page. */
+function giftPage(path: string) {
+  if (path === "/gift" || path === "/gift/") return <GiftPage />;
+  if (path === "/gift/thanks") return <GiftThanks />;
+  const card = path.match(/^\/gift\/card\/([A-Za-z0-9-]{12,20})\/?$/);
+  if (card) return <GiftCard code={card[1]} />;
+  if (path === "/redeem" || path === "/redeem/") return <RedeemPage />;
+  return null;
+}
+
 export default function App() {
+  const gift = giftPage(location.pathname);
   return (
-    <div className="flex min-h-screen flex-col overflow-x-clip">
+    <div className="flex min-h-screen flex-col overflow-x-clip print:block print:min-h-0">
       <Nav />
-      {isOrderPage() ? (
+      {gift ? (
+        <main className="flex-1">{gift}</main>
+      ) : isOrderPage() ? (
         <main className="flex-1">
           <OrderPage />
         </main>
@@ -44,12 +60,15 @@ export default function App() {
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-40 border-b-[3px] border-ink bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b-[3px] border-ink bg-cream/90 backdrop-blur print:hidden">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo />
         <nav className="flex items-center gap-1 text-[0.95rem] font-extrabold sm:gap-2">
-          <a href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-white sm:inline">
+          <a href="/#how" className="hidden rounded-full px-3 py-2 hover:bg-white md:inline">
             How it works
+          </a>
+          <a href="/gift" aria-label="Give a gift" className="inline-flex items-center gap-1.5 rounded-full px-2 py-2 hover:bg-white sm:px-3">
+            <Gift className="size-5 text-coral sm:size-4" /> <span className="hidden sm:inline">Give a gift</span>
           </a>
           <Button asChild variant="sun" size="pill-sm">
             <a href="/#library">Shop levels</a>
@@ -85,6 +104,11 @@ function Hero() {
             <Button asChild variant="coral" size="pill">
               <a href="#library">
                 Peek at the library <ArrowDown className="size-5" />
+              </a>
+            </Button>
+            <Button asChild variant="paper" size="pill">
+              <a href="/gift">
+                <Gift className="size-5 text-coral" /> Give as a gift
               </a>
             </Button>
           </div>
@@ -216,6 +240,10 @@ const FAQ = [
     a: "No. Levels are instant digital downloads, so all sales are final. That's why every level has a free preview: try it with your child first. If a file doesn't work, email hello@paperlessons.com and we'll fix it.",
   },
   {
+    q: "Can I give this as a gift?",
+    a: "Yes! Give every level (no need to guess their age) or a gift amount from $10 to $250. You add a message and pick the day, and we email them on that day. You also get a gift card to print and tuck into a birthday card. Gift codes never expire, have no cash value and, like everything here, can't be refunded.",
+  },
+  {
     q: "What if a level feels too hard?",
     a: "Go back a few pages and repeat them. Doing the same step again until it feels easy is how the next step becomes easy too.",
   },
@@ -246,7 +274,7 @@ function Faq() {
 
 function Footer() {
   return (
-    <footer className="border-t-[3px] border-ink bg-white px-4 py-10 sm:px-6">
+    <footer className="border-t-[3px] border-ink bg-white px-4 py-10 sm:px-6 print:hidden">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <Logo />
         <div className="flex flex-col items-center gap-1">
