@@ -90,6 +90,8 @@ class SpreadPassage(_Strict):
     genre: Literal["nonfiction", "story", "speech", "essay", "letter"]   # speech/essay/letter: Whales Reading rhetoric
     text: str
     pages: list[SpreadSet]
+    story: str | None = None     # a story told in installments (Lions Reading C): its name ...
+    part: int | None = None      # ... and this installment's number, shown on the reading page
 
     @property
     def paragraphs(self) -> list[str]:
@@ -138,6 +140,10 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
     lo_sets, hi_sets = rules.get("sets_per_passage", [1, 2])
     if not lo_sets <= len(p.pages) <= hi_sets:
         out.append(f"passage {p.id}: has {len(p.pages)} question sets (needs {lo_sets}–{hi_sets})")
+    if (p.story is None) != (p.part is None):
+        out.append(f"passage {p.id}: an installment needs both story and part")
+    if rules.get("needs_story") and p.story is None:
+        out.append(f"passage {p.id}: this section's passages are installments of one story (story, part)")
     genres = rules.get("genres")
     if genres and p.genre not in genres:
         out.append(f"passage {p.id}: genre {p.genre} isn't one of {genres}")
@@ -190,6 +196,8 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                 n_sent = len(sentences(q.sample))
                 if not s_lo <= n_sent <= s_hi:
                     out.append(f"{where}: paragraph sample has {n_sent} sentences (needs {s_lo}–{s_hi})")
+                if rules.get("max_rubric") and len(q.rubric) > rules["max_rubric"]:
+                    out.append(f"{where}: rubric is {len(q.rubric)} characters (max {rules['max_rubric']})")
                 quoted = _QUOTED.findall(q.sample)
                 if not quoted:
                     out.append(f"{where}: paragraph sample must quote the text in double quotes")
@@ -329,9 +337,12 @@ def build_spread_items(ctx) -> tuple[str, list[dict], list[str] | None]:
     s = p.pages[k]
     first, rest = split_text(p.paragraphs)
     if entry["side"] == "read":
-        return p.title, [{"kind": "passage", "passage": p.id, "set": k, "side": "read", "genre": p.genre,
-                          "again": k > 0, "look_for": s.look_for if k > 0 else None,
-                          "paragraphs": first, "turn": bool(rest)}], None
+        head = {"kind": "passage", "passage": p.id, "set": k, "side": "read", "genre": p.genre,
+                "again": k > 0, "look_for": s.look_for if k > 0 else None,
+                "paragraphs": first, "turn": bool(rest)}
+        if p.story:   # an installment (Lions Reading C): only then, so other levels' items are unchanged
+            head.update(story=p.story, part=p.part)
+        return p.title, [head], None
     items: list[dict] = [{"kind": "questions", "passage": p.id, "set": k, "side": "questions",
                           "genre": p.genre, "page_before": ctx.spec.page - 1, "continued": rest}]
     key = []
@@ -376,6 +387,8 @@ def check_spread_sheet(sheet) -> list[str]:
     if head["side"] == "read":
         if head["paragraphs"] != split_text(p.paragraphs)[0]:
             out.append(f"passage text on the sheet doesn't match {p.id}")
+        if (head.get("story"), head.get("part")) != (p.story, p.part):
+            out.append(f"story and part on the sheet don't match {p.id}")
         if len(sheet.items) != 1 or sheet.answer_key:
             out.append("a reading page holds only the passage")
         return out

@@ -246,7 +246,13 @@ def test_free_preview_pdf(out_dir, booklet_out):
 
 
 def test_preview_refuses_a_level_that_is_not_built_yet():
-    report = booklet.build_preview("lions")
+    from ws.syllabus import level_path, load_ladder
+
+    missing = [r.slug for r in load_ladder()
+               if any(not level_path(sub, code).exists() for sub, code in r.strands.items())]
+    if not missing:
+        pytest.skip("every level on the ladder is built")
+    report = booklet.build_preview(missing[0])
     assert report.booklets == [] and all(i.severity == "error" for i in report.issues)
     assert "isn't built yet" in report.issues[0].message
 
