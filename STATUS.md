@@ -134,6 +134,25 @@ Read `CLAUDE.md` first (it is the spec), then this file. Branch: `feature/worksh
   Draft record `syllabus/drafts/R6-passages.md` from `scripts/r6_drafts.py` (approved by the orchestrator under the
   user's delegation). Verify 0 errors, 0 warnings; booklets per section + `pandas-reading-level.pdf` (202 pages) and
   `pandas-reading-level-answers.pdf` (29 pages; level rule `answers_height`). Preview pages 1–2 and 171–172 (two whole spreads); `ws preview pandas` builds `out/previews/pandas.pdf` (10 pages, with Pandas Math; not uploaded).
+- **Penguins Reading (R7, our own level, grade 7 reading for age 10, 200 pages)** (2026-11-06): `syllabus/english/R7.yaml`:
+  A Two Big Ideas 1–50 (two central ideas, how each develops, objective summary; RI.7.2) · B Claim and Evidence 51–100
+  (trace and judge arguments: relevant and sufficient evidence, sound reasoning; RI.7.8, RI.7.6) · C Word Roots 101–130
+  (40 Greek and Latin roots, two a page, then four-root reviews; L.7.4b, L.7.4d) · D Poems and Pictures in Words 131–160
+  (15 original poems: figurative and connotative meaning, sound devices, allusions to myths and fables, sonnet/ode/haiku
+  form; RL.7.4, L.7.5a, RL.7.5, L.7.5c) · E One Topic, Two Ways 161–200 (20 pairs: a story set in a real moment beside a
+  historical account; what the story keeps, invents or changes; RL.7.9). Codes checked on thecorestandards.org.
+  85 original texts in `content/passages/R7/` (prose 290–330 words, pairs 120–150 words a text, Flesch-Kincaid
+  6.51–8.46; poems exempt), each one two-page spread with 4 questions (the last a 3–4-sentence answer); every written
+  answer has a one-line rubric in the key. No new spread type: Pandas' `passage_spread` gained additive options (Pandas
+  output byte-identical): genres `argument`, `poem` (numbered lines in stanzas, line/stanza evidence checks) and `paired`
+  (two `texts`, rule `compare_questions`), list `evidence`, an optional `rubric` on `write` answers and rule `rubrics`.
+  New sheet type `word_roots` (`ws/roots.py`, hand-checked `content/wordroots/R7.yaml`; planner rule `roots`). Drafts
+  `syllabus/drafts/R7-passages.md`, `R7-roots.md` from `scripts/r7_drafts.py` (also `--check <section> <file>`), fit
+  tool `scripts/r7_fit.py`; approved by the orchestrator under the user's delegation after an independent fact and
+  answer-key review. Tests `tests/test_penguins_reading.py`. Verify 0 errors, 0 warnings; booklets per section +
+  `penguins-reading-level.pdf` (202 pages) and `penguins-reading-level-answers.pdf` (51 pages; `answers_height: 910`).
+  Preview pages 1–2 and 161–162 (two whole spreads); `ws preview penguins` builds `out/previews/penguins.pdf`
+  (10 pages, with Penguins Math; not uploaded).
 - **Lions Reading (R8, our own level, grade 8 reading for age 11, 200 pages)** (2026-11-06): `syllabus/english/R8.yaml`:
   A Close Reading 1–50 (figurative and connotative meaning, tone, analogies, allusions to well-known myths and tales;
   RL.8.4, L.8.4a, L.8.5a/c) · B Weighing Arguments 51–100 (claims, relevant/irrelevant and sufficient evidence, point of

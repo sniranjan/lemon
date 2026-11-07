@@ -1,0 +1,70 @@
+{
+  "id": "EN-R7-D-002",
+  "subject": "english",
+  "level": "R7",
+  "section": "D",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 132,
+  "variant": 1,
+  "seed": 6542463962976399954,
+  "title": "Storm in July",
+  "parent_tip": "Talk about any myth or story the poem points to. What fits?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "d01-thunderstorm",
+      "set": 0,
+      "side": "questions",
+      "genre": "poem",
+      "page_before": 131,
+      "continued": []
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "In lines 1–2, what is the sky compared to?",
+      "choices": [
+        "a teacup full of steam",
+        "a giant getting ready to work or speak",
+        "a drummer playing in a band",
+        "a river running down a street"
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which line uses a simile?",
+      "choices": [
+        "the whole town glittering",
+        "the sidewalks steaming like teacups,",
+        "The sky rolls up its sleeves at noon,",
+        "as the storm walks slowly east"
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "In line 6, the drops are “tentative.” What does that word suggest about them?",
+      "lines": 2
+    },
+    {
+      "kind": "paragraph",
+      "n": 4,
+      "ask": "How does the mood change from stanza 1 to stanza 4? Quote a line from each.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. B (a giant getting ready to work or speak)",
+    "2. B (the sidewalks steaming like teacups,)",
+    "3. Sample: It suggests the drops are careful and unsure at first, like a drummer trying out a few beats before really playing. Full answer: explains tentative as hesitant or unsure and links it to the first few drops or the drummer.",
+    "4. Sample: In stanza 1 the mood is tense, because the leaves are \"like hands that know what's coming.\" The storm feels like something about to happen. By stanza 4 the mood is calm and bright, since the town is \"glittering / as if someone polished it while we watched.\" The storm has passed and left everything fresh. Full answer: names a tense or waiting mood at the start and a calm or fresh mood at the end, with a quote from each stanza."
+  ],
+  "new_words": [],
+  "review_words": []
+}

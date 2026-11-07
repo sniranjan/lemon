@@ -1,0 +1,76 @@
+{
+  "id": "EN-R7-B-002",
+  "subject": "english",
+  "level": "R7",
+  "section": "B",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 52,
+  "variant": 1,
+  "seed": 1286411361427764214,
+  "title": "Trail on the Old Tracks",
+  "parent_tip": "Is each fact really about the claim? Is there enough proof?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "b01-rail-trail",
+      "set": 0,
+      "side": "questions",
+      "genre": "argument",
+      "page_before": 51,
+      "continued": [
+        {
+          "n": null,
+          "text": "The council should vote to give Maple Falls a trail that everyone can use.",
+          "cont": true
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "What is the writer's main claim?",
+      "choices": [
+        "The library should move to the east side.",
+        "The town should turn the old tracks into a trail.",
+        "Students should bike on Route 9.",
+        "Trains should run on the tracks again."
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which words are NOT relevant evidence for the claim?",
+      "choices": [
+        "the old rail bed is flat, wide and connected",
+        "seventy percent said they would walk or bike more",
+        "Railroads were first built in the United States",
+        "a busy road that has no sidewalk"
+      ],
+      "answer": "C",
+      "columns": 1
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "Is the cousin in Ohio strong evidence? Why or why not?",
+      "lines": 2
+    },
+    {
+      "kind": "paragraph",
+      "n": 4,
+      "ask": "Is the evidence sufficient? Explain in 3–4 sentences.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. B (The town should turn the old tracks into a trail.)",
+    "2. C (Railroads were first built in the United States)",
+    "3. Sample: No, it is weak, because it is one person's opinion about one town, not facts about many trails. Full answer: says it is weak and explains it is one person's opinion or a single example.",
+    "4. Sample: The evidence is strong for the first two reasons. The survey shows that \"seventy percent said they would walk or bike more,\" and the Route 9 detail shows a real safety problem. The third reason is weaker: \"Hundreds of communities\" is general, and the rest is a cousin's opinion and an unrelated fact. The writer also says the trail is cheaper without giving any costs. Full answer: judges each reason; names the survey or Route 9 as strong; names the cousin, the history fact or the missing costs as weak."
+  ],
+  "new_words": [],
+  "review_words": []
+}

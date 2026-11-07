@@ -42,10 +42,14 @@ MAX_CHOICE = 70      # characters: one line at 20px (mc)
 MAX_QUOTE = 130      # characters: two lines at 20px (quote choices)
 MAX_HEAD = 18        # organizer box label
 MAX_LOOK_FOR = 46    # "Read again: <look_for>" sits on the card border, one line
+MAX_VERSE = 60       # characters in one line of a poem: never wraps at 20px beside its line number
+MAX_TEXT_TITLE = 34  # a paired text's title, on one line with its "Text 1" badge
 LINES = {"write": 2, "paragraph": 5, "organizer": 3}
 TWO_COLUMNS = 30     # choices this short (all four) sit in two columns, A B / C D
 _PARAGRAPH_REF = re.compile(r"\bparagraphs? (\d+)(?: and (\d+))?", re.I)
 _QUOTED = re.compile(r"[\"“]([^\"”]+)[\"”]")
+_LINE_REF = re.compile(r"\blines? (\d+)(?:\s*(?:and|–|-|to)\s*(\d+))?", re.I)
+_STANZA_REF = re.compile(r"\bstanza (\d+)", re.I)
 
 
 class _Strict(BaseModel):
@@ -60,15 +64,18 @@ class SpreadQuestion(_Strict):
     samples: list[str] | None = None
     heads: list[str] | None = None
     rubric: str | None = None
-    evidence: str
+    evidence: str | list[str]          # a list: one quote from each of two texts (Penguins Reading, genre paired)
 
     @model_validator(mode="after")
     def _fields_for_kind(self) -> SpreadQuestion:
         k = self.kind
         need = {"mc": {"choices"}, "quote": {"choices"}, "write": {"sample"},
                 "paragraph": {"sample", "rubric"}, "organizer": {"heads", "samples"}}[k]
+        optional = {"rubric"} if k == "write" else set()     # a short answer may carry a rubric too
         for f in ("choices", "sample", "samples", "heads", "rubric"):
             has = getattr(self, f) is not None
+            if f in optional:
+                continue
             if has != (f in need):
                 raise ValueError(f"{k} question {self.ask!r}: {'needs' if f in need else 'has no'} {f}")
         if self.choices is not None and (len(self.choices) != 4 or len(set(self.choices)) != 4):
@@ -77,6 +84,10 @@ class SpreadQuestion(_Strict):
             raise ValueError(f"organizer {self.ask!r} needs 2–3 heads and one sample per head")
         return self
 
+    @property
+    def quotes(self) -> list[str]:
+        return [self.evidence] if isinstance(self.evidence, str) else list(self.evidence)
+
 
 class SpreadSet(_Strict):
     focus: str
@@ -84,18 +95,61 @@ class SpreadSet(_Strict):
     questions: list[SpreadQuestion]
 
 
-class SpreadPassage(_Strict):
-    id: str
+class SubText(_Strict):
+    """One of two texts read side by side (genre `paired`): e.g. a story set in the past, then a
+    historical account of the same time."""
     title: str
-    genre: Literal["nonfiction", "story", "speech", "essay", "letter"]   # speech/essay/letter: Whales Reading rhetoric
+    kind: str                          # shown under the title: story, history, ...
     text: str
-    pages: list[SpreadSet]
-    story: str | None = None     # a story told in installments (Lions Reading C): its name ...
-    part: int | None = None      # ... and this installment's number, shown on the reading page
 
     @property
     def paragraphs(self) -> list[str]:
         return [" ".join(p.split()) for p in re.split(r"\n\s*\n", self.text.strip())]
+
+
+class SpreadPassage(_Strict):
+    id: str
+    title: str
+    # speech/essay/letter: Whales Reading rhetoric. Penguins Reading adds: argument (a made-up writer's case),
+    # poem (stanzas split by a blank line, one line of verse per line, numbered on the page) and paired (two
+    # `texts`, no `text`).
+    genre: Literal["nonfiction", "story", "speech", "essay", "letter", "argument", "poem", "paired"]
+    text: str | None = None
+    texts: list[SubText] | None = None
+    pages: list[SpreadSet]
+    story: str | None = None     # a story told in installments (Lions Reading C): its name ...
+    part: int | None = None      # ... and this installment's number, shown on the reading page
+
+    @model_validator(mode="after")
+    def _body(self) -> SpreadPassage:
+        if (self.genre == "paired") != (self.texts is not None) or (self.text is None) == (self.texts is None):
+            raise ValueError(f"passage {self.id}: genre paired has exactly two `texts`, every other genre one `text`")
+        if self.texts is not None and len(self.texts) != 2:
+            raise ValueError(f"passage {self.id}: a paired passage needs exactly two texts")
+        return self
+
+    @property
+    def paragraphs(self) -> list[str]:
+        if self.texts is not None:
+            return [para for t in self.texts for para in t.paragraphs]
+        return [" ".join(p.split()) for p in re.split(r"\n\s*\n", self.text.strip())]
+
+    @property
+    def full_text(self) -> str:
+        """Everything the child reads, for evidence checks (both texts of a pair)."""
+        if self.texts is not None:
+            return "\n\n".join(t.text for t in self.texts)
+        return self.text
+
+    @property
+    def stanzas(self) -> list[list[str]]:
+        """A poem's stanzas, each a list of its lines (whitespace inside a line normalized)."""
+        return [[" ".join(line.split()) for line in st.strip().splitlines() if line.strip()]
+                for st in re.split(r"\n\s*\n", (self.text or "").strip())]
+
+    @property
+    def poem_lines(self) -> list[str]:
+        return [line for st in self.stanzas for line in st]
 
 
 def section_spreads(level: str, section: str) -> list[SpreadPassage]:
@@ -122,17 +176,43 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
     from .passages import british_words
 
     out = []
-    n = len(words(p.text))
-    lo, hi = rules.get("passage_words", [320, 380])
-    if not lo <= n <= hi:
-        out.append(f"passage {p.id}: {n} words (needs {lo}–{hi})")
+    fk_lo, fk_hi = rules.get("fk_grade", [5.5, 7.5])
+    if p.genre == "poem":
+        # poems: counted in lines, no readability score (FK assumes prose sentences), must fit one page
+        n = len(p.poem_lines)
+        lo, hi = rules.get("poem_lines", [12, 28])
+        if not lo <= n <= hi:
+            out.append(f"passage {p.id}: {n} lines (needs {lo}–{hi})")
+        if poem_page_lines(p) > READ_LINES:
+            out.append(f"passage {p.id}: the poem takes {poem_page_lines(p)} lines (max {READ_LINES:g} on its page)")
+        for line in p.poem_lines:
+            if len(line) > MAX_VERSE:
+                out.append(f"passage {p.id}: line {line!r} is longer than {MAX_VERSE} characters")
+    elif p.genre == "paired":
+        lo, hi = rules.get("text_words", [140, 175])
+        for i, t in enumerate(p.texts, start=1):
+            n = len(words(t.text))
+            if not lo <= n <= hi:
+                out.append(f"passage {p.id}: text {i} has {n} words (needs {lo}–{hi})")
+            fk = fk_grade(t.text)
+            if not fk_lo <= fk <= fk_hi:
+                out.append(f"passage {p.id}: text {i} Flesch-Kincaid grade {fk} (needs {fk_lo}–{fk_hi})")
+            if len(t.title) > MAX_TEXT_TITLE:
+                out.append(f"passage {p.id}: text title {t.title!r} is longer than {MAX_TEXT_TITLE} characters")
+        if paired_page_lines(p) > PAIRED_LINES:
+            out.append(f"passage {p.id}: both texts take {paired_page_lines(p)} lines (max {PAIRED_LINES:g} on the reading page)")
+    else:
+        n = len(words(p.text))
+        lo, hi = rules.get("passage_words", [320, 380])
+        if not lo <= n <= hi:
+            out.append(f"passage {p.id}: {n} words (needs {lo}–{hi})")
+        fk = fk_grade(p.text)
+        if not fk_lo <= fk <= fk_hi:
+            out.append(f"passage {p.id}: Flesch-Kincaid grade {fk} (needs {fk_lo}–{fk_hi})")
     if len(p.title) > MAX_TITLE:
         out.append(f"passage {p.id}: title is {len(p.title)} characters (max {MAX_TITLE})")
-    fk_lo, fk_hi = rules.get("fk_grade", [5.5, 7.5])
-    fk = fk_grade(p.text)
-    if not fk_lo <= fk <= fk_hi:
-        out.append(f"passage {p.id}: Flesch-Kincaid grade {fk} (needs {fk_lo}–{fk_hi})")
-    texts = [p.title, p.text] + [t for s in p.pages for t in [s.look_for or ""] + [
+    heads = [x for t in p.texts or [] for x in (t.title, t.kind)]
+    texts = [p.title, p.full_text, *heads] + [t for s in p.pages for t in [s.look_for or ""] + [
         t for q in s.questions for t in [q.ask, q.sample or "", q.rubric or "", *(q.choices or []),
                                           *(q.samples or []), *(q.heads or [])]]]
     for w in british_words(" ".join(texts)):
@@ -164,15 +244,26 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
         for kd, (mn, mx) in kinds_needed.items():
             if not mn <= kinds.count(kd) <= mx:
                 out.append(f"{where}: {kinds.count(kd)} {kd} questions (needs {mn}–{mx})")
-        units = round(page_units(s.questions) + spill_units(p.paragraphs))
+        n_compare = rules.get("compare_questions")
+        if n_compare and p.texts:
+            both = sum(len(q.quotes) == 2 and in_text(q.quotes[0], p.texts[0].text)
+                       and in_text(q.quotes[1], p.texts[1].text) for q in s.questions)
+            if both < n_compare:
+                out.append(f"{where}: {both} questions quote both texts (needs {n_compare})")
+        units = round(page_units(s.questions) + passage_spill_units(p))
         if units > rules.get("page_units", 100):
             out.append(f"{where}: questions page takes {units} units with the passage's end "
                        f"(max {rules.get('page_units', 100)})")
         for q in s.questions:
             if len(q.ask) > MAX_ASK:
                 out.append(f"{where}: question is {len(q.ask)} characters (max {MAX_ASK}): {q.ask!r}")
-            if not in_text(q.evidence, p.text):
-                out.append(f"{where}: evidence {q.evidence!r} is not in the passage")
+            for ev in q.quotes:
+                if not in_text(ev, p.full_text):
+                    out.append(f"{where}: evidence {ev!r} is not in the passage")
+            if rules.get("rubrics") and q.kind in ("write", "paragraph") and not q.rubric:
+                out.append(f"{where}: written answer {q.ask!r} needs a rubric for the answer key")
+            if p.genre == "poem":
+                out += [f"{where}: {m}" for m in line_ref_problems(p, q)]
             for m in _PARAGRAPH_REF.finditer(q.ask):
                 for g in m.groups():
                     if g and not 1 <= int(g) <= n_paras:
@@ -185,9 +276,9 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                 for c in q.choices:
                     if len(c) > MAX_QUOTE:
                         out.append(f"{where}: quote is {len(c)} characters (max {MAX_QUOTE}): {c!r}")
-                    if not in_text(c, p.text):
+                    if not in_text(c, p.full_text):
                         out.append(f"{where}: quote choice {c!r} is not in the passage")
-                if not in_text(q.evidence, q.choices[0]) and not in_text(q.choices[0], q.evidence):
+                if not any(in_text(ev, q.choices[0]) or in_text(q.choices[0], ev) for ev in q.quotes):
                     out.append(f"{where}: a quote question's evidence must be its right choice")
             if q.kind == "paragraph":
                 # Whales Reading analytical paragraphs: rules `paragraph_sentences`, `paragraph_quotes`
@@ -205,7 +296,9 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                     out.append(f"{where}: paragraph sample quotes the text {len(quoted)} time(s) "
                                f"(needs {rules['paragraph_quotes']})")
                 for qt in quoted:
-                    if not in_text(qt.strip(" ,."), p.text):
+                    if p.genre == "poem":
+                        qt = qt.replace(" / ", " ")      # a quote across two lines of a poem: "glittering / as if"
+                    if not in_text(qt.strip(" ,."), p.full_text):
                         out.append(f"{where}: sample quotes {qt!r}, which is not in the passage")
                 for part in rules.get("rubric_parts", []):
                     if f"{part}:" not in q.rubric:
@@ -216,7 +309,7 @@ def spread_problems(p: SpreadPassage, rules: dict) -> list[str]:
                         out.append(f"{where}: organizer head {h!r} is longer than {MAX_HEAD}")
                 if "paragraph_quotes" in rules:
                     for qt in (m for v in q.samples for m in _QUOTED.findall(v)):
-                        if not in_text(qt.strip(" ,."), p.text):
+                        if not in_text(qt.strip(" ,."), p.full_text):
                             out.append(f"{where}: organizer sample quotes {qt!r}, which is not in the passage")
     return out
 
@@ -263,6 +356,7 @@ CHARS_PER_LINE = 70
 READ_LINES = 27.0
 PARA_GAP = 0.25      # the space between paragraphs, in lines
 LINE_UNITS = 3.6     # one line of passage text on the questions page, in page units
+PAIRED_LINES = 29.0  # two texts on one reading page (no "continues" line; calibrated on rendered pages)
 
 
 def wrap_lines(text: str, width: int = CHARS_PER_LINE) -> int:
@@ -320,6 +414,41 @@ def spill_units(paragraphs: list[str]) -> float:
     return 6 + sum(wrap_lines(r["text"], CHARS_PER_LINE + 4) * LINE_UNITS + 1 for r in rest)
 
 
+def poem_page_lines(p: SpreadPassage) -> float:
+    """Lines a poem takes on its reading page: one per line of verse, plus half a line between stanzas."""
+    return len(p.poem_lines) + 0.5 * (len(p.stanzas) - 1)
+
+
+def paired_page_lines(p: SpreadPassage) -> float:
+    """Lines two texts take on one reading page: each title line (1.5) and its wrapped paragraphs."""
+    return sum(1.5 + sum(wrap_lines(t) + PARA_GAP for t in sub.paragraphs) for sub in p.texts) + 0.5
+
+
+def passage_spill_units(p: SpreadPassage) -> float:
+    """A poem or a pair always fits its reading page, so nothing continues above the questions."""
+    return 0.0 if p.genre in ("poem", "paired") else spill_units(p.paragraphs)
+
+
+def line_ref_problems(p: SpreadPassage, q: SpreadQuestion) -> list[str]:
+    """A poem question that names lines ("lines 3–4") or a stanza must find its evidence there."""
+    out = []
+    lines, stanzas = p.poem_lines, p.stanzas
+    for m in _LINE_REF.finditer(q.ask):
+        a = int(m.group(1))
+        b = int(m.group(2) or a)
+        if not 1 <= a <= b <= len(lines):
+            out.append(f"{q.ask!r} names line {a}–{b}, the poem has {len(lines)}")
+        elif not any(in_text(ev, " ".join(lines[a - 1:b])) for ev in q.quotes):
+            out.append(f"evidence for {q.ask!r} is not in line(s) {a}–{b}")
+    for m in _STANZA_REF.finditer(q.ask):
+        n = int(m.group(1))
+        if not 1 <= n <= len(stanzas):
+            out.append(f"{q.ask!r} names stanza {n}, the poem has {len(stanzas)}")
+        elif not any(in_text(ev, " ".join(stanzas[n - 1])) for ev in q.quotes):
+            out.append(f"evidence for {q.ask!r} is not in stanza {n}")
+    return out
+
+
 # --- planner -------------------------------------------------------------------------------
 
 def spread_queue(level: str, section: str) -> list[tuple[str, int]]:
@@ -329,17 +458,44 @@ def spread_queue(level: str, section: str) -> list[tuple[str, int]]:
 
 # --- pages ---------------------------------------------------------------------------------
 
+def reading_split(p: SpreadPassage) -> tuple[list[dict], list[dict]]:
+    """split_text for prose; a poem or a pair sits whole on its reading page (its own items carry it)."""
+    if p.genre in ("poem", "paired"):
+        return [], []
+    return split_text(p.paragraphs)
+
+
+def reading_extra(p: SpreadPassage) -> dict:
+    """What a poem or pair's reading page shows: numbered lines in stanzas, or two titled texts."""
+    if p.genre == "poem":
+        n, stanzas = 0, []
+        for st in p.stanzas:
+            rows = []
+            for line in st:
+                n += 1
+                rows.append({"n": n, "text": line})
+            stanzas.append(rows)
+        return {"stanzas": stanzas}
+    if p.genre == "paired":
+        return {"texts": [{"title": t.title, "type": t.kind,
+                           "paragraphs": [{"n": i, "text": para, "cont": False}
+                                          for i, para in enumerate(t.paragraphs, start=1)]}
+                          for t in p.texts]}
+    return {}
+
+
 def build_spread_items(ctx) -> tuple[str, list[dict], list[str] | None]:
     """(title, items, answer key) for one page of a spread: the reading page or its questions page."""
     entry = ctx.plan.for_page(ctx.spec.page).extra
     p = spread_by_id(ctx.spec.level, ctx.rules["passages"], entry["passage"])
     k = entry["set"]
     s = p.pages[k]
-    first, rest = split_text(p.paragraphs)
+    first, rest = reading_split(p)
     if entry["side"] == "read":
         head = {"kind": "passage", "passage": p.id, "set": k, "side": "read", "genre": p.genre,
                 "again": k > 0, "look_for": s.look_for if k > 0 else None,
                 "paragraphs": first, "turn": bool(rest)}
+        head.update(reading_extra(p))
         if p.story:   # an installment (Lions Reading C): only then, so other levels' items are unchanged
             head.update(story=p.story, part=p.part)
         return p.title, [head], None
@@ -385,14 +541,14 @@ def check_spread_sheet(sheet) -> list[str]:
     if sheet.title != p.title:
         out.append(f"title doesn't match passage {p.id}")
     if head["side"] == "read":
-        if head["paragraphs"] != split_text(p.paragraphs)[0]:
+        if head["paragraphs"] != reading_split(p)[0] or any(head.get(f) != v for f, v in reading_extra(p).items()):
             out.append(f"passage text on the sheet doesn't match {p.id}")
         if (head.get("story"), head.get("part")) != (p.story, p.part):
             out.append(f"story and part on the sheet don't match {p.id}")
         if len(sheet.items) != 1 or sheet.answer_key:
             out.append("a reading page holds only the passage")
         return out
-    if head.get("continued") != split_text(p.paragraphs)[1]:
+    if head.get("continued") != reading_split(p)[1]:
         out.append(f"the end of passage {p.id} on the questions page doesn't match the text")
     qs = p.pages[head["set"]].questions
     asked = sheet.items[1:]

@@ -1,0 +1,133 @@
+subject: english
+level: R7
+title: Two central ideas, claims and evidence, word roots, poems, and fiction beside history
+# Our own level (source: ours), grade 7 reading for an on-pace 10-year-old (two grades ahead,
+# syllabus/PLAN-upper-levels.md, Penguins Reading as re-aimed by the audit). Public level name:
+# syllabus/ladder.yaml. Section public_name is what buyers see (CLAUDE.md §15).
+# Every passage and poem is original (content/passages/R7/<section>.yaml); the Greek and Latin roots are
+# hand-checked in content/wordroots/R7.yaml. Drafts and their approval: syllabus/drafts/R7-*.md (written by
+# scripts/r7_drafts.py). Standards checked on thecorestandards.org (2026-11-06).
+preview_pages: [1, 2, 161, 162]   # two whole spreads: an article with its questions, and a story beside its history
+aims:
+  - Find two central ideas in an article, trace how each develops, and write an objective summary (RI.7.2)
+  - Trace an argument's claim and reasons, and judge whether its evidence is relevant and sufficient (RI.7.8)
+  - Use Greek and Latin roots as clues to the meaning of grade 7 words (L.7.4b)
+  - Interpret figurative language, sound devices and allusions in short original poems (RL.7.4, L.7.5a)
+  - Compare a story set in the past with a historical account of the same time, and see what the story keeps or changes (RL.7.9)
+  - Read 290–330-word passages at a grade 7 level (Flesch-Kincaid grade 6.5–8.5)
+pages: 200
+daily_pages: 2               # source: ours; one two-page spread (reading page, then questions) a day
+sct_minutes_per_page: [10, 15]  # source: ours
+rules:
+  # ws/passages.py plan_passages with `spread` (ws/spreads.py): each question set takes two pages in a row,
+  # a reading page then its questions page. Section C plans word-roots pages (rule `roots`, ws/roots.py).
+  planner: passages
+  spread: true
+  answers: by_line            # answers PDF: one line per answer (sample answers + what a full answer has)
+  answers_height: 910          # fills each answers page (two written-answer spreads a page); estimate in ws/booklet.py
+  rubrics: true               # every written answer carries a one-line rubric for the answer key (ws/spreads.py)
+  passage_words: [290, 330]   # a reading page holds ~290 words at 20px; a longer end continues above the questions
+  fk_grade: [6.5, 8.5]        # Flesch-Kincaid grade of every passage (ws/readability.py); poems are exempt
+  sets_per_passage: [1, 1]
+  questions_per_page: [4, 4]
+  page_units: 132            # coarse height guard for a questions page (ws/spreads.py), calibrated on rendered R7 pages
+sections:
+  # Articles that develop two central ideas side by side; the questions name both, trace one through the
+  # paragraphs, and end with a 3–4-sentence objective summary.
+  - code: A
+    name: Two Central Ideas and Objective Summary
+    public_name: Two Big Ideas
+    pages: [1, 50]
+    sheet_types: [passage_spread]
+    standards: [RI.7.2, RI.7.1, RI.7.10]
+    source: ours
+    rules:
+      passages: A
+      genres: [nonfiction]
+      kinds_per_page: { paragraph: [1, 1] }
+      tips:
+        passage_spread:
+          - "Ask: what are the two big ideas? Where does each one show up?"
+          - "A summary tells what the text says, not what we think of it."
+          - "Trace one idea: which paragraphs add to it, and how?"
+
+  # Short arguments by made-up writers (letters, speeches, columns). Some reasons are strong; some evidence
+  # is off topic or too thin on purpose, so the child learns to judge it.
+  - code: B
+    name: Tracing and Evaluating an Argument
+    public_name: Claim and Evidence
+    pages: [51, 100]
+    sheet_types: [passage_spread]
+    standards: [RI.7.8, RI.7.6, RI.7.1, W.7.9b]
+    source: ours
+    rules:
+      passages: B
+      genres: [argument]
+      kinds_per_page: { paragraph: [1, 1] }
+      tips:
+        passage_spread:
+          - "Ask: what does the writer want us to think? What proves it?"
+          - "Is each fact really about the claim? Is there enough proof?"
+          - "Play the other side: what would someone who disagrees say?"
+
+  # Two roots a page (one Latin, one Greek where it fits), then a review of four roots a page.
+  - code: C
+    name: Greek and Latin Roots
+    public_name: Word Roots
+    pages: [101, 130]
+    sheet_types: [word_roots]
+    standards: [L.7.4b, L.7.4d, L.7.4]
+    source: ours
+    rules: { spread: false, roots: true }
+    parts:
+      - { part: 1, pages: [101, 120], name: Two roots a page, rules: { roots_per_page: 2 } }
+      - { part: 2, pages: [121, 130], name: Root review, rules: { roots_per_page: 4, review: true } }
+
+  # Original poems (genre poem: line numbers, no readability score). Part 1 figurative and connotative
+  # meanings, part 2 sound devices (rhyme, alliteration, repetition), part 3 allusions and form.
+  - code: D
+    name: Figurative Language, Sound and Allusion in Poems
+    public_name: Poems and Pictures in Words
+    pages: [131, 160]
+    sheet_types: [passage_spread]
+    standards: [RL.7.4, L.7.5a, RL.7.5, L.7.5c]
+    source: ours
+    rules:
+      passages: D
+      genres: [poem]
+      poem_lines: [12, 28]
+      kinds_per_page: { paragraph: [0, 1] }
+      tips:
+        passage_spread_read:
+          - "Read the poem aloud together. Listen for sounds that repeat."
+          - "Read it twice: once for sense, once for the music of the words."
+          - "Ask which line paints the clearest picture. Why that one?"
+        passage_spread:
+          - "Ask: what does this comparison make you see or feel?"
+          - "Read the line aloud. Which sounds repeat? What do they add?"
+          - "Talk about any myth or story the poem points to. What fits?"
+
+  # A story set in the past beside a historical account of the same time (RL.7.9): what the story keeps,
+  # what it invents or changes, and why an author might do that.
+  - code: E
+    name: Fiction Beside History
+    public_name: One Topic, Two Ways
+    pages: [161, 200]
+    sheet_types: [passage_spread]
+    standards: [RL.7.9, RI.7.9, RL.7.1, W.7.9a]
+    source: ours
+    rules:
+      passages: E
+      genres: [paired]
+      text_words: [120, 150]     # each of the two texts; both fit on the reading page
+      compare_questions: 2       # questions whose evidence quotes both texts
+      kinds_per_page: { paragraph: [1, 1] }
+      tips:
+        passage_spread_read:
+          - "Read the story first, then the history. What matches?"
+          - "Ask: which parts of the story could really have happened?"
+          - "Read both aloud. Which one feels more like being there?"
+        passage_spread:
+          - "Ask: what did the story keep from history? What did it make up?"
+          - "Why might a writer change a real event in a story?"
+          - "Find one fact in Text 2 that shows up in Text 1, too."

@@ -1,0 +1,103 @@
+{
+  "id": "EN-R7-D-001",
+  "subject": "english",
+  "level": "R7",
+  "section": "D",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 131,
+  "variant": 1,
+  "seed": 7850335332585781504,
+  "title": "Storm in July",
+  "parent_tip": "Read it twice: once for sense, once for the music of the words.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "d01-thunderstorm",
+      "set": 0,
+      "side": "read",
+      "genre": "poem",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [],
+      "turn": false,
+      "stanzas": [
+        [
+          {
+            "n": 1,
+            "text": "The sky rolls up its sleeves at noon,"
+          },
+          {
+            "n": 2,
+            "text": "a gray giant clearing his throat,"
+          },
+          {
+            "n": 3,
+            "text": "and the maple leaves turn their pale sides up"
+          },
+          {
+            "n": 4,
+            "text": "like hands that know what's coming."
+          }
+        ],
+        [
+          {
+            "n": 5,
+            "text": "Then the first drops tap the porch roof,"
+          },
+          {
+            "n": 6,
+            "text": "tentative, a drummer testing his sticks,"
+          },
+          {
+            "n": 7,
+            "text": "until the whole sky remembers the rhythm"
+          },
+          {
+            "n": 8,
+            "text": "and the street becomes a river, rumbling."
+          }
+        ],
+        [
+          {
+            "n": 9,
+            "text": "We sit on the steps and count"
+          },
+          {
+            "n": 10,
+            "text": "the seconds between flash and boom,"
+          },
+          {
+            "n": 11,
+            "text": "one Mississippi, two Mississippi,"
+          },
+          {
+            "n": 12,
+            "text": "as the storm walks slowly east"
+          }
+        ],
+        [
+          {
+            "n": 13,
+            "text": "and leaves the air rinsed clean,"
+          },
+          {
+            "n": 14,
+            "text": "the sidewalks steaming like teacups,"
+          },
+          {
+            "n": 15,
+            "text": "the whole town glittering"
+          },
+          {
+            "n": 16,
+            "text": "as if someone polished it while we watched."
+          }
+        ]
+      ]
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

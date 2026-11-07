@@ -1,0 +1,1531 @@
+# Penguins Reading, section A "Two Big Ideas" (pages 1–50): articles that develop two central ideas
+# side by side; the child names both, traces how one develops, and writes an objective summary (RI.7.2).
+# Original nonfiction (ours), well-established facts only. Schema and checks: ws/spreads.py.
+# Each passage is one two-page spread: the reading page, then 4 questions (the last a 3–4-sentence summary).
+
+- id: a01-lake-ice
+  title: Life Under the Ice
+  genre: nonfiction
+  text: |
+    On a cold January morning, a lake in Minnesota can look completely still. A thick lid of ice covers
+    the surface. Yet beneath that frozen lid, the lake is full of life. Fish swim slowly through the
+    dark water, and turtles rest in the mud at the bottom. They survive because of
+    an unusual property of water and because each animal has its own way of coping with the cold.
+
+    Most substances shrink and grow denser as they cool. Water behaves differently. As it cools, it becomes
+    denser only until it reaches about 39 degrees Fahrenheit. Below that temperature, it begins to expand
+    again, and when it freezes, it becomes lighter still, which is why ice floats. As a result, the coldest
+    water and the ice stay at the top, while slightly warmer, heavier water sinks to the bottom. A frozen
+    lake is really a layered lake.
+
+    The ice also works like a blanket. It keeps the warmer water below from losing its heat to the freezing
+    air. If ice sank instead of floating, many lakes would freeze from the bottom up.
+
+    Within this protected space, animals have developed remarkable strategies. Many fish slow their bodies
+    down. Their hearts beat more slowly, and they need far less food and oxygen than they do in summer.
+    Painted turtles go even further. A turtle can stay buried in the mud for months without coming up to
+    breathe, absorbing a little oxygen through its skin.
+
+    Winter under the ice is not easy, though. When deep snow piles on top of the ice, it blocks sunlight,
+    and underwater plants stop producing oxygen. In a long winter, the oxygen in a shallow lake can run
+    low. Even so, the lake's layers and its animals' patient habits usually carry them through until the
+    ice melts in spring.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the article develop?
+          choices:
+            - Water's odd behavior protects lakes, and animals slow down to survive.
+            - Minnesota has long winters, and snow is heavier than ice.
+            - Turtles are better swimmers than fish, and frogs sleep all year.
+            - Lakes freeze solid every winter, and animals leave until spring.
+          evidence: They survive because of an unusual property of water and because each animal has its own way of coping with the cold.
+        - kind: quote
+          ask: Which sentence develops the idea about animals coping?
+          choices:
+            - Many fish slow their bodies down.
+            - The ice also works like a blanket.
+            - Most substances shrink and grow denser as they cool.
+            - Water behaves differently.
+          evidence: Many fish slow their bodies down.
+        - kind: write
+          ask: How do paragraphs 2 and 3 build the idea about water?
+          sample: Paragraph 2 explains that ice floats, so the warmer water sinks to the bottom; paragraph 3 adds that the ice works like a blanket that keeps that heat in.
+          rubric: names ice floating or the layers (paragraph 2) and the ice as a blanket (paragraph 3).
+          evidence: The ice also works like a blanket.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            A frozen lake stays alive underneath because water is "denser only until it reaches about 39
+            degrees Fahrenheit," so ice floats and warmer water sinks. The floating ice also keeps heat in
+            like a blanket. Fish and turtles survive by slowing their bodies down, and turtles take in oxygen
+            through their skin. Deep snow can make oxygen run low, but most animals last until spring.
+          rubric: covers both central ideas (water's layers and the animals' strategies) with key details in order; no opinions.
+          evidence: the lake's layers and its animals' patient habits usually carry them through
+
+- id: a02-octopus
+  title: The Clever Octopus
+  genre: nonfiction
+  text: |
+    A diver swimming over a rocky reef may pass right by an octopus without ever noticing it. One moment
+    the animal looks like a patch of brown seaweed, and the next it seems to vanish against the stones.
+    The octopus is famous for two talents. It is one of the best hiders in the ocean, and it is also one
+    of the cleverest problem-solvers among animals without a backbone.
+
+    The octopus hides by changing the color of its skin. Its skin contains thousands of tiny cells called
+    chromatophores, and each one holds a small sac of pigment, such as yellow, red, or brown. Muscles
+    around each sac can stretch it open or squeeze it shut. When a sac opens, its color spreads across a
+    wider spot of skin. Because these muscles are controlled directly by nerves, an octopus can change its
+    whole pattern in less than a second.
+
+    Color is only part of the disguise. An octopus can also raise small bumps on its skin to copy the
+    rough surface of a rock or the frilly edges of a plant. By combining color, pattern, and texture, it
+    can blend into many different backgrounds.
+
+    The same quick nervous system helps explain the animal's intelligence. An octopus has hundreds of
+    millions of nerve cells, and a large share of them are found in its eight arms rather than in its
+    brain. Each arm can explore, touch, and grip on its own while the brain directs the overall plan.
+
+    Scientists have watched octopuses solve problems in surprising ways. In aquariums, some have learned
+    to twist open jars to reach a crab inside. In the wild, certain octopuses collect empty coconut shells
+    and carry them along, later fitting the two halves together as a portable shelter. Their ability to
+    hide and their ability to think both help them survive in an ocean full of hungry predators.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: What two big ideas does the article explore?
+          choices:
+            - Octopuses are expert hiders, and they are clever problem-solvers.
+            - Octopuses live only in aquariums, and they eat seaweed.
+            - Octopuses have backbones, and they swim faster than fish.
+            - Octopuses build reefs, and they sleep through the winter.
+          evidence: It is one of the best hiders in the ocean, and it is also one of the cleverest problem-solvers among animals without a backbone.
+        - kind: quote
+          ask: Which words support the idea that octopuses are clever?
+          choices:
+            - learned to twist open jars
+            - only part of the disguise
+            - a wider spot of skin
+            - a patch of brown seaweed
+          evidence: learned to twist open jars
+        - kind: write
+          ask: How does paragraph 3 add to the idea in paragraph 2?
+          sample: Paragraph 2 explains how pigment cells change the octopus's color, and paragraph 3 adds that it can also raise bumps to copy textures, so it blends into many backgrounds.
+          rubric: names color-changing pigment cells (paragraph 2) and the added texture or bumps (paragraph 3).
+          evidence: By combining color, pattern, and texture, it can blend into many different backgrounds.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            An octopus hides by opening and closing tiny sacs of pigment in its skin, and it can "change its
+            whole pattern in less than a second." It can also raise bumps to copy the texture of rocks and
+            plants. Octopuses are clever too, with many nerve cells in their arms. They twist open jars and
+            carry coconut shells to use as shelters.
+          rubric: covers both central ideas (camouflage and intelligence) with key details in order; no opinions.
+          evidence: Their ability to hide and their ability to think both help them survive
+
+- id: a03-arch-bridges
+  title: Arches and Cables
+  genre: nonfiction
+  text: |
+    Every bridge has the same basic job. It must hold up its own weight along with everything that crosses it. Engineers have found different shapes that do this job well, and two of
+    the most famous are the arch and the suspension bridge. Yet before any large bridge is built, engineers
+    also make sure their design will work by testing it first.
+
+    An arch bridge carries weight by pushing. When a load presses down on top of a curved arch, the force
+    travels along the curve toward both ends. The stones or steel in the arch are squeezed together, and
+    the ends push outward and downward into strong supports on the banks. Stone is very good at being
+    squeezed, which is why some stone arch bridges built by the ancient Romans are still standing today.
+
+    A suspension bridge works in almost the opposite way. Its road hangs from long vertical cables, and
+    those cables hang from two huge main cables draped over tall towers. Instead of being squeezed, the
+    cables are pulled tight. The main cables carry the load to the towers and to heavy anchors buried at
+    each end. This design lets suspension bridges stretch across very wide spaces.
+
+    Because a full-size bridge is so costly and so important, engineers do not simply build one and hope
+    for the best. They first test their ideas on models. Much of this testing happens on computers, which
+    calculate how each part will respond to heavy traffic.
+
+    Engineers also build small physical models. For long suspension bridges, they often place a scale
+    model in a wind tunnel and blow air past it to see whether the deck will twist or sway. If the model
+    moves too much, they can change the shape of the deck before construction begins. In this way, the
+    careful study of forces and the careful testing of models work together to keep bridges strong.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which choice states the article's two central ideas?
+          choices:
+            - Bridge shapes carry loads, and engineers test designs first.
+            - Romans built all bridges, and wind tunnels are very old.
+            - Bridges are cheap to build, and models are always wrong.
+            - Cars are heavier than trucks, and towers are made of stone.
+          evidence: Engineers have found different shapes that do this job well
+        - kind: quote
+          ask: Which words develop the idea about testing designs?
+          choices:
+            - test their ideas on models
+            - carries weight by pushing
+            - very good at being squeezed
+            - the same basic job
+          evidence: test their ideas on models
+        - kind: write
+          ask: How does paragraph 3 contrast with paragraph 2?
+          sample: Paragraph 2 shows that an arch carries weight by being squeezed and pushing, while paragraph 3 shows that a suspension bridge's cables are pulled tight instead.
+          rubric: explains that arches are squeezed or push (paragraph 2) and suspension cables are pulled tight (paragraph 3).
+          evidence: Instead of being squeezed, the cables are pulled tight.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Bridges must hold up their own weight and their traffic. An arch bridge "carries weight by
+            pushing," while a suspension bridge hangs its road from cables that are pulled tight. Before
+            building, engineers test designs with computers that calculate forces. They also place scale
+            models in wind tunnels to check whether the deck will twist or sway.
+          rubric: covers both central ideas (how arches and suspension bridges carry loads, and testing models) with key details; no opinions.
+          evidence: the careful study of forces and the careful testing of models work together to keep bridges strong
+
+- id: a04-coral-reefs
+  title: Builders of the Reef
+  genre: nonfiction
+  text: |
+    From a boat, a coral reef can look like a garden of colorful rocks under the waves. In fact, a reef
+    is one of the largest structures made by living things on Earth, and it was built by animals smaller
+    than a pencil eraser. Those tiny builders create something that matters far beyond their own lives,
+    because the finished reef protects coastlines and shelters an enormous variety of sea life.
+
+    The builders are coral polyps, soft animals related to jellyfish and sea anemones. A single polyp is
+    shaped like a small tube with a ring of tentacles around its mouth. Each polyp takes minerals from
+    seawater and uses them to build a hard cup of limestone around its body. Many polyps live together in
+    a colony, and their cups join into a single stony structure.
+
+    Polyps get much of their food with the help of tiny algae that live inside their bodies. The algae use
+    sunlight to make food and share it with the coral. Because of this partnership, most reef-building
+    corals grow in clear, shallow, sunny water. Over thousands of years, new polyps grow on the skeletons
+    of older ones, and the reef slowly rises and spreads.
+
+    A finished reef works like a natural wall. When ocean waves roll toward the shore, they break against
+    the reef and lose much of their energy. As a result, beaches and coastal towns behind a reef face
+    gentler waves, and less sand is washed away.
+
+    The reef's many cracks, caves, and branches also make it a busy home. Fish hide from larger hunters in
+    its narrow spaces, while crabs, sea stars, and sea turtles feed among the corals. Although reefs cover
+    only a tiny part of the ocean floor, they are home to a remarkable share of all ocean species. The work
+    of the smallest builders supports some of the richest neighborhoods in the sea.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas run through the article?
+          choices:
+            - Tiny polyps build reefs, and reefs protect coasts and sea life.
+            - Reefs are made of rocks, and sea turtles build them.
+            - Jellyfish build reefs, and reefs grow in deep, dark water.
+            - Reefs grow very quickly, and they cause bigger waves.
+          evidence: the finished reef protects coastlines and shelters an enormous variety of sea life
+        - kind: quote
+          ask: Which words show how polyps build the reef?
+          choices:
+            - a hard cup of limestone
+            - works like a natural wall
+            - also make it a busy home
+            - use sunlight to make food
+          evidence: a hard cup of limestone
+        - kind: write
+          ask: How do paragraphs 4 and 5 develop the reef's value?
+          sample: Paragraph 4 shows that the reef breaks waves and protects the shore, and paragraph 5 shows that its cracks and caves give fish and other animals a home.
+          rubric: names wave protection for the coast (paragraph 4) and shelter for sea life (paragraph 5).
+          evidence: The reef's many cracks, caves, and branches also make it a busy home.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Coral reefs are built by tiny polyps, and each one uses minerals from seawater "to build a hard
+            cup of limestone around its body," and many cups join into colonies. Algae inside the polyps help feed them, so reefs grow in sunny,
+            shallow water over thousands of years. A finished reef breaks ocean waves and protects the
+            shore. Its cracks and caves also shelter many kinds of sea animals.
+          rubric: covers both central ideas (polyps build reefs; reefs protect coasts and shelter life) with key details; no opinions.
+          evidence: The work of the smallest builders supports some of the richest neighborhoods in the sea.
+
+- id: a05-roman-roads
+  title: Roads of Rome
+  genre: nonfiction
+  text: |
+    About two thousand years ago, a traveler could walk from Italy to Spain or Greece on solid paved
+    roads. The ancient Romans built a network of roads that stretched across their empire for tens of
+    thousands of miles. These roads lasted because they were carefully engineered in layers, and they
+    mattered because they tied a huge empire together.
+
+    Building a major Roman road began with digging. Workers cut a trench into the ground, sometimes
+    several feet deep, until they reached firm soil. They filled the bottom with large stones to make a
+    sturdy base. On top of that went layers of smaller stones and gravel, often packed with lime mortar.
+    On the most important roads, workers finished the surface with large, flat paving stones fitted
+    tightly together.
+
+    The builders also planned for rain. They shaped the surface so that it curved slightly upward in
+    the middle, letting water run off to the sides. Ditches along the edges carried the water away, so
+    the road stayed dry and firm.
+
+    Once the roads were built, they connected distant places in new ways. Merchants used them to carry
+    goods such as olive oil, wine, grain, and pottery from one region to another. Stone markers called
+    milestones stood along many roads, telling travelers how far they had gone. Because the roads were solid and clearly marked,
+    merchants could plan longer journeys with more confidence than before.
+
+    The roads also carried news. The government ran an official messenger service, with stations along
+    the way where riders could rest or change horses. Messages could travel far more quickly than they
+    could have on rough dirt paths. A famous saying claims that all roads lead to Rome, and it shows
+    how skilled road building helped hold a vast empire together.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which pair of ideas does the article develop?
+          choices:
+            - Roman roads were built in layers and tied the empire together.
+            - Roman roads were made of dirt and were used only by farmers.
+            - Roman roads were built quickly and fell apart in a few years.
+            - Roman roads ran only inside the city of Rome.
+          evidence: they were carefully engineered in layers, and they mattered because they tied a huge empire together
+        - kind: quote
+          ask: Which words show how roads helped trade?
+          choices:
+            - Merchants used them
+            - Ditches along the edges
+            - large, flat paving stones
+            - reached firm soil
+          evidence: Merchants used them
+        - kind: write
+          ask: How does paragraph 3 add to the idea of engineering?
+          sample: After paragraph 2 explains the layers of stone, paragraph 3 adds that builders curved the surface and dug ditches so rain ran off and the road stayed firm.
+          rubric: names the curved surface or the ditches that kept the road dry (paragraph 3).
+          evidence: Ditches along the edges carried the water away, so the road stayed dry and firm.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            The Romans built long roads in layers, starting with a deep trench, large stones, and gravel,
+            and topping important roads with paving stones. A curved surface and ditches "carried the water
+            away," keeping the roads firm. The roads let merchants move goods, and milestones showed
+            distances. Official messengers also used them to carry news quickly across the empire.
+          rubric: covers both central ideas (layered engineering and connecting the empire through trade, travel, and messages); no opinions.
+          evidence: skilled road building helped hold a vast empire together
+
+- id: a06-honeybee-dance
+  title: The Waggle Dance
+  genre: nonfiction
+  text: |
+    Inside a dark beehive, a worker bee returns from a field of flowers and begins to dance. She runs
+    forward in a straight line while shaking her body from side to side, then circles back and repeats
+    the move. The other bees crowd around her and pay close attention. This dance is one of the most
+    remarkable ways animals share information, and it supports a job that matters to people as well as
+    bees: pollinating plants.
+
+    The dance was explained in detail by the Austrian scientist Karl von Frisch, who studied bees for
+    many years. He found that the straight part of the dance, called the waggle run, points the way to
+    food. The angle of the run on the upright honeycomb matches the angle between the food and the sun.
+    The length of the waggle run tells how far away the food is, since a longer run means a longer trip.
+
+    The watching bees use this information to fly straight to the flowers. In this way, a single scout
+    can send many workers to a rich source of nectar and pollen.
+
+    As bees visit those flowers, they do more than gather food. Pollen sticks to their fuzzy bodies, and
+    some of it rubs off on the next flower they visit. This transfer of pollen allows many plants to
+    produce fruit and seeds.
+
+    Farmers depend on this work. Crops such as apples, cherries, blueberries, and almonds all need
+    pollinators to produce a good harvest. In California, beekeepers bring hives to almond orchards each
+    spring so the bees can pollinate the blossoms. Other insects and animals pollinate plants too, but
+    honeybees are especially useful because they live in large colonies that can be moved. Every waggle
+    dance helps send those busy pollinators to work.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: What are the two central ideas of the article?
+          choices:
+            - Bees share directions by dancing, and they pollinate crops.
+            - Bees dance for fun, and they make apples grow faster.
+            - Bees cannot see the sun, and they avoid farms.
+            - Bees live alone, and they eat only almond blossoms.
+          evidence: This dance is one of the most remarkable ways animals share information, and it supports a job that matters to people as well as bees
+        - kind: quote
+          ask: Which words show how the dance gives distance?
+          choices:
+            - The length of the waggle run
+            - their fuzzy bodies
+            - pay close attention
+            - a good harvest
+          evidence: The length of the waggle run
+        - kind: write
+          ask: How does paragraph 4 connect the dance to pollination?
+          sample: Paragraph 4 explains that bees sent to flowers carry pollen from one flower to the next, which lets plants make fruit and seeds, so the dance leads to pollination.
+          rubric: explains that bees moving pollen between flowers (paragraph 4) links the food trips to fruit and seeds.
+          evidence: This transfer of pollen allows many plants to produce fruit and seeds.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            A worker bee does a waggle dance to tell other bees where to find food. Karl von Frisch found
+            that the angle of the waggle run shows the direction compared with the sun, and "a longer run
+            means a longer trip." When bees visit flowers, they carry pollen that helps plants make fruit
+            and seeds. Farmers rely on honeybees to pollinate crops such as almonds and apples.
+          rubric: covers both central ideas (the waggle dance as communication and pollination of crops) with key details; no opinions.
+          evidence: Every waggle dance helps send those busy pollinators to work.
+
+- id: a07-volcanic-islands
+  title: Islands from Fire
+  genre: nonfiction
+  text: |
+    The islands of Hawaii rise from the middle of the Pacific Ocean, thousands of miles from any
+    continent. They were not carried there. Instead, they were built from the seafloor up, one layer of
+    hardened lava at a time. The same volcanic rock that built these islands has also given them rich, fertile farmland.
+
+    Deep beneath Hawaii lies a hot spot, an area where melted rock rises from far inside the Earth. When
+    this hot rock breaks through the ocean floor, it pours out as lava and cools into new stone. Over a
+    very long time, eruption after eruption piles up layers until a mountain reaches the surface of the
+    sea and becomes an island.
+
+    The hot spot stays in roughly the same place, but the Pacific Plate, the huge slab of rock that
+    carries the seafloor, slowly moves a few inches each year. As the plate drifts, older islands are
+    carried away from the hot spot and new ones form behind them. This is why the islands to the
+    northwest, such as Kauai, are older than the Big Island of Hawaii.
+
+    Once the lava cools, a slower process begins. Rain, wind, and plant roots gradually break the dark
+    rock into smaller pieces. Over many years, this weathered rock becomes soil that is full of minerals
+    plants need. Volcanic soil also tends to hold water well, which helps crops grow.
+
+    Farmers in many parts of the world take advantage of this soil. On the slopes of Hawaii's Big
+    Island, growers raise coffee in fields of volcanic soil. In Italy, orchards and vineyards cover the
+    lower slopes around Mount Etna. Rich soil like this takes a long time to form, so the oldest islands
+    often have the deepest soil. In this way, the slow work of volcanoes builds both land and the
+    farms that grow on it.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the writer develop?
+          choices:
+            - Volcanoes build islands, and volcanic rock makes rich soil.
+            - Islands float on the sea, and lava ruins farmland.
+            - Hawaii was carried from a continent, and it has no farms.
+            - Hot spots move quickly, and soil forms in a single day.
+          evidence: The same volcanic rock that built these islands has also given them rich, fertile farmland.
+        - kind: quote
+          ask: Which words show how soil forms from lava?
+          choices:
+            - break the dark rock
+            - a few inches each year
+            - pours out as lava
+            - thousands of miles
+          evidence: break the dark rock
+        - kind: write
+          ask: How does paragraph 3 build on paragraph 2?
+          sample: Paragraph 2 explains how lava from a hot spot piles up into an island, and paragraph 3 adds that the moving plate carries islands away so new ones form behind them.
+          rubric: names lava building an island (paragraph 2) and the moving plate making a chain of older and newer islands (paragraph 3).
+          evidence: As the plate drifts, older islands are carried away from the hot spot and new ones form behind them.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            The Hawaiian islands were built from layers of lava that rose from a hot spot under the ocean
+            floor. As the Pacific Plate moves, older islands drift away and new ones form, so Kauai is older
+            than the Big Island. Over time, rain, wind, and roots turn the rock into soil "full of minerals
+            plants need." Farmers grow coffee in Hawaii and fruit around Mount Etna in this rich soil.
+          rubric: covers both central ideas (volcanoes building islands and volcanic soil becoming farmland) with key details; no opinions.
+          evidence: the slow work of volcanoes builds both land and the farms that grow on it
+
+- id: a08-printing-press
+  title: Letters Made of Metal
+  genre: nonfiction
+  text: |
+    For centuries, most books in Europe were copied by hand. A single book could take a skilled scribe
+    months to finish, so books were rare and costly. Around 1450, a German metalworker named Johannes
+    Gutenberg developed a printing system that changed this. His invention depended on a clever method
+    called movable type, and it helped spread reading and ideas across Europe.
+
+    Movable type means that every letter is a separate small piece. Gutenberg cast each letter in metal
+    using a hand mold, so he could quickly make many identical copies of the same letter. A printer
+    arranged the letters one by one into words and lines, then locked the lines tightly into a frame to
+    form a whole page. After the page was printed, the letters could be taken apart and reused.
+
+    Gutenberg also needed the right ink and the right press. He used an oily ink that clung to metal type
+    better than the watery inks used for writing. His press, which worked somewhat like the presses used
+    to squeeze grapes, pushed paper firmly and evenly against the inked letters. Printing with movable
+    type had been invented earlier in China and Korea, but Gutenberg's system suited the small number of
+    letters in European alphabets especially well.
+
+    The results spread quickly. Within a few decades, print shops had opened in many cities across Europe,
+    and millions of books had been printed by the year 1500. Because printed books cost far less than
+    handwritten ones, more families, schools, and libraries could afford them.
+
+    As books became common, more people had reasons to learn to read. Printing also made ideas travel. A
+    scientist could publish a discovery, and readers in distant cities could study the exact same words
+    and pictures. Gutenberg's metal letters helped turn reading from a rare skill into an everyday one.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two ideas does the article connect?
+          choices:
+            - How movable type worked, and how printing spread reading.
+            - How scribes wrote, and why paper was invented.
+            - Why ink is oily, and how grapes are pressed.
+            - Why books stayed rare, and why few people learned to read.
+          evidence: His invention depended on a clever method called movable type, and it helped spread reading and ideas across Europe.
+        - kind: quote
+          ask: Which words show that the type could be used again?
+          choices:
+            - taken apart and reused
+            - an oily ink
+            - millions of books
+            - copied by hand
+          evidence: taken apart and reused
+        - kind: write
+          ask: What does paragraph 5 add about spreading ideas?
+          sample: Paragraph 5 shows that cheaper books gave more people reasons to read, and that a printed discovery could be studied in the same words by readers far away.
+          rubric: names more people learning to read or ideas traveling to distant readers (paragraph 5).
+          evidence: Printing also made ideas travel.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Around 1450, Johannes Gutenberg developed printing with movable type, in which "every letter is
+            a separate small piece" cast in metal. Printers arranged the letters into pages, used an oily ink
+            and a press, and then reused the letters. Print shops soon opened across Europe, and books became
+            cheaper. More people learned to read, and ideas could travel to readers in distant cities.
+          rubric: covers both central ideas (how movable type worked and how printed books spread reading and ideas); no opinions.
+          evidence: Gutenberg's metal letters helped turn reading from a rare skill into an everyday one.
+
+- id: a09-bird-migration
+  title: Long Flights Home
+  genre: nonfiction
+  text: |
+    Every fall, billions of birds leave their summer homes and fly toward warmer places, and every spring
+    many of them return. Scientists have long asked
+    two questions about these journeys. How do the birds know which way to go, and
+    where do they rest and refuel along the way?
+
+    Birds use several clues to find their direction. Many birds that travel by day use the sun as a
+    compass. Because the sun moves across the sky, these birds rely on an internal clock to adjust for
+    the time of day. Birds that travel at night can use the stars instead. In one well-known experiment,
+    young indigo buntings raised under a planetarium sky learned to find north from the stars that turn
+    around the North Star.
+
+    Birds can also sense Earth's magnetic field, which works like an invisible guide. Tests with European robins showed that they could find the right direction even without
+    seeing the sky. Many birds also watch for landmarks such as coastlines, rivers, and
+    mountain ranges.
+
+    Knowing the way is only half the challenge. Flying burns enormous amounts of energy, so most migrating
+    birds must stop several times to eat and rest. These stopovers, such as wetlands and beaches, act like rest
+    stops on a highway. A bird may spend days at one site, eating as much as it can
+    before its next flight.
+
+    Some stopovers are especially important. Each spring, shorebirds called red knots gather along Delaware
+    Bay to feast on the eggs of horseshoe crabs, which give them energy to continue north to the Arctic.
+    Scientists say that protecting migrating birds means protecting the places where they
+    stop. A good sense of direction gets a bird started, but a
+    chain of welcoming stopovers carries it the rest of the way.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two topics does the article develop?
+          choices:
+            - How birds find their way, and the stopovers they need.
+            - Why birds sing, and how they build their nests.
+            - Why birds stay home all year, and what they eat in winter.
+            - How planetariums work, and why crabs lay eggs.
+          evidence: How do the birds know which way to go, and where do they rest and refuel along the way?
+        - kind: quote
+          ask: Which words show birds using the night sky?
+          choices:
+            - can use the stars instead
+            - watch for landmarks
+            - the eggs of horseshoe crabs
+            - rest stops on a highway
+          evidence: can use the stars instead
+        - kind: write
+          ask: How does paragraph 5 build on paragraph 4?
+          sample: Paragraph 4 explains that birds need stopovers to eat and rest, and paragraph 5 gives the example of red knots at Delaware Bay to show why protecting those places matters.
+          rubric: names the need to refuel at stopovers (paragraph 4) and the red knot example or protecting stopovers (paragraph 5).
+          evidence: protecting migrating birds means protecting the places where they stop
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Migrating birds find their way using the sun, the stars, Earth's magnetic field, and landmarks.
+            Because flying uses so much energy, they must stop at places such as wetlands and beaches to eat and
+            rest. For example, red knots stop at Delaware Bay "to feast on the eggs of horseshoe crabs."
+            Scientists say that protecting birds means protecting these stopover places too.
+          rubric: covers both central ideas (how birds navigate and the stopovers they need) with key details; no opinions.
+          evidence: a chain of welcoming stopovers carries it the rest of the way
+
+- id: a10-tardigrades
+  title: The Tiny Water Bear
+  genre: nonfiction
+  text: |
+    Scoop up a clump of damp moss and look at it under a microscope. You may find a tiny animal with
+    eight stubby legs climbing slowly through the leaves. This creature is a tardigrade, often called a
+    water bear. It is barely big enough to see without a microscope. Tardigrades are famous for
+    surviving conditions that would be impossible for most animals, and scientists study them closely to
+    learn how they do it.
+
+    Tardigrades live almost everywhere, from mountaintops to the deep sea, but many live in moss and soil
+    that often dry out. When its home dries, a tardigrade pulls in its legs, curls into a tiny ball called
+    a tun, and loses almost all the water in its body. Its activity slows nearly to a stop. In this state,
+    it can wait a long time, sometimes years, until water returns. Then it swells up and begins to move.
+
+    As a tun, a tardigrade can survive conditions far harsher than drying out. In laboratory tests, some
+    kinds have survived being frozen colder than anywhere on Earth's surface. In one
+    experiment, tardigrades were even carried into orbit and exposed to the emptiness of outer space, and
+    some of them survived the trip.
+
+    These abilities make tardigrades fascinating to scientists. Researchers have discovered special
+    proteins inside them. Some of these proteins seem to form a protective, glass-like gel inside cells as
+    the animal dries out. Another protein appears to shield the tardigrade's genetic material from
+    radiation.
+
+    Scientists hope that understanding these proteins could lead to useful discoveries. For example, it
+    might help them find new ways to store delicate materials, such as some medicines, without keeping them
+    cold. Studying tardigrades also helps researchers think about the limits of life, including whether
+    simple living things could survive on other worlds. A creature barely bigger than a speck of dust may
+    help answer some very big questions.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two main ideas does the article present?
+          choices:
+            - Tardigrades survive extreme conditions, and scientists study why.
+            - Tardigrades are large, and they live only in the deep sea.
+            - Tardigrades never dry out, and they need no water at all.
+            - Tardigrades build nests in moss, and they eat medicines.
+          evidence: Tardigrades are famous for surviving conditions that would be impossible for most animals, and scientists study them closely
+        - kind: quote
+          ask: Which words show what a tardigrade does as it dries?
+          choices:
+            - curls into a tiny ball
+            - eight stubby legs
+            - the limits of life
+            - a speck of dust
+          evidence: curls into a tiny ball
+        - kind: write
+          ask: How does paragraph 4 link survival to science?
+          sample: Paragraph 4 explains that the tardigrade's toughness makes scientists curious, and it describes the special proteins they found that protect its cells and genetic material.
+          rubric: names the special proteins (gel or shield) that scientists found to explain how tardigrades survive (paragraph 4).
+          evidence: These abilities make tardigrades fascinating to scientists.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Tardigrades are tiny animals that survive drying out by curling into a ball called a tun. In
+            this state, some can survive deep freezing and even a trip into outer space. Scientists have
+            found special proteins that protect their cells as they dry. They hope these proteins could help
+            them "store delicate materials" and learn about the limits of life.
+          rubric: covers both central ideas (how tardigrades survive extreme conditions and why scientists study them); no opinions.
+          evidence: Scientists hope that understanding these proteins could lead to useful discoveries.
+
+- id: a11-desert-life
+  title: Life in the Dry Desert
+  genre: nonfiction
+  text: |
+    In a hot desert, months can pass without a drop of rain, and summer afternoons can be fiercely hot.
+    Yet deserts are full of living things that have found their own ways to handle these harsh
+    conditions. Desert plants are experts at storing and saving water, while many desert animals survive
+    by simply staying out of the heat.
+
+    Cactuses show how well a plant can store water. A cactus has a thick, fleshy stem filled with spongy
+    tissue that soaks up water after a rainstorm. The giant saguaro of the Sonoran Desert has folds along
+    its stem, like the pleats of an accordion. When it rains, the folds spread apart so the stem can swell
+    and hold more water.
+
+    Cactuses are just as good at saving the water they collect. Instead of broad leaves, which would lose
+    water to the dry air, most cactuses have sharp spines. A waxy coating on the stem helps seal water
+    inside. Many cactuses also open the tiny pores in their skin only at night, when the air is cooler, so
+    less water escapes. Their roots spread wide and shallow, ready to catch rain before it sinks away.
+
+    Desert animals rely more on timing and shelter. Many of them are nocturnal, which means they rest
+    during the day and come out at night. Kangaroo rats, for example, spend hot days in underground
+    burrows, where the soil stays much cooler than the surface. They come out after dark to gather seeds,
+    and they get most of the water they need from their food.
+
+    Other animals have their own tricks. The fennec fox of the Sahara has enormous ears that help release
+    body heat, and it also digs burrows to escape the sun. Lizards and snakes often move between sunny and
+    shady spots to keep their bodies at a comfortable temperature. Whether they store water like a cactus
+    or hide like a kangaroo rat, desert living things all have clever ways to survive.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which choice names both central ideas?
+          choices:
+            - Desert plants store and save water; animals avoid the heat.
+            - Deserts have no life, and it rains there every day.
+            - Cactuses need shade, and animals drink from rivers.
+            - Foxes store water, and cactuses hide in burrows.
+          evidence: Desert plants are experts at storing and saving water, while many desert animals survive by simply staying out of the heat.
+        - kind: quote
+          ask: Which words show a cactus saving water?
+          choices:
+            - A waxy coating on the stem
+            - underground burrows
+            - enormous ears
+            - come out at night
+          evidence: A waxy coating on the stem
+        - kind: write
+          ask: How does paragraph 3 develop the idea in paragraph 2?
+          sample: Paragraph 2 shows how a cactus stores water in its stem, and paragraph 3 adds how it saves that water with spines, a waxy coating, and pores that open at night.
+          rubric: names storing water in the stem (paragraph 2) and at least one way of saving it (paragraph 3).
+          evidence: Cactuses are just as good at saving the water they collect.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Desert plants and animals survive heat and dry weather in different ways. Cactuses store water
+            in thick stems and save it with spines, a waxy coating, and pores that open at night. Many
+            animals are nocturnal, and kangaroo rats spend hot days in "underground burrows." The fennec fox
+            uses its large ears to release heat.
+          rubric: covers both central ideas (how plants store and save water and how animals avoid the heat) with key details; no opinions.
+          evidence: desert living things all have clever ways to survive
+
+- id: a12-panama-canal
+  title: Lifting Ships at Panama
+  genre: nonfiction
+  text: |
+    Before 1914, a ship sailing from New York to San Francisco had to travel all the way around the
+    southern tip of South America. The voyage took weeks and covered thousands of extra miles. That
+    changed in 1914, when the Panama Canal opened across a narrow strip of land in Central America. The
+    canal works through a clever system of water-filled locks, and it reshaped the routes of ocean trade.
+
+    The canal does not stay at sea level the whole way. Its middle section crosses Gatun Lake, a large lake
+    created by damming a river, which lies about 85 feet above the oceans. To reach the lake, ships must be
+    lifted, and to leave it, they must be lowered again, which is the job of the locks.
+
+    A lock is a huge concrete chamber with heavy gates at each end. When a ship enters from the ocean side,
+    the gates close behind it. Valves then open, and water flows down from the lake into the chamber through
+    tunnels in the walls. No pumps are needed, because gravity does the work. As the chamber fills, the ship
+    rises slowly, like a toy boat in a filling bathtub. Then the gates ahead open, and the ship moves on.
+
+    Ships climb to the lake in three steps and are lowered in three more steps on the other side. Small
+    electric locomotives running on tracks beside the locks help guide large ships through the chambers.
+
+    The time saved has been enormous. A voyage from New York to San Francisco through the canal is about
+    8,000 miles shorter than the route around South America. Shorter trips meant that goods such as grain,
+    lumber, and machinery could reach distant markets faster and more cheaply. Today, thousands of ships
+    pass through the canal each year, carrying cargo between the Atlantic and Pacific Oceans. A few rising
+    and falling chambers of water have changed the map of world trade.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which pair names the article's central ideas?
+          choices:
+            - How the locks lift ships, and how the canal shortened trade routes.
+            - How oceans formed, and why ships sailed around South America.
+            - How pumps work, and why lakes are higher than oceans.
+            - How trains carry cargo, and why New York is a busy port.
+          evidence: The canal works through a clever system of water-filled locks, and it reshaped the routes of ocean trade.
+        - kind: quote
+          ask: Which words explain how a lock fills without pumps?
+          choices:
+            - gravity does the work
+            - the southern tip
+            - electric locomotives
+            - grain, lumber, and machinery
+          evidence: gravity does the work
+        - kind: write
+          ask: How do paragraphs 2 and 3 explain lifting a ship?
+          sample: Paragraph 2 explains that ships must be lifted to Gatun Lake, and paragraph 3 shows how a lock does it by closing its gates and letting lake water flow in so the ship rises.
+          rubric: names the need to reach the higher lake (paragraph 2) and water flowing into the closed chamber (paragraph 3).
+          evidence: As the chamber fills, the ship rises slowly
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            The Panama Canal opened in 1914 across Central America. Ships are lifted to Gatun Lake and
+            lowered again by locks, where water flows in from the lake and "gravity does the work." The canal
+            made the trip from New York to San Francisco about 8,000 miles shorter. As a result, goods could
+            reach distant markets faster and more cheaply.
+          rubric: covers both central ideas (how the locks lift ships and how the canal shortened trade routes) with key details; no opinions.
+          evidence: A few rising and falling chambers of water have changed the map of world trade.
+
+- id: a13-forest-fungi
+  title: Fungi of the Forest
+  genre: nonfiction
+  text: |
+    When people walk through a forest, they usually notice the trees. Yet hidden beneath their feet is
+    another group of living things that the forest could hardly do without. Fungi, the group that includes
+    mushrooms and molds, play two important roles in a healthy forest. Some form partnerships with living
+    trees, and others recycle fallen wood back into soil.
+
+    A mushroom is only a small part of a fungus. Most of the fungus is a network of extremely thin threads
+    that spread through the soil. Certain fungi wrap these threads around tree roots or grow into the roots
+    themselves. Scientists call this partnership mycorrhiza, a word that means "fungus root."
+
+    Both partners benefit from the arrangement. The fungal threads reach far into the soil, much farther
+    than the tree's own roots can. They gather water and minerals, such as phosphorus and nitrogen, and pass
+    some of them to the tree. In return, the tree shares sugars that it makes in its leaves through
+    photosynthesis. Most kinds of plants form partnerships like this one.
+
+    Other fungi work on trees that have already fallen. When a branch or trunk lands on the forest floor,
+    fungi begin to grow into the wood. They release substances called enzymes that break down the tough
+    materials wood is made of. Few living things can break down wood this thoroughly, so fungi are among
+    the forest's most important recyclers.
+
+    Over many years, a fallen log grows soft and crumbly as fungi, insects, and bacteria break it apart.
+    Eventually it becomes part of the dark, rich soil on the forest floor. The nutrients once locked inside
+    the wood are released, and new plants can use them to grow. In this way, fungi help the forest in two
+    directions, feeding living trees and turning old trees into soil for new ones.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which choice best states the two central ideas?
+          choices:
+            - Fungi partner with tree roots, and they recycle fallen wood.
+            - Fungi are plants, and they make sugar in their leaves.
+            - Mushrooms are the whole fungus, and they grow only on logs.
+            - Trees need no soil, and fungi keep logs from breaking down.
+          evidence: Some form partnerships with living trees, and others recycle fallen wood back into soil.
+        - kind: quote
+          ask: Which words show what trees give to fungi?
+          choices:
+            - the tree shares sugars
+            - extremely thin threads
+            - soft and crumbly
+            - mushrooms and molds
+          evidence: the tree shares sugars
+        - kind: write
+          ask: How does paragraph 3 develop the idea of partnership?
+          sample: Paragraph 3 shows that both sides gain, because the fungal threads bring the tree water and minerals and the tree gives the fungi sugars in return.
+          rubric: names what the fungi give (water or minerals) and what the tree gives (sugars) (paragraph 3).
+          evidence: Both partners benefit from the arrangement.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Fungi play two roles in a forest. Some wrap their thin threads around tree roots, bringing the
+            tree water and minerals while "the tree shares sugars" with them. Other fungi grow into fallen
+            wood and use enzymes to break it down. Over many years, the log becomes rich soil that feeds new
+            plants.
+          rubric: covers both central ideas (partnerships with tree roots and recycling fallen wood into soil) with key details; no opinions.
+          evidence: fungi help the forest in two directions, feeding living trees and turning old trees into soil for new ones
+
+- id: a14-snowflakes
+  title: How Snow Crystals Grow
+  genre: nonfiction
+  text: |
+    Catch a snowflake on a dark mitten, and you may see a tiny six-pointed star. Two big ideas explain what you are seeing. The first is
+    why snow crystals almost always have six sides, and the second is how the weather in the cloud
+    decides which shape a crystal will take.
+
+    A snow crystal starts when water vapor freezes onto a tiny particle, such as dust or pollen. As more
+    vapor freezes onto it, the water molecules lock together in a pattern with six sides, a little like the
+    cells of a honeycomb. Because the molecules always connect in this way, the growing crystal keeps its
+    six-sided shape as it gets bigger.
+
+    The corners of a young crystal stick out a little farther into the moist air than its flat sides do. As
+    a result, the corners collect water vapor faster and grow outward into arms. Since all six arms grow in
+    the same air at the same moment, they often end up looking surprisingly alike.
+
+    The weather in the cloud controls the details. In the 1930s, a Japanese scientist named Ukichiro Nakaya
+    grew snow crystals in a cold laboratory and carefully changed the conditions. He found that temperature
+    decides the basic shape. Near 23 degrees Fahrenheit, crystals grow as thin needles or columns, while
+    near 5 degrees they spread into flat plates and branching stars.
+
+    Humidity, the amount of water vapor in the air, matters too. In fairly dry air, crystals stay simple
+    and small. In very moist air, they sprout fancy branches with side branches of their own. A crystal
+    tumbles through many different layers of air as it falls, so its final shape is a record of its whole
+    journey. That is why some scientists describe snowflakes as letters from the sky.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: What two central ideas does the article develop?
+          choices:
+            - Why crystals have six sides, and how weather shapes them.
+            - Why snow is cold, and how mittens keep hands warm.
+            - How clouds move, and why snow melts in the spring.
+            - How Nakaya became famous, and why labs are cold.
+          evidence: The first is why snow crystals almost always have six sides, and the second is how the weather in the cloud decides which shape a crystal will take.
+        - kind: quote
+          ask: Which sentence supports the idea about weather?
+          choices:
+            - He found that temperature decides the basic shape.
+            - a little like the cells of a honeycomb
+            - they often end up looking surprisingly alike
+            - Catch a snowflake on a dark mitten
+          evidence: He found that temperature decides the basic shape.
+        - kind: write
+          ask: How do paragraphs 4 and 5 build the idea about weather?
+          sample: Paragraph 4 shows that temperature sets the basic shape, such as needles or plates, and paragraph 5 adds that moist air makes crystals grow fancy branches.
+          rubric: names temperature setting the shape (paragraph 4) and humidity adding branches (paragraph 5).
+          evidence: In very moist air, they sprout fancy branches with side branches of their own.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Snow crystals form when water vapor freezes onto a speck of dust, and the molecules lock together
+            "in a pattern with six sides." The corners grow faster into arms, so the six arms often look
+            alike. Experiments in the 1930s showed that temperature decides whether crystals become needles,
+            columns, or plates. Humidity adds detail, since moist air makes crystals grow fancy branches.
+          rubric: covers both central ideas (why crystals have six sides and how temperature and humidity shape them) with key details; no opinions.
+          evidence: in a pattern with six sides
+
+- id: a15-whale-songs
+  title: Songs of the Humpback
+  genre: nonfiction
+  text: |
+    Humpback whales are famous for two habits that seem to have little in common. They sing some of the
+    longest, most complex songs of any animal, and they eat by straining huge mouthfuls of
+    seawater through a natural sieve. Both habits show how well this giant animal suits ocean life.
+
+    The singers are males, and they sing mostly during the winter breeding season in warm waters. A song is
+    built from short sounds, such as moans, groans, and squeaks, arranged into phrases. The phrases repeat to
+    form themes, and a full song can last ten minutes or more before the whale starts it again. Some males
+    sing for hours.
+
+    Scientists are still studying why humpbacks sing, but the songs clearly carry messages. Sound travels
+    much farther in water than in air, so a song may reach other whales far away. Most researchers think the
+    songs help males attract females or tell other males where they are. Remarkably, all the males in one
+    population sing nearly the same song, and that song slowly changes from year to year as the whales learn
+    new parts from one another.
+
+    In summer, the whales travel to cold, food-rich waters to eat. Instead of teeth,
+    hundreds of plates called baleen hang from their upper jaws. Baleen is made of keratin, the same
+    material as your fingernails, and its fringed edges overlap like the bristles of a broom.
+
+    To feed, a humpback gulps a huge mouthful of water filled with krill or small fish. Long pleats along
+    its throat stretch, so its mouth can hold far more than its usual size. Then the whale pushes the water
+    out with its tongue, and the baleen traps the food inside. Some groups even blow rings of bubbles around
+    a school of fish to herd it together before they lunge upward through the middle.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which idea do paragraphs 4 and 5 mainly develop?
+          choices:
+            - how humpbacks filter food from seawater
+            - why male humpbacks sing in warm waters
+            - how sound travels farther in water than air
+            - why humpbacks travel to cold waters to sing
+          evidence: Then the whale pushes the water out with its tongue, and the baleen traps the food inside.
+        - kind: quote
+          ask: Which sentence shows that the songs carry messages?
+          choices:
+            - so a song may reach other whales far away
+            - Baleen is made of keratin
+            - Some males sing for hours.
+            - In summer, the whales travel to cold, food-rich waters
+          evidence: so a song may reach other whales far away
+        - kind: write
+          ask: How does paragraph 3 develop the idea of whale songs?
+          sample: Paragraph 3 moves from what the songs sound like to what they are for, explaining that they may attract females or signal other males, and that whales learn songs from one another.
+          rubric: says paragraph 3 explains the songs' purpose (messages to females or males) or how whales learn songs.
+          evidence: Most researchers think the songs help males attract females or tell other males where they are.
+        - kind: paragraph
+          ask: Summarize the article in 3–4 sentences. No opinions.
+          sample: >-
+            Male humpback whales sing long songs made of sounds arranged into phrases and themes, mostly in
+            the winter breeding season. The songs probably help males attract females or signal other males,
+            and the males in one population share a song that changes over time. Humpbacks feed with baleen,
+            plates that hang from their upper jaws. After gulping water, the whale pushes it out, and "the
+            baleen traps the food inside."
+          rubric: covers both central ideas (songs as communication and filter-feeding with baleen) with key details; no opinions.
+          evidence: the baleen traps the food inside
+
+- id: a16-lighthouse-lenses
+  title: The Lighthouse Lens
+  genre: nonfiction
+  text: |
+    Two hundred years ago, a captain sailing along a rocky coast at night depended on a light
+    from a tall tower. Making that light reach far out to sea took a clever invention, and keeping it
+    burning took steady human effort. The story of the lighthouse is really the story of a remarkable lens and
+    the keepers who cared for it.
+
+    Early lighthouses used fires, candles, or oil lamps with metal mirrors, but much of their light scattered
+    and was wasted. In 1822, a French scientist named Augustin-Jean Fresnel introduced a new kind of lens.
+    Instead of one thick piece of glass, his design used many rings of glass prisms arranged around the lamp.
+    Each prism bent the light so that it left the lens in a single strong beam.
+
+    Because the lens was made of rings rather than one solid block, it was much thinner and lighter than an
+    ordinary lens of the same power. The beam from a large Fresnel lens could be seen about twenty miles
+    away. Some lenses turned slowly, so sailors saw a flash at regular intervals and could tell one
+    lighthouse from another.
+
+    A lens like this was useful only if someone kept it working. In the 1800s, lighthouse keepers climbed the
+    tower stairs at sunset to light the lamp. Through the night, they trimmed the wicks so the flame would not
+    smoke, refilled the oil, and wound the clockwork that turned the lens. Many keepers stayed awake in
+    shifts until dawn.
+
+    Daytime brought its own chores. Keepers polished the brass, cleaned soot from every prism, and hung
+    curtains around the lens to protect it from the sun. They also recorded the weather and their work in a
+    logbook. Their careful routine meant that the light shone night after night, guiding ships safely past
+    the rocks.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which pair of central ideas does the article develop?
+          choices:
+            - A new lens sent light far, and keepers kept it working.
+            - Ships sank often, and captains built their own towers.
+            - Candles were cheap, and mirrors made light brighter.
+            - France made the first ships, and sailors kept logbooks.
+          evidence: The story of the lighthouse is really the story of a remarkable lens and the keepers who cared for it.
+        - kind: quote
+          ask: Which sentence develops the idea about the lens?
+          choices:
+            - Each prism bent the light
+            - Daytime brought its own chores.
+            - Many keepers stayed awake in shifts until dawn.
+            - They also recorded the weather
+          evidence: Each prism bent the light
+        - kind: write
+          ask: How does paragraph 4 connect the two central ideas?
+          sample: Paragraph 4 opens by saying the lens was useful only if someone kept it working, which links the invention to the keepers and then describes their night work.
+          rubric: explains that paragraph 4 ties the lens to the keepers' work (the lens needed someone to keep it working).
+          evidence: A lens like this was useful only if someone kept it working.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Early lighthouse lamps wasted much of their light until Augustin-Jean Fresnel introduced a lens
+            made of rings of glass prisms in 1822. The prisms bent the light into one strong beam that could be
+            seen about twenty miles away. In the 1800s, keepers lit the lamp at sunset, trimmed the wicks, and
+            "wound the clockwork that turned the lens." By day they cleaned the prisms and kept a logbook.
+          rubric: covers both central ideas (how the Fresnel lens focused light and the keepers' daily work) with key details; no opinions.
+          evidence: wound the clockwork that turned the lens
+
+- id: a17-rainforest-rain
+  title: A Forest That Makes Rain
+  genre: nonfiction
+  text: |
+    In the vast rainforest that covers much of South America, rain falls on most days of the year, and the air feels warm and damp. It might
+    seem that the rain simply blows in from the ocean. In fact, the forest helps produce much of its own
+    rain. The trees that create this moisture also grow in distinct layers, and each layer forms a different
+    home for plants and animals.
+
+    The process begins underground, where a tree's roots draw water up from the soil, and the water then
+    travels through the trunk to the leaves. There, it escapes as vapor through tiny openings called pores. This
+    release of water from leaves is called transpiration, and a single large tree can give off a great deal
+    of water every day.
+
+    Billions of trees doing this at once send huge amounts of vapor into the air. The vapor rises, cools, and
+    forms clouds, which then release rain back onto the forest. Winds carry some of this moisture farther
+    inland, where it falls again and is taken up by more trees, so the same water can be recycled
+    several times as it crosses the continent.
+
+    Meanwhile, the trees divide the forest into layers. The tallest trees, called emergents, rise above
+    everything else and face strong sun and wind. Below them, the canopy forms a thick roof of leaves where
+    many rainforest animals, from monkeys to toucans, find their food.
+
+    Under the canopy lies the understory, a dim, still space where young trees and broad-leaved plants wait
+    for a chance at the light. At the bottom is the forest floor. So little sunlight reaches it that few
+    plants grow there, yet fallen leaves decay quickly and return nutrients to the soil. That soil feeds the
+    roots that begin the whole cycle of rain again.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the opening set up?
+          choices:
+            - The forest makes its own rain, and it grows in layers.
+            - Oceans cause all rain, and monkeys live on the ground.
+            - Rain falls daily, and toucans eat only fruit.
+            - Trees grow slowly, and the soil is always dry.
+          evidence: In fact, the forest helps produce much of its own rain.
+        - kind: quote
+          ask: Which sentence develops the idea about making rain?
+          choices:
+            - The vapor rises, cools, and forms clouds
+            - At the bottom is the forest floor.
+            - Meanwhile, the trees divide the forest into layers.
+            - The tallest trees, called emergents, rise above
+          evidence: The vapor rises, cools, and forms clouds
+        - kind: write
+          ask: How does the idea of rain develop in paragraphs 2 and 3?
+          sample: Paragraph 2 explains how one tree releases water vapor through its leaves, and paragraph 3 shows billions of trees forming clouds and recycling that water as rain.
+          rubric: names transpiration from one tree (paragraph 2) and vapor forming clouds and rain that is recycled (paragraph 3).
+          evidence: so the same water can be recycled several times as it crosses the continent.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Rainforest trees pull water from the soil and release it as vapor through their leaves, a process
+            called transpiration. The vapor forms clouds, so "the same water can be recycled several times as
+            it crosses the continent." The trees also form layers: emergents, the canopy, the understory, and
+            the forest floor. Each layer gets a different amount of light and supports different life.
+          rubric: covers both central ideas (trees helping make rain and the forest's layers) with key details; no opinions.
+          evidence: the same water can be recycled several times as it crosses the continent
+
+- id: a18-aluminum-cans
+  title: The Life of a Can
+  genre: nonfiction
+  text: |
+    When you drop an empty drink can into a recycling bin, you send it on a surprisingly busy journey. That
+    journey matters for two reasons. Recycling aluminum saves an enormous amount of energy, and the modern
+    sorting centers that handle it use clever tricks to separate it from everything else in the bin.
+
+    Making new aluminum is hard work. The metal comes from a reddish ore called bauxite, which must be dug
+    from the ground and refined into a white powder. That powder is then melted and split apart with huge
+    amounts of electricity. Recycling skips these steps. Melting down old cans uses only about five percent
+    of the energy needed to make new aluminum from ore, so it saves roughly ninety-five percent.
+
+    Aluminum has another advantage, because it can be recycled again and again without losing its quality.
+    A can melted today can become a new can, then another, and then another. Because of this, a large share
+    of all the aluminum ever produced is still in use.
+
+    Before any of this can happen, the can has to be separated from paper, plastic, glass, and steel. At a
+    sorting center, the mixed recycling rides along moving belts. Spinning screens and blowers lift away flat
+    paper and cardboard, and workers pull out items that do not belong.
+
+    Metals require special methods. Strong magnets pick out steel cans, because steel is attracted to
+    magnets. Aluminum is not, so it would normally pass right by. Many centers solve this problem with a
+    machine that uses rapidly spinning magnets. These magnets create electric currents inside the aluminum,
+    which push the cans so that they jump off the belt into their own bin. From there, the cans are pressed
+    into large bales and shipped away to be melted into new metal.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: What are the two central ideas of the article?
+          choices:
+            - Recycling aluminum saves energy, and centers sort it cleverly.
+            - Bauxite is red, and steel cans are heavier than glass.
+            - Cans are hard to open, and workers prefer plastic.
+            - Paper is easy to recycle, and magnets are expensive.
+          evidence: Recycling aluminum saves an enormous amount of energy, and the modern sorting centers that handle it use clever tricks to separate it from everything else in the bin.
+        - kind: quote
+          ask: Which words best support the idea about energy?
+          choices:
+            - so it saves roughly ninety-five percent
+            - the mixed recycling rides along moving belts
+            - Metals require special methods.
+            - workers pull out items that do not belong
+          evidence: so it saves roughly ninety-five percent
+        - kind: write
+          ask: How does paragraph 5 develop the idea about sorting?
+          sample: Paragraph 5 explains that magnets pull out steel, and then spinning magnets create currents that make aluminum cans jump into their own bin.
+          rubric: names magnets removing steel and spinning magnets pushing aluminum off the belt (paragraph 5).
+          evidence: These magnets create electric currents inside the aluminum, which push the cans so that they jump off the belt into their own bin.
+        - kind: paragraph
+          ask: Summarize the article objectively in 3–4 sentences.
+          sample: >-
+            Making new aluminum from bauxite takes huge amounts of electricity, but melting old cans saves
+            roughly ninety-five percent of that energy. Aluminum can also be recycled again and again without
+            losing quality. At sorting centers, belts, screens, and blowers separate paper, and magnets pick out
+            steel. Spinning magnets then push aluminum cans "off the belt into their own bin."
+          rubric: covers both central ideas (energy saved by recycling aluminum and how sorting centers separate it) with key details; no opinions.
+          evidence: off the belt into their own bin
+
+- id: a19-tides
+  title: Tides and Tide Pools
+  genre: nonfiction
+  text: |
+    Stand on a rocky beach for a few hours, and you will watch the ocean creep away and then return. These daily changes, called tides, have an invisible cause far out in space. They also
+    create one of the most demanding homes on Earth, the tide pool, where animals must handle water that comes
+    and goes.
+
+    Tides happen mainly because of the moon. The moon's gravity pulls on the whole Earth, but it pulls hardest
+    on the side facing it, so the ocean there bulges toward the moon. A second bulge forms on the
+    opposite side of Earth. As Earth spins, most coastlines pass through both bulges, so they have two high
+    tides and two low tides each day.
+
+    The sun affects the tides too, but only about half as much as the moon, because it is so much farther away. When the sun
+    and moon line up, at the new moon and the full moon, their pulls combine and create extra-high and
+    extra-low tides called spring tides. When they pull at right angles, the difference between high and low
+    tide is smaller.
+
+    Along rocky shores, low tide leaves pools of seawater trapped among the rocks. The animals living there
+    face rapid change, because in just a few hours the water can grow warmer, saltier as it evaporates, or fresher
+    after a rainstorm. Animals clinging to rocks above the pools may be left completely out of the water.
+
+    Tide-pool animals have clever ways of coping. Barnacles close their shells tightly, sealing in a little
+    seawater until the tide returns. Mussels clamp their shells shut for the same reason. Sea anemones pull in
+    their tentacles and fold into soft, round blobs that lose less water. Sea stars and crabs squeeze into shady cracks. When the waves wash back in, the animals open up and begin feeding again.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which central idea do paragraphs 2 and 3 develop?
+          choices:
+            - The pull of the moon and sun causes tides.
+            - Tide-pool animals hide from the waves.
+            - Spring tides happen only in the spring.
+            - Beaches are best visited at low tide.
+          evidence: Tides happen mainly because of the moon.
+        - kind: quote
+          ask: Which sentence develops the idea about animals coping?
+          choices:
+            - Mussels clamp their shells shut for the same reason.
+            - Tides happen mainly because of the moon.
+            - A second bulge forms on the opposite side of Earth.
+            - The sun affects the tides too
+          evidence: Mussels clamp their shells shut for the same reason.
+        - kind: write
+          ask: How do paragraphs 4 and 5 link tides to the animals?
+          sample: Paragraph 4 shows that low tide traps animals in changing pools or leaves them out of the water, and paragraph 5 explains how animals like barnacles seal in seawater to cope.
+          rubric: names the challenge low tide creates (paragraph 4) and at least one way animals cope (paragraph 5).
+          evidence: Barnacles close their shells tightly, sealing in a little seawater until the tide returns.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            The moon's gravity makes ocean water bulge on two sides of Earth, so most coasts have two high and
+            two low tides each day. The sun also pulls, and when it lines up with the moon, it causes spring
+            tides. Low tide leaves animals in pools that change quickly or out of the water entirely. They cope
+            in different ways, as "Barnacles close their shells tightly" and anemones fold up.
+          rubric: covers both central ideas (what causes tides and how tide-pool animals cope) with key details; no opinions.
+          evidence: Barnacles close their shells tightly
+
+- id: a20-mars-rovers
+  title: Driving on Mars
+  genre: nonfiction
+  text: |
+    Now imagine steering a car on another planet, where every command takes minutes to arrive. That is the challenge for engineers who drive rovers on
+    Mars. Their work has paid off, because the rovers have found strong evidence that Mars once
+    had water flowing on its surface.
+
+    Radio signals travel at the speed of light, about 186,000 miles per second, but Mars is very far away. Depending on where the two
+    planets are in their orbits, a message can take anywhere from a few minutes to more than twenty minutes
+    to reach the rover. Because of this delay, no one can drive a rover with a joystick. By the time a rover
+    received a command to stop, it might already have rolled into a boulder.
+
+    Instead, the team plans each day's drive in advance. They study pictures the rover has sent back,
+    sometimes wearing special glasses that make the images look three-dimensional. Then they write a list of
+    commands and send it all at once. The rover follows the plan on its own, and its cameras help it spot
+    dangerous rocks and steer around them.
+
+    In 2004, the rover Opportunity found tiny round stones, nicknamed
+    blueberries, made of a mineral that often forms in water. Later, the rover Curiosity discovered rocks
+    packed with rounded pebbles, like those found in streambeds on Earth. Pebbles become smooth and round only
+    after tumbling in flowing water for a long time.
+
+    Curiosity also drilled into layers of fine rock that formed from mud at the bottom of an ancient lake.
+    Since 2021, the rover Perseverance has been exploring a crater that once held a lake, where a river left behind a
+    fan-shaped pile of sediment. Each discovery shows a younger Mars that was much wetter than the cold, dusty planet we see now.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two ideas does the article develop?
+          choices:
+            - How rovers are driven from Earth, and signs of water on Mars.
+            - Why cars are easy to drive, and how Mars got its color.
+            - How engineers built Mars, and why rocks are round.
+            - Why Mars is hot, and how rovers grow food there.
+          evidence: Their work has paid off, because the rovers have found strong evidence that Mars once had water flowing on its surface.
+        - kind: quote
+          ask: Which sentence shows how drivers handle the delay?
+          choices:
+            - Then they write a list of commands
+            - Pebbles become smooth and round
+            - Radio signals travel at the speed of light
+            - Now imagine steering a car on another planet
+          evidence: Then they write a list of commands
+        - kind: write
+          ask: How do paragraphs 4 and 5 build the idea about water?
+          sample: Paragraph 4 gives clues from stones and rounded pebbles that formed in water, and paragraph 5 adds mud from an ancient lake and a crater that once held a lake.
+          rubric: names a clue from paragraph 4 (blueberries or rounded pebbles) and one from paragraph 5 (lake mud or the crater lake).
+          evidence: Curiosity also drilled into layers of fine rock that formed from mud at the bottom of an ancient lake.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Messages to Mars can take more than twenty minutes to arrive, so rovers cannot be steered with a
+            joystick. Instead, engineers plan each drive and send a list of commands, and the rover's cameras
+            help it avoid rocks. The rovers have found round stones, rounded pebbles, and lake mud that point to
+            ancient water. These clues show that Mars was once "much wetter than the cold, dusty planet we see
+            now."
+          rubric: covers both central ideas (driving rovers despite the signal delay and evidence of ancient water) with key details; no opinions.
+          evidence: much wetter than the cold, dusty planet we see now
+
+- id: a21-bamboo
+  title: Fast, Strong Bamboo
+  genre: nonfiction
+  text: |
+    Mark a new bamboo stalk in spring, and you may need a ladder to measure it by summer. Bamboo is one
+    of the fastest-growing plants on Earth. Yet this quick-growing plant is also tough enough that people
+    have used it to build houses, bridges, and even the frameworks that surround skyscrapers while they are
+    being built.
+
+    Although some bamboo grows as tall as a tree, it is actually a kind of grass. Its speed comes partly from
+    what lies underground. Bamboo spreads through underground stems called rhizomes, which store food and
+    send up new sprouts. Because the sprouts are fed by this network, they do not have to build up their energy
+    from scratch.
+
+    The growth is astonishing. Some kinds of bamboo have been measured growing about three feet in a single
+    day. A new stalk often reaches its full height within just a few months. Unlike a tree, it does not keep
+    getting taller year after year. Instead, during the next few years, its walls slowly harden and become
+    stronger.
+
+    That strength comes from bamboo's structure. Each stalk, called a culm, is a hollow tube divided into
+    sections by solid joints. A hollow tube resists bending surprisingly well for its weight, and the joints
+    keep it from buckling. Long, tough fibers run the length of the stalk, which helps it bend in strong wind
+    without snapping.
+
+    People have taken advantage of these qualities for thousands of years. In parts of Asia and South
+    America, builders use bamboo for houses, floors, and footbridges. In parts of Asia, builders have long tied bamboo poles together to form scaffolding around buildings under construction. Because bamboo grows back so
+    quickly after it is cut, many builders see it as a material that can be harvested again and again.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the article develop?
+          choices:
+            - Bamboo grows very fast, and it is strong enough to build with.
+            - Bamboo is a tree, and it grows only in Hong Kong.
+            - Bamboo needs ladders, and it breaks easily in wind.
+            - Bamboo grows slowly, and builders prefer steel.
+          evidence: Yet this quick-growing plant is also tough enough that people have used it to build houses, bridges, and even the frameworks that surround skyscrapers while they are being built.
+        - kind: quote
+          ask: Which words support the idea about bamboo’s speed?
+          choices:
+            - three feet in a single day
+            - Each stalk, called a culm, is a hollow tube
+            - the joints keep it from buckling
+            - builders use bamboo for houses, floors, and footbridges
+          evidence: three feet in a single day
+        - kind: write
+          ask: How does paragraph 3 connect the two central ideas?
+          sample: Paragraph 3 describes bamboo's fast growth but ends by saying its walls harden over the next years, which leads into the idea of its strength.
+          rubric: explains that paragraph 3 moves from fast growth to the walls hardening and becoming strong.
+          evidence: Instead, during the next few years, its walls slowly harden and become stronger.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Bamboo is a grass that grows very quickly because underground stems called rhizomes feed its new
+            sprouts. Some kinds grow "about three feet in a single day" and reach full height in a few months.
+            Its hollow stalks with solid joints and long fibers make it strong and flexible. Builders use it for
+            houses, bridges, and scaffolding, and it grows back quickly after it is cut.
+          rubric: covers both central ideas (bamboo's fast growth and its strength and uses in building) with key details; no opinions.
+          evidence: about three feet in a single day
+
+- id: a22-hummingbirds
+  title: How Hummingbirds Hover
+  genre: nonfiction
+  text: |
+    A hummingbird can hang in midair in front of a flower, as still as if it were held by an invisible
+    string. No other bird can hover so well for so long. This skill depends on unusual wings, and it also
+    demands huge amounts of energy, which shapes how a hummingbird eats and even how it sleeps.
+
+    Most birds get nearly all their lift when they push their wings down. A hummingbird is different. Its
+    shoulder joints let it twist its wings, so it can turn them over on the upstroke. Its wings trace a
+    pattern a little like a sideways figure eight, and they create lift on the way down and on the way back
+    up.
+
+    The wings also move incredibly fast. Many hummingbirds beat their wings dozens of times every second, so
+    quickly that the wings blur and hum, which gives the birds their name. By tilting their wings slightly,
+    hummingbirds can hover in place, fly sideways, or even fly backward away from a flower.
+
+    All this motion burns fuel at a remarkable rate. A hummingbird has one of the fastest metabolisms of any
+    animal. While it is flying, its heart can beat more than a thousand times a minute. To keep going, it
+    visits hundreds of flowers a day to sip sugary nectar, and it catches tiny insects for protein. It may
+    need to eat every few minutes.
+
+    At night, however, a hummingbird cannot feed, and it could run low on energy before morning. Its solution
+    is a deep, sleeplike state called torpor. The bird's body temperature drops, and its heartbeat and
+    breathing slow dramatically. In torpor, it uses only a small fraction of its usual energy. As the sun
+    rises, the bird gradually warms up again, ready to hover at the first flower of the day.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which idea do paragraphs 4 and 5 mainly develop?
+          choices:
+            - the hummingbird's high energy needs and torpor
+            - the way hummingbird wings twist in flight
+            - why hummingbirds prefer red flowers
+            - how hummingbirds build nests at night
+          evidence: All this motion burns fuel at a remarkable rate.
+        - kind: quote
+          ask: Which sentence explains how hummingbirds hover?
+          choices:
+            - Its shoulder joints let it twist its wings
+            - It may need to eat every few minutes.
+            - Its solution is a deep, sleeplike state called torpor.
+            - No other bird can hover so well for so long.
+          evidence: Its shoulder joints let it twist its wings
+        - kind: write
+          ask: How does the opening paragraph link the two ideas?
+          sample: The opening says hovering depends on unusual wings and also demands huge amounts of energy, which connects the wings to how the bird eats and sleeps.
+          rubric: explains that hovering both depends on special wings and uses lots of energy, linking flight to eating and sleeping.
+          evidence: This skill depends on unusual wings, and it also demands huge amounts of energy, which shapes how a hummingbird eats and even how it sleeps.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Hummingbirds hover because they can twist their wings and make lift on both the downstroke and the
+            upstroke. Their wings beat dozens of times a second, so they can also fly sideways and backward.
+            Hovering uses so much energy that a hummingbird's heart "can beat more than a thousand times a
+            minute," and it must eat often. At night it saves energy by entering torpor.
+          rubric: covers both central ideas (how hummingbirds hover and their fast metabolism and nightly torpor) with key details; no opinions.
+          evidence: can beat more than a thousand times a minute
+
+- id: a23-gps
+  title: Finding Your Place
+  genre: nonfiction
+  text: |
+    A phone can show a blue dot marking exactly where you stand.
+    That dot depends on a system of satellites circling high above Earth. It is also the latest chapter in a
+    long history of mapmaking, which has moved from hand-drawn paper charts to images and signals from space.
+
+    The Global Positioning System, or GPS, is a group of about thirty satellites run by the United States.
+    They orbit more than twelve thousand miles above Earth. Each satellite carries extremely precise atomic
+    clocks, and it constantly broadcasts a signal that tells what time it is and where the satellite is.
+
+    A receiver, like the one in a phone, uses timing to find its position. It notes when each signal
+    arrives and works out how long the signal took to travel. Because the signals move at the speed of light,
+    that travel time reveals the receiver's distance from each satellite. With signals from at least four
+    satellites, the receiver can calculate its location. The timing must be incredibly exact, since an
+    error of just one millionth of a second would put you about a thousand feet off.
+
+    For most of history, mapmaking was much slower. Surveyors walked the land with measuring chains and
+    instruments that measured angles, and they turned their notes into maps by hand. At sea, sailors used the
+    sun and stars to estimate their position and marked routes on paper charts. Making an accurate map
+    of a single region could take years.
+
+    Satellites changed that work. Mapmakers now combine GPS measurements with pictures taken from space,
+    which can show new roads and buildings soon after they appear. Instead of printing a fresh map every few
+    years, they can update digital maps constantly. Paper charts remain, but the newest maps are built from signals in space.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: What two central ideas does the article develop?
+          choices:
+            - How GPS finds a position, and how mapmaking changed.
+            - Why phones are expensive, and how cities grow.
+            - How sailors built satellites, and why stars move.
+            - Why maps are colorful, and how roads are paved.
+          evidence: It is also the latest chapter in a long history of mapmaking, which has moved from hand-drawn paper charts to images and signals from space.
+        - kind: quote
+          ask: Which sentence develops the idea about timing signals?
+          choices:
+            - It notes when each signal arrives
+            - Satellites changed that work.
+            - For most of history, mapmaking was much slower.
+            - Making an accurate map of a single region
+          evidence: It notes when each signal arrives
+        - kind: write
+          ask: How do paragraphs 4 and 5 trace the change in maps?
+          sample: Paragraph 4 describes slow mapmaking by hand with chains and paper charts, and paragraph 5 shows satellites letting mapmakers update digital maps constantly.
+          rubric: contrasts slow hand-made maps (paragraph 4) with satellite-based maps updated constantly (paragraph 5).
+          evidence: Instead of printing a fresh map every few years, they can update digital maps constantly.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            GPS uses about thirty satellites that broadcast the time and their position. A receiver measures how
+            long each signal took to arrive, and with at least four satellites, it can calculate where it is.
+            In the past, surveyors and sailors made maps slowly by hand. Now mapmakers combine GPS with pictures
+            from space and "can update digital maps constantly."
+          rubric: covers both central ideas (how GPS timing finds a position and how mapmaking changed) with key details; no opinions.
+          evidence: can update digital maps constantly
+
+- id: a24-emperor-penguins
+  title: Penguins in the Dark
+  genre: nonfiction
+  text: |
+    Emperor penguins do something no other bird attempts. They raise their chicks on the sea ice of
+    Antarctica during winter, when the days are short and dark and temperatures can fall below minus forty
+    degrees Fahrenheit. Two remarkable behaviors make this possible. The adults huddle together against the
+    cold, and the fathers take charge of the eggs while the mothers go to sea.
+
+    An emperor penguin is well built for cold, with dense feathers and a thick layer of fat. Even so, the
+    winter winds can be fierce, so thousands of penguins crowd together in a tight huddle to save heat. Inside,
+    the air can become surprisingly warm, while the birds on the edge face the full force of the wind.
+
+    The huddle is always slowly moving. Penguins on the outside gradually shuffle inward, and those in the warm
+    center drift toward the edge. Because the birds keep trading places, each one gets a turn in the warmest
+    spot. This constant shuffling helps the whole group make it through the long winter.
+
+    The huddle also protects the eggs. Each female lays a single egg in early winter and passes it to
+    her mate. Then she walks across the ice to the open ocean to feed, because making the egg has used up much
+    of her energy. The male balances the egg on top of his feet and covers it with a fold of feathered
+    skin called a brood pouch.
+
+    For about two months, the father stands guard, eating nothing and losing a large part of his body weight.
+    When the chick hatches, he can even feed it a milky substance from his throat if the mother has not yet
+    returned. At last, she returns with food and finds her family by recognizing his call. Then the hungry father finally heads to the sea.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which two central ideas does the first paragraph set up?
+          choices:
+            - Penguins huddle for warmth, and fathers keep the eggs.
+            - Penguins fly south, and mothers build ice nests.
+            - Antarctica is sunny, and penguins swim all winter.
+            - Chicks hatch in summer, and fathers find the food.
+          evidence: The adults huddle together against the cold, and the fathers take charge of the eggs while the mothers go to sea.
+        - kind: quote
+          ask: Which sentence develops the idea about huddling?
+          choices:
+            - The huddle is always slowly moving.
+            - Then the hungry father finally heads to the sea.
+            - Each female lays a single egg in early winter
+            - she returns with food
+          evidence: The huddle is always slowly moving.
+        - kind: write
+          ask: How does paragraph 4 link the huddle and the eggs?
+          sample: Paragraph 4 begins by saying the huddle also protects the eggs, connecting the first idea to the second, and then explains how the father holds the egg on his feet.
+          rubric: explains that paragraph 4 says the huddle protects the eggs, joining huddling to the fathers' care.
+          evidence: The huddle also protects the eggs.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            Emperor penguins raise chicks during the Antarctic winter. To stay warm, thousands crowd into a
+            huddle and keep trading places so that each bird gets time in the center. After the female lays an
+            egg, she goes to sea to feed, and the male keeps the egg on his feet under a brood pouch. For about
+            two months he waits, "eating nothing and losing a large part of his body weight."
+          rubric: covers both central ideas (huddling to survive the winter and the father keeping the egg while the mother feeds) with key details; no opinions.
+          evidence: eating nothing and losing a large part of his body weight
+
+- id: a25-public-libraries
+  title: Borrowing for Everyone
+  genre: nonfiction
+  text: |
+    In 1731, Benjamin Franklin and a group of friends in Philadelphia had a problem. Books cost a lot,
+    and none of them could afford very many. The answer they found grew into one of America's most
+    important ideas, a library that anyone can use. Today that idea keeps growing, as libraries lend far
+    more than books.
+
+    Franklin's group, a club of tradesmen and curious thinkers, decided to pool their money. Each member
+    paid to join and then paid a small fee each year. With this money, they ordered books from London and
+    shared them with one another. They called it the Library Company of Philadelphia, and it is still open
+    today.
+
+    The Library Company was a subscription library, which meant that only paying members could borrow.
+    Other towns copied the idea, but many people still could not afford to join. During the 1800s, more
+    Americans began to argue that libraries should be paid for by taxes and be free to all. Boston opened
+    one of the first large free public libraries in 1854. Later, the businessman Andrew Carnegie paid for
+    more than a thousand library buildings across the country.
+
+    Libraries still lend books, but many have changed what it means to borrow. With a library card, you
+    can download e-books and audiobooks at home. You can borrow a laptop or a small device that brings the
+    internet into your house. Some libraries even lend musical instruments, telescopes, and sewing
+    machines.
+
+    Others have collections that would surprise Franklin. A library of things might lend
+    garden tools, cake pans, or board games. Seed libraries let gardeners take home seeds and return
+    new ones later. Each of these follows the same idea the Library Company began with. When people share what they own,
+    everyone has more.
+  pages:
+    - focus: two central ideas, how one develops, objective summary
+      questions:
+        - kind: mc
+          ask: Which pair of central ideas does the article develop?
+          choices:
+            - How free libraries began, and what libraries lend today.
+            - Why Franklin wrote books, and how London printed them.
+            - How seeds grow, and why gardens need tools.
+            - Why books were cheap, and how Boston grew larger.
+          evidence: The answer they found grew into one of America's most important ideas, a library that anyone can use.
+        - kind: quote
+          ask: Which sentence develops the idea about lending today?
+          choices:
+            - Some libraries even lend musical instruments
+            - Boston opened one of the first large free public libraries
+            - Each member paid to join
+            - Books cost a lot
+          evidence: Some libraries even lend musical instruments
+        - kind: write
+          ask: How does paragraph 3 develop the idea of free libraries?
+          sample: Paragraph 3 explains that the first library was only for paying members, then shows Americans pushing for free, tax-supported libraries like Boston's.
+          rubric: names the move from paying members to free libraries paid for by taxes (paragraph 3).
+          evidence: During the 1800s, more Americans began to argue that libraries should be paid for by taxes and be free to all.
+        - kind: paragraph
+          ask: Write an objective summary in 3–4 sentences. No opinions.
+          sample: >-
+            In 1731, Benjamin Franklin and his friends pooled their money to buy and share books, forming the
+            Library Company of Philadelphia. Because only members could borrow, Americans in the 1800s pushed
+            for free libraries paid for by taxes, such as Boston's in 1854. Today libraries also lend e-books,
+            laptops, and musical instruments. Some lend tools and seeds, since "When people share what they own,
+            everyone has more."
+          rubric: covers both central ideas (the rise of free public libraries and what libraries lend today) with key details; no opinions.
+          evidence: When people share what they own, everyone has more.

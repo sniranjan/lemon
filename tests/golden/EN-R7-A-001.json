@@ -1,0 +1,55 @@
+{
+  "id": "EN-R7-A-001",
+  "subject": "english",
+  "level": "R7",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 1,
+  "variant": 1,
+  "seed": 1097078482139510061,
+  "title": "Life Under the Ice",
+  "parent_tip": "Take turns reading a paragraph each. Say each paragraph's point.",
+  "items": [
+    {
+      "kind": "passage",
+      "passage": "a01-lake-ice",
+      "set": 0,
+      "side": "read",
+      "genre": "nonfiction",
+      "again": false,
+      "look_for": null,
+      "paragraphs": [
+        {
+          "n": 1,
+          "text": "On a cold January morning, a lake in Minnesota can look completely still. A thick lid of ice covers the surface. Yet beneath that frozen lid, the lake is full of life. Fish swim slowly through the dark water, and turtles rest in the mud at the bottom. They survive because of an unusual property of water and because each animal has its own way of coping with the cold.",
+          "cont": false
+        },
+        {
+          "n": 2,
+          "text": "Most substances shrink and grow denser as they cool. Water behaves differently. As it cools, it becomes denser only until it reaches about 39 degrees Fahrenheit. Below that temperature, it begins to expand again, and when it freezes, it becomes lighter still, which is why ice floats. As a result, the coldest water and the ice stay at the top, while slightly warmer, heavier water sinks to the bottom. A frozen lake is really a layered lake.",
+          "cont": false
+        },
+        {
+          "n": 3,
+          "text": "The ice also works like a blanket. It keeps the warmer water below from losing its heat to the freezing air. If ice sank instead of floating, many lakes would freeze from the bottom up.",
+          "cont": false
+        },
+        {
+          "n": 4,
+          "text": "Within this protected space, animals have developed remarkable strategies. Many fish slow their bodies down. Their hearts beat more slowly, and they need far less food and oxygen than they do in summer. Painted turtles go even further. A turtle can stay buried in the mud for months without coming up to breathe, absorbing a little oxygen through its skin.",
+          "cont": false
+        },
+        {
+          "n": 5,
+          "text": "Winter under the ice is not easy, though. When deep snow piles on top of the ice, it blocks sunlight, and underwater plants stop producing oxygen. In a long winter, the oxygen in a shallow lake can run low.",
+          "cont": false
+        }
+      ],
+      "turn": true
+    }
+  ],
+  "answer_key": null,
+  "new_words": [],
+  "review_words": []
+}

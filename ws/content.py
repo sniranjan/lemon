@@ -154,3 +154,5 @@ def clear_caches() -> None:
               line_stories, story_problems, grammar, passages, level_passages, wordparts, math_frames,
               figurative):
         f.cache_clear()
+    from .roots import _load as roots
+    roots.cache_clear()

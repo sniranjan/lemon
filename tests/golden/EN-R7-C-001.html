@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Penguins · Reading · page 101</title>
+<style>
+@font-face { font-family: "Andika"; font-weight: 400; src: url("../../../../../assets/fonts/Andika-Regular.ttf"); }
+@font-face { font-family: "Andika"; font-weight: 700; src: url("../../../../../assets/fonts/Andika-Bold.ttf"); }
+@page { size: letter; margin: 0; }
+:root {
+  --accent: #0B7A75;
+  --tint: #E6F4F3;
+  --ink: #1d1d1f;
+  --muted: #6b6b70;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; }
+/* no ligatures: early readers should see every letter (fi, fl, ff) separately */
+body { font-family: "Andika", sans-serif; font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { width: 816px; height: 1056px; padding: 48px 56px 40px; display: flex; flex-direction: column; overflow: hidden; }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+        padding-bottom: 14px; border-bottom: 3px solid var(--accent); }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; }
+.title-row { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+h1 { font-size: 34px; font-weight: 700; margin: 0; line-height: 1.15; }
+.pill { font-size: 16px; font-weight: 700; color: var(--accent); background: var(--tint);
+        border: 2px solid var(--accent); border-radius: 999px; padding: 3px 14px; white-space: nowrap; }
+.fields { font-size: 15px; color: var(--muted); display: grid; gap: 9px; text-align: left; }
+.fields span { display: inline-block; width: 44px; }
+.fields i { display: inline-block; width: 128px; border-bottom: 1.5px solid #9a9aa0; height: 1em; vertical-align: baseline; }
+
+/* parent tip */
+.tip { margin-top: 18px; background: var(--tint); border: 2px solid var(--accent); border-radius: 14px; padding: 12px 18px; font-size: 17px; line-height: 1.4; }
+.tip b { color: var(--accent); }
+
+/* the body fills whatever height the header, tip, strip and footer leave */
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: 20px; }
+
+/* cards */
+.card { border: 3px solid var(--ink); border-radius: 28px; background: #fff; overflow: hidden; }
+
+/* "Say it again" strip */
+.strip { margin-top: 18px; border: 3px dashed var(--accent); border-radius: 22px; padding: 10px 24px;
+         display: flex; align-items: center; gap: 28px; overflow: hidden; }
+.strip-label { font-size: 17px; font-weight: 700; color: var(--accent); width: 96px; line-height: 1.2; }
+.strip-item { display: flex; align-items: center; gap: 14px; flex: 1; }
+.strip-item img { width: 84px; height: 84px; }
+.strip-item .word { font-size: 36px; font-weight: 700; }
+
+/* count pictures (see _macros.html.j2) */
+.objects { display: flex; flex-direction: column; gap: calc(var(--obj) * 0.12); }
+.obj-row { display: flex; gap: calc(var(--obj) * 0.12); }
+.obj-row img { width: var(--obj); height: var(--obj); }
+
+.foot { margin-top: 14px; font-size: 12px; color: #8a8a90; text-align: right; }
+h1 { font-size: 28px; }
+.wr { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
+.cards { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+.chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+.chip { border: 3px solid var(--ink); border-radius: 16px; background: var(--tint); padding: 2px 14px; font-size: 20px; line-height: 1.35;
+        display: flex; align-items: baseline; gap: 8px; }
+.chip .root { font-size: 24px; font-weight: 700; color: var(--accent); }
+.chip .origin { margin-left: auto; font-style: italic; color: #3a3a40; }
+.rc { border: 3px solid var(--ink); border-radius: 22px; padding: 8px 18px 10px; background: var(--tint); }
+.rc .top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.rc .root { font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.rc .origin { font-size: 20px; font-style: italic; color: #3a3a40; }
+.rc .means { font-size: 20px; line-height: 1.25; }
+.rc .eg { font-size: 20px; color: #3a3a40; }
+.task { flex: none; border: 3px solid var(--ink); border-radius: 22px; padding: 6px 22px 10px; }
+.task h2 { font-size: 20px; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+.num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff;
+       display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+.match { display: grid; grid-template-columns: 1fr 1.6fr; column-gap: 26px; row-gap: 4px; font-size: 20px; }
+.match .w { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.match .box { flex: none; width: 36px; height: 32px; border: 2px solid var(--ink); border-radius: 8px; }
+.match .m { display: flex; align-items: center; gap: 10px; line-height: 1.2; }
+.letter { flex: none; width: 28px; height: 28px; border: 2px solid var(--ink); border-radius: 50%;
+          display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; }
+.bank { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 6px; }
+.bank span { font-size: 20px; border: 2px solid var(--accent); border-radius: 999px; padding: 0 14px; font-weight: 700; }
+.sent { font-size: 20px; line-height: 1.6; }
+.gap { display: inline-block; width: 150px; border-bottom: 2px solid var(--ink); }
+.ask { font-size: 20px; line-height: 1.3; }
+.ask b { color: var(--accent); }
+.line { height: 36px; border-bottom: 2px solid #8a8a90; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head" data-audience="parent">
+    <div>
+      <div class="eyebrow">Penguins · Reading</div>
+      <div class="title-row"><h1>Roots: bene and chron</h1><span class="pill">Penguins · 101</span></div>
+    </div>
+    <div class="fields">
+      <div><span>Name</span><i></i></div>
+      <div><span>Date</span><i></i></div>
+      <div><span>Time</span><i></i></div>
+    </div>
+  </header>
+  <div class="tip" data-audience="parent"><b>For grown-ups:</b> Split each word into root and rest. What do they add up to?</div>
+  <main class="body">
+    <div class="wr">
+      <div class="cards">
+        <div class="rc"><div class="top"><span class="root">bene</span><span class="origin">Latin</span></div>
+          <div class="means">means <b>good, well</b></div><div class="eg">as in benefit</div></div>
+        <div class="rc"><div class="top"><span class="root">chron</span><span class="origin">Greek</span></div>
+          <div class="means">means <b>time</b></div><div class="eg">as in chronological</div></div>
+      </div>
+      <section class="task">
+        <h2><span class="num">1</span>Write the letter of each word's meaning.</h2>
+        <div class="match">
+          <div class="w"><span class="box"></span>beneficial</div><div class="m"><span class="letter">A</span>a person who gives money or help</div>
+          <div class="w"><span class="box"></span>benefactor</div><div class="m"><span class="letter">B</span>helpful or good for you</div>
+          <div class="w"><span class="box"></span>synchronize</div><div class="m"><span class="letter">C</span>a very exact clock</div>
+          <div class="w"><span class="box"></span>chronometer</div><div class="m"><span class="letter">D</span>make things happen at the same time</div>
+        </div>
+      </section>
+      <section class="task">
+        <h2><span class="num">2</span>Write a word from the box in each blank.</h2>
+        <div class="bank"><span>benefactor</span><span>beneficial</span><span>chronometer</span><span>synchronize</span></div>
+        <div class="sent">a. Sleep is <span class="gap"></span> for growing bodies and busy minds.</div>
+        <div class="sent">b. The swimmers <span class="gap"></span> their kicks so the team moves as one.</div>
+      </section>
+      <section class="task">
+        <h2><span class="num">3</span>Use the root to explain the word.</h2>
+        <div class="ex">
+          <div class="ask">What does <b>beneficiary</b> mean? How does the root <b>bene</b> (“good, well”) help?</div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="foot" data-audience="parent">Penguins · Reading · page 101</footer>
+</div>
+</body>
+</html>

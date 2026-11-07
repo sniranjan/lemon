@@ -1,0 +1,104 @@
+{
+  "id": "EN-R7-C-021",
+  "subject": "english",
+  "level": "R7",
+  "section": "C",
+  "part": 2,
+  "sheet_type": "word_roots",
+  "page_number": 121,
+  "variant": 1,
+  "seed": 14860153536695452073,
+  "title": "Root Review",
+  "parent_tip": "Say each root and its meaning aloud. Hunt for it in each word.",
+  "items": [
+    {
+      "kind": "roots",
+      "roots": [
+        {
+          "root": "bene",
+          "origin": "Latin",
+          "meaning": "good, well",
+          "example": null
+        },
+        {
+          "root": "chron",
+          "origin": "Greek",
+          "meaning": "time",
+          "example": null
+        },
+        {
+          "root": "dict",
+          "origin": "Latin",
+          "meaning": "say, speak",
+          "example": null
+        },
+        {
+          "root": "path",
+          "origin": "Greek",
+          "meaning": "feeling",
+          "example": null
+        }
+      ],
+      "review": true
+    },
+    {
+      "kind": "match",
+      "n": 1,
+      "words": [
+        "benevolent",
+        "chronicle",
+        "valedictorian",
+        "telepathy"
+      ],
+      "meanings": [
+        "a record of events in time order",
+        "kind and wanting to do good",
+        "sharing thoughts without any words",
+        "top student, gives the farewell speech"
+      ],
+      "answers": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ]
+    },
+    {
+      "kind": "fill",
+      "n": 2,
+      "bank": [
+        "benevolent",
+        "chronicle",
+        "telepathy",
+        "valedictorian"
+      ],
+      "sentences": [
+        {
+          "before": "The ",
+          "after": " neighbor shoveled every driveway on the block.",
+          "answer": "benevolent"
+        },
+        {
+          "before": "The twins joked that they could talk by ",
+          "after": ", without words.",
+          "answer": "telepathy"
+        }
+      ]
+    },
+    {
+      "kind": "explain",
+      "n": 3,
+      "root": "chron",
+      "meaning": "time",
+      "explain_word": "anachronism",
+      "lines": 2
+    }
+  ],
+  "answer_key": [
+    "1. benevolent B · chronicle A · valedictorian D · telepathy C",
+    "2. benevolent · telepathy",
+    "3. Sample: An anachronism is something placed in the wrong time, like a cell phone in a story about knights, since chron means time. Full answer: uses chron (time) to explain something that doesn't belong in its time."
+  ],
+  "new_words": [],
+  "review_words": []
+}

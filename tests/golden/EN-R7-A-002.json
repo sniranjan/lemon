@@ -1,0 +1,76 @@
+{
+  "id": "EN-R7-A-002",
+  "subject": "english",
+  "level": "R7",
+  "section": "A",
+  "part": null,
+  "sheet_type": "passage_spread",
+  "page_number": 2,
+  "variant": 1,
+  "seed": 13041636775031690110,
+  "title": "Life Under the Ice",
+  "parent_tip": "Trace one idea: which paragraphs add to it, and how?",
+  "items": [
+    {
+      "kind": "questions",
+      "passage": "a01-lake-ice",
+      "set": 0,
+      "side": "questions",
+      "genre": "nonfiction",
+      "page_before": 1,
+      "continued": [
+        {
+          "n": null,
+          "text": "Even so, the lake's layers and its animals' patient habits usually carry them through until the ice melts in spring.",
+          "cont": true
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "n": 1,
+      "ask": "Which two central ideas does the article develop?",
+      "choices": [
+        "Water's odd behavior protects lakes, and animals slow down to survive.",
+        "Lakes freeze solid every winter, and animals leave until spring.",
+        "Minnesota has long winters, and snow is heavier than ice.",
+        "Turtles are better swimmers than fish, and frogs sleep all year."
+      ],
+      "answer": "A",
+      "columns": 1
+    },
+    {
+      "kind": "quote",
+      "n": 2,
+      "ask": "Which sentence develops the idea about animals coping?",
+      "choices": [
+        "Most substances shrink and grow denser as they cool.",
+        "Many fish slow their bodies down.",
+        "Water behaves differently.",
+        "The ice also works like a blanket."
+      ],
+      "answer": "B",
+      "columns": 1
+    },
+    {
+      "kind": "write",
+      "n": 3,
+      "ask": "How do paragraphs 2 and 3 build the idea about water?",
+      "lines": 2
+    },
+    {
+      "kind": "paragraph",
+      "n": 4,
+      "ask": "Write an objective summary in 3–4 sentences. No opinions.",
+      "lines": 5
+    }
+  ],
+  "answer_key": [
+    "1. A (Water's odd behavior protects lakes, and animals slow down to survive.)",
+    "2. B (Many fish slow their bodies down.)",
+    "3. Sample: Paragraph 2 explains that ice floats, so the warmer water sinks to the bottom; paragraph 3 adds that the ice works like a blanket that keeps that heat in. Full answer: names ice floating or the layers (paragraph 2) and the ice as a blanket (paragraph 3).",
+    "4. Sample: A frozen lake stays alive underneath because water is \"denser only until it reaches about 39 degrees Fahrenheit,\" so ice floats and warmer water sinks. The floating ice also keeps heat in like a blanket. Fish and turtles survive by slowing their bodies down, and turtles take in oxygen through their skin. Deep snow can make oxygen run low, but most animals last until spring. Full answer: covers both central ideas (water's layers and the animals' strategies) with key details in order; no opinions."
+  ],
+  "new_words": [],
+  "review_words": []
+}

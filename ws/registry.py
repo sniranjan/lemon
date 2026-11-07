@@ -51,6 +51,8 @@ CATALOGUE: frozenset[str] = frozenset({
     "long_multiplication", "division_house", "factor_pairs", "fraction_bars",
     # Owls Reading (R4): long reads on one page and their questions on the next, context clues, summaries
     "long_read_page", "look_back_questions", "word_detective", "big_idea_summary",
+    # Penguins Reading (R7): Greek and Latin roots (passages, poems and paired texts extend passage_spread)
+    "word_roots",
     "power_root", "sci_notation", "pythagorean",   # Lions math (M8; equations and graphs are modes of equation_solve, coordinate_grid)
 })
 
