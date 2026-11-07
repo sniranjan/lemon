@@ -7,7 +7,7 @@ preview_pages: [5, 45, 95, 155]
 aims:
   - Spell familiar words from picture clues, then in little crosswords
   - Know naming words, doing words and describing words, and use the right kind in a sentence
-  - Read a short passage (40–60 words) aloud in about a minute, twice, and answer who/what/where/when/why/how questions
+  - Read a short grade-2 passage (50–70 words) aloud in about a minute, twice, and answer who/what/where/when/why/how questions
   - "Add 40 new words (naming, doing and describing words), each seen at least 3 times"
 pages: 200
 daily_pages: 5
@@ -59,7 +59,8 @@ sections:
       - { part: 9, pages: [141, 150], name: Fill in any kind,          rules: { word_kinds: fill, target: mixed, fill_sentences: 4 } }
 
   # Read Aloud: content/passages/english.yaml, in file order. Each passage is read on two pages in a row
-  # (different questions), so the child reads it twice (RF.2.4b). Passages grow from ~45 to ~60 words.
+  # (different questions), so the child reads it twice (RF.2.4b). Passages grow from ~55 to ~70 words and read
+  # at grade 2 (Flesch-Kincaid 2.0–3.5, ws/readability.py; read_aloud verify enforces `fk_grade`).
   - code: C
     name: Oral Reading
     public_name: Read Aloud
@@ -71,9 +72,10 @@ sections:
       new_words_per_sheet: 0
       passage_reads: 2
       choices: 3
+      fk_grade: [2.0, 3.5]
     parts:
-      - { part: 1, pages: [151, 160], rules: { passage_words: [40, 48], max_sentence_words: 10, questions_per_sheet: 2 } }
-      - { part: 2, pages: [161, 170], rules: { passage_words: [44, 52], max_sentence_words: 12, questions_per_sheet: 2 } }
-      - { part: 3, pages: [171, 180], rules: { passage_words: [48, 56], max_sentence_words: 13, questions_per_sheet: 3 } }
-      - { part: 4, pages: [181, 190], rules: { passage_words: [52, 60], max_sentence_words: 16, questions_per_sheet: 3 } }
-      - { part: 5, pages: [191, 200], rules: { passage_words: [52, 60], max_sentence_words: 16, questions_per_sheet: 3 } }
+      - { part: 1, pages: [151, 160], rules: { passage_words: [50, 64], max_sentence_words: 15, questions_per_sheet: 2 } }
+      - { part: 2, pages: [161, 170], rules: { passage_words: [50, 64], max_sentence_words: 15, questions_per_sheet: 2 } }
+      - { part: 3, pages: [171, 180], rules: { passage_words: [55, 68], max_sentence_words: 16, questions_per_sheet: 3 } }
+      - { part: 4, pages: [181, 190], rules: { passage_words: [58, 70], max_sentence_words: 17, questions_per_sheet: 3 } }
+      - { part: 5, pages: [191, 200], rules: { passage_words: [58, 70], max_sentence_words: 17, questions_per_sheet: 3 } }

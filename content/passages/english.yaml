@@ -1,5 +1,7 @@
 # Cubs Reading (2A-C, Read Aloud): short original passages read aloud in about a minute, with questions.
 # Approved by the orchestrator under user delegation, 2026-11-06 (syllabus/drafts/2A-passages.md).
+# Revised to grade-2 readability (Flesch-Kincaid 2.0–3.5, ws/readability.py), approved by the orchestrator
+# under the user's delegation, 2026-11-06.
 #
 # Each passage is read on two pages in a row (RF.2.4b: successive readings), with different questions on each:
 # the first page asks questions[0:n], the second questions[n:2n] (n = the part's `questions_per_sheet`).
@@ -10,34 +12,36 @@
 #   one must appear in the text (any of word, words, worded, wording forms).
 # - questions: who / what / where / when / why / how. `a` is the answer, word for word from the passage;
 #   `wrong` are two clearly wrong choices. The child circles one of the three.
-# Verify checks word counts and sentence lengths against the part's rules, that every answer is in the
-# passage, that the listed words appear, and the banned-word list; tests/test_sentence_sense.py scans every
-# sentence. Names are everyday and brand-free; nothing scary (a fox is only "near").
+# Verify checks word counts, sentence lengths and the Flesch-Kincaid grade (`fk_grade`) against the part's
+# rules, that every answer is in the passage, that the listed words appear, and the banned-word list;
+# tests/test_sentence_sense.py scans every sentence. Grade-2 text: longer sentences joined with because,
+# when, after, so; some two- and three-syllable words; a little dialogue; a beginning, middle and end.
+# Names are everyday and brand-free; nothing scary (a fox is only "near").
 
 passages:
-  # ---- part 1: 40–48 words
+  # ---- part 1: 45–54 words
   - id: robin
     title: The Robin
     picture: robin
     words: [robin, quiet, listen, worm, nest]
     text: >-
-      Mia sees a robin in the tree. The robin has a red chest. It sings a happy song. Mia sits very
-      still and quiet. She wants to listen. The robin flies down to the grass. It finds a worm to eat.
-      Then it flies back to its nest.
+      Mia sees a robin in the maple tree. It has a red chest, and it sings a cheerful song. Mia
+      sits very still and quiet because she wants to listen. After a few minutes, the robin flies down to the
+      grass. It pulls a long worm out of the dirt. Then it carries the worm back to its nest.
     questions:
       - { q: "Who sees the robin?", a: "Mia", wrong: ["Dad", "the cat"] }
-      - { q: "What does the robin find to eat?", a: "a worm", wrong: ["a seed", "a cookie"] }
-      - { q: "Where does the robin fly back to?", a: "its nest", wrong: ["the house", "the pond"] }
-      - { q: "How does Mia sit?", a: "still and quiet", wrong: ["fast and loud", "on the swing"] }
+      - { q: "What does the robin pull out of the dirt?", a: "a long worm", wrong: ["a seed", "a cookie"] }
+      - { q: "Where does the robin carry the worm?", a: "back to its nest", wrong: ["into the house", "to the pond"] }
+      - { q: "Why does Mia sit still and quiet?", a: "she wants to listen", wrong: ["she is sleepy", "she is cold"] }
 
   - id: bake-day
     title: Bake Day
     picture: cookie
     words: [bake, stir, soft, sticky, hungry, cookie]
     text: >-
-      Leo and Grandma bake cookies. Leo pours the flour in a big bowl. Grandma adds two eggs. Leo likes
-      to stir. The dough is soft and sticky. They put the cookies in the hot oven. Soon the kitchen
-      smells sweet. Leo is hungry!
+      One morning, Leo and Grandma bake cookies together. Leo pours the flour into a big mixing bowl, and
+      Grandma adds two eggs. Leo likes to stir the dough with a wooden spoon. It feels soft and sticky.
+      After they put the cookies in the hot oven, the kitchen smells sweet. Leo says, "I am so hungry!"
     questions:
       - { q: "Who bakes with Leo?", a: "Grandma", wrong: ["Mom", "his sister"] }
       - { q: "What does Grandma add?", a: "two eggs", wrong: ["some milk", "a banana"] }
@@ -49,12 +53,12 @@ passages:
     picture: boots
     words: [muddy, scrub, boots, puddle]
     text: >-
-      It rained all night. In the morning, Sam puts on his boots. He runs to the big puddle and jumps in.
-      Splash! His boots are muddy. His pants are muddy too. Sam laughs. Mom laughs too. Then they go
-      inside to scrub the boots clean.
+      It rained all night, so there is a big puddle in the yard. Sam puts on his rubber
+      boots and hurries outside. He jumps into the puddle with a big splash! Now his
+      boots are muddy, and his pants are muddy too. Sam laughs, and Mom laughs with him. Afterward, they go inside together to scrub the boots clean.
     questions:
       - { q: "When did it rain?", a: "all night", wrong: ["at lunch", "after school"] }
-      - { q: "Where does Sam jump?", a: "the big puddle", wrong: ["the bathtub", "the bed"] }
+      - { q: "Where is the big puddle?", a: "in the yard", wrong: ["in the bathtub", "in the kitchen"] }
       - { q: "Who laughs with Sam?", a: "Mom", wrong: ["Dad", "Grandpa"] }
       - { q: "What do they scrub?", a: "the boots", wrong: ["the dog", "the car"] }
 
@@ -63,40 +67,38 @@ passages:
     picture: kitten
     words: [tiny, ribbon, wiggle, sleepy, soft, gentle, kitten]
     text: >-
-      Ana has a tiny kitten. The kitten is named Pip. Pip likes to play with a ribbon. Ana wiggles the
-      ribbon, and Pip jumps. After a while, Pip is sleepy. She curls up on a soft pillow. Ana is gentle.
-      She pets Pip and lets her nap.
+      Ana has a tiny kitten named Pip. Pip loves to play with a long purple ribbon. When Ana wiggles the
+      ribbon across the floor, Pip pounces on it. After a while, Pip gets sleepy, so she curls up on a
+      soft pillow. Ana is always gentle with her little kitten. She pets Pip and lets her take a nap.
     questions:
       - { q: "What is the kitten's name?", a: "Pip", wrong: ["Ana", "Max"] }
-      - { q: "What does Pip play with?", a: "a ribbon", wrong: ["a ball", "a sock"] }
+      - { q: "What does Pip play with?", a: "a long purple ribbon", wrong: ["a red ball", "an old sock"] }
       - { q: "Where does Pip curl up?", a: "on a soft pillow", wrong: ["in a box", "on the rug"] }
-      - { q: "Why does Ana let Pip nap?", a: "Pip is sleepy", wrong: ["Pip is hungry", "Pip is muddy"] }
+      - { q: "Why does Ana let Pip nap?", a: "Pip gets sleepy", wrong: ["Pip is hungry", "Pip is muddy"] }
 
   - id: snow-day
     title: Snow Day
     picture: snowman
     words: [pebble, snowman, mitten, carrot]
     text: >-
-      Snow falls all day. Kai and his sister put on mittens and coats. They roll a big ball of snow.
-      Then they roll a little one. They stack them up. Kai adds a carrot nose and two pebbles for eyes.
-      Now they have a snowman!
+      Snow falls all afternoon, and soon the whole yard is covered in white. Kai and his sister put on warm coats and mittens.
+      First they roll a big ball of snow, and then they roll a smaller one. They carefully lift the small ball on top. Kai adds a carrot for the nose and two pebbles for eyes. Now they have a snowman!
     questions:
       - { q: "Who plays with Kai?", a: "his sister", wrong: ["his dad", "his friend"] }
-      - { q: "What do they put on?", a: "mittens and coats", wrong: ["shorts and hats", "boots and helmets"] }
+      - { q: "What do they put on?", a: "warm coats and mittens", wrong: ["shorts and hats", "boots and helmets"] }
       - { q: "What is the snowman's nose?", a: "a carrot", wrong: ["a pebble", "a stick"] }
       - { q: "What do Kai and his sister make?", a: "a snowman", wrong: ["a cake", "a tent"] }
 
-  # ---- part 2: 44–52 words
+  # ---- part 2: 48–58 words
   - id: pony-ride
     title: The Pony Ride
     picture: pony
     words: [pony, helmet, munch, carrot]
     text: >-
-      Zoe goes to the farm with Grandpa. She sees cows, pigs, and a brown pony. The farmer helps Zoe put
-      on a helmet. Then Zoe sits on the pony. It walks slowly around the barn. Zoe holds on tight and
-      smiles. She gives the pony a carrot to munch.
+      Zoe visits the farm with Grandpa on a sunny morning. She sees cows, pigs, and a gentle brown pony.
+      Before Zoe can ride, the farmer helps her put on a helmet. Then the pony walks slowly around the barn. Zoe holds on tight. When the ride is over, she gives the pony a carrot to munch.
     questions:
-      - { q: "Who goes to the farm with Zoe?", a: "Grandpa", wrong: ["Mom", "her brother"] }
+      - { q: "Who visits the farm with Zoe?", a: "Grandpa", wrong: ["Mom", "her brother"] }
       - { q: "What does Zoe put on?", a: "a helmet", wrong: ["a coat", "a crown"] }
       - { q: "Where does the pony walk?", a: "around the barn", wrong: ["up the hill", "to the pond"] }
       - { q: "What does Zoe give the pony?", a: "a carrot", wrong: ["an apple", "a sandwich"] }
@@ -106,27 +108,27 @@ passages:
     picture: sandwich
     words: [sandwich, napkin, carry, munch, tiny, skip, basket]
     text: >-
-      Mom packs a basket for a picnic. She puts in sandwiches, grapes, and napkins. Ben carries the
-      blanket to the park. They sit under a big shady tree. Ben munches his sandwich. Some ants come to
-      look for food. Ben gives them a tiny crumb. Then Ben and Mom skip home.
+      Mom packs a basket for a picnic with sandwiches, grapes, and napkins. Ben carries the blanket all
+      the way to the park. They spread it out under a big shady tree. While Ben munches his sandwich,
+      some ants come looking for food. Ben drops a tiny crumb for them to share. After lunch, Ben and Mom
+      skip home together.
     questions:
       - { q: "What does Mom pack?", a: "a basket", wrong: ["a box", "a bag"] }
       - { q: "Who carries the blanket?", a: "Ben", wrong: ["Mom", "Dad"] }
-      - { q: "Where do they sit?", a: "under a big shady tree", wrong: ["by the pond", "on a bench"] }
-      - { q: "What does Ben give the ants?", a: "a tiny crumb", wrong: ["a grape", "a napkin"] }
+      - { q: "Where do they spread the blanket?", a: "under a big shady tree", wrong: ["by the pond", "on a bench"] }
+      - { q: "What does Ben drop for the ants?", a: "a tiny crumb", wrong: ["a grape", "a napkin"] }
 
   - id: peanut
     title: Peanut the Hamster
     picture: hamster
     words: [hamster, soft, fluffy, noisy, sleepy]
     text: >-
-      Rosa has a little hamster named Peanut. Peanut has soft, fluffy fur. At night, he runs on his
-      wheel. Squeak, squeak! It is noisy. In the morning, Peanut is sleepy. He hides in his bed of paper
-      and naps all day. Rosa gives him seeds and fresh water.
+      Rosa has a pet hamster named Peanut. He has soft, fluffy fur. Every night, Peanut runs and runs on
+      his wheel. The wheel squeaks and gets noisy, but Rosa doesn't mind. In the morning, Peanut is sleepy, so he naps in his bed of paper. Rosa gives him seeds and fresh water each day.
     questions:
       - { q: "What is the hamster's name?", a: "Peanut", wrong: ["Rosa", "Pip"] }
-      - { q: "When does Peanut run on his wheel?", a: "at night", wrong: ["at lunch", "in the bath"] }
-      - { q: "Where does Peanut hide?", a: "in his bed of paper", wrong: ["under the sofa", "in a shoe"] }
+      - { q: "When does Peanut run on his wheel?", a: "Every night", wrong: ["At lunch", "In the bath"] }
+      - { q: "Where does Peanut nap?", a: "in his bed of paper", wrong: ["under the sofa", "in a shoe"] }
       - { q: "What does Rosa give Peanut?", a: "seeds and fresh water", wrong: ["milk and cookies", "cake and juice"] }
 
   - id: fort
@@ -134,44 +136,46 @@ passages:
     picture: blanket
     words: [quiet, giggle, blanket, pillow, teddy]
     text: >-
-      It is raining, so Omar and Dad stay inside. They build a fort with chairs and blankets. Omar brings
-      a pillow, a lamp, and his teddy. Inside the fort, it is dark and quiet. Dad reads a book with a
-      funny dog in it. Omar giggles. This is the best rainy day!
+      It is raining, so Omar and Dad stay inside and build a fort. They use four chairs and two big
+      blankets. Omar brings a pillow, a small lamp, and his teddy bear. Inside the fort, it is dark and
+      quiet. Dad reads a story about a funny dog who wears a hat. Omar giggles because the dog looks so
+      silly.
     questions:
       - { q: "Why do Omar and Dad stay inside?", a: "It is raining", wrong: ["It is hot", "It is late"] }
       - { q: "Who builds the fort with Omar?", a: "Dad", wrong: ["Grandma", "his sister"] }
-      - { q: "What do they build the fort with?", a: "chairs and blankets", wrong: ["sticks and leaves", "sand and shells"] }
-      - { q: "What does Omar do when Dad reads?", a: "giggles", wrong: ["sleeps", "sings"] }
+      - { q: "What do they use to build the fort?", a: "four chairs and two big blankets", wrong: ["sticks and leaves", "sand and shells"] }
+      - { q: "Why does Omar giggle?", a: "the dog looks so silly", wrong: ["the fort falls down", "the cat jumps in"] }
 
   - id: tulip
     title: The Red Tulip
     picture: tulip
     words: [tulip, sniff]
     text: >-
-      In the fall, Nia helps Mom dig a hole in the garden. They put a tulip bulb inside and cover it
-      with dirt. All winter, the bulb sleeps under the snow. In the spring, a green stem pops up. Then a
-      red tulip opens. Nia gently sniffs it.
+      In the fall, Nia helps Mom dig a little hole in the garden. They put a tulip bulb inside and cover
+      it with dirt. All winter long, the bulb rests under the cold snow. When spring comes, a green stem
+      pops up out of the ground. A few weeks later, a red tulip opens, and Nia gently sniffs it.
     questions:
       - { q: "When do they put the bulb in the garden?", a: "In the fall", wrong: ["In the summer", "At night"] }
       - { q: "Where do they dig a hole?", a: "in the garden", wrong: ["in the sand", "by the door"] }
-      - { q: "What pops up in the spring?", a: "a green stem", wrong: ["a red ball", "a little frog"] }
+      - { q: "What pops up when spring comes?", a: "a green stem", wrong: ["a red ball", "a little frog"] }
       - { q: "What color is the tulip?", a: "red", wrong: ["blue", "black"] }
 
-  # ---- part 3: 48–56 words
+  # ---- part 3: 52–62 words
   - id: lost-button
     title: The Lost Button
     picture: button
     words: [button, shiny, sniff]
     text: >-
-      Theo's coat has four big buttons. One day, a button falls off at school. Theo looks under his desk.
-      He looks by the door. No button! At home, his dog Max sniffs his backpack. Max finds the shiny
-      button in a pocket. Dad sews it back on. Theo hugs Max.
+      Theo's winter coat has four big buttons. One day at school, a button falls off, but Theo doesn't
+      notice until recess. He looks under his desk and then by the classroom door. The button is gone!
+      When he gets home, his dog Max sniffs his backpack. Max finds the shiny button hiding in a pocket.
+      Dad sews it back on, and Theo gives Max a hug.
     questions:
       - { q: "How many buttons does Theo's coat have?", a: "four", wrong: ["two", "six"] }
       - { q: "Where does the button fall off?", a: "at school", wrong: ["at the park", "at the farm"] }
       - { q: "Where does Theo look first?", a: "under his desk", wrong: ["in the car", "under his bed"] }
       - { q: "Who finds the button?", a: "Max", wrong: ["Theo", "Mom"] }
-      - { q: "Where is the button?", a: "in a pocket", wrong: ["in a shoe", "in the sink"] }
+      - { q: "Where is the button hiding?", a: "in a pocket", wrong: ["in a shoe", "in the sink"] }
       - { q: "Who sews the button back on?", a: "Dad", wrong: ["Theo", "Grandma"] }
 
   - id: drawing
@@ -179,9 +183,10 @@ passages:
     picture: pencil
     words: [pencil, robin, rabbit, magnet]
     text: >-
-      Lily loves to draw. She takes her pencil and a big piece of paper to the porch. First she draws the
-      sun. Next she draws a tall tree with a robin in it. Then she draws her rabbit, Hops, eating grass.
-      Lily shows her picture to Grandpa. He hangs it on the fridge with a magnet.
+      Lily loves to draw, so she takes her pencil and some paper to the porch. First she
+      draws the sun. Next she draws a tall tree with a robin sitting in it. Then she draws her pet rabbit,
+      Hops, eating grass. When she is finished, Lily shows her picture to Grandpa. He hangs it on the
+      fridge with a magnet.
     questions:
       - { q: "What does Lily draw first?", a: "the sun", wrong: ["a tree", "a robin"] }
       - { q: "What is in the tree?", a: "a robin", wrong: ["a cat", "a kite"] }
@@ -195,15 +200,16 @@ passages:
     picture: cake
     words: [bake, candle, noisy, sticky, napkin]
     text: >-
-      Today Jack is six. Mom bakes a cake with blue frosting. Dad puts six candles on top. Jack's friends
-      sing a noisy, happy song. Jack makes a wish and blows out every candle. Everyone claps. Then they
-      eat the cake. Jack's hands are sticky, so he wipes them with a napkin.
+      Today Jack turns six. Mom bakes a chocolate cake with blue frosting, and Dad puts six candles on top.
+      When Jack's friends arrive, they sing a noisy, happy song. Jack closes his eyes, makes a wish, and
+      blows out every candle. Everyone claps and cheers. After they eat the cake, Jack's hands are
+      sticky, so he wipes them with a napkin.
     questions:
       - { q: "How old is Jack today?", a: "six", wrong: ["five", "ten"] }
       - { q: "Who bakes the cake?", a: "Mom", wrong: ["Dad", "Jack"] }
       - { q: "What color is the frosting?", a: "blue", wrong: ["pink", "green"] }
       - { q: "Who puts the candles on top?", a: "Dad", wrong: ["Mom", "Grandpa"] }
-      - { q: "What does Jack do before he blows out the candles?", a: "makes a wish", wrong: ["eats the cake", "takes a nap"] }
+      - { q: "What does Jack make?", a: "a wish", wrong: ["a kite", "a hat"] }
       - { q: "Why does Jack use a napkin?", a: "hands are sticky", wrong: ["hands are cold", "hands are muddy"] }
 
   - id: leaves
@@ -211,14 +217,15 @@ passages:
     picture: leaf
     words: [giggle, leaf]
     text: >-
-      In the fall, the leaves turn red, yellow, and orange. They float down from the trees. Ana and her
-      brother help Dad rake the yard. They make a huge pile of leaves. Then they take turns jumping in it.
-      Crunch! The leaves fly up. Ana giggles. Dad sighs and smiles. Now they have to rake again!
+      In the fall, the leaves on the trees turn red, yellow, and orange. One by one, they float down to
+      the ground. Ana and her brother help Dad rake the yard into a huge pile of leaves. Then they take
+      turns jumping into the middle with a loud crunch. The leaves fly up everywhere, and Ana giggles. Dad
+      smiles, because now they have to rake again!
     questions:
       - { q: "When do the leaves turn red?", a: "In the fall", wrong: ["In the spring", "At night"] }
       - { q: "Who helps Dad rake the yard?", a: "Ana and her brother", wrong: ["Mom and Grandma", "the dog"] }
       - { q: "What do they make?", a: "a huge pile of leaves", wrong: ["a snowman", "a fort"] }
-      - { q: "What sound do the leaves make?", a: "Crunch", wrong: ["Splash", "Squeak"] }
+      - { q: "What sound do the leaves make?", a: "crunch", wrong: ["splash", "squeak"] }
       - { q: "What does Ana do when the leaves fly up?", a: "giggles", wrong: ["naps", "cries"] }
       - { q: "Why do they have to rake again?", a: "The leaves fly up", wrong: ["It is raining", "The dog is muddy"] }
 
@@ -227,9 +234,10 @@ passages:
     picture: duck
     words: [quiet, frog, turtle, duck]
     text: >-
-      Max and Grandpa walk to the pond. They sit on a bench and stay very quiet. A mother duck swims by
-      with five fuzzy ducklings. A green frog sits on a lily pad. Plop! It jumps into the water. A turtle
-      sleeps on a warm rock in the sun. Max whispers, "I love the pond."
+      Max and Grandpa walk down the hill to the pond. They sit on a bench and stay very quiet, so
+      they won't bother the animals. A mother duck swims by with five fuzzy ducklings behind her. A green
+      frog sits on a lily pad until it jumps into the water. A turtle sleeps on a warm rock. Max
+      whispers, "I love the pond."
     questions:
       - { q: "Where do Max and Grandpa walk?", a: "to the pond", wrong: ["to the store", "to school"] }
       - { q: "How many ducklings are there?", a: "five", wrong: ["two", "ten"] }
@@ -238,20 +246,20 @@ passages:
       - { q: "Where does the turtle sleep?", a: "on a warm rock", wrong: ["in the mud", "on the bench"] }
       - { q: "What does Max whisper?", a: "I love the pond", wrong: ["I want to go home", "Look at the frog"] }
 
-  # ---- parts 4 and 5: 52–60 words
+  # ---- parts 4 and 5: 55–66 words
   - id: helping-day
     title: Helping Day
     picture: broom
     words: [sweep, scrub, muddy, melon, broom]
     text: >-
-      Saturday is helping day. Kai sweeps the kitchen floor with a little broom. His sister folds the
-      towels. Dad washes the dishes, and Kai dries the spoons. Then they scrub the muddy porch steps. When
-      the work is done, Dad says, "Thank you!" They all sit on the clean porch and share a cold, sweet
-      melon.
+      Saturday is helping day at Kai's house. Kai sweeps the kitchen floor with a little broom while his
+      sister folds the clean towels. After Dad washes the dishes, Kai dries the spoons and puts them away.
+      Then they all scrub the muddy porch steps. When the work is done, Dad says, "Thank
+      you, helpers!" They sit on the porch and share a cold, sweet melon.
     questions:
       - { q: "When is helping day?", a: "Saturday", wrong: ["Monday", "Friday"] }
       - { q: "What does Kai sweep?", a: "the kitchen floor", wrong: ["the porch steps", "his room"] }
-      - { q: "Who folds the towels?", a: "His sister", wrong: ["Dad", "Kai"] }
+      - { q: "Who folds the towels?", a: "his sister", wrong: ["Dad", "Kai"] }
       - { q: "What does Kai dry?", a: "the spoons", wrong: ["the cups", "the dog"] }
       - { q: "What do they scrub?", a: "the muddy porch steps", wrong: ["the car", "the bathtub"] }
       - { q: "What do they share?", a: "a cold, sweet melon", wrong: ["some hot soup", "a big pizza"] }
@@ -261,41 +269,43 @@ passages:
     picture: lizard
     words: [lizard, tiny]
     text: >-
-      Mia is helping Grandma in the garden. Under a flat rock, she sees something move. It is a tiny green
-      lizard! It has a long tail and bright eyes. Mia stays very still. The lizard flicks its tongue. Then
-      it runs up the fence to sit in the warm sun. Grandma says lizards eat bugs in the garden.
+      Mia is helping Grandma pull weeds in the garden. When she lifts a flat rock, she sees something move
+      underneath. It is a tiny green lizard with a long tail and bright eyes! Mia stays very still so she
+      won't frighten it. The lizard flicks its tongue. Then it runs up the fence to sit in the sun. Grandma says lizards are good helpers because they eat bugs.
     questions:
       - { q: "Who is Mia helping?", a: "Grandma", wrong: ["Dad", "her friend"] }
-      - { q: "Where does Mia see something move?", a: "Under a flat rock", wrong: ["In a tree", "By the door"] }
+      - { q: "What does Mia lift?", a: "a flat rock", wrong: ["a big log", "a red pot"] }
       - { q: "What does the lizard have?", a: "a long tail", wrong: ["big wings", "soft fur"] }
       - { q: "What does Mia do?", a: "stays very still", wrong: ["runs away", "jumps up"] }
       - { q: "Where does the lizard go?", a: "up the fence", wrong: ["into a hole", "under the porch"] }
-      - { q: "What do lizards eat?", a: "bugs", wrong: ["carrots", "cookies"] }
+      - { q: "Why are lizards good helpers?", a: "they eat bugs", wrong: ["they dig holes", "they sing songs"] }
 
   - id: kite
     title: Kite Day
     picture: kite
     words: [wiggle, kite, sand]
     text: >-
-      It is a windy day at the beach. Leo and Dad have a kite with a long tail. Dad holds the string. Leo
-      runs fast across the sand. The wind lifts the kite high into the sky. It dips and wiggles like a
-      fish. Leo feels proud. When the wind stops, the kite floats gently down to the sand.
+      It is windy at the beach, so Leo and Dad bring a kite with a long tail. Dad holds the
+      string while Leo runs fast across the sand. Suddenly, the wind lifts the kite high into the sky. It
+      dips and wiggles like a fish swimming in the ocean. Leo feels proud and excited. When the wind stops, the kite
+      floats gently back down to the sand.
     questions:
       - { q: "Where are Leo and Dad?", a: "at the beach", wrong: ["at school", "at the farm"] }
       - { q: "Who holds the string?", a: "Dad", wrong: ["Leo", "Mom"] }
       - { q: "Where does Leo run?", a: "across the sand", wrong: ["up the hill", "into the water"] }
       - { q: "What does the kite wiggle like?", a: "a fish", wrong: ["a bird", "a worm"] }
       - { q: "How does Leo feel?", a: "proud", wrong: ["sleepy", "hungry"] }
-      - { q: "What does the kite do when the wind stops?", a: "floats gently down", wrong: ["flies away", "goes higher"] }
+      - { q: "What does the kite do when the wind stops?", a: "floats gently back down", wrong: ["flies away", "goes higher"] }
 
   - id: bear
     title: The Sleepy Bear
     picture: bear
     words: [munch, fluffy, sleepy, hungry, bear]
     text: >-
-      All summer, the brown bear eats and eats. She munches berries, digs for roots, and catches fish in
-      the river. Her coat grows thick and fluffy. When the cold winter comes, she is very sleepy. She
-      finds a cozy cave and curls up inside. She sleeps all winter long. In the spring, she wakes up hungry!
+      All summer long, the brown bear eats and eats. She munches berries, digs for roots, and catches fish
+      in the river. Because she eats so much, her coat grows thick and fluffy. When the cold winter comes,
+      she feels very sleepy. She finds a cozy cave and curls up inside, and she sleeps all winter long. In
+      the spring, she wakes up hungry again!
     questions:
       - { q: "When does the bear eat and eat?", a: "All summer", wrong: ["All winter", "At night"] }
       - { q: "Where does she catch fish?", a: "in the river", wrong: ["in the sink", "in the snow"] }
@@ -309,11 +319,12 @@ passages:
     picture: bike
     words: [shiny, helmet, bike, bell]
     text: >-
-      Nia has a new bike with a shiny bell. Before she rides, she puts on her helmet and buckles the
-      strap. Mom walks next to her on the path. At first, the bike wobbles. Nia keeps trying. Soon she
-      can pedal all the way to the big oak tree. Ring, ring! Nia rings her bell, and Mom cheers.
+      Nia has a new bike with a shiny silver bell. Before she rides, she puts on her helmet and buckles the
+      strap under her chin. Mom walks next to her along the bumpy path. At first, the bike wobbles back
+      and forth, but Nia keeps trying. Soon she can pedal all the way to the big oak tree. Nia rings her
+      bell, and Mom cheers.
     questions:
-      - { q: "What does Nia's new bike have?", a: "a shiny bell", wrong: ["a red basket", "a big horn"] }
+      - { q: "What does Nia's new bike have?", a: "a shiny silver bell", wrong: ["a red basket", "a big horn"] }
       - { q: "What does she put on before she rides?", a: "her helmet", wrong: ["her boots", "her coat"] }
       - { q: "Who walks next to her?", a: "Mom", wrong: ["Dad", "her friend"] }
       - { q: "What happens at first?", a: "the bike wobbles", wrong: ["the bike flies", "the bell falls off"] }
@@ -325,15 +336,15 @@ passages:
     picture: pot
     words: [stir, carrot, potato, soup, sink, spoon]
     text: >-
-      Grandpa and Omar make vegetable soup. Omar washes the carrots and potatoes in the sink. Grandpa chops
-      them into little pieces. They drop everything into a big pot of water. Omar stirs it with a long
-      wooden spoon. The kitchen smells so good! When the soup is ready, they let it cool. Then they eat it
-      with warm bread.
+      Grandpa and Omar make vegetable soup on a cold day. Omar washes the carrots and potatoes in
+      the sink. Then Grandpa chops them into little bits. They drop them all into a big pot of water.
+      Omar stirs the soup with a long wooden spoon. Soon the kitchen smells so good. When it is ready,
+      they let it cool and eat it with warm bread.
     questions:
       - { q: "What do Grandpa and Omar make?", a: "vegetable soup", wrong: ["a cake", "pancakes"] }
       - { q: "Who washes the carrots?", a: "Omar", wrong: ["Grandpa", "Mom"] }
       - { q: "Where does Omar wash the carrots?", a: "in the sink", wrong: ["in the bathtub", "in the pond"] }
-      - { q: "Who cuts the carrots into little pieces?", a: "Grandpa", wrong: ["Omar", "Dad"] }
+      - { q: "Who chops the carrots into little bits?", a: "Grandpa", wrong: ["Omar", "Dad"] }
       - { q: "What does Omar stir with?", a: "a long wooden spoon", wrong: ["a fork", "his hand"] }
       - { q: "What do they eat with the soup?", a: "warm bread", wrong: ["cold milk", "a pickle"] }
 
@@ -342,9 +353,10 @@ passages:
     picture: book
     words: [quiet, tiptoe, silly, giggle, soft, book, rug]
     text: >-
-      On Tuesday, Ben and Mom go to the library. Ben uses his quiet voice inside. He tiptoes past the
-      people reading. He picks three books: one about whales, one about trains, and one about a silly pig.
-      At home, Ben sits on the soft rug. Mom reads the silly pig book, and they both giggle.
+      On Tuesday, Ben and Mom walk to the library. Ben uses his quiet voice inside. He tiptoes
+      past the people who are reading at the long tables. He picks three books: one about whales, one
+      about trains, and one about a silly pig. At home, Ben sits on the soft rug next to Mom. She reads the
+      silly pig book, and they both giggle.
     questions:
       - { q: "When do Ben and Mom go to the library?", a: "On Tuesday", wrong: ["On Sunday", "At night"] }
       - { q: "What voice does Ben use inside?", a: "his quiet voice", wrong: ["his loud voice", "his sleepy voice"] }
@@ -358,25 +370,27 @@ passages:
     picture: rabbit
     words: [rabbit, sniff, munch, listen]
     text: >-
-      A wild rabbit lives in a burrow under the hill. Each morning, she peeks out and sniffs the air. Is it
-      safe? She hops into the meadow to munch clover. Her long ears listen for any sound. If a fox comes
-      near, she thumps her foot and races home. Her babies are safe in the burrow, snug and warm.
+      A wild rabbit lives in a burrow under the hill. Each morning, she peeks out of the hole and sniffs
+      the cool air. Then she hops into the meadow to munch on sweet clover. Her long ears listen carefully
+      for any sound. If a fox comes near, she thumps her foot and races home. Her babies stay safe in the
+      burrow, snug and warm together.
     questions:
       - { q: "Where does the rabbit live?", a: "in a burrow under the hill", wrong: ["in a tree", "in a barn"] }
       - { q: "When does she peek out?", a: "Each morning", wrong: ["At night", "In the winter"] }
-      - { q: "What does she munch?", a: "clover", wrong: ["carrots", "cookies"] }
+      - { q: "What does she munch on?", a: "sweet clover", wrong: ["carrots", "cookies"] }
       - { q: "What listens for any sound?", a: "Her long ears", wrong: ["Her tail", "Her nose"] }
       - { q: "What does she do if a fox comes near?", a: "thumps her foot", wrong: ["sings a song", "takes a nap"] }
-      - { q: "Where are her babies safe?", a: "in the burrow", wrong: ["in the meadow", "by the pond"] }
+      - { q: "Where do her babies stay safe?", a: "in the burrow", wrong: ["in the meadow", "by the pond"] }
 
   - id: beach
     title: Beach Treasures
     picture: crab
     words: [pebble, tiny, crab, shell, puddle, sand]
     text: >-
-      Rosa and her brother walk along the beach. The sand is warm under their feet. Rosa finds a pink
-      shell and a smooth gray pebble. Her brother finds a crab hiding in a puddle. The crab is tiny, and it
-      walks sideways! They watch it for a while. Then they gently put it back by the water and wave goodbye.
+      Rosa and her brother walk along the beach, looking for treasures. The sand feels warm under their
+      bare feet. Rosa finds a pink shell and a smooth gray pebble. Her brother finds a crab hiding in a
+      puddle between two rocks. The crab is tiny, and it walks sideways! They watch it for a while. Then
+      they gently put it back by the water and wave goodbye.
     questions:
       - { q: "Where do Rosa and her brother walk?", a: "along the beach", wrong: ["in the woods", "to school"] }
       - { q: "How does the sand feel?", a: "warm", wrong: ["cold", "sticky"] }
@@ -390,13 +404,14 @@ passages:
     picture: moon
     words: [shiny, sleepy, carry, blanket, moon]
     text: >-
-      On a warm summer night, Theo and his family lie on a blanket in the yard. The sky is dark, and the
-      stars are shiny. Dad points to the bright moon. Mom finds a group of stars that looks like a spoon.
-      Fireflies blink in the grass. Theo yawns. He is sleepy, so Dad carries him inside to bed.
+      On a warm summer night, Theo and his family lie on a blanket in the backyard. The sky is dark, and the
+      stars are bright and shiny. Dad points to the round moon. Mom finds a group of stars
+      that looks like a giant spoon. Fireflies blink on and off in the grass. Soon Theo yawns because he is
+      sleepy, so Dad carries him inside to bed.
     questions:
       - { q: "When does Theo's family lie on the blanket?", a: "a warm summer night", wrong: ["a snowy day", "a rainy morning"] }
-      - { q: "Where is the blanket?", a: "in the yard", wrong: ["on the beach", "in the car"] }
-      - { q: "What does Dad point to?", a: "the bright moon", wrong: ["a plane", "a bird"] }
-      - { q: "What do the stars look like?", a: "a spoon", wrong: ["a fish", "a hat"] }
+      - { q: "Where is the blanket?", a: "in the backyard", wrong: ["on the beach", "in the car"] }
+      - { q: "What does Dad point to?", a: "the round moon", wrong: ["a plane", "a bird"] }
+      - { q: "What do the stars look like?", a: "a giant spoon", wrong: ["a fish", "a hat"] }
       - { q: "What blinks in the grass?", a: "Fireflies", wrong: ["Frogs", "Robins"] }
       - { q: "Who carries Theo inside?", a: "Dad", wrong: ["Mom", "Grandpa"] }

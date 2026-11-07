@@ -10,7 +10,7 @@ Each public level (syllabus/ladder.yaml) has a `content_grade` ("Pre-K", "K", "1
 - **Readability**: every page whose sheet type scores passages with Flesch-Kincaid must have an explicit
   `fk_grade: [lo, hi]` rule (the scorers' built-in defaults belong to one level only) with
   content grade − 1 ≤ lo ≤ content grade and content grade + 1 ≤ hi ≤ content grade + 2. Passage pages
-  with no FK scorer at all (Cubs Read Aloud) get a warning.
+  with no FK scorer at all (sheet types in UNSCORED_PASSAGE_TYPES) get a warning.
 
 Exempt: levels whose content grade is Pre-K (no Common Core codes exist), and pencil strands.
 A section's grade is its highest tag (section + parts): a section that mixes a grade-2 on-ramp code with
@@ -28,15 +28,16 @@ from .syllabus import level_path, load_ladder, load_level, resolve_page
 PRE_K = -1
 
 # Sheet types whose verify scores every passage's Flesch-Kincaid grade against `fk_grade`
-# (ws/passages.py, ws/longreads.py, ws/spreads.py).
+# (ws/sheet_types/read_aloud.py, ws/passages.py, ws/longreads.py, ws/spreads.py).
 FK_SHEET_TYPES = frozenset({
+    "read_aloud",                                                                    # Cubs
     "passage_questions", "full_sentence_answer", "word_builder",                     # Foxes
     "long_read_page", "look_back_questions", "word_detective", "big_idea_summary",   # Owls
     "read_then_answer", "clue_words", "figurative_language", "paragraph_summary",    # Otters
     "passage_spread",                                                                # Pandas → Whales
 })
-# Sheet types with reading passages but no FK scorer.
-UNSCORED_PASSAGE_TYPES = frozenset({"read_aloud"})
+# Sheet types with reading passages but no FK scorer (none at the moment; a new one is warned about).
+UNSCORED_PASSAGE_TYPES: frozenset[str] = frozenset()
 
 
 def grade_of(code: str) -> int:
