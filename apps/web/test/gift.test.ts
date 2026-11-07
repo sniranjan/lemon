@@ -396,6 +396,16 @@ describe("spending a gift amount", () => {
     expect(gift(code).balance_cents).toBe(1000); // untouched until a payment succeeds
   });
 
+  it("a checkout that timed out on its own frees its hold for the next one", async () => {
+    const code = await creditGift(1000);
+    await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    const firstId = (t.db.prepare("SELECT session_id FROM gift_holds").get() as { session_id: string }).session_id;
+    stripe.timedOut.add(firstId);
+    const r = await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });
+    expect(await r.json()).toMatchObject({ ok: true, paid: 900 });
+    expect(count("SELECT COUNT(*) AS n FROM gift_holds")).toBe(1);
+  });
+
   it("a checkout Stripe won't close (already paid) keeps its hold", async () => {
     const code = await creditGift(1000);
     await post(`/api/gift/${code}/checkout`, { levels: ["chicks"], email: "sam@example.com" });

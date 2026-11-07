@@ -26,7 +26,7 @@ import {
   type ShopEnv,
 } from "./catalog";
 import { sendGiftBuyerEmail, sendGiftRecipientEmail, sendOrderEmail } from "./email";
-import { createCheckoutSession, createCoupon, expireCheckoutSession, newToken, type CheckoutSession } from "./stripe";
+import { createCheckoutSession, createCoupon, expireCheckoutSession, getCheckoutSession, newToken, type CheckoutSession } from "./stripe";
 
 /** Links in emails sent by the cron (which has no request to take an origin from). */
 export const SITE = "https://paperlessons.com";
@@ -386,6 +386,8 @@ gift.post("/api/gift/checkout", async (c) => {
             unit_amount: g.amountCents,
             product_data: {
               name,
+              // Managed Payments needs a tax code; a gift is prepaid for the same digital books as the levels.
+              tax_code: "txcd_10302000",
               description:
                 g.kind === "all"
                   ? `For ${g.recipientName}: all 13 levels of printable reading and math pages, ages 3 to 12. Code never expires.`
@@ -515,12 +517,21 @@ async function releaseOpenHolds(env: ShopEnv, code: string) {
     .bind(code)
     .all<{ id: string; session_id: string }>();
   for (const h of open.results) {
+    let closed = false;
     try {
       await expireCheckoutSession(env.STRIPE_SECRET_KEY!, h.session_id);
-      await env.DB.prepare("DELETE FROM gift_holds WHERE id = ?").bind(h.id).run();
+      closed = true;
     } catch (e) {
-      console.log(`gift ${code}: kept hold for ${h.session_id} (${String(e)})`);
+      // Stripe refuses to expire a session that is already expired (timed out) or paid: look it up. Only an
+      // expired one frees its hold; a paid one keeps it until the webhook turns it into a redemption.
+      try {
+        closed = (await getCheckoutSession(env.STRIPE_SECRET_KEY!, h.session_id)).status === "expired";
+      } catch {
+        /* keep the hold; it lapses on its own */
+      }
+      if (!closed) console.log(`gift ${code}: kept hold for ${h.session_id} (${String(e)})`);
     }
+    if (closed) await env.DB.prepare("DELETE FROM gift_holds WHERE id = ?").bind(h.id).run();
   }
 }
 
