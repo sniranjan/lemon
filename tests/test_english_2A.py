@@ -11,6 +11,7 @@ import pytest
 from ws import generate as gen
 from ws import registry
 from ws.content import grammar, passages, vocab, vocab_by_word
+from ws.readability import fk_grade
 from ws.reading import KINDS, in_text, kind_of, mentions, sentences, word_count
 from ws.syllabus import load_level
 from ws.verify import verify_sheets
@@ -92,8 +93,9 @@ def test_passages_are_original_short_and_answerable():
     assert len(ids) == len(set(ids)) == 25   # 50 Read Aloud pages, each passage read twice
     for p in data["passages"]:
         text = " ".join(p["text"].split())
-        assert 40 <= word_count(text) <= 60, p["id"]
-        assert max(word_count(s) for s in sentences(text)) <= 16, p["id"]
+        assert 45 <= word_count(text) <= 70, p["id"]
+        assert max(word_count(s) for s in sentences(text)) <= 17, p["id"]
+        assert 2.0 <= fk_grade(text) <= 3.5, (p["id"], fk_grade(text))   # grade-2 text (Cubs = content grade 2)
         assert p["picture"] in {e.picture for e in bank.values()}, p["id"]
         assert all(w in bank and mentions(text, w) for w in p["words"]), p["id"]
         for q in p["questions"]:
@@ -134,6 +136,26 @@ def test_verify_catches_broken_sheets(all_sheets):
     s.items[0]["words"] = 3
     msgs = issues(s)
     assert any("not in the passage" in m for m in msgs) and any("word count printed" in m for m in msgs)
+
+
+def test_read_aloud_rule_and_verify_score_flesch_kincaid(all_sheets, monkeypatch):
+    from ws.sheet_types import read_aloud
+    from ws.syllabus import resolve_page
+
+    assert all(resolve_page(EN2A, page).rules["fk_grade"] == [2.0, 3.5] for page in range(151, 201))
+    _, sheets = all_sheets
+    s = next(x for x in sheets if x.page_number == 151).model_copy(deep=True)
+    assert not any("Flesch-Kincaid" in i.message for i in registry.get(s.sheet_type).verify(s))
+    # a passage written too easy for grade 2 (short sentences, one-syllable words: FK below 1) fails
+    easy = dict(read_aloud.passage_by_id(s.items[0]["id"]), text=(
+        "Sam has a red ball. He kicks the ball. It goes up. It goes far. The dog runs to get it. "
+        "The dog brings it back. Sam and the dog play all day. Then they go in. Sam is hot. The dog naps."))
+    monkeypatch.setattr(read_aloud, "passage_by_id", lambda pid: easy)
+    s.items[0]["text"] = " ".join(easy["text"].split())
+    s.items[0]["words"] = word_count(s.items[0]["text"])
+    assert fk_grade(s.items[0]["text"]) < 2.0
+    msgs = [i.message for i in registry.get(s.sheet_type).verify(s)]
+    assert any("Flesch-Kincaid grade" in m and "needs 2.0–3.5" in m for m in msgs), msgs
 
 
 def test_passages_are_read_twice_with_different_questions(all_sheets):

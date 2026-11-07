@@ -56,6 +56,9 @@ def test_whole_ladder_is_two_grades_ahead():
         assert r.highest >= hi, r.public_name
         if lo >= 3:   # Foxes on: every reading strand scores its passages against an fk_grade range
             assert r.fk, f"{r.public_name}: reading passages have no fk_grade range"
+    # Cubs Read Aloud (english 2A-C) scores its passages too, so no "no Flesch-Kincaid range" warning remains
+    assert next(r for r in reports if r.public_name == "Cubs").fk == {"2A": (2.0, 3.5)}
+    assert not [i for i in issues if i.severity == "warning" and "Flesch-Kincaid" in i.message]
 
 
 def _patched(monkeypatch, change):

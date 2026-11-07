@@ -3,14 +3,15 @@
 Passages live in content/passages/english.yaml and are used in file order, each on `passage_reads`
 pages in a row (the second reading has different questions). Each question has three choices to circle;
 the answer is word for word in the passage. A box for grown-ups records the reading time (about a minute)
-and shows the passage's word count. Verify checks the part's `passage_words` and `max_sentence_words`,
-that answers come from the passage, and that the featured `words` really appear.
+and shows the passage's word count. Verify checks the part's `passage_words` and `max_sentence_words`, the
+passage's Flesch-Kincaid grade against the section's `fk_grade` (ws/readability.py, as for later levels), that answers come from the passage, and that the featured `words` really appear.
 """
 
 from __future__ import annotations
 
 from ..content import passages, vocab_by_word
 from ..models import Issue, Sheet
+from ..readability import fk_grade
 from ..reading import in_text, mentions, sentences, word_count
 from ..registry import GenContext, SheetContent, SheetType, register
 from ._common import error, page_rules
@@ -61,6 +62,14 @@ class ReadAloud(SheetType):
             issues.append(error(sheet, f"word count printed as {item['words']}, the passage has {n}"))
         if not lo <= n <= hi:
             issues.append(error(sheet, f"passage {p['id']!r} has {n} words; this part wants {lo}–{hi}"))
+        if "fk_grade" not in rules:
+            issues.append(error(sheet, "no fk_grade rule for this page in the syllabus, so the passage's "
+                                       "readability can't be checked"))
+        else:
+            fk_lo, fk_hi = rules["fk_grade"]
+            fk = fk_grade(text)
+            if not fk_lo <= fk <= fk_hi:
+                issues.append(error(sheet, f"passage {p['id']!r}: Flesch-Kincaid grade {fk} (needs {fk_lo}–{fk_hi})"))
         for s in sentences(text):
             if word_count(s) > rules["max_sentence_words"]:
                 issues.append(error(sheet, f"sentence longer than {rules['max_sentence_words']} words: {s!r}"))
