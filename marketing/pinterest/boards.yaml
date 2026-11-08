@@ -1,0 +1,45 @@
+# Pinterest boards for paperlessons.com. Pins name a board by its key (left).
+# `pin_publish.py --boards --create` creates any that are missing (matched by name), all PUBLIC.
+# Rules as everywhere: public level names only, American spelling, no promises of results.
+
+preschool:
+  name: "Preschool Printables (Ages 3–4)"
+  description: >-
+    Printable picture words, counting, tracing and first pencil lines for ages 3 and 4. Real pages from
+    paperlessons.com, made to do a few pages a day with a grown-up beside your child.
+
+k1:
+  name: "Kindergarten & Grade 1 Worksheets"
+  description: >-
+    Printable phonics, letter tracing, rhymes, number writing and first adding for kindergarten and first grade
+    work. Real pages from paperlessons.com.
+
+grade23:
+  name: "Grade 2–3 Worksheets"
+  description: >-
+    Printable reading and math worksheets for grade 2 and grade 3 work: spelling patterns, reading aloud, big
+    adding, times tables and first fractions. Real pages from paperlessons.com.
+
+upper_reading:
+  name: "Upper Elementary Reading"
+  description: >-
+    Printable reading comprehension for grades 4 and 5: stories in chapters, articles, word meanings in context
+    and finding details. Real pages from paperlessons.com.
+
+upper_math:
+  name: "Upper Elementary Math"
+  description: >-
+    Printable math worksheets for grades 4 and 5: long multiplication, long division, fractions, decimals and
+    volume. Real pages from paperlessons.com.
+
+middle:
+  name: "Middle School Reading & Math"
+  description: >-
+    Printable reading and math for grades 6 to 9: close reading, arguments and evidence, ratios, negative numbers,
+    equations, slope and first algebra. Real pages from paperlessons.com.
+
+gifts:
+  name: "Gift Ideas for Kids"
+  description: >-
+    Gifts that last all year: printable reading and math for ages 3 to 12 from paperlessons.com, with a gift card
+    you can print or send.
