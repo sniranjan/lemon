@@ -57,7 +57,8 @@ cover (page 1) or the closing page.
 
 **Links.**
 - Level and skill pins go to `https://paperlessons.com/?utm_source=pinterest&utm_medium=pin&utm_campaign=<level
-  or skill>&utm_content=<pin id>#library`. That is the library section. The site has no per-level anchor yet.
+  or skill>&utm_content=<pin id>#<level>`. The site scrolls to that level's card and opens it. Skill pins use
+  the level their first page comes from; a pin with no level goes to `#library`.
 - Gift pins go to `https://paperlessons.com/gift?utm_…`.
 
 ## Boards

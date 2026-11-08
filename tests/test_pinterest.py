@@ -58,7 +58,7 @@ def test_links(ctx):
     boards, pats = ctx
     lib = M.validate(good_pin(), boards, pats)["link"]
     assert lib == ("https://paperlessons.com/?utm_source=pinterest&utm_medium=pin&utm_campaign=foxes"
-                   "&utm_content=test-pin#library")
+                   "&utm_content=test-pin#foxes")
     gift = M.validate(good_pin(link="gift", campaign="gift"), boards, pats)["link"]
     assert gift.startswith("https://paperlessons.com/gift?utm_source=pinterest") and "utm_campaign=gift" in gift
     with pytest.raises(M.SpecError):

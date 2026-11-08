@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Download, Gift, Loader2, ShoppingBag, Sparkles } from "lucide-react";
 import { formatPrice, startCheckout, useCatalog, type Catalog } from "@/lib/catalog";
 import { gradeLabel, LEVELS, SUBJECT_LABEL, type Level } from "@/data/levels";
@@ -78,7 +78,13 @@ function EverythingBundle({ catalog }: { catalog: Catalog }) {
 }
 
 function LevelCard({ level, index, catalog }: { level: Level; index: number; catalog: Catalog }) {
-  const [open, setOpen] = useState(false);
+  // A link to /#<slug> (e.g. from a Pinterest pin) lands on this card, opened.
+  const linked = typeof location !== "undefined" && location.hash === `#${level.slug}`;
+  const [open, setOpen] = useState(linked);
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (linked) ref.current?.scrollIntoView({ block: "center" });
+  }, [linked]);
   const hasPreview = catalog.previews.includes(level.slug);
   const price = catalog.forSale.includes(level.slug) ? catalog.prices[level.slug] : undefined;
   const nextSlug = price ? catalog.next[level.slug] : undefined;
@@ -87,6 +93,8 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
   const ready = level.status === "ready";
   return (
     <article
+      ref={ref}
+      id={level.slug}
       data-open={open}
       onClick={() => setOpen((o) => !o)}
       onKeyDown={(e) => {
@@ -97,7 +105,7 @@ function LevelCard({ level, index, catalog }: { level: Level; index: number; cat
       }}
       tabIndex={0}
       aria-label={`${level.name}: ${level.blurb}`}
-      className="card-rise sticker group relative h-[450px] cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
+      className="card-rise sticker group relative h-[450px] scroll-mt-28 cursor-pointer overflow-hidden bg-cream outline-none transition-transform duration-300 hover:-translate-y-1 focus-visible:ring-4 focus-visible:ring-sky motion-reduce:transition-none"
       style={{ animationDelay: `${index * 70}ms` }}
     >
       {/* The sheet, tucked into the pocket. */}

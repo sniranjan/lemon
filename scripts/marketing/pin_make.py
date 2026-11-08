@@ -94,7 +94,10 @@ def build_link(pin: dict) -> str:
               "utm_campaign": pin.get("campaign") or pin.get("level") or pin["id"], "utm_content": pin["id"]}
     query = urllib.parse.urlencode(params)
     if kind == "library":
-        return f"{SITE}/?{query}#library"  # the query must come before the fragment
+        # land on the level's card (the site opens it): the pin's level, or the level its pages come from
+        pages = pin.get("pages") or []
+        level = pin.get("level") or (pages[0].get("level") if pages else None)
+        return f"{SITE}/?{query}#{level or 'library'}"  # the query must come before the fragment
     if kind == "gift":
         return f"{SITE}/gift?{query}"
     parts = urllib.parse.urlsplit(kind)
