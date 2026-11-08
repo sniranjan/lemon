@@ -245,10 +245,10 @@ def pin_html(pin: dict) -> str:
     if mascot and mascot != "none":
         src = L.BY_SLUG[mascot]["mascot"]
         if len(srcs) == 1:
-            art = art.replace("{MASCOT}", f'<img class="mascot" src="{src}" style="right:-70px;top:-90px;'
+            art = art.replace("{MASCOT}", f'<img class="mascot" src="{src}" style="right:-60px;top:2px;'
                                           f'transform:rotate(8deg)" alt="">')
         else:
-            art += f'<img class="mascot" src="{src}" style="right:24px;top:-62px;transform:rotate(8deg)" alt="">'
+            art += f'<img class="mascot" src="{src}" style="right:20px;top:-4px;transform:rotate(8deg)" alt="">'
     art = art.replace("{MASCOT}", "")
 
     # on a colored background the logo's coral "lessons" needs white behind it: one white bar for the footer
@@ -272,7 +272,12 @@ LAYOUT_JS = """() => {
   const pages = [...document.querySelectorAll('.pg')].map(e => {const b = r(e); return [b.left, b.top, b.right, b.bottom, b.width];});
   const out = [...document.querySelectorAll('.head *, .foot *')].filter(e => {const b = r(e);
      return b.left < -1 || b.right > innerWidth + 1 || b.bottom > innerHeight + 1;}).length;
-  return {headBottom: head.bottom, footTop: foot.top, artTop: art.top, artHeight: art.height, lines, pages, out};
+  const hit = (a, b) => a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
+  const masc = document.querySelector('.mascot');
+  const words = [...document.querySelectorAll('.headline, .sub')].map(e => {
+    const g = document.createRange(); g.selectNodeContents(e); return [...g.getClientRects()]; }).flat();
+  const mascotOverText = !!masc && words.some(w => hit(r(masc), w));
+  return {mascotOverText, headBottom: head.bottom, footTop: foot.top, artTop: art.top, artHeight: art.height, lines, pages, out};
 }"""
 
 
@@ -282,6 +287,8 @@ def check_layout(pid: str, m: dict) -> list[str]:
         problems.append(f"headline wraps to {m['lines']} lines")
     if m["artHeight"] < 640:
         problems.append(f"art area only {m['artHeight']:.0f}px tall (header too big)")
+    if m["mascotOverText"]:
+        problems.append("mascot covers the headline or subline")
     if m["out"]:
         problems.append("header/footer text runs off the pin")
     for left, top, right, bottom, width in m["pages"]:
