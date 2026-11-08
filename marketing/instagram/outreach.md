@@ -35,3 +35,15 @@ Ask first: @virtualmath123 (Kim, 25.5K): a virtual-school math teacher who gives
 parent; the "with your kids" offer doesn't fit as is.
 
 Find more: need new names for the next batch.
+
+## Comments (helpful, no pitch, no links; drafts approved by the owner first; 3–5 a day)
+
+| Date | Post | Comment | Status |
+|---|---|---|---|
+| 2026-11-08 | @homeinthenorthwoods reel, "It's THE!!!" (two kids learning to read) | Two learning to read at once is a real juggle! Tricky words like "the" usually stick from seeing them again and again in short bursts… | posted |
+| 2026-11-08 | @literacyandlindsay reel, cat and kite rule (60K likes) | Such a clear way to teach it: the cat for a, o and u, the kite for e and i, and the pictures do the remembering. Saving this one! (reworded: her card says "c before a, o, u") | posted |
+| 2026-11-08 | @think_like_ateacher reel, skip-counting multiplication game | Skip counting first, then the facts, is such a good order… | posted |
+| 2026-11-08 | @michelleellisss "Not every lesson needs a curriculum" | — | skipped: post not on her profile (trial reel?) |
+
+Tips: open posts from the profile grid (direct /p/ links showed an error page after heavy browsing); read 60
+captions quickly and Instagram throttles for about an hour.
