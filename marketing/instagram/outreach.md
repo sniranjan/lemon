@@ -23,18 +23,15 @@ Found via #homeschoolmom #homeschoolkindergarten #homeschoolfamily #learningatho
 | 2026-11-07 | @threepeasplay (Payton) | 9.6K | books + play based homeschool | sent |
 | 2026-11-07 | @homeschool.mom.lifestyle (Jennifer) | 38.1K | "skip the busywork", MA Education | sent |
 | 2026-11-07 | @freedom_seeking_mama (Allie) | 20.2K | former teacher, coaches new homeschoolers | sent |
+| 2026-11-08 | @akeebamaze (Akeeba) | 236K | approved text: "start a little lower", every kid in the house | sent |
+| 2026-11-08 | @thisnewday_ (Sonya) | 36K | book lists, time left for reading together | sent |
+| 2026-11-08 | @ellencovey (Ellen) | 41.9K | six girls at different stages | sent |
+| 2026-11-08 | @thisbeautifulchapter (Emily) | 5.7K | homeschool outdoors, nature | sent |
 
 ## Next (5 a day)
 
-**2026-11-08 (approved):** @akeebamaze (Akeeba, 236K, certified teacher, homeschool mom of tweens; says Kumon
-"quickly adds up" with several kids, so never mention it) · @thisnewday_ (Sonya, 36K, books + homeschool) ·
-@ellencovey (42K, homeschooling 6 girls) · @thisbeautifulchapter (Emily, 5.7K) · @yearofwonderschoolhouse (Tara, 4.3K)
+Skipped: @yearofwonderschoolhouse (Tara): no posts since 2023.
+Ask first: @virtualmath123 (Kim, 25.5K): a virtual-school math teacher who gives away her own materials, not a
+parent; the "with your kids" offer doesn't fit as is.
 
-Akeeba's message (approved as is):
-
-> Hi Akeeba! I run @paper.lessons: printable reading and math pages for ages 3 to 12, a few pages a day, each level
-> building on the last in small steps. Your advice to start a little lower and build real fluency is exactly how we
-> designed ours, and one every-level code covers every kid in the house. Would you like a free code to try with your
-> tweens? No strings and no post expected. If you end up liking it, a mention would mean a lot 🙂
-
-**Later:** @virtualmath123 (Kim, 25K, math tutor)
+Find more: need new names for the next batch.
