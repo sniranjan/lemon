@@ -26,5 +26,15 @@ Found via #homeschoolmom #homeschoolkindergarten #homeschoolfamily #learningatho
 
 ## Next (5 a day)
 
-@thisnewday_ (Sonya, 36K, books + homeschool) · @ellencovey (42K, homeschooling 6 girls) ·
-@thisbeautifulchapter (Emily, 5.7K) · @yearofwonderschoolhouse (Tara, 4.3K) · @virtualmath123 (Kim, 25K, math tutor)
+**2026-11-08 (approved):** @akeebamaze (Akeeba, 236K, certified teacher, homeschool mom of tweens; says Kumon
+"quickly adds up" with several kids, so never mention it) · @thisnewday_ (Sonya, 36K, books + homeschool) ·
+@ellencovey (42K, homeschooling 6 girls) · @thisbeautifulchapter (Emily, 5.7K) · @yearofwonderschoolhouse (Tara, 4.3K)
+
+Akeeba's message (approved as is):
+
+> Hi Akeeba! I run @paper.lessons: printable reading and math pages for ages 3 to 12, a few pages a day, each level
+> building on the last in small steps. Your advice to start a little lower and build real fluency is exactly how we
+> designed ours, and one every-level code covers every kid in the house. Would you like a free code to try with your
+> tweens? No strings and no post expected. If you end up liking it, a mention would mean a lot 🙂
+
+**Later:** @virtualmath123 (Kim, 25K, math tutor)
