@@ -51,8 +51,8 @@ BOOKS = {
                   "then finds them in a picture game and reads them in tiny stories."),
         "bullets": ["200 pages, one small step at a time", "A few pages a day, about 5 minutes",
                     "A grown-up tip on every page", "Original pictures, made for little readers"],
-        "colors_tip": ("Nine pages teach color words. If your copy is black and white, point to something that "
-                       "color in the room, or color the crayon on the page together."),
+        "colors_tip": ("Nine pages teach color words. After the page, go on a hunt together: find something red "
+                       "(or blue, or green) in the room."),
         "next": "ducklings",
     },
 }

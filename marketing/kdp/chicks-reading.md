@@ -31,14 +31,16 @@ Files: `uv run python scripts/kdp/make_book.py chicks-reading` → `out/kdp/chic
 **Content**
 - ISBN: get a free KDP ISBN.
 - Print options:
-  - Ink and paper: **Black & white interior with white paper.** Pages are designed to read in grayscale; the 9 color-word pages carry a tip.
+  - Ink and paper: **Standard color interior with white paper** (the owner chose color; the pictures and the
+    9 color-word pages need it). Premium color costs over twice as much for little visible gain on a workbook.
   - Trim: 8.5 × 11 in. Bleed: **No bleed.** Cover finish: Matte.
 - Manuscript: interior.pdf. Cover: "Upload a cover you already have", cover.pdf.
 - Run the Previewer. Check that the spine text sits inside the spine and no margin warnings show.
 
 **Pricing**
-- Print cost: about $1.00 + 208 × $0.012 ≈ $3.50. KDP shows the exact figure.
-- Suggested price: **$11.99** (royalty 60% − print ≈ $3.69 a copy). At $9.99 the royalty is about $2.49; at $12.99, about $4.29.
+- Print cost (standard color): about $1.00 + 208 × $0.0255 ≈ $6.30. KDP shows the exact figure; the lowest price
+  it allows is print ÷ 0.6 ≈ $10.50.
+- Suggested price: **$14.99** (royalty 60% − print ≈ $2.69 a copy). At $16.99 about $3.89; at $12.99 about $1.49.
 - Expanded distribution: off for now (40% rate, little sense for a $12 book).
 
 ## Description (paste into the HTML box)
@@ -58,7 +60,7 @@ in tiny stories. A few pages a day, with you beside them, about five minutes.
 </ul>
 
 <b>Made for little hands and short attention spans.</b> One small step at a time, with lots of repetition built
-in. Large clear type designed for early readers, and simple original pictures that read well in black and white.
+in. Large clear type designed for early readers, and bright, simple original pictures in full color.
 
 Chicks is the first of thirteen paperlessons levels for ages 3 to 12, reading and math. Free preview pages of every
 level at paperlessons.com.
