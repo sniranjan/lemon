@@ -1,10 +1,10 @@
 """Build an Amazon KDP paperback (interior PDF + full cover PDF) from a finished level strand booklet.
 
-    uv run python scripts/kdp/make_book.py chicks-reading      # → out/kdp/chicks-reading/{interior,cover}.pdf + previews
+    uv run python scripts/kdp/make_book.py [slug …]      # → out/kdp/<slug>/{interior,cover}.pdf + previews
 
 Interior: 8.5 × 11 in, no bleed, black-and-white friendly. Front matter (title, copyright, for grown-ups, notes),
-the strand's 200 sheets exactly as sold on the site (from out/<subject>/<level>/<slug>-level.pdf, built by
-`ws render`), two progress-log pages and a "what's next" page. KDP margins for 151–300 pages: inside ≥ 0.5 in,
+100 of the strand's sheets exactly as sold on the site (from out/<subject>/<level>/<slug>-level.pdf, built by
+`ws render`), two progress-log pages and a "what's next" page. KDP margins for 24–150 pages: inside ≥ 0.375 in (151–300: 0.5 in),
 outside/top/bottom ≥ 0.25 in. Our sheets keep 0.58 in at the sides, 0.5 in top and 0.42 in bottom, so they fit as is.
 
 Cover: one PDF spread (back, spine, front) with 0.125 in bleed all round; spine = pages × 0.002252 in (white
@@ -32,28 +32,50 @@ PX = 96  # CSS px per inch
 TRIM_W, TRIM_H, BLEED = 8.5, 11.0, 0.125
 PAPER = 0.002252  # in per page, white paper
 
+CHICKS_READING = {
+    "level": "chicks",
+    "source": ROOT / "out/english/7A/chicks-reading-level.pdf",
+    "name": "Chicks",
+    "ages": "Ages 3–4",
+    "grade": "Preschool",
+    "color": L.TEAL,
+    "colors_tip": ("A few pages teach color words. After the page, go on a hunt together: find something red "
+                   "(or blue, or green) in the room."),
+}
 BOOKS = {
-    "chicks-reading": {
-        "level": "chicks",
-        "source": ROOT / "out/english/7A/chicks-reading-level.pdf",
-        "sheets": (2, 201),  # 1-based pages of the source booklet holding sheets 1–200 (1 = booklet cover, 202 = log)
-        "title": "Chicks Reading",
-        "subtitle": "Picture words and tiny stories",
-        "ages": "Ages 3–4",
-        "grade": "Preschool",
-        "color": L.TEAL,
-        "parts": [("Picture Words", "pages 1–100", "two new picture words a page, said aloud together"),
-                  ("Find It", "pages 101–140", "four pictures to find and name"),
-                  ("Tiny Stories", "pages 141–200", "two to four short sentences built from known words")],
-        "cover_sheets": [2, 104, 160, 110],  # source pages: front left/right, back left/right (no color-word pages)
-        "blurb": ("Big pictures, big words and a short tip for you at the top of every page. Your child meets about "
-                  "200 everyday words (apple, train, mom, boots) two at a time, sees each one again and again, "
-                  "then finds them in a picture game and reads them in tiny stories."),
-        "bullets": ["200 pages, one small step at a time", "A few pages a day, about 5 minutes",
+    # sheets: 1-based pages of the source booklet (page 1 = its cover, sheet n = page n + 1)
+    "chicks-reading-1": {
+        **CHICKS_READING,
+        "sheets": (2, 101),
+        "title": "Chicks Reading 1",
+        "chip": "Reading · Book 1",
+        "subtitle": "First picture words",
+        "parts": [("Look and Say", "pages 1–100", "two new picture words a page to look at and say together, plus "
+                   "a little strip of words from a few days before")],
+        "cover_sheets": [26, 12, 70, 61],  # front left/right, back left/right (no color-word pages)
+        "blurb": ("Big pictures, big words and a short tip for you at the top of every page. Your child meets 200 "
+                  "everyday words (apple, train, mom, boots) two at a time and says each one again a few days "
+                  "later, so the words stick."),
+        "bullets": ["100 pages, two new words a page", "A few pages a day, about 5 minutes",
                     "A grown-up tip on every page", "Original pictures, made for little readers"],
-        "colors_tip": ("Nine pages teach color words. After the page, go on a hunt together: find something red "
-                       "(or blue, or green) in the room."),
-        "next": "ducklings",
+        "next": {"mascot": "chicks", "name": "Chicks Reading 2", "line": "Find It and Tiny Stories"},
+    },
+    "chicks-reading-2": {
+        **CHICKS_READING,
+        "sheets": (102, 201),
+        "title": "Chicks Reading 2",
+        "chip": "Reading · Book 2",
+        "subtitle": "Find it and tiny stories",
+        "parts": [("Find It", "pages 101–140", "four known pictures a page to find and name"),
+                  ("Tiny Stories", "pages 141–200", "two to four short sentences built only from words your child "
+                   "knows, read together")],
+        "cover_sheets": [104, 160, 110, 170],
+        "blurb": ("The words from Chicks Reading 1 come back in a picture game, then in tiny stories your child "
+                  "reads with you: \"Look at the rainbow. I hug my baby.\" Every sentence uses only words they "
+                  "already know."),
+        "bullets": ["100 pages, one small step at a time", "A few pages a day, about 5 minutes",
+                    "A grown-up tip on every page", "First real sentences to read together"],
+        "next": {"mascot": "ducklings", "name": "Ducklings", "line": "Little phrases and numbers to 100"},
     },
 }
 
@@ -132,7 +154,8 @@ def back_matter(b: dict) -> str:
     log = f"""<div class="pg" style="color:{c}"><h2>Progress log</h2>
   <table class="log"><tr><th style="width:22%">Date</th><th style="width:20%">Pages</th><th style="width:18%">Minutes</th>
   <th>Notes</th></tr>{'<tr><td></td><td></td><td></td><td></td></tr>' * 19}</table></div>"""
-    nxt = L.BY_SLUG[b["next"]]
+    nxt = b["next"]
+    n = b["sheets"][1] - b["sheets"][0] + 1
     road = "".join(
         f'<div style="text-align:center;width:.85in"><img src="{lv["mascot"]}" style="width:.6in" alt="">'
         f'<div style="font-size:9.5pt;font-weight:800">{esc(lv["name"])}</div></div>'
@@ -140,9 +163,9 @@ def back_matter(b: dict) -> str:
     )
     whats_next = f"""<div class="pg" style="text-align:center">
   <h2 style="color:{c};font-size:30pt;margin-top:.3in">You did it!</h2>
-  <p style="font-size:16pt">All 200 pages. That's a lot of words, and a lot of mornings together.</p>
-  <img src="{nxt['mascot']}" style="width:2in;margin-top:.25in" alt="">
-  <p style="font-size:16pt;margin-top:.1in"><b>Next up: {esc(nxt['name'])}</b><br>{esc(nxt['title'])}</p>
+  <p style="font-size:16pt">All {n} pages. That's a lot of words, and a lot of mornings together.</p>
+  <img src="{L.BY_SLUG[nxt['mascot']]['mascot']}" style="width:2in;margin-top:.25in" alt="">
+  <p style="font-size:16pt;margin-top:.1in"><b>Next up: {esc(nxt['name'])}</b><br>{esc(nxt['line'])}</p>
   <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.08in;margin:.45in 0 .2in">{road}</div>
   <p class="small">Thirteen levels for ages 3 to 12, reading and math, one small step at a time.</p>
   <div style="margin-top:.35in;display:flex;justify-content:center">{L.logo(260)}</div>
@@ -157,7 +180,7 @@ def back_matter(b: dict) -> str:
     <img src="{lv['mascot']}" style="width:2.4in;margin:.35in 0" alt="">
     <div style="font-size:16pt;font-weight:400">This is to say that</div>
     <div style="border-bottom:2px solid {L.INK};width:80%;height:.6in"></div>
-    <div style="font-size:16pt;font-weight:400;margin-top:.25in">finished all 200 pages of</div>
+    <div style="font-size:16pt;font-weight:400;margin-top:.25in">finished all {n} pages of</div>
     <div class="fred" style="font-size:30pt;margin-top:.1in">{esc(b['title'])}</div>
     <div style="margin-top:auto;display:flex;gap:.6in;width:100%;font-size:13pt;font-weight:400">
       <div style="flex:1;border-top:2px solid {L.INK};padding-top:4px">Date</div>
@@ -184,8 +207,8 @@ def cover(b: dict, pages: int, tmp: Path) -> tuple[str, float, float]:
 <div class="blob" style="left:{x_front + 5.6}in;top:-.9in;width:3.8in;height:3.8in;background:#ffd970"></div>
 <div class="blob" style="left:{x_front - 1.2}in;top:7.6in;width:3.6in;height:3.6in;background:#ffd970"></div>
 <div class="abs" style="left:{x_front + .55}in;top:.6in">{L.logo(250)}</div>
-<div class="abs fred" style="left:{x_front + .55}in;top:1.25in;font-size:92pt;color:{L.INK}">{esc(b['title'].split()[0])}</div>
-<div class="abs" style="left:{x_front + .6}in;top:2.75in"><span class="chip ink" style="font-size:26pt;padding:2px 26px 6px">{esc(' '.join(b['title'].split()[1:]))}</span></div>
+<div class="abs fred" style="left:{x_front + .55}in;top:1.25in;font-size:92pt;color:{L.INK}">{esc(b['name'])}</div>
+<div class="abs" style="left:{x_front + .6}in;top:2.75in"><span class="chip ink" style="font-size:26pt;padding:2px 26px 6px">{esc(b['chip'])}</span></div>
 <div class="abs hand" style="left:{x_front + .6}in;top:3.55in;font-size:30pt;color:{L.INK};transform:rotate(-1.5deg)">{esc(b['subtitle'])}</div>
 <div class="abs disc" style="left:{x_front + 6.05}in;top:1.45in;width:1.95in;height:1.95in;flex-direction:column;
   font-weight:900;font-size:21pt;line-height:1.05;text-align:center;background:{L.CORAL};color:#fff;transform:rotate(8deg)">
@@ -194,12 +217,12 @@ def cover(b: dict, pages: int, tmp: Path) -> tuple[str, float, float]:
 {sheet(imgs[1], x_front + 4.15, 4.75, 3.55, 4, 1)}
 <img class="abs" src="{lv['mascot']}" style="left:{x_front + 3.05}in;top:8.45in;width:2.3in;z-index:5" alt="">
 <div class="abs" style="left:{x_front + .55}in;top:{BLEED + TRIM_H - .95}in;font-weight:900;font-size:15pt;z-index:6">
-  <span class="chip" style="font-size:15pt;border-width:3px;padding:2px 16px 4px">200 pages</span>
+  <span class="chip" style="font-size:15pt;border-width:3px;padding:2px 16px 4px">{b['sheets'][1] - b['sheets'][0] + 1} pages</span>
   <span class="chip" style="font-size:15pt;border-width:3px;padding:2px 16px 4px">a few pages a day</span></div>
 <!-- spine -->
 <div class="abs" style="left:{BLEED + TRIM_W}in;top:0;width:{spine}in;height:{h}in;background:{c}"></div>
 <div class="abs" style="left:{BLEED + TRIM_W + spine / 2}in;top:{h / 2}in;width:{TRIM_H - 1.2}in;transform:translate(-50%,-50%) rotate(90deg);
-  display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:{min(15, spine * 72 * .55):.1f}pt;font-weight:900;white-space:nowrap">
+  display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:{min(15, (spine - .14) * 72):.1f}pt;font-weight:900;white-space:nowrap">
   <span class="fred">{esc(b['title'])}</span><span>{esc(b['ages'])}</span><span>paper<span class="lessons" style="color:#fff">lessons</span></span></div>
 <!-- back -->
 <div class="abs" style="left:{BLEED + .55}in;top:{BLEED + .6}in;width:{TRIM_W - 1.1}in">
@@ -271,4 +294,5 @@ def main(slug: str) -> None:
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "chicks-reading")
+    for slug in sys.argv[1:] or list(BOOKS):
+        main(slug)
