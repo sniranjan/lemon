@@ -1,0 +1,516 @@
+# Pinterest batch 02 (Nov 13, 2026): the preview pages batch 01 didn't use (one or two new pins per level),
+# winter-break and holiday angles, and three more gift pins for the season.
+# Render: uv run python scripts/marketing/pin_make.py marketing/pinterest/pins/batch-02.yaml
+# Publish order = the order below (boards interleaved). Same rules as batch 01 (see its header).
+
+pins:
+  - id: gift-stocking
+    board: gifts
+    chip: "Reading & math, ages 3 to 12"
+    headline: "A gift that fits a stocking"
+    subline: "print the card, tuck it in"
+    background: sky
+    pages:
+      - {file: marketing/instagram/posts/2026-11-08-holiday-gift/card-ava.png, crop: 0.56}
+    mascot: owls
+    link: gift
+    campaign: gift
+    title: "Stocking Stuffer for Kids Ages 3–12 | Printable Reading and Math Gift Card"
+    description: >-
+      A stocking stuffer that isn't more plastic: a printable gift card for reading and math pages, ages 3 to 12.
+      You get the card as a PDF by email, print it and fold it into a stocking or a holiday card. Their family opens
+      it at paperlessons.com, picks the levels that fit and prints at home. Codes never expire. A thoughtful gift for
+      grandkids, nieces, nephews and homeschool families.
+    alt: >-
+      A printed gift card on a light blue background: a gift for Ava from Uncle Sam with a short holiday note. An
+      owl peeks over it. Headline: A gift that fits a stocking.
+
+  - id: chicks-find-it
+    board: preschool
+    level: chicks
+    strand: reading
+    headline: "Find it!"
+    subline: "say a word, they touch the picture"
+    pages: [{level: chicks, page: 4}, {level: chicks, page: 8}]
+    title: "Preschool Find It Game and Number Pages | Printable Worksheets for Age 3"
+    description: >-
+      Say a word, your child finds and touches the picture: whistle, phone, pickle, build. Then read big numbers
+      together and count the little pictures to check. Printable preschool pages for age 3 from Chicks, the first
+      paperlessons.com level, with a short grown-up tip on every page. A few pages a day, side by side. Homeschool
+      preschool friendly, free preview on the site.
+    alt: >-
+      Two printable preschool worksheets: a find-it grid with pictures of a whistle, a phone, a pickle and a child
+      building blocks, each with its word, and a page of big numbers 3, 2, 4 and 1 with that many small pictures
+      under each. Headline: Find it!
+
+  - id: cubs-reading-puzzles
+    board: grade23
+    level: cubs
+    strand: reading
+    headline: "Word puzzles"
+    subline: "missing letters and picture crosswords"
+    pages: [{level: cubs, page: 2}, {level: cubs, page: 3}]
+    title: "Spelling Word Puzzles for Grade 2 | Printable Missing Letters and Picture Crosswords"
+    description: >-
+      Look at the picture, stretch out the word's sounds, write the missing letters: f_n, st_r, b_ll, k_te. Then
+      tiny picture crosswords where two words share a letter. Printable grade 2 spelling and phonics pages from
+      Cubs, made for age 5, about two grades ahead of school. A few pages a day. Homeschool friendly, with a free
+      preview on paperlessons.com.
+    alt: >-
+      Two printable grade 2 worksheets: pictures of a fan, a star, a ball and a kite with letter boxes to fill the
+      missing letter, and two small picture crosswords (key and duck, cake and goat) with arrows. Headline: Word
+      puzzles.
+
+  - id: owls-math-two-by-two
+    board: upper_math
+    level: owls
+    strand: math
+    headline: "Two-digit multiplying"
+    subline: "times the ones, times the tens, add"
+    pages: [{level: owls, page: 7}, {level: owls, page: 9}]
+    title: "2-Digit by 2-Digit Multiplication Worksheets | Grade 4 Printable Math"
+    description: >-
+      Multiply by the ones, then by the tens (with the 0 already there), then add the two lines. Boxes for every
+      digit and carry keep the work tidy. Plus fraction friends: equal bars cut into more parts to find equivalent
+      fractions. Printable grade 4 math from Owls, made for age 7, about two grades ahead of school. Homeschool
+      friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 4 math worksheets: four two-digit by two-digit multiplication problems like 44 × 25 with
+      boxes for partial products and carries, and fraction bars showing 1/2 = ?/6 and 2/3 = ?/12. Headline:
+      Two-digit multiplying.
+
+  - id: bunnies-trace
+    board: k1
+    level: bunnies
+    strand: reading
+    headline: "Trace letters and words"
+    subline: "big and small, one at a time"
+    pages: [{level: bunnies, page: 4}, {level: bunnies, page: 5}]
+    title: "Letter and Word Tracing Worksheets for Kindergarten | Printable Handwriting Pages"
+    description: >-
+      Trace the big and small letter side by side (Aa, Bb, Cc) next to a picture that starts with its sound, then
+      trace short words like lid, jam and tub. Printable kindergarten handwriting pages from Bunnies, made for age 4,
+      with a grown-up tip at the top. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable kindergarten worksheets: capital and small letters A, B and C to trace with an apple, a bee and
+      a coat, and the words lid, jam and tub in dotted letters to trace next to their pictures. Headline: Trace
+      letters and words.
+
+  - id: pandas-math-graph
+    board: middle
+    level: pandas
+    strand: math
+    headline: "Coordinate plane"
+    subline: "read it, plot it, solve it"
+    pages: [{level: pandas, page: 8}, {level: pandas, page: 9}]
+    title: "Coordinate Plane and One-Step Equations Worksheets | Grade 6 Printable Math"
+    description: >-
+      Read and plot points in all four quadrants, find distances between points, then solve one-step equations like
+      y + 24 = 51. Printable grade 6 math from Pandas, made for age 9, about two grades ahead of school, with a short
+      tip for the grown-up on every page. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 6 math worksheets: a coordinate grid from −6 to 6 with points A to D to name and points E
+      to H to plot, and ten one-step equations like y + 24 = 51 with answer boxes. Headline: Coordinate plane.
+
+  - id: otters-reading-article
+    board: upper_reading
+    level: otters
+    strand: reading
+    headline: "Read the article"
+    subline: "then look back for the answers"
+    pages: [{level: otters, page: 2}, {level: otters, page: 3}]
+    title: "Nonfiction Reading Comprehension for Grade 5 | Printable Article and Questions"
+    description: >-
+      A real nonfiction article, How Sea Otters Stay Warm, with numbered paragraphs, then questions that send your
+      child back to the text: multiple choice, a detail from paragraph 3, a sentence to copy. Printable grade 5
+      reading from Otters, made for age 8, about two grades ahead of school. Homeschool friendly, free preview on
+      paperlessons.com.
+    alt: >-
+      Two printable grade 5 reading pages: an article called How Sea Otters Stay Warm in five numbered paragraphs,
+      and a page of questions about it with multiple choice answers and lines to write. Headline: Read the article.
+
+  - id: ducklings-pencil
+    board: preschool
+    level: ducklings
+    strand: pencil
+    headline: "Pencil control"
+    subline: "shape to shape, corners and curves"
+    pages: [{level: ducklings, page: 10}, {level: ducklings, page: 13}]
+    title: "Pencil Control Worksheets for Preschool | Printable Line Tracing for Ages 3–4"
+    description: >-
+      Before letters come lines. Start at the dot and stay inside the lane from a shape to its twin, then follow
+      curves and corners down to a little picture. Printable pre-writing pages for ages 3 and 4 from Ducklings on
+      paperlessons.com, a few pages a day with a grown-up beside them. Homeschool preschool friendly, free preview on
+      the site.
+    alt: >-
+      Two printable preschool pencil pages: straight lanes from a diamond to a diamond and a circle to a circle,
+      and two curvy lanes running down to a ball and a flower. Headline: Pencil control.
+
+  - id: lions-math-2
+    board: middle
+    level: lions
+    strand: math
+    headline: "Exponents and equations"
+    subline: "same base, add the exponents"
+    pages: [{level: lions, page: 6}, {level: lions, page: 7}]
+    title: "Exponent Rules and Multi-Step Equations | Grade 8 Printable Math Worksheets"
+    description: >-
+      Exponent rules one at a time (same base: add the exponents; a power of a power: multiply), then equations with
+      the letter on both sides, like 8k + 2 = 4k + 34. Printable grade 8 math from Lions, made for age 11, about two
+      grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 8 math worksheets: exponent problems like 9^−2 · 9^3 = 9^? and (7^4)^3, and six
+      equations with k on both sides with answer lines. Headline: Exponents and equations.
+
+  - id: puppies-reading-2
+    board: k1
+    level: puppies
+    strand: reading
+    headline: "Clap, split, copy"
+    subline: "syllables and first sentences"
+    pages: [{level: puppies, page: 4}, {level: puppies, page: 5}]
+    title: "Syllables and Sentence Copying Worksheets | Grade 1–2 Printable Reading"
+    description: >-
+      Clap each word and write one part in each box: grand·ma, snow·man, bath·tub. Then read a sentence and copy it
+      on the lines, one word at a time. Printable grade 1 and 2 reading and handwriting from Puppies, made for age 5,
+      about two grades ahead of school. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable reading worksheets: grandma, grandpa, snowman and bathtub with two boxes each to split into
+      syllables, and two sentences to copy on handwriting lines, Bread is made from wheat and Please open the gate.
+      Headline: Clap, split, copy.
+
+  - id: gift-grandparents-2
+    board: gifts
+    chip: "From grandma, with love"
+    headline: "A gift from far away"
+    subline: "send it by email, they print at home"
+    background: grape
+    pages:
+      - {file: marketing/instagram/posts/2026-11-08-holiday-gift/card-leo.png, crop: 0.69}
+    mascot: bunnies
+    link: gift
+    campaign: gift
+    title: "Gift for Grandkids Far Away | Printable Reading and Math Lessons, Ages 3–12"
+    description: >-
+      Live far from the grandkids? Send a gift that arrives today and lasts all year: printable reading and math
+      pages for ages 3 to 12. You get a gift card PDF to email or print, add their first name and a note, and their
+      family picks the levels and prints at home. Codes never expire. Works for every child in the house as they
+      grow.
+    alt: >-
+      A printed gift card on a purple background: a gift for Leo from Grandma with a holiday note and every level,
+      ages 3 to 12. A bunny peeks over it. Headline: A gift from far away.
+
+  - id: kittens-math-2
+    board: k1
+    level: kittens
+    strand: math
+    headline: "What comes next?"
+    subline: "then add 1, 2 and 3"
+    pages: [{level: kittens, page: 6}, {level: kittens, page: 8}]
+    title: "Number Order and Adding 2 Worksheets | Grade 1 Printable Math for Age 4"
+    description: >-
+      Write the number that comes next (3 → 4, 27 → 28), then add 2 by counting on: 13 + 2, 8 + 2. Small steps,
+      one new idea at a time. Printable grade 1 math from Kittens, made for age 4, about two grades ahead of school,
+      with a grown-up tip on every page. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 1 math worksheets: numbers 3 to 7 and 24 to 28 with arrows to boxes for the next number,
+      and ten adding 2 facts like 13 + 2 = and 8 + 2 = with answer boxes. Headline: What comes next?
+
+  - id: penguins-reading-2
+    board: middle
+    level: penguins
+    strand: reading
+    headline: "Central ideas"
+    subline: "how paragraphs build an idea"
+    pages: [{level: penguins, page: 2}, {level: penguins, page: 3}]
+    title: "Informational Text Reading Comprehension | Grade 7 Printable Article and Questions"
+    description: >-
+      An article, Life Under the Ice, about how lakes and animals get through a frozen winter, then questions on two
+      central ideas, how paragraphs build them, and an objective summary. Printable grade 7 reading from Penguins,
+      made for age 10, about two grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 7 reading pages: an article called Life Under the Ice with numbered paragraphs, and
+      questions with A to D choices and lines for a written summary. Headline: Central ideas.
+
+  - id: cubs-math-2
+    board: grade23
+    level: cubs
+    strand: math
+    headline: "Skip count, then add"
+    subline: "by 5s, by 10s, two-digit adding"
+    pages: [{level: cubs, page: 7}, {level: cubs, page: 8}]
+    title: "Skip Counting and Two-Digit Addition Worksheets | Grade 2 Printable Math"
+    description: >-
+      Count by 5s and 10s along a track and fill the gaps (130, 140, ☐, 160), then add two-digit numbers in columns
+      with a little box for the ten you carry. Printable grade 2 math from Cubs, made for age 5, about two grades
+      ahead of school. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 2 math worksheets: four number tracks counting by 10s and by 5s with empty boxes, and six
+      column additions like 61 + 22 and 19 + 46 with a small carry box. Headline: Skip count, then add.
+
+  - id: whales-math-2
+    board: middle
+    level: whales
+    strand: math
+    headline: "Algebra 1, step by step"
+    subline: "exponents and graphing lines"
+    pages: [{level: whales, page: 6}, {level: whales, page: 7}]
+    title: "Algebra 1 Worksheets: Exponent Rules and Graphing Lines | Grade 9 Printable Math"
+    description: >-
+      Simplify with positive exponents (5x⁶ · 3x³, (2x⁶)⁴, 9x⁻⁵), then graph lines like y = 2x − 3 and y = ⅓x on
+      small grids. Printable Algebra 1 practice from Whales, made for age 12, about two grades ahead of school, with a
+      short tip on every page. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable algebra worksheets: eight exponent expressions to simplify, and four small coordinate grids with
+      lines to graph, y = 2x − 3, y = 1/3 x, y = 3/2 x + 3 and y = −3/2 x + 3. Headline: Algebra 1, step by step.
+
+  - id: ducklings-math-2
+    board: preschool
+    level: ducklings
+    strand: math
+    headline: "Missing numbers"
+    subline: "count along, fill the gaps"
+    pages: [{level: ducklings, page: 7}, {level: ducklings, page: 8}]
+    title: "Missing Numbers Worksheets for Preschool and Kindergarten | Counting to 50 Printables"
+    description: >-
+      Touch each box as you count along and say the missing number out loud: 2, 3, 4, 5, 6, ☐, 8. Rows climb from
+      the teens to the 40s. Printable counting pages for ages 3 and 4 from Ducklings on paperlessons.com, a few pages
+      a day with a grown-up beside them. Homeschool preschool friendly, free preview on the site.
+    alt: >-
+      Two printable counting worksheets: rows of numbered boxes from 2 to 17 and from 26 to 44 with a few empty
+      boxes in each row. Headline: Missing numbers.
+
+  - id: owls-reading-clues
+    board: upper_reading
+    level: owls
+    strand: reading
+    headline: "Word clues"
+    subline: "what does fragile mean?"
+    pages: [{level: owls, page: 4}]
+    title: "Context Clues Worksheet for Grade 4 | Printable Vocabulary in a Story"
+    description: >-
+      A short story, The Sunflower Contest, with two bold words. Your child uses the clues around them to pick the
+      meaning, then writes the words that helped. Printable grade 4 reading from Owls, made for age 7, about two
+      grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      A printable grade 4 reading worksheet: a story called The Sunflower Contest with the words fragile and drenched
+      in bold, and questions asking what each word means. Headline: Word clues.
+
+  - id: penguins-math-2
+    board: middle
+    level: penguins
+    strand: math
+    headline: "Negative times negative"
+    subline: "see the pattern first"
+    pages: [{level: penguins, page: 7}]
+    title: "Multiplying Negative Numbers Worksheet | Grade 7 Printable Math Pattern Page"
+    description: >-
+      Why is a negative times a negative positive? Follow the pattern down the column (3 × −3, 2 × −3, 1 × −3, 0 …)
+      and each answer goes up by 3, then practice the facts. Printable grade 7 math from Penguins, made for age 10,
+      about two grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      A printable grade 7 math worksheet: a column of 3 × (−3) down to −3 × (−3) with the first answers filled in,
+      and six facts like −11 × (−11) with answer boxes. Headline: Negative times negative.
+
+  - id: kittens-reading-2
+    board: k1
+    level: kittens
+    strand: reading
+    headline: "Read it, then trace it"
+    subline: "letter teams and first sentences"
+    pages: [{level: kittens, page: 3}, {level: kittens, page: 5}]
+    title: "Blends and Sentence Tracing Worksheets | Grade 1 Printable Reading for Age 4"
+    description: >-
+      Letter teams like cl, bl, gl and sl (climb, blanket, glass, sled), then short sentences to read and trace:
+      The shark can eat. Mom can hop. Printable grade 1 reading from Kittens, made for age 4, about two grades ahead
+      of school. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 1 reading worksheets: the words climb, blanket, glass and sled with their letter team in
+      color and a gray copy to trace, and two sentences with pictures to read and trace on lines. Headline: Read
+      it, then trace it.
+
+  - id: otters-math-decimals
+    board: upper_math
+    level: otters
+    strand: math
+    headline: "Decimals and division"
+    subline: "line up the points"
+    pages: [{level: otters, page: 8}, {level: otters, page: 6}]
+    title: "Adding Decimals and Long Division Worksheets | Grade 5 Printable Math"
+    description: >-
+      Add decimals with the points lined up (99.78 + 3.9, 50.7 + 57.64), then long division with two-digit divisors
+      on squared work space. Printable grade 5 math from Otters, made for age 8, about two grades ahead of school,
+      with a grown-up tip on every page. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 5 math worksheets: six column additions of decimals with answer boxes around the decimal
+      point, and four long division problems like 918 ÷ 34 with a remainder box. Headline: Decimals and division.
+
+  - id: winter-break
+    board: grade23
+    chip: "Ages 3 to 12 · printable"
+    headline: "Winter break pages"
+    subline: "a few pages a day, then go play"
+    background: sky
+    mascot: penguins
+    campaign: winter-break
+    pages: [{level: foxes, page: 6}, {level: cubs, page: 8}]
+    link: library
+    title: "Winter Break Worksheets for Kids | Printable Reading and Math, Ages 3–12"
+    description: >-
+      Keep a little rhythm over winter break without turning it into school: a few printable reading and math pages
+      a morning, then the rest of the day is theirs. Thirteen levels for ages 3 to 12, each about two grades ahead
+      of school, with a short tip for the grown-up on every page. Pick the level that fits on paperlessons.com and
+      print a free preview first.
+    alt: >-
+      Two printable math worksheets on a light blue background: three-digit column adding like 117 + 217, and
+      two-digit adding with a carry box. A penguin peeks over them. Headline: Winter break pages.
+
+  - id: bunnies-math-2
+    board: k1
+    level: bunnies
+    strand: math
+    headline: "Write the missing numbers"
+    subline: "counting to 40"
+    pages: [{level: bunnies, page: 8}, {level: bunnies, page: 9}]
+    title: "Number Writing Worksheets for Kindergarten | Fill in the Missing Numbers to 40"
+    description: >-
+      Read each row of numbers together; at an empty box, say the number, then your child writes it. Rows run from
+      single digits into the 30s. Printable kindergarten number writing from Bunnies, made for age 4, a few pages a
+      day with a grown-up beside them. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable kindergarten math worksheets: rows of numbers from 3 to 37 in boxes with empty orange boxes to
+      write the missing numbers. Headline: Write the missing numbers.
+
+  - id: whales-reading-2
+    board: middle
+    level: whales
+    strand: reading
+    headline: "Prove it with quotes"
+    subline: "a story, then a paragraph"
+    pages: [{level: whales, page: 4}, {level: whales, page: 5}]
+    title: "Literary Analysis Worksheet for Grade 9 | Printable Story, Evidence and Paragraph"
+    description: >-
+      A short story, Second Chair, about two friends in an orchestra. Your child picks the strongest evidence, then
+      writes a paragraph about a character's feelings and quotes the story twice. Printable grade 9 reading and
+      writing from Whales, made for age 12, about two grades ahead of school. Homeschool friendly, free preview on
+      paperlessons.com.
+    alt: >-
+      Two printable grade 9 reading pages: a story called Second Chair in six numbered paragraphs, and questions with
+      A to D quotes and lines for a paragraph that quotes the story twice. Headline: Prove it with quotes.
+
+  - id: puppies-math-2
+    board: k1
+    level: puppies
+    strand: math
+    headline: "Adding to 20"
+    subline: "count on, then make a ten"
+    pages: [{level: puppies, page: 6}, {level: puppies, page: 7}]
+    title: "Addition Facts Within 20 Worksheets | Grade 1–2 Printable Math for Age 5"
+    description: >-
+      Count on along a little number track (3 + 3: 4, 5, 6), then facts within 20 like 9 + 6 and 7 + 7, where making
+      a ten first helps. Printable addition practice from Puppies, made for age 5, about two grades ahead of school.
+      A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable addition worksheets: facts like 3 + 3 with small number tracks to count on, and twelve facts
+      within 20 like 9 + 6 and 11 + 7 with answer boxes. Headline: Adding to 20.
+
+  - id: lions-reading-2
+    board: middle
+    level: lions
+    strand: reading
+    headline: "Words that set the mood"
+    subline: "a story, then look closely"
+    pages: [{level: lions, page: 2}, {level: lions, page: 3}]
+    title: "Close Reading Worksheet for Grade 8 | Printable Story with Word Choice Questions"
+    description: >-
+      A story, The Audition, about a cellist's nerves before she plays, then questions about word choice and
+      comparisons: why is the music compared to a staircase? Printable grade 8 reading from Lions, made for age 11,
+      about two grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 8 reading pages: a story called The Audition in numbered paragraphs, and questions with
+      A to D choices about what the words suggest. Headline: Words that set the mood.
+
+  - id: chicks-pencil
+    board: preschool
+    level: chicks
+    strand: pencil
+    headline: "Color it, draw the line"
+    subline: "first pencil skills for age 3"
+    pages: [{level: chicks, page: 10}, {level: chicks, page: 11}]
+    title: "First Pencil Skills for Age 3 | Printable Coloring and Line Pages for Preschool"
+    description: >-
+      One big shape to color inside, then a straight lane from the dot to a little picture. The first pencil pages,
+      made for age 3, with a short tip for the grown-up at the top. Printable pre-writing pages from Chicks on
+      paperlessons.com. A few pages a day, praise every finished line. Homeschool preschool friendly, free preview
+      on the site.
+    alt: >-
+      Two printable preschool pages: a big moon outline to color, and two straight lanes from a dot to a boat and a
+      moon. Headline: Color it, draw the line.
+
+  - id: pandas-reading-story
+    board: middle
+    level: pandas
+    strand: reading
+    headline: "Explain with evidence"
+    subline: "a story and two short answers"
+    pages: [{level: pandas, page: 4}, {level: pandas, page: 5}]
+    title: "Reading Comprehension with Evidence for Grade 6 | Printable Story and Written Answers"
+    description: >-
+      A story, Grandpa's Blue Bicycle, about fixing up an old bike together, then two written answers of 3 to 4
+      sentences that use evidence from the text. Printable grade 6 reading from Pandas, made for age 9, about two
+      grades ahead of school. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 6 reading pages: a story called Grandpa's Blue Bicycle in numbered paragraphs, and two
+      questions with lines to explain using evidence. Headline: Explain with evidence.
+
+  - id: foxes-math-big-adding
+    board: grade23
+    level: foxes
+    strand: math
+    headline: "Big adding"
+    subline: "three digits, carry the ten"
+    pages: [{level: foxes, page: 6}, {level: foxes, page: 5}]
+    title: "Three-Digit Addition with Regrouping | Grade 3 Printable Math and Reading"
+    description: >-
+      Three-digit adding in columns with little boxes for each ten you carry (117 + 217, 486 + 446). Plus a story,
+      Ada and the Bees, answered in full sentences. Printable grade 3 work from Foxes, made for age 6, about two
+      grades ahead of school. A few pages a day. Homeschool friendly, free preview on paperlessons.com.
+    alt: >-
+      Two printable grade 3 worksheets: nine three-digit column additions with carry boxes, and a story called Ada
+      and the Bees with three questions to answer in full sentences. Headline: Big adding.
+
+  - id: ducklings-reading-2
+    board: preschool
+    level: ducklings
+    strand: reading
+    headline: "Say it three times"
+    subline: "first little sentences"
+    pages: [{level: ducklings, page: 4}]
+    title: "First Sentences for Preschool | Printable Reading Page for Ages 3–4"
+    description: >-
+      Point to the picture, ask a question the sentence answers, then say it together and color a circle each time:
+      Look at the mouse. Printable early reading pages for ages 3 and 4 from Ducklings on paperlessons.com, a few
+      pages a day with a grown-up beside them. Homeschool preschool friendly, free preview on the site.
+    alt: >-
+      A printable preschool reading page: a mouse with the sentence Look at the mouse and a diaper with This is a
+      diaper, each with three circles to color. Headline: Say it three times.
+
+  - id: gift-every-child
+    board: gifts
+    chip: "Ages 3 to 12, every level"
+    headline: "One gift, every kid"
+    subline: "it grows with each child in the house"
+    background: leaf
+    pages:
+      - {file: marketing/instagram/posts/2026-11-08-holiday-gift/card-leo.png, crop: 0.69}
+    mascot: whales
+    link: gift
+    campaign: gift
+    title: "Family Gift for Siblings Ages 3–12 | Printable Reading and Math for the Whole House"
+    description: >-
+      One gift for every kid in the family: all thirteen printable reading and math levels, from age 3 to age 12.
+      Little ones start at the bottom, big kids jump in higher, and every child moves up as they grow. You get a gift
+      card PDF to print or send; they open it at paperlessons.com and print at home. Codes never expire.
+    alt: >-
+      A printed gift card on a green background: a gift for Leo from Grandma with every level, ages 3 to 12. A whale
+      peeks over it. Headline: One gift, every kid.
