@@ -51,7 +51,7 @@ const Pic: React.FC<{ slug: string; size: number }> = ({ slug, size }) => (
 
 const TopBar: React.FC<{ i: number; n: number }> = ({ i, n }) => (
   <div style={{ position: "absolute", top: 70, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 22 }}>
-    <Logo width={250} />
+    <Logo width={540} />
     <div style={{ display: "flex", gap: 14 }}>
       {Array.from({ length: n }).map((_, k) => (
         <div key={k} style={{ width: k === i ? 54 : 22, height: 22, borderRadius: 11, background: k <= i ? INK : "rgba(31,42,68,.22)" }} />
@@ -164,7 +164,7 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
   return (
     <AbsoluteFill style={{ background: s.bg }}>
       <TopBar i={i} n={s.questions.length} />
-      <div style={{ position: "absolute", top: 250, height: 1060, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40, transform: `scale(${pop})` }}>
+      <div style={{ position: "absolute", top: 330, height: 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40, transform: `scale(${pop})` }}>
         {q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
         <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}>{q.prompt}</div>
         {q.pic ? <div style={{ background: "#fff", borderRadius: 40, border: `6px solid ${INK}`, padding: 20 }}><Pic slug={q.pic} size={300} /></div> : null}
@@ -199,7 +199,7 @@ const Hook: React.FC<{ s: ChallengeSpec }> = ({ s }) => {
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill style={{ background: s.bg, alignItems: "center", justifyContent: "center", paddingBottom: 240 }}>
-      <div style={{ position: "absolute", top: 70 }}><Logo width={250} /></div>
+      <div style={{ position: "absolute", top: 80 }}><Logo width={540} /></div>
       {s.mascot ? (
         <div style={{ width: 300, height: 300, borderRadius: 150, background: "#fff", border: `7px solid ${INK}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 50, transform: `scale(${a})` }}>
           <Img src={staticFile(BY_SLUG[s.mascot].mascot)} style={{ width: 230, height: 230 }} />
