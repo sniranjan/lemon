@@ -5,6 +5,7 @@
 - fonts/: Fredoka Bold and Gochi Hand (brand fonts)
 - logo.png, mascots/<slug>.svg
 - levels.json: slug, name, age, grade, color (hex), mascot path
+- pictures/<slug>.svg: the word pictures (assets/pictures)
 - pages/<slug>-<n>.png: every inner page of the free preview PDFs (out/previews), 1080px wide
 """
 
@@ -47,6 +48,9 @@ def main() -> None:
             if not dest.with_suffix(".png").exists():
                 subprocess.run(["pdftoppm", "-f", str(p), "-l", str(p), "-scale-to-x", "1080", "-scale-to-y", "-1",
                                 "-png", "-singlefile", pdf, dest], check=True)
+    (OUT / "pictures").mkdir(exist_ok=True)
+    for svg in L.PICTURES.glob("*.svg"):
+        shutil.copy(svg, OUT / "pictures" / svg.name)
     (OUT / "levels.json").write_text(json.dumps(levels, indent=1))
     print(f"assets in {OUT.relative_to(L.ROOT)}: {len(levels)} levels, {len(list((OUT / 'pages').glob('*.png')))} pages")
 
