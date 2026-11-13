@@ -129,24 +129,25 @@ def to_jpeg(src: Path, tmp: Path) -> Path:
 
 
 def host(src: Path, tmp: Path, dry_run: bool) -> str:
-    jpg = to_jpeg(src, tmp)
-    name = hashlib.sha256(jpg.read_bytes()).hexdigest()[:16] + ".jpg"
+    video = src.suffix.lower() == ".mp4"
+    jpg = src if video else to_jpeg(src, tmp)
+    name = hashlib.sha256(jpg.read_bytes()).hexdigest()[:16] + (".mp4" if video else ".jpg")
     url = f"{MEDIA_BASE}/{name}"
     if dry_run:
         return url
     # Skip the upload when the site already serves this exact file.
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, method="HEAD", headers=UA), timeout=20):
+        with urllib.request.urlopen(urllib.request.Request(url, headers={**UA, "Range": "bytes=0-0"}), timeout=20):
             return url
     except urllib.error.URLError:
         pass
     subprocess.run(
-        ["npx", "wrangler", "r2", "object", "put", f"{BUCKET}/social/{name}", "--file", str(jpg),
-         "--content-type", "image/jpeg", "--remote"],
+        ["npx", "wrangler", "r2", "object", "put", f"{BUCKET}/social/{name}", "--file", str(jpg.resolve()),
+         "--content-type", "video/mp4" if video else "image/jpeg", "--remote"],
         cwd=ROOT / "apps" / "web", check=True, capture_output=True,
     )
-    with urllib.request.urlopen(urllib.request.Request(url, method="HEAD", headers=UA), timeout=20) as resp:
-        if resp.status != 200:
+    with urllib.request.urlopen(urllib.request.Request(url, headers={**UA, "Range": "bytes=0-0"}), timeout=20) as resp:
+        if resp.status not in (200, 206):
             sys.exit(f"uploaded {name} but {url} answers {resp.status}")
     return url
 
@@ -154,15 +155,15 @@ def host(src: Path, tmp: Path, dry_run: bool) -> str:
 # ---------------------------------------------------------------- publishing
 
 
-def wait_ready(container: str, token: str) -> None:
-    for _ in range(30):
+def wait_ready(container: str, token: str, tries: int = 30) -> None:
+    for _ in range(tries):
         status = graph("GET", container, token, fields="status_code,status").get("status_code")
         if status == "FINISHED":
             return
         if status in ("ERROR", "EXPIRED"):
             raise GraphError(f"container {container} is {status}")
         time.sleep(2)
-    raise GraphError(f"container {container} not ready after 60s")
+    raise GraphError(f"container {container} not ready after {tries * 2}s")
 
 
 def create_image(ig: str, token: str, url: str, **extra: str) -> str:
@@ -186,6 +187,13 @@ def slide_alts(alt: str, n: int) -> list[str]:
 
 
 def publish(ig: str, token: str, urls: list[str], caption: str, alt: str, story: bool) -> dict:
+    if urls and urls[0].endswith(".mp4"):
+        # A reel (also shown on the grid); the cover is the first frame (the hook). Video takes a while to process.
+        kind = {"media_type": "STORIES"} if story else {"media_type": "REELS", "caption": caption, "share_to_feed": "true", "thumb_offset": "300"}
+        container = graph("POST", f"{ig}/media", token, video_url=urls[0], **kind)["id"]
+        wait_ready(container, token, tries=150)
+        media_id = graph("POST", f"{ig}/media_publish", token, creation_id=container)["id"]
+        return graph("GET", media_id, token, fields="id,media_type,permalink,timestamp")
     if story:
         container = create_image(ig, token, urls[0], media_type="STORIES")
     elif len(urls) == 1:
@@ -334,7 +342,9 @@ def main() -> None:
         done = [e for e in read_log() if e["key"] == key]
         if done and not args.force and not args.dry_run:
             sys.exit(f"already posted {done[-1]['posted_at']}: {done[-1].get('permalink')} (use --force to post again)")
-        if args.story:
+        if args.story and target.is_dir() and (target / "reel.mp4").exists():
+            images, caption, alt = [target / "reel.mp4"], "", ""
+        elif args.story:
             images = sorted(target.glob("*.png")) if target.is_dir() else [target]
             if len(images) != 1:
                 sys.exit("--story takes exactly one image")
@@ -342,13 +352,16 @@ def main() -> None:
         else:
             if not target.is_dir():
                 sys.exit("a feed post is a folder with caption.md (use --story for a single image)")
-            images, caption, alt = read_post(target)
+            if (target / "reel.mp4").exists():
+                images, caption, alt = [target / "reel.mp4"], section((target / "caption.md").read_text(), "Caption"), ""
+            else:
+                images, caption, alt = read_post(target)
             if len(images) > 10:
                 sys.exit("a carousel takes at most 10 images")
 
         with tempfile.TemporaryDirectory() as tmp:
             urls = [host(img, Path(tmp), args.dry_run) for img in images]
-        kind = "story" if args.story else ("carousel" if len(urls) > 1 else "image post")
+        kind = "story" if args.story else ("reel" if urls[0].endswith(".mp4") else "carousel" if len(urls) > 1 else "image post")
         print(f"{kind}: {len(urls)} image(s)")
         for img, url in zip(images, urls):
             print(f"  {img} → {url}")

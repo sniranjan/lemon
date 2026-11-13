@@ -1,13 +1,12 @@
-# Level reel 12: Lions (age 11, Grade 8 work)
+# Lions (age 11)
 
-Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
-story to the "Lions" highlight (cover: stories/highlights/levels/12-lions.png).
+Add a trending sound in the app. After posting: Add to story, then add it to the "Lions" highlight (cover: stories/highlights/levels/12-lions.png).
 
 ## Caption
 
 Can your 11-year-old do these? 🦁
 
-5 quick questions from the Lions level (Grade 8 work): exponents, square roots, right triangles, lines. 4 seconds each. Pause, ask them, and see how far they get.
+5 quick questions: the Lions level (Grade 8 work). 4 seconds each. Pause, ask them, and see how far they get.
 
 Comment their score: x/5 👇
 

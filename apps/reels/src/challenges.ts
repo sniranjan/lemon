@@ -12,17 +12,23 @@ const tint = (hex: string, k = 0.62) => {
 
 type Q = Omit<Question, "level">;
 
+// Ages 3–4: play, not a test. Gentle hook and outro, and the last question is a labeled bonus stretch.
+const young = (age: number) => age <= 4;
+const hookFor = (age: number) => (young(age) ? ["Play along", "with your", `${age}-year-old!`] : ["Can your", `${age}-year-old`, "do these?"]);
+const outroFor = (age: number, n: number) => (young(age) ? ["Every try", "counts 🎉", "How did they do? 👇"] : ["How many did", "they get?", `Comment x/${n} 👇`]);
+const withBonus = <T extends { bonus?: boolean }>(age: number, qs: T[]) => (young(age) ? qs.map((q, i) => (i === qs.length - 1 ? { ...q, bonus: true } : q)) : qs);
+
 const level = (slug: string, seconds: number, questions: Q[]): ChallengeSpec => {
   const lv = BY_SLUG[slug];
   return {
     id: `Level-${slug}`,
     bg: tint(lv.color),
-    hook: ["Can your", `${lv.age}-year-old`, "do these?"],
+    hook: hookFor(lv.age),
     mascot: slug,
     hookSub: `${lv.name} level · ${lv.grade} work\n${seconds} seconds each 👀`,
     seconds,
-    questions: questions.map((q) => ({ ...q, level: slug })),
-    outro: ["How many did", "they get?", `Comment x/${questions.length} 👇`],
+    questions: withBonus(lv.age, questions).map((q) => ({ ...q, level: slug })),
+    outro: outroFor(lv.age, questions.length),
   };
 };
 
@@ -35,9 +41,9 @@ export const CHALLENGES: ChallengeSpec[] = [
     { tag: "Find it", prompt: "Which one doesn't belong?", choices: [{ pic: "cat" }, { pic: "dog" }, { pic: "car" }, { pic: "cow" }], correct: 2, note: "the car is not an animal" },
   ]),
   level("ducklings", 5, [
-    { tag: "Numbers", prompt: "What comes next?", big: "26, 27, 28, ?", answer: "29" },
+    { tag: "Numbers", prompt: "What comes next?", big: "3, 4, ?", answer: "5" },
     { tag: "Words", prompt: "Which one can fly?", choices: [{ pic: "dog" }, { pic: "pig" }, { pic: "bee" }, { pic: "cow" }], correct: 2, note: "The bee can fly." },
-    { tag: "Numbers", prompt: "Can they read it?", big: "47", answer: "forty-seven" },
+    { tag: "Numbers", prompt: "Can they read it?", big: "8", answer: "eight" },
     { tag: "Numbers", prompt: "What's missing?", big: "5, 6, ?, 8", answer: "7" },
     { tag: "Numbers", prompt: "Count on!", big: "18, 19, ?", answer: "20" },
   ]),
@@ -45,15 +51,15 @@ export const CHALLENGES: ChallengeSpec[] = [
     { tag: "Sounds", prompt: "What sound does it start with?", pic: "sun", choices: [{ label: "b" }, { label: "s" }, { label: "m" }], correct: 1 },
     { tag: "Sounds", prompt: "Put the sounds together", big: "c + at = ?", answer: "cat" },
     { tag: "Letters", prompt: "Which one is a small b?", choices: [{ label: "d" }, { label: "b" }, { label: "p" }], correct: 1 },
-    { tag: "Numbers", prompt: "What's missing?", big: "38, 39, ?, 41", answer: "40" },
     { tag: "Sounds", prompt: "What sound does it start with?", pic: "fish", choices: [{ label: "f" }, { label: "p" }, { label: "t" }], correct: 0 },
+    { tag: "Numbers", prompt: "What's missing?", big: "38, 39, ?, 41", answer: "40" },
   ]),
   level("kittens", 4, [
     { tag: "Rhymes", prompt: "Which one rhymes with hat?", choices: [{ pic: "dog", label: "dog" }, { pic: "cat", label: "cat" }, { pic: "sun", label: "sun" }], correct: 1 },
     { tag: "Letter teams", prompt: "Which team starts ship?", pic: "ship", choices: [{ label: "sh" }, { label: "ch" }, { label: "th" }], correct: 0 },
-    { tag: "Adding", prompt: "Quick!", big: "13 + 2 = ?", answer: "15" },
+    { tag: "Adding", prompt: "Plus one!", big: "5 + 1 = ?", answer: "6" },
+    { tag: "Adding", prompt: "Plus two!", big: "3 + 2 = ?", answer: "5" },
     { tag: "Adding", prompt: "Careful!", big: "99 + 1 = ?", answer: "100" },
-    { tag: "Numbers", prompt: "What comes next?", big: "118, 119, ?", answer: "120" },
   ]),
   level("puppies", 4, [
     { tag: "Endings", prompt: "Add the ending", big: "run + ing = ?", answer: "running", note: "run doubles its n" },
@@ -119,3 +125,22 @@ export const CHALLENGES: ChallengeSpec[] = [
     { tag: "Exponent rules", prompt: "Trick question?", big: "2⁻¹ = ?", answer: "1/2" },
   ]),
 ];
+
+// Topic reels: several per level, one syllabus topic each (data in ./topics/*.ts).
+export type TopicSpec = { level: string; topic: string; seconds: number; questions: Q[] };
+
+export const topicReel = (t: TopicSpec): ChallengeSpec => {
+  const lv = BY_SLUG[t.level];
+  const id = `Topic-${t.level}-${t.topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+  return {
+    id,
+    bg: tint(lv.color),
+    hook: hookFor(lv.age),
+    mascot: t.level,
+    topic: t.topic,
+    hookSub: `${lv.name} level · ${lv.grade} work\n${t.seconds} seconds each 👀`,
+    seconds: t.seconds,
+    questions: withBonus(lv.age, t.questions).map((q) => ({ ...q, tag: q.tag ?? t.topic, level: t.level })),
+    outro: outroFor(lv.age, t.questions.length),
+  };
+};

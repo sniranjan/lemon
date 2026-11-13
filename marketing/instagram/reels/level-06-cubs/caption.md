@@ -1,13 +1,12 @@
-# Level reel 06: Cubs (age 5, Grade 2 work)
+# Cubs (age 5)
 
-Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
-story to the "Cubs" highlight (cover: stories/highlights/levels/06-cubs.png).
+Add a trending sound in the app. After posting: Add to story, then add it to the "Cubs" highlight (cover: stories/highlights/levels/06-cubs.png).
 
 ## Caption
 
 Can your 5-year-old do these? 🐻
 
-5 quick questions from the Cubs level (Grade 2 work): kinds of words, word puzzle, tens and ones, skip counting, adding. 4 seconds each. Pause, ask them, and see how far they get.
+5 quick questions: the Cubs level (Grade 2 work). 4 seconds each. Pause, ask them, and see how far they get.
 
 Comment their score: x/5 👇
 

@@ -3,11 +3,12 @@
 // and on each answer the level it comes from.
 import React from "react";
 import { AbsoluteFill, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { BY_SLUG, CORAL, CREAM, HAND, HEAD, INK, Logo, SAFE } from "./brand";
+import { BY_SLUG, CORAL, CREAM, HAND, HEAD, INK, Logo, Rich, SAFE } from "./brand";
 
 export type Choice = { label?: string; pic?: string };
 export type Question = {
   tag?: string; // chip over the question, e.g. "Age 7"
+  bonus?: boolean; // the stretch question: "Bonus ⭐" chip, so a miss is fine
   prompt: string; // the question, e.g. "What comes next?"
   pic?: string; // one big picture above the choices
   row?: { pic: string; n: number }; // a row of pictures to count
@@ -24,6 +25,7 @@ export type ChallengeSpec = {
   hook: string[]; // big lines on the first frame
   hookSub: string;
   mascot?: string; // level slug: its mascot on the first frame
+  topic?: string; // topic chip on the first frame, e.g. "Times tables"
   seconds: number; // timer per question
   questions: Question[];
   outro: string[]; // the comment prompt
@@ -84,10 +86,10 @@ const BigLine: React.FC<{ text: string; answer?: string; reveal: number }> = ({ 
     <div style={{ ...HEAD, fontSize: size, textAlign: "center", whiteSpace: "nowrap" }}>
       {parts.map((p, k) => (
         <React.Fragment key={k}>
-          {p}
+          <Rich text={p} />
           {k < parts.length - 1 ? (
             reveal > 0 && answer ? (
-              <span style={{ color: CORAL, display: "inline-block", transform: `scale(${0.6 + 0.4 * reveal})` }}>{answer}</span>
+              <span style={{ color: CORAL, display: "inline-block", transform: `scale(${0.6 + 0.4 * reveal})` }}><Rich text={answer} /></span>
             ) : (
               <span style={{ display: "inline-block", minWidth: size * 0.9, border: `6px dashed ${INK}`, borderRadius: 24, padding: "0 18px", lineHeight: 1.1 }}>?</span>
             )
@@ -116,7 +118,7 @@ const Choices: React.FC<{ q: Question; reveal: number }> = ({ q, reveal }) => {
                 display: "flex", alignItems: "center", justifyContent: "center", ...HEAD, fontSize: 130,
                 opacity: reveal > 0 && !right ? 1 - 0.6 * reveal : 1, transform: `scale(${on ? 1 + 0.08 * reveal : 1})`,
               }}>
-                {c.label}
+                <Rich text={c.label ?? ""} />
                 {on ? <div style={{ position: "absolute", right: -22, top: -28, width: 96, height: 96, borderRadius: 48, background: GREEN, color: "#fff", ...HEAD, fontSize: 66, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${reveal})` }}>✓</div> : null}
               </div>
             </React.Fragment>
@@ -141,7 +143,7 @@ const Choices: React.FC<{ q: Question; reveal: number }> = ({ q, reveal }) => {
           }}>
             {pics ? null : <div style={{ ...HEAD, fontSize: 60, color: CORAL }}>{"ABCD"[k]}</div>}
             {c.pic ? <Pic slug={c.pic} size={cols === 2 ? 220 : 150} /> : null}
-            {c.label ? <div style={{ ...HEAD, fontSize: pics ? 70 : 64 }}>{c.label}</div> : null}
+            {c.label ? <div style={{ ...HEAD, fontSize: pics ? 70 : 64 }}><Rich text={c.label} /></div> : null}
             {reveal > 0 && right ? (
               <div style={{ position: "absolute", right: -18, top: -24, width: 86, height: 86, borderRadius: 43, background: GREEN, color: "#fff", ...HEAD, fontSize: 60, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${reveal})` }}>✓</div>
             ) : null}
@@ -165,8 +167,9 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
     <AbsoluteFill style={{ background: s.bg }}>
       <TopBar i={i} n={s.questions.length} />
       <div style={{ position: "absolute", top: 330, height: 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40, transform: `scale(${pop})` }}>
-        {q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
-        <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}>{q.prompt}</div>
+        {q.bonus ? <div style={{ ...HEAD, fontSize: 56, background: CORAL, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>Bonus ⭐</div>
+          : q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
+        <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}><Rich text={q.prompt} /></div>
         {q.pic ? <div style={{ background: "#fff", borderRadius: 40, border: `6px solid ${INK}`, padding: 20 }}><Pic slug={q.pic} size={300} /></div> : null}
         {q.row ? (
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, width: 880 }}>
@@ -175,10 +178,10 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
         ) : null}
         {q.big ? <div style={{ marginTop: 30 }}><BigLine text={q.big} answer={q.answer} reveal={reveal} /></div> : null}
         {q.big && !q.big.includes("?") && q.answer && reveal > 0 ? (
-          <div style={{ ...HEAD, fontSize: 100, color: CORAL, transform: `scale(${0.6 + 0.4 * reveal})` }}>{q.answer}</div>
+          <div style={{ ...HEAD, fontSize: 100, color: CORAL, transform: `scale(${0.6 + 0.4 * reveal})` }}><Rich text={q.answer} /></div>
         ) : null}
         {q.choices ? <Choices q={q} reveal={reveal} /> : null}
-        {q.note && reveal > 0 ? <div style={{ ...HAND, fontSize: 60, color: INK, textAlign: "center", opacity: reveal }}>{q.note}</div> : null}
+        {q.note && reveal > 0 ? <div style={{ ...HAND, fontSize: 60, color: INK, textAlign: "center", opacity: reveal }}><Rich text={q.note} /></div> : null}
       </div>
       {reveal > 0.05 ? (
         <div style={{ position: "absolute", top: 1360, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: reveal }}>
@@ -205,6 +208,7 @@ const Hook: React.FC<{ s: ChallengeSpec }> = ({ s }) => {
           <Img src={staticFile(BY_SLUG[s.mascot].mascot)} style={{ width: 230, height: 230 }} />
         </div>
       ) : null}
+      {s.topic ? <div style={{ ...HEAD, fontSize: 70, background: INK, color: "#fff", borderRadius: 999, padding: "12px 48px", marginBottom: 40, transform: `scale(${a})` }}>{s.topic}</div> : null}
       <div style={{ ...HEAD, fontSize: 124, textAlign: "center", transform: `scale(${a})`, padding: `0 ${SAFE.side}px` }}>
         {s.hook.map((l, k) => <div key={k}>{l}</div>)}
       </div>

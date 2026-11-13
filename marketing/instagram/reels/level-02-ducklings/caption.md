@@ -1,15 +1,14 @@
-# Level reel 02: Ducklings (age 3, K work)
+# Ducklings (age 3)
 
-Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
-story to the "Ducklings" highlight (cover: stories/highlights/levels/02-ducklings.png).
+Add a trending sound in the app. After posting: Add to story, then add it to the "Ducklings" highlight (cover: stories/highlights/levels/02-ducklings.png).
 
 ## Caption
 
-Can your 3-year-old do these? 🦆
+Play along with your 3-year-old! 🦆
 
-5 quick questions from the Ducklings level (K work): numbers, words. 5 seconds each. Pause, ask them, and see how far they get.
+5 little questions: the Ducklings level (K work). Point, say it together, and cheer every try. The last one is a bonus stretch ⭐
 
-Comment their score: x/5 👇
+How did they do? 👇
 
 Free Ducklings preview pages: link in bio.
 

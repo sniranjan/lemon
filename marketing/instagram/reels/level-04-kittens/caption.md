@@ -1,15 +1,14 @@
-# Level reel 04: Kittens (age 4, Grade 1 work)
+# Kittens (age 4)
 
-Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
-story to the "Kittens" highlight (cover: stories/highlights/levels/04-kittens.png).
+Add a trending sound in the app. After posting: Add to story, then add it to the "Kittens" highlight (cover: stories/highlights/levels/04-kittens.png).
 
 ## Caption
 
-Can your 4-year-old do these? 🐱
+Play along with your 4-year-old! 🐱
 
-5 quick questions from the Kittens level (Grade 1 work): rhymes, letter teams, adding, numbers. 4 seconds each. Pause, ask them, and see how far they get.
+5 little questions: the Kittens level (Grade 1 work). Point, say it together, and cheer every try. The last one is a bonus stretch ⭐
 
-Comment their score: x/5 👇
+How did they do? 👇
 
 Free Kittens preview pages: link in bio.
 

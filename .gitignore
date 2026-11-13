@@ -14,3 +14,6 @@ apps/web/src/data/ladder.json
 
 # secrets
 .env
+
+# Rendered reels (rebuild: apps/reels/render-all.sh, then scripts/marketing/reel_package.py)
+marketing/instagram/reels/**/reel.mp4

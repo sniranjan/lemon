@@ -1,13 +1,12 @@
-# Level reel 08: Owls (age 7, Grade 4 work)
+# Owls (age 7)
 
-Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
-story to the "Owls" highlight (cover: stories/highlights/levels/08-owls.png).
+Add a trending sound in the app. After posting: Add to story, then add it to the "Owls" highlight (cover: stories/highlights/levels/08-owls.png).
 
 ## Caption
 
 Can your 7-year-old do these? 🦉
 
-5 quick questions from the Owls level (Grade 4 work): word clues, multiplying, division, factors, fraction friends. 4 seconds each. Pause, ask them, and see how far they get.
+5 quick questions: the Owls level (Grade 4 work). 4 seconds each. Pause, ask them, and see how far they get.
 
 Comment their score: x/5 👇
 

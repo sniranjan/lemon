@@ -1,0 +1,73 @@
+"""Copy rendered challenge reels into marketing/instagram/reels with a caption each.
+
+    apps/reels/render-all.sh                      # render first (out/Level-*.mp4, out/Topic-*.mp4)
+    uv run python scripts/marketing/reel_package.py
+
+Level reels → reels/level-NN-<slug>/, topic reels → reels/topics/NN-<slug>/<topic>/ (reel.mp4 + caption.md).
+Topics are read from apps/reels/src/topics/*.ts (level, topic, seconds per block).
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import shutil
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+APP = ROOT / "apps" / "reels"
+OUT = ROOT / "marketing" / "instagram" / "reels"
+LEVELS = json.loads((APP / "public" / "levels.json").read_text())
+INDEX = {lv["slug"]: i for i, lv in enumerate(LEVELS, 1)}
+EMOJI = {"chicks": "🐥", "ducklings": "🦆", "bunnies": "🐰", "kittens": "🐱", "puppies": "🐶", "cubs": "🐻", "foxes": "🦊",
+         "owls": "🦉", "otters": "🦦", "pandas": "🐼", "penguins": "🐧", "lions": "🦁", "whales": "🐳"}
+TAGS = "#homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons"
+
+
+def slugify(s: str) -> str:
+    return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", s.lower()))
+
+
+def caption(lv: dict, topic: str | None, seconds: int) -> str:
+    age, name, grade = lv["age"], lv["name"], lv["grade"]
+    what = f"{topic}, from the {name} level ({grade} work)" if topic else f"the {name} level ({grade} work)"
+    i = INDEX[lv["slug"]]
+    hl = f'Add to story, then add it to the "{name}" highlight (cover: stories/highlights/levels/{i:02d}-{lv["slug"]}.png).'
+    if age <= 4:
+        body = (f"Play along with your {age}-year-old! {EMOJI[lv['slug']]}\n\n5 little questions: {what}. Point, say it "
+                f"together, and cheer every try. The last one is a bonus stretch ⭐\n\nHow did they do? 👇")
+    else:
+        body = (f"Can your {age}-year-old do these? {EMOJI[lv['slug']]}\n\n5 quick questions: {what}. {seconds} seconds "
+                f"each. Pause, ask them, and see how far they get.\n\nComment their score: x/5 👇")
+    return (f"# {name}{' · ' + topic if topic else ''} (age {age})\n\nAdd a trending sound in the app. After posting: {hl}\n\n"
+            f"## Caption\n\n{body}\n\nFree {name} preview pages: link in bio.\n\n#{age}yearold {TAGS}\n")
+
+
+def copy(src: Path, dest: Path, text: str) -> None:
+    dest.mkdir(parents=True, exist_ok=True)
+    shutil.copy(src, dest / "reel.mp4")
+    (dest / "caption.md").write_text(text)
+
+
+def main() -> None:
+    n = 0
+    for lv in LEVELS:
+        src = APP / "out" / f"Level-{lv['slug']}.mp4"
+        if src.exists():
+            copy(src, OUT / f"level-{INDEX[lv['slug']]:02d}-{lv['slug']}", caption(lv, None, 4))
+            n += 1
+    by_slug = {lv["slug"]: lv for lv in LEVELS}
+    for ts in sorted((APP / "src" / "topics").glob("*.ts")):
+        for level, topic, secs in re.findall(r'level: "(\w+)",\s*topic: "([^"]+)",\s*seconds: (\d+)', ts.read_text()):
+            src = APP / "out" / f"Topic-{level}-{slugify(topic)}.mp4"
+            if not src.exists():
+                print("missing render:", src.name)
+                continue
+            lv = by_slug[level]
+            copy(src, OUT / "topics" / f"{INDEX[level]:02d}-{level}" / slugify(topic), caption(lv, topic, int(secs)))
+            n += 1
+    print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

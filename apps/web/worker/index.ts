@@ -57,10 +57,10 @@ app.get("/api/previews/:slug", async (c) => {
   });
 });
 
-// Images for social posts (scripts/marketing/ig_publish.py uploads them to R2 as social/<hash>.jpg).
-// Instagram's API only takes media by public URL, so it fetches them from here. Names are content
-// hashes, so the files never change and can be cached forever.
-const SOCIAL_MEDIA = /^[a-f0-9]{16}\.jpg$/;
+// Images and reel videos for social posts (scripts/marketing/ig_publish.py uploads them to R2 as
+// social/<hash>.jpg or .mp4). Instagram's API only takes media by public URL, so it fetches them from here.
+// Names are content hashes, so the files never change and can be cached forever.
+const SOCIAL_MEDIA = /^[a-f0-9]{16}\.(jpg|mp4)$/;
 
 app.get("/media/social/:name", async (c) => {
   const name = c.req.param("name");
@@ -69,7 +69,8 @@ app.get("/media/social/:name", async (c) => {
   if (!obj) return c.notFound();
   return new Response(obj.body, {
     headers: {
-      "content-type": "image/jpeg",
+      "content-type": name.endsWith(".mp4") ? "video/mp4" : "image/jpeg",
+      "content-length": String(obj.size),
       "cache-control": "public, max-age=31536000, immutable",
       etag: obj.httpEtag,
     },
