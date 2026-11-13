@@ -4,7 +4,7 @@ Cover: the first frame. Sound: a trending suspense sound.
 
 ## Caption
 
-Ask your kid: which is bigger? 🤔 #2 trips up a lot of grown-ups too.
+Ask your kid: which is bigger? 🤔 Careful, #2 is sneaky.
 
 Pause on each one and let them explain why. Then comment their score: x/5 👇
 

@@ -6,6 +6,6 @@ Cover: the first frame. Sound: a trending quiz / ticking sound in the app.
 
 Hand them your phone 📱 How far do they get before they're stuck?
 
-Age 4 rhymes ➜ age 11 algebra, 3 seconds each. Comment the age where they stopped 👇 (No judgment: most kids don't get past their own age, and that's the point of practice.)
+Age 4 rhymes ➜ age 11 algebra, 3 seconds each. Comment the age where they stopped 👇 No judgment, it's just for fun.
 
 #momlife #parentinghacks #homeschool #mathforkids #kidsquiz #learningthroughplay #printableworksheets #paperlessons
