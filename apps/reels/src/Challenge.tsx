@@ -9,7 +9,9 @@ export type Choice = { label?: string; pic?: string };
 export type Question = {
   tag?: string; // chip over the question, e.g. "Age 7"
   prompt: string; // the question, e.g. "What comes next?"
-  big?: string; // big line; a "?" in it is where the answer appears
+  pic?: string; // one big picture above the choices
+  row?: { pic: string; n: number }; // a row of pictures to count
+  big?: string; // big line; a "?" in it is where the answer appears (no "?": the answer shows under it)
   choices?: Choice[]; // or choices (words or pictures); `correct` is the right one's index
   correct?: number;
   answer?: string; // replaces the "?" in `big`
@@ -21,6 +23,7 @@ export type ChallengeSpec = {
   bg: string;
   hook: string[]; // big lines on the first frame
   hookSub: string;
+  mascot?: string; // level slug: its mascot on the first frame
   seconds: number; // timer per question
   questions: Question[];
   outro: string[]; // the comment prompt
@@ -164,7 +167,16 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
       <div style={{ position: "absolute", top: 250, height: 1060, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40, transform: `scale(${pop})` }}>
         {q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
         <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}>{q.prompt}</div>
+        {q.pic ? <div style={{ background: "#fff", borderRadius: 40, border: `6px solid ${INK}`, padding: 20 }}><Pic slug={q.pic} size={300} /></div> : null}
+        {q.row ? (
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, width: 880 }}>
+            {Array.from({ length: q.row.n }).map((_, k) => <Pic key={k} slug={q.row!.pic} size={q.row!.n > 5 ? 150 : 170} />)}
+          </div>
+        ) : null}
         {q.big ? <div style={{ marginTop: 30 }}><BigLine text={q.big} answer={q.answer} reveal={reveal} /></div> : null}
+        {q.big && !q.big.includes("?") && q.answer && reveal > 0 ? (
+          <div style={{ ...HEAD, fontSize: 100, color: CORAL, transform: `scale(${0.6 + 0.4 * reveal})` }}>{q.answer}</div>
+        ) : null}
         {q.choices ? <Choices q={q} reveal={reveal} /> : null}
         {q.note && reveal > 0 ? <div style={{ ...HAND, fontSize: 60, color: INK, textAlign: "center", opacity: reveal }}>{q.note}</div> : null}
       </div>
@@ -188,10 +200,15 @@ const Hook: React.FC<{ s: ChallengeSpec }> = ({ s }) => {
   return (
     <AbsoluteFill style={{ background: s.bg, alignItems: "center", justifyContent: "center", paddingBottom: 240 }}>
       <div style={{ position: "absolute", top: 70 }}><Logo width={250} /></div>
+      {s.mascot ? (
+        <div style={{ width: 300, height: 300, borderRadius: 150, background: "#fff", border: `7px solid ${INK}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 50, transform: `scale(${a})` }}>
+          <Img src={staticFile(BY_SLUG[s.mascot].mascot)} style={{ width: 230, height: 230 }} />
+        </div>
+      ) : null}
       <div style={{ ...HEAD, fontSize: 124, textAlign: "center", transform: `scale(${a})`, padding: `0 ${SAFE.side}px` }}>
         {s.hook.map((l, k) => <div key={k}>{l}</div>)}
       </div>
-      <div style={{ ...HAND, fontSize: 64, marginTop: 44, textAlign: "center", opacity: interpolate(frame, [8, 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
+      <div style={{ ...HAND, fontSize: 64, marginTop: 44, textAlign: "center", whiteSpace: "pre-line", opacity: interpolate(frame, [0, 10], [0.6, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
         {s.hookSub}
       </div>
     </AbsoluteFill>

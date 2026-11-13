@@ -1,0 +1,16 @@
+# Level reel 11: Penguins (age 10, Grade 7 work)
+
+Cover: the first frame. Add a trending quiz / ticking sound in the app. After posting: Add to story, then add that
+story to the "Penguins" highlight (cover: stories/highlights/levels/11-penguins.png).
+
+## Caption
+
+Can your 10-year-old do these? 🐧
+
+5 quick questions from the Penguins level (Grade 7 work): negatives, percent change, two-step equations, expressions. 4 seconds each. Pause, ask them, and see how far they get.
+
+Comment their score: x/5 👇
+
+Free Penguins preview pages: link in bio.
+
+#10yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
