@@ -10,7 +10,7 @@ Can your 12-year-old do these? 🐳
 
 Comment their score: x/5 👇
 
-Free Whales preview pages: link in bio.
+📩 Comment WHALES and we'll DM you free Whales pages.
 
 #12yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

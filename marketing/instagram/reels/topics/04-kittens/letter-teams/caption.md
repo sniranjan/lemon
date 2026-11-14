@@ -10,7 +10,7 @@ Play along with your 4-year-old! 🐱
 
 How did they do? 👇
 
-Free Kittens preview pages: link in bio.
+📩 Comment KITTENS and we'll DM you free Kittens pages.
 
 #4yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

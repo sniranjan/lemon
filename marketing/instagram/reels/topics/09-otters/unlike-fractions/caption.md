@@ -10,7 +10,7 @@ Can your 8-year-old do these? 🦦
 
 Comment their score: x/5 👇
 
-Free Otters preview pages: link in bio.
+📩 Comment OTTERS and we'll DM you free Otters pages.
 
 #8yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

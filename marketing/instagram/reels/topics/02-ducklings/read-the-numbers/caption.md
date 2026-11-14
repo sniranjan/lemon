@@ -10,7 +10,7 @@ Play along with your 3-year-old! 🦆
 
 How did they do? 👇
 
-Free Ducklings preview pages: link in bio.
+📩 Comment DUCKLINGS and we'll DM you free Ducklings pages.
 
 #3yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

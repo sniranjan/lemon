@@ -10,7 +10,7 @@ Can your 6-year-old do these? 🦊
 
 Comment their score: x/5 👇
 
-Free Foxes preview pages: link in bio.
+📩 Comment FOXES and we'll DM you free Foxes pages.
 
 #6yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

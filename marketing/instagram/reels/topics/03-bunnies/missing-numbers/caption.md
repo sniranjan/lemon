@@ -10,7 +10,7 @@ Play along with your 4-year-old! 🐰
 
 How did they do? 👇
 
-Free Bunnies preview pages: link in bio.
+📩 Comment BUNNIES and we'll DM you free Bunnies pages.
 
 #4yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

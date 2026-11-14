@@ -100,6 +100,8 @@ uv run python scripts/marketing/ig_publish.py --inbox                 # comments
 uv run python scripts/marketing/ig_publish.py --reply-comment 1789... "Thank you! Chicks is a great start at 3."
 uv run python scripts/marketing/ig_publish.py --hide-comment 1789...  # spam or rude
 uv run python scripts/marketing/ig_publish.py --reply-dm 9876... "Hi! ..."
+uv run python scripts/marketing/ig_publish.py --show-dm owls            # the "free Owls pages" DM text
+uv run python scripts/marketing/ig_publish.py --private-reply 1789... --level owls   # DM whoever commented OWLS
 ```
 
 - **Replies are public (comments) or go to a real parent (DMs): draft them, show the user, then send.**
@@ -107,6 +109,9 @@ uv run python scripts/marketing/ig_publish.py --reply-dm 9876... "Hi! ..."
 - **DMs:** Meta only lets us reply within **24 hours** of the person's last message, and never message first.
   For the inbox to show anything, turn on, in the Instagram app: **Settings → Messages and story replies →
   Message controls → Connected tools → Allow access to messages**.
+- **Comment-for-pages:** reel captions say "Comment OWLS and we'll DM you free Owls pages". `--inbox` marks
+  those comments with ✉ and the command to run; private replies work once per comment, within 7 days. Send
+  only after the user OKs (same rule as all replies).
 - DM replies are untested so far (no messages yet). If `--reply-dm` fails, our setup may need a Facebook Page
   linked to the account (see §5).
 

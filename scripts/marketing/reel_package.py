@@ -52,7 +52,7 @@ def caption(lv: dict, topic: str | None, seconds: int) -> str:
         body = (f"Can your {age}-year-old do these? {EMOJI[lv['slug']]}\n\n5 quick questions: {what}. {seconds} seconds "
                 f"each. Pause, ask them, and see how far they get.\n\nComment their score: x/5 👇")
     return (f"# {name}{' · ' + topic if topic else ''} (age {age})\n\nMusic and sound are in the video. After posting: {hl}\n\n"
-            f"## Caption\n\n{body}\n\nFree {name} preview pages: link in bio.\n\n#{age}yearold {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
+            f"## Caption\n\n{body}\n\n📩 Comment {name.upper()} and we'll DM you free {name} pages.\n\n#{age}yearold {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
 def grade_words(g: str) -> tuple[str, str]:
@@ -71,7 +71,7 @@ def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> s
             f"at age {lv['age']}. Every kid learns at their own pace: start at their level, not their grade.\n\n"
             f"How many did yours get? Comment x/{len(items)} 👇")
     return (f"# Know by June · {grade} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
-            f"Free preview pages: link in bio.\n\n{tag} #commoncore {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
+            f"📩 Comment {lv['name'].upper()} and we'll DM you free {lv['name']} pages.\n\n{tag} #commoncore {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
 def hands_caption(age: int) -> str:

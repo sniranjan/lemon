@@ -18,7 +18,7 @@ Our Foxes level is 3rd grade work at age 6. Every kid learns at their own pace: 
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment FOXES and we'll DM you free Foxes pages.
 
 #3rdgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

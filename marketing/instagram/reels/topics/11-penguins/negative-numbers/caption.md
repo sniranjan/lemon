@@ -10,7 +10,7 @@ Can your 10-year-old do these? 🐧
 
 Comment their score: x/5 👇
 
-Free Penguins preview pages: link in bio.
+📩 Comment PENGUINS and we'll DM you free Penguins pages.
 
 #10yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

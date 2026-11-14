@@ -10,7 +10,7 @@ Can your 11-year-old do these? 🦁
 
 Comment their score: x/5 👇
 
-Free Lions preview pages: link in bio.
+📩 Comment LIONS and we'll DM you free Lions pages.
 
 #11yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

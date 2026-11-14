@@ -18,7 +18,7 @@ Our Penguins level is 7th grade work at age 10. Every kid learns at their own pa
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment PENGUINS and we'll DM you free Penguins pages.
 
 #7thgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

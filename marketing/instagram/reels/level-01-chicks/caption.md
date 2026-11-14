@@ -10,7 +10,7 @@ Play along with your 3-year-old! 🐥
 
 How did they do? 👇
 
-Free Chicks preview pages: link in bio.
+📩 Comment CHICKS and we'll DM you free Chicks pages.
 
 #3yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

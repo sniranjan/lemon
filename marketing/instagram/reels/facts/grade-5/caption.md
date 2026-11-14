@@ -18,7 +18,7 @@ Our Otters level is 5th grade work at age 8. Every kid learns at their own pace:
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment OTTERS and we'll DM you free Otters pages.
 
 #5thgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

@@ -18,7 +18,7 @@ Our Ducklings level is kindergarten work at age 3. Every kid learns at their own
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment DUCKLINGS and we'll DM you free Ducklings pages.
 
 #kindergarten #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

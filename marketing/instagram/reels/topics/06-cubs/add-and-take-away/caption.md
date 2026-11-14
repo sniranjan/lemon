@@ -10,7 +10,7 @@ Can your 5-year-old do these? 🐻
 
 Comment their score: x/5 👇
 
-Free Cubs preview pages: link in bio.
+📩 Comment CUBS and we'll DM you free Cubs pages.
 
 #5yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

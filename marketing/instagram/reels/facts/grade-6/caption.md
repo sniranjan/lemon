@@ -18,7 +18,7 @@ Our Pandas level is 6th grade work at age 9. Every kid learns at their own pace:
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment PANDAS and we'll DM you free Pandas pages.
 
 #6thgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

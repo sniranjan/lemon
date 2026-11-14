@@ -260,6 +260,9 @@ def inbox(ig: str, token: str, posts: int) -> None:
             any_comment = True
             hidden = " [hidden]" if c.get("hidden") else ""
             print(f"    [{c['id']}] @{c.get('username', '?')} {c['timestamp'][:16]}{hidden}: {c['text']}")
+            lv = keyword_level(c["text"])
+            if lv:
+                print(f"        ✉ asks for {lv}: --private-reply {c['id']} --level {lv}")
             for r in (c.get("replies") or {}).get("data", []):
                 print(f"        ↳ @{r.get('username', '?')}: {r['text']}")
     if not any_comment:
@@ -295,6 +298,31 @@ def hide_comment(comment_id: str, token: str) -> None:
     print(f"hid comment {comment_id}")
 
 
+# "Comment OWLS for free Owls pages": a level name in a comment gets a private reply (one DM to that comment)
+# with the free preview link. Drafts are listed by --inbox; each one is sent only after the user OKs it.
+LEVEL_WORDS = ["chicks", "ducklings", "bunnies", "kittens", "puppies", "cubs", "foxes", "owls", "otters", "pandas",
+               "penguins", "lions", "whales"]
+
+
+def keyword_level(text: str) -> str | None:
+    words = {w.strip(".,!?:;'\"").lower() for w in text.split()}
+    return next((lv for lv in LEVEL_WORDS if lv in words or lv.rstrip("s") in words), None)
+
+
+def preview_dm(level: str) -> str:
+    name = level.capitalize()
+    return (f"Hi! Here are your free {name} pages 🎉 https://paperlessons.com/api/previews/{level}\n\n"
+            f"Print a few, try them together, and see how it goes. Every kid learns at their own pace.\n"
+            f"All 13 levels (ages 3–12): https://paperlessons.com/ig")
+
+
+def private_reply(ig: str, comment_id: str, text: str, token: str) -> None:
+    """One private DM in answer to a comment (Meta allows it within 7 days of the comment, once per comment)."""
+    r = graph("POST", f"{ig}/messages", token, recipient=json.dumps({"comment_id": comment_id}),
+              message=json.dumps({"text": text}))
+    print(f"sent private reply {r.get('message_id', r)} for comment {comment_id}")
+
+
 def reply_dm(ig: str, recipient: str, text: str, token: str) -> None:
     """Meta only allows this within 24 hours of the person's last message."""
     r = graph("POST", f"{ig}/messages", token, recipient=json.dumps({"id": recipient}),
@@ -316,6 +344,9 @@ def main() -> None:
     ap.add_argument("--posts", type=int, default=12, help="with --inbox: how many recent posts to scan")
     ap.add_argument("--reply-comment", nargs=2, metavar=("COMMENT_ID", "TEXT"), help="reply to a comment (public)")
     ap.add_argument("--hide-comment", metavar="COMMENT_ID", help="hide a comment (spam, rude)")
+    ap.add_argument("--private-reply", metavar="COMMENT_ID", help="DM the person behind a comment (with --level)")
+    ap.add_argument("--level", choices=LEVEL_WORDS, help="with --private-reply: send that level's free preview link")
+    ap.add_argument("--show-dm", metavar="LEVEL", help="print the free-pages DM for a level, send nothing")
     ap.add_argument("--reply-dm", nargs=2, metavar=("USER_ID", "TEXT"), help="send a DM (within 24h of theirs)")
     args = ap.parse_args()
 
@@ -330,6 +361,14 @@ def main() -> None:
             return
         if args.hide_comment:
             hide_comment(args.hide_comment, token)
+            return
+        if args.show_dm:
+            print(preview_dm(args.show_dm))
+            return
+        if args.private_reply:
+            if not args.level:
+                sys.exit("--private-reply needs --level")
+            private_reply(ig, args.private_reply, preview_dm(args.level), token)
             return
         if args.reply_dm:
             reply_dm(ig, *args.reply_dm, token)

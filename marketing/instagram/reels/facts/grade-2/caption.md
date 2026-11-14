@@ -18,7 +18,7 @@ Our Cubs level is 2nd grade work at age 5. Every kid learns at their own pace: s
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment CUBS and we'll DM you free Cubs pages.
 
 #2ndgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

@@ -18,7 +18,7 @@ Our Kittens level is 1st grade work at age 4. Every kid learns at their own pace
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment KITTENS and we'll DM you free Kittens pages.
 
 #1stgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

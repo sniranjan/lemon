@@ -10,7 +10,7 @@ Can your 7-year-old do these? 🦉
 
 Comment their score: x/5 👇
 
-Free Owls preview pages: link in bio.
+📩 Comment OWLS and we'll DM you free Owls pages.
 
 #7yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

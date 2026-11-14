@@ -10,7 +10,7 @@ Can your 9-year-old do these? 🐼
 
 Comment their score: x/5 👇
 
-Free Pandas preview pages: link in bio.
+📩 Comment PANDAS and we'll DM you free Pandas pages.
 
 #9yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 

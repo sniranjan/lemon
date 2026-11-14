@@ -18,7 +18,7 @@ Our Lions level is 8th grade work at age 11. Every kid learns at their own pace:
 
 How many did yours get? Comment x/5 👇
 
-Free preview pages: link in bio.
+📩 Comment LIONS and we'll DM you free Lions pages.
 
 #8thgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
 
