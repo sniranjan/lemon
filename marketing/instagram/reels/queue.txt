@@ -1,6 +1,7 @@
 # Posting order (3 a day). ig_publish.py skips anything already in posted.jsonl.
 # Each day: 2 quiz reels + 1 "know by June" reel (facts/) while they last.
 # Weekly: a "Little hands" CDC milestones reel (hands/) takes one slot.
+# Daily: one "Report Card" (NAEP) reel leads the day while they last.
 marketing/instagram/reels/level-07-foxes
 marketing/instagram/reels/level-01-chicks
 marketing/instagram/reels/level-10-pandas
@@ -8,33 +9,43 @@ marketing/instagram/reels/level-11-penguins
 marketing/instagram/reels/level-12-lions
 marketing/instagram/reels/level-06-cubs
 marketing/instagram/reels/facts/grade-3
+marketing/instagram/reels/report/g8-1990-8m9-18
 marketing/instagram/reels/level-08-owls
 marketing/instagram/reels/level-02-ducklings
 marketing/instagram/reels/facts/grade-6
+marketing/instagram/reels/report/g4-1992-4m5-17
 marketing/instagram/reels/level-05-puppies
 marketing/instagram/reels/hands/age-3
 marketing/instagram/reels/level-09-otters
+marketing/instagram/reels/report/g8-2024-8m5-9
 marketing/instagram/reels/facts/grade-7
 marketing/instagram/reels/level-03-bunnies
 marketing/instagram/reels/level-04-kittens
+marketing/instagram/reels/report/g12-1990-12m9-7
 marketing/instagram/reels/facts/grade-1
 marketing/instagram/reels/level-13-whales
 marketing/instagram/reels/topics/07-foxes/fractions
+marketing/instagram/reels/report/g4-2013-4m6-12
 marketing/instagram/reels/facts/grade-8
 marketing/instagram/reels/topics/01-chicks/counting
 marketing/instagram/reels/topics/10-pandas/author-s-purpose
+marketing/instagram/reels/report/g8-2013-8m7-15
 marketing/instagram/reels/facts/grade-2
 marketing/instagram/reels/topics/06-cubs/add-and-take-away
 marketing/instagram/reels/topics/08-owls/factors-primes
+marketing/instagram/reels/report/g4-2024-4m7-5
 marketing/instagram/reels/facts/grade-4
 marketing/instagram/reels/topics/02-ducklings/counting-on
 marketing/instagram/reels/topics/11-penguins/multiply-negatives
+marketing/instagram/reels/report/g8-1992-8m15-10
 marketing/instagram/reels/facts/grade-k
 marketing/instagram/reels/topics/05-puppies/adding-to-20
 marketing/instagram/reels/topics/09-otters/decimals
+marketing/instagram/reels/report/g4-1992-4m5-12
 marketing/instagram/reels/facts/grade-5
 marketing/instagram/reels/hands/age-4
 marketing/instagram/reels/topics/03-bunnies/letter-pairs
+marketing/instagram/reels/report/g8-1990-8m7-15
 marketing/instagram/reels/topics/12-lions/exponents
 marketing/instagram/reels/topics/04-kittens/adding-1-2-3
 marketing/instagram/reels/topics/13-whales/factoring

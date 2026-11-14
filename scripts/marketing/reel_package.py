@@ -84,6 +84,23 @@ def hands_caption(age: int) -> str:
             f"#{age}yearold #finemotorskills #preschool #momlife #learningathome #paperlessons\n\n{credit(HANDS_TRACK)}\n")
 
 
+CTA_LEVEL = {4: "Owls", 8: "Lions"}  # our level teaching that grade's work
+
+
+def report_caption(grade: int, year: int, naep_id: str, pct: int) -> str:
+    cta = (f"📩 Comment {CTA_LEVEL[grade].upper()} and we'll DM you free {CTA_LEVEL[grade]} pages ({grade}th grade work)."
+           if grade in CTA_LEVEL else "Free printable pages for ages 3–12: link in bio.")
+    body = (f"Only {pct}% of {grade}th graders got this right 😮\n\nA real question from the Nation's Report Card "
+            f"(NAEP, {year}), the test given to students across the US. Can you? Can your kid? Pause, pick an answer, "
+            f"and comment your letter 👇\n\n{cta}")
+    source = (f"Source: U.S. Department of Education, Institute of Education Sciences, National Center for Education "
+              f"Statistics, National Assessment of Educational Progress (NAEP), {year} Mathematics Assessment. "
+              f"Question {naep_id}, national results.")
+    return (f"# Report Card · grade {grade} ({naep_id})\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+            f"#{grade}thgrade #mathchallenge #canyousolveit #momlife #homeschool #paperlessons\n\n{source}\n\n"
+            f"{credit('thinking-music')}\n")
+
+
 def copy(src: Path, dest: Path, text: str) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest / "reel.mp4")
@@ -121,6 +138,17 @@ def main() -> None:
         if src.exists():
             copy(src, OUT / "hands" / f"age-{age}", hands_caption(age))
             n += 1
+    rep = (APP / "src" / "Report.tsx").read_text()
+    for g, y, nid, correct, picked in re.findall(
+            r'r\(\{ grade: (\d+), year: (\d+), naepId: "([^"]+)".*?correct: (\d+), picked: \[([\d, ]+)\]', rep, re.S):
+        rid = "Report-g" + g + "-" + re.sub(r"[^A-Za-z0-9]+", "-", nid).rstrip("-")
+        src = APP / "out" / f"{rid}.mp4"
+        if not src.exists():
+            print("missing render:", src.name)
+            continue
+        pct = int(picked.split(",")[int(correct)])
+        copy(src, OUT / "report" / rid.lower().removeprefix("report-"), report_caption(int(g), int(y), nid, pct))
+        n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
 

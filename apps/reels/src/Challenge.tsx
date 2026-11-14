@@ -67,7 +67,7 @@ const TopBar: React.FC<{ i: number; n: number }> = ({ i, n }) => (
   </div>
 );
 
-const Timer: React.FC<{ frame: number; total: number }> = ({ frame, total }) => {
+export const Timer: React.FC<{ frame: number; total: number }> = ({ frame, total }) => {
   const left = Math.max(0, total - frame);
   const sec = Math.ceil(left / 30);
   const frac = left / total;
