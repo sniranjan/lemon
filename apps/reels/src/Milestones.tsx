@@ -6,6 +6,7 @@ import React from "react";
 import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
 import { BY_SLUG, CORAL, CREAM, EndCard, HAND, HEAD, INK, Logo, Mascot, SAFE } from "./brand";
 import { tint } from "./challenges";
+import { Music } from "./audio";
 
 export type MilestoneSpec = { age: number; mascot: string; milestones: string[]; tips: string[] };
 
@@ -85,6 +86,7 @@ export const Milestones: React.FC<{ spec: MilestoneSpec }> = ({ spec }) => {
   const t = listFrames(spec.tips.length);
   return (
     <AbsoluteFill style={{ background: bg }}>
+      <Music track="easy-lemon" frames={milestoneFrames(spec)} />
       <Sequence durationInFrames={HOOK}><Hook s={spec} bg={bg} /></Sequence>
       <Sequence from={HOOK} durationInFrames={m}><List bg={bg} title={`Most kids (75%+) by age ${spec.age}`} items={spec.milestones} mark="✅" /></Sequence>
       <Sequence from={HOOK + m} durationInFrames={t}><List bg={bg} title="Easy ways to help" items={spec.tips} mark="💡" /></Sequence>

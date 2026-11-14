@@ -25,6 +25,17 @@ EMOJI = {"chicks": "🐥", "ducklings": "🦆", "bunnies": "🐰", "kittens": "�
 TAGS = "#homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons"
 
 
+AUDIO = (APP / "src" / "audio.tsx").read_text()
+TITLES = dict(re.findall(r'"?([a-z-]+)"?: \{ title: "([^"]+)"', AUDIO))
+QUIZ_TRACK = re.search(r'DEFAULT_TRACK: Track = "([a-z-]+)"', AUDIO)[1]
+HANDS_TRACK = re.search(r'<Music track="([a-z-]+)"', (APP / "src" / "Milestones.tsx").read_text())[1]
+
+
+def credit(track: str) -> str:
+    return (f'Music: "{TITLES[track]}" Kevin MacLeod (incompetech.com), licensed under Creative Commons: '
+            f"By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)")
+
+
 def slugify(s: str) -> str:
     return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", s.lower()))
 
@@ -40,8 +51,8 @@ def caption(lv: dict, topic: str | None, seconds: int) -> str:
     else:
         body = (f"Can your {age}-year-old do these? {EMOJI[lv['slug']]}\n\n5 quick questions: {what}. {seconds} seconds "
                 f"each. Pause, ask them, and see how far they get.\n\nComment their score: x/5 👇")
-    return (f"# {name}{' · ' + topic if topic else ''} (age {age})\n\nAdd a trending sound in the app. After posting: {hl}\n\n"
-            f"## Caption\n\n{body}\n\nFree {name} preview pages: link in bio.\n\n#{age}yearold {TAGS}\n")
+    return (f"# {name}{' · ' + topic if topic else ''} (age {age})\n\nMusic and sound are in the video. After posting: {hl}\n\n"
+            f"## Caption\n\n{body}\n\nFree {name} preview pages: link in bio.\n\n#{age}yearold {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
 def grade_words(g: str) -> tuple[str, str]:
@@ -59,8 +70,8 @@ def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> s
             f"expect by the end of {grade}, with one to try for each:\n\n{lines}\n\nOur {lv['name']} level is {grade} work "
             f"at age {lv['age']}. Every kid learns at their own pace: start at their level, not their grade.\n\n"
             f"How many did yours get? Comment x/{len(items)} 👇")
-    return (f"# Know by June · {grade} ({lv['name']} level)\n\nAdd a trending sound in the app.\n\n## Caption\n\n{body}\n\n"
-            f"Free preview pages: link in bio.\n\n{tag} #commoncore {TAGS}\n")
+    return (f"# Know by June · {grade} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+            f"Free preview pages: link in bio.\n\n{tag} #commoncore {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
 def hands_caption(age: int) -> str:
@@ -68,9 +79,9 @@ def hands_caption(age: int) -> str:
             f"checklist, plus a few of the CDC's easy ways to help at home.\n\nEvery kid grows at their own pace. You know your "
             f"child best: if you have a concern, talk with your child's doctor and ask about developmental screening.\n\n"
             f"Full CDC checklist: cdc.gov/ActEarly")
-    return (f"# Little hands · age {age}\n\nAdd a calm sound in the app. Source: "
+    return (f"# Little hands · age {age}\n\nMusic is in the video. Source: "
             f"https://www.cdc.gov/act-early/milestones/{age}-years.html\n\n## Caption\n\n{body}\n\n"
-            f"#{age}yearold #finemotorskills #preschool #momlife #learningathome #paperlessons\n")
+            f"#{age}yearold #finemotorskills #preschool #momlife #learningathome #paperlessons\n\n{credit(HANDS_TRACK)}\n")
 
 
 def copy(src: Path, dest: Path, text: str) -> None:

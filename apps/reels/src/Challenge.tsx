@@ -3,6 +3,7 @@
 // and on each answer the level it comes from.
 import React from "react";
 import { AbsoluteFill, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { DEFAULT_TRACK, Music, TimerSounds, type Track } from "./audio";
 import { BY_SLUG, CORAL, CREAM, EndCard, HAND, HEAD, INK, Logo, Rich, SAFE } from "./brand";
 
 export type Choice = { label?: string; pic?: string };
@@ -31,6 +32,7 @@ export type ChallengeSpec = {
   outro: string[]; // the comment prompt
   levelPrefix?: string; // before the level chip on each answer, e.g. "Our "
   closing?: { line: string; sub: string }; // a brand card after the outro
+  music?: Track; // music bed (default: DEFAULT_TRACK)
 };
 
 const INTRO = 10;
@@ -237,9 +239,13 @@ const Outro: React.FC<{ s: ChallengeSpec }> = ({ s }) => {
 
 export const Challenge: React.FC<{ spec: ChallengeSpec }> = ({ spec }) => (
   <AbsoluteFill style={{ background: spec.bg }}>
+    <Music track={spec.music ?? DEFAULT_TRACK} frames={challengeFrames(spec)} />
     <Sequence durationInFrames={HOOK}><Hook s={spec} /></Sequence>
     {spec.questions.map((_, i) => (
-      <Sequence key={i} from={HOOK + i * qFrames(spec)} durationInFrames={qFrames(spec)}><QuestionScene s={spec} i={i} /></Sequence>
+      <Sequence key={i} from={HOOK + i * qFrames(spec)} durationInFrames={qFrames(spec)}>
+        <QuestionScene s={spec} i={i} />
+        <TimerSounds start={INTRO} seconds={spec.seconds} />
+      </Sequence>
     ))}
     <Sequence from={HOOK + spec.questions.length * qFrames(spec)} durationInFrames={OUTRO}><Outro s={spec} /></Sequence>
     {spec.closing ? (

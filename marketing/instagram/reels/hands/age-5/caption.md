@@ -1,6 +1,6 @@
 # Little hands · age 5
 
-Add a calm sound in the app. Source: https://www.cdc.gov/act-early/milestones/5-years.html
+Music is in the video. Source: https://www.cdc.gov/act-early/milestones/5-years.html
 
 ## Caption
 
@@ -13,3 +13,5 @@ Every kid grows at their own pace. You know your child best: if you have a conce
 Full CDC checklist: cdc.gov/ActEarly
 
 #5yearold #finemotorskills #preschool #momlife #learningathome #paperlessons
+
+Music: "Easy Lemon" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)

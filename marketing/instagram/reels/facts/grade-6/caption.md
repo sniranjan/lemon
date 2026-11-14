@@ -1,6 +1,6 @@
 # Know by June · 6th grade (Pandas level)
 
-Add a trending sound in the app.
+Music and sound are in the video.
 
 ## Caption
 
@@ -21,3 +21,5 @@ How many did yours get? Comment x/5 👇
 Free preview pages: link in bio.
 
 #6thgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
+
+Music: "Carefree" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)

@@ -1,6 +1,6 @@
 # Pandas · Below zero (age 9)
 
-Add a trending sound in the app. After posting: Add to story, then add it to the "Pandas" highlight (cover: stories/highlights/levels/10-pandas.png).
+Music and sound are in the video. After posting: Add to story, then add it to the "Pandas" highlight (cover: stories/highlights/levels/10-pandas.png).
 
 ## Caption
 
@@ -13,3 +13,5 @@ Comment their score: x/5 👇
 Free Pandas preview pages: link in bio.
 
 #9yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
+
+Music: "Carefree" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)

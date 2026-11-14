@@ -1,6 +1,6 @@
 # Puppies · Word Endings (age 5)
 
-Add a trending sound in the app. After posting: Add to story, then add it to the "Puppies" highlight (cover: stories/highlights/levels/05-puppies.png).
+Music and sound are in the video. After posting: Add to story, then add it to the "Puppies" highlight (cover: stories/highlights/levels/05-puppies.png).
 
 ## Caption
 
@@ -13,3 +13,5 @@ Comment their score: x/5 👇
 Free Puppies preview pages: link in bio.
 
 #5yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
+
+Music: "Carefree" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)

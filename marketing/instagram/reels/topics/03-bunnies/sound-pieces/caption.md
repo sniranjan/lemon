@@ -1,6 +1,6 @@
 # Bunnies · Sound Pieces (age 4)
 
-Add a trending sound in the app. After posting: Add to story, then add it to the "Bunnies" highlight (cover: stories/highlights/levels/03-bunnies.png).
+Music and sound are in the video. After posting: Add to story, then add it to the "Bunnies" highlight (cover: stories/highlights/levels/03-bunnies.png).
 
 ## Caption
 
@@ -13,3 +13,5 @@ How did they do? 👇
 Free Bunnies preview pages: link in bio.
 
 #4yearold #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons
+
+Music: "Carefree" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/)
