@@ -3,7 +3,7 @@
 // and on each answer the level it comes from.
 import React from "react";
 import { AbsoluteFill, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { BY_SLUG, CORAL, CREAM, HAND, HEAD, INK, Logo, Rich, SAFE } from "./brand";
+import { BY_SLUG, CORAL, CREAM, EndCard, HAND, HEAD, INK, Logo, Rich, SAFE } from "./brand";
 
 export type Choice = { label?: string; pic?: string };
 export type Question = {
@@ -29,6 +29,8 @@ export type ChallengeSpec = {
   seconds: number; // timer per question
   questions: Question[];
   outro: string[]; // the comment prompt
+  levelPrefix?: string; // before the level chip on each answer, e.g. "Our "
+  closing?: { line: string; sub: string }; // a brand card after the outro
 };
 
 const INTRO = 10;
@@ -36,7 +38,8 @@ const REVEAL = 42;
 const HOOK = 66;
 const OUTRO = 90;
 export const qFrames = (s: ChallengeSpec) => INTRO + s.seconds * 30 + REVEAL;
-export const challengeFrames = (s: ChallengeSpec) => HOOK + s.questions.length * qFrames(s) + OUTRO;
+const CLOSING = 120;
+export const challengeFrames = (s: ChallengeSpec) => HOOK + s.questions.length * qFrames(s) + OUTRO + (s.closing ? CLOSING : 0);
 
 const GREEN = "#2fa35a";
 
@@ -166,11 +169,11 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
   return (
     <AbsoluteFill style={{ background: s.bg }}>
       <TopBar i={i} n={s.questions.length} />
-      <div style={{ position: "absolute", top: 330, height: 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40, transform: `scale(${pop})` }}>
+      <div style={{ position: "absolute", top: 330, height: 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: q.pic && q.choices ? 26 : 40, transform: `scale(${pop})` }}>
         {q.bonus ? <div style={{ ...HEAD, fontSize: 56, background: CORAL, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>Bonus ⭐</div>
           : q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
         <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}><Rich text={q.prompt} /></div>
-        {q.pic ? <div style={{ background: "#fff", borderRadius: 40, border: `6px solid ${INK}`, padding: 20 }}><Pic slug={q.pic} size={300} /></div> : null}
+        {q.pic ? <div style={{ background: "#fff", borderRadius: 40, border: `6px solid ${INK}`, padding: q.choices ? 14 : 20 }}><Pic slug={q.pic} size={q.choices ? 190 : 300} /></div> : null}
         {q.row ? (
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, width: 880 }}>
             {Array.from({ length: q.row.n }).map((_, k) => <Pic key={k} slug={q.row!.pic} size={q.row!.n > 5 ? 150 : 170} />)}
@@ -184,10 +187,10 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
         {q.note && reveal > 0 ? <div style={{ ...HAND, fontSize: 60, color: INK, textAlign: "center", opacity: reveal }}><Rich text={q.note} /></div> : null}
       </div>
       {reveal > 0.05 ? (
-        <div style={{ position: "absolute", top: 1360, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: reveal }}>
+        <div style={{ position: "absolute", top: 1392, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: reveal }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, background: CREAM, border: `5px solid ${INK}`, borderRadius: 999, padding: "10px 34px 10px 14px" }}>
             <Img src={staticFile(lv.mascot)} style={{ width: 84, height: 84 }} />
-            <div style={{ ...HEAD, fontSize: 44 }}>{lv.name} level · age {lv.age}</div>
+            <div style={{ ...HEAD, fontSize: 44 }}>{s.levelPrefix ?? ""}{lv.name} level · age {lv.age}</div>
           </div>
         </div>
       ) : (
@@ -238,6 +241,9 @@ export const Challenge: React.FC<{ spec: ChallengeSpec }> = ({ spec }) => (
     {spec.questions.map((_, i) => (
       <Sequence key={i} from={HOOK + i * qFrames(spec)} durationInFrames={qFrames(spec)}><QuestionScene s={spec} i={i} /></Sequence>
     ))}
-    <Sequence from={HOOK + spec.questions.length * qFrames(spec)}><Outro s={spec} /></Sequence>
+    <Sequence from={HOOK + spec.questions.length * qFrames(spec)} durationInFrames={OUTRO}><Outro s={spec} /></Sequence>
+    {spec.closing ? (
+      <Sequence from={HOOK + spec.questions.length * qFrames(spec) + OUTRO}><EndCard line={spec.closing.line} sub={spec.closing.sub} /></Sequence>
+    ) : null}
   </AbsoluteFill>
 );

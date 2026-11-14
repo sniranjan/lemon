@@ -83,8 +83,8 @@ export const EndCard: React.FC<{ line: React.ReactNode; sub?: string }> = ({ lin
       <Blob color={SUN} size={700} x={-260} y={-200} />
       <Blob color={TEAL} size={520} x={700} y={1350} opacity={0.25} />
       <div style={{ transform: `scale(${p})`, marginBottom: 60 }}><Logo width={760} /></div>
-      <div style={{ ...HEAD, fontSize: 84, textAlign: "center", transform: `translateY(${(1 - q) * 40}px)`, opacity: q }}>{line}</div>
-      {sub ? <div style={{ ...HAND, fontSize: 60, color: CORAL, marginTop: 34, textAlign: "center", opacity: q }}>{sub}</div> : null}
+      <div style={{ ...HEAD, fontSize: 84, textAlign: "center", whiteSpace: "pre-line", transform: `translateY(${(1 - q) * 40}px)`, opacity: q }}>{line}</div>
+      {sub ? <div style={{ ...HAND, fontSize: 60, color: CORAL, marginTop: 34, textAlign: "center", whiteSpace: "pre-line", opacity: q }}>{sub}</div> : null}
     </div>
   );
 };

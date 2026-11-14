@@ -3,8 +3,9 @@
     apps/reels/render-all.sh                      # render first (out/Level-*.mp4, out/Topic-*.mp4)
     uv run python scripts/marketing/reel_package.py
 
-Level reels → reels/level-NN-<slug>/, topic reels → reels/topics/NN-<slug>/<topic>/ (reel.mp4 + caption.md).
-Topics are read from apps/reels/src/topics/*.ts (level, topic, seconds per block).
+Level reels → reels/level-NN-<slug>/, topic reels → reels/topics/NN-<slug>/<topic>/, "know by June" reels →
+reels/facts/grade-<g>/ (reel.mp4 + caption.md). Topics are read from apps/reels/src/topics/*.ts (level, topic,
+seconds per block); facts from apps/reels/src/facts.ts (grade, level, each item's tag and Common Core code).
 """
 
 from __future__ import annotations
@@ -43,6 +44,25 @@ def caption(lv: dict, topic: str | None, seconds: int) -> str:
             f"## Caption\n\n{body}\n\nFree {name} preview pages: link in bio.\n\n#{age}yearold {TAGS}\n")
 
 
+def grade_words(g: str) -> tuple[str, str]:
+    if g == "k":
+        return "kindergarten", "#kindergarten"
+    n = int(g)
+    suffix = {1: "st", 2: "nd", 3: "rd"}.get(n, "th")
+    return f"{n}{suffix} grade", f"#{n}{suffix}grade"
+
+
+def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> str:
+    grade, tag = grade_words(g)
+    lines = "\n".join(f"{k}. {t} ({code})" for k, (t, code) in enumerate(items, 1))
+    body = (f"What should a {who} know by June? 👀\n\n{len(items)} things the Common Core standards (used in most US states) "
+            f"expect by the end of {grade}, with one to try for each:\n\n{lines}\n\nOur {lv['name']} level is {grade} work "
+            f"at age {lv['age']}. Every kid learns at their own pace: start at their level, not their grade.\n\n"
+            f"How many did yours get? Comment x/{len(items)} 👇")
+    return (f"# Know by June · {grade} ({lv['name']} level)\n\nAdd a trending sound in the app.\n\n## Caption\n\n{body}\n\n"
+            f"Free preview pages: link in bio.\n\n{tag} #commoncore {TAGS}\n")
+
+
 def copy(src: Path, dest: Path, text: str) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest / "reel.mp4")
@@ -66,6 +86,15 @@ def main() -> None:
             lv = by_slug[level]
             copy(src, OUT / "topics" / f"{INDEX[level]:02d}-{level}" / slugify(topic), caption(lv, topic, int(secs)))
             n += 1
+    facts = (APP / "src" / "facts.ts").read_text()
+    for g, who, level, block in re.findall(r'grade: "(\w+)", who: "([^"]+)", level: "(\w+)", items: \[(.*?)\n  \] \}', facts, re.S):
+        src = APP / "out" / f"Facts-grade-{g}.mp4"
+        if not src.exists():
+            print("missing render:", src.name)
+            continue
+        items = re.findall(r'tag: "([^"]+)".*?code: "([^"]+)"', block)
+        copy(src, OUT / "facts" / f"grade-{g}", facts_caption(g, who, by_slug[level], items))
+        n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
 

@@ -4,11 +4,13 @@ import { Challenge, challengeFrames } from "./Challenge";
 import { Cover } from "./Cover";
 import { LEVELS } from "./brand";
 import { CHALLENGES, topicReel } from "./challenges";
+import { FACTS, factReel } from "./facts";
 import { TOPICS_MIDDLE } from "./topics/middle";
 import { TOPICS_TEEN } from "./topics/teen";
 import { TOPICS_UPPER } from "./topics/upper";
 import { TOPICS_YOUNG } from "./topics/young";
 
+export const FACT_REELS = FACTS.map(factReel);
 export const TOPIC_REELS = [...TOPICS_YOUNG, ...TOPICS_MIDDLE, ...TOPICS_UPPER, ...TOPICS_TEEN].map(topicReel);
 import { LADDER_FRAMES, Ladder } from "./Ladder";
 import { QUIZ_FRAMES, Quiz } from "./Quiz";
@@ -25,6 +27,9 @@ export const RemotionRoot: React.FC = () => (
       <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
     ))}
     {TOPIC_REELS.map((spec) => (
+      <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
+    ))}
+    {FACT_REELS.map((spec) => (
       <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
     ))}
     {LEVELS.map((l) => (

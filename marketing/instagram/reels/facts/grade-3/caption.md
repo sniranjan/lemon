@@ -1,0 +1,23 @@
+# Know by June · 3rd grade (Foxes level)
+
+Add a trending sound in the app.
+
+## Caption
+
+What should a 3rd grader know by June? 👀
+
+5 things the Common Core standards (used in most US states) expect by the end of 3rd grade, with one to try for each:
+
+1. Times tables by heart (3.OA.7)
+2. Division facts (3.OA.7)
+3. Fractions (3.NF.3d)
+4. Taking away to 1000 (3.NBT.2)
+5. Word parts (L.3.4b)
+
+Our Foxes level is 3rd grade work at age 6. Every kid learns at their own pace: start at their level, not their grade.
+
+How many did yours get? Comment x/5 👇
+
+Free preview pages: link in bio.
+
+#3rdgrade #commoncore #homeschool #kidsquiz #momlife #learningathome #printableworksheets #paperlessons

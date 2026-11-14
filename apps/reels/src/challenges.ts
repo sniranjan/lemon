@@ -4,7 +4,7 @@ import type { ChallengeSpec, Question } from "./Challenge";
 import { BY_SLUG } from "./brand";
 
 // A light tint of the level color, so ink text reads on every background.
-const tint = (hex: string, k = 0.62) => {
+export const tint = (hex: string, k = 0.62) => {
   const n = parseInt(hex.slice(1), 16);
   const mix = (c: number) => Math.round(c + (255 - c) * k);
   return `rgb(${mix(n >> 16)}, ${mix((n >> 8) & 255)}, ${mix(n & 255)})`;
