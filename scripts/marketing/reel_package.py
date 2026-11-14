@@ -63,6 +63,16 @@ def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> s
             f"Free preview pages: link in bio.\n\n{tag} #commoncore {TAGS}\n")
 
 
+def hands_caption(age: int) -> str:
+    body = (f"Hand skills at age {age} 🖍️\n\nWhat most kids (75% or more) can do by age {age}, from the CDC's milestone "
+            f"checklist, plus a few of the CDC's easy ways to help at home.\n\nEvery kid grows at their own pace. You know your "
+            f"child best: if you have a concern, talk with your child's doctor and ask about developmental screening.\n\n"
+            f"Full CDC checklist: cdc.gov/ActEarly")
+    return (f"# Little hands · age {age}\n\nAdd a calm sound in the app. Source: "
+            f"https://www.cdc.gov/act-early/milestones/{age}-years.html\n\n## Caption\n\n{body}\n\n"
+            f"#{age}yearold #finemotorskills #preschool #momlife #learningathome #paperlessons\n")
+
+
 def copy(src: Path, dest: Path, text: str) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest / "reel.mp4")
@@ -95,6 +105,11 @@ def main() -> None:
         items = re.findall(r'tag: "([^"]+)".*?code: "([^"]+)"', block)
         copy(src, OUT / "facts" / f"grade-{g}", facts_caption(g, who, by_slug[level], items))
         n += 1
+    for age in map(int, re.findall(r"\{ age: (\d+), mascot:", (APP / "src" / "Milestones.tsx").read_text())):
+        src = APP / "out" / f"Hands-age-{age}.mp4"
+        if src.exists():
+            copy(src, OUT / "hands" / f"age-{age}", hands_caption(age))
+            n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
 

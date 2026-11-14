@@ -5,6 +5,7 @@ import { Cover } from "./Cover";
 import { LEVELS } from "./brand";
 import { CHALLENGES, topicReel } from "./challenges";
 import { FACTS, factReel } from "./facts";
+import { MILESTONES, Milestones, milestoneFrames } from "./Milestones";
 import { TOPICS_MIDDLE } from "./topics/middle";
 import { TOPICS_TEEN } from "./topics/teen";
 import { TOPICS_UPPER } from "./topics/upper";
@@ -31,6 +32,9 @@ export const RemotionRoot: React.FC = () => (
     ))}
     {FACT_REELS.map((spec) => (
       <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
+    ))}
+    {MILESTONES.map((spec) => (
+      <Composition key={spec.age} id={`Hands-age-${spec.age}`} component={Milestones} defaultProps={{ spec }} durationInFrames={milestoneFrames(spec)} {...reel} />
     ))}
     {LEVELS.map((l) => (
       <Composition key={l.slug} id={`Cover-${l.slug}`} component={Cover} defaultProps={{ slug: l.slug }} durationInFrames={1} {...reel} />

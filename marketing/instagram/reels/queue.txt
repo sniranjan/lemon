@@ -1,5 +1,6 @@
 # Posting order (3 a day). ig_publish.py skips anything already in posted.jsonl.
 # Each day: 2 quiz reels + 1 "know by June" reel (facts/) while they last.
+# Weekly: a "Little hands" CDC milestones reel (hands/) takes one slot.
 marketing/instagram/reels/level-07-foxes
 marketing/instagram/reels/level-01-chicks
 marketing/instagram/reels/level-10-pandas
@@ -11,6 +12,7 @@ marketing/instagram/reels/level-08-owls
 marketing/instagram/reels/level-02-ducklings
 marketing/instagram/reels/facts/grade-6
 marketing/instagram/reels/level-05-puppies
+marketing/instagram/reels/hands/age-3
 marketing/instagram/reels/level-09-otters
 marketing/instagram/reels/facts/grade-7
 marketing/instagram/reels/level-03-bunnies
@@ -31,6 +33,7 @@ marketing/instagram/reels/facts/grade-k
 marketing/instagram/reels/topics/05-puppies/adding-to-20
 marketing/instagram/reels/topics/09-otters/decimals
 marketing/instagram/reels/facts/grade-5
+marketing/instagram/reels/hands/age-4
 marketing/instagram/reels/topics/03-bunnies/letter-pairs
 marketing/instagram/reels/topics/12-lions/exponents
 marketing/instagram/reels/topics/04-kittens/adding-1-2-3
@@ -51,6 +54,7 @@ marketing/instagram/reels/topics/13-whales/persuasion
 marketing/instagram/reels/topics/07-foxes/times-tables
 marketing/instagram/reels/topics/01-chicks/picture-words
 marketing/instagram/reels/topics/10-pandas/percents
+marketing/instagram/reels/hands/age-5
 marketing/instagram/reels/topics/06-cubs/picture-puzzles
 marketing/instagram/reels/topics/08-owls/multiplying
 marketing/instagram/reels/topics/02-ducklings/read-the-numbers
