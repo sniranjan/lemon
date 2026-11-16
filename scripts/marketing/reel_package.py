@@ -101,6 +101,22 @@ def report_caption(grade: int, year: int, naep_id: str, pct: int) -> str:
             f"{credit('thinking-music')}\n")
 
 
+HOLIDAY_BAND = {"thanksgiving-little": ("ages 3–5", "#preschool #toddlerlearning"),
+                "thanksgiving-kids": ("ages 6–8", "#2ndgrade #3rdgrade"),
+                "thanksgiving-big-kids": ("ages 9–12 vs grown-ups", "#5thgrade #6thgrade #mathchallenge")}
+
+
+def holiday_caption(hid: str) -> str:
+    band, tags = HOLIDAY_BAND[hid]
+    body = (f"Thanksgiving table quiz, {band} 🦃🥧\n\n5 quick questions to try at the dinner table: pause after each "
+            f"one, let everyone shout an answer, and see who wins. The last one is a bonus ⭐\n\n"
+            f"Send this to the family group chat before Thursday 📲\n\nWho won at your table? Comment 👇\n\n"
+            f"Happy Thanksgiving from paper lessons. Every kid learns at their own pace: free printable pages "
+            f"for ages 3–12, link in bio.")
+    return (f"# Thanksgiving table quiz · {band}\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+            f"#thanksgiving #thanksgivingwithkids #familygames {tags} #momlife #paperlessons\n\n{credit('easy-lemon')}\n")
+
+
 def copy(src: Path, dest: Path, text: str) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest / "reel.mp4")
@@ -152,6 +168,11 @@ def main() -> None:
         fast = APP / "out" / f"{rid.replace('Report-', 'Fast-')}.mp4"  # hook-first 12 s cut, same caption
         if fast.exists():
             copy(fast, OUT / "report-fast" / rid.lower().removeprefix("report-"), report_caption(int(g), int(y), nid, pct))
+            n += 1
+    for hid in re.findall(r'\{ id: "([a-z-]+)", band:', (APP / "src" / "holiday.ts").read_text()):
+        src = APP / "out" / f"Holiday-{hid}.mp4"
+        if src.exists():
+            copy(src, OUT / "holiday" / hid, holiday_caption(hid))
             n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
