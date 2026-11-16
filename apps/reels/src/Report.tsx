@@ -38,7 +38,7 @@ const ordinal = (g: number) => `${g}th`;
 const LETTERS = "ABCDE";
 
 const Source: React.FC<{ s: ReportSpec }> = ({ s }) => (
-  <div style={{ position: "absolute", top: 1450, left: 0, right: 0, textAlign: "center", ...HEAD, fontSize: 32, opacity: 0.7 }}>
+  <div style={{ position: "absolute", top: 1490, left: 0, right: 0, textAlign: "center", ...HEAD, fontSize: 32, opacity: 0.7 }}>
     Source: NAEP, the Nation's Report Card · {s.year} · grade {s.grade}
   </div>
 );
