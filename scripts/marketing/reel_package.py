@@ -149,6 +149,10 @@ def main() -> None:
         pct = int(picked.split(",")[int(correct)])
         copy(src, OUT / "report" / rid.lower().removeprefix("report-"), report_caption(int(g), int(y), nid, pct))
         n += 1
+        fast = APP / "out" / f"{rid.replace('Report-', 'Fast-')}.mp4"  # hook-first 12 s cut, same caption
+        if fast.exists():
+            copy(fast, OUT / "report-fast" / rid.lower().removeprefix("report-"), report_caption(int(g), int(y), nid, pct))
+            n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
 

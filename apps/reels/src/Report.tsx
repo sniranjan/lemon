@@ -21,12 +21,16 @@ export type ReportSpec = {
   seconds: number;
 };
 
-const HOOK = 80;
-const INTRO = 10;
-const REVEAL = 75;
-const WHY = 120;
-const CLOSE = 120;
-export const reportFrames = (s: ReportSpec) => HOOK + INTRO + s.seconds * 30 + REVEAL + WHY + CLOSE;
+// "fast": hook-first cut. Frame 0 is already the question with the headline on top (no title card),
+// a 5-second timer, shorter answer and closing cards: about 13 seconds instead of 22.
+type Pace = { hook: number; intro: number; seconds: number; reveal: number; why: number; close: number };
+const pace = (s: ReportSpec, fast?: boolean): Pace =>
+  fast ? { hook: 0, intro: 0, seconds: 5, reveal: 60, why: 90, close: 75 }
+       : { hook: 80, intro: 10, seconds: s.seconds, reveal: 75, why: 120, close: 120 };
+export const reportFrames = (s: ReportSpec, fast?: boolean) => {
+  const p = pace(s, fast);
+  return p.hook + p.intro + p.seconds * 30 + p.reveal + p.why + p.close;
+};
 
 const GREEN = "#2fa35a";
 const BG: Record<number, string> = { 4: "#cfe6ff", 8: "#fff0c2", 12: "#c9eee8" };
@@ -56,19 +60,28 @@ const Hook: React.FC<{ s: ReportSpec }> = ({ s }) => {
   );
 };
 
-const Question: React.FC<{ s: ReportSpec }> = ({ s }) => {
+const Headline: React.FC<{ s: ReportSpec }> = ({ s }) => (
+  <div style={{ position: "absolute", top: 190, left: SAFE.side, right: SAFE.side, textAlign: "center" }}>
+    <div style={{ ...HEAD, fontSize: 40, display: "inline-block", background: INK, color: "#fff", borderRadius: 999, padding: "6px 30px", marginBottom: 14 }}>Nation's Report Card · {s.year}</div>
+    <div style={{ ...HEAD, fontSize: 116, lineHeight: 1 }}>Only <span style={{ color: CORAL }}>{s.picked[s.correct]}%</span></div>
+    <div style={{ ...HEAD, fontSize: 54, lineHeight: 1.1, whiteSpace: "nowrap" }}>of {ordinal(s.grade)} graders got this right</div>
+  </div>
+);
+
+const Question: React.FC<{ s: ReportSpec; fast?: boolean }> = ({ s, fast }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const total = s.seconds * 30;
+  const { intro: INTRO, reveal: REVEAL, seconds } = pace(s, fast);
+  const total = seconds * 30;
   const reveal = spring({ frame: frame - INTRO - total, fps, config: { damping: 14 } });
   const shown = frame >= INTRO + total;
   const why = interpolate(frame, [INTRO + total + REVEAL, INTRO + total + REVEAL + 12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const long = s.question.length > 110;
   return (
     <AbsoluteFill style={{ background: BG[s.grade] }}>
-      <div style={{ position: "absolute", top: 70, left: 0, right: 0, display: "flex", justifyContent: "center" }}><Logo width={420} /></div>
-      <div style={{ position: "absolute", top: 230, height: 1100, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", justifyContent: "center", gap: 22 }}>
-        <div style={{ ...HEAD, fontSize: long ? 54 : 62, lineHeight: 1.18, marginBottom: 14 }}><Rich text={s.question} /></div>
+      {fast ? <Headline s={s} /> : <div style={{ position: "absolute", top: 70, left: 0, right: 0, display: "flex", justifyContent: "center" }}><Logo width={420} /></div>}
+      <div style={{ position: "absolute", top: fast ? 470 : 230, height: fast ? 870 : 1100, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", justifyContent: fast ? "flex-start" : "center", gap: fast ? 16 : 22 }}>
+        <div style={{ ...HEAD, fontSize: long ? (fast ? 48 : 54) : 62, lineHeight: 1.18, marginBottom: 14 }}><Rich text={s.question} /></div>
         {s.choices.map((c, k) => {
           const right = k === s.correct;
           const dim = shown && !right;
@@ -98,17 +111,18 @@ const Question: React.FC<{ s: ReportSpec }> = ({ s }) => {
   );
 };
 
-export const Report: React.FC<{ spec: ReportSpec }> = ({ spec }) => {
-  const q = reportFrames(spec) - HOOK - CLOSE;
+export const Report: React.FC<{ spec: ReportSpec; fast?: boolean }> = ({ spec, fast }) => {
+  const p = pace(spec, fast);
+  const q = reportFrames(spec, fast) - p.hook - p.close;
   return (
     <AbsoluteFill style={{ background: CREAM }}>
-      <Music track="thinking-music" frames={reportFrames(spec)} />
-      <Sequence durationInFrames={HOOK}><Hook s={spec} /></Sequence>
-      <Sequence from={HOOK} durationInFrames={q}>
-        <Question s={spec} />
-        <TimerSounds start={INTRO} seconds={spec.seconds} />
+      <Music track="thinking-music" frames={reportFrames(spec, fast)} />
+      {p.hook ? <Sequence durationInFrames={p.hook}><Hook s={spec} /></Sequence> : null}
+      <Sequence from={p.hook} durationInFrames={q}>
+        <Question s={spec} fast={fast} />
+        <TimerSounds start={p.intro} seconds={p.seconds} />
       </Sequence>
-      <Sequence from={HOOK + q}><EndCard line={"Every kid learns\nat their own pace"} sub={"printable worksheets, ages 3–12\npaperlessons.com"} /></Sequence>
+      <Sequence from={p.hook + q}><EndCard line={"Every kid learns\nat their own pace"} sub={"printable worksheets, ages 3–12\npaperlessons.com"} /></Sequence>
     </AbsoluteFill>
   );
 };

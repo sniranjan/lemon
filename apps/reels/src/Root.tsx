@@ -38,7 +38,10 @@ export const RemotionRoot: React.FC = () => (
       <Composition key={spec.age} id={`Hands-age-${spec.age}`} component={Milestones} defaultProps={{ spec }} durationInFrames={milestoneFrames(spec)} {...reel} />
     ))}
     {REPORTS.map((spec) => (
-      <Composition key={spec.id} id={spec.id} component={Report} defaultProps={{ spec }} durationInFrames={reportFrames(spec)} {...reel} />
+      <React.Fragment key={spec.id}>
+        <Composition id={spec.id} component={Report} defaultProps={{ spec }} durationInFrames={reportFrames(spec)} {...reel} />
+        <Composition id={spec.id.replace("Report-", "Fast-")} component={Report} defaultProps={{ spec, fast: true }} durationInFrames={reportFrames(spec, true)} {...reel} />
+      </React.Fragment>
     ))}
     {LEVELS.map((l) => (
       <Composition key={l.slug} id={`Cover-${l.slug}`} component={Cover} defaultProps={{ slug: l.slug }} durationInFrames={1} {...reel} />
