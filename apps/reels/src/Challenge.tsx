@@ -37,7 +37,10 @@ export type ChallengeSpec = {
 
 const INTRO = 10;
 const REVEAL = 42;
-const HOOK = 66;
+// Hook-first: no title card. Frame 0 is question 1 with the hook as a headline on top (the grid tile shows a
+// real question, and nobody swipes past a logo card). Set FAST = false for the old 2-second title card.
+const FAST = true;
+const HOOK = FAST ? 0 : 66;
 const OUTRO = 90;
 export const qFrames = (s: ChallengeSpec) => INTRO + s.seconds * 30 + REVEAL;
 const CLOSING = 120;
@@ -56,9 +59,14 @@ const Pic: React.FC<{ slug: string; size: number }> = ({ slug, size }) => (
   <Img src={staticFile(`pictures/${slug}.svg`)} style={{ width: size, height: size }} />
 );
 
-const TopBar: React.FC<{ i: number; n: number }> = ({ i, n }) => (
-  <div style={{ position: "absolute", top: 70, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 22 }}>
-    <Logo width={540} />
+const TopBar: React.FC<{ i: number; n: number; s: ChallengeSpec }> = ({ i, n, s }) => (
+  <div style={{ position: "absolute", top: FAST ? 190 : 70, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", gap: 22 }}>
+    {FAST ? (
+      <div style={{ ...HEAD, fontSize: 74, lineHeight: 1.08, textAlign: "center", whiteSpace: "nowrap" }}>
+        <div>{s.hook.slice(0, -1).join(" ")}</div>
+        <div style={{ color: CORAL }}>{s.hook[s.hook.length - 1]}</div>
+      </div>
+    ) : <Logo width={540} />}
     <div style={{ display: "flex", gap: 14 }}>
       {Array.from({ length: n }).map((_, k) => (
         <div key={k} style={{ width: k === i ? 54 : 22, height: 22, borderRadius: 11, background: k <= i ? INK : "rgba(31,42,68,.22)" }} />
@@ -166,12 +174,13 @@ const QuestionScene: React.FC<{ s: ChallengeSpec; i: number }> = ({ s, i }) => {
   const total = s.seconds * 30;
   const t = frame - INTRO;
   const reveal = spring({ frame: frame - INTRO - total, fps, config: { damping: 12 } });
-  const pop = usePop(0);
+  const popped = usePop(0);
+  const pop = FAST && i === 0 ? 1 : popped; // the very first frame must already show the question
   const lv = BY_SLUG[q.level];
   return (
     <AbsoluteFill style={{ background: s.bg }}>
-      <TopBar i={i} n={s.questions.length} />
-      <div style={{ position: "absolute", top: 330, height: 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: q.pic && q.choices ? 26 : 40, transform: `scale(${pop})` }}>
+      <TopBar i={i} n={s.questions.length} s={s} />
+      <div style={{ position: "absolute", top: FAST ? 400 : 330, height: FAST ? 960 : 990, left: SAFE.side, right: SAFE.side, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: q.pic && q.choices ? 26 : 40, transform: `scale(${pop})` }}>
         {q.bonus ? <div style={{ ...HEAD, fontSize: 56, background: CORAL, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>Bonus ⭐</div>
           : q.tag ? <div style={{ ...HEAD, fontSize: 52, background: INK, color: "#fff", borderRadius: 999, padding: "10px 40px" }}>{q.tag}</div> : null}
         <div style={{ ...HEAD, fontSize: 86, textAlign: "center" }}><Rich text={q.prompt} /></div>
@@ -240,7 +249,7 @@ const Outro: React.FC<{ s: ChallengeSpec }> = ({ s }) => {
 export const Challenge: React.FC<{ spec: ChallengeSpec }> = ({ spec }) => (
   <AbsoluteFill style={{ background: spec.bg }}>
     <Music track={spec.music ?? DEFAULT_TRACK} frames={challengeFrames(spec)} />
-    <Sequence durationInFrames={HOOK}><Hook s={spec} /></Sequence>
+    {HOOK ? <Sequence durationInFrames={HOOK}><Hook s={spec} /></Sequence> : null}
     {spec.questions.map((_, i) => (
       <Sequence key={i} from={HOOK + i * qFrames(spec)} durationInFrames={qFrames(spec)}>
         <QuestionScene s={spec} i={i} />
