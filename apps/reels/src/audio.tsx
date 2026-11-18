@@ -10,6 +10,7 @@ export const TRACKS = {
   carefree: { title: "Carefree", gain: 0.62 },
   "thinking-music": { title: "Thinking Music", gain: 0.65 },
   wallpaper: { title: "Wallpaper", gain: 0.23 },
+  "jingle-bells-calm": { title: "Jingle Bells Calm", gain: 1 }, // file pre-boosted 7 dB by reel_assets.py
 } as const;
 export type Track = keyof typeof TRACKS;
 export const DEFAULT_TRACK: Track = "carefree";

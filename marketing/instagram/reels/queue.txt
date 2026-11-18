@@ -2,6 +2,8 @@
 # Each day: 2 quiz reels + 1 "know by June" reel (facts/) while they last.
 # Weekly: a "Little hands" CDC milestones reel (hands/) takes one slot.
 # Daily: one "Report Card" (NAEP) reel leads the day while they last.
+# Dated lines ("2026-12-01 path") post on or after that date, ahead of the regular queue: Thanksgiving
+# table quizzes Nov 21/23/25, Christmas countdown day N on Dec N.
 marketing/instagram/reels/level-07-foxes
 marketing/instagram/reels/level-01-chicks
 marketing/instagram/reels/level-10-pandas
@@ -18,6 +20,34 @@ marketing/instagram/reels/level-05-puppies
 marketing/instagram/reels/hands/age-3
 marketing/instagram/reels/level-09-otters
 marketing/instagram/reels/report-fast/g8-2024-8m5-9
+marketing/instagram/reels/hands/age-4
+2026-11-21 marketing/instagram/reels/holiday/thanksgiving-little
+2026-11-23 marketing/instagram/reels/holiday/thanksgiving-kids
+2026-11-25 marketing/instagram/reels/holiday/thanksgiving-big-kids
+2026-12-01 marketing/instagram/reels/countdown/day-01
+2026-12-02 marketing/instagram/reels/countdown/day-02
+2026-12-03 marketing/instagram/reels/countdown/day-03
+2026-12-04 marketing/instagram/reels/countdown/day-04
+2026-12-05 marketing/instagram/reels/countdown/day-05
+2026-12-06 marketing/instagram/reels/countdown/day-06
+2026-12-07 marketing/instagram/reels/countdown/day-07
+2026-12-08 marketing/instagram/reels/countdown/day-08
+2026-12-09 marketing/instagram/reels/countdown/day-09
+2026-12-10 marketing/instagram/reels/countdown/day-10
+2026-12-11 marketing/instagram/reels/countdown/day-11
+2026-12-12 marketing/instagram/reels/countdown/day-12
+2026-12-13 marketing/instagram/reels/countdown/day-13
+2026-12-14 marketing/instagram/reels/countdown/day-14
+2026-12-15 marketing/instagram/reels/countdown/day-15
+2026-12-16 marketing/instagram/reels/countdown/day-16
+2026-12-17 marketing/instagram/reels/countdown/day-17
+2026-12-18 marketing/instagram/reels/countdown/day-18
+2026-12-19 marketing/instagram/reels/countdown/day-19
+2026-12-20 marketing/instagram/reels/countdown/day-20
+2026-12-21 marketing/instagram/reels/countdown/day-21
+2026-12-22 marketing/instagram/reels/countdown/day-22
+2026-12-23 marketing/instagram/reels/countdown/day-23
+2026-12-24 marketing/instagram/reels/countdown/day-24
 marketing/instagram/reels/facts/grade-7
 marketing/instagram/reels/level-03-bunnies
 marketing/instagram/reels/level-04-kittens
@@ -27,26 +57,22 @@ marketing/instagram/reels/level-13-whales
 marketing/instagram/reels/topics/07-foxes/fractions
 marketing/instagram/reels/report-fast/g4-2013-4m6-12
 marketing/instagram/reels/facts/grade-8
-marketing/instagram/reels/holiday/thanksgiving-little
 marketing/instagram/reels/topics/01-chicks/counting
 marketing/instagram/reels/topics/10-pandas/author-s-purpose
 marketing/instagram/reels/report-fast/g8-2013-8m7-15
 marketing/instagram/reels/facts/grade-2
 marketing/instagram/reels/topics/06-cubs/add-and-take-away
 marketing/instagram/reels/topics/08-owls/factors-primes
-marketing/instagram/reels/holiday/thanksgiving-kids
 marketing/instagram/reels/report-fast/g4-2024-4m7-5
 marketing/instagram/reels/facts/grade-4
 marketing/instagram/reels/topics/02-ducklings/counting-on
 marketing/instagram/reels/topics/11-penguins/multiply-negatives
 marketing/instagram/reels/report-fast/g8-1992-8m15-10
 marketing/instagram/reels/facts/grade-k
-marketing/instagram/reels/holiday/thanksgiving-big-kids
 marketing/instagram/reels/topics/05-puppies/adding-to-20
 marketing/instagram/reels/topics/09-otters/decimals
 marketing/instagram/reels/report-fast/g4-1992-4m5-12
 marketing/instagram/reels/facts/grade-5
-marketing/instagram/reels/hands/age-4
 marketing/instagram/reels/topics/03-bunnies/letter-pairs
 marketing/instagram/reels/report-fast/g8-1990-8m7-15
 marketing/instagram/reels/topics/12-lions/exponents

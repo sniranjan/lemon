@@ -32,7 +32,8 @@ import instagram_launch as L  # noqa: E402
 OUT = L.ROOT / "apps" / "reels" / "public"
 
 
-MUSIC = ["Easy Lemon", "Carefree", "Thinking Music", "Wallpaper"]
+MUSIC = ["Easy Lemon", "Carefree", "Thinking Music", "Wallpaper", "Jingle Bells Calm"]
+BOOST_DB = {"Jingle Bells Calm": 7}  # mastered very quiet (-31 LUFS); raised once on download so gain stays <= 1
 RATE = 44100
 
 
@@ -72,7 +73,15 @@ def audio() -> None:
         if not dest.exists():
             url = "https://incompetech.com/music/royalty-free/mp3-royaltyfree/" + urllib.parse.quote(title) + ".mp3"
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            dest.write_bytes(urllib.request.urlopen(req).read())
+            data = urllib.request.urlopen(req).read()
+            if title in BOOST_DB:
+                raw = dest.with_suffix(".raw.mp3")
+                raw.write_bytes(data)
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"volume={BOOST_DB[title]}dB",
+                                "-b:a", "192k", dest], check=True)
+                raw.unlink()
+            else:
+                dest.write_bytes(data)
     rng = random.Random(1)
     _wav(d / "tick.wav", _tick(1500, 2300, rng))
     _wav(d / "tock.wav", _tick(1100, 1700, rng))

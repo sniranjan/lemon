@@ -117,6 +117,17 @@ def holiday_caption(hid: str) -> str:
             f"#thanksgiving #thanksgivingwithkids #familygames {tags} #momlife #paperlessons\n\n{credit('easy-lemon')}\n")
 
 
+def countdown_caption(n: int, age: str, skill: str) -> str:
+    who = f"ages {age}" if "+" in age else f"age {age}"
+    nxt = "Merry Christmas! 🎄" if n == 24 else f"Follow along: a new puzzle every day until Christmas. Day {n + 1} is tomorrow 🎁"
+    body = (f"Christmas countdown, day {n} of 24 🎄\n\nToday's puzzle is for {who} ({skill.lower()}). Pause, ask your kid, "
+            f"and comment their answer 👇\n\n{nxt}\n\nEvery kid learns at their own pace: free printable pages for "
+            f"ages 3–12, link in bio.")
+    return (f"# Christmas countdown · day {n} ({who}, {skill})\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+            f"#christmascountdown #adventcalendar #kidsactivities #momlife #homeschool #paperlessons\n\n"
+            f"{credit('jingle-bells-calm')}\n")
+
+
 def copy(src: Path, dest: Path, text: str) -> None:
     dest.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dest / "reel.mp4")
@@ -173,6 +184,11 @@ def main() -> None:
         src = APP / "out" / f"Holiday-{hid}.mp4"
         if src.exists():
             copy(src, OUT / "holiday" / hid, holiday_caption(hid))
+            n += 1
+    for d, age, skill in re.findall(r'/\* (\d+) \*/ \{ age: "([^"]+)", skill: "([^"]+)"', (APP / "src" / "countdown.ts").read_text()):
+        src = APP / "out" / f"Countdown-day-{int(d):02d}.mp4"
+        if src.exists():
+            copy(src, OUT / "countdown" / f"day-{int(d):02d}", countdown_caption(int(d), age, skill))
             n += 1
     print(f"packaged {n} reels in {OUT.relative_to(ROOT)}")
 
