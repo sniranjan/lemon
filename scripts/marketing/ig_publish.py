@@ -31,6 +31,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import datetime
 import tempfile
 import time
 import urllib.error
@@ -186,13 +187,32 @@ def slide_alts(alt: str, n: int) -> list[str]:
     return [alt] * n
 
 
+def find_published(ig: str, token: str, caption: str | None) -> str:
+    """After a publish timeout: the newest reel (or story) from the last 10 minutes with this caption."""
+    import time
+    for _ in range(12):
+        time.sleep(10)
+        edge = "stories" if caption is None else "media"
+        items = graph("GET", f"{ig}/{edge}", token, fields="id,caption,timestamp", limit="3").get("data", [])
+        for m in items:
+            age = time.time() - datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp()
+            if age < 600 and (caption is None or m.get("caption", "").strip() == caption.strip()):
+                return m["id"]
+    sys.exit("media_publish timed out and the post did not appear: check Instagram before posting again")
+
+
 def publish(ig: str, token: str, urls: list[str], caption: str, alt: str, story: bool) -> dict:
     if urls and urls[0].endswith(".mp4"):
         # A reel (also shown on the grid); the cover is the first frame (the hook). Video takes a while to process.
         kind = {"media_type": "STORIES"} if story else {"media_type": "REELS", "caption": caption, "share_to_feed": "true", "thumb_offset": "300"}
         container = graph("POST", f"{ig}/media", token, video_url=urls[0], **kind)["id"]
         wait_ready(container, token, tries=150)
-        media_id = graph("POST", f"{ig}/media_publish", token, creation_id=container)["id"]
+        try:
+            media_id = graph("POST", f"{ig}/media_publish", token, creation_id=container)["id"]
+        except TimeoutError:
+            # Instagram often publishes the reel even when this call times out: find it rather than lose it
+            # (an unlogged reel would be posted twice by the next run).
+            media_id = find_published(ig, token, None if story else caption)
         return graph("GET", media_id, token, fields="id,media_type,permalink,timestamp")
     if story:
         container = create_image(ig, token, urls[0], media_type="STORIES")
