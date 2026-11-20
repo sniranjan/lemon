@@ -20,10 +20,10 @@ loadFont({ family: "Gochi", url: staticFile("fonts/GochiHand-Regular.woff2") });
 export const HEAD: React.CSSProperties = { fontFamily: "Fredoka, 'Arial Rounded MT Bold', Arial, sans-serif", fontWeight: 700, color: INK, lineHeight: 1.05 };
 
 // Fredoka has no superscript digits except ² ³: draw every run of ⁰¹²³⁴⁵⁶⁷⁸⁹⁻ as a raised run in the same font.
-const SUP: Record<string, string> = { "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9", "⁻": "−" };
+const SUP: Record<string, string> = { "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9", "⁻": "−", "ᐟ": "/" };
 export const Rich: React.FC<{ text: string }> = ({ text }) => (
   <>
-    {text.split(/([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)/).map((part, k) =>
+    {text.split(/([⁰¹²³⁴⁵⁶⁷⁸⁹⁻ᐟ]+)/).map((part, k) =>
       k % 2 ? (
         <span key={k} style={{ fontSize: "0.58em", position: "relative", top: "-0.75em", marginLeft: "0.04em" }}>{[...part].map((c) => SUP[c]).join("")}</span>
       ) : (

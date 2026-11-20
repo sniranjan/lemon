@@ -15,9 +15,9 @@ export const factReel = (f: FactSpec): ChallengeSpec => {
   return {
     id: `Facts-grade-${f.grade}`,
     bg: tint(lv.color),
-    hook: ["What should", `a ${f.who}`, "know by June?"],
+    hook: ["What should", `${/^(8|11|18)/.test(f.who) ? "an" : "a"} ${f.who}`, "know by June?"],
     topic: "Common Core",
-    hookSub: "used in most US states\ntry each one with your kid 👀",
+    hookSub: `${f.grade.endsWith("b") ? "part 2 · " : ""}used in most US states\ntry each one with your kid 👀`,
     seconds: 5,
     questions: f.items.map(({ code: _code, ...q }) => ({ ...q, level: f.level })),
     outro: ["How many did", "yours get?", `Comment x/${f.items.length} 👇`],
@@ -89,5 +89,26 @@ export const FACTS: FactSpec[] = [
     { tag: "Right triangles", prompt: "Legs 6 and 8. The long side?", big: "6² + 8² = ?²", answer: "10", code: "8.G.7" },
     { tag: "Lines", prompt: "What's the slope?", big: "y = 3x − 2", answer: "slope 3", code: "8.F.3" },
     { tag: "Roots", prompt: "Quick!", big: "√121 = ?", answer: "11", code: "8.EE.2" },
+  ] },
+  { grade: "7b", who: "7th grader", level: "penguins", items: [
+    { tag: "Negatives", prompt: "Minus a minus…", big: "−8 − (−3) = ?", answer: "−5", code: "7.NS.1" },
+    { tag: "Negatives", prompt: "Careful with the signs", big: "−4 × (−5) = ?", answer: "20", code: "7.NS.2" },
+    { tag: "Percents", prompt: "A $60 hoodie is 25% off. New price?", choices: [{ label: "$45" }, { label: "$35" }, { label: "$15" }], correct: 0, code: "7.RP.3" },
+    { tag: "Two-step equations", prompt: "Solve it", big: "x/3 + 2 = 6", answer: "x = 12", code: "7.EE.4a" },
+    { tag: "Proportions", prompt: "3 pens cost $6. How much for 7?", big: "$?", answer: "$14", code: "7.RP.2" },
+  ] },
+  { grade: "8b", who: "8th grader", level: "lions", items: [
+    { tag: "Exponents", prompt: "Write it as one number", big: "2³ × 2² = ?", answer: "32", code: "8.EE.1" },
+    { tag: "Scientific notation", prompt: "3,000,000 is…", choices: [{ label: "3 × 10⁶" }, { label: "3 × 10⁵" }, { label: "30 × 10⁵" }], correct: 0, code: "8.EE.3" },
+    { tag: "Equations", prompt: "x on both sides", big: "2x + 3 = x + 10", answer: "x = 7", code: "8.EE.7" },
+    { tag: "Right triangles", prompt: "Legs 5 and 12. The long side?", big: "5² + 12² = ?²", answer: "13", code: "8.G.7" },
+    { tag: "Irrational numbers", prompt: "Which one never ends or repeats?", choices: [{ label: "√16" }, { label: "√2" }, { label: "0.5" }], correct: 1, code: "8.NS.1" },
+  ] },
+  { grade: "9", who: "9th grader", level: "whales", items: [
+    { tag: "Factoring", prompt: "Factor it", big: "x² + 5x + 6", answer: "(x + 2)(x + 3)", code: "A-SSE.A.2" },
+    { tag: "Quadratics", prompt: "Solve it", big: "(x − 3)(x + 4) = 0", answer: "x = 3 or −4", code: "A-REI.B.4b" },
+    { tag: "Rational exponents", prompt: "Trick question?", big: "8¹ᐟ³ = ?", answer: "2", code: "N-RN.A.1" },
+    { tag: "Slope", prompt: "From (1, 2) to (3, 8)", big: "slope = ?", answer: "3", code: "F-IF.B.6" },
+    { tag: "Polynomials", prompt: "Multiply it out", big: "(x + 3)²", answer: "x² + 6x + 9", code: "A-APR.A.1" },
   ] },
 ];

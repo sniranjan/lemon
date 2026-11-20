@@ -64,13 +64,15 @@ def grade_words(g: str) -> tuple[str, str]:
 
 
 def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> str:
-    grade, tag = grade_words(g)
+    part2 = g.endswith("b")
+    grade, tag = grade_words(g.rstrip("b"))
+    art = "an" if re.match(r"(8|11|18)", who) else "a"
     lines = "\n".join(f"{k}. {t} ({code})" for k, (t, code) in enumerate(items, 1))
-    body = (f"What should a {who} know by June? 👀\n\n{len(items)} things the Common Core standards (used in most US states) "
+    body = (f"What should {art} {who} know by June?{' Part 2' if part2 else ''} 👀\n\n{len(items)} {'more ' if part2 else ''}things the Common Core standards (used in most US states) "
             f"expect by the end of {grade}, with one to try for each:\n\n{lines}\n\nOur {lv['name']} level is {grade} work "
             f"at age {lv['age']}. Every kid learns at their own pace: start at their level, not their grade.\n\n"
             f"How many did yours get? Comment x/{len(items)} 👇")
-    return (f"# Know by June · {grade} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+    return (f"# Know by June · {grade}{' (part 2)' if part2 else ''} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
             f"📩 Comment {lv['name'].upper()} and we'll DM you free {lv['name']} pages.\n\n{tag} #commoncore {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 

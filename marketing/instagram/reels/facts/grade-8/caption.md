@@ -4,7 +4,7 @@ Music and sound are in the video.
 
 ## Caption
 
-What should a 8th grader know by June? 👀
+What should an 8th grader know by June? 👀
 
 5 things the Common Core standards (used in most US states) expect by the end of 8th grade, with one to try for each:
 
