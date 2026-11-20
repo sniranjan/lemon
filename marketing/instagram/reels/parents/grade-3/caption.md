@@ -1,4 +1,4 @@
-# Grown-ups vs 3rd grade (Foxes level)
+# Grown-ups vs 3rd grade homework (3, Foxes level)
 
 Music and sound are in the video.
 
@@ -16,7 +16,7 @@ Your 3rd grader's homework 📚 Can YOU still do it?
 
 Be honest: how many did you get? Comment x/5 👇 and tag the parent who does homework duty.
 
-Our Foxes level teaches 3rd grade work step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
+Our Foxes level teaches 3rd grade math and reading step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
 
 📩 Comment FOXES and we'll DM you free Foxes pages.
 

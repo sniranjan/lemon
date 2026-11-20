@@ -1,4 +1,4 @@
-# Grown-ups vs 4th grade (Owls level)
+# Grown-ups vs 4th grade homework (4, Owls level)
 
 Music and sound are in the video.
 
@@ -16,7 +16,7 @@ Your 4th grader's homework 📚 Can YOU still do it?
 
 Be honest: how many did you get? Comment x/5 👇 and tag the parent who does homework duty.
 
-Our Owls level teaches 4th grade work step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
+Our Owls level teaches 4th grade math and reading step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
 
 📩 Comment OWLS and we'll DM you free Owls pages.
 

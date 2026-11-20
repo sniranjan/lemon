@@ -1,4 +1,4 @@
-# Grown-ups vs 5th grade (Otters level)
+# Grown-ups vs 5th grade homework (5, Otters level)
 
 Music and sound are in the video.
 
@@ -16,7 +16,7 @@ Your 5th grader's homework 📚 Can YOU still do it?
 
 Be honest: how many did you get? Comment x/5 👇 and tag the parent who does homework duty.
 
-Our Otters level teaches 5th grade work step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
+Our Otters level teaches 5th grade math and reading step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
 
 📩 Comment OTTERS and we'll DM you free Otters pages.
 

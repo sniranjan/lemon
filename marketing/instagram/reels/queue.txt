@@ -1,5 +1,5 @@
 # Posting order (3 a day). ig_publish.py skips anything already in posted.jsonl.
-# Since 2026-11-20: 4 a day (scripts/marketing/reel_daily.sh 4 20); every 4th entry is a parents/ reel ("Your 4th grader's homework").
+# Since 2026-11-20: 4 a day (scripts/marketing/reel_daily.sh 4 20); one parents/ reel a day ("Your 3rd grader's homework"), placed first among the regular entries so it posts around midday.
 # Each day: 2 quiz reels + 1 "know by June" reel (facts/) while they last.
 # Weekly: a "Little hands" CDC milestones reel (hands/) takes one slot.
 # Daily: one "Report Card" (NAEP) reel leads the day while they last.
@@ -64,10 +64,13 @@ marketing/instagram/reels/facts/grade-9
 marketing/instagram/reels/topics/10-pandas/author-s-purpose
 marketing/instagram/reels/facts/grade-2
 marketing/instagram/reels/parents/grade-5
+marketing/instagram/reels/parents/grade-3b
 marketing/instagram/reels/facts/grade-7b
 marketing/instagram/reels/facts/grade-1
+marketing/instagram/reels/parents/grade-4g
 marketing/instagram/reels/topics/06-cubs/add-and-take-away
 marketing/instagram/reels/topics/08-owls/factors-primes
+marketing/instagram/reels/parents/grade-2
 marketing/instagram/reels/facts/grade-4
 marketing/instagram/reels/topics/02-ducklings/counting-on
 marketing/instagram/reels/parents/grade-6

@@ -1,4 +1,4 @@
-# Grown-ups vs 6th grade (Pandas level)
+# Grown-ups vs 6th grade homework (6, Pandas level)
 
 Music and sound are in the video.
 
@@ -16,7 +16,7 @@ Your 6th grader's homework 📚 Can YOU still do it?
 
 Be honest: how many did you get? Comment x/5 👇 and tag the parent who does homework duty.
 
-Our Pandas level teaches 6th grade work step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
+Our Pandas level teaches 6th grade math and reading step by step, a few pages a day, so homework time isn't a battle. Every kid learns at their own pace.
 
 📩 Comment PANDAS and we'll DM you free Pandas pages.
 

@@ -12,7 +12,7 @@ export const parentReel = (f: FactSpec): ChallengeSpec => {
   return {
     id: `Parents-grade-${f.grade}`,
     bg: tint(lv.color),
-    hook: [`Your ${f.who}'s homework`, "Can YOU still do it?"],
+    hook: [`Your ${f.who}'s ${f.grade.endsWith("g") ? "grammar" : "homework"}`, "Can YOU still do it?"],
     topic: "Grown-ups",
     hookSub: "",
     seconds: 5,
@@ -51,6 +51,27 @@ export const PARENTS: FactSpec[] = [
     { tag: "Absolute value", prompt: "Quick!", big: "|−7| = ?", answer: "7", code: "6.NS.7c" },
     { tag: "Expressions", prompt: "Multiply it out", big: "2(x + 3) = ?", answer: "2x + 6", code: "6.EE.3" },
     { tag: "Equations", prompt: "Solve it", big: "x/4 = 9", answer: "x = 36", code: "6.EE.7" },
+  ] },
+  { grade: "2", who: "2nd grader", level: "cubs", items: [
+    { tag: "Shapes", prompt: "How many sides does a hexagon have?", big: "? sides", answer: "6", code: "2.G.1" },
+    { tag: "Money", prompt: "2 quarters, 2 dimes and 1 nickel", choices: [{ label: "75¢" }, { label: "65¢" }, { label: "80¢" }], correct: 0, code: "2.MD.8" },
+    { tag: "Even or odd", prompt: "Is 47 even or odd?", choices: [{ label: "even" }, { label: "odd" }], correct: 1, code: "2.OA.3" },
+    { tag: "Compare numbers", prompt: "Which is bigger?", choices: [{ label: "509" }, { label: "590" }], correct: 1, code: "2.NBT.4" },
+    { tag: "Telling time", prompt: "Quarter past 7 is…", choices: [{ label: "7:15" }, { label: "7:25" }, { label: "7:45" }], correct: 0, code: "2.MD.7" },
+  ] },
+  { grade: "3b", who: "3rd grader", level: "foxes", items: [
+    { tag: "Times tables", prompt: "Another one people forget", big: "6 × 9 = ?", answer: "54", code: "3.OA.7" },
+    { tag: "Fractions", prompt: "Which is bigger?", choices: [{ label: "3/4" }, { label: "3/8" }], correct: 0, code: "3.NF.3d" },
+    { tag: "Perimeter", prompt: "A garden 5 feet by 3 feet. Fence all the way around?", big: "? feet", answer: "16", code: "3.MD.8" },
+    { tag: "Elapsed time", prompt: "Practice starts at 4:45 and lasts 30 minutes. It ends at…", choices: [{ label: "5:15" }, { label: "5:05" }, { label: "4:75" }], correct: 0, code: "3.MD.1" },
+    { tag: "Rounding", prompt: "Round to the nearest hundred", big: "652 → ?", answer: "700", code: "3.NBT.1" },
+  ] },
+  { grade: "4g", who: "4th grader", level: "owls", items: [
+    { tag: "Confused words", prompt: "___ going to the park.", choices: [{ label: "Their" }, { label: "There" }, { label: "They're" }], correct: 2, code: "L.4.1g" },
+    { tag: "Confused words", prompt: "The dog wagged ___ tail.", choices: [{ label: "its" }, { label: "it's" }], correct: 0, code: "L.4.1g" },
+    { tag: "Irregular plurals", prompt: "One mouse, two…", choices: [{ label: "mouses" }, { label: "mice" }, { label: "mices" }], correct: 1, code: "L.2.1b" },
+    { tag: "Complete sentences", prompt: "Which one is a complete sentence?", choices: [{ label: "Ran to the store." }, { label: "Mia ran to the store." }, { label: "To the store with Mia." }], correct: 1, code: "L.4.1f" },
+    { tag: "Irregular verbs", prompt: "Yesterday I ___ in the lake.", choices: [{ label: "swimmed" }, { label: "swam" }, { label: "swum" }], correct: 1, code: "L.2.1d" },
   ] },
 ];
 

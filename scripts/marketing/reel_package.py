@@ -80,14 +80,15 @@ PARENT_TAGS = "#momsofinstagram #dadsofinstagram #parenting #homeworkhelp #momli
 
 
 def parents_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> str:
-    grade, tag = grade_words(g)
+    what = "grammar" if g.endswith("g") else "homework"
+    grade, tag = grade_words(g.rstrip("bg"))
     lines = "\n".join(f"{k}. {t} ({code})" for k, (t, code) in enumerate(items, 1))
-    body = (f"Your {who}'s homework 📚 Can YOU still do it?\n\n{len(items)} things kids learn in {grade} "
-            f"(Common Core, used in most US states). No calculator, 5 seconds each:\n\n{lines}\n\n"
+    body = (f"Your {who}'s {what} 📚 Can YOU still do it?\n\n{len(items)} {'grammar rules kids should know by' if what == 'grammar' else 'things kids learn in'} {grade} "
+            f"(Common Core, used in most US states). {'No calculator, ' if what == 'homework' else ''}5 seconds each:\n\n{lines}\n\n"
             f"Be honest: how many did you get? Comment x/{len(items)} 👇 and tag the parent who does homework duty.\n\n"
-            f"Our {lv['name']} level teaches {grade} work step by step, a few pages a day, so homework time isn't a battle. "
+            f"Our {lv['name']} level teaches {grade} {'math and reading' if what == 'homework' else 'grammar and reading'} step by step, a few pages a day, so homework time isn't a battle. "
             f"Every kid learns at their own pace.")
-    return (f"# Grown-ups vs {grade} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+    return (f"# Grown-ups vs {grade} {what} ({g}, {lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
             f"📩 Comment {lv['name'].upper()} and we'll DM you free {lv['name']} pages.\n\n{tag} {PARENT_TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
