@@ -59,6 +59,7 @@ marketing/instagram/reels/facts/grade-8b
 marketing/instagram/reels/topics/07-foxes/fractions
 marketing/instagram/reels/topics/01-chicks/counting
 marketing/instagram/reels/parents/grade-4
+marketing/instagram/reels/parents/grade-3
 marketing/instagram/reels/facts/grade-9
 marketing/instagram/reels/topics/10-pandas/author-s-purpose
 marketing/instagram/reels/facts/grade-2
@@ -66,7 +67,6 @@ marketing/instagram/reels/parents/grade-5
 marketing/instagram/reels/facts/grade-7b
 marketing/instagram/reels/facts/grade-1
 marketing/instagram/reels/topics/06-cubs/add-and-take-away
-marketing/instagram/reels/parents/grade-3
 marketing/instagram/reels/topics/08-owls/factors-primes
 marketing/instagram/reels/facts/grade-4
 marketing/instagram/reels/topics/02-ducklings/counting-on
