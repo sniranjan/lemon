@@ -6,6 +6,7 @@ import { LEVELS } from "./brand";
 import { CHALLENGES, topicReel } from "./challenges";
 import { FACTS, factReel } from "./facts";
 import { HOLIDAY_REELS } from "./holiday";
+import { PARENT_REELS } from "./parents";
 import { COUNTDOWN_REELS } from "./countdown";
 import { REPORTS, Report, reportFrames } from "./Report";
 import { MILESTONES, Milestones, milestoneFrames } from "./Milestones";
@@ -37,6 +38,9 @@ export const RemotionRoot: React.FC = () => (
       <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
     ))}
     {HOLIDAY_REELS.map((spec) => (
+      <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
+    ))}
+    {PARENT_REELS.map((spec) => (
       <Composition key={spec.id} id={spec.id} component={Challenge} defaultProps={{ spec }} durationInFrames={challengeFrames(spec)} {...reel} />
     ))}
     {FACT_REELS.map((spec) => (

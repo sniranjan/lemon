@@ -76,6 +76,21 @@ def facts_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> s
             f"📩 Comment {lv['name'].upper()} and we'll DM you free {lv['name']} pages.\n\n{tag} #commoncore {TAGS}\n\n{credit(QUIZ_TRACK)}\n")
 
 
+PARENT_TAGS = "#momsofinstagram #dadsofinstagram #parenting #homeworkhelp #momlife #homeschoolmom #paperlessons"
+
+
+def parents_caption(g: str, who: str, lv: dict, items: list[tuple[str, str]]) -> str:
+    grade, tag = grade_words(g)
+    lines = "\n".join(f"{k}. {t} ({code})" for k, (t, code) in enumerate(items, 1))
+    body = (f"Your {who}'s homework 📚 Can YOU still do it?\n\n{len(items)} things kids learn in {grade} "
+            f"(Common Core, used in most US states). No calculator, 5 seconds each:\n\n{lines}\n\n"
+            f"Be honest: how many did you get? Comment x/{len(items)} 👇 and tag the parent who does homework duty.\n\n"
+            f"Our {lv['name']} level teaches {grade} work step by step, a few pages a day, so homework time isn't a battle. "
+            f"Every kid learns at their own pace.")
+    return (f"# Grown-ups vs {grade} ({lv['name']} level)\n\nMusic and sound are in the video.\n\n## Caption\n\n{body}\n\n"
+            f"📩 Comment {lv['name'].upper()} and we'll DM you free {lv['name']} pages.\n\n{tag} {PARENT_TAGS}\n\n{credit(QUIZ_TRACK)}\n")
+
+
 def hands_caption(age: int) -> str:
     body = (f"Hand skills at age {age} 🖍️\n\nWhat most kids (75% or more) can do by age {age}, from the CDC's milestone "
             f"checklist, plus a few of the CDC's easy ways to help at home.\n\nEvery kid grows at their own pace. You know your "
@@ -161,6 +176,15 @@ def main() -> None:
             continue
         items = re.findall(r'tag: "([^"]+)".*?code: "([^"]+)"', block)
         copy(src, OUT / "facts" / f"grade-{g}", facts_caption(g, who, by_slug[level], items))
+        n += 1
+    parents = (APP / "src" / "parents.ts").read_text()
+    for g, who, level, block in re.findall(r'grade: "(\w+)", who: "([^"]+)", level: "(\w+)", items: \[(.*?)\n  \] \}', parents, re.S):
+        src = APP / "out" / f"Parents-grade-{g}.mp4"
+        if not src.exists():
+            print("missing render:", src.name)
+            continue
+        items = re.findall(r'tag: "([^"]+)".*?code: "([^"]+)"', block)
+        copy(src, OUT / "parents" / f"grade-{g}", parents_caption(g, who, by_slug[level], items))
         n += 1
     for age in map(int, re.findall(r"\{ age: (\d+), mascot:", (APP / "src" / "Milestones.tsx").read_text())):
         src = APP / "out" / f"Hands-age-{age}.mp4"
