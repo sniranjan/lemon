@@ -66,6 +66,13 @@ export const PARENTS: FactSpec[] = [
     { tag: "Elapsed time", prompt: "Practice starts at 4:45 and lasts 30 minutes. It ends at…", choices: [{ label: "5:15" }, { label: "5:05" }, { label: "4:75" }], correct: 0, code: "3.MD.1" },
     { tag: "Rounding", prompt: "Round to the nearest hundred", big: "652 → ?", answer: "700", code: "3.NBT.1" },
   ] },
+  { grade: "4b", who: "4th grader", level: "owls", items: [
+    { tag: "Multiplying", prompt: "No calculator!", big: "36 × 4 = ?", answer: "144", code: "4.NBT.5" },
+    { tag: "Remainders", prompt: "25 cookies shared by 4 kids", choices: [{ label: "6 R1" }, { label: "5 R5" }, { label: "6 R4" }], correct: 0, code: "4.NBT.6" },
+    { tag: "Fractions", prompt: "Which is bigger?", choices: [{ label: "2/3" }, { label: "3/5" }], correct: 0, code: "4.NF.2" },
+    { tag: "Angles", prompt: "A right angle is…", big: "? degrees", answer: "90", code: "4.MD.5" },
+    { tag: "Rounding", prompt: "Round to the nearest thousand", big: "4,682 → ?", answer: "5,000", code: "4.NBT.3" },
+  ] },
   { grade: "4g", who: "4th grader", level: "owls", items: [
     { tag: "Confused words", prompt: "___ going to the park.", choices: [{ label: "Their" }, { label: "There" }, { label: "They're" }], correct: 2, code: "L.4.1g" },
     { tag: "Confused words", prompt: "The dog wagged ___ tail.", choices: [{ label: "its" }, { label: "it's" }], correct: 0, code: "L.4.1g" },
